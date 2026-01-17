@@ -37,8 +37,8 @@ export default function Footer() {
                     <div>
                         <h4 className="text-white font-bold mb-4">Privacy Policy</h4>
                         <ul className="space-y-2 text-sm text-slate-500">
-                            <li><Link href="#" className="hover:text-blue-400 transition-colors">Terms & Conditions</Link></li>
-                            <li><Link href="#" className="hover:text-blue-400 transition-colors">Privacy Policy</Link></li>
+                            <li><Link href="/terms" className="hover:text-blue-400 transition-colors">Terms & Conditions</Link></li>
+                            <li><Link href="/privacy-policy" className="hover:text-blue-400 transition-colors">Privacy Policy</Link></li>
                         </ul>
                     </div>
 
@@ -46,8 +46,9 @@ export default function Footer() {
                     <div>
                         <h4 className="text-white font-bold mb-4">Connect</h4>
                         <ul className="space-y-2 text-sm text-slate-500">
-                            <li><a href="https://twitter.com" target="_blank" className="hover:text-blue-400 transition-colors">Twitter / X</a></li>
-                            <li><a href="https://linkedin.com" target="_blank" className="hover:text-blue-400 transition-colors">LinkedIn</a></li>
+                            <li><a href="https://www.facebook.com/" target="_blank" className="hover:text-blue-400 transition-colors">Facebook</a></li>
+                            <li><a href="https://www.linkedin.com/in/alfaz-mahmud-rizve/" target="_blank" className="hover:text-blue-400 transition-colors">LinkedIn</a></li>
+                            <li><a href="https://www.instagram.com/whois.alfaz/" target="_blank" className="hover:text-blue-400 transition-colors">Instagram</a></li>
                             <li><a href="mailto:contact@whoisalfaz.me" className="hover:text-blue-400 transition-colors">Email Me</a></li>
                         </ul>
                     </div>

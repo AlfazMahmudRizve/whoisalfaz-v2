@@ -2,7 +2,7 @@
 import { getPostBySlug } from '../../../lib/api';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowLeft, Clock, Calendar, User, Twitter, Linkedin, Facebook, Link as LinkIcon } from 'lucide-react';
+import { ArrowLeft, Clock, Calendar, User, Twitter, Linkedin, Facebook, Instagram, Link as LinkIcon } from 'lucide-react';
 import TableOfContents from '../../../components/TableOfContents';
 
 export default async function Post({ params }) {
@@ -122,9 +122,9 @@ export default async function Post({ params }) {
               <h3 className="text-xl font-bold text-white mb-2">Written by Alfaz Mahmud Rizve</h3>
               <p className="text-slate-400 text-sm mb-4">Automation Architect & Full Stack Developer. Helping agencies scale with 10x efficiency.</p>
               <div className="flex justify-center md:justify-start gap-4">
-                <button className="text-slate-500 hover:text-blue-400 transition-colors"><Twitter size={18} /></button>
-                <button className="text-slate-500 hover:text-blue-400 transition-colors"><Linkedin size={18} /></button>
-                <button className="text-slate-500 hover:text-blue-400 transition-colors"><Facebook size={18} /></button>
+                <a href="https://www.facebook.com/" target="_blank" className="text-slate-500 hover:text-blue-400 transition-colors"><Facebook size={18} /></a>
+                <a href="https://www.linkedin.com/in/alfaz-mahmud-rizve/" target="_blank" className="text-slate-500 hover:text-blue-400 transition-colors"><Linkedin size={18} /></a>
+                <a href="https://www.instagram.com/whois.alfaz/" target="_blank" className="text-slate-500 hover:text-blue-400 transition-colors"><Instagram size={18} /></a>
               </div>
             </div>
           </div>

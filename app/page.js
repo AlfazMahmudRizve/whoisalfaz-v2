@@ -204,18 +204,52 @@ export default async function Home() {
 
         <div className="grid md:grid-cols-3 gap-6">
           {[
-            { title: "Automation workflows", icon: Zap, desc: "Custom n8n workflows to handle leads, data, and operations." },
-            { title: "Technical SEO audits", icon: Search, desc: "Deep dive analysis into your site's performance and ranking blocking issues." },
-            { title: "Strategy & consulting", icon: BarChart3, desc: "Tailored growth plans for agencies and SaaS startups." },
-            { title: "Web development", icon: Globe, desc: "High-performance websites built on Next.js or WordPress." },
-            { title: "CRM architecture", icon: Database, desc: "Data organization and synchronization across your stack." },
-            { title: "Funnel setup", icon: Layout, desc: "Conversion focused landing pages and booking flows." }
+            {
+              title: "Automation workflows",
+              icon: Zap,
+              desc: "Custom n8n workflows to handle leads, data, and operations.",
+              bg: "bg-emerald-500/10", border: "border-emerald-500/20", text: "text-emerald-400"
+            },
+            {
+              title: "Technical SEO audits",
+              icon: Search,
+              desc: "Deep dive analysis into your site's performance and ranking blocking issues.",
+              bg: "bg-orange-500/10", border: "border-orange-500/20", text: "text-orange-400"
+            },
+            {
+              title: "Strategy & consulting",
+              icon: BarChart3,
+              desc: "Tailored growth plans for agencies and SaaS startups.",
+              bg: "bg-purple-500/10", border: "border-purple-500/20", text: "text-purple-400"
+            },
+            {
+              title: "Web development",
+              icon: Globe,
+              desc: "High-performance websites built on Next.js or WordPress.",
+              bg: "bg-blue-500/10", border: "border-blue-500/20", text: "text-blue-400"
+            },
+            {
+              title: "CRM architecture",
+              icon: Database,
+              desc: "Data organization and synchronization across your stack.",
+              bg: "bg-cyan-500/10", border: "border-cyan-500/20", text: "text-cyan-400"
+            },
+            {
+              title: "Funnel setup",
+              icon: Layout,
+              desc: "Conversion focused landing pages and booking flows.",
+              bg: "bg-pink-500/10", border: "border-pink-500/20", text: "text-pink-400"
+            }
           ].map((service, i) => (
-            <div key={i} className="bg-[#0f172a] border border-slate-800 p-8 rounded-2xl hover:border-blue-500/30 transition-colors group">
-              <service.icon className="text-blue-500 mb-4 group-hover:scale-110 transition-transform" size={24} />
-              <h3 className="text-xl font-bold text-white mb-2">{service.title}</h3>
-              <p className="text-slate-400 text-sm leading-relaxed">{service.desc}</p>
-              <Link href="/services" className="text-blue-400 text-sm mt-4 inline-block hover:underline">See details &rarr;</Link>
+            <div key={i} className={`rounded-xl border ${service.border} ${service.bg} p-8 hover:-translate-y-1 transition-transform duration-300 flex flex-col backdrop-blur-sm group`}>
+              <div className={`w-12 h-12 rounded-lg ${service.bg} border ${service.border} flex items-center justify-center ${service.text} mb-6 group-hover:scale-110 transition-transform`}>
+                <service.icon size={24} />
+              </div>
+              <h3 className="text-white font-bold text-xl mb-4">{service.title}</h3>
+              <p className="text-slate-300 text-sm leading-relaxed mb-6 flex-grow">{service.desc}</p>
+              <Link href="/services" className={`text-sm font-bold flex items-center gap-1 ${service.text} hover:opacity-80 transition-opacity`}>
+                See details <ArrowRight size={14} />
+              </Link>
             </div>
           ))}
         </div>
