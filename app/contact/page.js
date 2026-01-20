@@ -1,6 +1,6 @@
-
 import Link from 'next/link';
-import { Mail, Loader2, Send, MessageSquare, Twitter, Linkedin, Facebook, Instagram, CheckCircle2 } from 'lucide-react';
+import { Mail, MessageSquare, Facebook, Linkedin, Instagram } from 'lucide-react';
+import ContactForm from '../../components/ContactForm';
 
 export default function ContactPage() {
     return (
@@ -40,7 +40,7 @@ export default function ContactPage() {
                             <div>
                                 <h3 className="text-white font-bold text-lg">Consulting Calls</h3>
                                 <p className="text-slate-400 text-sm mb-2">Book a 30-minute discovery session.</p>
-                                <Link href="#" className="text-purple-400 hover:underline">Book availability &rarr;</Link>
+                                <Link href="#contact-form" className="text-purple-400 hover:underline">Book availability &rarr;</Link>
                             </div>
                         </div>
                     </div>
@@ -63,50 +63,7 @@ export default function ContactPage() {
 
 
                 {/* RIGHT: FORM */}
-                <div className="bg-[#111] border border-white/10 rounded-3xl p-8 shadow-2xl relative overflow-hidden">
-                    {/* Decorative Gradient */}
-                    <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500"></div>
-
-                    <h2 className="text-2xl font-bold text-white mb-6">Send a message</h2>
-
-                    <form className="space-y-6">
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div className="space-y-2">
-                                <label className="text-xs font-bold text-slate-500 uppercase tracking-widest">Your Name</label>
-                                <input type="text" placeholder="John Doe" className="w-full bg-white/5 border border-white/10 rounded-lg p-3 text-white focus:outline-none focus:border-blue-500 transition-colors" />
-                            </div>
-                            <div className="space-y-2">
-                                <label className="text-xs font-bold text-slate-500 uppercase tracking-widest">Email Address</label>
-                                <input type="email" placeholder="john@company.com" className="w-full bg-white/5 border border-white/10 rounded-lg p-3 text-white focus:outline-none focus:border-blue-500 transition-colors" />
-                            </div>
-                        </div>
-
-                        <div className="space-y-2">
-                            <label className="text-xs font-bold text-slate-500 uppercase tracking-widest">Service Interest</label>
-                            <select className="w-full bg-white/5 border border-white/10 rounded-lg p-3 text-white focus:outline-none focus:border-blue-500 transition-colors">
-                                <option>n8n Automation Development</option>
-                                <option>Technical SEO Audit</option>
-                                <option>WordPress/Web Development</option>
-                                <option>General Consulting</option>
-                                <option>Other</option>
-                            </select>
-                        </div>
-
-                        <div className="space-y-2">
-                            <label className="text-xs font-bold text-slate-500 uppercase tracking-widest">Project Details</label>
-                            <textarea rows={5} placeholder="Tell me about your project, timeline, and goals..." className="w-full bg-white/5 border border-white/10 rounded-lg p-3 text-white focus:outline-none focus:border-blue-500 transition-colors resize-none"></textarea>
-                        </div>
-
-                        <button className="w-full py-4 bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-400 text-white font-bold rounded-lg shadow-lg shadow-blue-500/20 transition-all flex items-center justify-center gap-2 group">
-                            <span>Send Message</span>
-                            <Send size={18} className="group-hover:translate-x-1 transition-transform" />
-                        </button>
-
-                        <p className="text-center text-slate-500 text-xs mt-4">
-                            I respect your privacy. No spam, ever.
-                        </p>
-                    </form>
-                </div>
+                <ContactForm />
 
             </div>
         </main>

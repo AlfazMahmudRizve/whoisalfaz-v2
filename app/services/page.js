@@ -9,6 +9,7 @@ export default function ServicesPage() {
     const services = [
         {
             title: "n8n Automation Workflows",
+            slug: "n8n-automation",
             desc: "Stop wasting time. We build custom n8n workflows that handle your leads, data entry, and CRM syncs automatically.",
             price: "300",
             icon: Zap,
@@ -16,21 +17,25 @@ export default function ServicesPage() {
             bg: "bg-emerald-500/10",
             border: "border-emerald-500/20",
             text: "text-emerald-400",
-            btn: "bg-emerald-500 hover:bg-emerald-400"
+            btn: "bg-emerald-500 hover:bg-emerald-400",
+            cta: "Automate Your Workflows"
         },
         {
-            title: "WordPress Websites",
-            desc: "High-performance, SEO-ready WordPress sites built to convert. Custom themes, speed optimization, and security setup.",
-            price: "700",
+            title: "Headless CMS Architecture",
+            slug: "headless-architecture",
+            desc: "The best of both worlds: The easy editing of WordPress combined with the raw speed of Next.js.",
+            price: "1,500",
             icon: Globe,
             color: "blue", // Blue
             bg: "bg-blue-500/10",
             border: "border-blue-500/20",
             text: "text-blue-400",
-            btn: "bg-blue-500 hover:bg-blue-400"
+            btn: "bg-blue-500 hover:bg-blue-400",
+            cta: "Build My Headless System"
         },
         {
             title: "Strategy & Growth Consulting",
+            slug: "growth-consulting",
             desc: "Not sure what to automate? We analyze your business processes and create a roadmap to cut costs and scale revenue.",
             price: "200/h",
             icon: BarChart3,
@@ -38,10 +43,12 @@ export default function ServicesPage() {
             bg: "bg-purple-500/10",
             border: "border-purple-500/20",
             text: "text-purple-400",
-            btn: "bg-purple-500 hover:bg-purple-400"
+            btn: "bg-purple-500 hover:bg-purple-400",
+            cta: "Get My Growth Roadmap"
         },
         {
             title: "Technical SEO Audits",
+            slug: "technical-seo",
             desc: "Deep dive analysis of your site's health. We find and fix the invisible technical errors killing your rankings.",
             price: "350",
             icon: Search,
@@ -49,10 +56,12 @@ export default function ServicesPage() {
             bg: "bg-orange-500/10",
             border: "border-orange-500/20",
             text: "text-orange-400",
-            btn: "bg-orange-500 hover:bg-orange-400"
+            btn: "bg-orange-500 hover:bg-orange-400",
+            cta: "Find My Ranking Errors"
         },
         {
             title: "UGC Product Videos",
+            slug: "ugc-video-ads",
             desc: "Authentic, high-converting video content for your SaaS or product. Perfect for TikTok, Reels, and Ads.",
             price: "150",
             icon: Video,
@@ -60,10 +69,12 @@ export default function ServicesPage() {
             bg: "bg-red-500/10",
             border: "border-red-500/20",
             text: "text-red-400",
-            btn: "bg-red-500 hover:bg-red-400"
+            btn: "bg-red-500 hover:bg-red-400",
+            cta: "Order Viral UGC Ads"
         },
         {
             title: "Custom Prompt Design",
+            slug: "custom-prompts",
             desc: "Get the most out of LLMs. We design complex prompt chains for ChatGPT/Claude to automate content creation.",
             price: "100",
             icon: MessageSquare,
@@ -71,7 +82,8 @@ export default function ServicesPage() {
             bg: "bg-violet-500/10",
             border: "border-violet-500/20",
             text: "text-violet-400",
-            btn: "bg-violet-500 hover:bg-violet-400"
+            btn: "bg-violet-500 hover:bg-violet-400",
+            cta: "Supercharge My AI Prompts"
         }
     ];
 
@@ -86,10 +98,10 @@ export default function ServicesPage() {
             {/* HERO: DONE FOR YOU AUTOMATIONS */}
             <div className="max-w-4xl mx-auto text-center mb-16">
                 <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
-                    Done-for-you n8n automations for SaaS & agencies that <span className="text-emerald-400">cut manual ops 80%</span> in 90 days
+                    Technical Expertise Meets <span className="text-emerald-400">Creative Strategy</span>
                 </h1>
-                <p className="text-slate-400 text-sm mb-12">
-                    Stop grinding. Start scaling. Enter your details below to get a custom roadmap.
+                <p className="text-slate-400 text-lg mb-12">
+                    Scaling your business with custom automation, high-performance web development, and data-driven marketing.
                 </p>
 
                 {/* Audit Tool Embed */}
@@ -137,12 +149,23 @@ export default function ServicesPage() {
 
                             <div className="mt-auto pt-6 border-t border-white/5">
                                 <div className="text-xs text-slate-400 mb-4">Starting From <span className="text-white font-bold text-lg block">${s.price}</span></div>
-                                <Link href="/#contact" className={`w-full block py-3 text-center rounded-lg text-white font-bold text-sm transition-opacity hover:opacity-90 ${s.btn}`}>
-                                    Book Consultation
+                                <Link href={`/services/${s.slug}`} className={`w-full block py-3 text-center rounded-lg text-white font-bold text-sm transition-opacity hover:opacity-90 ${s.btn}`}>
+                                    {s.cta}
                                 </Link>
                             </div>
                         </div>
                     ))}
+                </div>
+            </section>
+
+            {/* GENERAL CONSULTATION */}
+            <section className="bg-[#0f172a] border-y border-white/5 py-16 mb-32">
+                <div className="max-w-3xl mx-auto text-center px-6">
+                    <h2 className="text-3xl font-bold text-white mb-4">Unsure What You Need?</h2>
+                    <p className="text-slate-400 mb-8 text-lg">Let's discuss your unique challenges and define a custom path forward.</p>
+                    <Link href="/contact" className="inline-block px-8 py-4 border border-white/20 text-white font-bold rounded-lg hover:bg-white hover:text-black transition-all">
+                        Book a General Discovery Call
+                    </Link>
                 </div>
             </section>
 

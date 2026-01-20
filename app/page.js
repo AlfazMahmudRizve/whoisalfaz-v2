@@ -2,7 +2,7 @@ import { getAllPosts } from '../lib/api';
 import AuditTool from '../components/AuditTool';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowRight, CheckCircle2, Zap, Layout, Search, BarChart3, Database, Globe, Mail } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Zap, Layout, Search, BarChart3, Database, Globe, Mail, Video } from 'lucide-react';
 
 export default async function Home() {
   const posts = await getAllPosts();
@@ -24,7 +24,7 @@ export default async function Home() {
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Link href="/#contact" className="px-8 py-4 bg-teal-400 hover:bg-teal-300 text-black font-bold rounded-lg shadow-[0_0_20px_rgba(45,212,191,0.3)] hover:shadow-[0_0_30px_rgba(45,212,191,0.5)] transition-all transform hover:-translate-y-1 block text-center">
+          <Link href="/contact" className="px-8 py-4 bg-teal-400 hover:bg-teal-300 text-black font-bold rounded-lg shadow-[0_0_20px_rgba(45,212,191,0.3)] hover:shadow-[0_0_30px_rgba(45,212,191,0.5)] transition-all transform hover:-translate-y-1 block text-center">
             Book a free strategy call
           </Link>
           <Link href="/services" className="px-8 py-4 bg-white text-black font-bold rounded-lg hover:bg-slate-200 transition-colors block text-center">
@@ -110,7 +110,7 @@ export default async function Home() {
             </div>
           </div>
 
-          <Link href="/#contact" className="mt-12 px-8 py-3 bg-orange-500 hover:bg-orange-400 text-white font-bold rounded-full transition-colors shadow-lg shadow-orange-500/20 inline-block">
+          <Link href="/contact" className="mt-12 px-8 py-3 bg-orange-500 hover:bg-orange-400 text-white font-bold rounded-full transition-colors shadow-lg shadow-orange-500/20 inline-block">
             Book free consulting
           </Link>
         </div>
@@ -208,37 +208,43 @@ export default async function Home() {
               title: "Automation workflows",
               icon: Zap,
               desc: "Custom n8n workflows to handle leads, data, and operations.",
-              bg: "bg-emerald-500/10", border: "border-emerald-500/20", text: "text-emerald-400"
+              bg: "bg-emerald-500/10", border: "border-emerald-500/20", text: "text-emerald-400",
+              link: "/services/n8n-automation"
             },
             {
               title: "Technical SEO audits",
               icon: Search,
               desc: "Deep dive analysis into your site's performance and ranking blocking issues.",
-              bg: "bg-orange-500/10", border: "border-orange-500/20", text: "text-orange-400"
+              bg: "bg-orange-500/10", border: "border-orange-500/20", text: "text-orange-400",
+              link: "/services/technical-seo"
             },
             {
               title: "Strategy & consulting",
               icon: BarChart3,
               desc: "Tailored growth plans for agencies and SaaS startups.",
-              bg: "bg-purple-500/10", border: "border-purple-500/20", text: "text-purple-400"
+              bg: "bg-purple-500/10", border: "border-purple-500/20", text: "text-purple-400",
+              link: "/services/growth-consulting"
             },
             {
-              title: "Web development",
+              title: "Headless CMS Architecture",
               icon: Globe,
-              desc: "High-performance websites built on Next.js or WordPress.",
-              bg: "bg-blue-500/10", border: "border-blue-500/20", text: "text-blue-400"
+              desc: "The best of both worlds: The easy editing of WordPress combined with the raw speed of Next.js.",
+              bg: "bg-blue-500/10", border: "border-blue-500/20", text: "text-blue-400",
+              link: "/services/headless-architecture"
             },
             {
               title: "CRM architecture",
               icon: Database,
               desc: "Data organization and synchronization across your stack.",
-              bg: "bg-cyan-500/10", border: "border-cyan-500/20", text: "text-cyan-400"
+              bg: "bg-cyan-500/10", border: "border-cyan-500/20", text: "text-cyan-400",
+              link: "/services/growth-consulting" // Fallback or new slug
             },
             {
-              title: "Funnel setup",
-              icon: Layout,
-              desc: "Conversion focused landing pages and booking flows.",
-              bg: "bg-pink-500/10", border: "border-pink-500/20", text: "text-pink-400"
+              title: "UGC Video Ads",
+              icon: Video,
+              desc: "High-converting short-form video content for TikTok & Reels.",
+              bg: "bg-red-500/10", border: "border-red-500/20", text: "text-red-400",
+              link: "/services/ugc-video-ads"
             }
           ].map((service, i) => (
             <div key={i} className={`rounded-xl border ${service.border} ${service.bg} p-8 hover:-translate-y-1 transition-transform duration-300 flex flex-col backdrop-blur-sm group`}>
@@ -247,7 +253,7 @@ export default async function Home() {
               </div>
               <h3 className="text-white font-bold text-xl mb-4">{service.title}</h3>
               <p className="text-slate-300 text-sm leading-relaxed mb-6 flex-grow">{service.desc}</p>
-              <Link href="/services" className={`text-sm font-bold flex items-center gap-1 ${service.text} hover:opacity-80 transition-opacity`}>
+              <Link href={service.link} className={`text-sm font-bold flex items-center gap-1 ${service.text} hover:opacity-80 transition-opacity`}>
                 See details <ArrowRight size={14} />
               </Link>
             </div>

@@ -17,6 +17,9 @@ const mono = JetBrains_Mono({
 export const metadata = {
   title: "Alfaz Mahmud Rizve | AI Automation Architect",
   description: "Headless Systems, n8n Workflows, and Technical SEO.",
+  icons: {
+    icon: '/logo.png',
+  }
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

@@ -22,7 +22,7 @@ export default function Navbar() {
         {/* Logo Area */}
         <Link href="/" className="flex items-center gap-2 group">
           <div className="relative w-8 h-8 group-hover:scale-105 transition-transform">
-            <Image src="/icon.png" alt="Logo" fill className="object-contain" />
+            <Image src="/logo.png" alt="Logo" fill className="object-contain" />
           </div>
           <span className="font-bold tracking-tight text-sm">
             <span className="text-teal-400">whois</span><span className="text-purple-500">alfaz</span> <span className="text-teal-400">.me</span>
