@@ -1,4 +1,5 @@
 
+import { Suspense } from 'react';
 import { getAllPosts, getAllCategories } from '../../lib/api';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -116,7 +117,9 @@ export default async function BlogPage() {
                 <aside className="space-y-12 h-fit sticky top-32">
 
                     {/* SEARCH */}
-                    <SearchWidget />
+                    <Suspense fallback={<div className="h-12 bg-white/5 rounded-lg animate-pulse" />}>
+                        <SearchWidget />
+                    </Suspense>
 
                     {/* RECENT POSTS */}
                     <div>
