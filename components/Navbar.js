@@ -9,7 +9,7 @@ export default function Navbar() {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
 
   const navLinks = [
-    { name: 'Free Tools', href: '/tools' },
+    { name: 'Labs', href: '/labs' },
     { name: 'Blog', href: '/blog' },
     { name: 'Services', href: '/services' },
     { name: 'Portfolio', href: '/portfolio' },

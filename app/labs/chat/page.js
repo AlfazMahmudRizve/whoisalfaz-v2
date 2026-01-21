@@ -88,9 +88,9 @@ export default function ChatPage() {
 
             {/* Header */}
             <div className="max-w-3xl mx-auto w-full flex items-center justify-between mb-6 px-4">
-                <Link href="/tools" className="flex items-center gap-2 text-slate-500 hover:text-white transition-colors text-sm font-medium group">
+                <Link href="/labs" className="flex items-center gap-2 text-slate-500 hover:text-white transition-colors text-sm font-medium group">
                     <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" />
-                    Back to Tools
+                    Back to Labs
                 </Link>
                 <div className="flex items-center gap-2">
                     <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />

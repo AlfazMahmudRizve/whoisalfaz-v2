@@ -33,9 +33,9 @@ export default function ROICalculator() {
 
             <div className="max-w-4xl mx-auto">
                 {/* Nav Back */}
-                <Link href="/tools" className="inline-flex items-center gap-2 text-slate-500 hover:text-white transition-colors mb-12 text-sm font-medium group">
+                <Link href="/labs" className="inline-flex items-center gap-2 text-slate-500 hover:text-white transition-colors mb-12 text-sm font-medium group">
                     <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" />
-                    Back to Tools
+                    Back to Labs
                 </Link>
 
                 {/* Header */}

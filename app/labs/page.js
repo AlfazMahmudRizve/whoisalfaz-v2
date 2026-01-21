@@ -22,7 +22,7 @@ export default function ToolsPage() {
             title: 'ROI Calculator',
             desc: 'Calculate exactly how much money you can save by automating your manual tasks.',
             icon: Calculator,
-            href: '/tools/roi',
+            href: '/labs/roi',
             color: 'text-emerald-400',
             bg: 'bg-emerald-500/10',
             border: 'border-emerald-500/20',
@@ -31,7 +31,7 @@ export default function ToolsPage() {
             title: 'Ask Alfaz AI',
             desc: 'Chat with our custom AI agent trained on n8n workflows and growth strategies.',
             icon: Bot, // Using Bot as a generic AI icon
-            href: '/tools/chat',
+            href: '/labs/chat',
             color: 'text-purple-400',
             bg: 'bg-purple-500/10',
             border: 'border-purple-500/20',
