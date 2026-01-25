@@ -1,5 +1,6 @@
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { Search, Calculator, Bot, ArrowRight, BarChart3 } from 'lucide-react';
 
 export const metadata = {
@@ -29,11 +30,12 @@ export default function ToolsPage() {
         },
         {
             title: 'CashOps.app',
-            desc: 'Developer-focused financial dashboard with real-time telemetry and zero-latency visualization.',
+            desc: 'Developer-focused financial dashboard with real-time telemetry and zero-latency data visualization.',
             icon: BarChart3,
+            image: '/cashops-logo.png',
             href: 'https://cashops.whoisalfaz.me',
             color: 'text-green-400',
-            bg: 'bg-green-500/10',
+            bg: 'bg-[#050505]',
             border: 'border-green-500/20',
         },
         {
@@ -80,9 +82,13 @@ export default function ToolsPage() {
                         {/* Hover Glow Effect */}
                         <div className={`absolute inset-0 opacity-0 group-hover:opacity-20 transition-opacity duration-500 rounded-3xl bg-gradient-to-br from-transparent via-transparent to-${tool.color.split('-')[1]}-500/50`} />
 
-                        {/* Icon */}
-                        <div className={`w-14 h-14 rounded-2xl ${tool.bg} ${tool.border} border flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                            <tool.icon size={28} className={tool.color} />
+                        {/* Icon or Image */}
+                        <div className={`w-14 h-14 rounded-2xl ${tool.bg} ${tool.border} border flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 overflow-hidden relative`}>
+                            {tool.image ? (
+                                <Image src={tool.image} alt={tool.title} fill className="object-contain p-2" />
+                            ) : (
+                                <tool.icon size={28} className={tool.color} />
+                            )}
                         </div>
 
                         {/* Content */}

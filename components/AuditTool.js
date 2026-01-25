@@ -28,14 +28,19 @@ export default function AuditTool() {
       await new Promise(r => setTimeout(r, 800));
     }
 
-    // Connect to n8n (or fail gracefully if not set up)
+    // Connect to /api/contact
     try {
-      const webhook = process.env.NEXT_PUBLIC_N8N_WEBHOOK_URL;
-      if (webhook) {
-        await fetch(webhook, {
+      if (url) {
+        await fetch('/api/contact', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ website: url, email: email })
+          body: JSON.stringify({
+            name: 'Audit User',
+            email: email,
+            // Sending website url in the message body for n8n to parse
+            message: `Audit Request for: ${url}`,
+            source: 'Free Audit Tool'
+          })
         });
       }
       setStatus('success');

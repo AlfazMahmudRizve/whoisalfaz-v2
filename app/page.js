@@ -4,6 +4,7 @@ import AuditTool from '../components/AuditTool';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowRight, CheckCircle2, Zap, Layout, Search, BarChart3, Database, Globe, Mail, Video } from 'lucide-react';
+import NewsletterForm from '../components/NewsletterForm';
 
 export default async function Home() {
   const posts = await getAllPosts();
@@ -287,12 +288,7 @@ export default async function Home() {
           <h3 className="text-white font-bold mb-1">Join Inner Circle</h3>
           <p className="text-slate-500 text-xs mb-6">Weekly insights. Unsubscribe efficiently.</p>
 
-          <form className="space-y-4">
-            <input type="email" placeholder="Email address" className="w-full bg-slate-900 border border-slate-700 rounded-lg p-3 text-white focus:outline-none focus:border-blue-500" />
-            <button className="w-full py-3 bg-[#8b5cf6] hover:bg-[#7c3aed] text-white font-bold rounded-lg transition-colors">
-              Subscribe Free
-            </button>
-          </form>
+          <NewsletterForm source="Home Page Grid" />
         </div>
       </section>
     </main>

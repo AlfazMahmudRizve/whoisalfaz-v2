@@ -3,6 +3,7 @@ import AuditTool from '../../components/AuditTool';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Zap, Globe, BarChart3, Search, Video, MessageSquare, ChevronDown, CheckCircle2 } from 'lucide-react';
+import NewsletterForm from '../../components/NewsletterForm';
 
 export default function ServicesPage() {
 
@@ -178,12 +179,7 @@ export default function ServicesPage() {
                     <div className="flex-1">
                         <h3 className="text-white font-bold text-xl mb-4">Scale with automation</h3>
                         <p className="text-slate-400 text-sm mb-6">get 30+ ready-to-use n8n blueprints for agencies. Stop reinventing the wheel.</p>
-                        <form className="space-y-4">
-                            <input type="email" placeholder="Enter your email" className="w-full bg-[#0a0a0a] border border-slate-700 rounded-lg p-3 text-sm text-white focus:outline-none focus:border-emerald-500" />
-                            <button className="w-full py-3 bg-[#8b5cf6] text-white font-bold rounded-lg hover:bg-[#7c3aed] transition-colors">
-                                Send Me The Guide
-                            </button>
-                        </form>
+                        <NewsletterForm source="Services Page Playbook" />
                         <p className="text-xs text-slate-600 mt-4 text-center">No spam. Unsubscribe anytime.</p>
                     </div>
                     {/* Book visual placeholder */}
