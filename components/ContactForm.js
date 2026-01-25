@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { Send, Loader2, CheckCircle, AlertCircle } from 'lucide-react';
 
-export default function ContactForm({ initialServiceOfInterest = "General Consulting", source = "main-contact-page" }) {
+export default function ContactForm({ initialServiceOfInterest = "General Consulting", source = "contact" }) {
     const [status, setStatus] = useState('idle'); // idle, loading, success, error
     const [formData, setFormData] = useState({
         name: '',

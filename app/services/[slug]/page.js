@@ -116,7 +116,7 @@ export default async function ServiceDetailPage({ params }) {
                             </p>
 
                             <div className="relative z-10">
-                                <ContactForm initialServiceOfInterest={contactOption} source={`Service Page: ${title}`} />
+                                <ContactForm initialServiceOfInterest={contactOption} source={`service-${slug}`} />
                             </div>
                         </div>
                     </div>

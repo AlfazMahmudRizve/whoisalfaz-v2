@@ -39,7 +39,7 @@ export default function AuditTool() {
             email: email,
             // Sending website url in the message body for n8n to parse
             message: `Audit Request for: ${url}`,
-            source: 'AuditTool'
+            source: 'audit_tool'
           })
         });
       }

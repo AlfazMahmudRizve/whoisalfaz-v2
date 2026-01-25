@@ -288,7 +288,7 @@ export default async function Home() {
           <h3 className="text-white font-bold mb-1">Join Inner Circle</h3>
           <p className="text-slate-500 text-xs mb-6">Weekly insights. Unsubscribe efficiently.</p>
 
-          <NewsletterForm source="Home Page Grid" />
+          <NewsletterForm source="home_newsletter" />
         </div>
       </section>
     </main>

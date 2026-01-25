@@ -153,7 +153,7 @@ export default async function Post({ params }) {
               <p className="text-slate-400 text-xs mb-6 relative z-10">Get weekly automation blueprints and n8n tips delivered to your inbox.</p>
 
               <div className="relative z-10">
-                <NewsletterForm source={`Blog Sidebar: ${post.title}`} />
+                <NewsletterForm source={`blog-${slug}`} />
               </div>
             </div>
           </div>

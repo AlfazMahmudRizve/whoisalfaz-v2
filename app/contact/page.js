@@ -63,7 +63,7 @@ export default function ContactPage() {
 
 
                 {/* RIGHT: FORM */}
-                <ContactForm source="Main Contact Page" />
+                <ContactForm source="contact" />
 
             </div>
         </main>

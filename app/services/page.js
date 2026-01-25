@@ -179,7 +179,7 @@ export default function ServicesPage() {
                     <div className="flex-1">
                         <h3 className="text-white font-bold text-xl mb-4">Scale with automation</h3>
                         <p className="text-slate-400 text-sm mb-6">get 30+ ready-to-use n8n blueprints for agencies. Stop reinventing the wheel.</p>
-                        <NewsletterForm source="Services Page Playbook" />
+                        <NewsletterForm source="services_newsletter" />
                         <p className="text-xs text-slate-600 mt-4 text-center">No spam. Unsubscribe anytime.</p>
                     </div>
                     {/* Book visual placeholder */}
