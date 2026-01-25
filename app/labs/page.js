@@ -1,6 +1,6 @@
 
 import Link from 'next/link';
-import { Search, Calculator, Bot, ArrowRight } from 'lucide-react';
+import { Search, Calculator, Bot, ArrowRight, BarChart3 } from 'lucide-react';
 
 export const metadata = {
     title: 'Free Tools & Resources | WhoIsAlfaz.me',
@@ -28,9 +28,18 @@ export default function ToolsPage() {
             border: 'border-emerald-500/20',
         },
         {
+            title: 'CashOps.app',
+            desc: 'Developer-focused financial dashboard with real-time telemetry and zero-latency visualization.',
+            icon: BarChart3,
+            href: 'https://cashops.whoisalfaz.me',
+            color: 'text-green-400',
+            bg: 'bg-green-500/10',
+            border: 'border-green-500/20',
+        },
+        {
             title: 'Ask Alfaz AI',
             desc: 'Chat with our custom AI agent trained on n8n workflows and growth strategies.',
-            icon: Bot, // Using Bot as a generic AI icon
+            icon: Bot,
             href: '/labs/chat',
             color: 'text-purple-400',
             bg: 'bg-purple-500/10',
