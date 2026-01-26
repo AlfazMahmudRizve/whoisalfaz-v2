@@ -6,9 +6,9 @@ export async function POST(request) {
     try {
         // 1. Parse Data
         const body = await request.json();
-        const { name, email, message, source, service } = body;
+        const { name, email, message, source, service, website } = body;
 
-        console.log('Received Contact Request:', { name, email, source, service }); // Debug log
+        console.log('Received Contact Request:', { name, email, source, service, website }); // Debug log
 
         // 2. Strict Validation
         if (!name || !email) {
@@ -35,6 +35,7 @@ export async function POST(request) {
             message: message || 'No message provided',
             service: service || 'General',
             source: source || 'whoisalfaz.me',
+            website: website || null,
             timestamp: new Date().toISOString(),
         };
 

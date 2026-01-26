@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { ArrowRight, Loader2, CheckCircle, AlertCircle } from 'lucide-react';
 
 export default function AuditTool() {
+  const [name, setName] = useState('');
   const [url, setUrl] = useState('');
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState('idle');
@@ -35,8 +36,9 @@ export default function AuditTool() {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
-            name: 'Audit User',
+            name: name || 'Audit User',
             email: email,
+            website: url,
             // Sending website url in the message body for n8n to parse
             message: `Audit Request for: ${url}`,
             source: 'audit_tool'
@@ -77,6 +79,7 @@ export default function AuditTool() {
                 <input
                   type="text" placeholder="John Doe"
                   className="w-full bg-black/50 border border-white/10 rounded-lg p-3 text-white placeholder:text-slate-700 focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500/50 outline-none transition-all duration-200"
+                  value={name} onChange={(e) => setName(e.target.value)}
                 />
               </div>
 
@@ -111,19 +114,32 @@ export default function AuditTool() {
       )}
 
       {status === 'success' && (
-        <div className="py-8 space-y-6 text-center relative z-10">
-          <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-green-500/10 border border-green-500/20 mb-4">
-            <CheckCircle className="text-green-400" size={32} />
+        <div className="py-12 space-y-6 text-center relative z-10 animate-in fade-in zoom-in duration-500">
+          <div className="relative inline-flex items-center justify-center w-20 h-20 mb-4 group-hover:scale-110 transition-transform duration-500">
+            <div className="absolute inset-0 bg-green-500 blur-2xl opacity-20 rounded-full animate-pulse"></div>
+            <div className="relative w-full h-full bg-[#0a0a0a] border border-green-500/30 rounded-full flex items-center justify-center shadow-2xl shadow-green-500/20">
+              <CheckCircle className="text-green-400" size={40} />
+            </div>
           </div>
 
-          <div className="space-y-2">
-            <h3 className="text-2xl font-bold text-white">Scan Complete</h3>
-            <p className="text-slate-400 max-w-xs mx-auto">Detailed report has been successfully dispatched to <span className="text-white font-medium">{email}</span>.</p>
+          <div className="space-y-3 max-w-sm mx-auto">
+            <h3 className="text-2xl font-bold text-white bg-clip-text text-transparent bg-gradient-to-r from-white to-slate-400">
+              Audit Initiated
+            </h3>
+            <p className="text-slate-400 leading-relaxed">
+              Your website is now being audited in a more creative and professional way. The detailed technical report will be sent to <span className="text-white font-medium">{email}</span> shortly.
+            </p>
           </div>
 
-          <button onClick={() => setStatus('idle')} className="text-sm text-slate-500 hover:text-white transition-colors underline decoration-slate-800 underline-offset-4">
+          <button
+            onClick={() => setStatus('idle')}
+            className="mt-4 px-6 py-2 rounded-full bg-white/5 border border-white/10 text-xs text-slate-400 hover:text-white hover:bg-white/10 transition-all"
+          >
             Analyze another URL
           </button>
+
+          {/* Decorative Elements */}
+          <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-green-500/50 to-transparent opacity-50"></div>
         </div>
       )}
 
