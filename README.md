@@ -1,6 +1,6 @@
-# Automation OS (v2) - whoisalfaz.me
+# Ai Automation & Business Consultancy for saas, agencies & small business | whoisalfaz.me
 
-![Automation OS Banner](/public/playbook.jpg)
+![Automation OS Logo](public/logo.png)
 
 > **"Control. Connect. Conquer."**  
 > The central nervous system for my digital existence. A high-performance, headless architecture designed to showcase the future of automation, AI, and faceless business systems.
