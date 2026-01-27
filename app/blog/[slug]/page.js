@@ -4,7 +4,7 @@ import xss from 'xss';
 import { getPostBySlug } from '../../../lib/api';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowLeft, Clock, Calendar, User, Twitter, Linkedin, Facebook, Instagram, Link as LinkIcon } from 'lucide-react';
+import { ArrowLeft, Clock, Calendar, Twitter, Linkedin, Link as LinkIcon } from 'lucide-react';
 import TableOfContents from '../../../components/TableOfContents';
 import NewsletterForm from '../../../components/NewsletterForm';
 
@@ -29,7 +29,7 @@ export async function generateMetadata({ params }) {
     openGraph: {
       title: cleanTitle,
       url: cleanCanonical,
-      images: post.featuredImage?.node?.sourceUrl ? [replaceBackendUrl(post.featuredImage.node.sourceUrl)] : [],
+      images: post.featuredImage?.node?.sourceUrl ? [post.featuredImage.node.sourceUrl] : [],
     },
   };
 }
@@ -52,93 +52,144 @@ export default async function Post({ params }) {
   const readTime = Math.ceil(wordCount / 200);
 
   return (
-    <article className="min-h-screen pb-20 pt-32 relative bg-[#0a0a0a] selection:bg-purple-500/30 selection:text-white">
+    <article className="min-h-screen bg-[#0a0a0a] selection:bg-teal-500/30 selection:text-teal-200 pb-20 pt-24">
 
-      {/* AMBIENT BACKGROUND GLOWS */}
-      <div className="fixed top-0 left-1/4 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[100px] -z-10 animate-pulse" />
-      <div className="fixed bottom-0 right-1/4 w-[500px] h-[500px] bg-purple-500/10 rounded-full blur-[100px] -z-10" />
+      {/* AMBIENT GLOWS */}
+      <div className="fixed top-0 left-0 w-full h-[500px] bg-gradient-to-b from-teal-900/10 to-transparent -z-10" />
 
-      {/* HEADER SECTION */}
-      <header className="max-w-4xl mx-auto px-6 mb-16 text-center">
+      {/* --- HERO SECTION: HEADER CARD --- */}
+      <header className="max-w-7xl mx-auto px-6 mb-10">
 
-        <Link href="/blog" className="inline-flex items-center gap-2 text-slate-400 hover:text-white transition-colors mb-12 text-sm font-medium group bg-white/5 border border-white/10 px-4 py-2 rounded-full hover:border-white/20">
+        {/* Back Link */}
+        <Link href="/blog" className="inline-flex items-center gap-2 text-slate-400 hover:text-white transition-colors mb-8 text-sm font-medium group">
           <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" /> Back to Library
         </Link>
 
-        {/* Meta Badges */}
-        <div className="flex justify-center gap-3 mb-8">
-          <span className="px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-bold uppercase tracking-wider shadow-[0_0_10px_rgba(59,130,246,0.2)]">
-            Growth Engineering
-          </span>
-          <span className="px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-400 text-xs font-bold uppercase tracking-wider">
-            n8n Automation
-          </span>
-        </div>
+        <div className="bg-gradient-to-br from-slate-900 via-[#0f172a] to-slate-900 border border-white/10 rounded-3xl p-6 md:p-10 relative overflow-hidden shadow-2xl">
 
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-8 leading-tight tracking-tight">
-          {replaceBackendUrl(post.title)}
-        </h1>
+          {/* Decorative Blur */}
+          <div className="absolute top-0 right-0 w-64 h-64 bg-teal-500/10 rounded-full blur-[100px] -mr-16 -mt-16 pointer-events-none" />
 
-        <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-slate-400 border-y border-white/5 py-6 w-fit mx-auto px-8">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 p-[2px]">
-              <div className="w-full h-full rounded-full bg-slate-900 relative overflow-hidden">
-                <Image src="/profile.jpg" alt="Alfaz" fill className="object-cover" />
+          <div className="relative z-10 max-w-4xl">
+            {/* Meta Badges */}
+            <div className="flex gap-3 mb-6">
+              <span className="px-3 py-1 rounded-md bg-teal-500/10 border border-teal-500/20 text-teal-400 text-xs font-bold uppercase tracking-wider">
+                Tech Deep Dive
+              </span>
+              <span className="px-3 py-1 rounded-md bg-purple-500/10 border border-purple-500/20 text-purple-400 text-xs font-bold uppercase tracking-wider">
+                Engineering
+              </span>
+            </div>
+
+            <h1 className="text-3xl md:text-4xl lg:text-6xl font-black text-white mb-6 leading-[1.1] tracking-tight text-balance">
+              {replaceBackendUrl(post.title)}
+            </h1>
+
+            {/* Author & Meta Grid */}
+            <div className="flex flex-wrap items-center gap-8 text-sm text-slate-400">
+
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 rounded-full bg-slate-800 p-0.5 ring-2 ring-white/10">
+                  <div className="w-full h-full rounded-full overflow-hidden relative">
+                    <Image src="/profile.jpg" alt="Alfaz" fill className="object-cover" />
+                  </div>
+                </div>
+                <div>
+                  <div className="text-white font-bold">Alfaz Mahmud Rizve</div>
+                  <div className="text-xs text-slate-500">@whoisalfaz</div>
+                </div>
               </div>
+
+              <div className="h-8 w-px bg-white/10 hidden sm:block" />
+
+              <div className="flex items-center gap-2">
+                <Calendar size={16} />
+                <span>{new Date(post.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</span>
+              </div>
+
+              <div className="h-8 w-px bg-white/10 hidden sm:block" />
+
+              <div className="flex items-center gap-2">
+                <Clock size={16} />
+                <span>{readTime} min read</span>
+              </div>
+
             </div>
-            <div className="text-left">
-              <div className="text-white font-bold text-xs">Alfaz Mahmud</div>
-              <div className="text-[10px] uppercase tracking-wider">Author</div>
-            </div>
-          </div>
-          <div className="w-px h-8 bg-white/10 hidden sm:block"></div>
-          <div className="flex items-center gap-2">
-            <Calendar size={16} className="text-slate-500" />
-            <span>{new Date(post.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</span>
-          </div>
-          <div className="w-px h-8 bg-white/10 hidden sm:block"></div>
-          <div className="flex items-center gap-2">
-            <Clock size={16} className="text-slate-500" />
-            <span>{readTime} min read</span>
           </div>
         </div>
+
+        {/* FEATURED IMAGE (Wide & Rounded) */}
+        {post.featuredImage?.node?.sourceUrl && (
+          <div className="mt-6 relative w-full aspect-[21/9] rounded-3xl overflow-hidden border border-white/10 shadow-2xl group">
+            <Image
+              src={post.featuredImage.node.sourceUrl}
+              alt={post.title}
+              fill
+              className="object-cover transition-transform duration-1000 group-hover:scale-105"
+              priority
+            />
+            {/* Image Overlay Gradient */}
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-transparent opacity-60" />
+          </div>
+        )}
       </header>
 
 
-      {/* MAIN CONTENT LAYOUT: SIDEBAR + CONTENT */}
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-[1fr_300px] gap-12">
+      {/* --- MAIN LAYOUT GRID (Left TOC, Right Content) --- */}
+      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-16 relative">
 
-        {/* LEFT: CONTENT */}
-        <div className="lg:pr-8">
+        {/* LEFT COLUMN: STICKY SIDEBAR (TOC + Share) */}
+        <aside className="hidden lg:block h-fit sticky top-32 space-y-12">
 
-          {/* Featured Image */}
-          {post.featuredImage?.node?.sourceUrl && (
-            <div className="relative w-full aspect-video rounded-3xl overflow-hidden border border-white/10 shadow-2xl mb-12 group">
-              <Image
-                src={replaceBackendUrl(post.featuredImage.node.sourceUrl)}
-                alt={post.title}
-                fill
-                className="object-cover group-hover:scale-105 transition-transform duration-1000"
-                priority
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-transparent opacity-80" />
+          {/* Table of Contents */}
+          <div>
+            <h4 className="text-xs font-bold text-slate-500 uppercase tracking-widest mb-6">Table of Contents</h4>
+            <TableOfContents />
+          </div>
+
+          {/* Social Share (Vertical) */}
+          <div>
+            <h4 className="text-xs font-bold text-slate-500 uppercase tracking-widest mb-4">Share</h4>
+            <div className="flex flex-col gap-2">
+              <button className="flex items-center gap-3 px-4 py-2 rounded-lg bg-white/5 hover:bg-white/10 text-slate-400 hover:text-white transition-colors text-sm font-medium border border-white/5 hover:border-white/10">
+                <Twitter size={16} className="text-blue-400" /> Twitter
+              </button>
+              <button className="flex items-center gap-3 px-4 py-2 rounded-lg bg-white/5 hover:bg-white/10 text-slate-400 hover:text-white transition-colors text-sm font-medium border border-white/5 hover:border-white/10">
+                <Linkedin size={16} className="text-blue-600" /> LinkedIn
+              </button>
+              <button className="flex items-center gap-3 px-4 py-2 rounded-lg bg-white/5 hover:bg-white/10 text-slate-400 hover:text-white transition-colors text-sm font-medium border border-white/5 hover:border-white/10">
+                <LinkIcon size={16} className="text-purple-400" /> Copy Link
+              </button>
             </div>
-          )}
+          </div>
 
-          {/* PROSE CONTENT */}
+          {/* Mini Newsletter (Sidebar) */}
+          <div className="p-6 rounded-2xl bg-gradient-to-b from-slate-900 to-slate-950 border border-white/10">
+            <h4 className="text-white font-bold mb-2 text-sm">Join the Inner Circle</h4>
+            <p className="text-xs text-slate-400 mb-4">Exclusive automation tips, directly to your inbox.</p>
+            <NewsletterForm source="sidebar" />
+          </div>
+
+        </aside>
+
+
+        {/* RIGHT COLUMN: ARTICLE CONTENT */}
+        <main className="min-w-0">
+
           <div className="
-                prose prose-lg prose-invert max-w-none
-                prose-headings:text-white prose-headings:font-bold prose-headings:tracking-tight
-                prose-p:text-slate-300 prose-p:leading-relaxed
-                prose-a:text-blue-400 prose-a:font-semibold prose-a:no-underline hover:prose-a:text-blue-300 hover:prose-a:underline
-                prose-strong:text-white prose-strong:font-bold
-                prose-ul:marker:text-blue-500 prose-ol:marker:text-blue-500
-                prose-li:text-slate-300
-                prose-blockquote:border-l-4 prose-blockquote:border-blue-500 prose-blockquote:bg-blue-900/10 prose-blockquote:px-6 prose-blockquote:py-4 prose-blockquote:rounded-r-xl prose-blockquote:not-italic prose-blockquote:text-blue-200
-                prose-code:text-purple-300 prose-code:bg-purple-900/20 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded-md prose-code:before:content-none prose-code:after:content-none
-                prose-pre:bg-[#111] prose-pre:border prose-pre:border-white/10 prose-pre:rounded-2xl prose-pre:shadow-xl
-                prose-img:rounded-2xl prose-img:border prose-img:border-white/10 prose-img:shadow-2xl prose-img:my-12
-             "
+              prose prose-lg prose-invert max-w-none
+              prose-headings:font-bold prose-headings:tracking-tight prose-headings:text-white
+              prose-h1:text-5xl prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6 prose-h3:text-xl prose-h3:text-teal-400
+              prose-p:text-slate-300 prose-p:leading-8 prose-p:mb-6
+              prose-a:text-teal-400 prose-a:font-semibold prose-a:no-underline hover:prose-a:text-teal-300 hover:prose-a:underline
+              prose-blockquote:border-l-4 prose-blockquote:border-teal-500 prose-blockquote:bg-teal-950/10 prose-blockquote:px-8 prose-blockquote:py-2 prose-blockquote:rounded-r-lg prose-blockquote:text-xl prose-blockquote:font-medium prose-blockquote:text-teal-100 prose-blockquote:not-italic
+              prose-code:text-pink-300 prose-code:bg-[#0f172a] prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded-md prose-code:border prose-code:border-white/10 prose-code:before:content-none prose-code:after:content-none
+              prose-pre:bg-[#0f172a] prose-pre:border prose-pre:border-white/10 prose-pre:rounded-xl prose-pre:shadow-2xl prose-pre:p-6
+              prose-img:rounded-2xl prose-img:border prose-img:border-white/10 prose-img:shadow-2xl prose-img:my-10 prose-img:w-full
+              prose-li:text-slate-300 prose-li:marker:text-teal-500
+              prose-strong:text-white prose-strong:font-bold
+              prose-hr:border-white/10 prose-hr:my-12
+            "
             dangerouslySetInnerHTML={{
               __html: xss(
                 replaceBackendUrl(post.content)
@@ -146,65 +197,31 @@ export default async function Post({ params }) {
             }}
           />
 
-          {/* AUTHOR BOX FOOTER */}
-          <div className="mt-20 p-8 bg-white/5 border border-white/10 rounded-2xl flex flex-col md:flex-row items-center gap-6">
-            <div className="w-20 h-20 rounded-full bg-slate-800 border-2 border-slate-700 overflow-hidden relative flex-shrink-0">
-              <Image src="/profile.jpg" alt="Alfaz" fill className="object-cover" />
-            </div>
-            <div className="text-center md:text-left">
-              <h3 className="text-xl font-bold text-white mb-2">Written by Alfaz Mahmud Rizve</h3>
-              <p className="text-slate-400 text-sm mb-4">Automation Architect & Full Stack Developer. Helping agencies scale with 10x efficiency.</p>
-              <div className="flex justify-center md:justify-start gap-4">
-                <a href="https://www.facebook.com/" target="_blank" className="text-slate-500 hover:text-blue-400 transition-colors"><Facebook size={18} /></a>
-                <a href="https://www.linkedin.com/in/alfaz-mahmud-rizve/" target="_blank" className="text-slate-500 hover:text-blue-400 transition-colors"><Linkedin size={18} /></a>
-                <a href="https://www.instagram.com/whois.alfaz/" target="_blank" className="text-slate-500 hover:text-blue-400 transition-colors"><Instagram size={18} /></a>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-
-        {/* RIGHT: SIDEBAR (Sticky) */}
-        <aside className="hidden lg:block space-y-8 sticky top-32 h-fit">
-
-          {/* TABLE OF CONTENTS */}
-          <div className="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md">
-            <h4 className="text-xs font-bold text-slate-500 uppercase tracking-widest mb-4">On this page</h4>
+          {/* Mobile TOC (Visible only on small screens) */}
+          <div className="lg:hidden mt-12 py-8 border-t border-white/10">
+            <h4 className="text-sm font-bold text-white mb-4">In this Article</h4>
             <TableOfContents />
           </div>
 
-          {/* NEWSLETTER (Glowing Box) */}
-          <div className="p-1 rounded-2xl bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 shadow-2xl shadow-purple-500/20">
-            <div className="bg-[#0a0a0a] rounded-xl p-6 h-full relative overflow-hidden">
-              {/* Decorative background blur */}
-              <div className="absolute top-0 right-0 w-32 h-32 bg-purple-500/20 rounded-full blur-2xl -mr-16 -mt-16"></div>
-
-              <h3 className="text-lg font-bold text-white mb-2 relative z-10">Join the Inner Circle</h3>
-              <p className="text-slate-400 text-xs mb-6 relative z-10">Get weekly automation blueprints and n8n tips delivered to your inbox.</p>
-
-              <div className="relative z-10">
-                <NewsletterForm source={`blog-${slug}`} />
+          {/* Bottom CTA Area */}
+          <div className="mt-20 p-1 rounded-3xl bg-gradient-to-br from-teal-500 via-purple-600 to-pink-500">
+            <div className="bg-[#0f172a] rounded-[22px] p-8 md:p-12 text-center">
+              <h3 className="text-3xl font-bold text-white mb-4">Ready to automate your agency?</h3>
+              <p className="text-slate-400 mb-8 max-w-xl mx-auto">Skip the manual grunt work. Let's build a custom system that runs your business on autopilot 24/7.</p>
+              <div className="flex flex-col sm:flex-row justify-center gap-4">
+                <Link href="/contact" className="px-8 py-4 bg-white text-black font-bold rounded-lg hover:bg-slate-200 transition-colors">
+                  Book a Strategy Call
+                </Link>
+                <Link href="/services" className="px-8 py-4 bg-white/5 text-white font-bold rounded-lg border border-white/10 hover:bg-white/10 transition-colors">
+                  View Services
+                </Link>
               </div>
             </div>
           </div>
 
-          {/* SHARE */}
-          <div className="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md">
-            <h4 className="text-xs font-bold text-slate-500 uppercase tracking-widest mb-4">Share Article</h4>
-            <div className="flex gap-2">
-              <button className="flex-1 py-2 bg-blue-500/20 text-blue-400 rounded-lg text-xs font-bold hover:bg-blue-500 hover:text-white transition-colors flex items-center justify-center gap-2">
-                <Twitter size={14} /> Tweet
-              </button>
-              <button className="flex-1 py-2 bg-blue-900/20 text-blue-300 rounded-lg text-xs font-bold hover:bg-blue-800 hover:text-white transition-colors flex items-center justify-center gap-2">
-                <Linkedin size={14} /> Share
-              </button>
-            </div>
-          </div>
-
-        </aside>
-
+        </main>
       </div>
+
     </article>
   );
 }
