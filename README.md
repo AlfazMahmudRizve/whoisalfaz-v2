@@ -1,42 +1,114 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Automation OS (v2) - whoisalfaz.me
 
-## Getting Started
+![Automation OS Banner](/public/playbook.jpg)
 
-First, run the development server:
+> **"Control. Connect. Conquer."**  
+> The central nervous system for my digital existence. A high-performance, headless architecture designed to showcase the future of automation, AI, and faceless business systems.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🚀 Mission
+
+I help agency owners and entrepreneurs escape the **"Content Treadmill"** and build systems that run on autopilot. This repository (`whoisalfaz-v2`) is the frontend for my personal brand, serving as both a portfolio and a laboratory for my experiments in **AI Agents**, **n8n workflows**, and **CashOps**.
+
+---
+
+## 🏗 Headless Architecture
+
+This project splits the traditional monolithic CMS into a high-performance **Frontend** and a flexible **Backend**.
+
+```mermaid
+graph LR
+  A[WordPress Backend] -- GraphQL API --> B(Next.js Frontend)
+  B -- React Server Components --> C{User Experience}
+  D[n8n Automation] -- Webhooks --> A
+  E[AI Agents] -- Chat Interface --> B
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 1. The Brain (Backend)
+- **CMS**: WordPress (Headless Mode)
+- **API**: WPGraphQL
+- **Hosting**: DigitalOcean Droplet (`v1.whoisalfaz.me`)
+- **Role**: Manages content, media library, and SEO metadata. It is completely decoupled from the frontend design.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 2. The Face (Frontend)
+- **Framework**: Next.js 15 (App Router)
+- **Styling**: Tailwind CSS + Custom Design System (Dark Mode / Glassmorphism)
+- **Deployment**: Dual-Remote Pipeline (GitHub + DigitalOcean)
+- **Role**: Renders the UI, manages routing, and hosts interactive tools (ROI Calculator, AI Chat).
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🛠 Tech Stack
 
-To learn more about Next.js, take a look at the following resources:
+| Component | Technology | Purpose |
+| :--- | :--- | :--- |
+| **Frontend** | **Next.js 15** | Server-Side Rendering (SSR) & Static Generation |
+| **UI/UX** | **Tailwind CSS** | Utility-first styling with "Cyberpunk" aesthetic |
+| **Languages** | **JavaScript / React** | Core logic and interactive components |
+| **Backend** | **WordPress + GraphQL** | Headless CMS for Blog & Pages |
+| **Logic** | **n8n / Node.js** | Backend automation Workflows |
+| **Security** | **xss** | Cross-Site Scripting protection for dynamic content |
+| **Analytics** | **Vercel Analytics** | Performance tracking |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🔬 Key Features (Labs)
 
-## Deployment
- 
-You can deploy this Next.js app to any hosting provider that supports Node.js or static export (if compatible).
- 
-Standard build command:
- 
+### 🤖 AI Chat Interface (`/labs/chat`)
+A custom-built chat interface mimicking an AI Agen.
+- **Rule-Based Logic**: Responds to keywords (Pricing, Tech Stack, Contact).
+- **UI**: Streaming text effect, auto-scroll, and "Thinking" states.
+
+### 💰 ROI Calculator (`/labs/roi`)
+Interactive tool for agencies to estimate automation savings.
+- **Real-time Math**: Instant calculation based on employee count & hours saved.
+- **Visuals**: Dynamic progress bars and result cards.
+
+### 📝 Tech Magazine Blog (`/blog`)
+A fully custom blog engine.
+- **Premium Layout**: 2-Column "Magazine" style with Sticky TOC.
+- **Deep Deep**: Terminal-style code blocks and rich typography.
+
+### 🔍 Global Search
+- **Client-Side**: Instant filtering of blog posts and services.
+- **Secure**: Sanitized inputs to prevent injection attacks.
+
+---
+
+## 📦 Deployment Protocol
+
+This project uses a custom **Dual-Push** pipeline to ensure redundancy.
+
+**Command:**
 ```bash
-npm run build
+npm run push-all
 ```
- 
-For more details on deploying to various platforms (Vercel, Netlify, AWS, Docker, Self-hosted, etc.), check out the [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying).
+*Effect*: Pushes code to both `origin` (GitHub backup) and `deploy` (Live DigitalOcean server) simultaneously.
+
+---
+
+## 💻 Running Locally
+
+1.  **Clone the Repo**
+    ```bash
+    git clone https://github.com/AlfazMahmudRizve/whoisalfaz-v2.git
+    cd whoisalfaz-v2
+    ```
+
+2.  **Install Dependencies**
+    ```bash
+    npm install
+    ```
+
+3.  **Configure Environment**
+    Create a `.env.local` file (Contact me for API keys).
+
+4.  **Launch**
+    ```bash
+    npm run dev
+    ```
+    Visit `http://localhost:3000`.
+
+---
+
+**Built by Alfaz Mahmud Rizve**  
+*Building the future of work, one workflow at a time.*
