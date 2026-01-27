@@ -112,7 +112,12 @@ export default async function Post({ params }) {
                 prose-pre:bg-[#111] prose-pre:border prose-pre:border-white/10 prose-pre:rounded-2xl prose-pre:shadow-xl
                 prose-img:rounded-2xl prose-img:border prose-img:border-white/10 prose-img:shadow-2xl prose-img:my-12
              "
-            dangerouslySetInnerHTML={{ __html: xss(post.content) }}
+            dangerouslySetInnerHTML={{
+              __html: xss(
+                post.content
+                  .replace(/https?:\/\/v1\.whoisalfaz\.me/g, 'https://whoisalfaz.me')
+              )
+            }}
           />
 
           {/* AUTHOR BOX FOOTER */}
