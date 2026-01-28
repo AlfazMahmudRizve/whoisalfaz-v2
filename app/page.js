@@ -129,7 +129,7 @@ export default async function Home() {
               fill
               className="object-cover"
               priority
-              sizes="(max-width: 768px) 100vw, 300px"
+              sizes="(max-width: 768px) 300px, 300px"
             />
           </div>
         </div>
