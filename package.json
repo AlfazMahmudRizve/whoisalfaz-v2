@@ -10,6 +10,7 @@
     "push-all": "git push origin main && git push deploy main"
   },
   "dependencies": {
+    "@next/third-parties": "^16.1.6",
     "@tailwindcss/typography": "^0.5.19",
     "clsx": "^2.1.1",
     "framer-motion": "^12.28.1",
