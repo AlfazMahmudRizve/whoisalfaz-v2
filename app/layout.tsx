@@ -27,6 +27,11 @@ export const metadata = {
   alternates: {
     canonical: '/',
   },
+  verification: {
+    other: {
+      'p:domain_verify': '5e4e50ddfe2f47c276a5cb4231bfb41b',
+    },
+  },
 };
 
 import GlobalChatWidget from "@/components/GlobalChatWidget";
