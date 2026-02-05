@@ -18,6 +18,16 @@ const nextConfig: NextConfig = {
     formats: ['image/avif', 'image/webp'],
   },
   trailingSlash: true,
+  async redirects() {
+    return [
+      {
+        // Match old WordPress date-based URLs: /YYYY/MM/post-slug
+        source: '/:year(\\d{4})/:month(\\d{2})/:slug',
+        destination: '/blog/:slug',
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

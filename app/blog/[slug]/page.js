@@ -57,6 +57,33 @@ export default async function Post({ params }) {
       {/* AMBIENT GLOWS */}
       <div className="fixed top-0 left-0 w-full h-[500px] bg-gradient-to-b from-teal-900/10 to-transparent -z-10" />
 
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "headline": replaceBackendUrl(post.title),
+            "datePublished": post.date,
+            "dateModified": post.modified || post.date,
+            "image": post.featuredImage?.node?.sourceUrl ? [post.featuredImage.node.sourceUrl] : [],
+            "author": {
+              "@type": "Person",
+              "name": "Alfaz Mahmud Rizve",
+              "url": "https://whoisalfaz.me"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Alfaz Mahmud Rizve",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://whoisalfaz.me/logo.png"
+              }
+            }
+          })
+        }}
+      />
+
       {/* --- HERO SECTION: HEADER CARD --- */}
       <header className="max-w-7xl mx-auto px-6 mb-10">
 
