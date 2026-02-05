@@ -20,10 +20,24 @@ const nextConfig: NextConfig = {
   trailingSlash: true,
   async redirects() {
     return [
+      // 1. Redirect old Date-based WP URLs (Day precision)
+      // Example: /2025/12/17/my-post -> /blog/my-post
       {
-        // Match old WordPress date-based URLs: /YYYY/MM/post-slug
+        source: '/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/:slug',
+        destination: '/blog/:slug',
+        permanent: true,
+      },
+      // 2. Redirect old Month-based WP URLs
+      // Example: /2025/12/my-post -> /blog/my-post
+      {
         source: '/:year(\\d{4})/:month(\\d{2})/:slug',
         destination: '/blog/:slug',
+        permanent: true,
+      },
+      // 3. Redirect generic "Author" archives to homepage
+      {
+        source: '/author/:path*',
+        destination: '/',
         permanent: true,
       },
     ];

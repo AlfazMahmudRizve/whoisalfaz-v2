@@ -23,11 +23,26 @@ export const metadata = {
   description: "Alfaz Mahmud Rizve is a RevOps Engineer & Automation Architect who designs business growth strategies and automated infrastructure.",
   openGraph: {
     title: "Alfaz Mahmud Rizve | Automation & Security Expert",
-    description: "Alfaz Mahmud Rizve is an Automation Engineer and Full Stack Developer specializing in n8n workflows, Next.js applications, and cybersecurity.",
+    description: "Alfaz Mahmud Rizve is a RevOps Engineer & Automation Architect who designs business growth strategies and automated infrastructure.",
     url: 'https://whoisalfaz.me',
     siteName: 'Alfaz Mahmud Rizve',
     locale: 'en_US',
     type: 'website',
+    images: [
+      {
+        url: '/profile.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Alfaz Mahmud Rizve - Automation Architect',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Alfaz Mahmud Rizve | Automation & Security Expert',
+    description: 'Alfaz Mahmud Rizve is a RevOps Engineer & Automation Architect who designs business growth strategies.',
+    creator: '@whoisalfaz',
+    images: ['/profile.jpg'],
   },
   robots: {
     index: true,
@@ -44,7 +59,7 @@ export const metadata = {
     icon: '/logo.png',
   },
   alternates: {
-    canonical: '/',
+    canonical: './',
   },
   verification: {
     other: {
