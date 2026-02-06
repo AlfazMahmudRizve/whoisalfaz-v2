@@ -19,10 +19,10 @@ const mono = JetBrains_Mono({
 
 export const metadata = {
   metadataBase: new URL('https://whoisalfaz.me'),
-  title: "Alfaz Mahmud Rizve | Automation & Security Expert",
+  title: "Alfaz Mahmud Rizve | RevOps Engineer & Full-Stack Automation Architect",
   description: "Alfaz Mahmud Rizve is a RevOps Engineer & Automation Architect who designs business growth strategies and automated infrastructure.",
   openGraph: {
-    title: "Alfaz Mahmud Rizve | Automation & Security Expert",
+    title: "Alfaz Mahmud Rizve | RevOps Engineer & Full-Stack Automation Architect",
     description: "Alfaz Mahmud Rizve is a RevOps Engineer & Automation Architect who designs business growth strategies and automated infrastructure.",
     url: 'https://whoisalfaz.me',
     siteName: 'Alfaz Mahmud Rizve',
@@ -39,7 +39,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Alfaz Mahmud Rizve | Automation & Security Expert',
+    title: 'Alfaz Mahmud Rizve | RevOps Engineer & Full-Stack Automation Architect',
     description: 'Alfaz Mahmud Rizve is a RevOps Engineer & Automation Architect who designs business growth strategies.',
     creator: '@whoisalfaz',
     images: ['/profile.jpg'],
