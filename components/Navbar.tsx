@@ -68,9 +68,11 @@ export default function Navbar() {
             <Search size={16} className="text-slate-500 ml-2" />
             <form
               className="flex-1"
-              onSubmit={(e) => {
+              onSubmit={(e: React.FormEvent<HTMLFormElement>) => {
                 e.preventDefault();
-                const query = e.target.search.value;
+                const target = e.currentTarget;
+                const input = target.elements.namedItem('search') as HTMLInputElement;
+                const query = input?.value;
                 if (query) window.location.href = `/search?q=${encodeURIComponent(query)}`;
               }}
             >
@@ -103,9 +105,11 @@ export default function Navbar() {
             <div className="px-2 pt-2 mb-2">
               <form
                 className="relative"
-                onSubmit={(e) => {
+                onSubmit={(e: React.FormEvent<HTMLFormElement>) => {
                   e.preventDefault();
-                  const query = e.target.searchMobile.value;
+                  const target = e.currentTarget;
+                  const input = target.elements.namedItem('searchMobile') as HTMLInputElement;
+                  const query = input?.value;
                   if (query) window.location.href = `/search?q=${encodeURIComponent(query)}`;
                 }}
               >

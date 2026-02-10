@@ -93,7 +93,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
   return (
     <html lang="en" className={`${inter.variable} ${mono.variable}`}>
-      <body className="bg-[var(--background)] text-[var(--foreground)] min-h-screen flex flex-col">
+      <body
+        className="bg-[var(--background)] text-[var(--foreground)] min-h-screen flex flex-col"
+        suppressHydrationWarning
+      >
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

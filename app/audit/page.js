@@ -1,6 +1,6 @@
 
 import AuditTool from '../../components/AuditTool';
-import { CheckCircle2, Search, Zap, BarChart3, Globe } from 'lucide-react';
+import { Search, Zap, BarChart3 } from 'lucide-react';
 
 export default function AuditPage() {
     return (

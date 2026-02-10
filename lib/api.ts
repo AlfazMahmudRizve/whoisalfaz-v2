@@ -1,7 +1,7 @@
-// TEMPORARY FIX: Hardcoding the URL to bypass the .env error
-const API_URL = 'https://v1.whoisalfaz.me/graphql';
+// Using environment variable for API URL
+const API_URL = process.env.NEXT_PUBLIC_WORDPRESS_API_URL;
 
-async function fetchAPI(query, { variables } = {}) {
+async function fetchAPI(query: string, { variables }: { variables?: Record<string, any> } = {}) {
   const headers = { 'Content-Type': 'application/json' };
 
   if (!API_URL) {
@@ -28,7 +28,7 @@ async function fetchAPI(query, { variables } = {}) {
       return null;
     }
     return json.data;
-  } catch (error) {
+  } catch (_error) { // prefixed with underscore to silence unused variable warning
     console.error("Failed to parse API response:", text.slice(0, 100));
     return null;
   }
@@ -55,7 +55,7 @@ export async function getAllPosts() {
   return data?.posts?.nodes;
 }
 
-export async function getPostBySlug(slug) {
+export async function getPostBySlug(slug: string) {
   const data = await fetchAPI(`
     query PostBySlug($slug: ID!) {
       post(id: $slug, idType: SLUG) {
@@ -73,7 +73,7 @@ export async function getPostBySlug(slug) {
   return data?.post;
 }
 
-export async function getPageBySlug(slug) {
+export async function getPageBySlug(slug: string) {
   const data = await fetchAPI(`
     query PageBySlug($slug: ID!) {
       page(id: $slug, idType: URI) {
@@ -101,7 +101,7 @@ export async function getAllCategories() {
   return data?.categories?.nodes;
 }
 
-export async function getPostsByCategory(slug) {
+export async function getPostsByCategory(slug: string) {
   const data = await fetchAPI(`
     query PostsByCategory($slug: String) {
       posts(first: 100, where: { categoryName: $slug }) {

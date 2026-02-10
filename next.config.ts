@@ -40,6 +40,12 @@ const nextConfig: NextConfig = {
         destination: '/',
         permanent: true,
       },
+      // 4. Redirect legacy portfolio page
+      {
+        source: '/who-is-alfaz-mahmud-rizve',
+        destination: '/portfolio',
+        permanent: true,
+      },
     ];
   },
 };
