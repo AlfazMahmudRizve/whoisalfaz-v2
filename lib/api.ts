@@ -1,5 +1,5 @@
-// Using environment variable for API URL
-const API_URL = process.env.NEXT_PUBLIC_WORDPRESS_API_URL;
+// Using environment variable for API URL with fallback for production stability
+const API_URL = process.env.NEXT_PUBLIC_WORDPRESS_API_URL || 'https://v1.whoisalfaz.me/graphql';
 
 async function fetchAPI(query: string, { variables }: { variables?: Record<string, any> } = {}) {
   const headers = { 'Content-Type': 'application/json' };
