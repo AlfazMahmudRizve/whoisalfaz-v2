@@ -24,7 +24,7 @@ export default async function ServiceDetailPage({ params }) {
         notFound();
     }
 
-    const { title, subtitle, themeColor, icon: Icon, detailedContent, features, contactOption } = service;
+    const { title, subtitle, themeColor, icon: Icon, detailedContent, features, contactOption, price } = service;
 
     return (
         <main className="min-h-screen pt-32 pb-20 px-6">
@@ -63,6 +63,10 @@ export default async function ServiceDetailPage({ params }) {
                         <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
                             {title}
                         </h1>
+
+                        <div className="inline-block px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-xl font-bold text-white mb-6">
+                            Starting at <span style={{ color: themeColor }}>{price}</span>
+                        </div>
 
                         <h2
                             className="text-xl font-medium mb-12"
