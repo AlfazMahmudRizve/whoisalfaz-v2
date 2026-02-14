@@ -19,11 +19,11 @@ const mono = JetBrains_Mono({
 
 export const metadata = {
   metadataBase: new URL('https://whoisalfaz.me'),
-  title: "Alfaz Mahmud Rizve | RevOps Engineer & Full-Stack Automation Architect",
-  description: "Alfaz Mahmud Rizve is a RevOps Engineer & Automation Architect who designs business growth strategies and automated infrastructure.",
+  title: "Alfaz Mahmud Rizve | Headless Architect & Autonomous Revenue Systems",
+  description: "I help Marketing Agencies replace slow WordPress monoliths with Next.js and eliminate manual ops with n8n workflows.",
   openGraph: {
-    title: "Alfaz Mahmud Rizve | RevOps Engineer & Full-Stack Automation Architect",
-    description: "Alfaz Mahmud Rizve is a RevOps Engineer & Automation Architect who designs business growth strategies and automated infrastructure.",
+    title: "Alfaz Mahmud Rizve | Headless Architect & Autonomous Revenue Systems",
+    description: "I help Marketing Agencies replace slow WordPress monoliths with Next.js and eliminate manual ops with n8n workflows.",
     url: 'https://whoisalfaz.me',
     siteName: 'Alfaz Mahmud Rizve',
     locale: 'en_US',
@@ -33,14 +33,14 @@ export const metadata = {
         url: '/profile.jpg',
         width: 1200,
         height: 630,
-        alt: 'Alfaz Mahmud Rizve - Automation Architect',
+        alt: 'Alfaz Mahmud Rizve - Headless Architect',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Alfaz Mahmud Rizve | RevOps Engineer & Full-Stack Automation Architect',
-    description: 'Alfaz Mahmud Rizve is a RevOps Engineer & Automation Architect who designs business growth strategies.',
+    title: 'Alfaz Mahmud Rizve | Headless Architect & Autonomous Revenue Systems',
+    description: 'I help Marketing Agencies replace slow WordPress monoliths with Next.js and eliminate manual ops with n8n workflows.',
     creator: '@whoisalfaz',
     images: ['/profile.jpg'],
   },
@@ -79,8 +79,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     "name": "Alfaz Mahmud Rizve",
     "url": "https://whoisalfaz.me",
     "image": "https://whoisalfaz.me/profile.jpg",
-    "jobTitle": "Automation Engineer & Full Stack Developer",
-    "description": "Alfaz Mahmud Rizve is a web developer and automation expert in Bangladesh, specializing in Next.js, n8n workflows, and cybersecurity.",
+    "jobTitle": "Headless Architect & Revenue Systems Engineer",
+    "description": "I help Marketing Agencies replace slow WordPress monoliths with Next.js and eliminate manual ops with n8n workflows.",
     "nationality": {
       "@type": "Country",
       "name": "Bangladesh"

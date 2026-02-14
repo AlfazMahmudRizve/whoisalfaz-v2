@@ -20,11 +20,11 @@ export default async function Home() {
       {/* SECTION 0: HERO (NEW) */}
       <section className="max-w-5xl mx-auto px-6 pt-20 pb-24 text-center">
         <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight tracking-tight">
-          AI automations for SaaS, Agencies & Small Businesses <br className="hidden md:block" />
-          that <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-teal-200">Save hours</span> and <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-purple-200">grow revenue</span>
+          Sub-Second <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-teal-200">Headless Architectures</span> <br className="hidden md:block" />
+          & <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-purple-200">Autonomous Revenue Systems</span>.
         </h1>
         <p className="text-lg text-slate-400 max-w-3xl mx-auto mb-10 leading-relaxed">
-          Done-for-you n8n workflows, high-converting WordPress funnels, and AI-powered content engines tailored to your business
+          I help Marketing Agencies replace slow WordPress monoliths with Next.js and eliminate manual ops with n8n workflows.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
