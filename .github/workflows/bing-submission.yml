@@ -1,0 +1,15 @@
+name: Daily Bing Submission
+
+on:
+  schedule:
+    # Run at 00:00 UTC every day
+    - cron: '0 0 * * *'
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  submit-urls:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Bing Submission
+        run: |
+          curl -X GET "https://whoisalfaz.me/api/bing/submit?secret=${{ secrets.CRON_SECRET }}"
