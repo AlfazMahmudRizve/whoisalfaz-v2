@@ -191,11 +191,11 @@ export default async function Home() {
         <div className="grid md:grid-cols-2 gap-6">
           {[
             {
-              title: "n8n Automation Workflows",
-              icon: Zap,
-              desc: "Replace your manual data entry with autonomous agents. We build self-healing workflows that instantly qualify leads and sync your CRM, saving your team 20+ hours a week.",
-              bg: "bg-emerald-500/10", border: "border-emerald-500/20", text: "text-emerald-400",
-              link: "/services/n8n-automation"
+              title: "Custom Full-Stack Applications",
+              icon: Code2,
+              desc: "When off-the-shelf software falls short, I build the exact tool you need. Bespoke web apps, internal portals, and secure dashboards.",
+              bg: "bg-rose-500/10", border: "border-rose-500/20", text: "text-rose-400",
+              link: "/services/custom-full-stack"
             },
             {
               title: "Headless CMS Architecture",
@@ -205,11 +205,11 @@ export default async function Home() {
               link: "/services/headless-architecture"
             },
             {
-              title: "Strategy & Growth Consulting",
-              icon: BarChart3,
-              desc: "Not sure what to automate? We analyze your business processes and create a roadmap to cut costs and scale revenue.",
-              bg: "bg-purple-500/10", border: "border-purple-500/20", text: "text-purple-400",
-              link: "/services/growth-consulting"
+              title: "n8n Automation Workflows",
+              icon: Zap,
+              desc: "Replace your manual data entry with autonomous agents. We build self-healing workflows that instantly qualify leads and sync your CRM, saving your team 20+ hours a week.",
+              bg: "bg-emerald-500/10", border: "border-emerald-500/20", text: "text-emerald-400",
+              link: "/services/n8n-automation"
             },
             {
               title: "Technical SEO Audits",
@@ -219,11 +219,11 @@ export default async function Home() {
               link: "/services/technical-seo"
             },
             {
-              title: "Custom Full-Stack Applications",
-              icon: Code2,
-              desc: "When off-the-shelf software falls short, I build the exact tool you need. Bespoke web apps, internal portals, and secure dashboards.",
-              bg: "bg-rose-500/10", border: "border-rose-500/20", text: "text-rose-400",
-              link: "/services/custom-full-stack"
+              title: "Strategy & Growth Consulting",
+              icon: BarChart3,
+              desc: "Not sure what to automate? We analyze your business processes and create a roadmap to cut costs and scale revenue.",
+              bg: "bg-purple-500/10", border: "border-purple-500/20", text: "text-purple-400",
+              link: "/services/growth-consulting"
             }
           ].map((service, i) => (
             <article key={i} className={`rounded-xl border ${service.border} ${service.bg} p-8 hover:-translate-y-1 transition-transform duration-300 flex flex-col backdrop-blur-sm group`}>

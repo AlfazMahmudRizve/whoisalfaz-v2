@@ -9,17 +9,17 @@ export default function ServicesPage() {
 
     const services = [
         {
-            title: "n8n Automation Workflows",
-            slug: "n8n-automation",
-            desc: "Replace your manual data entry with autonomous agents. We build self-healing workflows that instantly qualify leads and sync your CRM, saving your team 20+ hours a week.",
-            price: "750",
-            icon: Zap,
-            color: "emerald", // Green
-            bg: "bg-emerald-500/10",
-            border: "border-emerald-500/20",
-            text: "text-emerald-400",
-            btn: "bg-emerald-500 hover:bg-emerald-400",
-            cta: "Automate Your Workflows"
+            title: "Custom Full-Stack Applications",
+            slug: "custom-full-stack",
+            desc: "When off-the-shelf software falls short, I build the exact tool you need. As a Full-Stack Architect, I develop custom web applications, bespoke internal agency portals, and secure client dashboards from the ground up.",
+            price: "2,500",
+            icon: Code2,
+            color: "rose", // Rose
+            bg: "bg-rose-500/10",
+            border: "border-rose-500/20",
+            text: "text-rose-400",
+            btn: "bg-rose-500 hover:bg-rose-400",
+            cta: "Build My Custom App"
         },
         {
             title: "Headless CMS Architecture",
@@ -35,17 +35,17 @@ export default function ServicesPage() {
             cta: "Build My Headless System"
         },
         {
-            title: "Strategy & Growth Consulting",
-            slug: "growth-consulting",
-            desc: "Not sure what to automate? We analyze your business processes and create a roadmap to cut costs and scale revenue.",
-            price: "200/h",
-            icon: BarChart3,
-            color: "purple", // Purple
-            bg: "bg-purple-500/10",
-            border: "border-purple-500/20",
-            text: "text-purple-400",
-            btn: "bg-purple-500 hover:bg-purple-400",
-            cta: "Get My Growth Roadmap"
+            title: "n8n Automation Workflows",
+            slug: "n8n-automation",
+            desc: "Replace your manual data entry with autonomous agents. We build self-healing workflows that instantly qualify leads and sync your CRM, saving your team 20+ hours a week.",
+            price: "750",
+            icon: Zap,
+            color: "emerald", // Green
+            bg: "bg-emerald-500/10",
+            border: "border-emerald-500/20",
+            text: "text-emerald-400",
+            btn: "bg-emerald-500 hover:bg-emerald-400",
+            cta: "Automate Your Workflows"
         },
         {
             title: "Technical SEO Audits",
@@ -61,17 +61,17 @@ export default function ServicesPage() {
             cta: "Find My Ranking Errors"
         },
         {
-            title: "Custom Full-Stack Applications",
-            slug: "custom-full-stack",
-            desc: "When off-the-shelf software falls short, I build the exact tool you need. As a Full-Stack Architect, I develop custom web applications, bespoke internal agency portals, and secure client dashboards from the ground up.",
-            price: "2,500",
-            icon: Code2,
-            color: "rose", // Rose
-            bg: "bg-rose-500/10",
-            border: "border-rose-500/20",
-            text: "text-rose-400",
-            btn: "bg-rose-500 hover:bg-rose-400",
-            cta: "Build My Custom App"
+            title: "Strategy & Growth Consulting",
+            slug: "growth-consulting",
+            desc: "Not sure what to automate? We analyze your business processes and create a roadmap to cut costs and scale revenue.",
+            price: "200/h",
+            icon: BarChart3,
+            color: "purple", // Purple
+            bg: "bg-purple-500/10",
+            border: "border-purple-500/20",
+            text: "text-purple-400",
+            btn: "bg-purple-500 hover:bg-purple-400",
+            cta: "Get My Growth Roadmap"
         }
     ];
 
