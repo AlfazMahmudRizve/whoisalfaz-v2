@@ -19,10 +19,10 @@ const mono = JetBrains_Mono({
 
 export const metadata = {
   metadataBase: new URL('https://whoisalfaz.me'),
-  title: "Alfaz Mahmud Rizve | Headless Architect & Autonomous Revenue Systems",
+  title: "Alfaz Mahmud Rizve | RevOps & Full Stack Automation Architect",
   description: "I help Marketing Agencies replace slow WordPress monoliths with Next.js and eliminate manual ops with n8n workflows.",
   openGraph: {
-    title: "Alfaz Mahmud Rizve | Headless Architect & Autonomous Revenue Systems",
+    title: "Alfaz Mahmud Rizve | RevOps & Full Stack Automation Architect",
     description: "I help Marketing Agencies replace slow WordPress monoliths with Next.js and eliminate manual ops with n8n workflows.",
     url: 'https://whoisalfaz.me',
     siteName: 'Alfaz Mahmud Rizve',
@@ -33,13 +33,13 @@ export const metadata = {
         url: '/profile.jpg',
         width: 1200,
         height: 630,
-        alt: 'Alfaz Mahmud Rizve - Headless Architect',
+        alt: 'Alfaz Mahmud Rizve - RevOps & Full Stack Automation Architect',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Alfaz Mahmud Rizve | Headless Architect & Autonomous Revenue Systems',
+    title: 'Alfaz Mahmud Rizve | RevOps & Full Stack Automation Architect',
     description: 'I help Marketing Agencies replace slow WordPress monoliths with Next.js and eliminate manual ops with n8n workflows.',
     creator: '@whoisalfaz',
     images: ['/profile.jpg'],
@@ -79,7 +79,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     "name": "Alfaz Mahmud Rizve",
     "url": "https://whoisalfaz.me",
     "image": "https://whoisalfaz.me/profile.jpg",
-    "jobTitle": "Headless Architect & Revenue Systems Engineer",
+    "jobTitle": "RevOps & Full Stack Automation Architect",
     "description": "I help Marketing Agencies replace slow WordPress monoliths with Next.js and eliminate manual ops with n8n workflows.",
     "nationality": {
       "@type": "Country",
