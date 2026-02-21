@@ -51,44 +51,66 @@ export default async function Home() {
       {/* SECTION 1: VALUE PROP "Built for SaaS founders..." */}
       <section className="max-w-6xl mx-auto px-6 mb-32">
         <div className="bg-gradient-to-br from-orange-50/5 via-white/5 to-white/5 border border-white/10 rounded-3xl p-8 md:p-12">
-          <h2 className="text-3xl font-bold text-white mb-2">Built for SaaS founders & Agencies</h2>
-          <p className="text-slate-400 mb-10">Transforming manual operations into automated workflows & SEO assets.</p>
+          <h2 className="text-3xl font-bold text-white mb-2">Engineered for Scaling SaaS Founders & Agencies</h2>
+          <p className="text-slate-400 mb-10">Replacing fragile "Zapier Band-Aids" with enterprise-grade, autonomous central nervous systems.</p>
 
           <div className="grid md:grid-cols-2 gap-8 md:gap-16">
-            <ul className="space-y-4">
-              <li className="flex items-start gap-3 text-slate-300">
-                <CheckCircle2 className="text-blue-500 shrink-0 mt-0.5" size={18} />
-                You have a proven product but limited time for manual outreach.
+            <ul className="space-y-6">
+              <li className="flex items-start gap-4 text-slate-300 group">
+                <div className="mt-1 bg-blue-500/10 p-1.5 rounded-lg border border-blue-500/20 group-hover:bg-blue-500/20 transition-colors shrink-0">
+                  <Database className="text-blue-500" size={18} />
+                </div>
+                <div>
+                  <span className="text-white font-bold block mb-1">Eliminate Data Silos</span>
+                  <p className="text-sm leading-relaxed">Your agency is scaling, but your data is trapped across disconnected tools and fragile, expensive API connections.</p>
+                </div>
               </li>
-              <li className="flex items-start gap-3 text-slate-300">
-                <CheckCircle2 className="text-blue-500 shrink-0 mt-0.5" size={18} />
-                Identify high-quality leads from data scraping & enrichment tools.
+              <li className="flex items-start gap-4 text-slate-300 group">
+                <div className="mt-1 bg-blue-500/10 p-1.5 rounded-lg border border-blue-500/20 group-hover:bg-blue-500/20 transition-colors shrink-0">
+                  <BarChart3 className="text-blue-500" size={18} />
+                </div>
+                <div>
+                  <span className="text-white font-bold block mb-1">Automated Lead Enrichment</span>
+                  <p className="text-sm leading-relaxed">Transform raw Apollo/web traffic into fully enriched, scored leads before they ever reach your sales team.</p>
+                </div>
               </li>
-              <li className="flex items-start gap-3 text-slate-300">
-                <CheckCircle2 className="text-blue-500 shrink-0 mt-0.5" size={18} />
-                SEO technical errors break your ranking and organic traffic.
-              </li>
-              <li className="flex items-start gap-3 text-slate-300">
-                <CheckCircle2 className="text-blue-500 shrink-0 mt-0.5" size={18} />
-                Need automated follow-ups via email/LinkedIn/WhatsApp.
+              <li className="flex items-start gap-4 text-slate-300 group">
+                <div className="mt-1 bg-blue-500/10 p-1.5 rounded-lg border border-blue-500/20 group-hover:bg-blue-500/20 transition-colors shrink-0">
+                  <Layout className="text-blue-500" size={18} />
+                </div>
+                <div>
+                  <span className="text-white font-bold block mb-1">The Ultimate Work OS</span>
+                  <p className="text-sm leading-relaxed">Sync high-intent lead data directly into monday.com or HubSpot with zero manual data entry.</p>
+                </div>
               </li>
             </ul>
-            <ul className="space-y-4">
-              <li className="flex items-start gap-3 text-slate-300">
-                <CheckCircle2 className="text-purple-500 shrink-0 mt-0.5" size={18} />
-                Automate conversions from cold traffic to paying leads.
+            <ul className="space-y-6">
+              <li className="flex items-start gap-4 text-slate-300 group">
+                <div className="mt-1 bg-purple-500/10 p-1.5 rounded-lg border border-purple-500/20 group-hover:bg-purple-500/20 transition-colors shrink-0">
+                  <Globe className="text-purple-500" size={18} />
+                </div>
+                <div>
+                  <span className="text-white font-bold block mb-1">Headless Web Architecture</span>
+                  <p className="text-sm leading-relaxed">Replace slow, bloated WordPress templates with high-performance, custom Next.js web applications.</p>
+                </div>
               </li>
-              <li className="flex items-start gap-3 text-slate-300">
-                <CheckCircle2 className="text-purple-500 shrink-0 mt-0.5" size={18} />
-                Optimize WordPress/Webflow for speed & conversions.
+              <li className="flex items-start gap-4 text-slate-300 group">
+                <div className="mt-1 bg-purple-500/10 p-1.5 rounded-lg border border-purple-500/20 group-hover:bg-purple-500/20 transition-colors shrink-0">
+                  <Zap className="text-purple-500" size={18} />
+                </div>
+                <div>
+                  <span className="text-white font-bold block mb-1">Deploy AI Agents</span>
+                  <p className="text-sm leading-relaxed">Integrate secure, custom AI agents (via n8n and local LLMs) to handle repetitive onboarding, reporting, and routing tasks.</p>
+                </div>
               </li>
-              <li className="flex items-start gap-3 text-slate-300">
-                <CheckCircle2 className="text-purple-500 shrink-0 mt-0.5" size={18} />
-                Sync lead data to CRM (HubSpot, Airtable, Notion).
-              </li>
-              <li className="flex items-start gap-3 text-slate-300">
-                <CheckCircle2 className="text-purple-500 shrink-0 mt-0.5" size={18} />
-                Build a sustainable growth engine while you focus on product.
+              <li className="flex items-start gap-4 text-slate-300 group">
+                <div className="mt-1 bg-purple-500/10 p-1.5 rounded-lg border border-purple-500/20 group-hover:bg-purple-500/20 transition-colors shrink-0">
+                  <CheckCircle2 className="text-purple-500" size={18} />
+                </div>
+                <div>
+                  <span className="text-white font-bold block mb-1">Focus on Revenue, Not Admin</span>
+                  <p className="text-sm leading-relaxed">Stop duct-taping your operations together. Build a sustainable RevOps engine while you focus on closing deals.</p>
+                </div>
               </li>
             </ul>
           </div>
@@ -203,7 +225,7 @@ export default async function Home() {
             {
               title: "Custom Full-Stack Applications",
               icon: Code2,
-              desc: "When off-the-shelf software falls short, I build the exact tool you need. Bespoke web apps, internal portals, and secure dashboards.",
+              desc: "Bespoke Agency Infrastructure. When off-the-shelf software blocks your growth, I build the exact internal tools you need—proprietary client portals, dashboards, and revenue-tracking systems.",
               bg: "bg-rose-500/10", border: "border-rose-500/20", text: "text-rose-400",
               link: "/services/custom-full-stack"
             },
@@ -217,7 +239,7 @@ export default async function Home() {
             {
               title: "n8n Automation Workflows",
               icon: Zap,
-              desc: "Replace your manual data entry with autonomous agents. We build self-healing workflows that instantly qualify leads and sync your CRM, saving your team 20+ hours a week.",
+              desc: "Autonomous RevOps Infrastructure. Replace fragile manual flows with self-healing n8n workflows that instantly enrich leads and scale your sales engine without adding headcount.",
               bg: "bg-emerald-500/10", border: "border-emerald-500/20", text: "text-emerald-400",
               link: "/services/n8n-automation"
             },
@@ -257,10 +279,10 @@ export default async function Home() {
             <span className="text-orange-600 font-bold uppercase tracking-wider text-xs mb-2 block">Our Mission</span>
             <h2 className="text-3xl font-bold text-slate-900 mb-6">Our mission</h2>
             <p className="text-slate-700 mb-6 leading-relaxed">
-              We help SaaS startups and agencies reclaim their time and scale efficiently. By replacing manual grunt work with intelligent automation, we empower founders to focus on product and strategy.
+              We help scaling SaaS founders and agencies reclaim their focus by engineering autonomous revenue systems. By replacing fragile "Zapier Band-Aids" with enterprise-grade infrastructure, we empower you to focus on growth and strategy.
             </p>
             <p className="text-slate-700 leading-relaxed">
-              We believe in "No Fluff" growth—just engineered systems that work reliably in the background 24/7.
+              We believe in "No Fluff" growth—just high-performance architectures and self-healing systems that work reliably in the background 24/7.
             </p>
           </div>
           <div className="absolute top-0 right-0 w-64 h-64 bg-orange-200 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 opacity-50"></div>
