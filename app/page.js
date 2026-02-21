@@ -119,7 +119,7 @@ export default async function Home() {
 
       {/* SECTION 2: PROCESS "4-Step Workflow" */}
       <section className="max-w-6xl mx-auto px-6 text-center mb-32">
-        <h2 className="text-3xl font-bold text-white mb-4">Our 4-Step n8n Workflow Development Process</h2>
+        <h2 className="text-3xl font-bold text-white mb-4">Our 4-Step Development Process</h2>
         <p className="text-slate-400 max-w-2xl mx-auto mb-16">From strategy to deployment, we ensure your automation is reliable, scalable, and tailored to your business goals.</p>
 
         <WorkflowSteps />
