@@ -33,6 +33,7 @@ export default function PartnersPage() {
                 {/* LOGO GRID SECTION (CRITICAL PLACEMENT) */}
                 <section className="mb-32 py-12 border-y border-white/5">
                     <PartnerLogos
+                        variant="stack"
                         title="Official Technology Partners"
                         subtitle="Production-grade integrations currently orchestrated for consulting clients and technical readers."
                     />

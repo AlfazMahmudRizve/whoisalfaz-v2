@@ -42,6 +42,7 @@ export default async function Home() {
         {/* PARTNER GRID - HOMEPAGE (High-Ticket Social Proof) */}
         <div className="max-w-5xl mx-auto py-12 border-y border-white/5">
           <PartnerLogos
+            variant="stack"
             title="Official Technology Partners"
           />
         </div>
