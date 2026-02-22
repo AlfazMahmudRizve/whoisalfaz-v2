@@ -8,15 +8,31 @@ async function fetchAPI(query: string, { variables }: { variables?: Record<strin
     throw new Error('NEXT_PUBLIC_WORDPRESS_API_URL is not defined');
   }
 
-  const res = await fetch(API_URL, {
-    method: 'POST',
-    headers,
-    body: JSON.stringify({ query, variables }),
-    next: { revalidate: 60 }, // Updates data every 60 seconds
-  });
+  let res;
+  let retries = 3;
+  while (retries > 0) {
+    try {
+      res = await fetch(API_URL, {
+        method: 'POST',
+        headers,
+        body: JSON.stringify({ query, variables }),
+        next: { revalidate: 60 }, // Updates data every 60 seconds
+      });
+      break; // Success, exit retry loop
+    } catch (error) {
+      console.warn(`Fetch to ${API_URL} failed. Retries left: ${retries - 1}. Error: ${error}`);
+      retries--;
+      if (retries === 0) {
+        console.error('Max retries reached for fetchAPI.');
+        return null; // Return null instead of crashing the build
+      }
+      // Wait a bit before retrying (exponential backoff)
+      await new Promise(resolve => setTimeout(resolve, (4 - retries) * 2000));
+    }
+  }
 
-  if (!res.ok) {
-    console.error(`API returned status ${res.status}`);
+  if (!res || !res.ok) {
+    console.error(`API returned status ${res?.status}`);
     return null;
   }
 

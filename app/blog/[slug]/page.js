@@ -22,6 +22,7 @@ export async function generateMetadata({ params }) {
   if (!post) {
     return {
       title: 'Post Not Found',
+      description: 'The requested article could not be loaded at this time.',
     };
   }
 
@@ -54,7 +55,16 @@ export default async function Post({ params }) {
   const post = await getPostBySlug(slug);
 
   if (!post) {
-    notFound();
+    // If API fails during build, we don't want to crash Next.js completely.
+    // We return a simple error state instead of using notFound() which during SSG can cause build failures if too many occur at once due to timeouts.
+    return (
+      <main className="min-h-screen bg-[#0a0a0a] flex items-center justify-center p-6">
+        <div className="text-center space-y-4">
+          <h1 className="text-2xl font-bold text-white">Temporary Loading Error</h1>
+          <p className="text-slate-400 max-w-md mx-auto">This article is temporarily unavailable due to a backend synchronization issue. Please try again in a few minutes.</p>
+        </div>
+      </main>
+    );
   }
 
   // Calculate read time

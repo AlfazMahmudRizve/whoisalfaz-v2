@@ -15,7 +15,10 @@ export async function generateMetadata({ params }) {
     let data = await getPostBySlug(slug);
     if (!data) data = await getPageBySlug(slug);
 
-    if (!data) return { title: 'Page Not Found' };
+    if (!data) return {
+        title: 'Page Not Found',
+        description: 'The requested page could not be loaded at this time.'
+    };
 
     const seoTitle = data.seo?.title || data.title;
     const seoDesc = data.seo?.description || '';
@@ -52,9 +55,16 @@ export default async function Page({ params }) {
         type = 'page';
     }
 
-    // 3. If neither, 404
+    // 3. If neither, return temporary error state instead of notFound() to prevent build crashes from timeouts
     if (!data) {
-        notFound();
+        return (
+            <main className="min-h-screen bg-[#0a0a0a] flex items-center justify-center p-6">
+                <div className="text-center space-y-4">
+                    <h1 className="text-2xl font-bold text-white">Temporary Loading Error</h1>
+                    <p className="text-slate-400 max-w-md mx-auto">This page is temporarily unavailable due to a backend synchronization issue. Please try again in a few minutes.</p>
+                </div>
+            </main>
+        );
     }
 
     const isAbout = slug === 'about';

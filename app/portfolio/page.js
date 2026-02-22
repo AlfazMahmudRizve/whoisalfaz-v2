@@ -150,8 +150,8 @@ export default function Portfolio() {
                         {/* Project - Veloryc */}
                         <a href="https://veloryc.whoisalfaz.me" target="_blank" rel="noopener noreferrer" className="group bg-[#111] border border-white/10 rounded-3xl overflow-hidden hover:border-purple-500/50 transition-colors cursor-pointer">
                             <div className="h-48 bg-[#050505] group-hover:bg-purple-950/30 transition-colors relative p-8 flex items-center justify-center">
-                                <div className="absolute inset-0 flex items-center justify-center bg-[#050505]">
-                                    <span className="text-6xl font-serif text-white tracking-widest font-black italic mt-4">VC</span>
+                                <div className="relative w-full h-full">
+                                    <Image src="/veloryc.png" alt="Veloryc Logo" fill className="object-contain" />
                                 </div>
                             </div>
                             <div className="p-8">
