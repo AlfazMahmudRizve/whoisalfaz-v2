@@ -68,6 +68,18 @@ export async function getPostBySlug(slug: string) {
             sourceUrl
           }
         }
+        seo {
+          title
+          description
+          canonicalUrl
+          openGraph {
+            title
+            description
+            image {
+              sourceUrl
+            }
+          }
+        }
       }
     }
   `, { variables: { slug } });
@@ -81,6 +93,18 @@ export async function getPageBySlug(slug: string) {
         title
         content
         date
+        seo {
+          title
+          description
+          canonicalUrl
+          openGraph {
+            title
+            description
+            image {
+              sourceUrl
+            }
+          }
+        }
       }
     }
   `, { variables: { slug } });

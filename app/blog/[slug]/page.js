@@ -26,8 +26,8 @@ export async function generateMetadata({ params }) {
   }
 
   const seoTitle = post.seo?.title || post.title;
-  const seoDesc = post.seo?.metaDesc || post.excerpt?.replace(/<[^>]*>/g, '').slice(0, 160);
-  const canonicalUrl = `https://whoisalfaz.me/blog/${slug}/`;
+  const seoDesc = post.seo?.description || post.excerpt?.replace(/<[^>]*>/g, '').slice(0, 160);
+  const canonicalUrl = post.seo?.canonicalUrl || `https://whoisalfaz.me/blog/${slug}/`;
 
   return {
     title: seoTitle,
@@ -36,13 +36,13 @@ export async function generateMetadata({ params }) {
       canonical: canonicalUrl,
     },
     openGraph: {
-      title: post.seo?.opengraphTitle || seoTitle,
-      description: post.seo?.opengraphDescription || seoDesc,
+      title: post.seo?.openGraph?.title || seoTitle,
+      description: post.seo?.openGraph?.description || seoDesc,
       url: canonicalUrl,
       type: 'article',
       images: [
         {
-          url: post.seo?.opengraphImage?.sourceUrl || post.featuredImage?.node?.sourceUrl || '/profile.jpg',
+          url: post.seo?.openGraph?.image?.sourceUrl || post.featuredImage?.node?.sourceUrl || '/profile.jpg',
         },
       ],
     },

@@ -18,8 +18,8 @@ export async function generateMetadata({ params }) {
     if (!data) return { title: 'Page Not Found' };
 
     const seoTitle = data.seo?.title || data.title;
-    const seoDesc = data.seo?.metaDesc || '';
-    const canonicalUrl = `https://whoisalfaz.me/${slug}/`;
+    const seoDesc = data.seo?.description || '';
+    const canonicalUrl = data.seo?.canonicalUrl || `https://whoisalfaz.me/${slug}/`;
 
     return {
         title: seoTitle,
@@ -28,12 +28,12 @@ export async function generateMetadata({ params }) {
             canonical: canonicalUrl,
         },
         openGraph: {
-            title: data.seo?.opengraphTitle || seoTitle,
-            description: data.seo?.opengraphDescription || seoDesc,
+            title: data.seo?.openGraph?.title || seoTitle,
+            description: data.seo?.openGraph?.description || seoDesc,
             url: canonicalUrl,
             images: [
                 {
-                    url: data.seo?.opengraphImage?.sourceUrl || data.featuredImage?.node?.sourceUrl || '/profile.jpg',
+                    url: data.seo?.openGraph?.image?.sourceUrl || data.featuredImage?.node?.sourceUrl || '/profile.jpg',
                 },
             ],
         },
