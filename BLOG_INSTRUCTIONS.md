@@ -34,6 +34,7 @@ Example Affiliate Links:
 - **Monday.com**: `https://try.monday.com/66vrkkiezhrz`
 - **Brevo**: `https://get.brevo.com/6b88c13841c4`
 - **Databox**: `https://join.databox.com/qfzdqmwp7elc`
+- **Pinecone**: `https://try.pinecone.io/ra3cq48xakg6`
 
 ## 5. Mandatory "Deploying the Stacks" Section
 Every post **MUST** end with a dedicated "Deploying the Stacks" section before the final Strategy Call CTA. Use separate `###` headers for each tool mentioned in the post.

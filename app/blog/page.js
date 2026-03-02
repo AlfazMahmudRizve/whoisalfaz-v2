@@ -115,7 +115,7 @@ export default async function BlogPage() {
                 </div>
 
                 {/* === RIGHT COLUMN: SIDEBAR === */}
-                <aside className="space-y-12 h-fit sticky top-32">
+                <aside className="space-y-12 h-[calc(100vh-8rem)] overflow-y-auto pb-8 sticky top-32 scrollbar-thin scrollbar-thumb-white/10 hover:scrollbar-thumb-white/20">
 
                     {/* SEARCH */}
                     <Suspense fallback={<div className="h-12 bg-white/5 rounded-lg animate-pulse" />}>

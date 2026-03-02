@@ -1,10 +1,12 @@
-import { getAllPosts, getPostBySlug } from '@/lib/mdx';
+import { Suspense } from 'react';
+import { getAllPosts, getPostBySlug, getAllCategories } from '@/lib/mdx';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowLeft, Calendar, Clock, Twitter, Linkedin, Link as LinkIcon } from 'lucide-react';
 import TableOfContents from '@/components/TableOfContents';
 import NewsletterForm from '@/components/NewsletterForm';
+import SearchWidget from '@/components/SearchWidget';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import rehypeHighlight from 'rehype-highlight';
 
@@ -53,6 +55,9 @@ export async function generateMetadata({ params }) {
 export default async function Post({ params }) {
   const { slug } = await params;
   const post = getPostBySlug(slug);
+  const posts = getAllPosts();
+  const categories = getAllCategories();
+  const recentPosts = posts.filter(p => p.slug !== slug).slice(0, 5);
 
   if (!post) {
     // If API fails during build, we don't want to crash Next.js completely.
@@ -182,11 +187,11 @@ export default async function Post({ params }) {
       </header>
 
 
-      {/* --- MAIN LAYOUT GRID (Left TOC, Right Content) --- */}
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-16 relative">
+      {/* --- MAIN LAYOUT GRID (Left TOC, Center Content, Right Sidebar) --- */}
+      <div className="max-w-[90rem] mx-auto px-6 grid grid-cols-1 lg:grid-cols-[250px_1fr] xl:grid-cols-[250px_1fr_300px] gap-10 xl:gap-16 relative">
 
         {/* LEFT COLUMN: STICKY SIDEBAR (TOC + Share) */}
-        <aside className="hidden lg:block h-fit sticky top-32 space-y-12 min-w-[280px]">
+        <aside className="hidden lg:block h-fit sticky top-32 space-y-12 min-w-0 w-full">
 
           {/* Table of Contents */}
           <div>
@@ -221,10 +226,10 @@ export default async function Post({ params }) {
 
 
         {/* RIGHT COLUMN: ARTICLE CONTENT */}
-        <main className="min-w-0">
+        <main className="min-w-0 w-full overflow-x-hidden">
 
           <div className="
-              prose prose-invert prose-lg max-w-none 
+              prose prose-invert prose-lg max-w-none w-full
               prose-headings:text-white prose-headings:font-bold
               prose-h2:text-3xl prose-h2:mt-16 prose-h2:mb-6 prose-h2:tracking-tight
               prose-h3:text-2xl prose-h3:text-teal-400 prose-h3:mt-8 prose-h3:mb-4
@@ -235,6 +240,8 @@ export default async function Post({ params }) {
               prose-strong:text-white prose-strong:font-bold
               prose-blockquote:border-l-4 prose-blockquote:border-teal-500 prose-blockquote:bg-teal-950/20 prose-blockquote:px-8 prose-blockquote:py-4 prose-blockquote:rounded-r-2xl prose-blockquote:text-slate-200 prose-blockquote:italic
               prose-code:text-teal-300 prose-code:bg-slate-900 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded-md prose-code:before:content-none prose-code:after:content-none
+              prose-pre:bg-[#0f172a] prose-pre:border prose-pre:border-white/10 prose-pre:max-w-full prose-pre:overflow-x-auto
+              prose-hr:my-12 prose-hr:border-white/10 prose-hr:w-full
             ">
             {/* Affiliate Disclosure */}
             <p className="text-slate-500 text-sm italic mb-12 border-l-2 border-slate-800 pl-6 py-2 bg-slate-900/30 rounded-r-lg">
@@ -267,6 +274,57 @@ export default async function Post({ params }) {
           </div>
 
         </main>
+
+        {/* RIGHT COLUMN: STICKY SIDEBAR (Search, Recent, Categories) */}
+        <aside className="hidden xl:block space-y-12 h-[calc(100vh-8rem)] overflow-y-auto pb-8 sticky top-32 min-w-[300px] scrollbar-thin scrollbar-thumb-white/10 hover:scrollbar-thumb-white/20">
+
+          {/* SEARCH */}
+          <Suspense fallback={<div className="h-12 bg-white/5 rounded-lg animate-pulse" />}>
+            <SearchWidget />
+          </Suspense>
+
+          {/* RECENT POSTS */}
+          <div>
+            <h4 className="text-xl font-bold text-white mb-6">Recent Posts</h4>
+            <ul className="space-y-4">
+              {recentPosts?.map(post => (
+                <li key={post.slug}>
+                  <Link href={`/blog/${post.slug}`} className="group block">
+                    <h5 className="text-slate-300 text-sm font-medium group-hover:text-blue-400 transition-colors line-clamp-2 mb-1">
+                      {post.title}
+                    </h5>
+                    <span className="text-xs text-slate-600 block">{new Date(post.date).toLocaleDateString()}</span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* ARCHIVES (Mock) */}
+          <div>
+            <h4 className="text-xl font-bold text-white mb-6">Archives</h4>
+            <ul className="space-y-2 text-sm text-slate-400">
+              <li><Link href="#" className="hover:text-blue-400 block py-1">January 2026</Link></li>
+              <li><Link href="#" className="hover:text-blue-400 block py-1">December 2025</Link></li>
+            </ul>
+          </div>
+
+          {/* CATEGORIES */}
+          <div>
+            <h4 className="text-xl font-bold text-white mb-6">Categories</h4>
+            <ul className="space-y-2">
+              {categories?.map(cat => (
+                <li key={cat.slug}>
+                  <Link href={`/blog/category/${cat.slug}`} className="text-sm text-slate-400 hover:text-blue-400 block py-1 border-b border-white/5 pb-2">
+                    {cat.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+        </aside>
+
       </div>
 
     </article >

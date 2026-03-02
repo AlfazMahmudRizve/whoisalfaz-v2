@@ -6,7 +6,7 @@ slug: n8n-debugging-error-handling-basics
 description: >-
   Master n8n debugging and error handling with logs, retries, and alerts. Real
   examples for SaaS & agencies by Alfaz Mahmud Rizve at whoisalfaz.me.
-date: '2026-03-02'
+date: '2025-12-24'
 seoTitle: >-
   n8n Debugging & Error Handling Basics (Logs, Retries, Alerts to Slack &
   Email)-30 Days of n8n & Automation- Day 7 - AI automation for SaaS & agencies
