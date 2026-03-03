@@ -104,14 +104,14 @@ export default function GlobalChatWidget() {
                             <form onSubmit={handleSubmit} className="relative">
                                 <input
                                     type="text"
-                                    value={input}
+                                    value={input || ''}
                                     onChange={handleInputChange}
                                     placeholder="Ask a question..."
                                     className="w-full bg-[#151515] border border-white/10 rounded-xl pl-4 pr-12 py-3 text-sm text-white focus:outline-none focus:border-teal-500/50 transition-colors"
                                 />
                                 <button
                                     type="submit"
-                                    disabled={!input.trim() || isLoading}
+                                    disabled={!input || !input.trim() || isLoading}
                                     className="absolute right-2 top-1/2 -translate-y-1/2 p-1.5 bg-teal-500 text-black rounded-lg hover:bg-teal-400 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
                                 >
                                     <Send size={16} />
