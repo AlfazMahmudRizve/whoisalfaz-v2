@@ -10,7 +10,9 @@ export default function GlobalChatWidget() {
     const [isOpen, setIsOpen] = useState(false);
     const messagesEndRef = useRef(null);
 
-    const { messages, input, handleInputChange, handleSubmit, isLoading } = useChat({
+    const [inputValue, setInputValue] = useState('');
+
+    const { messages, status, sendMessage } = useChat({
         api: '/api/chat',
         initialMessages: [
             {
@@ -21,6 +23,8 @@ export default function GlobalChatWidget() {
         ]
     });
 
+    const isLoading = status === 'streaming' || status === 'submitted';
+
     const scrollToBottom = () => {
         messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
     };
@@ -28,6 +32,19 @@ export default function GlobalChatWidget() {
     useEffect(() => {
         if (isOpen) scrollToBottom();
     }, [messages, isLoading, isOpen]);
+
+    const handleFormSubmit = async (e) => {
+        e.preventDefault();
+        if (!inputValue.trim() || isLoading) return;
+
+        const tempVal = inputValue;
+        setInputValue(''); // Clear immediately for UX
+
+        sendMessage({
+            role: 'user',
+            content: tempVal
+        });
+    };
 
     return (
         <>
@@ -101,17 +118,17 @@ export default function GlobalChatWidget() {
 
                         {/* Input */}
                         <div className="p-3 bg-white/5 border-t border-white/5">
-                            <form onSubmit={handleSubmit} className="relative">
+                            <form onSubmit={handleFormSubmit} className="relative">
                                 <input
                                     type="text"
-                                    value={input || ''}
-                                    onChange={handleInputChange}
+                                    value={inputValue}
+                                    onChange={(e) => setInputValue(e.target.value)}
                                     placeholder="Ask a question..."
                                     className="w-full bg-[#151515] border border-white/10 rounded-xl pl-4 pr-12 py-3 text-sm text-white focus:outline-none focus:border-teal-500/50 transition-colors"
                                 />
                                 <button
                                     type="submit"
-                                    disabled={!input || !input.trim() || isLoading}
+                                    disabled={!inputValue.trim() || isLoading}
                                     className="absolute right-2 top-1/2 -translate-y-1/2 p-1.5 bg-teal-500 text-black rounded-lg hover:bg-teal-400 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
                                 >
                                     <Send size={16} />
