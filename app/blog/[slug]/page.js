@@ -60,6 +60,10 @@ export default async function Post({ params }) {
   const categories = getAllCategories();
   const recentPosts = posts.filter(p => p.slug !== slug).slice(0, 5);
 
+  const currentIndex = posts.findIndex(p => p.slug === slug);
+  const nextPost = currentIndex > 0 ? posts[currentIndex - 1] : null;
+  const prevPost = currentIndex !== -1 && currentIndex < posts.length - 1 ? posts[currentIndex + 1] : null;
+
   if (!post) {
     // If API fails during build, we don't want to crash Next.js completely.
     // We return a simple error state instead of using notFound() which during SSG can cause build failures if too many occur at once due to timeouts.
@@ -267,6 +271,25 @@ export default async function Post({ params }) {
             {/* Dynamic Affiliate Links Injection */}
             {post.affiliates && post.affiliates.length > 0 && (
               <DeployingTheStacks affiliates={post.affiliates} />
+            )}
+
+            {/* Previous/Next Article Navigation */}
+            {(prevPost || nextPost) && (
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-16 pt-8 border-t border-white/10">
+                {prevPost ? (
+                  <Link href={`/blog/${prevPost.slug}`} className="group p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-teal-500/50 transition-colors flex flex-col justify-center">
+                    <span className="text-xs text-slate-500 uppercase font-bold tracking-widest mb-2 flex items-center gap-2"><ArrowLeft size={14} className="group-hover:-translate-x-1 transition-transform" /> Previous Post</span>
+                    <h4 className="text-white font-bold group-hover:text-teal-400 transition-colors line-clamp-2">{prevPost.title}</h4>
+                  </Link>
+                ) : <div />}
+
+                {nextPost ? (
+                  <Link href={`/blog/${nextPost.slug}`} className="group p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-teal-500/50 transition-colors flex flex-col justify-center text-right">
+                    <span className="text-xs text-slate-500 uppercase font-bold tracking-widest mb-2 flex items-center justify-end gap-2">Next Post <ArrowLeft size={14} className="rotate-180 group-hover:translate-x-1 transition-transform" /></span>
+                    <h4 className="text-white font-bold group-hover:text-teal-400 transition-colors line-clamp-2">{nextPost.title}</h4>
+                  </Link>
+                ) : <div />}
+              </div>
             )}
           </div>
 

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { ShieldCheck, Star } from 'lucide-react';
 
 const AFFILIATE_DATA = {
     n8n: {
@@ -81,20 +82,38 @@ const AFFILIATE_DATA = {
 };
 
 const AffiliateCard = ({ data, id }) => (
-    <Link href={data.url} target="_blank" rel="noopener noreferrer" key={id} className="bg-[#0a0a0a] border border-white/10 rounded-2xl p-6 hover:border-teal-500/50 transition-all group overflow-hidden relative block">
-        {/* Hover Glow */}
-        <div className="absolute inset-0 bg-teal-500/5 opacity-0 group-hover:opacity-100 transition-opacity" />
+    <Link href={data.url} target="_blank" rel="noopener noreferrer" key={id} className="bg-[#0a0a0a] border border-white/10 rounded-2xl p-6 hover:border-teal-500/50 transition-all group overflow-hidden relative block flex flex-col justify-between h-full">
+        <div>
+            {/* Hover Glow */}
+            <div className="absolute inset-0 bg-teal-500/5 opacity-0 group-hover:opacity-100 transition-opacity" />
 
-        <div className="mb-4">
-            <span className="inline-block px-2.5 py-1 rounded bg-slate-900 border border-white/5 text-slate-400 text-[10px] font-bold uppercase tracking-wider mb-4">
-                {data.badge}
-            </span>
-            <h4 className="text-lg font-bold text-white mb-2">{data.title}</h4>
-            <p className="text-sm text-slate-400 line-clamp-2">{data.description}</p>
+            <div className="mb-6 relative z-10">
+                <span className="inline-block px-2.5 py-1 rounded bg-slate-900 border border-white/5 text-slate-400 text-[10px] font-bold uppercase tracking-wider mb-4">
+                    {data.badge}
+                </span>
+                <h4 className="text-lg font-bold text-white mb-2">{data.title}</h4>
+                <p className="text-sm text-slate-400 line-clamp-2">{data.description}</p>
+            </div>
         </div>
-        <span className="inline-flex items-center text-teal-400 text-sm font-bold group-hover:text-teal-300 transition-colors mt-2">
-            {data.buttonText} <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
-        </span>
+
+        <div className="mt-auto relative z-10 flex flex-col gap-3">
+            <span className="inline-flex items-center text-teal-400 text-sm font-bold group-hover:text-teal-300 transition-colors">
+                {data.buttonText} <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
+            </span>
+
+            {/* Trust Badges */}
+            <div className="flex items-center gap-3 text-[10px] text-slate-500 font-medium tracking-wide">
+                <span className="flex items-center gap-1 group-hover:text-slate-400 transition-colors">
+                    <ShieldCheck size={12} className="text-teal-500/50" /> Secure Link
+                </span>
+                <span className="flex items-center gap-1 group-hover:text-slate-400 transition-colors">
+                    <div className="flex">
+                        {[1, 2, 3, 4, 5].map(i => <Star key={i} size={10} className="text-yellow-500/50 fill-yellow-500/50" />)}
+                    </div>
+                    Verified Partner
+                </span>
+            </div>
+        </div>
     </Link>
 );
 

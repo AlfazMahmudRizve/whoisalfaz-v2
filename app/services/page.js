@@ -77,8 +77,41 @@ export default function ServicesPage() {
         }
     ];
 
+    const jsonLd = [
+        ...services.map(s => ({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "serviceType": s.title,
+            "provider": {
+                "@type": "Person",
+                "name": "Alfaz Mahmud Rizve"
+            },
+            "description": s.desc,
+            "offers": {
+                "@type": "Offer",
+                "price": s.price.replace('/h', '').replace(',', ''),
+                "priceCurrency": "USD"
+            }
+        })),
+        {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+                { "@type": "Question", "name": "How long does it take to build an automation?", "acceptedAnswer": { "@type": "Answer", "text": "Simple workflows (e.g., lead sync) take 2-3 days. Complex agency operating systems can take 2-4 weeks. We always start with a discovery call to give you an exact timeline." } },
+                { "@type": "Question", "name": "Do you offer ongoing support?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. All projects come with 30 days of free monitoring. After that, we offer monthly maintenance packages to ensure your automations run smoothly as platforms update their APIs." } },
+                { "@type": "Question", "name": "Can you integrate with my specific CRM?", "acceptedAnswer": { "@type": "Answer", "text": "Almost certainly. If it has an API, we can connect to it. We specialize in HubSpot, Airtable, Pipedrive, and GoHighLevel, but custom integrations are our bread and butter." } },
+                { "@type": "Question", "name": "What is your refund policy?", "acceptedAnswer": { "@type": "Answer", "text": "We work on a milestone basis. If we cannot deliver the agreed-upon scope, you don't pay for that milestone. We prioritize transparent communication to ensure you're always happy with the output." } },
+                { "@type": "Question", "name": "Do I need to pay for n8n hosting?", "acceptedAnswer": { "@type": "Answer", "text": "You have two options: Cloud (approx $20/mo) or Self-Hosted (approx $5-10/mo on a VPS). We can set up either for you, but we usually recommend self-hosting for maximum data privacy and lower costs at scale." } }
+            ]
+        }
+    ];
+
     return (
         <main className="min-h-screen pt-32 pb-20 px-6 overflow-x-hidden">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
 
             {/* BACKGROUND ELEMENTS */}
             <div className="fixed inset-0 bg-[#0a0a0a] -z-20" />
