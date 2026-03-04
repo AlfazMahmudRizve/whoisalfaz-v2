@@ -100,7 +100,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     {
       "@context": "https://schema.org",
       "@type": "Organization",
-      "name": "Alfaz Mahmud Rizve - RevOps Architect",
+      "name": "Alfaz Mahmud Rizve - RevOps & Full Stack Automation Architect",
       "url": "https://whoisalfaz.me",
       "logo": "https://whoisalfaz.me/logo.png",
       "founder": {
