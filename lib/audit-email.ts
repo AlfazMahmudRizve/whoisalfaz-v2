@@ -212,13 +212,13 @@ function buildReportHTML(name: string, results: AuditResults): string {
             </div>
             ` : `
             <div style="background:linear-gradient(135deg,#1e293b 0%,#0f172a 100%);border:1px solid #334155;border-radius:16px;padding:32px;text-align:center;margin:32px 0;">
-                <h3 style="color:#f8fafc;font-size:20px;margin-bottom:8px;">Want These Fixed?</h3>
+                <h3 style="color:#f8fafc;font-size:20px;margin-bottom:8px;">There's Room to Improve</h3>
                 <p style="color:#94a3b8;font-size:14px;margin-bottom:20px;line-height:1.5;">
-                    I build high-performance Next.js sites and automation systems.<br>
-                    If your score isn't where you want it, let's have a 15-minute call to discuss what's realistic.
+                    Most of these issues are fixable with the right technical approach.<br>
+                    If you'd like a second pair of eyes on your stack, I'm happy to walk through the findings with you — no strings attached.
                 </p>
-                <a href="https://whoisalfaz.me/contact/" style="display:inline-block;background:#2dd4bf;color:#0a0a0a;font-weight:700;font-size:14px;padding:14px 32px;border-radius:8px;text-decoration:none;">Book a Strategy Call</a>
-                <p style="color:#475569;font-size:11px;margin-top:12px;">No obligation. No pitch deck. Just a straight conversation.</p>
+                <a href="https://whoisalfaz.me/contact/" style="display:inline-block;background:#2dd4bf;color:#0a0a0a;font-weight:700;font-size:14px;padding:14px 32px;border-radius:8px;text-decoration:none;">Get a Free Consultation</a>
+                <p style="color:#475569;font-size:11px;margin-top:12px;">15 minutes. No pitch deck. Just honest technical advice.</p>
             </div>
             `}
 
