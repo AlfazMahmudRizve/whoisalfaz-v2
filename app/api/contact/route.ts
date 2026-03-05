@@ -146,7 +146,7 @@ export async function POST(request: Request) {
 
         const { name, email, message, service } = result.data;
 
-        // 2. Send admin notification email via Brevo
+        // 2. Send admin notification email via Brevo (critical — blocks response)
         const emailSent = await sendBrevoEmail({ name, email, message, service });
 
         if (!emailSent) {
@@ -156,11 +156,16 @@ export async function POST(request: Request) {
             );
         }
 
-        // 3. Add to Brevo Contacts List #10
-        await addContactToBrevoList({ name, email, service });
+        // 3 & 4. Fire auto-responder + list-add in parallel (non-blocking)
+        console.log(`[Contact] Admin email sent. Now firing auto-responder + list-add for ${email}...`);
 
-        // 4. Send Auto-responder to User
-        await sendAutoResponder({ name, email, service });
+        const [autoResult, listResult] = await Promise.allSettled([
+            sendAutoResponder({ name, email, service }),
+            addContactToBrevoList({ name, email, service }),
+        ]);
+
+        console.log(`[Contact] Auto-responder: ${autoResult.status === 'fulfilled' ? autoResult.value : autoResult.reason}`);
+        console.log(`[Contact] List add: ${listResult.status === 'fulfilled' ? listResult.value : listResult.reason}`);
 
         return NextResponse.json(
             { success: true, message: 'Message sent successfully!' },
