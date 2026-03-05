@@ -1,353 +1,221 @@
 ---
-title: >-
-  Lead Enrichment with n8n: Build a Reliable Company, Website and Location
-  Enrichment Workflow-30 Days of n8n & Automation – Day 11
-slug: lead-enrichment-with-n8n
-description: >-
-  Lead enrichment with n8n to add company, website, and location automatically
-  to every lead. Practical workflow examples by Alfaz Mahmud Rizve at
-  whoisalfaz.me
-date: '2025-12-30'
-seoTitle: >-
-  Lead Enrichment with n8n: Build a Reliable Company, Website and Location
-  Enrichment Workflow-30 Days of n8n & Automation – Day 11 - AI automation for
-  SaaS & agencies | Alfaz Mahmud Rizve
-seoDescription: >-
-  Lead enrichment with n8n to add company, website, and location automatically
-  to every lead. Practical workflow examples by Alfaz Mahmud Rizve at
-  whoisalfaz.me
-image: /images/blog/lead-enrichment-with-n8n-featured.webp
+title: "Lead Enrichment with n8n: Build a Reliable Company, Website and Location Enrichment Workflow - 30 Days of n8n & Automation – Day 11"
+slug: "lead-enrichment-with-n8n"
+description: "Stop routing naked emails to your sales team. Learn how to architect an automated n8n lead enrichment workflow to append company, website, and location data instantly."
+date: "2026-03-06"
+seoTitle: "Lead Enrichment with n8n: Automate Company & Location Data | Day 11"
+seoDescription: "Master lead enrichment with n8n. Automatically attach company, website, and location data to inbound leads before they hit your CRM. Step-by-step RevOps guide."
+image: "/images/blog/lead-enrichment-with-n8n-featured.webp"
 categories:
-  - Learn Automation in 30 Days
+  - "Learn Automation in 30 Days"
+affiliates:
+  - "n8n"
+  - "vultr"
+  - "apollo"
 ---
 
-If you are collecting leads but only storing name and email, you are leaving money on the table. **Lead enrichment with n8n** lets you automatically attach company, website, and location data the moment a lead enters your system.[](https://research.aimultiple.com/ai-lead-generation/)​
-
-In this Day 11 guide of [30 Days of n8n & Automation](https://whoisalfaz.me/blog/category/n8n-automation/), you will learn how to call an enrichment API from n8n, map the response back to your CRM or Google Sheet, and ship a production-ready workflow.​
-
-Throughout this article, examples come from real workflows that **Alfaz Mahmud Rizve** uses for SaaS and agency clients at **whoisalfaz.me**.[](https://whoisalfaz.me/blog/essential-n8n-core-nodes-by-alfaz-mahmud-rizve/)​
+By [Alfaz Mahmud Rizve](https://whoisalfaz.me/blog/who-is-alfaz-mahmud-rizve/) | RevOps & Full Stack Automation Architect at whoisalfaz.me
 
 <hr class="wp-block-separator has-alpha-channel-opacity"/>
 
-## Why lead enrichment with n8n matters
+If your inbound marketing engine is successfully collecting leads, but your database only contains a first name and an email address, you are leaving massive amounts of money on the table.
 
-When leads arrive with only an email address, sales teams waste time researching basics like company size, website, and city. Automated **lead enrichment with n8n** handles this grunt work in the background.​
+A "naked email" is an operational bottleneck. When an Account Executive receives a raw email address like `j.smith@acmecorp.com`, they are forced to pause their outreach workflow, open a new tab, search LinkedIn to find the lead's title, search Google to find the company website, and estimate the company's headcount to determine if they are even qualified for a sales call.
 
-For SaaS founders and agencies, this means:
+If your team is processing 50 leads a day, and it takes 4 minutes to manually research each one, your agency is bleeding over 3 hours of highly-paid sales time every single day on administrative data entry.
 
-- Better routing (e.g., high-ARR accounts straight to senior reps).[](https://n8n.io/workflows/12067-enrich-company-data-in-google-sheets-with-companyenrich/)​
+In Day 11 of our 30 Days of n8n & Automation sprint, we are eliminating manual research entirely. We are going to build a dynamic lead enrichment with n8n workflow that intercepts inbound leads, calls an external firmographic database, and automatically appends the Company Name, Website, Location, and Revenue metrics before the data ever reaches your CRM.
 
-- Smarter personalization in outbound and onboarding emails.[](https://research.aimultiple.com/ai-lead-generation/)​
-
-At whoisalfaz.me, **Alfaz Mahmud Rizve** treats enrichment as a baseline: no lead should enter a pipeline without at least company, website, and location attached.[](https://whoisalfaz.me/blog/essential-n8n-core-nodes-by-alfaz-mahmud-rizve/)​
+By integrating this architecture with the [Lead Capture Engine from Day 8](/blog/capture-n8n-lead-data) and the [Lead Scoring Logic from Day 9](/blog/n8n-lead-scoring), you will transform your basic web forms into an autonomous intelligence gathering system.
 
 <hr class="wp-block-separator has-alpha-channel-opacity"/>
 
-## What you will build (Day 11 workflow)
+## The Architectural Philosophy of Data Enrichment
 
-In this Day 11 entry of **30 Days of n8n & Automation**, you will build a workflow that:
+When I design enterprise infrastructure for SaaS clients, data enrichment is never treated as an optional "add-on." It is a fundamental layer of the RevOps stack.
 
-- Listens for new leads (from forms, imports, or a Google Sheet).[](https://research.aimultiple.com/ai-lead-generation/)​
+You cannot execute intelligent routing without context. If you want to automatically route enterprise accounts to your Senior Account Executives, and small businesses to an automated self-serve sequence, the system needs to know the company size. Asking the user to fill out a 10-field form drastically reduces conversion rates.
 
-- Calls a **lead enrichment API** using the email or domain.​
+The architectural solution is friction reduction: Ask the user for their work email only, and let the server figure out the rest.
 
-- Returns company name, website, and location fields.​
+A robust lead enrichment with n8n pipeline delivers three operational advantages:
 
-- Writes the enriched data back into your CRM or spreadsheet.​
-
-By the end, you will have a reusable **lead enrichment with n8n** template that you can clone for multiple brands or clients.​
-
-![Diagram of a lead enrichment with n8n workflow where a new lead from a form moves into an API enrichment step and then into CRM and Google Sheets, emphasizing automatic company, website, and location enrichment. Visual created to illustrate how automation consultant Alfaz Mahmud Rizve designs scalable lead enrichment with n8n for SaaS and agencies on whoisalfaz.me, highlighting each node in the workflow and the flow of enriched data for better sales operations](/images/blog/lead-enrichment-with-n8n-Generated-Image-December-30-2025-11_48PM.webp)
+- **Frictionless Conversion**: You can reduce your landing page forms to just 1 or 2 fields, skyrocketing your conversion rates.
+- **Contextual Triage**: You immediately unlock the ability to trigger the high-intent [n8n Slack Notifications we built in Day 10](/blog/n8n-slack-notifications) based specifically on firmographic data (e.g., "Alert the channel if employee count > 500").
+- **Hyper-Personalized Outbound**: Enriched data allows you to inject hyper-specific variables (City, Industry, Tech Stack) into your automated email sequences, creating the illusion of deep 1-on-1 manual research.
 
 <hr class="wp-block-separator has-alpha-channel-opacity"/>
 
-## Choosing the right enrichment API
+## Selecting the Right Enrichment API Engine
 
-You can use any enrichment provider that exposes a REST API and returns JSON.​
+**n8n** is the orchestrator, but it does not inherently know who "Acme Corp" is. We need to connect n8n to a dedicated data provider using a REST API.
 
-Popular options include:
+The market is flooded with enrichment APIs (Clearbit, ZoomInfo, Dropcontact), but when architecting pipelines for agencies, I look for tools that offer reliable webhooks, high rate limits, and deep B2B data sets.
 
-- Firmographic APIs (e.g., company size, industry, location, website).​
+For this blueprint, I strongly recommend using **[Apollo.io](https://get.apollo.io/bs1ny1i5eigv)** or Hunter.io. They provide highly accessible JSON APIs that allow you to pass a domain or an email address and instantly receive dozens of firmographic data points in return.
 
-- IP-based enrichment to turn anonymous traffic into company profiles.[](https://www.leadfeeder.com/ip-enrich-api/)​
-
-When **Alfaz Mahmud Rizve** designs workflows at **whoisalfaz.me**, the selection process usually follows this rule:
-
-- Start with one API that has a generous free tier.[](https://www.leadfeeder.com/ip-enrich-api/)​
-
-- Confirm it supports your primary identifier (email, domain, or IP).​
-
-Even if you later swap providers, your **lead enrichment with n8n** structure can stay identical—only the HTTP Request configuration changes.​
+Regardless of which API you choose, the n8n architectural pattern remains exactly the same. We will use the native [core nodes we mastered in Day 6](/blog/essential-n8n-core-nodes-by-alfaz-mahmud-rizve) to execute the data retrieval.
 
 <hr class="wp-block-separator has-alpha-channel-opacity"/>
 
-## Core nodes you will use (building on Day 6)
+## The Day 11 Blueprint: Architecting the Enrichment Pipeline
 
-Day 6 of this series already covered the **essential n8n core nodes** like HTTP Request, Set, Merge, and Code.[](https://whoisalfaz.me/blog/essential-n8n-core-nodes-by-alfaz-mahmud-rizve/)​
+We are going to build a production-grade workflow that accepts a raw email, extracts the domain, queries the enrichment API, normalizes the data, and securely writes it to your database.
 
-In this **lead enrichment with n8n** workflow, you will primarily use:
+*(Note: For this architecture, ensure you are running your workflows on a reliable server. If you are handling high-volume data lookups, I recommend a managed n8n Cloud instance or a dedicated **[Vultr VPS](https://www.vultr.com/?ref=9859101-9J)** to prevent memory bottlenecks).*
 
-- **Trigger node** (Webhook, Google Sheets, or CRM trigger).​
+### Phase 1: The Input Trigger and Domain Extraction
 
-- **HTTP Request** to call the enrichment API.​
+Before we can query a company database, we need the company's domain. If your form only asks for a business email, we must extract the domain programmatically.
 
-- **Set** to clean and normalize fields (company, website, location).​
+- **The Trigger**: Start with your standard Webhook node catching the form submission (as engineered in Day 8).
+- **The Code Node (Extraction)**: Add a Code Node directly after the webhook. We will use a single line of JavaScript to split the email string and isolate the domain.
 
-- **If** to handle missing or failed enrichments.​
+```javascript
+// Isolate the domain from the business email
+const email = $json.body.email;
+const domain = email.split('@')[1];
 
-- Optional **Code** node for tiny transformations or fallbacks.​
+// Prevent enrichment attempts on free email providers
+const freeProviders = ['gmail.com', 'yahoo.com', 'hotmail.com', 'outlook.com'];
+const isB2B = !freeProviders.includes(domain);
 
-This structure is almost identical to production workflows **Alfaz Mahmud Rizve** uses for client lead pipelines at whoisalfaz.me.​
-
-<hr class="wp-block-separator has-alpha-channel-opacity"/>
-
-## Step-by-step: basic lead enrichment with n8n
-
-![Interface view of an HTTP Request node in n8n configured to call a lead enrichment API using email and domain, along with a Set node that maps response fields into enriched_company, enriched_website, enriched_city, and enriched_country. The image supports a tutorial by automation consultant Alfaz Mahmud Rizve on whoisalfaz.me demonstrating lead enrichment with n8n for SaaS and agencies, and visually guides readers on how to structure their API call and normalization steps](/images/blog/lead-enrichment-with-n8n-Generated-Image-December-30-2025-11_37PM.webp)
-
-This section walks through a minimal yet production-ready **lead enrichment with n8n** workflow where input and output live in Google Sheets.​
-
-## 1. Prepare your input sheet
-
-Create a Google Sheet with columns like:
-
-- email
-
-- first_name
-
-- last_name
-
-- company_input (optional)
-
-- domain_input (optional)
-
-- enriched_company
-
-- enriched_website
-
-- enriched_city
-
-- enriched_country
-
-A sample “Enrich Company Data in Google Sheets” setup is documented in n8n’s official workflows, where the enrichment API fills revenue, employee count, and location fields.[](https://n8n.io/workflows/12067-enrich-company-data-in-google-sheets-with-companyenrich/)​
-
-At **whoisalfaz.me**, **Alfaz Mahmud Rizve** often also adds a `status` column (“pending”, “enriched”, “failed”) to keep tracking clean for agencies managing many leads.[](https://n8n.io/workflows/12067-enrich-company-data-in-google-sheets-with-companyenrich/)​
-
-## 2. Trigger: Google Sheets or Webhook
-
-Use one of two patterns for **lead enrichment with n8n**:
-
-- Google Sheets trigger: fires when a new row is added or updated.[](https://n8n.io/workflows/12067-enrich-company-data-in-google-sheets-with-companyenrich/)​
-
-- Webhook trigger: form tools (Typeform, HubSpot, Webflow, etc.) call n8n when a lead submits.[](https://research.aimultiple.com/ai-lead-generation/)​
-
-For non-technical teams, the Google Sheets trigger is easiest, while SaaS products usually prefer a webhook-based approach.​
-
-## 3. Build the HTTP Request node
-
-Add an **HTTP Request** node and configure it roughly like this:
-
-- Method: `GET` or `POST` (depends on your API).​
-
-- URL: provider endpoint, for example a “match & enrich” or “company enrich” URL.​
-
-- Authentication: API Key in Header (`Authorization: Bearer YOUR_API_KEY`).[](https://n8n.io/workflows/12067-enrich-company-data-in-google-sheets-with-companyenrich/)​
-
-- Query/body parameters: pass email or domain from the incoming item.​
-
-Many APIs return fields like `company_name`, `website`, `location_city_name`, and `country`.​
-
-Once the node works for one sample lead, **Alfaz Mahmud Rizve** recommends saving these settings in an n8n credential to reuse them across multiple **lead enrichment with n8n** workflows.​
-
-## Example JSON mapping (pseudo)
-
-```text
-json`{
-  "email": "test@example.com",
-  "company": "Example Inc",
-  "website": "https://example.com",
-  "location": {
-    "city": "San Francisco",
-    "country": "United States"
-  }
-}
-`
+return {
+  original_email: email,
+  company_domain: domain,
+  is_b2b_domain: isB2B
+};
 ```
 
-This structure matches common enrichment responses where company, website, and location are grouped in a single payload.​
+- **The Logic Gate (IF Node)**: We do not want to waste API credits trying to enrich a `@gmail.com` address. Add an IF node.
+    - If `is_b2b_domain` is `true`, proceed to Phase 2.
+    - If `false`, route the lead directly to the database without enrichment.
 
-## 4. Normalize data with Set (and optional Code)
+### Phase 2: The HTTP Request Node (The API Engine)
 
-After the HTTP Request node, add a **Set** node to map API fields into clean property names:​
+Now we query the external database.
 
-- `enriched_company` ← `company_name`
+Attach an **HTTP Request** node to the True branch of your IF node.
 
-- `enriched_website` ← `website`
+- **Method**: Set to `GET` (or POST, depending on your provider's documentation).
+- **URL**: Enter the API endpoint (e.g., `https://api.apollo.io/v1/organizations/enrich`).
+- **Authentication**: Add a Header. Key: `Authorization`, Value: `Bearer YOUR_API_KEY`.
+- **Query Parameters**: Add a query parameter to pass the domain we just extracted.
+    - Name: `domain`
+    - Value: `{{ $json.company_domain }}`
 
-- `enriched_city` ← `location_city_name`
-
-- `enriched_country` ← `location_country_name`
-
-In Day 6’s core node article, using Set earlier made workflows cleaner and easier to debug, and that pattern applies strongly in **lead enrichment with n8n**.[](https://whoisalfaz.me/blog/essential-n8n-core-nodes-by-alfaz-mahmud-rizve/)​
-
-Optionally, add a small **Code** node to:
-
-- Force lowercase domains.
-
-- Strip tracking parameters from URLs.
-
-- Combine `city` + `country` into `location_label`.
-
-n8n’s documentation shows how code nodes are often just a few lines of JavaScript, even for AI-driven enrichment patterns.​
-
-## 5. Write enriched data back
-
-Finally, send the enriched fields to your storage:
-
-- Google Sheets “Update” node to fill the enrichment columns.[](https://n8n.io/workflows/12067-enrich-company-data-in-google-sheets-with-companyenrich/)​
-
-- CRM nodes (HubSpot, Pipedrive, Salesforce) to update contact/company records.[](https://research.aimultiple.com/ai-lead-generation/)​
-
-Official n8n workflow examples often use domain as a unique key to match rows and update only specific columns (like revenue, employees, and location).​
-
-For SaaS and agencies, **Alfaz Mahmud Rizve** suggests always writing a `last_enriched_at` timestamp to help you later manage retries or changes in provider quality at whoisalfaz.me.​
+Execute the node. If the domain is valid (e.g., `stripe.com`), the HTTP Request node will return a massive JSON object containing their logo URL, headquarters address, employee count, estimated annual revenue, and social media links.
 
 <hr class="wp-block-separator has-alpha-channel-opacity"/>
 
-## Handling failures and avoiding API waste
+### Phase 3: Data Normalization with the Set Node
 
-Raw **lead enrichment with n8n** is not enough; you must handle:
+APIs return deeply nested, chaotic JSON structures. If you attempt to map this raw API response directly into your CRM, it will likely fail. You must sanitize and normalize the data first.
 
-- Missing data.
+Attach a **Set (Edit Fields)** node after your HTTP Request.
 
-- Rate limits.
+We will cherry-pick only the data we actually need and assign it to clean, standardized keys. Toggle the node to "**Keep Only Set**" to strip out the excess API bloat (reducing server memory usage).
 
-- Expensive calls on repeated leads.​
+Map the values using n8n's dot notation:
 
-## Use If nodes for basic branching
+- `enriched_company` ➡️ `{{ $json.organization.name }}`
+- `enriched_website` ➡️ `{{ $json.organization.primary_domain }}`
+- `enriched_city` ➡️ `{{ $json.organization.primary_phone.city }}`
+- `enriched_country` ➡️ `{{ $json.organization.primary_phone.country }}`
+- `enriched_employees` ➡️ `{{ $json.organization.estimated_num_employees }}`
 
-Insert an **If** node just after HTTP Request to check whether the API returned a valid company.​
-
-For example:
-
-- If `company_name` exists → go to Set and write out.
-
-- Else → mark as `status: "no_match"` and skip writing enrichment.
-
-This simple branching pattern appears in many n8n templates, especially those doing multi-step enrichment or scraping.​
-
-## Add simple caching
-
-To avoid repeated calls, **lead enrichment with n8n** workflows often:
-
-- Store enriched data in a sheet or database keyed by domain.​
-
-- Check “Do we already know this domain?” before calling the enrichment API.​
-
-Community workflows show how using a separate “cache” sheet or table significantly reduces cost while keeping enrichment fresh.​
-
-At whoisalfaz.me, **Alfaz Mahmud Rizve** uses a habit: “Never enrich the same domain more than once in 24 hours unless debugging.”​
+By normalizing the data here, you create a standard schema. If you ever decide to switch your provider from **[Apollo](https://get.apollo.io/bs1ny1i5eigv)** to Clearbit, you only have to update the HTTP Request node; the rest of your downstream workflow will continue to function perfectly because the Set node acts as a structural buffer.
 
 <hr class="wp-block-separator has-alpha-channel-opacity"/>
 
-## Real-world example: from form submission to enriched lead
+### Phase 4: Defensive Engineering and Error Fallbacks
 
-Here is how a full production **lead enrichment with n8n** pipeline might look for a SaaS free-trial signup.​
+Amateur workflows assume the API will always find a match. Enterprise architecture prepares for the null state. What happens when a prospect submits a valid B2B domain, but the company is too new to exist in the enrichment database?
 
-1. $1
+The API will return a `404 Not Found` or a null value. If your workflow tries to write a null company name into a required CRM field, the entire sequence will crash.
 
-2. $1
+We must implement the defensive routing protocols we discussed in [Day 7 (Error Handling)](/blog/handle-n8n-errors-like-a-pro).
 
-3. $1
+- **The API Validation Gate**: Immediately after the HTTP Request node (and before the Set node), insert an **IF Node**.
+    - **Condition**: Check if `{{ $json.organization.name }}` Is Not Empty.
+    - **True Branch**: The company was found. Route to the Set node to normalize the data.
+    - **False Branch**: The API returned nothing. Route to a secondary Set node that assigns fallback values:
+        - `enriched_company` ➡️ `Unknown`
+        - `enrichment_status` ➡️ `Failed - Manual Research Required`
 
-4. $1
-
-5. $1
-
-6. $1
-
-n8n’s lead-generation examples show how this style of workflow can also include AI steps to score or classify the enriched lead before routing.[](https://www.youtube.com/watch?v=D-F6Kycr5JE)​[](https://research.aimultiple.com/ai-lead-generation/)​
-
-This end-to-end pattern is exactly what **Alfaz Mahmud Rizve** deploys for agencies that want qualified leads in their CRM instead of raw form submissions, and these are documented workflows at whoisalfaz.me.​
-
-![Isometric pipeline showing a user submitting a signup form, the data traveling through an n8n workflow into a lead enrichment API, then updating a CRM and sending Slack alerts for high-priority accounts. This visual created for whoisalfaz.me illustrates how Alfaz Mahmud Rizve structures production-ready lead enrichment with n8n for SaaS and agencies, connecting signup forms, enrichment services, and sales tools in a single automated system](/images/blog/lead-enrichment-with-n8n-Generated-Image-December-30-2025-11_38PM.webp)
+This guarantees that the lead is still successfully inserted into your database, but it is flagged for a human to review, rather than crashing the system entirely.
 
 <hr class="wp-block-separator has-alpha-channel-opacity"/>
 
-## Mistakes to avoid when enriching leads with n8n
+### Advanced Engineering: The Caching Architecture
 
-There are a few classic traps that kill the ROI of **lead enrichment with n8n**:
+If you are a high-volume agency processing thousands of leads, running an API call for every single webhook will quickly exhaust your API credits and drive up your operational costs.
 
-- Calling the API too early: Enrich after you are sure the lead is valid (e.g., email verified).[](https://www.youtube.com/watch?v=D-F6Kycr5JE)​[](https://research.aimultiple.com/ai-lead-generation/)​
+Often, multiple leads will convert from the same company (e.g., three different engineers from Microsoft download your PDF). You should not pay to enrich `microsoft.com` three separate times.
 
-- Ignoring rate limits: Most enrichment APIs enforce limits, and n8n workflows should respect these using built-in controls.​
+**Senior architects implement a Caching Layer.**
 
-- Not mapping fields consistently: Inconsistent field names across workflows make downstream analytics painful.​
+Before the HTTP Request node fires, the workflow queries a central Google Sheet or PostgreSQL database (your cache) to ask: *"Do we already have the firmographic data for this domain?"*
 
-Official workflow guides often recommend centralizing your enrichment fields (e.g., always `company_name`, `website`, `location_city_name`) to align multiple pipelines.​
+- If Yes, it pulls the existing data from the cache (costing $0).
+- If No, it executes the HTTP Request, gets the new data, and immediately writes a new row to the cache database for future use.
 
-**Alfaz Mahmud Rizve’s** personal rule at **whoisalfaz.me**: “If a field is important enough to enrich, it is important enough to standardize.”​
-
-<hr class="wp-block-separator has-alpha-channel-opacity"/>
-
-## Reusable enrichment framework for SaaS & agencies
-
-You can treat **lead enrichment with n8n** as a reusable pattern that always follows the same steps:​
-
-1. $1
-
-2. $1
-
-3. $1
-
-4. $1
-
-5. $1
-
-6. $1
-
-n8n’s workflow library shows multiple enrichment templates that follow exactly this pattern, only swapping in different enrichment or scraping providers.​
-
-At whoisalfaz.me,[ **Alfaz Mahmud Rizve** ](https://whoisalfaz.me/blog/who-is-alfaz-mahmud-rizve/)encourages agencies to standardize this framework so that every new client gets the same reliable enrichment backbone with minimal setup time.​
+This caching pattern requires slightly more complex branching, but it will reduce your API enrichment costs by upwards of 40% as your database matures.
 
 <hr class="wp-block-separator has-alpha-channel-opacity"/>
 
-## Checklist: ship your lead enrichment with n8n
+### Phase 5: Writing to the Master Database
 
-Use this quick checklist before you call the workflow “done”:
+The final step is securely writing our beautifully enriched data payload into our CRM or Google Sheets ledger.
 
--  Defined a single identifier (email, domain, or IP) for enrichment.​
+If you are using the Google Sheets node (as recommended in our earlier database builds):
 
--  Configured a working HTTP Request node against your chosen API.​
+- **Operation**: Set to `Append Row` (if it's a net-new lead) or `Update Row` (if you are enriching an existing record).
+- Map your normalized variables (`enriched_company`, `enriched_employees`) directly to their respective columns.
 
--  Used Set to normalize `company`, `website`, and `location` fields.​
-
--  Added an If node for failed or empty responses.​
-
--  Updated storage (Google Sheets or CRM) with enriched fields.​
-
--  Implemented basic caching to avoid unnecessary repeated calls.​
-
--  Logged or notified high-value enriched leads for faster follow-up.[](https://www.youtube.com/watch?v=D-F6Kycr5JE)​[](https://research.aimultiple.com/ai-lead-generation/)​
-
-This checklist mirrors the production workflows that official n8n examples use for company enrichment and AI-assisted pipelines.​
+**Architect's Tip**: Always include a `last_enriched_at` column and use the `{{ $now }}` expression to stamp it with a timestamp. Company data degrades over time. Stamping the date allows you to easily filter your CRM 12 months from now and trigger a workflow to re-enrich any companies with data older than a year.
 
 <hr class="wp-block-separator has-alpha-channel-opacity"/>
 
-### Building flows in n8n is powerful, but your automation is only as good as your data source. If you are tired of hitting API limits or getting bad data from standard providers, read my new guide on **[5 Outstanding Ideas for B2B Lead Generation](https://www.google.com/search?q=link-to-new-post)** to see how AI Agents can replace manual API stitching
+### Deployment Checklist: Are You Ready for Production?
 
-## Series context
+Before routing live traffic through your new intelligence engine, execute this validation sweep:
 
-This article is part of the **30 Days of n8n & Automation** series at whoisalfaz.me.[](https://whoisalfaz.me/blog/essential-n8n-core-nodes-by-alfaz-mahmud-rizve/)​
+- [ ] **B2B Filtering**: Did you implement the Code node snippet to bypass enrichment for `@gmail.com` and `@yahoo.com` domains?
+- [ ] **Credential Security**: Is your API key stored securely in n8n's Credential Vault, or did you accidentally hardcode it into the URL?
+- [ ] **Null State Handling**: If the API returns a blank company name, does your workflow fail gracefully, or does it crash?
+- [ ] **Normalization**: Are you stripping out API bloat using the "Keep Only Set" toggle to optimize server memory?
 
-Earlier posts you should read next or reference inside your editor:
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
 
-- Day 6’s guide on **essential n8n core nodes** shows how HTTP Request, Set, and If work, which are heavily used in **lead enrichment with n8n**.[](https://whoisalfaz.me/blog/essential-n8n-core-nodes-by-alfaz-mahmud-rizve/)​
+## Deploying the Stacks 
+Building intelligent data pipelines requires robust orchestration and scalable execution environments. Here is the exact stack required to build the Day 11 enrichment engine:
 
-- Other n8n automation posts at whoisalfaz.me (e.g., scraping and AI-assisted enrichment) layer nicely on top of the workflow you built today.​
+### 1. The Core Orchestrator: [n8n](https://n8n.partnerlinks.io/ch585gsqzanp)
+The central nervous system of your automation stack. You need n8n's robust HTTP Request nodes, Code blocks, and IF routing mechanics to intercept forms and extract domains programmatically. 
 
-You can also explore the broader n8n automation category to see how **Alfaz Mahmud Rizve** applies similar patterns to AI workflows and multi-step lead pipelines.​
+**[Get started with n8n →](https://n8n.partnerlinks.io/ch585gsqzanp)**
 
-If you enjoyed this Day 11 breakdown of **lead enrichment with n8n**, try implementing this workflow in your own n8n instance today and track how much manual research time you remove from your week.​
+### 2. High-Performance Infrastructure: [Vultr](https://www.vultr.com/?ref=9859101-9J)
+Enrichment pipelines execute intensive API calls and handle massive JSON payloads. Avoid memory crashes by deploying your self-hosted n8n instance on a dedicated, high-performance Vultr VPS.
 
-Then, subscribe to the newsletter at [**whoisalfaz.me** ](https://whoisalfaz.me/blog/)so you do not miss tomorrow’s Day 12 automation in the 30 Days of n8n & Automation series from[ **Alfaz Mahmud Rizve**](https://whoisalfaz.me/blog/who-is-alfaz-mahmud-rizve/)
+**[Claim $300 in free Vultr credits →](https://www.vultr.com/?ref=9859101-9J)**
+
+### 3. The B2B Enrichment Engine: [Apollo.io](https://get.apollo.io/bs1ny1i5eigv)
+To immediately turn an email address into actionable firmographic data (Employee Count, Revenue, HQ Location), Apollo boasts one of the deepest, most developer-friendly JSON datasets in the industry.
+
+**[Explore Apollo’s API Database →](https://get.apollo.io/bs1ny1i5eigv)**
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+## The Day 11 Mandate: Stop Guessing, Start Knowing
+
+You now possess the architectural blueprint to eliminate manual research from your sales operations entirely.
+
+By implementing lead enrichment with **[n8n](https://n8n.partnerlinks.io/ch585gsqzanp)**, you are transforming simple form fills into highly detailed, actionable prospect dossiers. Your Account Executives will know exactly who they are talking to, how large the account is, and where the company is located before they ever pick up the phone.
+
+Stop routing naked emails. Build the intelligence layer.
+
+If you successfully deployed this, you are ready for the next phase. Tomorrow, in Day 12 of the 30 Days of n8n & Automation sprint, we will take this enriched data and use it to engineer hyper-personalized automated outbound email sequences.
+
+Subscribe to the newsletter, and I will see you on the canvas tomorrow.

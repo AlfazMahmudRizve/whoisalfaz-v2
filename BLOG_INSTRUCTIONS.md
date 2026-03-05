@@ -60,7 +60,9 @@ Example Format:
 ## 7. Stability Rules (Mandatory)
 - **Frontmatter format**: All YAML values MUST use single-line double-quoted strings. **NEVER** use `>-` folded scalars — they cause `gray-matter` parsing failures that crash the entire site.
 - **Code block language**: Every fenced code block MUST specify a language (e.g. ` ```json `, ` ```text `, ` ```javascript `). Empty ` ``` ` blocks are **FORBIDDEN** — they trigger catastrophic regex backtracking in the MDX compiler.
-- **Category name**: Must always be `Learn Automation in 30 Days`. Never use legacy names.
+- **Category naming rules**: 
+    - For 30 Days of n8n posts: Must always be `Learn Automation in 30 Days`. Never use legacy names.
+    - For Case Studies/Portfolio posts: Must always be `Architecture Teardowns`.
 - **Visual verification**: Before declaring ANY blog complete, open it in the browser and visually confirm spacing, headers, images, and code blocks render correctly. Screenshots recommended.
 
 ## 8. Verification Checklist
