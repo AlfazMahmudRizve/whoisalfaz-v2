@@ -3,8 +3,8 @@ import { AuditResults, CheckResult } from './audit';
 // ─── Send Branded Audit Report Email ─────────────────────────
 export async function sendAuditReport(email: string, name: string, results: AuditResults): Promise<boolean> {
     const apiKey = process.env.BREVO_API_KEY;
-    // Use admin email as sender — it's verified in Brevo
-    const senderEmail = process.env.BREVO_ADMIN_EMAIL || process.env.BREVO_SENDER_EMAIL || 'noreply@whoisalfaz.me';
+    // Always send from the verified domain — never from Gmail (fails DMARC)
+    const senderEmail = process.env.BREVO_SENDER_EMAIL || 'info@whoisalfaz.me';
 
     if (!apiKey) {
         console.error('[Audit Email] BREVO_API_KEY not set');
@@ -50,7 +50,7 @@ export async function sendAuditReport(email: string, name: string, results: Audi
 // ─── Send Admin Notification ────────────────────────────────
 export async function notifyAdmin(name: string, email: string, url: string, results: AuditResults): Promise<boolean> {
     const apiKey = process.env.BREVO_API_KEY;
-    const senderEmail = process.env.BREVO_SENDER_EMAIL || 'noreply@whoisalfaz.me';
+    const senderEmail = process.env.BREVO_SENDER_EMAIL || 'info@whoisalfaz.me';
     const adminEmail = process.env.BREVO_ADMIN_EMAIL;
 
     if (!apiKey || !adminEmail) return false;
