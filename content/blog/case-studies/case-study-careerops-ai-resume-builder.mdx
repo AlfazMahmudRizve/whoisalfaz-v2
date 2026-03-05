@@ -1,0 +1,106 @@
+---
+title: "Architecting a Stateless AI Career Strategist: Integrating Next.js with n8n and React PDF"
+slug: case-study-careerops-ai-resume-builder
+description: "A profound teardown of CareerOps — a privacy-first AI platform that orchestrates real-time resume optimization using n8n and generates pixel-perfect PDFs entirely in the browser."
+date: '2026-03-05'
+image: /careerops-logo.png
+seoTitle: "Case Study: CareerOps AI Resume Builder Architecture | Alfaz Mahmud Rizve"
+seoDescription: "Architecture teardown of CareerOps, detailing local-first AI processing, n8n orchestration, and dynamic browser-based PDF generation."
+categories:
+  - Architecture Teardowns
+affiliates:
+  - n8n
+  - vultr
+---
+
+By [Alfaz Mahmud Rizve](https://whoisalfaz.me/blog/who-is-alfaz-mahmud-rizve/) | RevOps & Full Stack Automation Architect
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+## The Problem: The Privacy Dilemma of AI Resume Builders
+
+The market is currently flooded with AI-powered resume builders. However, they universally suffer from a critical, structural flaw: **data ownership and privacy.** 
+
+When a senior executive inputs their entire career history, compliance records, and highly sensitive performance metrics into a third-party application, their data inevitably becomes a product. It sits in a centralized database, exposed to data breaches or being fed back into the training loops of Large Language Models (LLMs).
+
+I needed to architect an alternative—a platform called **CareerOps**. The objective was to build a "Stateless AI Career Strategist." It had to leverage powerful AI models for structural gap analysis and resume optimization, but under a strict "Privacy-First" mandate: **zero persistent database storage.**
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+## The Architecture Decision: Stateless Orchestration via n8n
+
+The backend architecture specifically rejects persistent databases (like PostgreSQL or MongoDB) for storing user sessions or resume content. Instead, the application utilizes **n8n as a stateless processing orchestration layer**. 
+
+Here is the exact data flow:
+1. **Frontend Input:** A highly interactive Next.js application captures the user's career data via interactive forms or smart server-side parsing (extracting data from existing PDFs).
+2. **Orchestration & Scrubbing:** The frontend sends a JSON payload to an n8n Webhook. Crucially, the n8n workflow executes a regex-based scrubbing protocol to temporarily mask PII (Personally Identifiable Information) before it touches any external network.
+3. **AI Layer:** Inside n8n, the raw professional bullet points are processed through an LLM sequence designed to enforce the "Action → Metric → Impact" framework. It analyzes the text against a provided Job Description, producing an ATS Compatibility Score.
+4. **Disposal:** n8n returns the optimized JSON back to the Next.js client and immediately drops the payload.
+
+Once the user closes their browser tab, their data simply ceases to exist. 
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+## Technical Blueprint: Browser-Side Rendering
+
+While the AI orchestration handled the intelligence, the presentation layer presented a unique engineering challenge. 
+
+HTML-to-PDF converters (like Puppeteer or html2pdf) are notoriously unreliable. Web-based print stylesheets (`@media print`) break easily; what renders perfectly on Chrome on macOS will break pagination on Safari on iOS. 
+
+To ensure absolute, pixel-perfect fidelity across all devices, I bypassed HTML rendering entirely and utilized `@react-pdf/renderer`.
+
+### The React PDF Sub-System
+
+Instead of writing CSS and hoping the browser prints it correctly, the application constructs the PDF abstractly using React primitives (`<Document>`, `<Page>`, `<View>`, `<Text>`). This payload is then rendered directly into a PDF Blob within the browser memory—no server required.
+
+```tsx
+// PDF Generation Logic inside CareerOps components
+import { Document, Page, Text, View, StyleSheet } from '@react-pdf/renderer';
+
+export const ExecutiveTemplate = ({ resumeData }) => (
+  <Document>
+    <Page size="A4" style={styles.page}>
+      
+      {/* Absolute positioning for strict margins */}
+      <View style={styles.header}>
+        <Text style={styles.name}>{resumeData.personalInfo.name}</Text>
+        <Text style={styles.contact}>
+            {resumeData.personalInfo.email} | {resumeData.personalInfo.linkedin}
+        </Text>
+      </View>
+
+      {/* Dynamic Mapping with strict typography control */}
+      {resumeData.experience.map((job, index) => (
+        <View key={index} style={styles.section} wrap={false}>
+          <Text style={styles.jobTitle}>{job.title}</Text>
+          <Text style={styles.company}>{job.company}</Text>
+          {job.bullets.map((bullet, i) => (
+            <Text key={i} style={styles.bulletPoint}>• {bullet}</Text>
+          ))}
+        </View>
+      ))}
+
+    </Page>
+  </Document>
+);
+```
+
+By explicitly setting `wrap={false}` on the section containers, the engine mathematically guarantees that a job description block will never be awkwardly split across two PDF pages. 
+
+### Split-Screen Engineering & Framer Motion
+
+To make the AI actionable, CareerOps features an advanced Split-Screen Optimizer. The user interface places the Job Description on the left and the Real-Time Resume on the right. 
+
+As the n8n backend returns the gap analysis (e.g., "Missing Keyword: Kubernetes"), the UI highlights the deficient areas using `Framer Motion` animations, creating a gamified loop of improvement until the ATS Score reaches 90+. An ATS Mode toggle also allows the user to switch between a beautifully styled layout and a raw text view strictly optimized for legacy Applicant Tracking Systems.
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+## Results & Metrics
+
+- **100% Data Sovereignty:** By leveraging n8n orchestration and browser-side state, CareerOps complies inherently with immediate data-destruction protocols.
+- **Microservices Agility:** Because n8n handles the complex LLM logic via independent nodes, I can hot-swap the internal backend AI provider (Transitioning from OpenAI to Claude 3.5 Sonnet) in seconds without touching the Next.js frontend code or running a redeployment.
+- **Print Fidelity:** The React PDF implementation eliminated 100% of formatting bugs associated with web-to-pdf generation.
+
+CareerOps proves that you do not need to hoard user data to provide elite, AI-driven personalization.
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>

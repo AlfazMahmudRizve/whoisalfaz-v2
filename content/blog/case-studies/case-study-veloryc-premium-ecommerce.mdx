@@ -1,0 +1,94 @@
+---
+title: "Veloryc E-Commerce: High-Performance Architecture Using Supabase RLS and Pure CSS Modules"
+slug: case-study-veloryc-premium-ecommerce
+description: "A technical breakdown of Veloryc, a premium skincare storefront engineered with Next.js, Supabase Real-Time, and a strict zero-dependency CSS architecture."
+date: '2026-03-05'
+image: /veloryc.png
+seoTitle: "Case Study: Veloryc E-Commerce Operations Architecture | Alfaz Mahmud Rizve"
+seoDescription: "Architecture teardown of Veloryc, illustrating advanced Supabase RLS policies, real-time inventory tracking, and fluid CSS Module design for high-end retail."
+categories:
+  - Architecture Teardowns
+affiliates:
+  - vultr
+  - brevo
+---
+
+By [Alfaz Mahmud Rizve](https://whoisalfaz.me/blog/who-is-alfaz-mahmud-rizve/) | RevOps & Full Stack Automation Architect
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+## The Problem: The Bloat of Modern E-Commerce
+
+When architecting **Veloryc**—a premium, future-facing business platform for serum-based skincare—the technical requirements were stringent. The brand identity demanded a fluid, luxury user experience characterized by seamless page transitions (`PageTransition.tsx`), immersive micro-interactions (`SkinQuiz.tsx`, `IngredientAccordion.tsx`), and a highly responsive `StickyATC` (Add to Cart) interface. 
+
+However, modern e-commerce templates often rely on heavily abstracted UI libraries and bloated state management frameworks that degrade Time-to-First-Byte (TTFB) and introduce rendering jank. 
+
+Furthermore, off-the-shelf platforms like Shopify obscure backend logic, making true multi-tenant orchestration or real-time inventory management difficult without expensive middleware.
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+## The Architecture Decision: Next.js 14 + Supabase + Pure CSS
+
+To achieve total control over the DOM and data pipelines, Veloryc was built from scratch.
+
+### 1. Zero-Dependency Styling: Pure CSS Modules
+Instead of adopting Tailwind CSS or a heavy CSS-in-JS library (like Styled-Components), I engineered the entire storefront using Vanilla CSS Modules. 
+
+```css
+/* Example from SkinQuiz.module.css */
+.quizContainer {
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+```
+This architecture choice allowed for granular, hardware-accelerated fluid animations mapped exactly to user scroll depth, without shipping massive utility-class stylesheets to the client.
+
+### 2. The Database Layer: Supabase PostgreSQL
+The data architecture relies on a closely coupled, normalized PostgreSQL database managed through Supabase.
+
+The schema is divided into four core tables: `profiles`, `products`, `orders`, and `order_items`. To maintain extreme security, **Row Level Security (RLS)** is strictly enforced at the database level rather than the application level.
+
+```sql
+-- Security Policy Enforcement
+ALTER TABLE public.orders ENABLE ROW LEVEL SECURITY;
+
+-- Customers can only read their own orders
+CREATE POLICY "Users can view own orders" 
+ON public.orders FOR SELECT 
+USING (auth.uid() = user_id);
+```
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+## Technical Blueprint: The Admin Command Center
+
+While the frontend focuses on elegance, the backend operations layer (`/admin`) is brutally utilitarian.
+
+When an authenticated user has the `is_admin` boolean flagged in their profile record, they are granted access to the internal dashboard. This dashboard bypasses the standard API routes to fetch real-time analytics directly from the database using the Supabase Service Role Key.
+
+The Command Center aggregates four real-time metrics:
+- **Total Revenue**: Sourced directly from finalized `orders`.
+- **Total Orders**: Categorized by Pending, Paid, Failed, Cancelled.
+- **Active Users**: Metrics tracked via the `profiles` table.
+- **Low Stock Alerts**: To ensure the serums never hit "out of stock," I built a dedicated SQL View (`products_stock_alerts`) that constantly monitors inventory. Any product with `< 10` units remaining triggers an immediate push notification to the admin interface.
+
+Administrators can utilize inline editing to instantly update prices or product details without needing to navigate robust editing modals.
+
+### Seamless Authentication
+Veloryc features a Dual-Auth system powered by GoTrue. Users can check out silently as guests or create a persistent account via Google OAuth or standard Email/Password. A background trigger automatically reconciles guest purchases with new user accounts based on the email string matching, ensuring a frictionless user onboarding pipeline.
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+## Key Takeaways
+
+By treating CSS as an engineering discipline and leveraging the native RLS security model of PostgreSQL, Veloryc maintains the aesthetic of a high-end fashion brand with the technical reliability of enterprise software.
+
+## Results & Metrics
+
+- **TTFB:** Optimized payload delivery by eliminating external UI library dependencies.
+- **Security Posture:** Database-enforced RLS guarantees tenant isolation for all transaction and PII data.
+- **Inventory Agility:** Real-time database views eliminate the risk of overselling highly limited products.
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>

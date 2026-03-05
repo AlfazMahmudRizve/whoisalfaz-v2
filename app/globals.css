@@ -72,3 +72,51 @@ body {
     width: 100%;
   }
 }
+
+/* ===== Blog Content Prose Overrides =====
+   Tailwind v4 prose utilities can lose specificity in deeply
+   nested MDX component trees. These explicit rules guarantee
+   headings, lists, and paragraphs ALWAYS render correctly
+   inside the blog article body. */
+
+.prose h3 {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 700;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  color: #2dd4bf;
+}
+
+.prose h4 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.prose ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose ul li {
+  margin-bottom: 0.75rem;
+  padding-left: 0.5rem;
+  color: #cbd5e1;
+  line-height: 1.75;
+}
+
+.prose ul li::marker {
+  color: #2dd4bf;
+}
+
+.prose p {
+  margin-bottom: 2rem;
+  line-height: 2;
+  color: #cbd5e1;
+}

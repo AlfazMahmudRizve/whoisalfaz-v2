@@ -7,6 +7,9 @@ import { ArrowLeft, Calendar, Clock, Twitter, Linkedin, Link as LinkIcon } from 
 import TableOfContents from '@/components/TableOfContents';
 import NewsletterForm from '@/components/NewsletterForm';
 import CodeBlock from '@/components/CodeBlock';
+import Callout from '@/components/Callout';
+import BlogImage from '@/components/BlogImage';
+import StepList from '@/components/StepList';
 import SearchWidget from '@/components/SearchWidget';
 import DeployingTheStacks from '@/components/DeployingTheStacks';
 import { MDXRemote } from 'next-mdx-remote/rsc';
@@ -262,7 +265,10 @@ export default async function Post({ params }) {
               source={post.content}
               components={{
                 hr: () => <hr className="wp-block-separator has-alpha-channel-opacity my-16 border-white/10 w-full" />,
-                pre: CodeBlock
+                pre: CodeBlock,
+                blockquote: Callout,
+                img: BlogImage,
+                ol: StepList,
               }}
               options={{ mdxOptions: { format: 'md' } }}
             />

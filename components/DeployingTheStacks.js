@@ -78,6 +78,34 @@ const AFFILIATE_DATA = {
         url: "https://try.elevenlabs.io/vde8vlnbokq4",
         buttonText: "Try ElevenLabs",
         badge: "Voice AI"
+    },
+    emergent: {
+        title: "Emergent",
+        description: "AI-powered revenue operations platform for scaling B2B growth.",
+        url: "https://get.emergent.sh/f7yhqncomeyr",
+        buttonText: "Try Emergent",
+        badge: "RevOps AI"
+    },
+    tapstitch: {
+        title: "Tapstitch",
+        description: "Data integration and workflow stitching platform for modern teams.",
+        url: "https://affiliate.tapstitch.com/7k2jjtg3dl0f",
+        buttonText: "Explore Tapstitch",
+        badge: "Integration"
+    },
+    aisdr: {
+        title: "AiSDR",
+        description: "AI-powered sales development representative for automated outbound.",
+        url: "https://partner.aisdr.com/2jffam3qqf6h",
+        buttonText: "Try AiSDR",
+        badge: "AI Sales"
+    },
+    ags: {
+        title: "Accelerated Growth Studio",
+        description: "Growth engineering and product-led acquisition acceleration platform.",
+        url: "https://acceleratedgrowthstudio.partnerlinks.io/ferzzxgyi9p3",
+        buttonText: "Explore AGS",
+        badge: "Growth"
     }
 };
 
