@@ -7,27 +7,27 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
     // 1. Static Routes (Core Pages)
     const coreRoutes = [
-        '',
-        '/portfolio',
-        '/blog',
-        '/contact',
-        '/services',
-        '/labs',
-        '/labs/roi',
-        '/audit',
-        '/terms',
-        '/privacy-policy',
+        '/',
+        '/portfolio/',
+        '/blog/',
+        '/contact/',
+        '/services/',
+        '/labs/',
+        '/labs/roi/',
+        '/audit/',
+        '/terms/',
+        '/privacy-policy/',
     ].map((route) => ({
         url: `${baseUrl}${route}`,
         lastModified: new Date(),
         changeFrequency: 'weekly' as const,
-        priority: route === '' ? 1 : 0.8,
+        priority: route === '/' ? 1 : 0.8,
     }));
 
     // 2. Dynamic Service Pages
     const serviceSlugs = Object.keys(serviceData);
     const serviceRoutes = serviceSlugs.map((slug) => ({
-        url: `${baseUrl}/services/${slug}`,
+        url: `${baseUrl}/services/${slug}/`,
         lastModified: new Date(),
         changeFrequency: 'monthly' as const,
         priority: 0.8,
@@ -36,7 +36,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     // 3. Dynamic Blog Posts
     const posts = await getAllPosts();
     const blogRoutes = posts.map((post: any) => ({
-        url: `${baseUrl}/blog/${post.slug}`,
+        url: `${baseUrl}/blog/${post.slug}/`,
         lastModified: new Date(post.modified || post.date),
         changeFrequency: 'weekly' as const,
         priority: 0.7,
@@ -52,7 +52,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         }
     });
     const categoryRoutes = Array.from(categoriesSet).map((categorySlug) => ({
-        url: `${baseUrl}/blog/category/${categorySlug}`,
+        url: `${baseUrl}/blog/category/${categorySlug}/`,
         lastModified: new Date(),
         changeFrequency: 'weekly' as const,
         priority: 0.6,

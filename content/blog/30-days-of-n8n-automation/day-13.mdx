@@ -33,7 +33,7 @@ Here is the engineering reality of why we use n8n for Facebook Lead Ads automati
 
 **Deep Data Sanitization**: Facebook users input data terribly. Phone numbers come in as `+1 (555) 123-4567`, `555 123 4567`, or `555.123.4567`. Traditional CRMs like HubSpot will reject these payloads if they don't match their strict schema. n8n allows us to use standard JavaScript regex to mathematically clean the data before it ever hits the database.
 
-**The Unbreakable Ledger**: As we established in [Day 8 (Lead Capture Architecture)](/blog/capture-n8n-lead-data-from-wordpress-elementor), we can easily route the Facebook payload to both a heavy CRM and a flat-file Google Sheet simultaneously, ensuring zero data loss if the CRM API goes down.
+**The Unbreakable Ledger**: As we established in [Day 8 (Lead Capture Architecture)](/blog/capture-n8n-lead-data-from-wordpress-elementor/), we can easily route the Facebook payload to both a heavy CRM and a flat-file Google Sheet simultaneously, ensuring zero data loss if the CRM API goes down.
 
 Own your pipeline. Do not rent it from a platform that penalizes you for scaling.
 
@@ -51,7 +51,7 @@ You will be prompted to log into your personal Facebook account that holds Admin
 
 Grant n8n the required permissions to read Lead Ads data.
 
-*Architect's Note*: Meta frequently updates their API token expiration policies. If your leads suddenly stop syncing after 60 days, your OAuth token likely expired. Always implement the Global Error Watchtower from [Day 7](/blog/handle-n8n-errors-like-a-pro) to alert your Slack channel if the Facebook trigger node starts failing authentication.
+*Architect's Note*: Meta frequently updates their API token expiration policies. If your leads suddenly stop syncing after 60 days, your OAuth token likely expired. Always implement the Global Error Watchtower from [Day 7](/blog/handle-n8n-errors-like-a-pro/) to alert your Slack channel if the Facebook trigger node starts failing authentication.
 
 ## Phase 1: The Instant Capture Trigger
 
@@ -113,7 +113,7 @@ Map your sanitized variables (`lead_name`, `lead_phone`) into the respective CRM
 
 The data is secure, but the sales team needs to be notified instantly to achieve that sub-60-second speed-to-lead.
 
-Using the Block Kit architecture we mastered in [Day 10 (Slack Notifications)](/blog/n8n-slack-notifications-by-alfaz-mahmud-rizve), attach a Slack node to the success output of the HubSpot node.
+Using the Block Kit architecture we mastered in [Day 10 (Slack Notifications)](/blog/n8n-slack-notifications-by-alfaz-mahmud-rizve/), attach a Slack node to the success output of the HubSpot node.
 
 Route it to your `#sales-vip-leads` channel with a payload that includes:
 

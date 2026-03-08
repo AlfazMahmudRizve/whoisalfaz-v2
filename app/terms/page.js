@@ -4,7 +4,7 @@ import { Section, ScrollText, Mail, FileText, ChevronRight, Scale, AlertTriangle
 
 export const metadata = {
     title: "Terms of Use | Alfaz Mahmud Rizve",
-    description: "Terms and Conditions for whoisalfaz.me",
+    description: "Review the comprehensive Terms and Conditions for whoisalfaz.me. This legal document outlines user responsibilities, permissible usage, and our data handling commitments.",
 };
 
 export default function TermsPage() {

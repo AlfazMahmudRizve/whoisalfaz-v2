@@ -22,7 +22,7 @@ If your sales team is manually tracking who replied, who ghosted them, and who n
 
 To scale an agency or SaaS, you must deploy an automated email follow up architecture.
 
-In Day 12 of our 30 Days of n8n & Automation sprint, we are moving beyond simple linear triggers. Building upon the lead enrichment engines we deployed in [Day 11](/blog/lead-enrichment-with-n8n), we are going to engineer a **Stateful Automation**. This is a workflow that "remembers" a prospect, suspends itself in server memory for days at a time, queries the database for behavioral changes (like a reply), and autonomously executes the next logical step.
+In Day 12 of our 30 Days of n8n & Automation sprint, we are moving beyond simple linear triggers. Building upon the lead enrichment engines we deployed in [Day 11](/blog/lead-enrichment-with-n8n/), we are going to engineer a **Stateful Automation**. This is a workflow that "remembers" a prospect, suspends itself in server memory for days at a time, queries the database for behavioral changes (like a reply), and autonomously executes the next logical step.
 
 I deploy this exact infrastructure at whoisalfaz.me for high-growth clients to ensure that absolutely zero leads leak out of the pipeline due to human oversight.
 
@@ -96,7 +96,7 @@ Now, we build the actual automated drip campaign. Create a new n8n workflow name
 ### Node 1: The Trigger
 
 You can trigger this sequence in multiple ways:
-- Connecting it directly to the end of the Lead Capture engine we built in [Day 8](/blog/capture-n8n-lead-data-from-wordpress-elementor).
+- Connecting it directly to the end of the Lead Capture engine we built in [Day 8](/blog/capture-n8n-lead-data-from-wordpress-elementor/).
 - Triggering it when a lead is dragged into a specific column in your CRM.
 - Using a Brevo Trigger node listening for "Contact Added to List" (e.g., your "Q2 Cold Outreach" list).
 
@@ -141,7 +141,7 @@ This node pulls the absolute freshest data available for that prospect.
 
 ## Phase 5: The Logic Gate (IF Node)
 
-We now have the fresh data. We must evaluate it using the core concepts established in [Day 6](/blog/essential-n8n-core-nodes-by-alfaz-mahmud-rizve).
+We now have the fresh data. We must evaluate it using the core concepts established in [Day 6](/blog/essential-n8n-core-nodes-by-alfaz-mahmud-rizve/).
 
 Attach an IF Node to the Get Contact node:
 - **Condition**: String
@@ -211,7 +211,7 @@ This level of rigor separates hobbyists from RevOps architects.
 
 When we replaced a manual tracking system with this exact n8n stateful architecture for a B2B SaaS client, the impact on their pipeline was drastic.
 
-Because the system never "forgot" to follow up on Day 7, their overall response rate increased by 210%. More importantly, by integrating the Slack Alert system from [Day 10](/blog/n8n-slack-notifications-by-alfaz-mahmud-rizve) into the REPLIED microservice, the Account Executives were pinged instantly the second a prospect broke their silence, allowing them to take over the conversation while the lead was still at their desk.
+Because the system never "forgot" to follow up on Day 7, their overall response rate increased by 210%. More importantly, by integrating the Slack Alert system from [Day 10](/blog/n8n-slack-notifications-by-alfaz-mahmud-rizve/) into the REPLIED microservice, the Account Executives were pinged instantly the second a prospect broke their silence, allowing them to take over the conversation while the lead was still at their desk.
 
 Automation should not replace humans. It should handle the silence so humans can focus entirely on the replies.
 

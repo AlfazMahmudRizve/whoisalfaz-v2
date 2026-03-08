@@ -17,7 +17,7 @@ If your current infrastructure relies on a generic email notification to alert y
 
 In B2B sales, speed-to-lead is not a metric; it is the entire game. If you do not engage a high-intent prospect within the first 5 minutes of their submission, your conversion rate drops by 80%.
 
-In **Day 10** of our 30 Days of n8n & Automation sprint, we are solving the speed-to-lead crisis. Building directly on the routing logic we established in **[Day 9](/blog/lead-scoring-automation-with-alfaz-mahmud-rizve)**, we are going to engineer an intelligent **n8n Slack notifications** system. I will show you how to bypass the email inbox entirely and push formatted, actionable, high-intent lead data directly into a dedicated Slack channel the absolute millisecond the prospect hits submit.
+In **Day 10** of our 30 Days of n8n & Automation sprint, we are solving the speed-to-lead crisis. Building directly on the routing logic we established in **[Day 9](/blog/lead-scoring-automation-with-alfaz-mahmud-rizve/)**, we are going to engineer an intelligent **n8n Slack notifications** system. I will show you how to bypass the email inbox entirely and push formatted, actionable, high-intent lead data directly into a dedicated Slack channel the absolute millisecond the prospect hits submit.
 
 ## Why Architects Choose Slack over Email for Operations
 
@@ -37,7 +37,7 @@ If you pipe every single newsletter signup, spam bot, and low-tier lead into you
 
 At whoisalfaz.me, I enforce a strict "Signal-to-Noise" ratio. You must only trigger Slack alerts for high-intent leads. How do we define high-intent?
 
-- **Explicit Intent:** The prospect selected "Enterprise Demo," "Custom Architecture," or "Pricing Inquiry" on the form. (We built this exact tracking in **[Day 9](/blog/lead-scoring-automation-with-alfaz-mahmud-rizve)**).
+- **Explicit Intent:** The prospect selected "Enterprise Demo," "Custom Architecture," or "Pricing Inquiry" on the form. (We built this exact tracking in **[Day 9](/blog/lead-scoring-automation-with-alfaz-mahmud-rizve/)**).
 - **Enriched Firmographics:** If you use **[Apollo.io](https://get.apollo.io/bs1ny1i5eigv)** in your n8n workflow, you might only trigger a Slack alert if the lead's company revenue is >$5M.
 - **Lead Scoring:** If you use a native lead scoring tool that passes a numerical value (0-100), you filter for scores >80.
 
@@ -53,7 +53,7 @@ We start by catching the data and immediately evaluating its worth.
 
 ![n8n Webhook and Filter Node Configuration](/images/blog/n8n-slack-notifications-by-alfaz-mahmud-rizve-Generated-Image-December-29-2025-4_13PM.webp)
 
-- **The Webhook:** As built in **[Day 8](/blog/capture-n8n-lead-data-from-wordpress-elementor)**, your workflow begins with a **Webhook node** catching the JSON payload from your Elementor form or landing page.
+- **The Webhook:** As built in **[Day 8](/blog/capture-n8n-lead-data-from-wordpress-elementor/)**, your workflow begins with a **Webhook node** catching the JSON payload from your Elementor form or landing page.
 - **The Filter Node:** Attach a Filter node directly to the Webhook.
   - **Condition:** Add a String condition.
   - **Value 1:** Map this to your form's "Intent" dropdown field `{{ $json.body.intent }}`.
@@ -167,7 +167,7 @@ In your n8n Slack node:
 
 ### Phase 4: Defensive Fallbacks (The Discord Backup)
 
-If Slack experiences a global outage (which happens), or if your OAuth token expires silently, you cannot afford to lose the alert. As we discussed in **[Day 7 (Error Handling)](/blog/n8n-debugging-error-handling-basics)**, production workflows require fallbacks.
+If Slack experiences a global outage (which happens), or if your OAuth token expires silently, you cannot afford to lose the alert. As we discussed in **[Day 7 (Error Handling)](/blog/n8n-debugging-error-handling-basics/)**, production workflows require fallbacks.
 
 - Attach an **Error Trigger node** to your Slack node (using the "Continue on Fail" setting).
 - If the Slack node fails, route the payload to an **HTTP Request node**.

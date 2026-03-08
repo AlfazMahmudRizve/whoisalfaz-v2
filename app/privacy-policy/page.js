@@ -4,7 +4,7 @@ import { Shield, Lock, Eye, FileText, Mail, ChevronRight } from 'lucide-react';
 
 export const metadata = {
     title: "Privacy Policy | Alfaz Mahmud Rizve",
-    description: "Privacy Notice and Data Protection Policy for whoisalfaz.me",
+    description: "Read the Privacy Notice and Data Protection Policy for whoisalfaz.me. Learn exactly how we collect, process, and secure your personal information in compliance with global laws.",
 };
 
 export default function PrivacyPolicy() {

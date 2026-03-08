@@ -5,7 +5,7 @@ import { Search, Calculator, Bot, ArrowRight, BarChart3 } from 'lucide-react';
 
 export const metadata = {
     title: 'Free Tools & Resources | WhoIsAlfaz.me',
-    description: 'Free automation tools, ROI calculators, and AI agents to help you scale your agency or SaaS.',
+    description: 'Explore free automation tools, ROI calculators, and custom AI agents designed to help you streamline operations, eliminate manual work, and scale your agency or SaaS business.',
 };
 
 export default function ToolsPage() {
