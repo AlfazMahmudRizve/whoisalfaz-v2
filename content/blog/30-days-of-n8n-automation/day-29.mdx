@@ -44,7 +44,7 @@ We are essentially building **J.A.R.V.I.S.**
 
 <hr class="wp-block-separator has-alpha-channel-opacity"/>
 
-# The Architecture: The "Router" Pattern
+## The Architecture: The "Router" Pattern
 
 In enterprise software engineering, this concept is known as the **Facade Pattern** or the **API Gateway Pattern**. In the world of AI Agents, we call it the **Router Architecture**.
 
@@ -74,7 +74,7 @@ This is the difference between a "Script Kiddie" and an "Automation Agency." Scr
 
 ![Neon-style architecture diagram of an AI Operating System (AIOS) showing a central Router Node connecting User Input via Telegram to specialized Research, Content, and Finance agents.](/images/blog/build-personal-ai-assistant-unnamed-66.webp)
 
-# The Tech Stack: The Nervous System
+## The Tech Stack: The Nervous System
 
 To build a brain, we need high-fidelity components.
 
@@ -88,7 +88,7 @@ To build a brain, we need high-fidelity components.
 
 <hr class="wp-block-separator has-alpha-channel-opacity"/>
 
-# Step 1: The Interface (Unified Command Line)
+## Step 1: The Interface (Unified Command Line)
 
 We start with the entry point. You should be able to talk to your AI while walking the dog, driving, or sitting at your desktop.
 
@@ -108,7 +108,7 @@ We start with the entry point. You should be able to talk to your AI while walki
 
 <hr class="wp-block-separator has-alpha-channel-opacity"/>
 
-# Step 2: The Cortex (Intent Classification)
+## Step 2: The Cortex (Intent Classification)
 
 This is the most critical node in your entire 30-day journey. If this node fails, the system is useless.
 
@@ -143,7 +143,7 @@ We need to take the unstructured mess of human language and convert it into stru
 
 <hr class="wp-block-separator has-alpha-channel-opacity"/>
 
-# Step 3: The Switchboard (Routing Logic)
+## Step 3: The Switchboard (Routing Logic)
 
 Now that we have a clean JSON packet, we need to direct traffic.
 
@@ -170,7 +170,7 @@ This visualization is powerful. In your n8n canvas, you will see a single line (
 
 ![n8n workflow editor screenshot displaying a Telegram Trigger connected to an OpenAI Classifier node, leading into a Switch node that branches into three distinct workflows for Research, Content, and Finance.](/images/blog/build-personal-ai-assistant-unnamed-67.webp)
 
-# Step 4: The Sub-Agents (The "Execute Workflow" Pattern)
+## Step 4: The Sub-Agents (The "Execute Workflow" Pattern)
 
 Here is a common mistake: Beginners try to build *all* the logic inside one massive workflow. They put the web scraper, the database connector, and the image generator all in one canvas. **Do not do this.** It creates a "Monolith" that is impossible to debug.
 
@@ -225,7 +225,7 @@ Sometimes you just want to talk.
 
 <hr class="wp-block-separator has-alpha-channel-opacity"/>
 
-# Step 5: The Feedback Loop
+## Step 5: The Feedback Loop
 
 A system that listens but doesn't speak is broken. The final step is reporting the status back to the user.
 
@@ -254,7 +254,7 @@ We cannot just send the raw data back. A JSON dump of a database row is ugly. We
 
 <hr class="wp-block-separator has-alpha-channel-opacity"/>
 
-# Advanced Capability: Voice Mode (The "Iron Man" Upgrade)
+## Advanced Capability: Voice Mode (The "Iron Man" Upgrade)
 
 Typing is slow. Speaking is fast. Since we are using Telegram, we get **Voice Messages** for free. But n8n needs to understand audio.
 
@@ -272,7 +272,7 @@ Now, you can press the microphone button on your watch or phone, mumble a comman
 
 <hr class="wp-block-separator has-alpha-channel-opacity"/>
 
-# The Business Case: Selling the "Executive Dashboard"
+## The Business Case: Selling the "Executive Dashboard"
 
 This is not just a toy for you. This is a high-ticket product for clients.
 
@@ -286,7 +286,7 @@ CEOs and Founders suffer from "Dashboard Fatigue." They have logins for Stripe, 
 
 <hr class="wp-block-separator has-alpha-channel-opacity"/>
 
-# Conclusion: You Are Now the Architect
+## Conclusion: You Are Now the Architect
 
 Congratulations. You have successfully centralized your digital life. You are no longer running disparate scripts. You are conversing with an Operating System that controls your business logic. You have achieved what 99% of developers never do: **Interoperability**.
 

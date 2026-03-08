@@ -6,6 +6,20 @@ import { Search, Calculator, Bot, ArrowRight, BarChart3 } from 'lucide-react';
 export const metadata = {
     title: 'Free Tools & Resources | WhoIsAlfaz.me',
     description: 'Explore free automation tools, ROI calculators, and custom AI agents designed to help you streamline operations, eliminate manual work, and scale your agency or SaaS business.',
+    alternates: {
+        canonical: '/labs/',
+    },
+    openGraph: {
+        title: 'Free Tools & Resources | WhoIsAlfaz.me',
+        description: 'Explore free automation tools, ROI calculators, and custom AI agents designed to help you streamline operations, eliminate manual work, and scale your agency or SaaS business.',
+        url: 'https://whoisalfaz.me/labs/',
+        type: 'website',
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Free Tools & Resources | WhoIsAlfaz.me',
+        description: 'Explore free automation tools, ROI calculators, and custom AI agents designed to help you streamline operations, eliminate manual work, and scale your agency or SaaS business.',
+    }
 };
 
 export default function ToolsPage() {

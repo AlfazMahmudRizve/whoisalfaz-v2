@@ -2,6 +2,25 @@ import Link from 'next/link';
 import { Mail, MessageSquare, Facebook, Linkedin, Instagram } from 'lucide-react';
 import ContactForm from '../../components/ContactForm';
 
+export const metadata = {
+    title: "Contact Alfaz | RevOps & Automation Consulting",
+    description: "Ready to automate your agency scale? Book a strategy call or get a technical SEO audit from Alfaz Mahmud Rizve.",
+    alternates: {
+        canonical: '/contact/',
+    },
+    openGraph: {
+        title: "Contact Alfaz | RevOps & Automation Consulting",
+        description: "Ready to automate your agency scale? Book a strategy call or get a technical SEO audit from Alfaz Mahmud Rizve.",
+        url: 'https://whoisalfaz.me/contact/',
+        type: 'website',
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: "Contact Alfaz | RevOps & Automation Consulting",
+        description: "Ready to automate your agency scale? Book a strategy call or get a technical SEO audit from Alfaz Mahmud Rizve.",
+    }
+};
+
 export default function ContactPage() {
     return (
         <main className="min-h-screen pt-32 pb-20 px-6">

@@ -9,6 +9,12 @@ import NewsletterForm from '../components/NewsletterForm';
 
 import PartnerLogos from '../components/PartnerLogos';
 
+export const metadata = {
+  alternates: {
+    canonical: '/',
+  },
+};
+
 export default async function Home() {
   const posts = await getAllPosts();
 

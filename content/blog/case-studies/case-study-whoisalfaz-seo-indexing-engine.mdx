@@ -14,7 +14,7 @@ affiliates:
   - n8n
 ---
 
-By [Alfaz Mahmud Rizve](https://whoisalfaz.me/blog/who-is-alfaz-mahmud-rizve/) | RevOps & Full Stack Automation Architect
+By [Alfaz Mahmud Rizve](/portfolio/) | RevOps & Full Stack Automation Architect
 
 <hr class="wp-block-separator has-alpha-channel-opacity"/>
 
@@ -114,7 +114,7 @@ The use of `Promise.allSettled()` over `Promise.all()` is a deliberate architect
 The final piece of the automation is a GitHub Actions workflow that fires the API route after every push to the `main` branch. It includes a critical **7-minute delay** to allow DigitalOcean's App Platform to fully deploy the new build before the URLs are submitted.
 
 ```yaml
-# .github/workflows/index-urls.yml
+## .github/workflows/index-urls.yml
 on:
   push:
     branches: [main]

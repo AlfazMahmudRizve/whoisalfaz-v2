@@ -5,7 +5,7 @@ description: "Stop losing VIP prospects in your email inbox. Learn how to engine
 date: '2026-03-05'
 seoTitle: "n8n Slack Notifications for High-Intent Leads | 30 Days of n8n - Day 10"
 seoDescription: "Set up n8n Slack notifications for high-intent leads in minutes. Boost response times and never miss a sale. Step-by-step guide by Alfaz Mahmud Rizve."
-image: '/images/blog/n8n-slack-notifications-by-alfaz-mahmud-rizve-featured.webp'
+image: '/images/blog/n8n-slack-notifications-by-alfaz-mahmud-rizve/-by-alfaz-mahmud-rizve-featured.webp'
 categories:
   - Learn Automation in 30 Days
 affiliates: ['n8n', 'vultr', 'apollo']
@@ -51,9 +51,9 @@ This is a production-ready workflow. If you do not have your infrastructure runn
 
 We start by catching the data and immediately evaluating its worth.
 
-![n8n Webhook and Filter Node Configuration](/images/blog/n8n-slack-notifications-by-alfaz-mahmud-rizve-Generated-Image-December-29-2025-4_13PM.webp)
+![n8n Webhook and Filter Node Configuration](/images/blog/n8n-slack-notifications-by-alfaz-mahmud-rizve/-by-alfaz-mahmud-rizve-Generated-Image-December-29-2025-4_13PM.webp)
 
-- **The Webhook:** As built in **[Day 8](/blog/capture-n8n-lead-data-from-wordpress-elementor/)**, your workflow begins with a **Webhook node** catching the JSON payload from your Elementor form or landing page.
+- **The Webhook:** As built in **[Day 8](/blog/capture-n8n-lead-data-from-wordpress-elementor/-from-wordpress-elementor/)**, your workflow begins with a **Webhook node** catching the JSON payload from your Elementor form or landing page.
 - **The Filter Node:** Attach a Filter node directly to the Webhook.
   - **Condition:** Add a String condition.
   - **Value 1:** Map this to your form's "Intent" dropdown field `{{ $json.body.intent }}`.
@@ -66,7 +66,7 @@ We start by catching the data and immediately evaluating its worth.
 
 You must authenticate n8n with your Slack workspace securely. Do not use legacy webhooks; use OAuth2.
 
-![n8n Slack OAuth2 Authentication Config](/images/blog/n8n-slack-notifications-by-alfaz-mahmud-rizve-Generated-Image-December-29-2025-4_13PM-1.webp)
+![n8n Slack OAuth2 Authentication Config](/images/blog/n8n-slack-notifications-by-alfaz-mahmud-rizve/-by-alfaz-mahmud-rizve-Generated-Image-December-29-2025-4_13PM-1.webp)
 
 Attach a **Slack node** to the true output of your Filter node.
 
@@ -80,7 +80,7 @@ This is where you separate yourself from the amateurs. Do not just map the raw t
 
 We are going to use Slack's Blocks feature to send a beautifully formatted, structured JSON payload.
 
-![Slack Block Kit Payload formatting in n8n](/images/blog/n8n-slack-notifications-by-alfaz-mahmud-rizve-Generated-Image-December-29-2025-4_14PM.webp)
+![Slack Block Kit Payload formatting in n8n](/images/blog/n8n-slack-notifications-by-alfaz-mahmud-rizve/-by-alfaz-mahmud-rizve-Generated-Image-December-29-2025-4_14PM.webp)
 
 In your n8n Slack node:
 

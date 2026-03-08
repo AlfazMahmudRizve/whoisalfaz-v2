@@ -126,13 +126,13 @@ In your Vultr server (inside your `.env` file or Docker Compose), you must add t
 Bash
 
 ```text
-# 1. Enable Pruning (Turn the shredder on)
+## 1. Enable Pruning (Turn the shredder on)
 EXECUTIONS_DATA_PRUNE=true
 
-# 2. Burn Time (Delete logs older than 24 hours)
+## 2. Burn Time (Delete logs older than 24 hours)
 EXECUTIONS_DATA_MAX_AGE=24
 
-# 3. Fail-Safe (Keep max 1,000 executions to prevent DB crashes)
+## 3. Fail-Safe (Keep max 1,000 executions to prevent DB crashes)
 EXECUTIONS_DATA_PRUNE_MAX_COUNT=1000
 
 ```

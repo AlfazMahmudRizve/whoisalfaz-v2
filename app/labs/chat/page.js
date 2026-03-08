@@ -88,6 +88,7 @@ export default function ChatPage() {
 
             {/* Header */}
             <div className="max-w-3xl mx-auto w-full flex items-center justify-between mb-6 px-4">
+                <h1 className="sr-only">Alfaz AI Chat</h1>
                 <Link href="/labs" className="flex items-center gap-2 text-slate-500 hover:text-white transition-colors text-sm font-medium group">
                     <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" />
                     Back to Labs

@@ -12,7 +12,21 @@ export const generateMetadata = async ({ params }) => {
 
     return {
         title: `${service.title} | Services`,
-        description: service.subtitle
+        description: service.subtitle,
+        alternates: {
+            canonical: `/services/${slug}/`,
+        },
+        openGraph: {
+            title: `${service.title} | Services`,
+            description: service.subtitle,
+            url: `https://whoisalfaz.me/services/${slug}/`,
+            type: 'article',
+        },
+        twitter: {
+            card: 'summary_large_image',
+            title: `${service.title} | Services`,
+            description: service.subtitle,
+        }
     };
 }
 

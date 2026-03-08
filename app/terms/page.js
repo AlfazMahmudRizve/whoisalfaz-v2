@@ -5,6 +5,20 @@ import { Section, ScrollText, Mail, FileText, ChevronRight, Scale, AlertTriangle
 export const metadata = {
     title: "Terms of Use | Alfaz Mahmud Rizve",
     description: "Review the comprehensive Terms and Conditions for whoisalfaz.me. This legal document outlines user responsibilities, permissible usage, and our data handling commitments.",
+    alternates: {
+        canonical: '/terms/',
+    },
+    openGraph: {
+        title: "Terms of Use | Alfaz Mahmud Rizve",
+        description: "Review the comprehensive Terms and Conditions for whoisalfaz.me. This legal document outlines user responsibilities, permissible usage, and our data handling commitments.",
+        url: 'https://whoisalfaz.me/terms/',
+        type: 'website',
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: "Terms of Use | Alfaz Mahmud Rizve",
+        description: "Review the comprehensive Terms and Conditions for whoisalfaz.me. This legal document outlines user responsibilities, permissible usage, and our data handling commitments.",
+    }
 };
 
 export default function TermsPage() {

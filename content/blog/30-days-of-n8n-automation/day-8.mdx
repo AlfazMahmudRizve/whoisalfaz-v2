@@ -14,7 +14,7 @@ seoTitle: >-
 seoDescription: >-
   Capture every n8n lead from WordPress and Elementor into Google Sheets with
   instant email alerts. Step‑by‑step automation for SaaS and agencies by Alfaz
-image: /images/blog/capture-n8n-lead-data-from-wordpress-elementor-featured.webp
+image: /images/blog/capture-n8n-lead-data-from-wordpress-elementor/-from-wordpress-elementor-featured.webp
 categories:
   - Learn Automation in 30 Days
 affiliates:
@@ -24,7 +24,7 @@ affiliates:
   - apollo
 ---
 
-By [Alfaz Mahmud Rizve](https://whoisalfaz.me/blog/who-is-alfaz-mahmud-rizve/) | RevOps & Full Stack Automation Architect at whoisalfaz.me
+By [Alfaz Mahmud Rizve](/portfolio/) | RevOps & Full Stack Automation Architect at whoisalfaz.me
 
 <hr class="wp-block-separator has-alpha-channel-opacity"/>
 
@@ -50,7 +50,7 @@ By using Google Sheets as our initial data ingestion layer, we achieve several e
 
 **The Unbreakable Ledger:** Google Sheets acts as a highly forgiving, flat-file database. It accepts raw strings without complex schema validation. This ensures that no matter what the user types into your form, the data is permanently captured.
 
-![The Unbreakable Ledger architecture for n8n lead capture from WordPress to Google Sheets by Alfaz Mahmud Rizve](/images/blog/capture-n8n-lead-data-from-wordpress-elementor-Generated-Image-December-26-2025-6_01PM.webp)
+![The Unbreakable Ledger architecture for n8n lead capture from WordPress to Google Sheets by Alfaz Mahmud Rizve](/images/blog/capture-n8n-lead-data-from-wordpress-elementor/-from-wordpress-elementor-Generated-Image-December-26-2025-6_01PM.webp)
 
 **Centralized Truth:** Every lead, regardless of which landing page they converted on, lands in one master ledger. You can easily filter columns by service interest, UTM source, or date without writing complex database queries.
 
@@ -78,7 +78,7 @@ To deploy this architecture today, you need your core infrastructure in place. Y
 
 The primary trigger for our system is the Webhook node. A webhook is simply a dedicated URL on your n8n server that sits silently and listens for incoming JSON payloads. We need to instruct Elementor to push the form data to this exact address the millisecond the "Submit" button is clicked.
 
-![Configuring the n8n webhook gateway for Elementor forms by Alfaz Mahmud Rizve](/images/blog/capture-n8n-lead-data-from-wordpress-elementor-Generated-Image-December-26-2025-6_02PM.webp)
+![Configuring the n8n webhook gateway for Elementor forms by Alfaz Mahmud Rizve](/images/blog/capture-n8n-lead-data-from-wordpress-elementor/-from-wordpress-elementor-Generated-Image-December-26-2025-6_02PM.webp)
 
 ### Step 1: Initialize the n8n Listener
 
@@ -109,7 +109,7 @@ This confirms that the connection is active. Every new n8n lead is now bypassing
 
 Now that we have successfully captured the data payload in our server memory, we must permanently write it to our database.
 
-![Mapping Webhook payload to Google Sheets CRM layer in n8n by Alfaz Mahmud Rizve](/images/blog/capture-n8n-lead-data-from-wordpress-elementor-Generated-Image-December-26-2025-6_03PM.webp)
+![Mapping Webhook payload to Google Sheets CRM layer in n8n by Alfaz Mahmud Rizve](/images/blog/capture-n8n-lead-data-from-wordpress-elementor/-from-wordpress-elementor-Generated-Image-December-26-2025-6_03PM.webp)
 
 ### Step 1: Prepare the Schema
 
@@ -156,7 +156,7 @@ Storage satisfies compliance, but notifications drive speed-to-lead. If your sal
 
 Attach an **Email** node (or a dedicated Gmail/Outlook node) to the success output of the Google Sheets node.
 
-![Deploying internal email watchtower alerts via n8n by Alfaz Mahmud Rizve](/images/blog/capture-n8n-lead-data-from-wordpress-elementor-Generated-Image-December-26-2025-6_03PM-1.webp)
+![Deploying internal email watchtower alerts via n8n by Alfaz Mahmud Rizve](/images/blog/capture-n8n-lead-data-from-wordpress-elementor/-from-wordpress-elementor-Generated-Image-December-26-2025-6_03PM-1.webp)
 
 ### The Enterprise Setup
 
@@ -180,7 +180,7 @@ When a B2B buyer submits a high-ticket service inquiry, they expect immediate ac
 
 Branch a second Email node off your Webhook or Google Sheets node.
 
-![Setting up external auto-reply handshakes with n8n and email by Alfaz Mahmud Rizve](/images/blog/capture-n8n-lead-data-from-wordpress-elementor-Generated-Image-December-26-2025-6_04PM.webp)
+![Setting up external auto-reply handshakes with n8n and email by Alfaz Mahmud Rizve](/images/blog/capture-n8n-lead-data-from-wordpress-elementor/-from-wordpress-elementor-Generated-Image-December-26-2025-6_04PM.webp)
 
 - **To:** Map this dynamically to the prospect's email variable: `{{ $json["body"]["Email"] }}`.
 - **From:** Use a personal sender name, not a generic alias. `Alfaz Mahmud Rizve <alfaz@whoisalfaz.me>` performs significantly better than `noreply@domain.com`.
@@ -211,7 +211,7 @@ What happens if the Google Sheets API is temporarily down for maintenance precis
 
 If you recall the architectural principles we established in Day 7 regarding the Global Error Watchtower, you must implement defensive routing here.
 
-![Defensive engineering and error handling in n8n lead generation workflows by Alfaz Mahmud Rizve](/images/blog/capture-n8n-lead-data-from-wordpress-elementor-Generated-Image-December-26-2025-6_05PM.webp)
+![Defensive engineering and error handling in n8n lead generation workflows by Alfaz Mahmud Rizve](/images/blog/capture-n8n-lead-data-from-wordpress-elementor/-from-wordpress-elementor-Generated-Image-December-26-2025-6_05PM.webp)
 
 **Exponential Retries:** Open the settings of your Google Sheets node. Toggle on **Retry on Fail**. Set the maximum retries to 3, with a 2000ms delay. This ensures that minor network blips do not cause data loss.
 

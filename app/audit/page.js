@@ -2,6 +2,25 @@
 import AuditTool from '../../components/AuditTool';
 import { Search, Zap, BarChart3 } from 'lucide-react';
 
+export const metadata = {
+    title: "AI & Automation Audit | Scale Your Agency",
+    description: "Stop wasting time on manual tasks. Our audit process identifies bottlenecks and creates a custom roadmap to automate your operations.",
+    alternates: {
+        canonical: '/audit/',
+    },
+    openGraph: {
+        title: "AI & Automation Audit | Scale Your Agency",
+        description: "Stop wasting time on manual tasks. Our audit process identifies bottlenecks and creates a custom roadmap to automate your operations.",
+        url: 'https://whoisalfaz.me/audit/',
+        type: 'website',
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: "AI & Automation Audit | Scale Your Agency",
+        description: "Stop wasting time on manual tasks. Our audit process identifies bottlenecks and creates a custom roadmap to automate your operations.",
+    }
+};
+
 export default function AuditPage() {
     return (
         <main className="min-h-screen pt-32 pb-20 px-6">

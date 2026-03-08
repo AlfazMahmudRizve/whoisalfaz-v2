@@ -6,6 +6,24 @@ import { Zap, Globe, BarChart3, Search, Video, MessageSquare, ChevronDown, Check
 import NewsletterForm from '../../components/NewsletterForm';
 import PartnerLogos from '../../components/PartnerLogos';
 
+export const metadata = {
+    title: "AI Automation & Web Services | Alfaz Mahmud Rizve",
+    description: "End-to-end implementation for scaling your operations. Explore custom Headless CMS, n8n Automation, and Web Development services natively.",
+    alternates: {
+        canonical: '/services/',
+    },
+    openGraph: {
+        title: "AI Automation & Web Services | Alfaz Mahmud Rizve",
+        description: "End-to-end implementation for scaling your operations. Explore custom Headless CMS, n8n Automation, and Web Development services natively.",
+        url: 'https://whoisalfaz.me/services/',
+        type: 'website',
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: "AI Automation & Web Services | Alfaz Mahmud Rizve",
+        description: "End-to-end implementation for scaling your operations. Explore custom Headless CMS, n8n Automation, and Web Development services natively.",
+    }
+};
 
 export default function ServicesPage() {
 

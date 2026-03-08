@@ -14,7 +14,7 @@ affiliates:
   - "apollo"
 ---
 
-By [Alfaz Mahmud Rizve](https://whoisalfaz.me/blog/who-is-alfaz-mahmud-rizve/) | RevOps & Full Stack Automation Architect at whoisalfaz.me
+By [Alfaz Mahmud Rizve](/portfolio/) | RevOps & Full Stack Automation Architect at whoisalfaz.me
 
 <hr class="wp-block-separator has-alpha-channel-opacity"/>
 
@@ -26,7 +26,7 @@ If your team is processing 50 leads a day, and it takes 4 minutes to manually re
 
 In Day 11 of our 30 Days of n8n & Automation sprint, we are eliminating manual research entirely. We are going to build a dynamic lead enrichment with n8n workflow that intercepts inbound leads, calls an external firmographic database, and automatically appends the Company Name, Website, Location, and Revenue metrics before the data ever reaches your CRM.
 
-By integrating this architecture with the [Lead Capture Engine from Day 8](/blog/capture-n8n-lead-data/) and the [Lead Scoring Logic from Day 9](/blog/n8n-lead-scoring/), you will transform your basic web forms into an autonomous intelligence gathering system.
+By integrating this architecture with the [Lead Capture Engine from Day 8](/blog/capture-n8n-lead-data-from-wordpress-elementor/) and the [Lead Scoring Logic from Day 9](/blog/lead-scoring-automation-with-alfaz-mahmud-rizve/), you will transform your basic web forms into an autonomous intelligence gathering system.
 
 <hr class="wp-block-separator has-alpha-channel-opacity"/>
 
@@ -41,7 +41,7 @@ The architectural solution is friction reduction: Ask the user for their work em
 A robust lead enrichment with n8n pipeline delivers three operational advantages:
 
 - **Frictionless Conversion**: You can reduce your landing page forms to just 1 or 2 fields, skyrocketing your conversion rates.
-- **Contextual Triage**: You immediately unlock the ability to trigger the high-intent [n8n Slack Notifications we built in Day 10](/blog/n8n-slack-notifications/) based specifically on firmographic data (e.g., "Alert the channel if employee count > 500").
+- **Contextual Triage**: You immediately unlock the ability to trigger the high-intent [n8n Slack Notifications we built in Day 10](/blog/n8n-slack-notifications-by-alfaz-mahmud-rizve/) based specifically on firmographic data (e.g., "Alert the channel if employee count > 500").
 - **Hyper-Personalized Outbound**: Enriched data allows you to inject hyper-specific variables (City, Industry, Tech Stack) into your automated email sequences, creating the illusion of deep 1-on-1 manual research.
 
 <hr class="wp-block-separator has-alpha-channel-opacity"/>
@@ -140,7 +140,7 @@ Amateur workflows assume the API will always find a match. Enterprise architectu
 
 The API will return a `404 Not Found` or a null value. If your workflow tries to write a null company name into a required CRM field, the entire sequence will crash.
 
-We must implement the defensive routing protocols we discussed in [Day 7 (Error Handling)](/blog/handle-n8n-errors-like-a-pro/).
+We must implement the defensive routing protocols we discussed in [Day 7 (Error Handling)](/blog/n8n-debugging-error-handling-basics/).
 
 - **The API Validation Gate**: Immediately after the HTTP Request node (and before the Set node), insert an **IF Node**.
     - **Condition**: Check if `{{ $json.organization.name }}` Is Not Empty.

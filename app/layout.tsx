@@ -58,9 +58,6 @@ export const metadata = {
   icons: {
     icon: '/logo.png',
   },
-  alternates: {
-    canonical: 'https://whoisalfaz.me',
-  },
   verification: {
     other: {
       'p:domain_verify': '5e4e50ddfe2f47c276a5cb4231bfb41b',

@@ -5,6 +5,20 @@ import { Shield, Lock, Eye, FileText, Mail, ChevronRight } from 'lucide-react';
 export const metadata = {
     title: "Privacy Policy | Alfaz Mahmud Rizve",
     description: "Read the Privacy Notice and Data Protection Policy for whoisalfaz.me. Learn exactly how we collect, process, and secure your personal information in compliance with global laws.",
+    alternates: {
+        canonical: '/privacy-policy/',
+    },
+    openGraph: {
+        title: "Privacy Policy | Alfaz Mahmud Rizve",
+        description: "Read the Privacy Notice and Data Protection Policy for whoisalfaz.me. Learn exactly how we collect, process, and secure your personal information in compliance with global laws.",
+        url: 'https://whoisalfaz.me/privacy-policy/',
+        type: 'website',
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: "Privacy Policy | Alfaz Mahmud Rizve",
+        description: "Read the Privacy Notice and Data Protection Policy for whoisalfaz.me. Learn exactly how we collect, process, and secure your personal information in compliance with global laws.",
+    }
 };
 
 export default function PrivacyPolicy() {

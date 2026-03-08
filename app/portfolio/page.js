@@ -5,6 +5,20 @@ import { MapPin, GraduationCap, Briefcase, ArrowRight, ExternalLink, Code2, Cpu,
 export const metadata = {
     title: "Portfolio | Alfaz Mahmud Rizve",
     description: "I design business growth strategies and then architect the automated infrastructure to execute them.",
+    alternates: {
+        canonical: '/portfolio/',
+    },
+    openGraph: {
+        title: "Portfolio | Alfaz Mahmud Rizve",
+        description: "I design business growth strategies and then architect the automated infrastructure to execute them.",
+        url: 'https://whoisalfaz.me/portfolio/',
+        type: 'website',
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: "Portfolio | Alfaz Mahmud Rizve",
+        description: "I design business growth strategies and then architect the automated infrastructure to execute them.",
+    }
 };
 
 export default function Portfolio() {
