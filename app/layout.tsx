@@ -30,7 +30,7 @@ export const metadata = {
     type: 'website',
     images: [
       {
-        url: '/profile.jpg',
+        url: '/featured-image.png',
         width: 1200,
         height: 630,
         alt: 'Alfaz Mahmud Rizve - RevOps & Full Stack Automation Architect',
@@ -42,7 +42,7 @@ export const metadata = {
     title: 'Alfaz Mahmud Rizve | RevOps & Full Stack Automation Architect',
     description: 'I help Marketing Agencies migrate off legacy CMS platforms to high-performance Next.js stacks and eliminate manual ops with n8n automation.',
     creator: '@whoisalfaz',
-    images: ['/profile.jpg'],
+    images: ['/featured-image.png'],
   },
   robots: {
     index: true,
