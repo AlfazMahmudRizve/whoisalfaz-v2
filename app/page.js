@@ -16,14 +16,14 @@ export default async function Home() {
       <div className="fixed inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-teal-50/50 via-slate-50 to-slate-50 dark:from-blue-900/10 dark:via-[#0a0a0a] dark:to-[#0a0a0a] -z-10 transition-colors duration-300" />
 
       {/* SECTION 0: HERO */}
-      <section className="relative pt-10 pb-24 px-6 overflow-hidden">
+      <section className="relative pt-10 pb-10 px-6 overflow-hidden">
         <div className="max-w-7xl mx-auto flex flex-col items-center text-center relative z-10 animate-in fade-in slide-in-from-bottom-12 zoom-in-[0.98] duration-1000 ease-out fill-mode-both">
           
           <div className="inline-block px-4 py-1.5 bg-white/60 dark:bg-white/5 backdrop-blur-sm border border-slate-200 dark:border-white/10 rounded-full text-xs font-bold text-teal-700 dark:text-teal-300 mb-8 shadow-sm">
             AUTONOMOUS REVENUE SYSTEMS
           </div>
 
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 dark:text-white mb-8 leading-[0.9] tracking-tighter max-w-4xl uppercase transition-colors duration-300">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 dark:text-white mb-8 leading-[0.9] tracking-tighter max-w-5xl uppercase transition-colors duration-300">
             Autonomous <span className="text-teal-600 dark:text-teal-400">Revenue Engines</span> <br /> Built on Sub-Second <span className="text-purple-600 dark:text-purple-400">Infrastructure</span>
           </h1>
 
@@ -39,11 +39,25 @@ export default async function Home() {
               Our Solutions
             </Link>
           </div>
+
+          {/* Stat Bar */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-8 sm:gap-16 mt-14 pt-8 border-t border-slate-200/60 dark:border-white/5 w-full max-w-2xl">
+            {[
+              { value: '30+', label: 'Systems Documented' },
+              { value: '6', label: 'AI Integrations' },
+              { value: '< 1s', label: 'Load Time' },
+            ].map((stat, i) => (
+              <div key={i} className="flex flex-col items-center gap-1">
+                <span className="text-2xl md:text-3xl font-black text-slate-900 dark:text-white tracking-tight transition-colors duration-300">{stat.value}</span>
+                <span className="text-xs font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-widest transition-colors duration-300">{stat.label}</span>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* Partner Divider */}
-      <section className="py-20 bg-white/30 dark:bg-white/5 backdrop-blur-sm border-y border-slate-200 dark:border-white/10 transition-colors duration-300">
+      <section className="py-12 bg-white/30 dark:bg-white/5 backdrop-blur-sm border-y border-slate-200 dark:border-white/10 transition-colors duration-300">
         <div className="max-w-6xl mx-auto px-6">
           <PartnerLogos title="POWERING SCALE FOR MODERN INFRASTRUCTURE" />
         </div>
