@@ -3,11 +3,12 @@ import { getAllPosts, getPostBySlug, getAllCategories } from '@/lib/mdx';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowLeft, Calendar, Clock, Twitter, Linkedin, Link as LinkIcon } from 'lucide-react';
+import { ArrowLeft, Calendar, Clock } from 'lucide-react';
 import TableOfContents from '@/components/TableOfContents';
 import NewsletterForm from '@/components/NewsletterForm';
 import CodeBlock from '@/components/CodeBlock';
 import Callout from '@/components/Callout';
+import ShareButtons from '@/components/ShareButtons';
 import BlogImage from '@/components/BlogImage';
 import StepList from '@/components/StepList';
 import SearchWidget from '@/components/SearchWidget';
@@ -208,20 +209,7 @@ export default async function Post({ params }) {
               <h4 className="text-[10px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-[0.2em] mb-6 border-b border-slate-100 dark:border-white/5 pb-3">
                 Share
               </h4>
-              <div className="flex flex-col gap-3">
-                <button className="flex items-center justify-center gap-3 w-full py-4 bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-2xl text-[10px] font-black uppercase tracking-widest text-slate-600 dark:text-white hover:bg-slate-100 dark:hover:bg-white/10 transition-all group shadow-sm dark:shadow-none">
-                  <Twitter size={14} className="text-blue-400" />
-                  <span>Twitter</span>
-                </button>
-                <button className="flex items-center justify-center gap-3 w-full py-4 bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-2xl text-[10px] font-black uppercase tracking-widest text-slate-600 dark:text-white hover:bg-slate-100 dark:hover:bg-white/10 transition-all group shadow-sm dark:shadow-none">
-                  <Linkedin size={14} className="text-blue-600" />
-                  <span>LinkedIn</span>
-                </button>
-                <button className="flex items-center justify-center gap-3 w-full py-4 bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-2xl text-[10px] font-black uppercase tracking-widest text-slate-600 dark:text-white hover:bg-slate-100 dark:hover:bg-white/10 transition-all group shadow-sm dark:shadow-none">
-                  <LinkIcon size={14} className="text-purple-500" />
-                  <span>Copy Link</span>
-                </button>
-              </div>
+              <ShareButtons />
             </div>
 
             {/* NEWSLETTER (Detached) */}
