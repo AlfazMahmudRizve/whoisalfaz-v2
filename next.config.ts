@@ -114,7 +114,7 @@ const nextConfig: NextConfig = {
         style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
         img-src 'self' data: https://whoisalfaz.me https://www.googletagmanager.com;
         font-src 'self' https://fonts.gstatic.com data:;
-        connect-src 'self' https://pagespeedonline.googleapis.com https://www.google-analytics.com https://analytics.ahrefs.com https://cloudflareinsights.com;
+        connect-src 'self' https://pagespeedonline.googleapis.com https://*.google-analytics.com https://www.google-analytics.com https://*.analytics.google.com https://analytics.ahrefs.com https://cloudflareinsights.com;
         frame-src 'self';
         object-src 'none';
         upgrade-insecure-requests;

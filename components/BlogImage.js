@@ -15,6 +15,9 @@ export default function BlogImage({ src, alt, ...props }) {
 
     if (!src) return null;
 
+    // Check if user manually passed priority in MDX (e.g. `<img src="..." priority="true" />`)
+    const isPriority = props.priority === "true" || props.priority === true;
+
     return (
         <>
             {/* Inline Image (clickable) */}
@@ -30,8 +33,12 @@ export default function BlogImage({ src, alt, ...props }) {
                     alt={alt || ''}
                     width={1200}
                     height={675}
+                    quality={85}
+                    priority={isPriority}
+                    loading={isPriority ? "eager" : "lazy"}
+                    fetchPriority={isPriority ? "high" : "auto"}
                     className="w-full max-w-3xl mx-auto rounded-2xl shadow-2xl border border-white/10 transition-all duration-300 group-hover:shadow-teal-500/10 group-hover:border-teal-500/30"
-                    sizes="(max-width: 768px) 100vw, 800px"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 800px"
                     {...props}
                 />
                 <span className="block text-center text-xs text-slate-600 mt-3 opacity-0 group-hover:opacity-100 transition-opacity">
