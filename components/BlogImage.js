@@ -18,6 +18,13 @@ export default function BlogImage({ src, alt, ...props }) {
     // Check if user manually passed priority in MDX (e.g. `<img src="..." priority="true" />`)
     const isPriority = props.priority === "true" || props.priority === true;
 
+    // Generate SEO fallback alt text from the filename if manually omitted
+    const fallbackAltText = typeof src === 'string' 
+        ? src.split('/').pop()?.split('.')[0]?.replace(/-/g, ' ') 
+        : 'Article reference image';
+        
+    const finalAlt = alt || fallbackAltText;
+
     return (
         <>
             {/* Inline Image (clickable) */}
@@ -30,7 +37,7 @@ export default function BlogImage({ src, alt, ...props }) {
             >
                 <Image
                     src={src}
-                    alt={alt || ''}
+                    alt={finalAlt}
                     width={1200}
                     height={675}
                     quality={85}
@@ -59,7 +66,7 @@ export default function BlogImage({ src, alt, ...props }) {
                 >
                     <Image
                         src={src}
-                        alt={alt || ''}
+                        alt={finalAlt}
                         width={1920}
                         height={1080}
                         className="max-w-[90vw] max-h-[90vh] object-contain rounded-lg shadow-2xl"

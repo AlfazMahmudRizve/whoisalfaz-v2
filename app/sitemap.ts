@@ -45,10 +45,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     // 4. Dynamic Blog Categories
     const categoriesSet = new Set<string>();
     posts.forEach((post: any) => {
-        if (post.category) {
-            // Replicating category slug generation logic
-            const categorySlug = post.category.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
-            categoriesSet.add(categorySlug);
+        if (post.categories && Array.isArray(post.categories)) {
+            post.categories.forEach((cat: string) => {
+                // Replicating category slug generation logic
+                const categorySlug = cat.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
+                categoriesSet.add(categorySlug);
+            });
         }
     });
     const categoryRoutes = Array.from(categoriesSet).map((categorySlug) => ({
