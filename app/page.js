@@ -1,6 +1,6 @@
 import { getAllPosts } from '@/lib/mdx';
 import WorkflowSteps from '../components/WorkflowSteps';
-import AuditTool from '../components/AuditTool';
+import LazyAuditTool from '../components/LazyAuditTool';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowRight, Zap, Code2, Globe, Mail } from 'lucide-react';
@@ -67,7 +67,7 @@ export default async function Home() {
       />
 
       {/* BACKGROUND ELEMENTS */}
-      <div className="fixed inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-teal-50/50 via-slate-50 to-slate-50 dark:from-blue-900/10 dark:via-[#0a0a0a] dark:to-[#0a0a0a] -z-10 transition-colors duration-300" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-teal-50/50 via-slate-50 to-slate-50 dark:from-blue-900/10 dark:via-[#0a0a0a] dark:to-[#0a0a0a] -z-10 transition-colors duration-300" />
 
       {/* SECTION 0: HERO */}
       <section className="relative pt-10 pb-10 px-6 overflow-hidden">
@@ -212,12 +212,12 @@ export default async function Home() {
       {/* Audit Tool Section */}
       <section className="py-32 px-6 flex justify-center">
         <div className="w-full max-w-6xl">
-          <AuditTool />
+          <LazyAuditTool />
         </div>
       </section>
 
       {/* Services Section */}
-      <section className="py-32 px-6 bg-slate-50/50 dark:bg-black/20 backdrop-blur-3xl border-y border-slate-200 dark:border-white/10 transition-colors duration-300">
+      <section className="py-32 px-6 bg-slate-50/50 dark:bg-black/20 backdrop-blur-sm border-y border-slate-200 dark:border-white/10 transition-colors duration-300">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
             <div className="max-w-2xl">
