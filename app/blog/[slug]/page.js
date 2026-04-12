@@ -170,17 +170,17 @@ export default async function Post({ params }) {
             {/* Author & Meta Grid */}
             <div className="flex flex-wrap items-center gap-8 text-[13px] font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400 mt-14 pb-2">
 
-              <div className="flex items-center gap-4">
-                <div className="w-14 h-14 rounded-full bg-slate-100 dark:bg-slate-800 p-0.5 ring-2 ring-slate-200 dark:ring-white/10">
+              <Link href="/about/alfaz-mahmud-rizve/" className="flex items-center gap-4 group cursor-pointer hover:bg-slate-100 dark:hover:bg-white/5 p-2 -m-2 rounded-xl transition-colors">
+                <div className="w-14 h-14 rounded-full bg-slate-100 dark:bg-slate-800 p-0.5 ring-2 ring-slate-200 dark:ring-white/10 group-hover:ring-teal-500/50 transition-all">
                   <div className="w-full h-full rounded-full overflow-hidden relative">
-                    <Image src="/profile.jpg" alt="Alfaz" fill sizes="56px" className="object-cover" />
+                    <Image src="/profile.jpg" alt="Alfaz Mahmud Rizve" fill sizes="56px" className="object-cover" />
                   </div>
                 </div>
                 <div className="leading-tight">
-                  <div className="text-slate-900 dark:text-white font-black text-[15px]">Alfaz Mahmud Rizve</div>
+                  <div className="text-slate-900 dark:text-white font-black text-[15px] group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">Alfaz Mahmud Rizve</div>
                   <div className="text-[11px] text-slate-400 dark:text-slate-500">@whoisalfaz</div>
                 </div>
-              </div>
+              </Link>
 
               <div className="h-10 w-px bg-slate-200 dark:bg-white/10 hidden sm:block" />
 
