@@ -15,6 +15,7 @@ import SearchWidget from '@/components/SearchWidget';
 import DeployingTheStacks from '@/components/DeployingTheStacks';
 import SeriesNavigation from '@/components/SeriesNavigation';
 import { MDXRemote } from 'next-mdx-remote/rsc';
+import rehypeRaw from 'rehype-raw';
 
 export async function generateStaticParams() {
   const posts = getAllPosts();
@@ -286,7 +287,7 @@ export default async function Post({ params }) {
                 img: BlogImage,
                 ol: StepList,
               }}
-              options={{ mdxOptions: { format: 'md' } }}
+              options={{ mdxOptions: { format: 'md', rehypePlugins: [rehypeRaw] } }}
             />
 
             {/* Dynamic Affiliate Links Injection */}

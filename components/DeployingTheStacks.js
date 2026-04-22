@@ -158,12 +158,12 @@ export default function DeployingTheStacks({ affiliates = [] }) {
 
     // Determine Secondary (all other) Affiliates
     const allKeys = Object.keys(AFFILIATE_DATA);
-    const secondaryKeys = allKeys.filter(k => !primaryKeys.includes(k));
+    const secondaryKeys = allKeys.filter(k => !primaryKeys.includes(k)).slice(0, 3);
 
     if (primaryKeys.length === 0 && secondaryKeys.length === 0) return null;
 
     return (
-        <section className="mt-16 pt-16 border-t border-white/10 relative">
+        <section className="mt-10 pt-10 border-t border-white/10 relative">
             {/* Background ambient glow */}
             <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-b from-teal-900/5 to-transparent -z-10 pointer-events-none" />
 
@@ -174,7 +174,7 @@ export default function DeployingTheStacks({ affiliates = [] }) {
                     <p className="text-slate-600 dark:text-slate-300 mb-10 leading-relaxed max-w-2xl relative z-10">
                         To build this exact architecture in production, you will need the core infrastructure. I strictly use and recommend the following enterprise-grade platforms.
                     </p>
-                    <div className="grid sm:grid-cols-2 gap-10">
+                    <div className="grid sm:grid-cols-2 gap-6">
                         {primaryKeys.map((key, index) => <AffiliateCard key={key} id={key} data={AFFILIATE_DATA[key]} index={index} />)}
                     </div>
                 </div>
@@ -184,7 +184,7 @@ export default function DeployingTheStacks({ affiliates = [] }) {
             {secondaryKeys.length > 0 && (
                 <div className="relative z-10">
                     <h4 className="text-2xl font-bold text-slate-800 dark:text-slate-200 mb-8 tracking-tight border-b border-slate-200 dark:border-white/5 pb-4">Complementary RevOps Toolchain</h4>
-                    <div className="grid sm:grid-cols-2 gap-10">
+                    <div className="grid sm:grid-cols-2 gap-6">
                         {secondaryKeys.map((key, index) => <AffiliateCard key={key} id={key} data={AFFILIATE_DATA[key]} index={index} />)}
                     </div>
                 </div>
