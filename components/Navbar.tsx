@@ -17,10 +17,10 @@ export default function Navbar() {
 
   const navLinks = [
     { name: 'Services', href: '/services' },
+    { name: 'Case Studies', href: '/blog/category/architecture-teardowns' },
     { name: 'Blog', href: '/blog' },
     { name: 'Lab', href: '/labs' },
     { name: 'Portfolio', href: '/portfolio' },
-    { name: 'Contact', href: '/contact' },
   ];
 
   return (
@@ -91,7 +91,7 @@ export default function Navbar() {
             Free Audit
           </Link>
           <Link href="/contact" className="px-5 py-2 bg-slate-900 dark:bg-white text-white dark:text-black text-xs font-bold rounded-full hover:bg-slate-800 dark:hover:bg-slate-200 transition-colors shadow-sm">
-            Hire Me
+            Work With Me
           </Link>
         </div>
 
@@ -191,7 +191,7 @@ export default function Navbar() {
               className="block px-4 py-3 text-center bg-slate-900 dark:bg-white text-white dark:text-black font-bold rounded-xl hover:bg-slate-800 dark:hover:bg-slate-200 transition-colors mx-2 mb-2"
               onClick={() => setIsOpen(false)}
             >
-              Hire Me
+              Work With Me
             </Link>
           </div>
         </>
