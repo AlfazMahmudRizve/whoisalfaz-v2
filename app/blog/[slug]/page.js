@@ -140,9 +140,6 @@ export default async function Post({ params }) {
         }}
       />
 
-      {/* SERIES NAVIGATION — Cluster Signal for Google */}
-      <SeriesNavigation currentPost={post} allPosts={posts} />
-
       {/* --- HERO SECTION: HEADER CARD --- */}
       <header className="max-w-7xl mx-auto px-6 mb-10 animate-in fade-in slide-in-from-bottom-8 duration-1000">
 
