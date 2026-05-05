@@ -39,7 +39,7 @@ Here is the engineering reality of why we use n8n for Facebook Lead Ads automati
 
 **Deep Data Sanitization**: Facebook users input data terribly. Phone numbers come in as `+1 (555) 123-4567`, `555 123 4567`, or `555.123.4567`. Traditional CRMs like HubSpot will reject these payloads if they don't match their strict schema. n8n allows us to use standard JavaScript regex to mathematically clean the data before it ever hits the database.
 
-**The Unbreakable Ledger**: As we established in **[Day 8 (Lead Capture Architecture)](/blog/capture-n8n-lead-data)**, we can easily route the Facebook payload to both a heavy CRM and a flat-file Google Sheet simultaneously, ensuring zero data loss if the CRM API goes down.
+**The Unbreakable Ledger**: As we established in **[Day 8 (Lead Capture Architecture)](/blog/capture-n8n-lead-data-from-wordpress-elementor/)**, we can easily route the Facebook payload to both a heavy CRM and a flat-file Google Sheet simultaneously, ensuring zero data loss if the CRM API goes down.
 
 Own your pipeline. Do not rent it from a platform that penalizes you for scaling.
 

@@ -41,7 +41,7 @@ When an agency client wakes up at 8:00 AM on a Monday and sees an email explicit
 
 To build this in **[n8n](https://n8n.partnerlinks.io/ch585gsqzanp)**, we must utilize the **Aggregation Pattern**.
 
-Unlike the [Facebook Lead Capture pipeline we built in Day 13](/blog/automated-facebook-leads-n8n), which processes a single JSON payload at a time, today's architecture must process an array of JSON payloads. It must fetch 50 rows of data, group them by a specific attribute (like UTM Source), count them, and then output a single, consolidated summary.
+Unlike the [Facebook Lead Capture pipeline we built in Day 13](/blog/facebook-lead-ads-automation-by-alfaz-mahmud-rizve/), which processes a single JSON payload at a time, today's architecture must process an array of JSON payloads. It must fetch 50 rows of data, group them by a specific attribute (like UTM Source), count them, and then output a single, consolidated summary.
 
 ---
 
@@ -52,7 +52,7 @@ Unlike the [Facebook Lead Capture pipeline we built in Day 13](/blog/automated-f
 To execute this batch-processing logic reliably, you need three components:
 
 - **The Orchestrator:** A stable **[n8n](https://n8n.partnerlinks.io/ch585gsqzanp)** environment. Because this workflow runs on a strict cron schedule, you cannot rely on a laptop that might be asleep. You must deploy this on a cloud server like n8n Cloud or a self-hosted **[Vultr VPS](https://www.vultr.com/?ref=9859101-9J)**.
-- **The Database:** A structured ledger containing your leads. For this tutorial, we will use the [Google Sheets database we established in Day 8](/blog/capture-n8n-lead-data). Ensure your sheet has a Timestamp column and a Source column.
+- **The Database:** A structured ledger containing your leads. For this tutorial, we will use the [Google Sheets database we established in Day 8](/blog/capture-n8n-lead-data-from-wordpress-elementor/). Ensure your sheet has a Timestamp column and a Source column.
 - **The Email Engine:** A standard SMTP connection (Gmail or Outlook node) to deliver the final HTML payload.
 
 ---

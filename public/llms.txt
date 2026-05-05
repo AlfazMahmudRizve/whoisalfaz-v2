@@ -1,0 +1,39 @@
+# whoisalfaz.me
+
+> Alfaz Mahmud Rizve — RevOps & Full Stack Automation Architect
+
+## About
+
+whoisalfaz.me is the technical portfolio and blog of Alfaz Mahmud Rizve, a Revenue Operations (RevOps) architect specializing in autonomous business infrastructure. The site documents real-world automation architectures, case studies, and technical tutorials for agencies and SaaS companies.
+
+## Core Expertise
+
+- Revenue Operations (RevOps) Architecture
+- n8n Workflow Automation & Self-Hosting
+- Full Stack Web Development (Next.js, React, Supabase)
+- CRM Pipeline Engineering (HubSpot, Brevo, Apollo)
+- AI Agent Integration & LLM Orchestration
+- Technical SEO & Programmatic Indexing
+
+## Key Content
+
+### Blog — 30 Days of n8n & Automation
+A comprehensive 30-part technical series covering production-grade n8n automation workflows for B2B agencies: lead capture, scoring, enrichment, CRM sync, Slack notifications, Facebook Ads automation, automated reporting, content research, and more.
+
+- URL: https://whoisalfaz.me/blog/category/30-days-of-n8n-automation/
+
+### Case Studies — Architecture Teardowns
+Real-world technical case studies documenting complete system architectures built for clients, including a Zero-Hardware Kitchen OS (Next.js PWA), Financial Operations Dashboards, AI Resume Builders, and E-Commerce platforms.
+
+- URL: https://whoisalfaz.me/blog/category/architecture-teardowns/
+
+### Services
+Professional automation and RevOps consulting services including n8n workflow development, CRM architecture, AI integration, and full-stack web application engineering.
+
+- URL: https://whoisalfaz.me/services/
+
+## Contact
+
+- Email: contact@whoisalfaz.me
+- Website: https://whoisalfaz.me
+- LinkedIn: https://linkedin.com/in/alfaz-mahmud-rizve

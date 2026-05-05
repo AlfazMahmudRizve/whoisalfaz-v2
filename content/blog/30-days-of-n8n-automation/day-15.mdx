@@ -53,7 +53,7 @@ To build this engine, we need three core components: an Orchestrator, a Data Sou
 *(Architect's Note: Because this workflow relies on a strict daily cron schedule, you cannot execute it reliably on a sleeping local machine. I strongly recommend hosting this on a dedicated **[Vultr VPS](https://www.vultr.com/?ref=9859101-9J)** or an active **[n8n Cloud](https://n8n.partnerlinks.io/ch585gsqzanp)** instance).*
 
 1. **The Data Source (NewsAPI):** We need an API that searches the entire web programmatically. For this blueprint, we will use `NewsAPI.org` because it provides a highly accessible JSON REST API that searches over 150,000 news sources and blogs. You must generate a free API key from their developer dashboard before proceeding.
-2. **The Database (Google Sheets):** We are not just dumping raw links into a Slack channel; we are building a structured content ledger. Ensure you have the [Google Sheets credentials we established in Day 8](/blog/capture-n8n-lead-data) active.
+2. **The Database (Google Sheets):** We are not just dumping raw links into a Slack channel; we are building a structured content ledger. Ensure you have the [Google Sheets credentials we established in Day 8](/blog/capture-n8n-lead-data-from-wordpress-elementor/) active.
 3. **The Intelligence Layer (OpenAI or Gemini):** We will use an LLM node to analyze the raw news articles and extract bespoke writing outlines. Have your OpenAI or Gemini API key securely stored in n8n's credential vault.
 
 ---

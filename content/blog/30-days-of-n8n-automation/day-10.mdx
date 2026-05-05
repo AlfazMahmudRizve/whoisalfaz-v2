@@ -53,7 +53,7 @@ We start by catching the data and immediately evaluating its worth.
 
 ![n8n Webhook and Filter Node Configuration](/images/blog/n8n-slack-notifications-by-alfaz-mahmud-rizve-Generated-Image-December-29-2025-4_13PM.webp)
 
-- **The Webhook:** As built in **[Day 8](/blog/capture-n8n-lead-data-from-wordpress-elementor/-from-wordpress-elementor/)**, your workflow begins with a **Webhook node** catching the JSON payload from your Elementor form or landing page.
+- **The Webhook:** As built in **[Day 8](/blog/capture-n8n-lead-data-from-wordpress-elementor/)**, your workflow begins with a **Webhook node** catching the JSON payload from your Elementor form or landing page.
 - **The Filter Node:** Attach a Filter node directly to the Webhook.
   - **Condition:** Add a String condition.
   - **Value 1:** Map this to your form's "Intent" dropdown field `{{ $json.body.intent }}`.
