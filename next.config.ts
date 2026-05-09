@@ -114,6 +114,8 @@ const nextConfig: NextConfig = {
     ];
   },
   async headers() {
+    const isDev = process.env.NODE_ENV === 'development';
+
     const cspHeader = `
         default-src 'self';
         script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://analytics.ahrefs.com https://static.cloudflareinsights.com;
@@ -123,20 +125,29 @@ const nextConfig: NextConfig = {
         connect-src 'self' https://pagespeedonline.googleapis.com https://*.google-analytics.com https://www.google-analytics.com https://*.analytics.google.com https://analytics.ahrefs.com https://cloudflareinsights.com;
         frame-src 'self';
         object-src 'none';
-        upgrade-insecure-requests;
+        ${isDev ? '' : 'upgrade-insecure-requests;'}
     `.replace(/\s{2,}/g, ' ').trim();
+
+    const securityHeaders = [
+      { key: 'Content-Security-Policy', value: cspHeader },
+      { key: 'X-Content-Type-Options', value: 'nosniff' },
+      { key: 'X-Frame-Options', value: 'SAMEORIGIN' },
+      { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
+      { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' },
+    ];
+
+    // HSTS should only be sent in production — it forces HTTPS which breaks localhost
+    if (!isDev) {
+      securityHeaders.push({
+        key: 'Strict-Transport-Security',
+        value: 'max-age=63072000; includeSubDomains; preload',
+      });
+    }
 
     return [
       {
         source: '/(.*)',
-        headers: [
-          { key: 'Content-Security-Policy', value: cspHeader },
-          { key: 'Strict-Transport-Security', value: 'max-age=63072000; includeSubDomains; preload' },
-          { key: 'X-Content-Type-Options', value: 'nosniff' },
-          { key: 'X-Frame-Options', value: 'SAMEORIGIN' },
-          { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
-          { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' },
-        ],
+        headers: securityHeaders,
       },
     ];
   },
