@@ -353,12 +353,6 @@ export default async function Post({ params }) {
             </ul>
           </div>
 
-          {/* TABLE OF CONTENTS (Desktop Sidebar) */}
-          <div className="bg-white dark:bg-transparent p-6 rounded-[2rem] border border-slate-200 dark:border-transparent shadow-sm dark:shadow-none">
-            <h4 className="text-lg font-black text-slate-900 dark:text-white uppercase tracking-tight mb-8">In This Article</h4>
-            <TableOfContents />
-          </div>
-
           {/* CATEGORIES */}
           <div className="bg-white dark:bg-transparent p-6 rounded-[2rem] border border-slate-200 dark:border-transparent shadow-sm dark:shadow-none">
             <h4 className="text-lg font-black text-slate-900 dark:text-white uppercase tracking-tight mb-8">Categories</h4>
