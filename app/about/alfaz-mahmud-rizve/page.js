@@ -137,6 +137,26 @@ export default function AboutAuthorPage() {
 
         </section>
 
+        {/* Case Studies */}
+        <section className="mb-12">
+          <h3 className="text-xl font-black text-slate-900 dark:text-white uppercase tracking-tight mb-6">Featured Case Studies</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <Link href="/blog/cashops-financial-dashboard" className="group bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-2xl p-6 hover:border-teal-500/50 hover:-translate-y-1 transition-all">
+              <span className="text-[10px] font-black uppercase tracking-widest text-teal-600 dark:text-teal-400 mb-2 block">Custom Full-Stack</span>
+              <h4 className="text-slate-900 dark:text-white font-bold group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors mb-2">CashOps Financial Dashboard</h4>
+              <p className="text-slate-500 dark:text-slate-400 text-sm">Automated financial reporting pipeline eliminating 15+ hours of manual work weekly.</p>
+            </Link>
+            <Link href="/blog/veloryc-premium-ecommerce" className="group bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-2xl p-6 hover:border-rose-500/50 hover:-translate-y-1 transition-all">
+              <span className="text-[10px] font-black uppercase tracking-widest text-rose-600 dark:text-rose-400 mb-2 block">Conversion Optimization</span>
+              <h4 className="text-slate-900 dark:text-white font-bold group-hover:text-rose-600 dark:group-hover:text-rose-400 transition-colors mb-2">Veloryc Premium Ecommerce</h4>
+              <p className="text-slate-500 dark:text-slate-400 text-sm">Guest checkout flow that increased conversion by 40%.</p>
+            </Link>
+          </div>
+          <Link href="/case-studies" className="inline-flex items-center gap-2 text-teal-600 dark:text-teal-400 font-bold text-sm mt-4 hover:underline">
+            View all case studies →
+          </Link>
+        </section>
+
       </main>
     </div>
   );

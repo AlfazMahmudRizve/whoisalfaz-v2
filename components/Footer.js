@@ -1,4 +1,3 @@
-
 import Link from 'next/link';
 
 export default function Footer() {
@@ -51,6 +50,17 @@ export default function Footer() {
                             <li><Link href="/blog/outstanding-ideas-for-b2b-lead-generation/" className="hover:text-teal-600 dark:hover:text-blue-400 transition-colors">B2B Lead Generation</Link></li>
                             <li><Link href="/blog/outstanding-ideas-for-saas-mvps/" className="hover:text-teal-600 dark:hover:text-blue-400 transition-colors">SaaS MVP Ideas</Link></li>
                             <li><Link href="/blog/" className="hover:text-teal-600 dark:hover:text-blue-400 transition-colors">View All Guides →</Link></li>
+                        </ul>
+                    </div>
+
+                    {/* Case Studies Column */}
+                    <div>
+                        <h4 className="text-slate-900 dark:text-white font-bold mb-4 transition-colors duration-300">Case Studies</h4>
+                        <ul className="space-y-2 text-sm text-slate-500 dark:text-slate-400">
+                            <li><Link href="/case-studies/" className="hover:text-teal-600 dark:hover:text-blue-400 transition-colors">All Case Studies</Link></li>
+                            <li><Link href="/blog/case-study-cashops-financial-dashboard/" className="hover:text-teal-600 dark:hover:text-blue-400 transition-colors">CashOps Dashboard</Link></li>
+                            <li><Link href="/blog/case-study-urban-cafe-foodtech-platform/" className="hover:text-teal-600 dark:hover:text-blue-400 transition-colors">Urban Cafe OS</Link></li>
+                            <li><Link href="/blog/case-study-veloryc-premium-ecommerce/" className="hover:text-teal-600 dark:hover:text-blue-400 transition-colors">Veloryc Commerce</Link></li>
                         </ul>
                     </div>
 

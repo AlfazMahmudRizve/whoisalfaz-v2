@@ -46,3 +46,6 @@ next-env.d.ts
 temp_*
 build_log*
 scripts/fix-*
+
+# puku embeddings
+.puku/
