@@ -7,6 +7,7 @@ import { ArrowRight, Zap, Code2, Globe, Mail } from 'lucide-react';
 import NewsletterForm from '../components/NewsletterForm';
 import PartnerLogos from '../components/PartnerLogos';
 import HomeContentFooter from '../components/footers/HomeContentFooter';
+import { FadeUp, FadeIn, StaggerContainer, StaggerItem } from '@/components/MotionWrappers';
 
 export default async function Home() {
   const posts = await getAllPosts();
@@ -107,7 +108,7 @@ export default async function Home() {
 
       {/* SECTION 0: HERO */}
       <section className="relative pt-10 pb-10 px-6 overflow-hidden">
-        <div className="max-w-7xl mx-auto flex flex-col items-center text-center relative z-10 animate-in fade-in slide-in-from-bottom-12 zoom-in-[0.98] duration-1000 ease-out fill-mode-both">
+        <FadeUp className="max-w-7xl mx-auto flex flex-col items-center text-center relative z-10">
           
           <div className="inline-block px-4 py-1.5 bg-white/60 dark:bg-white/5 backdrop-blur-sm border border-slate-200 dark:border-white/10 rounded-full text-xs font-bold text-teal-700 dark:text-teal-300 mb-8 shadow-sm">
             AUTONOMOUS REVENUE SYSTEMS
@@ -143,7 +144,7 @@ export default async function Home() {
               </div>
             ))}
           </div>
-        </div>
+        </FadeUp>
       </section>
 
       {/* Partner Divider */}
@@ -157,17 +158,17 @@ export default async function Home() {
       <section className="py-16 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row gap-12 md:gap-20 items-center">
-            <div className="flex-1 animate-in fade-in slide-in-from-left-12 duration-1000 ease-out fill-mode-both">
+            <FadeUp className="flex-1">
               <h2 className="text-3xl md:text-4xl font-black text-slate-900 dark:text-white mb-6 leading-[1.1] uppercase tracking-tight transition-colors duration-300">
                 Revenue Operations <br /> <span className="text-teal-600 dark:text-teal-400">Architects</span>
               </h2>
-              <div className="space-y-6">
+              <StaggerContainer className="space-y-6">
                 {[
                   { icon: Zap, title: "Autonomous Workflows", desc: "Self-healing AI agents that instantly qualify leads, sync your CRM, and scale your pipeline." },
                   { icon: Code2, title: "Full-Stack Applications", desc: "Bespoke agency portals and client dashboards engineered for massive scale." },
                   { icon: Globe, title: "Headless Infrastructure", desc: "The high-performance Next.js foundation that powers your entire revenue engine." }
                 ].map((item, i) => (
-                  <div key={i} className="flex gap-5 group">
+                  <StaggerItem key={i} className="flex gap-5 group">
                     <div className="w-12 h-12 rounded-2xl bg-slate-50 dark:bg-white/5 border border-slate-100 dark:border-white/10 flex items-center justify-center shrink-0 group-hover:scale-110 group-hover:rotate-3 transition-transform">
                       <item.icon className="text-slate-900 dark:text-white" size={22} />
                     </div>
@@ -175,12 +176,12 @@ export default async function Home() {
                       <h4 className="text-lg font-bold text-slate-800 dark:text-slate-200 mb-1 transition-colors duration-300">{item.title}</h4>
                       <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed max-w-sm transition-colors duration-300">{item.desc}</p>
                     </div>
-                  </div>
+                  </StaggerItem>
                 ))}
-              </div>
-            </div>
+              </StaggerContainer>
+            </FadeUp>
 
-            <div className="flex-1 relative animate-in fade-in slide-in-from-right-12 duration-1000 ease-out fill-mode-both">
+            <FadeUp delay={0.2} className="flex-1 relative">
               <div className="relative z-10 bg-white dark:bg-white/5 rounded-[2rem] p-6 shadow-2xl dark:shadow-2xl-dark border border-slate-200 dark:border-white/10 overflow-hidden group transition-colors duration-300">
                 <div className="aspect-[4/3] bg-slate-50 dark:bg-[#0a0a0a]/50 rounded-[2rem] relative overflow-hidden flex items-center justify-center p-8 transition-colors duration-300">
                   <div className="relative w-full h-full">
@@ -201,7 +202,7 @@ export default async function Home() {
                   </div>
                 </div>
               </div>
-            </div>
+            </FadeUp>
           </div>
         </div>
       </section>

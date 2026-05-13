@@ -74,6 +74,7 @@ import dynamic from 'next/dynamic';
 
 import LazyChatWidget from "@/components/LazyChatWidget";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import { AnimationProvider } from "@/components/AnimationProvider";
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const jsonLd = [
@@ -132,20 +133,22 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         suppressHydrationWarning
       >
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-          />
-          {/* The Navbar sits above everything */}
-          <Navbar />
+          <AnimationProvider>
+            <script
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
+            {/* The Navbar sits above everything */}
+            <Navbar />
 
-          {/* Page Content */}
-          <main className="flex-grow pt-20">
-            {children}
-          </main>
+            {/* Page Content */}
+            <main className="flex-grow pt-20">
+              {children}
+            </main>
 
-          <Footer />
-          <LazyChatWidget />
+            <Footer />
+            <LazyChatWidget />
+          </AnimationProvider>
         </ThemeProvider>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-B07D59MGJ8"

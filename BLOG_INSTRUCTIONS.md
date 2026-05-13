@@ -39,6 +39,7 @@ Intelligently embed affiliate links within the narrative for all tools listed in
 
 Example Affiliate Links:
 - **ManyChat**: `https://manychat.partnerlinks.io/jugrrxxzawym`
+- **ManyChatIGSummit**: `https://manychat.partnerlinks.io/jugrrxxzawym`
 - **n8n**: `https://n8n.partnerlinks.io/ch585gsqzanp`
 - **Vultr**: `https://www.vultr.com/?ref=9859101-9J`
 - **Apollo**: `https://get.apollo.io/bs1ny1i5eigv`

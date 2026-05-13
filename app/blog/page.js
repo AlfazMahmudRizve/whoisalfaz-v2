@@ -7,6 +7,7 @@ import { Search, ChevronRight, BookOpen, Clock, ArrowRight } from 'lucide-react'
 
 import SearchWidget from '../../components/SearchWidget';
 import DefaultContentFooter from '../../components/footers/DefaultContentFooter';
+import { FadeUp, StaggerContainer, StaggerItem } from '@/components/MotionWrappers';
 
 export const metadata = {
     title: "Blog | AI Automation, Next.js & RevOps Insights",
@@ -65,7 +66,7 @@ export default async function BlogPage() {
                 {/* === LEFT COLUMN: MAIN CONTENT === */}
                 <div>
                     {/* HERO SECTION */}
-                    <section className="mb-20 text-center lg:text-left animate-in fade-in slide-in-from-bottom-12 zoom-in-[0.98] duration-1000 ease-out fill-mode-both">
+                    <FadeUp className="mb-20 text-center lg:text-left">
                         <h1 className="text-4xl md:text-5xl font-black text-slate-900 dark:text-white mb-6 leading-tight uppercase tracking-tight">
                             AI automation, Next.js, SEO and <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-emerald-500 dark:from-blue-400 dark:to-purple-400">growth for SaaS and agencies</span>
                         </h1>
@@ -93,10 +94,10 @@ export default async function BlogPage() {
                             {/* Glow Effect */}
                             <div className="absolute top-0 right-0 w-64 h-64 bg-teal-500/10 dark:bg-blue-500/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
                         </div>
-                    </section>
+                    </FadeUp>
 
                     {/* TOPICS / CATEGORIES */}
-                    <section className="mb-20 animate-in fade-in slide-in-from-bottom-12 zoom-in-[0.98] duration-1000 ease-out fill-mode-both delay-150">
+                    <FadeUp delay={0.15} className="mb-20">
                         <h3 className="text-2xl font-black text-slate-900 dark:text-white mb-8 border-b border-slate-200 dark:border-white/10 pb-4 uppercase tracking-tight">Topics</h3>
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
                             {categories?.map((cat, i) => (
@@ -110,67 +111,69 @@ export default async function BlogPage() {
                             ))}
                             {!categories && <div className="text-slate-500 text-sm font-medium animate-pulse">Loading topics...</div>}
                         </div>
-                    </section>
+                    </FadeUp>
 
                     {/* BLOG ARCHIVE */}
-                    <section className="animate-in fade-in slide-in-from-bottom-12 zoom-in-[0.98] duration-1000 ease-out fill-mode-both delay-300">
+                    <FadeUp delay={0.3} className="mb-20">
                         <div className="text-center md:text-left mb-12 border-b border-slate-200 dark:border-white/10 pb-4">
                             <h3 className="text-2xl font-black text-slate-900 dark:text-white inline-block uppercase tracking-tight">Blog Archive</h3>
                         </div>
 
-                        <div className="grid md:grid-cols-2 gap-8">
+                        <StaggerContainer className="grid md:grid-cols-2 gap-8">
                             {posts?.map((post, i) => (
-                                <Link key={post.slug} href={`/blog/${post.slug}/`} style={{ animationDelay: `${(i % 5) * 150}ms` }} className={`group h-full animate-in fade-in slide-in-from-bottom-12 zoom-in-[0.98] duration-1000 ease-out fill-mode-both`}>
-                                    <article className="h-full bg-white dark:bg-[#0a0a0a] border border-slate-200 dark:border-white/10 rounded-[2rem] overflow-hidden hover:border-teal-400/50 dark:hover:border-blue-500/50 transition-all duration-500 hover:-translate-y-2 shadow-xl dark:shadow-sm flex flex-col">
-                                        
-                                        {/* TOP IMAGE AREA WITH PILLS */}
-                                        <div className="h-64 bg-slate-100 dark:bg-slate-800 relative overflow-hidden p-6 flex flex-col justify-start">
-                                            {post.image ? (
-                                                <Image src={post.image} alt={post.title} fill className="object-cover group-hover:scale-105 transition-transform duration-1000" />
-                                            ) : (
-                                                <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-teal-500/20" />
-                                            )}
-                                            <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                                <StaggerItem key={post.slug} className="h-full">
+                                    <Link href={`/blog/${post.slug}/`} className="group block h-full">
+                                        <article className="h-full bg-white dark:bg-[#0a0a0a] border border-slate-200 dark:border-white/10 rounded-[2rem] overflow-hidden hover:border-teal-400/50 dark:hover:border-blue-500/50 transition-all duration-500 hover:-translate-y-2 shadow-xl dark:shadow-sm flex flex-col">
                                             
-                                            {/* Pills overlay */}
-                                            <div className="relative z-10 flex flex-wrap gap-2">
-                                                {/* Date Pill */}
-                                                <span className="px-3 py-1 bg-white/90 dark:bg-black/70 backdrop-blur-md border border-white/20 dark:border-white/10 rounded-full text-[10px] text-slate-900 dark:text-white font-black uppercase tracking-widest flex items-center gap-1.5 shadow-sm">
-                                                    <Clock size={12} />
-                                                    {new Date(post.date).toLocaleDateString()}
-                                                </span>
-                                                {/* Category Pills */}
-                                                {post.categories && post.categories.length > 0 && post.categories.slice(0, 2).map(cat => (
-                                                    <span key={cat} className="px-3 py-1 bg-white/90 dark:bg-black/70 backdrop-blur-md border border-white/20 dark:border-white/10 rounded-full text-[10px] font-black uppercase tracking-widest text-slate-900 dark:text-white shadow-sm">
-                                                        {cat}
+                                            {/* TOP IMAGE AREA WITH PILLS */}
+                                            <div className="h-64 bg-slate-100 dark:bg-slate-800 relative overflow-hidden p-6 flex flex-col justify-start">
+                                                {post.image ? (
+                                                    <Image src={post.image} alt={post.title} fill className="object-cover group-hover:scale-105 transition-transform duration-1000" />
+                                                ) : (
+                                                    <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-teal-500/20" />
+                                                )}
+                                                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                                                
+                                                {/* Pills overlay */}
+                                                <div className="relative z-10 flex flex-wrap gap-2">
+                                                    {/* Date Pill */}
+                                                    <span className="px-3 py-1 bg-white/90 dark:bg-black/70 backdrop-blur-md border border-white/20 dark:border-white/10 rounded-full text-[10px] text-slate-900 dark:text-white font-black uppercase tracking-widest flex items-center gap-1.5 shadow-sm">
+                                                        <Clock size={12} />
+                                                        {new Date(post.date).toLocaleDateString()}
                                                     </span>
-                                                ))}
+                                                    {/* Category Pills */}
+                                                    {post.categories && post.categories.length > 0 && post.categories.slice(0, 2).map(cat => (
+                                                        <span key={cat} className="px-3 py-1 bg-white/90 dark:bg-black/70 backdrop-blur-md border border-white/20 dark:border-white/10 rounded-full text-[10px] font-black uppercase tracking-widest text-slate-900 dark:text-white shadow-sm">
+                                                            {cat}
+                                                        </span>
+                                                    ))}
+                                                </div>
                                             </div>
-                                        </div>
 
-                                        {/* BOTTOM CONTENT AREA */}
-                                        <div className="p-8 flex flex-col flex-grow relative bg-white dark:bg-[#0a0a0a]">
-                                            <h3 className="text-slate-900 dark:text-white font-black text-2xl mb-4 group-hover:text-teal-600 dark:group-hover:text-blue-400 transition-colors uppercase italic tracking-tighter leading-[1.1] text-balance">
-                                                {post.title}
-                                            </h3>
-                                            <p className="text-slate-500 dark:text-slate-400 text-[15px] font-medium line-clamp-3 leading-relaxed mb-8 flex-grow">
-                                                {post.description}
-                                            </p>
-                                            <div className="text-[11px] font-black text-slate-900 dark:text-white uppercase tracking-widest flex justify-end items-center w-full group-hover:text-teal-600 dark:group-hover:text-blue-400 transition-colors gap-1.5">
-                                                <span>DETAILS</span>
-                                                <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+                                            {/* BOTTOM CONTENT AREA */}
+                                            <div className="p-8 flex flex-col flex-grow relative bg-white dark:bg-[#0a0a0a]">
+                                                <h3 className="text-slate-900 dark:text-white font-black text-2xl mb-4 group-hover:text-teal-600 dark:group-hover:text-blue-400 transition-colors uppercase italic tracking-tighter leading-[1.1] text-balance">
+                                                    {post.title}
+                                                </h3>
+                                                <p className="text-slate-500 dark:text-slate-400 text-[15px] font-medium line-clamp-3 leading-relaxed mb-8 flex-grow">
+                                                    {post.description}
+                                                </p>
+                                                <div className="text-[11px] font-black text-slate-900 dark:text-white uppercase tracking-widest flex justify-end items-center w-full group-hover:text-teal-600 dark:group-hover:text-blue-400 transition-colors gap-1.5">
+                                                    <span>DETAILS</span>
+                                                    <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+                                                </div>
                                             </div>
-                                        </div>
-                                    </article>
-                                </Link>
+                                        </article>
+                                    </Link>
+                                </StaggerItem>
                             ))}
-                        </div>
-                    </section>
+                        </StaggerContainer>
+                    </FadeUp>
                 </div>
 
                 {/* === RIGHT COLUMN: SIDEBAR === */}
                 <div className="hidden lg:block sticky top-32 h-[calc(100vh-8rem)] min-w-[350px]">
-                    <aside className="h-full overflow-y-auto pb-8 space-y-12 scrollbar-none animate-in fade-in slide-in-from-right-8 duration-1000 delay-500">
+                    <FadeUp delay={0.4} className="h-full overflow-y-auto pb-8 space-y-12 scrollbar-none">
 
                     {/* SEARCH */}
                     <Suspense fallback={<div className="h-12 bg-white dark:bg-white/5 rounded-xl animate-pulse border border-slate-200 dark:border-transparent" />}>
@@ -180,18 +183,18 @@ export default async function BlogPage() {
                     {/* RECENT POSTS */}
                     <div className="bg-white dark:bg-transparent p-6 rounded-[2rem] border border-slate-200 dark:border-transparent shadow-sm dark:shadow-none">
                         <h4 className="text-xl font-black text-slate-900 dark:text-white mb-6 uppercase tracking-tight">Recent Posts</h4>
-                        <ul className="space-y-6">
+                        <StaggerContainer className="space-y-6">
                             {recentPosts?.map((post, i) => (
-                                <li key={post.slug} style={{ animationDelay: `${i * 100}ms` }} className="animate-in fade-in slide-in-from-right-4 duration-500 fill-mode-both">
+                                <StaggerItem key={post.slug} className="block">
                                     <Link href={`/blog/${post.slug}/`} className="group block">
                                         <h5 className="text-slate-800 dark:text-slate-300 text-[15px] font-bold group-hover:text-teal-600 dark:group-hover:text-blue-400 transition-colors line-clamp-2 mb-2 leading-snug">
                                             {post.title}
                                         </h5>
                                         <span className="text-[10px] uppercase font-black tracking-widest text-slate-400 dark:text-slate-600 block">{new Date(post.date).toLocaleDateString()}</span>
                                     </Link>
-                                </li>
+                                </StaggerItem>
                             ))}
-                        </ul>
+                        </StaggerContainer>
                     </div>
 
 
@@ -220,7 +223,7 @@ export default async function BlogPage() {
                         </ul>
                     </div>
 
-                    </aside>
+                    </FadeUp>
                 </div>
 
             </div>

@@ -4,12 +4,15 @@ import Image from 'next/image';
 import { Menu, X, Search, Sun, Moon } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { useTheme } from 'next-themes';
+import { usePathname } from 'next/navigation';
+import { m, AnimatePresence } from 'framer-motion';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     setMounted(true);
@@ -38,20 +41,26 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-6 text-sm font-medium text-slate-600 dark:text-slate-400">
-          {navLinks.map((link) => (
-            <Link
-              key={link.name}
-              href={link.href}
-              className={
-                (link as any).highlight
-                  ? 'px-3 py-1 bg-teal-500/10 text-teal-600 dark:text-teal-400 border border-teal-500/20 rounded-full text-xs font-bold uppercase tracking-wider hover:bg-teal-500/20 transition-all'
-                  : 'hover:text-teal-600 dark:hover:text-white transition-colors duration-200'
-              }
-            >
-              {link.name}
-            </Link>
-          ))}
+        <div className="hidden md:flex items-center gap-2 text-sm font-medium text-slate-600 dark:text-slate-400">
+          {navLinks.map((link) => {
+            const isActive = pathname === link.href || (pathname?.startsWith(link.href) && link.href !== '/');
+            return (
+              <Link
+                key={link.name}
+                href={link.href}
+                className="relative px-3 py-1.5 rounded-full hover:text-teal-600 dark:hover:text-white transition-colors duration-200"
+              >
+                {isActive && (
+                  <m.span
+                    layoutId="navbar-active"
+                    className="absolute inset-0 bg-slate-100 dark:bg-white/10 rounded-full"
+                    transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                  />
+                )}
+                <span className="relative z-10">{link.name}</span>
+              </Link>
+            );
+          })}
 
           {/* Search Icon Toggle */}
           <button
@@ -113,89 +122,109 @@ export default function Navbar() {
       </div>
 
       {/* Floating Search Bar (Desktop) */}
-      {isSearchOpen && (
-        <div className="absolute top-20 w-full max-w-md px-4 hidden md:block animate-in fade-in slide-in-from-top-2 duration-200">
-          <div className="bg-white dark:bg-[#0a0a0a] border border-slate-200 dark:border-white/10 rounded-xl p-2 shadow-2xl flex items-center gap-2">
-            <Search size={16} className="text-slate-500 ml-2" />
-            <form
-              className="flex-1"
-              onSubmit={(e: React.FormEvent<HTMLFormElement>) => {
-                e.preventDefault();
-                const target = e.currentTarget;
-                const input = target.elements.namedItem('search') as HTMLInputElement;
-                const query = input?.value;
-                if (query) window.location.href = `/search/?q=${encodeURIComponent(query)}`;
-              }}
-            >
-              <input
-                name="search"
-                autoFocus
-                type="text"
-                placeholder="Search articles..."
-                className="w-full bg-transparent border-none focus:ring-0 text-slate-900 dark:text-white text-sm placeholder:text-slate-400 dark:placeholder:text-slate-600 h-10 outline-none"
-              />
-            </form>
-            <button onClick={() => setIsSearchOpen(false)} className="p-2 text-slate-500 hover:text-slate-900 dark:hover:text-white">
-              <X size={14} />
-            </button>
-          </div>
-        </div>
-      )}
-
-      {/* Mobile Menu Backdrop & Dropdown */}
-      {isOpen && (
-        <>
-          {/* Backdrop to close menu when clicking outside */}
-          <div
-            className="fixed inset-0 bg-slate-900/60 dark:bg-black/60 backdrop-blur-sm z-40 transition-opacity"
-            onClick={() => setIsOpen(false)}
-          />
-
-          <div className="absolute top-20 w-[calc(100%-2rem)] max-w-sm bg-white dark:bg-[#0a0a0a] border border-slate-200 dark:border-white/10 rounded-2xl p-2 space-y-1 shadow-2xl z-50 transform transition-all duration-200 ease-out">
-            {/* Mobile Search Input */}
-            <div className="px-2 pt-2 mb-2">
+      <AnimatePresence>
+        {isSearchOpen && (
+          <m.div
+            initial={{ opacity: 0, y: -10, scale: 0.95 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: -10, scale: 0.95 }}
+            transition={{ duration: 0.2, ease: "easeOut" }}
+            className="absolute top-20 w-full max-w-md px-4 hidden md:block"
+          >
+            <div className="bg-white dark:bg-[#0a0a0a] border border-slate-200 dark:border-white/10 rounded-xl p-2 shadow-2xl flex items-center gap-2">
+              <Search size={16} className="text-slate-500 ml-2" />
               <form
-                className="relative"
+                className="flex-1"
                 onSubmit={(e: React.FormEvent<HTMLFormElement>) => {
                   e.preventDefault();
                   const target = e.currentTarget;
-                  const input = target.elements.namedItem('searchMobile') as HTMLInputElement;
+                  const input = target.elements.namedItem('search') as HTMLInputElement;
                   const query = input?.value;
                   if (query) window.location.href = `/search/?q=${encodeURIComponent(query)}`;
                 }}
               >
-                <Search size={14} className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500" />
                 <input
-                  name="searchMobile"
+                  name="search"
+                  autoFocus
                   type="text"
-                  placeholder="Search..."
-                  className="w-full bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-lg py-2 pl-9 pr-3 text-sm text-slate-900 dark:text-white focus:outline-none focus:border-teal-500 transition-colors"
+                  placeholder="Search articles..."
+                  className="w-full bg-transparent border-none focus:ring-0 text-slate-900 dark:text-white text-sm placeholder:text-slate-400 dark:placeholder:text-slate-600 h-10 outline-none"
                 />
               </form>
+              <button onClick={() => setIsSearchOpen(false)} className="p-2 text-slate-500 hover:text-slate-900 dark:hover:text-white">
+                <X size={14} />
+              </button>
             </div>
+          </m.div>
+        )}
+      </AnimatePresence>
 
-            {navLinks.map((link) => (
+      {/* Mobile Menu Backdrop & Dropdown */}
+      <AnimatePresence>
+        {isOpen && (
+          <>
+            {/* Backdrop to close menu when clicking outside */}
+            <m.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              className="fixed inset-0 bg-slate-900/60 dark:bg-black/60 backdrop-blur-sm z-40"
+              onClick={() => setIsOpen(false)}
+            />
+
+            <m.div 
+              initial={{ opacity: 0, y: -20, scale: 0.95 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: -20, scale: 0.95 }}
+              transition={{ duration: 0.2, ease: "easeOut" }}
+              className="absolute top-20 w-[calc(100%-2rem)] max-w-sm bg-white dark:bg-[#0a0a0a] border border-slate-200 dark:border-white/10 rounded-2xl p-2 space-y-1 shadow-2xl z-50"
+            >
+              {/* Mobile Search Input */}
+              <div className="px-2 pt-2 mb-2">
+                <form
+                  className="relative"
+                  onSubmit={(e: React.FormEvent<HTMLFormElement>) => {
+                    e.preventDefault();
+                    const target = e.currentTarget;
+                    const input = target.elements.namedItem('searchMobile') as HTMLInputElement;
+                    const query = input?.value;
+                    if (query) window.location.href = `/search/?q=${encodeURIComponent(query)}`;
+                  }}
+                >
+                  <Search size={14} className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500" />
+                  <input
+                    name="searchMobile"
+                    type="text"
+                    placeholder="Search..."
+                    className="w-full bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-lg py-2 pl-9 pr-3 text-sm text-slate-900 dark:text-white focus:outline-none focus:border-teal-500 transition-colors"
+                  />
+                </form>
+              </div>
+
+              {navLinks.map((link) => (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  className="block px-4 py-3 rounded-xl text-slate-600 dark:text-slate-400 font-medium hover:text-teal-600 dark:hover:text-white hover:bg-slate-50 dark:hover:bg-white/10 transition-all active:scale-95 flex items-center justify-between group"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {link.name}
+                  <span className="opacity-0 group-hover:opacity-100 text-teal-500 transition-opacity">→</span>
+                </Link>
+              ))}
+              <div className="h-px bg-slate-200 dark:bg-white/10 my-2 mx-2"></div>
               <Link
-                key={link.name}
-                href={link.href}
-                className="block px-4 py-3 rounded-xl text-slate-600 dark:text-slate-400 font-medium hover:text-teal-600 dark:hover:text-white hover:bg-slate-50 dark:hover:bg-white/10 transition-all active:scale-95 flex items-center justify-between group"
+                href="/contact/"
+                className="block px-4 py-3 text-center bg-slate-900 dark:bg-white text-white dark:text-black font-bold rounded-xl hover:bg-slate-800 dark:hover:bg-slate-200 transition-colors mx-2 mb-2"
                 onClick={() => setIsOpen(false)}
               >
-                {link.name}
-                <span className="opacity-0 group-hover:opacity-100 text-teal-500 transition-opacity">→</span>
+                Work With Me
               </Link>
-            ))}
-            <div className="h-px bg-slate-200 dark:bg-white/10 my-2 mx-2"></div>
-            <Link
-              href="/contact/"
-              className="block px-4 py-3 text-center bg-slate-900 dark:bg-white text-white dark:text-black font-bold rounded-xl hover:bg-slate-800 dark:hover:bg-slate-200 transition-colors mx-2 mb-2"
-              onClick={() => setIsOpen(false)}
-            >
-              Work With Me
-            </Link>
-          </div>
-        </>
-      )}
+            </m.div>
+          </>
+        )}
+      </AnimatePresence>
     </nav>
   );
 }
