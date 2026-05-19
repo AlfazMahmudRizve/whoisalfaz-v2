@@ -45,8 +45,34 @@ const nextConfig: NextConfig = {
       // But a better approach to not break valid root pages is to hardcode the known legacy slugs or match the old pattern
       // Since WordPress URLs didn't have a specific prefix, we'll try to redirect specific legacy slugs found in GSC
       {
-        source: '/:slug(n8n-global-error-handling|automate-personal-branding-with-n8n|facebook-lead-ads-automation-by-alfaz-mahmud-rizve|automation-operating-system-for-saas|how-to-build-an-api-with-n8n|what-is-n8n-and-how-to-set-it-up|n8n-tips-and-tricks-by-alfaz-mahmud-rizve|build-an-automated-rank-tracker-tool-with-n8n|n8n-data-privacy-security-guide|essential-n8n-core-nodes-by-alfaz-mahmud-rizve|n8n-slack-notifications-by-alfaz-mahmud-rizve|n8n-debugging-error-handling-basics|n8n-automation-service-by-alfaz-mahmud-rizve|lead-scoring-automation-with-alfaz-mahmud-rizve|capture-n8n-lead-data-from-wordpress-elementor|n8n-production-workflows-by-alfaz-mahmud-rizve|n8n-ai-receptionist)',
+        source: '/:slug(n8n-global-error-handling|automate-personal-branding-with-n8n|facebook-lead-ads-automation-by-alfaz-mahmud-rizve|automation-operating-system-for-saas|how-to-build-an-api-with-n8n|what-is-n8n-and-how-to-set-it-up|n8n-tips-and-tricks-by-alfaz-mahmud-rizve|build-an-automated-rank-tracker-tool-with-n8n|n8n-data-privacy-security-guide|essential-n8n-core-nodes-by-alfaz-mahmud-rizve|n8n-slack-notifications-by-alfaz-mahmud-rizve|n8n-debugging-error-handling-basics|n8n-automation-service-by-alfaz-mahmud-rizve|lead-scoring-automation-with-alfaz-mahmud-rizve|capture-n8n-lead-data-from-wordpress-elementor|n8n-production-workflows-by-alfaz-mahmud-rizve|n8n-ai-receptionist|free-n8n-practical-guide|ai-automation-for-saas-agencies-blog|ai-automation-services-for-saas-agencies|professional-n8n-automation-services|n8n-workflow-design-best-practices|what-is-n8n-by-alfaz-mahmud-rizve|lead-enrichment-with-n8n|outstanding-ideas-for-youtube-shorts|outstanding-ideas-for-b2b-lead-generation|outstanding-ideas-for-saas-mvps|advanced-n8n-automation-the-ultimate-2025-seo-integration-masterclass|automated-content-research-by-alfaz-mahmud-rizve|automated-email-follow-up-n8n-brevo|n8n-google-analytics-4-pipeline)',
         destination: '/blog/:slug',
+        permanent: true,
+      },
+      // 5b. Redirect old static pages
+      {
+        source: '/terms-and-conditions',
+        destination: '/terms',
+        permanent: true,
+      },
+      {
+        source: '/termsandconditions',
+        destination: '/terms',
+        permanent: true,
+      },
+      {
+        source: '/contact-alfaz-mahmud-rizve',
+        destination: '/contact',
+        permanent: true,
+      },
+      {
+        source: '/about',
+        destination: '/portfolio',
+        permanent: true,
+      },
+      {
+        source: '/about-me',
+        destination: '/portfolio',
         permanent: true,
       },
       // 6. Redirect legacy /category/ root path to /blog/category/
@@ -59,6 +85,17 @@ const nextConfig: NextConfig = {
       {
         source: '/blog/category/30-days-of-n8n--automation/',
         destination: '/blog/category/30-days-of-n8n-automation/',
+        permanent: true,
+      },
+      // 6c. Strip /feed/ from any path
+      {
+        source: '/:path*/feed',
+        destination: '/:path*',
+        permanent: true,
+      },
+      {
+        source: '/feed',
+        destination: '/',
         permanent: true,
       },
       // 7. Affiliate Link Cloaking

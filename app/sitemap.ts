@@ -45,7 +45,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
     // 4. Dynamic Blog Categories
     const categories = await getSanityCategories();
-    const categoryRoutes = categories.map((cat: any) => ({
+    const validCategories = categories.filter((cat: any) => cat.count > 0);
+    const categoryRoutes = validCategories.map((cat: any) => ({
         url: `${baseUrl}/blog/category/${cat.slug.current}/`,
         lastModified: new Date(),
         changeFrequency: 'weekly' as const,

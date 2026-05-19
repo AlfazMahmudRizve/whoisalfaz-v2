@@ -214,7 +214,7 @@ export default async function BlogPage() {
                         <ul className="space-y-3">
                             {categories?.map(cat => (
                                 <li key={cat.slug}>
-                                    <Link href={`/blog/category/${cat.slug}/`} className="text-[14px] font-bold text-slate-600 dark:text-slate-400 hover:text-teal-600 dark:hover:text-blue-400 flex items-center justify-between py-2 border-b border-slate-100 dark:border-white/5 group transition-colors">
+                                    <Link href={`/blog/category/${cat.slug.current}/`} className="text-[14px] font-bold text-slate-600 dark:text-slate-400 hover:text-teal-600 dark:hover:text-blue-400 flex items-center justify-between py-2 border-b border-slate-100 dark:border-white/5 group transition-colors">
                                         <span>{cat.name}</span>
                                         <span className="opacity-0 group-hover:opacity-100 transition-opacity"><ChevronRight size={14} /></span>
                                     </Link>
