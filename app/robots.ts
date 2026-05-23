@@ -5,7 +5,15 @@ export default function robots(): MetadataRoute.Robots {
         rules: {
             userAgent: '*',
             allow: '/',
-            disallow: '/private/',
+            disallow: [
+                '/private/',
+                '/go/',
+                '/_next/static/',
+                '/wp-admin/',
+                '/rest/',
+                '*/feed/',
+                '*feed*',
+            ],
         },
         sitemap: 'https://whoisalfaz.me/sitemap.xml',
     }
