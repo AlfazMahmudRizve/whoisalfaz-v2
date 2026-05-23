@@ -110,7 +110,7 @@ export default async function Post({ params }) {
               "jobTitle": "RevOps Architect & Full Stack Automation Engineer",
               "image": "https://whoisalfaz.me/profile.jpg",
               "sameAs": [
-                "https://www.linkedin.com/in/alfazmahmudrizve/",
+                "https://linkedin.com/in/alfaz-mahmud-rizve",
                 "https://x.com/whoisalfaz"
               ]
             },
@@ -377,7 +377,7 @@ export default async function Post({ params }) {
         <div className="p-1.5 rounded-[3rem] bg-gradient-to-br from-teal-400 via-emerald-500 to-teal-600 dark:from-teal-500 dark:via-purple-600 dark:to-pink-500 shadow-2xl">
           <div className="bg-white dark:bg-[#0f172a] rounded-[2.5rem] p-10 md:p-14 text-center">
             <h3 className="text-3xl md:text-4xl font-black text-slate-900 dark:text-white mb-6 uppercase tracking-tight">Ready to <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-emerald-500 dark:from-teal-400 dark:to-emerald-300">automate your agency?</span></h3>
-            <p className="text-slate-600 dark:text-slate-400 font-medium text-lg md:text-xl mb-10 max-w-2xl mx-auto leading-relaxed">Skip the manual grunt work. Let's build a custom system that runs your business on autopilot 24/7.</p>
+            <p className="text-slate-600 dark:text-slate-400 font-medium text-lg md:text-xl mb-10 max-w-2xl mx-auto leading-relaxed">Skip the manual grunt work. Let&apos;s build a custom system that runs your business on autopilot 24/7.</p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Link href="/contact/" className="px-8 py-4 bg-slate-900 dark:bg-white text-white dark:text-black font-black uppercase tracking-widest text-xs rounded-xl shadow-lg dark:shadow-none hover:bg-slate-800 dark:hover:bg-slate-200 transition-all hover:-translate-y-1">
                 Book a Strategy Call

@@ -1,7 +1,6 @@
-import Link from 'next/link';
 import PartnerLogos from '../../components/PartnerLogos';
 import PlacementRequestForm from '../../components/PlacementRequestForm';
-import { ArrowDown, Globe, Link2, ShieldAlert, FileCode, Users, TrendingUp } from 'lucide-react';
+import { ArrowDown, Globe, Link2, ShieldAlert, FileCode } from 'lucide-react';
 
 export const metadata = {
     title: "Sponsorships & B2B Content Placements | whoisalfaz.me",

@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { MapPin, GraduationCap, Briefcase, ArrowRight, ExternalLink, Code2, Cpu, Globe, Database, Layout, BarChart3 } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
 import DefaultContentFooter from '../../components/footers/DefaultContentFooter';
 
 export const metadata = {
@@ -167,7 +167,7 @@ export default function Portfolio() {
                                 </div>
                                 <h3 className="text-2xl font-black text-slate-900 dark:text-white mb-3 uppercase tracking-tight">Urban Harvest Cafe</h3>
                                 <p className="text-slate-500 dark:text-slate-400 text-sm mb-8 leading-relaxed font-medium">
-                                    Modern, artisan food ordering application built for warmth and cravings. Features a seamless serving tray system, real-time kitchen logic, and a "fresh-first" design philosophy.
+                                    Modern, artisan food ordering application built for warmth and cravings. Features a seamless serving tray system, real-time kitchen logic, and a &quot;fresh-first&quot; design philosophy.
                                 </p>
                                 <span className="text-amber-600 dark:text-amber-400 text-xs font-black uppercase tracking-widest border-b border-transparent group-hover:border-amber-600 dark:group-hover:border-amber-400 transition-colors flex items-center gap-2 w-max">
                                     View Experience <ExternalLink size={14} />
@@ -213,7 +213,7 @@ export default function Portfolio() {
                                 </div>
                                 <h3 className="text-2xl font-black text-slate-900 dark:text-white mb-3 uppercase tracking-tight">Spectre</h3>
                                 <p className="text-slate-500 dark:text-slate-400 text-sm mb-8 leading-relaxed font-medium">
-                                    Immersive Commerce Experience. Cinema-quality 3D product disassembly with custom 'Progressive Buffering' for instant TTI and locked 60FPS fluid scroll.
+                                    Immersive Commerce Experience. Cinema-quality 3D product disassembly with custom &apos;Progressive Buffering&apos; for instant TTI and locked 60FPS fluid scroll.
                                 </p>
                                 <span className="text-cyan-600 dark:text-cyan-400 text-xs font-black uppercase tracking-widest border-b border-transparent group-hover:border-cyan-600 dark:group-hover:border-cyan-400 transition-colors flex items-center gap-2 w-max">
                                     View Experience <ExternalLink size={14} />
@@ -313,8 +313,8 @@ export default function Portfolio() {
                 {/* CTA */}
                 <section className="bg-gradient-to-r from-teal-500/10 to-purple-500/10 dark:from-blue-900/20 dark:to-purple-900/20 rounded-[3rem] p-16 text-center border border-slate-200 dark:border-white/10 relative overflow-hidden shadow-2xl dark:shadow-none animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-700 fill-mode-both">
                     <div className="relative z-10">
-                        <h2 className="text-3xl md:text-5xl font-black text-slate-900 dark:text-white mb-6 uppercase tracking-tight max-w-2xl mx-auto leading-tight">Ready to scale your agency's infrastructure?</h2>
-                        <p className="text-slate-600 dark:text-slate-400 font-medium max-w-xl mx-auto mb-10 text-lg">Let's replace your legacy systems with high-speed Headless tech and autonomous workflows.</p>
+                        <h2 className="text-3xl md:text-5xl font-black text-slate-900 dark:text-white mb-6 uppercase tracking-tight max-w-2xl mx-auto leading-tight">Ready to scale your agency&apos;s infrastructure?</h2>
+                        <p className="text-slate-600 dark:text-slate-400 font-medium max-w-xl mx-auto mb-10 text-lg">Let&apos;s replace your legacy systems with high-speed Headless tech and autonomous workflows.</p>
                         <Link href="mailto:contact@whoisalfaz.me" className="inline-block bg-slate-900 text-white dark:bg-white dark:text-black px-10 py-5 rounded-full font-black uppercase tracking-widest text-sm hover:bg-teal-600 dark:hover:bg-slate-200 transition-all shadow-xl hover:-translate-y-1">
                             Get in Touch
                         </Link>

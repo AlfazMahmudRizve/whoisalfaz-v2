@@ -1,6 +1,6 @@
 "use client";
 import React from 'react';
-import { Brain, Lightbulb, AlertTriangle, Info } from 'lucide-react';
+import { Brain, Lightbulb, AlertTriangle } from 'lucide-react';
 
 const CALLOUT_TYPES = {
     "Architect's Note": { icon: Brain, border: 'border-teal-500', bg: 'bg-teal-950/20', iconColor: 'text-teal-400', label: "Architect's Note" },

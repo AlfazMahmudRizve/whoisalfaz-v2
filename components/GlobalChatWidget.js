@@ -59,7 +59,10 @@ export default function GlobalChatWidget() {
                 requestAnimationFrame(() => setIsVisible(true));
             });
         } else {
-            setIsVisible(false);
+            const timer = setTimeout(() => {
+                setIsVisible(false);
+            }, 0);
+            return () => clearTimeout(timer);
         }
     }, [isOpen]);
 

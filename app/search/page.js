@@ -39,7 +39,7 @@ export default async function SearchPage({ searchParams }) {
 
                 {q && (
                     <div className="mb-8 text-slate-500 dark:text-slate-400 text-sm transition-colors duration-300">
-                        Showing results for: <span className="text-slate-900 dark:text-white font-bold transition-colors duration-300">"{q}"</span>
+                        Showing results for: <span className="text-slate-900 dark:text-white font-bold transition-colors duration-300">&quot;{q}&quot;</span>
                     </div>
                 )}
 

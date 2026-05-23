@@ -15,7 +15,10 @@ export default function Navbar() {
   const pathname = usePathname();
 
   useEffect(() => {
-    setMounted(true);
+    const timer = setTimeout(() => {
+      setMounted(true);
+    }, 0);
+    return () => clearTimeout(timer);
   }, []);
 
   const navLinks = [
@@ -88,11 +91,14 @@ export default function Navbar() {
           <Link
             href="/audit/"
             onClick={() => {
-              if (typeof window !== 'undefined' && (window as any).gtag) {
-                (window as any).gtag('event', 'click_free_audit_nav', {
-                  event_category: 'Navigation',
-                  event_label: 'Free Audit Teal Pill'
-                });
+              if (typeof window !== 'undefined') {
+                const globalWindow = window as unknown as Record<string, unknown>;
+                if (typeof globalWindow.gtag === 'function') {
+                  (globalWindow.gtag as (...args: unknown[]) => void)('event', 'click_free_audit_nav', {
+                    event_category: 'Navigation',
+                    event_label: 'Free Audit Teal Pill'
+                  });
+                }
               }
             }}
             className="px-4 py-2 bg-teal-500/10 text-teal-600 dark:text-teal-400 border border-teal-500/20 text-xs font-bold rounded-full hover:bg-teal-500/20 transition-all uppercase tracking-wider"

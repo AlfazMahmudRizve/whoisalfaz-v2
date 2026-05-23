@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function StepList({ children, ...props }) {
+export default function StepList({ children }) {
     const items = React.Children.toArray(children).filter(
         (child) => React.isValidElement(child) && child.type === 'li'
     );

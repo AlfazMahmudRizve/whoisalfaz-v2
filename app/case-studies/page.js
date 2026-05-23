@@ -100,7 +100,7 @@ export default async function CaseStudiesPage() {
                         <div className="relative z-10">
                             <h4 className="text-2xl font-black text-slate-900 dark:text-white mb-4 uppercase tracking-tight">Build This Stack</h4>
                             <p className="text-slate-600 dark:text-slate-400 text-[15px] font-medium mb-8 leading-relaxed">
-                                Want to deploy one of these exact architectures for your agency? Let's map it out.
+                                Want to deploy one of these exact architectures for your agency? Let&apos;s map it out.
                             </p>
                             <Link href="/contact/" className="block text-center w-full py-4 bg-slate-900 dark:bg-white text-white dark:text-black font-black uppercase tracking-widest text-[11px] rounded-xl hover:bg-slate-800 dark:hover:bg-slate-200 transition-colors shadow-lg dark:shadow-none">
                                 Book a Technical Call

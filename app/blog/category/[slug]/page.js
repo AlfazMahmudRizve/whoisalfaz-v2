@@ -4,7 +4,7 @@ import { Suspense } from 'react';
 import { getSanityPostsByCategory, getSanityCategories, getSanityPosts, getSanityCategoryBySlug } from '@/lib/sanity.client';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Search, ChevronRight, BookOpen, Clock, ArrowRight } from 'lucide-react';
+import { ChevronRight, BookOpen, Clock, ArrowRight } from 'lucide-react';
 import SearchWidget from '../../../../components/SearchWidget';
 
 // Helper to get cached posts for sidebar (optional optimization)
@@ -87,7 +87,7 @@ export default async function CategoryPage({ params }) {
                             <span className="text-teal-600 dark:text-blue-500">#</span> {category?.name || slug}
                         </h1>
                         <p className="text-slate-500 dark:text-slate-400 transition-colors duration-300">
-                            Browsing all articles in <span className="text-slate-900 dark:text-white font-medium transition-colors duration-300">"{category?.name || slug}"</span>.
+                            Browsing all articles in <span className="text-slate-900 dark:text-white font-medium transition-colors duration-300">&quot;{category?.name || slug}&quot;</span>.
                         </p>
                     </section>
 
@@ -129,7 +129,7 @@ export default async function CategoryPage({ params }) {
                             <div className="text-center py-20 bg-slate-100 dark:bg-white/5 rounded-2xl border border-slate-200 dark:border-white/10">
                                 <BookOpen size={48} className="mx-auto text-slate-300 dark:text-slate-600 mb-4" />
                                 <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2 transition-colors duration-300">No posts found</h3>
-                                <p className="text-slate-500 dark:text-slate-400">We couldn't find any articles in this category.</p>
+                                <p className="text-slate-500 dark:text-slate-400">We couldn&apos;t find any articles in this category.</p>
                                 <Link href="/blog/" className="inline-block mt-6 px-6 py-2 bg-teal-600 dark:bg-blue-600 text-white rounded-full font-bold text-sm hover:bg-teal-500 dark:hover:bg-blue-500 transition-colors">
                                     Return to Blog
                                 </Link>

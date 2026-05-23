@@ -1,6 +1,6 @@
 
 import Link from 'next/link';
-import { Shield, Lock, Eye, FileText, Mail, ChevronRight } from 'lucide-react';
+import { Shield, Eye, FileText, Mail } from 'lucide-react';
 
 export const metadata = {
     title: "Privacy Policy | Alfaz Mahmud Rizve",
@@ -62,7 +62,7 @@ export default function PrivacyPolicy() {
                     <div className="p-6 rounded-2xl bg-gradient-to-br from-blue-900/20 to-purple-900/20 border border-blue-500/20">
                         <h4 className="text-white font-bold mb-2">Have Questions?</h4>
                         <p className="text-slate-400 text-xs mb-4">
-                            If anything in this policy is unclear, please don't hesitate to reach out.
+                            If anything in this policy is unclear, please don&apos;t hesitate to reach out.
                         </p>
                         <a href="mailto:contact@whoisalfaz.me" className="flex items-center gap-2 text-blue-400 text-sm font-bold hover:underline">
                             <Mail size={16} /> Email Privacy Team
@@ -94,7 +94,7 @@ export default function PrivacyPolicy() {
                     {/* Intro */}
                     <div className="bg-white/5 p-8 rounded-2xl border border-white/10 mb-12">
                         <p className="mt-0">
-                            This Privacy Notice for <strong>Alfaz Mahmud Rizve</strong> (doing business as <strong>whoisalfaz.me</strong>) ("we," "us," or "our"), describes how and why we might access, collect, store, use, and/or share ("process") your personal information when you use our services ("Services").
+                            This Privacy Notice for <strong>Alfaz Mahmud Rizve</strong> (doing business as <strong>whoisalfaz.me</strong>) (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;), describes how and why we might access, collect, store, use, and/or share (&quot;process&quot;) your personal information when you use our services (&quot;Services&quot;).
                         </p>
                         <div className="flex flex-col gap-4 mt-6">
                             <div className="flex items-start gap-3 text-sm text-slate-300">
@@ -169,7 +169,7 @@ export default function PrivacyPolicy() {
                             <div className="p-2 bg-orange-500/20 text-orange-400 rounded-lg h-fit"><Shield className="w-5 h-5" /></div>
                             <div>
                                 <strong className="text-white block mb-1">Safety & Vitals</strong>
-                                <span className="text-sm text-slate-400">To save or protect an individual's vital interest.</span>
+                                <span className="text-sm text-slate-400">To save or protect an individual&apos;s vital interest.</span>
                             </div>
                         </li>
                     </ul>
@@ -223,7 +223,7 @@ export default function PrivacyPolicy() {
                         </div>
                     </div>
                     <p className="mt-4">
-                        <strong>California "Shine The Light":</strong> Residents can request info about personal data shared for direct marketing once a year.
+                        <strong>California &quot;Shine The Light&quot;:</strong> Residents can request info about personal data shared for direct marketing once a year.
                     </p>
 
                     <h2 id="dnt" className="text-2xl scroll-mt-32">Do-Not-Track (DNT)</h2>

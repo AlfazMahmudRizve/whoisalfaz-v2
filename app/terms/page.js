@@ -1,6 +1,6 @@
 
 import Link from 'next/link';
-import { Section, ScrollText, Mail, FileText, ChevronRight, Scale, AlertTriangle } from 'lucide-react';
+import { ScrollText, Mail, FileText, Scale, AlertTriangle } from 'lucide-react';
 
 export const metadata = {
     title: "Terms of Use | Alfaz Mahmud Rizve",
@@ -101,13 +101,13 @@ export default function TermsPage() {
                     <div className="bg-white/5 p-8 rounded-2xl border border-white/10 mb-12">
                         <h3 className="text-white mt-0 mb-4">AGREEMENT TO TERMS</h3>
                         <p className="mt-0">
-                            We are <strong>whoisalfaz.me</strong> ("Company," "we," "us," or "our"), operating in Bangladesh. We operate the website <Link href="https://whoisalfaz.me">https://whoisalfaz.me</Link> (the "Site"), as well as any other related products and services that refer or link to these legal terms (the "Legal Terms") (collectively, the "Services").
+                            We are <strong>whoisalfaz.me</strong> (&quot;Company,&quot; &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;), operating in Bangladesh. We operate the website <Link href="https://whoisalfaz.me">https://whoisalfaz.me</Link> (the &quot;Site&quot;), as well as any other related products and services that refer or link to these legal terms (the &quot;Legal Terms&quot;) (collectively, the &quot;Services&quot;).
                         </p>
                         <p>
                             You can contact us by phone at +8801991210347, email or by mail to Alkaran, Chittagong, Bangladesh, 4000.
                         </p>
                         <p>
-                            These Legal Terms constitute a legally binding agreement made between you, whether personally or on behalf of an entity ("you"), and whoisalfaz.me, concerning your access to and use of the Services. You agree that by accessing the Services, you have read, understood, and agreed to be bound by all of these Legal Terms.
+                            These Legal Terms constitute a legally binding agreement made between you, whether personally or on behalf of an entity (&quot;you&quot;), and whoisalfaz.me, concerning your access to and use of the Services. You agree that by accessing the Services, you have read, understood, and agreed to be bound by all of these Legal Terms.
                         </p>
                         <div className="bg-red-500/10 border border-red-500/20 p-4 rounded-lg flex gap-4 items-start not-prose">
                             <AlertTriangle className="text-red-400 shrink-0 mt-1" size={20} />
@@ -120,12 +120,12 @@ export default function TermsPage() {
 
                     <h2 id="intellectual" className="scroll-mt-32">2. INTELLECTUAL PROPERTY RIGHTS</h2>
                     <h3>Our intellectual property</h3>
-                    <p>We are the owner or the licensee of all intellectual property rights in our Services, including all source code, databases, functionality, software, website designs, audio, video, text, photographs, and graphics in the Services (collectively, the "Content"), as well as the trademarks, service marks, and logos contained therein (the "Marks").</p>
+                    <p>We are the owner or the licensee of all intellectual property rights in our Services, including all source code, databases, functionality, software, website designs, audio, video, text, photographs, and graphics in the Services (collectively, the &quot;Content&quot;), as well as the trademarks, service marks, and logos contained therein (the &quot;Marks&quot;).</p>
                     <p>Our Content and Marks are protected by copyright and trademark laws (and various other intellectual property rights and unfair competition laws) and treaties in the United States, Bangladesh, and around the world.</p>
-                    <p>The Content and Marks are provided in or through the Services "AS IS" for your personal, non-commercial use or internal business purpose only.</p>
+                    <p>The Content and Marks are provided in or through the Services &quot;AS IS&quot; for your personal, non-commercial use or internal business purpose only.</p>
 
                     <h3>Your use of our Services</h3>
-                    <p>Subject to your compliance with these Legal Terms, including the "PROHIBITED ACTIVITIES" section below, we grant you a non-exclusive, non-transferable, revocable license to:</p>
+                    <p>Subject to your compliance with these Legal Terms, including the &quot;PROHIBITED ACTIVITIES&quot; section below, we grant you a non-exclusive, non-transferable, revocable license to:</p>
                     <ul>
                         <li>Access the Services; and</li>
                         <li>Download or print a copy of any portion of the Content to which you have properly gained access,</li>
@@ -163,23 +163,23 @@ export default function TermsPage() {
                         <li>Interfere with, disrupt, or create an undue burden on the Services or the networks or services connected to the Services.</li>
                         <li>Harass, annoy, intimidate, or threaten any of our employees or agents.</li>
                         <li>Attempt to bypass any measures of the Services designed to prevent or restrict access to the Services.</li>
-                        <li>Copy or adapt the Services' software, including but not limited to Flash, PHP, HTML, JavaScript, or other code.</li>
+                        <li>Copy or adapt the Services&apos; software, including but not limited to Flash, PHP, HTML, JavaScript, or other code.</li>
                         <li>Decipher, decompile, disassemble, or reverse engineer any of the software.</li>
                         <li>Use the Services as part of any effort to compete with us.</li>
                     </ul>
 
                     <h2 id="contributions" className="scroll-mt-32">5. USER GENERATED CONTRIBUTIONS</h2>
-                    <p>The Services does not offer users to submit or post content. We may provide you with the opportunity to create, submit, post, display, transmit, perform, publish, distribute, or broadcast content and materials to us or on the Services (collectively, "Contributions"). Contributions may be viewable by other users of the Services and through third-party websites.</p>
+                    <p>The Services does not offer users to submit or post content. We may provide you with the opportunity to create, submit, post, display, transmit, perform, publish, distribute, or broadcast content and materials to us or on the Services (collectively, &quot;Contributions&quot;). Contributions may be viewable by other users of the Services and through third-party websites.</p>
 
                     <h2 id="license" className="scroll-mt-32">6. CONTRIBUTION LICENSE</h2>
                     <p>You and Services agree that we may access, store, process, and use any information and personal data that you provide following the terms of the Privacy Policy and your choices (including settings).</p>
                     <p>By submitting suggestions or other feedback regarding the Services, you agree that we can use and share such feedback for any purpose without compensation to you.</p>
 
                     <h2 id="submissions" className="scroll-mt-32">7. SUBMISSIONS</h2>
-                    <p>You acknowledge and agree that any questions, comments, suggestions, ideas, feedback, or other information regarding the Services ("Submissions") provided by you to us are non-confidential and shall become our sole property.</p>
+                    <p>You acknowledge and agree that any questions, comments, suggestions, ideas, feedback, or other information regarding the Services (&quot;Submissions&quot;) provided by you to us are non-confidential and shall become our sole property.</p>
 
                     <h2 id="third-party" className="scroll-mt-32">8. THIRD-PARTY WEBSITES AND CONTENT</h2>
-                    <p>The Services may contain links to other websites ("Third-Party Websites") and third-party content. Such Third-Party Websites and Third-Party Content are not investigated, monitored, or checked for accuracy, appropriateness, or completeness by us, and we are not responsible for any Third-Party Websites accessed through the Services.</p>
+                    <p>The Services may contain links to other websites (&quot;Third-Party Websites&quot;) and third-party content. Such Third-Party Websites and Third-Party Content are not investigated, monitored, or checked for accuracy, appropriateness, or completeness by us, and we are not responsible for any Third-Party Websites accessed through the Services.</p>
 
                     <h2 id="management" className="scroll-mt-32">9. SITE MANAGEMENT</h2>
                     <p>We reserve the right, but not the obligation, to: (1) monitor the Services for violations of these Legal Terms; (2) take appropriate legal action against anyone who, in our sole discretion, violates the law or these Legal Terms; (3) in our sole discretion, refuse, restrict access to, limit the availability of, or disable any of your Contributions; (4) remove from the Services or otherwise disable all files and content that are excessive in size or are in any way burdensome to our systems; and (5) otherwise manage the Services in a manner designed to protect our rights and property and to facilitate the proper functioning of the Services.</p>

@@ -111,7 +111,7 @@ export async function runPageSpeedCheck(url: string): Promise<CheckResult> {
             else summary = `Poor performance (${perfScore}/100). This is costing you traffic and conversions.`;
 
             return { name, status, score: avgScore, summary, details };
-        } catch (error: any) {
+        } catch {
             if (attempt < maxRetries) continue;
             return { name, status: 'fail', score: 0, summary: 'Performance analysis could not complete.', details: ['Connection timeout — the target site may be slow to respond'] };
         }
@@ -174,8 +174,9 @@ export async function runMetaTagCheck(url: string): Promise<CheckResult> {
         const summary = score >= 80 ? 'Meta tags are well configured.' : score >= 50 ? 'Some meta tags are missing or incomplete.' : 'Critical meta tag issues found.';
 
         return { name, status, score, summary, details: findings };
-    } catch (error: any) {
-        return { name, status: 'fail', score: 0, summary: 'Could not fetch the page to analyze meta tags.', details: [error.message] };
+    } catch (error) {
+        const message = error instanceof Error ? error.message : String(error);
+        return { name, status: 'fail', score: 0, summary: 'Could not fetch the page to analyze meta tags.', details: [message] };
     }
 }
 
@@ -212,8 +213,9 @@ export async function runSSLCheck(url: string): Promise<CheckResult> {
         if (daysLeft <= 30) return { name, status: 'warn', score: 70, summary: `SSL expires in ${daysLeft} days. Renewal due soon.`, details };
 
         return { name, status: 'pass', score: 100, summary: `SSL is valid. Expires in ${daysLeft} days.`, details };
-    } catch (error: any) {
-        return { name, status: 'fail', score: 0, summary: 'Could not verify SSL certificate.', details: [error.message] };
+    } catch (error) {
+        const message = error instanceof Error ? error.message : String(error);
+        return { name, status: 'fail', score: 0, summary: 'Could not verify SSL certificate.', details: [message] };
     }
 }
 
@@ -254,8 +256,9 @@ export async function runSecurityHeaderCheck(url: string): Promise<CheckResult> 
         const summary = score >= 80 ? 'Security headers are well configured.' : score >= 50 ? 'Some security headers are missing.' : 'Critical security headers are missing.';
 
         return { name, status, score, summary, details };
-    } catch (error: any) {
-        return { name, status: 'fail', score: 0, summary: 'Could not check security headers.', details: [error.message] };
+    } catch (error) {
+        const message = error instanceof Error ? error.message : String(error);
+        return { name, status: 'fail', score: 0, summary: 'Could not check security headers.', details: [message] };
     }
 }
 
@@ -316,8 +319,9 @@ export async function runSitemapCheck(url: string): Promise<CheckResult> {
         const summary = score >= 80 ? 'Robots and sitemap are properly configured.' : score >= 50 ? 'Partial configuration — some improvements needed.' : 'Missing critical crawl directives.';
 
         return { name, status, score, summary, details };
-    } catch (error: any) {
-        return { name, status: 'fail', score: 0, summary: 'Could not check robots/sitemap.', details: [error.message] };
+    } catch (error) {
+        const message = error instanceof Error ? error.message : String(error);
+        return { name, status: 'fail', score: 0, summary: 'Could not check robots/sitemap.', details: [message] };
     }
 }
 
@@ -372,8 +376,9 @@ export async function runDNSCheck(url: string): Promise<CheckResult> {
         const summary = score >= 80 ? 'DNS and connectivity are healthy.' : 'Some connectivity concerns found.';
 
         return { name, status, score, summary, details };
-    } catch (error: any) {
-        return { name, status: 'fail', score: 0, summary: 'DNS resolution failed — domain may not exist or is unreachable.', details: [error.message] };
+    } catch (error) {
+        const message = error instanceof Error ? error.message : String(error);
+        return { name, status: 'fail', score: 0, summary: 'DNS resolution failed — domain may not exist or is unreachable.', details: [message] };
     }
 }
 

@@ -50,7 +50,7 @@ export default function ContactForm({ initialServiceOfInterest = "General Consul
                 </div>
                 <h2 className="text-3xl font-black text-slate-900 dark:text-white mb-4 uppercase tracking-tight">Transmission Secured</h2>
                 <p className="text-slate-500 dark:text-slate-400 max-w-md mx-auto mb-10 font-medium">
-                    Protocol verified, {formData.name.split(' ')[0]}. I'll route a response to <span className="text-slate-900 dark:text-white font-bold">{formData.email}</span> within 24 hours.
+                    Protocol verified, {formData.name.split(' ')[0]}. I&apos;ll route a response to <span className="text-slate-900 dark:text-white font-bold">{formData.email}</span> within 24 hours.
                 </p>
                 <button
                     onClick={() => setStatus('idle')}

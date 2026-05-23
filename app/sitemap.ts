@@ -2,6 +2,16 @@ import { MetadataRoute } from 'next';
 import { getSanityPosts, getSanityCategories } from '@/lib/sanity.client';
 import { serviceData } from '@/lib/serviceData';
 
+interface SanityPost {
+    slug: { current: string };
+    date: string;
+}
+
+interface SanityCategory {
+    slug: { current: string };
+    count: number;
+}
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const baseUrl = 'https://whoisalfaz.me';
 
@@ -35,8 +45,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }));
 
     // 3. Dynamic Blog Posts
-    const posts = await getSanityPosts();
-    const blogRoutes = posts.map((post: any) => ({
+    const posts: SanityPost[] = await getSanityPosts();
+    const blogRoutes = posts.map((post) => ({
         url: `${baseUrl}/blog/${post.slug.current}/`,
         lastModified: new Date(post.date),
         changeFrequency: 'weekly' as const,
@@ -44,9 +54,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }));
 
     // 4. Dynamic Blog Categories
-    const categories = await getSanityCategories();
-    const validCategories = categories.filter((cat: any) => cat.count > 0);
-    const categoryRoutes = validCategories.map((cat: any) => ({
+    const categories: SanityCategory[] = await getSanityCategories();
+    const validCategories = categories.filter((cat) => cat.count > 0);
+    const categoryRoutes = validCategories.map((cat) => ({
         url: `${baseUrl}/blog/category/${cat.slug.current}/`,
         lastModified: new Date(),
         changeFrequency: 'weekly' as const,

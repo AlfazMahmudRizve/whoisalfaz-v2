@@ -89,7 +89,7 @@ export default function AuditPage() {
                         Free Website <span className="text-teal-600 dark:text-blue-500">Audit Tool</span>
                     </h1>
                     <p className="text-slate-500 dark:text-slate-400 text-lg leading-relaxed transition-colors duration-300">
-                        Instantly check your website's performance score, SEO health, SSL status, and security headers. Results in 30 seconds. No account needed.
+                        Instantly check your website&apos;s performance score, SEO health, SSL status, and security headers. Results in 30 seconds. No account needed.
                     </p>
                 </div>
 

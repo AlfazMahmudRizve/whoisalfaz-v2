@@ -33,11 +33,11 @@ export default function ContactPage() {
                 {/* LEFT: TEXT & INFO */}
                 <div className="animate-in fade-in slide-in-from-left-8 duration-1000">
                     <h1 className="text-4xl md:text-6xl font-black text-slate-900 dark:text-white mb-6 leading-tight uppercase tracking-tight transition-colors duration-300">
-                        <span className="block text-teal-600 dark:text-slate-400 text-xl font-bold mb-4 tracking-widest">Let's talk growth</span>
+                        <span className="block text-teal-600 dark:text-slate-400 text-xl font-bold mb-4 tracking-widest">Let&apos;s talk growth</span>
                         Ready to automate your <span className="text-purple-600 dark:text-blue-500">Agency scale?</span>
                     </h1>
                     <p className="text-slate-500 dark:text-slate-400 text-lg mb-12 leading-relaxed transition-colors duration-300">
-                        Whether you need a custom self-healing workflow, a full technical SEO audit, or just want to chat about potential bottlenecks, I'm here to build the infrastructure.
+                        Whether you need a custom self-healing workflow, a full technical SEO audit, or just want to chat about potential bottlenecks, I&apos;m here to build the infrastructure.
                     </p>
 
                     <div className="space-y-8">
@@ -69,7 +69,7 @@ export default function ContactPage() {
                         <div className="flex gap-4">
                             {[
                                 { icon: Facebook, href: "https://facebook.com/alfazmahmudrizve" },
-                                { icon: Linkedin, href: "https://www.linkedin.com/in/alfaz-mahmud-rizve/" },
+                                { icon: Linkedin, href: "https://linkedin.com/in/alfaz-mahmud-rizve" },
                                 { icon: Instagram, href: "https://www.instagram.com/whois.alfaz/" }
                             ].map((social, i) => (
                                 <a key={i} href={social.href} target="_blank" className="p-4 bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-2xl text-slate-500 dark:text-slate-400 hover:text-teal-600 dark:hover:text-white hover:bg-slate-50 dark:hover:bg-white/10 shadow-sm transition-all hover:-translate-y-1">

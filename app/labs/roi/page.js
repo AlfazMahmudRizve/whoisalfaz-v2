@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { ArrowLeft, Calculator, AlertCircle, ArrowRight } from 'lucide-react';
-import { motion } from 'framer-motion';
 
 export default function ROICalculator() {
     const [hours, setHours] = useState(10);
@@ -47,7 +46,7 @@ export default function ROICalculator() {
                         How Much is <span className="text-red-500">Manual Work</span> Costing You?
                     </h1>
                     <p className="text-slate-400 text-lg max-w-2xl mx-auto">
-                        Calculate the hidden drain on your business resources. See the real cost of "I'll just do it myself."
+                        Calculate the hidden drain on your business resources. See the real cost of &quot;I&apos;ll just do it myself.&quot;
                     </p>
                 </div>
 
@@ -122,7 +121,7 @@ export default function ROICalculator() {
                                     -{formatCurrency(yearlyLoss)}
                                 </div>
                                 <div className="text-slate-400 text-sm mt-2 font-mono">
-                                    That's <span className="text-red-400">-{formatCurrency(weeklyLoss)}</span> wasted every week.
+                                    That&apos;s <span className="text-red-400">-{formatCurrency(weeklyLoss)}</span> wasted every week.
                                 </div>
                             </div>
 

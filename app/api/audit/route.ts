@@ -65,10 +65,10 @@ export async function POST(request: Request) {
             emailError: emailError !== 'ok' ? emailError : undefined,
         });
 
-    } catch (error: any) {
+    } catch (error: unknown) {
         console.error('Audit API Error:', error);
         return NextResponse.json(
-            { error: error.message || 'Internal Server Error' },
+            { error: error instanceof Error ? error.message : 'Internal Server Error' },
             { status: 500 }
         );
     }

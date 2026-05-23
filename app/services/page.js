@@ -2,7 +2,7 @@ import AuditTool from '../../components/AuditTool';
 import DefaultContentFooter from '../../components/footers/DefaultContentFooter';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Zap, Globe, BarChart3, Search, Video, MessageSquare, ChevronDown, CheckCircle2, Code2 } from 'lucide-react';
+import { Zap, Globe, BarChart3, Search, ChevronDown, Code2 } from 'lucide-react';
 import NewsletterForm from '../../components/NewsletterForm';
 import PartnerLogos from '../../components/PartnerLogos';
 
@@ -161,7 +161,7 @@ export default function ServicesPage() {
                         <BarChart3 size={32} />
                     </div>
                     <div>
-                        <h3 className="text-red-700 dark:text-red-400 font-black text-xl mb-2 uppercase tracking-tight">Want to eliminate the "Agency Grunt Work"?</h3>
+                        <h3 className="text-red-700 dark:text-red-400 font-black text-xl mb-2 uppercase tracking-tight">Want to eliminate the &quot;Agency Grunt Work&quot;?</h3>
                         <p className="text-red-600 dark:text-red-200/70 text-sm md:text-[15px] font-medium leading-relaxed">
                             Most agencies waste 40+ hours/week on copy-paste tasks. Our automations eliminate this instantly.
                             If you are still doing it via spreadsheets, you are losing money every hour.
@@ -203,7 +203,7 @@ export default function ServicesPage() {
             <section className="bg-white dark:bg-[#0f172a] border-y border-slate-200 dark:border-white/5 py-24 mb-32 transition-colors duration-300 animate-in fade-in duration-1000 delay-500 fill-mode-both">
                 <div className="max-w-5xl mx-auto text-center px-6">
                     <h2 className="text-3xl md:text-5xl font-black text-slate-900 dark:text-white mb-6 uppercase tracking-tight">Unsure What You Need?</h2>
-                    <p className="text-slate-500 dark:text-slate-400 mb-10 text-lg md:text-xl max-w-2xl mx-auto font-medium">Let's discuss your unique challenges and define a custom path forward.</p>
+                    <p className="text-slate-500 dark:text-slate-400 mb-10 text-lg md:text-xl max-w-2xl mx-auto font-medium">Let&apos;s discuss your unique challenges and define a custom path forward.</p>
                     <Link href="/contact/" className="inline-block px-10 py-5 border-2 border-slate-900 dark:border-white/20 text-slate-900 dark:text-white font-black uppercase tracking-widest text-sm rounded-full hover:bg-slate-900 hover:text-white dark:hover:bg-white dark:hover:text-black transition-all mb-24 shadow-sm hover:shadow-xl">
                         Book a Discovery Call
                     </Link>
@@ -221,7 +221,7 @@ export default function ServicesPage() {
             {/* BONUS PLAYBOOK */}
             <section className="max-w-5xl mx-auto mb-32 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-500 fill-mode-both">
                 <div className="text-center mb-10">
-                    <h2 className="text-2xl font-black text-teal-600 dark:text-emerald-400 uppercase tracking-widest leading-relaxed px-4">Bonus!!! Here's a free playbook to get started</h2>
+                    <h2 className="text-2xl font-black text-teal-600 dark:text-emerald-400 uppercase tracking-widest leading-relaxed px-4">Bonus!!! Here&apos;s a free playbook to get started</h2>
                 </div>
                 <div className="bg-white dark:bg-[#0f172a] border border-slate-200 dark:border-slate-800 p-10 md:p-14 rounded-[3rem] flex flex-col md:flex-row items-center gap-12 max-w-4xl mx-auto shadow-2xl transition-colors duration-300">
                     <div className="flex-1 text-center md:text-left">

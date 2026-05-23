@@ -1,4 +1,4 @@
-import { AuditResults, CheckResult } from './audit';
+import { AuditResults } from './audit';
 
 // ─── Send Branded Audit Report Email ─────────────────────────
 export async function sendAuditReport(email: string, name: string, results: AuditResults): Promise<boolean> {
@@ -41,8 +41,9 @@ export async function sendAuditReport(email: string, name: string, results: Audi
 
         console.log(`[Audit Email] Successfully sent to ${email}. Response:`, responseText);
         return true;
-    } catch (error: any) {
-        console.error('[Audit Email] Exception encountered:', error.message || error);
+    } catch (error) {
+        const message = error instanceof Error ? error.message : String(error);
+        console.error('[Audit Email] Exception encountered:', message);
         return false;
     }
 }

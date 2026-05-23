@@ -22,7 +22,9 @@ export default function TableOfContents() {
             };
         });
 
-        setHeadings(headingData);
+        const timer = setTimeout(() => {
+            setHeadings(headingData);
+        }, 0);
 
         // 3. Optional: Intersection Observer for active state
         const observer = new IntersectionObserver(
@@ -38,7 +40,10 @@ export default function TableOfContents() {
 
         elements.forEach((elem) => observer.observe(elem));
 
-        return () => observer.disconnect();
+        return () => {
+            clearTimeout(timer);
+            observer.disconnect();
+        };
     }, []);
 
     useEffect(() => {

@@ -1,5 +1,5 @@
 "use client";
-import { m, AnimatePresence } from "framer-motion";
+import { m } from "framer-motion";
 import { ReactNode } from "react";
 
 export function FadeUp({ children, delay = 0, className = "", inline = false }: { children: ReactNode, delay?: number, className?: string, inline?: boolean }) {

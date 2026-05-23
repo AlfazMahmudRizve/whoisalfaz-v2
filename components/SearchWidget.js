@@ -12,7 +12,10 @@ export default function SearchWidget() {
     useEffect(() => {
         // Sync local state with URL param on load
         if (searchParams.has('q')) {
-            setQuery(searchParams.get('q'));
+            const timer = setTimeout(() => {
+                setQuery(searchParams.get('q') || '');
+            }, 0);
+            return () => clearTimeout(timer);
         }
     }, [searchParams]);
 

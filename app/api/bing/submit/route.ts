@@ -30,7 +30,7 @@ export async function GET(request: Request) {
 
         // 2. Dynamic Routes (Blog Posts)
         const posts = await getSanityPosts();
-        const blogRoutes = posts.map((post: any) => `${baseUrl}/blog/${post.slug.current}`);
+        const blogRoutes = posts.map((post: { slug: { current: string } }) => `${baseUrl}/blog/${post.slug.current}`);
 
         const allUrls = [...staticRoutes, ...blogRoutes];
 
@@ -62,10 +62,10 @@ export async function GET(request: Request) {
             note: 'Google sitemap ping is deprecated. IndexNow handles Google indexing automatically.'
         }, { status: allSuccessful ? 200 : 207 });
 
-    } catch (error: any) {
+    } catch (error: unknown) {
         console.error(`[Bing Submit] Critical error:`, error);
         return NextResponse.json(
-            { error: error.message || 'Internal Server Error', success: false },
+            { error: error instanceof Error ? error.message : 'Internal Server Error', success: false },
             { status: 500 }
         );
     }

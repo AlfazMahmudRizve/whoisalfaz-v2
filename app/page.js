@@ -7,7 +7,7 @@ import { ArrowRight, Zap, Code2, Globe, Mail } from 'lucide-react';
 import NewsletterForm from '../components/NewsletterForm';
 import PartnerLogos from '../components/PartnerLogos';
 import HomeContentFooter from '../components/footers/HomeContentFooter';
-import { FadeUp, FadeIn, StaggerContainer, StaggerItem } from '@/components/MotionWrappers';
+import { FadeUp, StaggerContainer, StaggerItem } from '@/components/MotionWrappers';
 
 export default async function Home() {
   const posts = await getSanityPosts();
@@ -83,7 +83,7 @@ export default async function Home() {
           "jobTitle": "RevOps Architect & Full Stack Automation Engineer",
           "description": "Alfaz Mahmud Rizve is a RevOps architect and full-stack automation engineer specializing in building autonomous revenue systems for SaaS companies, digital agencies, and small businesses using n8n workflows, AI agents, and high-performance Next.js infrastructure.",
           "sameAs": [
-            "https://www.linkedin.com/in/alfazmahmudrizve/",
+            "https://linkedin.com/in/alfaz-mahmud-rizve",
             "https://x.com/whoisalfaz",
             "https://github.com/AlfazMahmudRizve"
           ],
@@ -141,7 +141,7 @@ export default async function Home() {
                 </div>
 
                 {/* Stat Bar - Bento Glassmorphic Strip */}
-                <div className="grid grid-cols-3 gap-2.5 sm:gap-4 p-4 sm:p-5 bento-card rounded-[2rem] w-full max-w-2xl">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-4 p-6 sm:p-5 bento-card rounded-[2rem] w-full max-w-2xl">
                   {[
                     { value: '30+', label: 'Systems Documented' },
                     { value: '6', label: 'AI Integrations' },
@@ -284,7 +284,7 @@ export default async function Home() {
                   
                   {/* Glowing pipeline layout */}
                   <div className="w-full flex-grow flex flex-col justify-center items-center py-6 min-h-[220px]">
-                    <div className="relative w-full max-w-sm aspect-[1.8/1] flex items-center justify-between px-6 bg-slate-50/50 dark:bg-slate-900/30 rounded-3xl border border-slate-200/50 dark:border-white/5 p-6 backdrop-blur-sm overflow-hidden">
+                    <div className="relative w-full max-w-sm aspect-[1.8/1] flex items-center justify-between px-4 sm:px-6 bg-slate-50/50 dark:bg-slate-900/30 rounded-3xl border border-slate-200/50 dark:border-white/5 p-4 sm:p-6 backdrop-blur-sm overflow-hidden">
                       
                       {/* Grid background inside mock */}
                       <div className="absolute inset-0 grid-mesh opacity-30 pointer-events-none" />

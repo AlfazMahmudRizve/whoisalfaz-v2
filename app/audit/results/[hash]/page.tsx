@@ -4,9 +4,9 @@ import { useParams } from 'next/navigation';
 import { useMemo, useState } from 'react';
 import Link from 'next/link';
 import { decodeAuditResult } from '@/lib/audit-share';
-import { CheckCircle, AlertTriangle, AlertCircle, Shield, Globe, Zap, Search, Server, Lock, ArrowRight, Share2, Copy, Check } from 'lucide-react';
+import { CheckCircle, AlertTriangle, AlertCircle, Shield, Globe, Zap, Search, Server, Lock, ArrowRight, Copy, Check, type LucideIcon } from 'lucide-react';
 
-const checkIcons: Record<string, any> = {
+const checkIcons: Record<string, LucideIcon> = {
   'Performance & Core Web Vitals': Zap,
   'Meta Tags & Open Graph': Search,
   'SSL Certificate': Lock,

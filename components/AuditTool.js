@@ -1,7 +1,8 @@
 'use client';
 
 import { useState } from 'react';
-import { ArrowRight, Loader2, CheckCircle, AlertCircle, AlertTriangle, Mail, ExternalLink, ChevronDown, Shield, Globe, Zap, Search, Server, Lock, BarChart3, Share2, Copy, Check } from 'lucide-react';
+import Link from 'next/link';
+import { ArrowRight, Loader2, CheckCircle, AlertCircle, AlertTriangle, ExternalLink, ChevronDown, Shield, Globe, Zap, Search, Server, Lock, BarChart3, Share2, Check } from 'lucide-react';
 import { encodeAuditResult } from '@/lib/audit-share';
 
 const scanSteps = [
@@ -334,7 +335,7 @@ export default function AuditTool() {
               >
                 {shareStatus === 'copied' ? <><Check size={16} className="text-green-500" /> Link Copied!</> : <><Share2 size={16} /> Share Results</>}
               </button>
-              <a 
+              <Link 
                 href="/contact/" 
                 onClick={() => {
                   if (typeof window !== 'undefined' && window.gtag) {
@@ -346,7 +347,7 @@ export default function AuditTool() {
                 }}
                 className="flex-1 px-6 py-4 rounded-[1.5rem] bg-slate-900 dark:bg-teal-500 text-white dark:text-black font-black uppercase tracking-tight text-sm hover:bg-slate-800 dark:hover:bg-teal-400 transition-all flex items-center justify-center gap-2 shadow-xl shadow-slate-900/10 dark:shadow-teal-500/10 hover:-translate-y-1">
                 Discuss Results <ExternalLink size={16} />
-              </a>
+              </Link>
             </div>
           </div>
         )}

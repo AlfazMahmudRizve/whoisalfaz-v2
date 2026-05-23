@@ -19,14 +19,14 @@ const mono = JetBrains_Mono({
 
 export const metadata = {
   metadataBase: new URL('https://whoisalfaz.me'),
-  title: "Alfaz Mahmud Rizve | RevOps & Full Stack Automation Architect",
+  title: "Alfaz Mahmud Rizve | RevOps & Automation Architect",
   description: "I eliminate manual bottlenecks for scaling agencies with autonomous n8n workflows, AI agents, and high-performance Next.js infrastructure.",
   authors: [{ name: 'Alfaz Mahmud Rizve', url: 'https://whoisalfaz.me' }],
   alternates: {
     canonical: '/',
   },
   openGraph: {
-    title: "Alfaz Mahmud Rizve | RevOps & Full Stack Automation Architect",
+    title: "Alfaz Mahmud Rizve | RevOps & Automation Architect",
     description: "I eliminate manual bottlenecks for scaling agencies with autonomous n8n workflows, AI agents, and high-performance Next.js infrastructure.",
     url: 'https://whoisalfaz.me',
     siteName: 'Alfaz Mahmud Rizve',
@@ -43,7 +43,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Alfaz Mahmud Rizve | RevOps & Full Stack Automation Architect',
+    title: 'Alfaz Mahmud Rizve | RevOps & Automation Architect',
     description: 'I eliminate manual bottlenecks for scaling agencies with autonomous n8n workflows, AI agents, and high-performance Next.js infrastructure.',
     creator: '@whoisalfaz',
     images: ['/featured-image.png'],
@@ -70,7 +70,6 @@ export const metadata = {
   },
 };
 
-import dynamic from 'next/dynamic';
 
 import LazyChatWidget from "@/components/LazyChatWidget";
 import { ThemeProvider } from "@/components/ThemeProvider";
@@ -94,7 +93,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       "sameAs": [
         "https://linkedin.com/in/alfaz-mahmud-rizve",
         "https://github.com/AlfazMahmudRizve",
-        "https://twitter.com/whoisalfaz",
+        "https://x.com/whoisalfaz",
         "https://facebook.com/alfazmahmudrizve",
         "https://www.instagram.com/whois.alfaz/",
         "https://www.youtube.com/@whoisalfazz"
@@ -118,7 +117,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       "sameAs": [
         "https://linkedin.com/in/alfaz-mahmud-rizve",
         "https://github.com/AlfazMahmudRizve",
-        "https://twitter.com/whoisalfaz",
+        "https://x.com/whoisalfaz",
         "https://facebook.com/alfazmahmudrizve",
         "https://www.instagram.com/whois.alfaz/",
         "https://www.youtube.com/@whoisalfazz"
