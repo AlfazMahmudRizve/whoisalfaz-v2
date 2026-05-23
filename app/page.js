@@ -117,12 +117,12 @@ export default async function Home() {
             
             {/* Left Column: Headings, CTAs & Stats */}
             <div className="lg:col-span-7 flex flex-col items-start text-left">
-              <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white/60 dark:bg-white/5 backdrop-blur-sm border border-slate-200 dark:border-white/10 rounded-full text-xs font-bold text-teal-700 dark:text-teal-300 mb-8 shadow-sm hero-animate-1">
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white/60 dark:bg-white/5 backdrop-blur-sm border border-slate-200 dark:border-white/10 rounded-full text-xs font-bold text-teal-700 dark:text-teal-300 mb-8 shadow-sm">
                 <span className="w-1.5 h-1.5 rounded-full bg-teal-500 dark:bg-teal-400 animate-led-blink shrink-0" />
                 <span>AUTONOMOUS REVENUE SYSTEMS</span>
               </div>
 
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 dark:text-white mb-8 leading-[0.9] tracking-tighter uppercase transition-colors duration-300 hero-animate-2">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 dark:text-white mb-8 leading-[0.9] tracking-tighter uppercase transition-colors duration-300">
                 Autonomous <span className="text-teal-600 dark:text-teal-400">Revenue Engines</span> <br /> Built on Sub-Second <span className="text-purple-600 dark:text-purple-400">Infrastructure</span>
               </h1>
 
