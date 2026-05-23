@@ -104,7 +104,7 @@ export default function HomeContentFooter() {
             <div className="hidden md:block">
               <div className="relative w-48 h-48 rounded-3xl overflow-hidden border-4 border-slate-200 dark:border-slate-800 shadow-xl">
                 <Image
-                  src="/profile.jpg"
+                  src="/profile.webp"
                   alt="Alfaz Mahmud Rizve — RevOps and Full Stack Automation Architect"
                   fill
                   className="object-cover"

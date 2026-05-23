@@ -174,7 +174,7 @@ export default async function Post({ params }) {
               <Link href="/about/alfaz-mahmud-rizve/" className="flex items-center gap-4 group cursor-pointer hover:bg-slate-100 dark:hover:bg-white/5 p-2 -m-2 rounded-xl transition-colors">
                 <div className="w-14 h-14 rounded-full bg-slate-100 dark:bg-slate-800 p-0.5 ring-2 ring-slate-200 dark:ring-white/10 group-hover:ring-teal-500/50 transition-all">
                   <div className="w-full h-full rounded-full overflow-hidden relative">
-                    <Image src="/profile.jpg" alt="Alfaz Mahmud Rizve" fill sizes="56px" className="object-cover" />
+                    <Image src="/profile.webp" alt="Alfaz Mahmud Rizve" fill sizes="56px" className="object-cover" />
                   </div>
                 </div>
                 <div className="leading-tight">

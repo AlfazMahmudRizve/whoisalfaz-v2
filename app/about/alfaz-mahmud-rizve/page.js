@@ -58,7 +58,7 @@ export default function AboutAuthorPage() {
             {/* Profile Image */}
             <div className="shrink-0 w-32 h-32 md:w-48 md:h-48 rounded-[2rem] bg-slate-100 dark:bg-slate-800 p-1 ring-4 ring-slate-100 dark:ring-white/5 shadow-xl">
               <div className="w-full h-full rounded-[1.8rem] overflow-hidden relative">
-                <Image src="/profile.jpg" alt="Alfaz Mahmud Rizve" fill sizes="(max-width: 768px) 128px, 192px" className="object-cover" priority />
+                <Image src="/profile.webp" alt="Alfaz Mahmud Rizve" fill sizes="(max-width: 768px) 128px, 192px" className="object-cover" priority />
               </div>
             </div>
 

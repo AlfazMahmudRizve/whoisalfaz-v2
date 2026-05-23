@@ -68,7 +68,7 @@ export default function Portfolio() {
                         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[140%] h-[140%] border border-slate-200 dark:border-white/5 rounded-full opacity-50"></div>
 
                         <div className="relative w-72 h-72 md:w-[450px] md:h-[450px] rounded-full overflow-hidden border-8 border-white dark:border-white/10 shadow-[0_0_50px_rgba(45,212,191,0.2)] dark:shadow-[0_0_50px_rgba(59,130,246,0.2)] group">
-                            <Image src="/profile.jpg" alt="Alfaz Mahmud" fill className="object-cover transition-transform duration-700 group-hover:scale-105" priority />
+                            <Image src="/profile.webp" alt="Alfaz Mahmud" fill className="object-cover transition-transform duration-700 group-hover:scale-105" priority />
                         </div>
                     </div>
                 </section>
