@@ -111,44 +111,127 @@ export default async function Home() {
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-teal-50/50 via-slate-50 to-slate-50 dark:from-blue-900/10 dark:via-[#0a0a0a] dark:to-[#0a0a0a] -z-10 transition-colors duration-300" />
 
       {/* SECTION 0: HERO */}
-      <section className="relative pt-10 pb-10 px-6 overflow-hidden">
-        <FadeUp className="max-w-7xl mx-auto flex flex-col items-center text-center relative z-10">
-          
-          <div className="inline-block px-4 py-1.5 bg-white/60 dark:bg-white/5 backdrop-blur-sm border border-slate-200 dark:border-white/10 rounded-full text-xs font-bold text-teal-700 dark:text-teal-300 mb-8 shadow-sm">
-            AUTONOMOUS REVENUE SYSTEMS
+      <section className="relative pt-12 pb-16 px-6 overflow-hidden z-10">
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            {/* Left Column: Headings, CTAs & Stats */}
+            <div className="lg:col-span-7 flex flex-col items-start text-left">
+              <FadeUp>
+                <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white/60 dark:bg-white/5 backdrop-blur-sm border border-slate-200 dark:border-white/10 rounded-full text-xs font-bold text-teal-700 dark:text-teal-300 mb-8 shadow-sm">
+                  <span className="w-1.5 h-1.5 rounded-full bg-teal-500 dark:bg-teal-400 animate-led-blink shrink-0" />
+                  <span>AUTONOMOUS REVENUE SYSTEMS</span>
+                </div>
+
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 dark:text-white mb-8 leading-[0.9] tracking-tighter uppercase transition-colors duration-300">
+                  Autonomous <span className="text-teal-600 dark:text-teal-400">Revenue Engines</span> <br /> Built on Sub-Second <span className="text-purple-600 dark:text-purple-400">Infrastructure</span>
+                </h1>
+
+                <p className="text-base md:text-lg text-slate-500 dark:text-slate-400 mb-12 leading-relaxed max-w-xl font-medium transition-colors duration-300">
+                  I eliminate manual bottlenecks for scaling agencies with self-healing n8n workflows, AI agents, and high-performance Next.js architecture.
+                </p>
+
+                <div className="flex flex-col sm:flex-row items-center gap-4 w-full max-w-md mb-12">
+                  <Link href="/contact/" className="w-full sm:w-auto px-8 py-4.5 bg-slate-900 dark:bg-teal-400 text-white dark:text-black font-black rounded-2xl shadow-xl hover:shadow-2xl hover:scale-[1.03] active:scale-[0.98] transition-all transform flex items-center justify-center gap-2 btn-shimmer">
+                    Book Strategy Call <ArrowRight size={18} />
+                  </Link>
+                  <Link href="/services/" className="w-full sm:w-auto px-8 py-4.5 bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 text-slate-900 dark:text-white font-black rounded-2xl hover:bg-slate-50 dark:hover:bg-white/10 transition-all shadow-sm flex items-center justify-center">
+                    Our Solutions
+                  </Link>
+                </div>
+
+                {/* Stat Bar - Bento Glassmorphic Strip */}
+                <div className="grid grid-cols-3 gap-4 p-5 bento-card rounded-[2rem] w-full max-w-2xl">
+                  {[
+                    { value: '30+', label: 'Systems Documented' },
+                    { value: '6', label: 'AI Integrations' },
+                    { value: '< 1s', label: 'Load Time' },
+                  ].map((stat, i) => (
+                    <div key={i} className="flex flex-col items-center text-center gap-0.5">
+                      <span className="text-xl md:text-2xl font-black text-slate-900 dark:text-white tracking-tighter transition-colors duration-300">{stat.value}</span>
+                      <span className="text-[9px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-widest transition-colors duration-300">{stat.label}</span>
+                    </div>
+                  ))}
+                </div>
+              </FadeUp>
+            </div>
+
+            {/* Right Column: Premium Interactive Tech Graphic */}
+            <div className="lg:col-span-5 flex justify-center">
+              <FadeUp delay={0.2} className="w-full max-w-md aspect-[4/3] flex">
+                <div className="bento-card w-full rounded-[2.5rem] p-6 flex flex-col justify-between overflow-hidden relative group">
+                  
+                  {/* Floating blurred orb background inside visual */}
+                  <div className="absolute top-[20%] right-[10%] w-[120px] h-[120px] bg-teal-500/10 rounded-full blur-[40px] pointer-events-none z-0" />
+                  <div className="absolute bottom-[20%] left-[10%] w-[120px] h-[120px] bg-purple-500/10 rounded-full blur-[40px] pointer-events-none z-0" />
+
+                  {/* Header metadata */}
+                  <div className="flex items-center justify-between border-b border-slate-200/50 dark:border-white/5 pb-4 z-10">
+                    <div className="flex items-center gap-2">
+                      <div className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse shrink-0" />
+                      <span className="text-[10px] font-black text-slate-800 dark:text-slate-200 uppercase tracking-widest font-mono">Operations Tracker</span>
+                    </div>
+                    <span className="text-[9px] font-mono text-teal-600 dark:text-teal-400 font-bold bg-teal-50 dark:bg-teal-500/10 px-2.5 py-1 rounded-md border border-teal-100 dark:border-teal-500/20">Active Qualifies</span>
+                  </div>
+
+                  {/* High fidelity pure-CSS graph visualizer */}
+                  <div className="flex-grow flex items-center justify-center py-4 z-10 relative">
+                    <div className="w-full h-36 relative flex flex-col justify-end">
+                      
+                      {/* SVG line and gradient graph */}
+                      <svg className="w-full h-24 overflow-visible" viewBox="0 0 300 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                          <linearGradient id="graphGradient" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0%" stopColor="#14b8a6" stopOpacity="0.25" />
+                            <stop offset="100%" stopColor="#14b8a6" stopOpacity="0" />
+                          </linearGradient>
+                        </defs>
+                        {/* Area Gradient */}
+                        <path d="M 0 90 Q 50 80 100 50 T 200 30 T 300 10 L 300 100 L 0 100 Z" fill="url(#graphGradient)" />
+                        {/* Animated Line */}
+                        <path d="M 0 90 Q 50 80 100 50 T 200 30 T 300 10" stroke="#14b8a6" strokeWidth="3" strokeLinecap="round" className="animate-flow-line" />
+                        {/* Interactive Dot */}
+                        <circle cx="300" cy="10" r="5" fill="#14b8a6" className="animate-pulse" />
+                      </svg>
+
+                      {/* Y Axis ticks */}
+                      <div className="absolute left-0 top-0 flex flex-col justify-between h-full text-[8px] font-bold text-slate-400 dark:text-slate-600 font-mono">
+                        <span>$50k</span>
+                        <span>$25k</span>
+                        <span>$0</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Float nodes card overlay layout */}
+                  <div className="grid grid-cols-2 gap-3 mt-2 z-10 relative">
+                    <div className="bg-white/80 dark:bg-white/5 p-3 rounded-2xl border border-slate-200/50 dark:border-white/5 backdrop-blur-md flex items-center gap-3">
+                      <div className="w-8 h-8 rounded-lg bg-teal-500/10 border border-teal-500/20 flex items-center justify-center text-teal-600 dark:text-teal-400 shrink-0">
+                        <Zap size={16} />
+                      </div>
+                      <div className="leading-tight">
+                        <div className="text-[10px] font-black text-slate-800 dark:text-slate-200 uppercase">n8n Node</div>
+                        <div className="text-[8px] font-mono text-slate-400 dark:text-slate-500">2ms response</div>
+                      </div>
+                    </div>
+
+                    <div className="bg-white/80 dark:bg-white/5 p-3 rounded-2xl border border-slate-200/50 dark:border-white/5 backdrop-blur-md flex items-center gap-3">
+                      <div className="w-8 h-8 rounded-lg bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-600 dark:text-purple-400 shrink-0">
+                        <Globe size={16} />
+                      </div>
+                      <div className="leading-tight">
+                        <div className="text-[10px] font-black text-slate-800 dark:text-slate-200 uppercase">CRM Sync</div>
+                        <div className="text-[8px] font-mono text-slate-400 dark:text-slate-500">Real-Time</div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </FadeUp>
+            </div>
+
           </div>
-
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 dark:text-white mb-8 leading-[0.9] tracking-tighter max-w-5xl uppercase transition-colors duration-300">
-            Autonomous <span className="text-teal-600 dark:text-teal-400">Revenue Engines</span> <br /> Built on Sub-Second <span className="text-purple-600 dark:text-purple-400">Infrastructure</span>
-          </h1>
-
-          <p className="text-lg md:text-xl text-slate-500 dark:text-slate-400 mb-12 leading-relaxed max-w-2xl mx-auto font-medium transition-colors duration-300">
-            I eliminate manual bottlenecks for scaling agencies with self-healing n8n workflows, AI agents, and high-performance Next.js architecture.
-          </p>
-
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 w-full max-w-md">
-            <Link href="/contact/" className="w-full sm:w-auto px-10 py-5 bg-slate-900 dark:bg-teal-400 text-white dark:text-black font-black rounded-2xl shadow-xl hover:shadow-2xl hover:scale-[1.03] active:scale-[0.98] transition-all transform flex items-center justify-center gap-2 btn-shimmer">
-              Book Strategy Call <ArrowRight size={20} />
-            </Link>
-            <Link href="/services/" className="w-full sm:w-auto px-10 py-5 bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 text-slate-900 dark:text-white font-black rounded-2xl hover:bg-slate-50 dark:hover:bg-white/10 transition-all shadow-sm flex items-center justify-center">
-              Our Solutions
-            </Link>
-          </div>
-
-          {/* Stat Bar */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-8 sm:gap-16 mt-14 pt-8 border-t border-slate-200/60 dark:border-white/5 w-full max-w-2xl">
-            {[
-              { value: '30+', label: 'Systems Documented' },
-              { value: '6', label: 'AI Integrations' },
-              { value: '< 1s', label: 'Load Time' },
-            ].map((stat, i) => (
-              <div key={i} className="flex flex-col items-center gap-1">
-                <span className="text-2xl md:text-3xl font-black text-slate-900 dark:text-white tracking-tight transition-colors duration-300">{stat.value}</span>
-                <span className="text-xs font-semibold text-slate-400 dark:text-slate-500 uppercase tracking-widest transition-colors duration-300">{stat.label}</span>
-              </div>
-            ))}
-          </div>
-        </FadeUp>
+        </div>
       </section>
 
       {/* Partner Divider */}
