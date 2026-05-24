@@ -87,7 +87,7 @@ export async function sendContactAutoResponder(data: {
                 <p>Hi ${firstName},</p>
                 <p>I received your inquiry regarding <strong>${data.service}</strong>.</p>
                 <p>I typically review new project requests and reply within 24 hours. If your request is urgent, you can book a discovery session directly on my calendar here:</p>
-                <p><a href="https://whoisalfaz.me/contact" style="display:inline-block;background-color:#0f172a;color:#ffffff;padding:12px 24px;text-decoration:none;border-radius:6px;font-weight:600;font-size:14px;">Book a Strategy Call</a></p>
+                <p><a href="https://whoisalfaz.me/contact/" style="display:inline-block;background-color:#0f172a;color:#ffffff;padding:12px 24px;text-decoration:none;border-radius:6px;font-weight:600;font-size:14px;">Book a Strategy Call</a></p>
                 <br>
                 <p>Best,<br><strong>Alfaz Mahmud Rizve</strong><br><a href="https://whoisalfaz.me" style="color:#2563eb;">whoisalfaz.me</a></p>
             </div>

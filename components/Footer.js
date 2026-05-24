@@ -16,7 +16,7 @@ export default function Footer() {
                             </span>
                         </Link>
                         <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed transition-colors duration-300">
-                            Alfaz Mahmud Rizve builds autonomous revenue systems and high-performance headless infrastructure for scaling agencies and SaaS businesses. <Link href="/about/alfaz-mahmud-rizve" className="text-teal-600 dark:text-teal-400 hover:underline font-bold">About Me →</Link>
+                            Alfaz Mahmud Rizve builds autonomous revenue systems and high-performance headless infrastructure for scaling agencies and SaaS businesses. <Link href="/about/alfaz-mahmud-rizve/" className="text-teal-600 dark:text-teal-400 hover:underline font-bold">About Me →</Link>
                         </p>
                     </div>
 
@@ -91,7 +91,7 @@ export default function Footer() {
                 <div className="border-t border-slate-200 dark:border-slate-800/50 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-slate-500 dark:text-slate-600 text-[10px] uppercase tracking-widest font-mono transition-colors duration-300">
                     <p>&copy; {currentYear} Alfaz Mahmud Rizve . Engineered with Next.js & Automation.</p>
                     <div className="flex gap-6">
-                        <Link href="/about/alfaz-mahmud-rizve" className="hover:text-teal-600 dark:hover:text-white transition-colors">About Me</Link>
+                        <Link href="/about/alfaz-mahmud-rizve/" className="hover:text-teal-600 dark:hover:text-white transition-colors">About Me</Link>
                         <Link href="/terms/" className="hover:text-teal-600 dark:hover:text-white transition-colors">Terms & Conditions</Link>
                         <Link href="/privacy-policy/" className="hover:text-teal-600 dark:hover:text-white transition-colors">Privacy Policy</Link>
                     </div>

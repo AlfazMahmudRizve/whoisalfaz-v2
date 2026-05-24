@@ -19,18 +19,18 @@ export async function GET(request: Request) {
 
         // 1. Static Routes (Same as sitemap.ts)
         const staticRoutes = [
-            '',
-            '/portfolio',
-            '/blog',
-            '/contact',
-            '/services',
-            '/labs',
-            '/labs/roi',
+            '/',
+            '/portfolio/',
+            '/blog/',
+            '/contact/',
+            '/services/',
+            '/labs/',
+            '/labs/roi/',
         ].map(route => `${baseUrl}${route}`);
 
         // 2. Dynamic Routes (Blog Posts)
         const posts = await getSanityPosts();
-        const blogRoutes = posts.map((post: { slug: { current: string } }) => `${baseUrl}/blog/${post.slug.current}`);
+        const blogRoutes = posts.map((post: { slug: { current: string } }) => `${baseUrl}/blog/${post.slug.current}/`);
 
         const allUrls = [...staticRoutes, ...blogRoutes];
 

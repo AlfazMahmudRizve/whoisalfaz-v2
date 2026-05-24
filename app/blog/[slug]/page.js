@@ -358,8 +358,8 @@ export default async function Post({ params }) {
             <h4 className="text-lg font-black text-slate-900 dark:text-white uppercase tracking-tight mb-8">Categories</h4>
             <ul className="space-y-3">
               {categories?.map(cat => (
-                <li key={cat.slug}>
-                  <Link href={`/blog/category/${cat.slug}/`} className="text-[14px] font-bold text-slate-600 dark:text-slate-400 hover:text-teal-600 dark:hover:text-blue-400 block py-2 border-b border-slate-100 dark:border-white/5 transition-colors">
+                <li key={cat.slug.current}>
+                  <Link href={`/blog/category/${cat.slug.current}/`} className="text-[14px] font-bold text-slate-600 dark:text-slate-400 hover:text-teal-600 dark:hover:text-blue-400 block py-2 border-b border-slate-100 dark:border-white/5 transition-colors">
                     {cat.name}
                   </Link>
                 </li>

@@ -4,7 +4,7 @@ import { ArrowDown, Globe, Link2, ShieldAlert, FileCode } from 'lucide-react';
 
 export const metadata = {
     title: "Sponsorships & B2B Content Placements | whoisalfaz.me",
-    description: "High-authority contextual link integrations and sponsored API tear-downs for B2B SaaS, DevTools, and RevOps platforms. Strict niche filter. 24-hour turnaround.",
+    description: "High-authority contextual link integrations and sponsored API tear-downs for B2B SaaS, DevTools, and RevOps platforms. Strict niche filter. 24h turnaround.",
     openGraph: {
         title: "Technical Partnerships & B2B Architecture Placements",
         description: "High-authority contextual link integrations and sponsored API tear-downs for B2B SaaS, DevTools, and RevOps platforms.",

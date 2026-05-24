@@ -27,7 +27,7 @@ export async function GET() {
     <atom:link href="${baseUrl}/feed.xml" rel="self" type="application/rss+xml" />`;
 
     posts.forEach((post) => {
-        const link = `${baseUrl}/blog/${post.slug.current}`;
+        const link = `${baseUrl}/blog/${post.slug.current}/`;
         rss += `
     <item>
       <title>${escapeXml(post.title)}</title>

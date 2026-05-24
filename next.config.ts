@@ -18,14 +18,14 @@ const nextConfig: NextConfig = {
       // Example: /2025/12/17/my-post -> /blog/my-post
       {
         source: '/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/:slug',
-        destination: '/blog/:slug',
+        destination: '/blog/:slug/',
         permanent: true,
       },
       // 2. Redirect old Month-based WP URLs
       // Example: /2025/12/my-post -> /blog/my-post
       {
         source: '/:year(\\d{4})/:month(\\d{2})/:slug',
-        destination: '/blog/:slug',
+        destination: '/blog/:slug/',
         permanent: true,
       },
       // 2b. Date Archive Fallbacks (when no post slug is present)
@@ -74,45 +74,45 @@ const nextConfig: NextConfig = {
       // 4. Redirect legacy portfolio page
       {
         source: '/who-is-alfaz-mahmud-rizve',
-        destination: '/portfolio',
+        destination: '/portfolio/',
         permanent: true,
       },
       // 5. Redirect root-level legacy blog posts (Catch-all for known old URLs)
       {
         source: '/:slug(n8n-global-error-handling|automate-personal-branding-with-n8n|facebook-lead-ads-automation-by-alfaz-mahmud-rizve|automation-operating-system-for-saas|how-to-build-an-api-with-n8n|what-is-n8n-and-how-to-set-it-up|n8n-tips-and-tricks-by-alfaz-mahmud-rizve|build-an-automated-rank-tracker-tool-with-n8n|n8n-data-privacy-security-guide|essential-n8n-core-nodes-by-alfaz-mahmud-rizve|n8n-slack-notifications-by-alfaz-mahmud-rizve|n8n-debugging-error-handling-basics|n8n-automation-service-by-alfaz-mahmud-rizve|lead-scoring-automation-with-alfaz-mahmud-rizve|capture-n8n-lead-data-from-wordpress-elementor|n8n-production-workflows-by-alfaz-mahmud-rizve|n8n-ai-receptionist|free-n8n-practical-guide|ai-automation-for-saas-agencies-blog|ai-automation-services-for-saas-agencies|professional-n8n-automation-services|n8n-workflow-design-best-practices|what-is-n8n-by-alfaz-mahmud-rizve|lead-enrichment-with-n8n|outstanding-ideas-for-youtube-shorts|outstanding-ideas-for-b2b-lead-generation|outstanding-ideas-for-saas-mvps|advanced-n8n-automation-the-ultimate-2025-seo-integration-masterclass|automated-content-research-by-alfaz-mahmud-rizve|automated-email-follow-up-n8n-brevo|n8n-google-analytics-4-pipeline)',
-        destination: '/blog/:slug',
+        destination: '/blog/:slug/',
         permanent: true,
       },
       // 5b. Redirect old static pages
       {
         source: '/terms-and-conditions',
-        destination: '/terms',
+        destination: '/terms/',
         permanent: true,
       },
       {
         source: '/termsandconditions',
-        destination: '/terms',
+        destination: '/terms/',
         permanent: true,
       },
       {
         source: '/contact-alfaz-mahmud-rizve',
-        destination: '/contact',
+        destination: '/contact/',
         permanent: true,
       },
       {
         source: '/about',
-        destination: '/portfolio',
+        destination: '/portfolio/',
         permanent: true,
       },
       {
         source: '/about-me',
-        destination: '/portfolio',
+        destination: '/portfolio/',
         permanent: true,
       },
       // 6. Redirect legacy /category/ root path to /blog/category/
       {
         source: '/category/:slug',
-        destination: '/blog/category/:slug',
+        destination: '/blog/category/:slug/',
         permanent: true,
       },
       // 6b. Fix: Redirect old double-dash category slug to clean single-dash

@@ -28,7 +28,7 @@ export const metadata = {
   openGraph: {
     title: "Alfaz Mahmud Rizve | RevOps & Automation Architect",
     description: "I eliminate manual bottlenecks for scaling agencies with autonomous n8n workflows, AI agents, and high-performance Next.js infrastructure.",
-    url: 'https://whoisalfaz.me',
+    url: 'https://whoisalfaz.me/',
     siteName: 'Alfaz Mahmud Rizve',
     locale: 'en_US',
     type: 'website',

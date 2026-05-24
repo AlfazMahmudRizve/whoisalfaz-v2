@@ -52,7 +52,7 @@ export default async function BlogPage() {
                             "itemListElement": posts.slice(0, 10).map((post, i) => ({
                                 "@type": "ListItem",
                                 "position": i + 1,
-                                "url": `https://whoisalfaz.me/blog/${post.slug}/`
+                                "url": `https://whoisalfaz.me/blog/${post.slug.current}/`
                             }))
                         }
                     })

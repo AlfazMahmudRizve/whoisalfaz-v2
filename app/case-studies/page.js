@@ -10,6 +10,20 @@ import DefaultContentFooter from '../../components/footers/DefaultContentFooter'
 export const metadata = {
     title: "Case Studies & Architecture Teardowns | Alfaz Mahmud Rizve",
     description: "Deep dive technical breakdowns of production automated systems, Next.js architecture, and AI agents.",
+    alternates: {
+        canonical: "https://whoisalfaz.me/case-studies/",
+    },
+    openGraph: {
+        title: "Case Studies & Architecture Teardowns | Alfaz Mahmud Rizve",
+        description: "Deep dive technical breakdowns of production automated systems, Next.js architecture, and AI agents.",
+        url: "https://whoisalfaz.me/case-studies/",
+        type: "website",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Case Studies & Architecture Teardowns | Alfaz Mahmud Rizve",
+        description: "Deep dive technical breakdowns of production automated systems, Next.js architecture, and AI agents.",
+    },
 };
 
 export default async function CaseStudiesPage() {
@@ -52,7 +66,7 @@ export default async function CaseStudiesPage() {
                         ) : (
                             <div className="grid md:grid-cols-2 gap-8">
                                 {posts.map((post, i) => (
-                                    <Link key={post.slug.current} href={`/blog/${post.slug.current}`} className="group">
+                                    <Link key={post.slug.current} href={`/blog/${post.slug.current}/`} className="group">
                                         <article style={{ animationDelay: `${i * 150}ms` }} className="animate-in fade-in zoom-in-95 duration-700 fill-mode-both h-full bg-white dark:bg-[#0a0a0a] border border-slate-200 dark:border-white/10 rounded-[2rem] overflow-hidden hover:border-blue-400/50 dark:hover:border-blue-500/50 transition-all hover:-translate-y-2 shadow-xl dark:shadow-sm">
                                             <div className="h-48 bg-slate-100 dark:bg-slate-800 relative overflow-hidden">
                                                 {post.image ? (

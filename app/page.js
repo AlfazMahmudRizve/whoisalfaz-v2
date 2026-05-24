@@ -406,7 +406,7 @@ export default async function Home() {
             </div>
 
             <h2 className="text-3xl md:text-4xl font-black text-slate-900 dark:text-white mb-3 tracking-tighter uppercase transition-colors duration-300">
-              <Link href="/about/alfaz-mahmud-rizve" className="hover:text-teal-600 dark:text-teal-400 transition-colors">
+              <Link href="/about/alfaz-mahmud-rizve/" className="hover:text-teal-600 dark:text-teal-400 transition-colors">
                 Alfaz Mahmud Rizve
               </Link>
             </h2>
@@ -434,7 +434,7 @@ export default async function Home() {
             {/* Tactile Action Buttons */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-2xl mx-auto">
               <Link 
-                href="/about/alfaz-mahmud-rizve" 
+                href="/about/alfaz-mahmud-rizve/" 
                 className="w-full sm:w-auto px-8 py-4.5 bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 text-slate-900 dark:text-white font-black rounded-2xl shadow-sm hover:bg-slate-50 dark:hover:bg-white/10 transition-all flex items-center justify-center"
               >
                 ABOUT ME
