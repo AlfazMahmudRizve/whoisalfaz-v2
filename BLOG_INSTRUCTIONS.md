@@ -75,3 +75,10 @@ Categories are separate Sanity documents. To assign a category via the script, y
 - 30 Days of n8n & Automation
 - Architecture Teardowns
 - Automation Tools
+
+## 7. Quality Control & Competitor Benchmarking
+
+To ensure every technical asset is a world-class, 10/10 portfolio piece, the writing engine must strictly adhere to the following workflow:
+1. **Initial Draft Writing:** Compile the deep-dive technical copy, code blocks, schemas, and formatting matching the guidelines.
+2. **Competitor Comparison:** Once the raw draft is generated, programmatically search and analyze the top 3 competing search results for the given title/intent. Identify their strengths, structural layout, technical specs, and any weaknesses or missing details in their tutorials.
+3. **Refinement & Gap Closure:** Refine and expand the draft to ensure your content is comprehensively superior. Close all identified technical gaps, add deeper real-world engineering context, verify code blocks, and enhance AEO/GEO semantic triggers before publishing the draft to Sanity.
