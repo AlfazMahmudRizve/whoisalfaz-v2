@@ -47,7 +47,7 @@ function buildJson() {
       ],
       affiliates: [
         'n8n',
-        'Apollo.io'
+        'apollo'
       ],
       body: bodyContent
     };

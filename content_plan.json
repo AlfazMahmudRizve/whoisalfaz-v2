@@ -5,7 +5,7 @@
     "slug": "n8n-apollo-lead-enrichment-pipeline",
     "description": "Step-by-step guide to automating B2B lead enrichment using n8n + Apollo.io API. Build a self-healing outbound data pipeline in under 2 hours.",
     "categories": ["Al3E26R37amzsHAqPF1yCU", "pJmrsKLAWC800vFHegUEU1"],
-    "affiliates": ["n8n", "Apollo.io"],
+    "affiliates": ["n8n", "apollo"],
     "imagePrompt": "Premium tech-minimalist UI/UX, glassmorphic dashboard card showing a live lead enrichment workflow with glowing cyan node graph connections, Apollo.io and n8n logos rendered as vector icons, digital grid-mesh background with deep black-navy base, cyber-cyan data streams and neon-purple node pulses, 3D render style with volumetric lighting and depth of field blur on background grid.",
     "status": "published",
     "publishedAt": "2026-05-26T00:25:00.000Z",
