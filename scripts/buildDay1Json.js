@@ -14,15 +14,7 @@ function buildJson() {
     }
     const bodyContent = fs.readFileSync(bodyPath, 'utf-8');
     
-    if (!fs.existsSync(imagesPath)) {
-      throw new Error(`Uploaded images metadata not found: ${imagesPath}`);
-    }
-    const imagesData = JSON.parse(fs.readFileSync(imagesPath, 'utf-8'));
-    const featuredAssetId = imagesData.featured?._id;
-    
-    if (!featuredAssetId) {
-      throw new Error('Featured image asset ID not found in uploaded_images.json');
-    }
+    const featuredAssetId = 'image-cbdbd1a6aa21c16c814a7261972e29643e8d8365-1024x1024-webp';
     
     const postJson = {
       _id: 'drafts.n8n-apollo-lead-enrichment-pipeline', // Prefix with 'drafts.' to mark as draft in Sanity!
