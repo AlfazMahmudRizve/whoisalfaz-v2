@@ -386,7 +386,7 @@ const nextConfig: NextConfig = {
 
     return [
       {
-        source: '/(.*)',
+        source: '/((?!studio|studio/).*)',
         headers: securityHeaders,
       },
       {
