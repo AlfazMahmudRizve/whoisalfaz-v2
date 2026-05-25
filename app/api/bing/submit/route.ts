@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
-import { getSanityPosts } from '@/lib/sanity.client';
+import { getSanityPosts, getSanityCategories } from '@/lib/sanity.client';
+import { serviceData } from '@/lib/serviceData';
 import { submitToBing, submitToIndexNow } from '@/lib/bing';
 
 // Explicitly set dynamic force so Next.js doesn't cache this route and always executes it
@@ -17,26 +18,43 @@ export async function GET(request: Request) {
 
         const baseUrl = 'https://whoisalfaz.me';
 
-        // 1. Static Routes (Same as sitemap.ts)
+        // 1. Static Routes (Core Pages - mirrors sitemap.ts)
         const staticRoutes = [
             '/',
             '/portfolio/',
             '/blog/',
+            '/blog/30-days-of-n8n/',
+            '/about/alfaz-mahmud-rizve/',
+            '/case-studies/',
             '/contact/',
             '/services/',
+            '/partners/',
             '/labs/',
             '/labs/roi/',
+            '/audit/',
+            '/terms/',
+            '/privacy-policy/',
         ].map(route => `${baseUrl}${route}`);
 
-        // 2. Dynamic Routes (Blog Posts)
+        // 2. Dynamic Service Pages (mirrors sitemap.ts)
+        const serviceSlugs = Object.keys(serviceData);
+        const serviceRoutes = serviceSlugs.map(slug => `${baseUrl}/services/${slug}/`);
+
+        // 3. Dynamic Blog Posts (mirrors sitemap.ts)
         const posts = await getSanityPosts();
         const blogRoutes = posts.map((post: { slug: { current: string } }) => `${baseUrl}/blog/${post.slug.current}/`);
 
-        const allUrls = [...staticRoutes, ...blogRoutes];
+        // 4. Dynamic Blog Categories (mirrors sitemap.ts)
+        const categories = await getSanityCategories();
+        const validCategories = categories.filter((cat: { count: number }) => cat.count > 0);
+        const categoryRoutes = validCategories.map((cat: { slug: { current: string } }) => `${baseUrl}/blog/category/${cat.slug.current}/`);
+
+        // Combine all canonical search engine indexable routes
+        const allUrls = [...staticRoutes, ...serviceRoutes, ...blogRoutes, ...categoryRoutes];
 
         console.log(`[Bing Submit] Starting submission for ${allUrls.length} URLs`);
 
-        // 3. Trigger IndexNow (handles Bing + Google automatically)
+        // Trigger IndexNow (handles Bing + Google automatically)
         const [bingResult, indexNowResult] = await Promise.allSettled([
             submitToBing(allUrls),
             submitToIndexNow(allUrls)
