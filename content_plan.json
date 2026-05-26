@@ -17,7 +17,7 @@
     "slug": "revops-automation-stack-saas-2026",
     "description": "A complete architecture teardown of the modern RevOps stack — from CRM sync to pipeline automation. Built for SaaS ops leaders and agency heads.",
     "categories": ["pJmrsKLAWC800vFHegUEU1"],
-    "affiliates": ["n8n", "monday.com", "Databox"],
+    "affiliates": ["n8n", "monday", "Databox"],
     "imagePrompt": "Premium tech-minimalist UI/UX, glassmorphic architecture diagram showing interconnected RevOps system layers — CRM, pipeline, reporting — with glowing vector node connectors, digital grid-mesh dark navy background, cyber-cyan and neon-purple gradient highlights on each system block, 3D render style with subtle lens flare on the central orchestration node.",
     "status": "pending",
     "publishedAt": null,

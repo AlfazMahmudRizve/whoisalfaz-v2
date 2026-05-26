@@ -263,7 +263,7 @@ export default async function Post({ params }) {
               prose-h2:text-3xl lg:prose-h2:text-4xl prose-h2:mt-24 prose-h2:mb-10
               prose-h3:text-2xl lg:prose-h3:text-3xl prose-h3:text-teal-600 dark:prose-h3:text-teal-400 prose-h3:mt-16 prose-h3:mb-8
               prose-p:mb-8 prose-p:leading-[1.8] prose-p:text-slate-600 dark:prose-p:text-slate-300 prose-p:font-medium
-              prose-a:text-teal-600 dark:prose-a:text-blue-400 prose-a:no-underline hover:prose-a:text-teal-500 dark:hover:prose-a:text-blue-300 hover:prose-a:underline
+              prose-a:text-teal-600 dark:prose-a:text-blue-400 prose-a:underline prose-a:underline-offset-4 prose-a:decoration-2 prose-a:decoration-teal-500/40 dark:prose-a:decoration-blue-400/40 prose-a:font-bold hover:prose-a:text-teal-500 dark:hover:prose-a:text-blue-300 hover:prose-a:decoration-teal-500 dark:hover:prose-a:decoration-blue-400
               prose-img:max-w-4xl prose-img:mx-auto prose-img:rounded-[2rem] prose-img:shadow-xl prose-img:my-16 prose-img:border prose-img:border-slate-200 dark:prose-img:border-white/10
               prose-li:text-slate-600 dark:prose-li:text-slate-300 prose-li:mb-4 prose-li:leading-[1.8] prose-li:font-medium
               prose-strong:text-slate-900 dark:prose-strong:text-white

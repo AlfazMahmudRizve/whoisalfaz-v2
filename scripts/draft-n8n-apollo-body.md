@@ -2,7 +2,7 @@ In modern outbound sales and marketing operations, **speed and data accuracy are
 
 To win in high-velocity markets, hyper-growing teams build a **highly optimized n8n lead enrichment pipeline** to automate B2B outbound workflows. 
 
-By combining the workflow orchestration power of **n8n** with the massive B2B database of the **Apollo.io API** and the cognitive intelligence of an LLM, you can construct a self-healing outbound machine that operates 24/7. *(If you want our team of experts to design and build this custom workflow for you, check out our [n8n Automation Services](/services/n8n-automation/))*. This article provides a comprehensive, step-by-step production blueprint to building a production-grade lead enrichment pipeline in under two hours.
+By combining the workflow orchestration power of **n8n** with the massive B2B database of the **Apollo.io API** and the cognitive intelligence of an LLM, you can construct a self-healing outbound machine that operates 24/7. *(Lead enrichment is just one layer of your GTM infrastructure. To see how to align your entire revenue tech stack, check out our architectural teardown of the [SaaS RevOps Automation Stack](/blog/revops-automation-stack-saas-2026/))*. *(If you want our team of experts to design and build this custom workflow for you, check out our [n8n Automation Services](/services/n8n-automation/))*. This article provides a comprehensive, step-by-step production blueprint to building a production-grade lead enrichment pipeline in under two hours.
 
 ---
 

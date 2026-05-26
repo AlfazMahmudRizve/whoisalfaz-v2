@@ -12,8 +12,9 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 export default function SeriesNavigation({ currentPost, allPosts }) {
   if (!currentPost?.categories?.length) return null;
 
-  // Find the primary series category (the first category)
-  const seriesCategory = currentPost.categories[0];
+  // Find the primary series category (must be a chronological series like "30 Days of n8n & Automation")
+  const seriesCategory = currentPost.categories.find(cat => cat.includes('30 Days'));
+  if (!seriesCategory) return null;
 
   // Get all posts in this category, sorted by date ascending (chronological order)
   const seriesPosts = allPosts
