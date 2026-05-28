@@ -1,6 +1,14 @@
 {
-  "featured": {
-    "_id": "image-9450470d1e5f9e1f89093f9aba9c733bf994cacc-1024x1024-webp",
-    "url": "https://cdn.sanity.io/images/gfd4n1nu/production/9450470d1e5f9e1f89093f9aba9c733bf994cacc-1024x1024.webp"
+  "pinecone_rag_featured": {
+    "_id": "image-07eb0d7215a8bf36acde7d1f3fba6e7dcfb8e309-1024x1024-webp",
+    "url": "https://cdn.sanity.io/images/gfd4n1nu/production/07eb0d7215a8bf36acde7d1f3fba6e7dcfb8e309-1024x1024.webp"
+  },
+  "pinecone_rag_body1": {
+    "_id": "image-4ab6bdd1ad855c171889a234880ec2198f3ea75d-1024x1024-webp",
+    "url": "https://cdn.sanity.io/images/gfd4n1nu/production/4ab6bdd1ad855c171889a234880ec2198f3ea75d-1024x1024.webp"
+  },
+  "pinecone_rag_body2": {
+    "_id": "image-82152c5895cc73629a34a6c413e539ba8991f14d-1024x1024-webp",
+    "url": "https://cdn.sanity.io/images/gfd4n1nu/production/82152c5895cc73629a34a6c413e539ba8991f14d-1024x1024.webp"
   }
 }

@@ -31,9 +31,9 @@
     "categories": ["Al3E26R37amzsHAqPF1yCU", "pJmrsKLAWC800vFHegUEU1"],
     "affiliates": ["n8n", "Pinecone"],
     "imagePrompt": "Premium tech-minimalist UI/UX, glassmorphic knowledge graph visualization showing vector embedding clusters with glowing cyan similarity links, Pinecone vector store rendered as a 3D crystalline data structure, digital grid-mesh dark background, neon-purple RAG pipeline flow arrows, deep depth-of-field 3D render style with ambient glow effects.",
-    "status": "pending",
-    "publishedAt": null,
-    "sanityId": null
+    "status": "published",
+    "publishedAt": "2026-05-28T15:47:00.000Z",
+    "sanityId": "pinecone-n8n-rag-knowledge-base-blueprint"
   },
   {
     "day": 4,
