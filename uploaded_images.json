@@ -22,5 +22,17 @@
   "manychat_n8n_body2": {
     "_id": "image-6443c12a0a5973c2f3eb6b0a31cf949d653c2cd9-1024x1024-webp",
     "url": "https://cdn.sanity.io/images/gfd4n1nu/production/6443c12a0a5973c2f3eb6b0a31cf949d653c2cd9-1024x1024.webp"
+  },
+  "aisdr_vs_human_featured": {
+    "_id": "image-fa0473a725c4206c74cbd9a3a80334294fb6d925-1024x1024-webp",
+    "url": "https://cdn.sanity.io/images/gfd4n1nu/production/fa0473a725c4206c74cbd9a3a80334294fb6d925-1024x1024.webp"
+  },
+  "aisdr_vs_human_body1": {
+    "_id": "image-c65fbf687a5c14c624b1b3cf83fad77fce552318-1024x1024-webp",
+    "url": "https://cdn.sanity.io/images/gfd4n1nu/production/c65fbf687a5c14c624b1b3cf83fad77fce552318-1024x1024.webp"
+  },
+  "aisdr_vs_human_body2": {
+    "_id": "image-e9fca2eadecf3e333dd5d80ee62470d92f72ac87-1024x1024-webp",
+    "url": "https://cdn.sanity.io/images/gfd4n1nu/production/e9fca2eadecf3e333dd5d80ee62470d92f72ac87-1024x1024.webp"
   }
 }

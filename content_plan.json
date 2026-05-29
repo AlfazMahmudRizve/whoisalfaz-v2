@@ -55,9 +55,9 @@
     "categories": ["pJmrsKLAWC800vFHegUEU1"],
     "affiliates": ["AiSDR, Inc.", "Apollo.io"],
     "imagePrompt": "Premium tech-minimalist UI/UX, glassmorphic split comparison dashboard card — left side shows human SDR workflow in amber, right side shows autonomous AI SDR workflow in cyber-cyan, glowing vector performance metric bars, digital grid-mesh dark navy background, neon-purple divider with performance delta highlight, 3D render style with subtle volumetric lighting.",
-    "status": "pending",
-    "publishedAt": null,
-    "sanityId": null
+    "status": "published",
+    "publishedAt": "2026-05-29T20:27:00.000Z",
+    "sanityId": "aisdr-vs-human-sdr-performance-teardown"
   },
   {
     "day": 6,
