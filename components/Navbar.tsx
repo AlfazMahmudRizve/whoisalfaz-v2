@@ -114,7 +114,24 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Menu & Theme Toggle */}
-        <div className="flex items-center gap-4 md:hidden">
+        <div className="flex items-center gap-2 sm:gap-4 md:hidden">
+          <Link
+            href="/audit/"
+            onClick={() => {
+              if (typeof window !== 'undefined') {
+                const globalWindow = window as unknown as Record<string, unknown>;
+                if (typeof globalWindow.gtag === 'function') {
+                  (globalWindow.gtag as (...args: unknown[]) => void)('event', 'click_free_audit_nav_tablet', {
+                    event_category: 'Navigation',
+                    event_label: 'Free Audit Tablet Header'
+                  });
+                }
+              }
+            }}
+            className="hidden sm:inline-flex px-3.5 py-1.5 bg-teal-500/10 text-teal-600 dark:text-teal-400 border border-teal-500/20 text-[10px] font-bold rounded-full hover:bg-teal-500/20 transition-all uppercase tracking-wider"
+          >
+            Free Audit
+          </Link>
           <button
             onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
             className="p-1.5 text-slate-600 dark:text-slate-400 w-8 h-8 flex items-center justify-center"
@@ -222,8 +239,26 @@ export default function Navbar() {
               ))}
               <div className="h-px bg-slate-200 dark:bg-white/10 my-2 mx-2"></div>
               <Link
+                href="/audit/"
+                onClick={() => {
+                  setIsOpen(false);
+                  if (typeof window !== 'undefined') {
+                    const globalWindow = window as unknown as Record<string, unknown>;
+                    if (typeof globalWindow.gtag === 'function') {
+                      (globalWindow.gtag as (...args: unknown[]) => void)('event', 'click_free_audit_nav_mobile', {
+                        event_category: 'Navigation',
+                        event_label: 'Free Audit Mobile Menu'
+                      });
+                    }
+                  }
+                }}
+                className="block px-4 py-3 text-center bg-teal-500/10 text-teal-600 dark:text-teal-400 border border-teal-500/20 text-xs font-bold rounded-xl hover:bg-teal-500/20 transition-all uppercase tracking-wider mx-2 mb-2"
+              >
+                Free Audit
+              </Link>
+              <Link
                 href="/contact/"
-                className="block px-4 py-3 text-center bg-slate-900 dark:bg-white text-white dark:text-black font-bold rounded-xl hover:bg-slate-800 dark:hover:bg-slate-200 transition-colors mx-2 mb-2"
+                className="block px-4 py-3 text-center bg-slate-900 dark:bg-white text-white dark:text-black text-xs font-bold rounded-xl hover:bg-slate-800 dark:hover:bg-slate-200 transition-colors mx-2 mb-2"
                 onClick={() => setIsOpen(false)}
               >
                 Work With Me
