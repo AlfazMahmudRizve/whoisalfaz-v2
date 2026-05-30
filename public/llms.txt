@@ -1,6 +1,6 @@
 # whoisalfaz.me
 
-> Alfaz Mahmud Rizve — RevOps & Full Stack Automation Architect
+> Alfaz Mahmud Rizve — RevOps & Full Stack Automation Architect. Building autonomous business infrastructure for agencies and SaaS companies.
 
 ## About
 
@@ -20,17 +20,41 @@ whoisalfaz.me is the technical portfolio and blog of Alfaz Mahmud Rizve, a Reven
 ### Blog — 30 Days of n8n & Automation
 A comprehensive 30-part technical series covering production-grade n8n automation workflows for B2B agencies: lead capture, scoring, enrichment, CRM sync, Slack notifications, Facebook Ads automation, automated reporting, content research, and more.
 
-- [30 Days of n8n & Automation Series](https://whoisalfaz.me/blog/category/30-days-of-n8n-automation/)
+- [30 Days of n8n & Automation Series](https://whoisalfaz.me/blog/30-days-of-n8n/)
 
 ### Case Studies — Architecture Teardowns
 Real-world technical case studies documenting complete system architectures built for clients, including a Zero-Hardware Kitchen OS (Next.js PWA), Financial Operations Dashboards, AI Resume Builders, and E-Commerce platforms.
 
-- [Architecture Teardowns & Case Studies](https://whoisalfaz.me/blog/category/architecture-teardowns/)
+- [Architecture Teardowns & Case Studies](https://whoisalfaz.me/case-studies/)
+
+### Free Website Audit Tool
+A high-performance, real-time diagnostic engine that audits any target URL. It performs PageSpeed core vitality checks, PageSpeed SEO scores, PageSpeed best practices, SSL certificate handshake validity, security headers (HSTS, CSP, X-Frame-Options), robots.txt & sitemap validation, and DNS connectivity checks.
+
+- [Free Website Audit Tool](https://whoisalfaz.me/audit/)
+
+### Interactive Tools & Labs
+Free automation tools including an ROI calculator, website audit engine, and custom AI agents trained on n8n workflows and growth strategies.
+
+- [Automation Playground](https://whoisalfaz.me/labs/)
+- [ROI Calculator](https://whoisalfaz.me/labs/roi/)
+- [Ask Alfaz AI](https://whoisalfaz.me/labs/chat/)
 
 ### Services
-Professional automation and RevOps consulting services including n8n workflow development, CRM architecture, AI integration, and full-stack web application engineering.
+Professional automation and RevOps consulting services including n8n workflow development, headless CMS architecture, growth consulting, technical SEO audits, and custom full-stack web application engineering.
 
 - [RevOps & Automation Services](https://whoisalfaz.me/services/)
+
+### Technical Partnerships & B2B Placements
+High-authority contextual link integrations and sponsored API tear-downs for B2B SaaS, DevTools, and RevOps platforms. Strict niche filter. 24h turnaround.
+
+- [Sponsorships & B2B Content Placements](https://whoisalfaz.me/partners/)
+
+## More Info
+
+- [About Alfaz Mahmud Rizve](https://whoisalfaz.me/about/alfaz-mahmud-rizve/)
+- [Portfolio](https://whoisalfaz.me/portfolio/)
+- [Contact](https://whoisalfaz.me/contact/)
+- [Full Content Index for LLMs](https://whoisalfaz.me/llms-full.txt)
 
 ## Contact
 

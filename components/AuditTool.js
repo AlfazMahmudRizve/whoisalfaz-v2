@@ -297,22 +297,168 @@ export default function AuditTool() {
 
         {status === 'results' && results && (
           <div className="w-full space-y-5 animate-in fade-in slide-in-from-bottom-4 duration-500">
-            {/* Score Overview */}
-            <div className="bg-white/70 dark:bg-white/[0.02] backdrop-blur-xl border border-slate-200/50 dark:border-white/10 rounded-3xl md:rounded-[2.5rem] p-5 sm:p-6 relative overflow-hidden transition-colors duration-300 shadow-[0_20px_40px_rgba(0,0,0,0.03)] dark:shadow-none">
+            {/* Score Overview Bento Dashboard */}
+            <div className="bg-white/70 dark:bg-[#1e293b]/40 backdrop-blur-xl border border-slate-200/50 dark:border-white/10 rounded-3xl md:rounded-[2.5rem] p-6 sm:p-8 shadow-[0_20px_50px_rgba(0,0,0,0.03)] dark:shadow-[0_20px_50px_rgba(0,0,0,0.25)] relative overflow-hidden transition-colors duration-300">
               <div className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-teal-400 via-purple-500 to-teal-400 dark:from-blue-500/40 dark:via-purple-500/40 dark:to-teal-500/40" />
-              <div className="flex flex-col sm:flex-row items-center gap-5 sm:gap-6">
-                <ScoreRing score={results.overallScore} size={84} strokeWidth={5} />
-                <div className="flex-1 text-center sm:text-left space-y-2">
-                  <div>
-                    <span className={`text-xl sm:text-2xl font-black uppercase tracking-tight italic ${getScoreColor(results.overallScore)}`}>Grade {results.grade}</span>
-                    <p className="text-slate-500 dark:text-slate-400 text-[10px] font-mono mt-0.5 truncate font-bold">{results.url}</p>
-                  </div>
-                  <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2">
-                    {results.checks.filter(c => c.status === 'pass').length > 0 && <span className="flex items-center gap-1 text-[11px] sm:text-xs font-bold text-green-600 dark:text-green-400 bg-green-500/10 border border-green-500/20 px-2.5 py-0.5 rounded-full"><CheckCircle size={10} className="sm:w-3 sm:h-3" />{results.checks.filter(c => c.status === 'pass').length} Passed</span>}
-                    {results.checks.filter(c => c.status === 'warn').length > 0 && <span className="flex items-center gap-1 text-[11px] sm:text-xs font-bold text-amber-600 dark:text-amber-400 bg-amber-500/10 border border-amber-500/20 px-2.5 py-0.5 rounded-full"><AlertTriangle size={10} className="sm:w-3 sm:h-3" />{results.checks.filter(c => c.status === 'warn').length} Warn</span>}
-                    {results.checks.filter(c => c.status === 'fail').length > 0 && <span className="flex items-center gap-1 text-[11px] sm:text-xs font-bold text-red-600 dark:text-red-400 bg-red-500/10 border border-red-500/20 px-2.5 py-0.5 rounded-full"><AlertCircle size={10} className="sm:w-3 sm:h-3" />{results.checks.filter(c => c.status === 'fail').length} Failed</span>}
-                  </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+                
+                {/* 1. LEFT BOX: Individual Parameters Checked (Donut Chart) */}
+                <div className="md:col-span-4 flex flex-col items-center justify-center p-4 bg-slate-50/50 dark:bg-white/[0.01] border border-slate-100 dark:border-white/5 rounded-2xl md:rounded-3xl h-full min-h-[170px]">
+                  <span className="text-[10px] font-black uppercase tracking-widest text-slate-400 dark:text-slate-500 mb-4 block text-center font-bold">Parameters Checked</span>
+                  
+                  {(() => {
+                    const allDetails = results.checks.flatMap(c => c.details);
+                    let detailPassed = 0;
+                    let detailFlagged = 0;
+                    allDetails.forEach(detail => {
+                      const parsed = parseDetail(detail);
+                      if (parsed.status === 'pass') detailPassed++;
+                      else detailFlagged++;
+                    });
+                    const totalDetails = allDetails.length || 1;
+                    
+                    // Donut dimensions
+                    const donutRadius = 26;
+                    const donutStroke = 6;
+                    const donutCircum = 2 * Math.PI * donutRadius;
+                    const passedOffset = donutCircum - (detailPassed / totalDetails) * donutCircum;
+                    
+                    return (
+                      <div className="flex items-center gap-5 w-full justify-center">
+                        <div className="relative inline-flex items-center justify-center flex-shrink-0" style={{ width: 72, height: 72 }}>
+                          {/* Shadow glow */}
+                          <div className="absolute inset-1.5 rounded-full bg-emerald-500/5 blur-md" />
+                          <svg width={72} height={72} className="-rotate-90">
+                            {/* Background track */}
+                            <circle cx={36} cy={36} r={donutRadius} fill="none" stroke="currentColor" className="text-slate-100 dark:text-white/5" strokeWidth={donutStroke} />
+                            {/* Passed segment */}
+                            <circle cx={36} cy={36} r={donutRadius} fill="none" stroke="#10b981" strokeWidth={donutStroke} strokeDasharray={donutCircum} strokeDashoffset={passedOffset} strokeLinecap="round" style={{ transition: 'stroke-dashoffset 1s ease-in-out' }} />
+                          </svg>
+                          <div className="absolute inset-0 flex flex-col items-center justify-center">
+                            <span className="text-base font-black text-slate-900 dark:text-white leading-none">{totalDetails}</span>
+                            <span className="text-[7px] text-slate-400 dark:text-slate-500 uppercase tracking-widest font-black mt-0.5">Total</span>
+                          </div>
+                        </div>
+                        
+                        <div className="space-y-1.5 text-xs">
+                          <div className="flex items-center gap-1.5">
+                            <span className="w-2.5 h-2.5 rounded-full bg-[#10b981]" />
+                            <span className="text-slate-500 dark:text-slate-400 font-bold">Passed:</span>
+                            <span className="font-black text-slate-800 dark:text-slate-200">{detailPassed}</span>
+                          </div>
+                          <div className="flex items-center gap-1.5">
+                            <span className="w-2.5 h-2.5 rounded-full bg-[#f59e0b]" />
+                            <span className="text-slate-500 dark:text-slate-400 font-bold">Flagged:</span>
+                            <span className="font-black text-slate-800 dark:text-slate-200">{detailFlagged}</span>
+                          </div>
+                        </div>
+                      </div>
+                    );
+                  })()}
                 </div>
+
+                {/* 2. CENTER BOX: Health Score Semi-Circle Gauge */}
+                <div className="md:col-span-4 flex flex-col items-center justify-center p-4 bg-slate-50/50 dark:bg-white/[0.01] border border-slate-100 dark:border-white/5 rounded-2xl md:rounded-3xl h-full min-h-[170px] relative">
+                  <span className="text-[10px] font-black uppercase tracking-widest text-slate-400 dark:text-slate-500 mb-2 block text-center font-bold">Health Score</span>
+                  
+                  {(() => {
+                    const score = results.overallScore;
+                    const arcLength = 125.66; // Half of 2 * PI * 40
+                    const arcOffset = arcLength - (score / 100) * arcLength;
+                    const gaugeStopColors = score >= 80 
+                      ? ['#14b8a6', '#10b981'] // Teal to Emerald
+                      : score >= 50 
+                        ? ['#f59e0b', '#f97316'] // Amber to Orange
+                        : ['#f43f5e', '#ef4444']; // Rose to Red
+                    
+                    const scoreStatus = score >= 90 ? 'Excellent' : score >= 80 ? 'Good' : score >= 50 ? 'Needs Work' : 'Critical';
+                    const badgeStyles = score >= 90 
+                      ? 'bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20' 
+                      : score >= 80 
+                        ? 'bg-teal-500/10 text-teal-600 dark:text-teal-400 border border-teal-500/20'
+                        : score >= 50 
+                          ? 'bg-amber-500/10 text-amber-600 dark:text-amber-400 border border-amber-500/20'
+                          : 'bg-rose-500/10 text-rose-600 dark:text-rose-400 border border-rose-500/20';
+
+                    return (
+                      <div className="flex flex-col items-center justify-center w-full">
+                        <div className="relative inline-flex items-center justify-center flex-shrink-0" style={{ width: 120, height: 65 }}>
+                          {/* SVG Arch */}
+                          <svg width={120} height={65} viewBox="0 0 100 55" className="overflow-visible">
+                            <defs>
+                              <linearGradient id="health-gauge-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" stopColor={gaugeStopColors[0]} />
+                                <stop offset="100%" stopColor={gaugeStopColors[1]} />
+                              </linearGradient>
+                            </defs>
+                            {/* Track path */}
+                            <path d="M 10 50 A 40 40 0 0 1 90 50" fill="none" stroke="currentColor" className="text-slate-100 dark:text-white/5" strokeWidth="8" strokeLinecap="round" />
+                            {/* Progress path */}
+                            <path d="M 10 50 A 40 40 0 0 1 90 50" fill="none" stroke="url(#health-gauge-grad)" strokeWidth="8" strokeLinecap="round" strokeDasharray={arcLength} strokeDashoffset={arcOffset} style={{ transition: 'stroke-dashoffset 1.5s ease-in-out' }} />
+                          </svg>
+                          
+                          {/* Text overlay in the absolute middle */}
+                          <div className="absolute top-[22px] flex flex-col items-center justify-center leading-none">
+                            <span className="text-2xl font-black text-slate-900 dark:text-white tracking-tighter">{score}</span>
+                            <span className={`text-[8px] font-black uppercase px-2 py-0.5 rounded-full mt-1.5 tracking-wider ${badgeStyles}`}>{scoreStatus}</span>
+                          </div>
+                        </div>
+                        
+                        <p className="text-[8px] text-slate-400 dark:text-slate-500 text-center font-bold leading-normal max-w-[180px] mt-2 font-mono truncate">{results.url}</p>
+                      </div>
+                    );
+                  })()}
+                </div>
+
+                {/* 3. RIGHT BOX: Audit Check Categories / Progress bars */}
+                <div className="md:col-span-4 flex flex-col p-4 bg-slate-50/50 dark:bg-white/[0.01] border border-slate-100 dark:border-white/5 rounded-2xl md:rounded-3xl h-full min-h-[170px] justify-center">
+                  <span className="text-[10px] font-black uppercase tracking-widest text-slate-400 dark:text-slate-500 mb-3.5 block text-center md:text-left font-bold">Audit Categories</span>
+                  
+                  {(() => {
+                    const passCount = results.checks.filter(c => c.status === 'pass').length;
+                    const warnCount = results.checks.filter(c => c.status === 'warn').length;
+                    const failCount = results.checks.filter(c => c.status === 'fail').length;
+                    
+                    return (
+                      <div className="space-y-2.5">
+                        {/* Passed checks */}
+                        <div className="space-y-1">
+                          <div className="flex justify-between items-center text-[10px] font-bold">
+                            <span className="text-slate-500 dark:text-slate-400 uppercase tracking-wider">Passed Categories</span>
+                            <span className="text-emerald-500 font-black">{passCount} / 6</span>
+                          </div>
+                          <div className="w-full h-1.5 bg-slate-100 dark:bg-white/5 rounded-full overflow-hidden">
+                            <div className="h-full bg-emerald-500 rounded-full transition-all duration-1000" style={{ width: `${(passCount / 6) * 100}%` }} />
+                          </div>
+                        </div>
+
+                        {/* Warnings */}
+                        <div className="space-y-1">
+                          <div className="flex justify-between items-center text-[10px] font-bold">
+                            <span className="text-slate-500 dark:text-slate-400 uppercase tracking-wider">Warnings</span>
+                            <span className="text-amber-500 font-black">{warnCount} / 6</span>
+                          </div>
+                          <div className="w-full h-1.5 bg-slate-100 dark:bg-white/5 rounded-full overflow-hidden">
+                            <div className="h-full bg-amber-500 rounded-full transition-all duration-1000" style={{ width: `${(warnCount / 6) * 100}%` }} />
+                          </div>
+                        </div>
+
+                        {/* Failed checks */}
+                        <div className="space-y-1">
+                          <div className="flex justify-between items-center text-[10px] font-bold">
+                            <span className="text-slate-500 dark:text-slate-400 uppercase tracking-wider">Crit. Issues</span>
+                            <span className="text-rose-500 font-black">{failCount} / 6</span>
+                          </div>
+                          <div className="w-full h-1.5 bg-slate-100 dark:bg-white/5 rounded-full overflow-hidden">
+                            <div className="h-full bg-rose-500 rounded-full transition-all duration-1000" style={{ width: `${(failCount / 6) * 100}%` }} />
+                          </div>
+                        </div>
+                      </div>
+                    );
+                  })()}
+                </div>
+
               </div>
             </div>
 

@@ -8,6 +8,10 @@
 
 whoisalfaz.me is the technical portfolio and blog of Alfaz Mahmud Rizve, a Revenue Operations (RevOps) architect specializing in autonomous business infrastructure. The site documents real-world automation architectures, case studies, and technical tutorials for agencies and SaaS companies.
 
+- [About Alfaz Mahmud Rizve](https://whoisalfaz.me/about/alfaz-mahmud-rizve/): RevOps automation architect and full-stack engineer. Credentials, client outcomes, and engineering philosophy.
+- [Portfolio](https://whoisalfaz.me/portfolio/): Business growth strategies and the automated infrastructure designed to execute them.
+- [Contact](https://whoisalfaz.me/contact/): Book a strategy call or request a technical SEO audit.
+
 ## Core Expertise
 
 - Revenue Operations (RevOps) Architecture
@@ -19,13 +23,30 @@ whoisalfaz.me is the technical portfolio and blog of Alfaz Mahmud Rizve, a Reven
 
 ## Services
 
-- n8n Workflow Development: https://whoisalfaz.me/services/n8n-automation/
-- CRM & RevOps Architecture: https://whoisalfaz.me/services/revops-consulting/
-- Full Stack Web Development: https://whoisalfaz.me/services/web-development/
-- AI Integration & Agents: https://whoisalfaz.me/services/ai-integration/
+- [n8n Workflow Automation](https://whoisalfaz.me/services/n8n-automation/): Self-healing workflows that qualify leads, sync CRM, and save 20+ hours a week. Lead enrichment, auto-generated PDF reports, two-way CRM sync. Starting at $750.
+- [Headless CMS Architecture](https://whoisalfaz.me/services/headless-architecture/): Next.js frontends decoupled from content backends for sub-second load times and perfect Core Web Vitals. Global edge caching and bank-grade security. Starting at $1,500.
+- [Growth Consulting](https://whoisalfaz.me/services/growth-consulting/): Operational bottleneck analysis, tech stack audits, SOP development, and revenue leak identification. $200/hr.
+- [Technical SEO Audits](https://whoisalfaz.me/services/technical-seo/): Forensic code-level analysis of crawlability, JavaScript rendering, canonical tags, and internal linking. 50-point health check with prioritized action plan. Starting at $350.
+- [Custom Full-Stack Applications](https://whoisalfaz.me/services/custom-full-stack/): Bespoke internal portals, secure client dashboards, and real-time data processing apps built with Next.js. Starting at $2,500.
+
+## Interactive Tools & Labs
+
+- [Automation Playground](https://whoisalfaz.me/labs/): Free tools to calculate ROI, audit websites, and test custom AI agents.
+- [Free Website Audit Tool](https://whoisalfaz.me/audit/): Real-time diagnostics for PageSpeed core vitals, SSL certificates, security headers (HSTS, CSP, X-Frame-Options), robots.txt, sitemap validation, and DNS connectivity.
+- [ROI Calculator](https://whoisalfaz.me/labs/roi/): Calculate exactly how much money you can save by automating manual tasks.
+- [Ask Alfaz AI](https://whoisalfaz.me/labs/chat/): Custom AI agent trained on n8n workflows and growth strategies.
+- [CashOps Financial Dashboard](https://cashops.whoisalfaz.me): Developer-focused personal finance dashboard with real-time telemetry and zero-latency data visualization.
+- [CareerOps AI Resume Builder](https://careerops.whoisalfaz.me): Privacy-first resume optimization with AI-powered role matching.
+
+## Technical Partnerships
+
+- [Sponsorships & B2B Content Placements](https://whoisalfaz.me/partners/): High-authority contextual link integrations ($80–$150) and sponsored API tear-downs ($300–$500) for B2B SaaS, DevTools, and RevOps platforms. Strict niche filter — B2B tech and SaaS only.
 
 ## Blog — 30 Days of n8n & Automation (Complete Series)
 
+- [AiSDR vs Human SDR Performance Teardown (Day 5)](https://whoisalfaz.me/blog/aisdr-vs-human-sdr-performance-teardown/): Performance comparison between AI-powered SDR tools and human sales development representatives.
+- [ManyChat n8n Async Timeout Fix (Day 4)](https://whoisalfaz.me/blog/manychat-n8n-async-timeout-fix/): Solving ManyChat webhook timeout issues with asynchronous n8n workflow architecture.
+- [Pinecone n8n RAG Knowledge Base Blueprint (Day 3)](https://whoisalfaz.me/blog/pinecone-n8n-rag-knowledge-base-blueprint/): Build an n8n RAG pipeline that reads private documents, stores vectors in Pinecone, and answers with source accuracy.
 - [What is n8n and How to Set It Up (Day 3)](https://whoisalfaz.me/blog/what-is-n8n-and-how-to-set-it-up/): Architectural differences between n8n Cloud and Self-Hosted deployments, Docker, Postgres, and Redis scaling.
 - [n8n Workflow Design Best Practices (Day 4)](https://whoisalfaz.me/blog/n8n-workflow-design-best-practices/): How to build error paths so your automations are reliable, crash-proof, and easy to scale.
 - [Picking Your First 3 Automations (Day 5)](https://whoisalfaz.me/blog/automations-for-saas-and-agencies/): The exact framework SaaS and agencies use to pick their first 3 revenue-generating automations.
