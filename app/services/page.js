@@ -146,9 +146,9 @@ export default function ServicesPage() {
                 </p>
 
                 {/* Audit Tool Embed */}
-                <div className="bg-white dark:bg-[#0f172a] border border-slate-200 dark:border-slate-800 p-8 rounded-[3rem] shadow-2xl dark:shadow-2xl max-w-6xl mx-auto relative overflow-hidden transition-colors duration-300">
+                <div className="bg-white dark:bg-[#0f172a] border border-slate-200 dark:border-slate-800 p-4 sm:p-6 md:p-8 rounded-3xl md:rounded-[3rem] shadow-2xl dark:shadow-2xl max-w-6xl mx-auto relative overflow-hidden transition-colors duration-300">
                     <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-teal-400 via-emerald-500 to-teal-400 dark:from-emerald-600 dark:via-blue-500 dark:to-purple-500"></div>
-                    <h3 className="text-slate-900 dark:text-white font-black text-xl mb-8 uppercase tracking-tight">Receive Free Audit</h3>
+                    <h3 className="text-slate-900 dark:text-white font-black text-lg sm:text-xl mb-6 sm:mb-8 uppercase tracking-tight">Receive Free Audit</h3>
                     <div className="audit-tool-wrapper">
                         <AuditTool />
                     </div>
