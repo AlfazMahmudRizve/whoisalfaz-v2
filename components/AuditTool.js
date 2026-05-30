@@ -25,21 +25,43 @@ const checkIcons = {
 };
 
 // SVG Score Ring
-function ScoreRing({ score, size = 130, strokeWidth = 8 }) {
+function ScoreRing({ score, size = 100, strokeWidth = 6 }) {
   const radius = (size - strokeWidth) / 2;
   const circumference = 2 * Math.PI * radius;
   const offset = circumference - (score / 100) * circumference;
-  const color = score >= 80 ? '#22c55e' : score >= 50 ? '#f59e0b' : '#ef4444';
+  
+  // Dynamic Gradient mapping
+  const gradientId = `score-grad-${score}`;
+  const stopColors = score >= 80 
+    ? ['#14b8a6', '#10b981'] // Teal to Emerald
+    : score >= 50 
+      ? ['#f59e0b', '#f97316'] // Amber to Orange
+      : ['#f43f5e', '#ef4444']; // Rose to Red
+      
+  const glowColor = score >= 80 
+    ? 'rgba(16,185,129,0.15)' 
+    : score >= 50 
+      ? 'rgba(245,158,11,0.15)' 
+      : 'rgba(239,68,68,0.15)';
 
   return (
-    <div className="relative inline-flex items-center justify-center" style={{ width: size, height: size }}>
-      <svg width={size} height={size} className="-rotate-90">
-        <circle cx={size / 2} cy={size / 2} r={radius} fill="none" stroke="currentColor" className="text-slate-200 dark:text-white/5" strokeWidth={strokeWidth} />
-        <circle cx={size / 2} cy={size / 2} r={radius} fill="none" stroke={color} strokeWidth={strokeWidth} strokeDasharray={circumference} strokeDashoffset={offset} strokeLinecap="round" style={{ transition: 'stroke-dashoffset 1.2s ease-out' }} />
+    <div className="relative inline-flex items-center justify-center flex-shrink-0" style={{ width: size, height: size }}>
+      {/* Ambient Backing Glow */}
+      <div className="absolute inset-2 rounded-full blur-xl transition-all duration-1000" style={{ backgroundColor: glowColor }} />
+      
+      <svg width={size} height={size} className="-rotate-90 relative z-10">
+        <defs>
+          <linearGradient id={gradientId} x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor={stopColors[0]} />
+            <stop offset="100%" stopColor={stopColors[1]} />
+          </linearGradient>
+        </defs>
+        <circle cx={size / 2} cy={size / 2} r={radius} fill="none" stroke="currentColor" className="text-slate-100 dark:text-white/5" strokeWidth={strokeWidth} />
+        <circle cx={size / 2} cy={size / 2} r={radius} fill="none" stroke={`url(#${gradientId})`} strokeWidth={strokeWidth} strokeDasharray={circumference} strokeDashoffset={offset} strokeLinecap="round" style={{ transition: 'stroke-dashoffset 1.5s cubic-bezier(0.4, 0, 0.2, 1)' }} />
       </svg>
-      <div className="absolute inset-0 flex flex-col items-center justify-center">
-        <span className="text-4xl font-black text-slate-900 dark:text-white">{score}</span>
-        <span className="text-[10px] text-slate-500 uppercase tracking-widest font-bold">/ 100</span>
+      <div className="absolute inset-0 flex flex-col items-center justify-center z-20">
+        <span className="text-3xl font-black text-slate-900 dark:text-white tracking-tighter">{score}</span>
+        <span className="text-[9px] text-slate-400 dark:text-slate-500 uppercase tracking-widest font-black -mt-0.5">/ 100</span>
       </div>
     </div>
   );
@@ -128,28 +150,34 @@ export default function AuditTool() {
     }
   };
 
-  const getStatusBorderColor = (s) => {
-    if (s === 'pass') return 'border-green-500/15 hover:border-green-500/30';
-    if (s === 'warn') return 'border-amber-500/15 hover:border-amber-500/30';
-    return 'border-red-500/15 hover:border-red-500/30';
+  const getStatusBorderColor = (s, isOpen) => {
+    if (s === 'pass') return isOpen 
+      ? 'border-green-500/30 bg-green-500/[0.02] dark:bg-green-500/[0.01] shadow-[0_8px_30px_rgba(16,185,129,0.06)]' 
+      : 'border-green-500/10 dark:border-green-500/5 hover:border-green-500/30 hover:shadow-[0_8px_20px_rgba(16,185,129,0.04)]';
+    if (s === 'warn') return isOpen 
+      ? 'border-amber-500/30 bg-amber-500/[0.02] dark:bg-amber-500/[0.01] shadow-[0_8px_30px_rgba(245,158,11,0.06)]' 
+      : 'border-amber-500/10 dark:border-amber-500/5 hover:border-amber-500/30 hover:shadow-[0_8px_20px_rgba(245,158,11,0.04)]';
+    return isOpen 
+      ? 'border-red-500/30 bg-red-500/[0.02] dark:bg-red-500/[0.01] shadow-[0_8px_30px_rgba(239,68,68,0.06)]' 
+      : 'border-red-500/10 dark:border-red-500/5 hover:border-red-500/30 hover:shadow-[0_8px_20px_rgba(239,68,68,0.04)]';
   };
 
   const getIconBg = (s) => {
-    if (s === 'pass') return 'bg-green-500/10 text-green-500 dark:text-green-400';
-    if (s === 'warn') return 'bg-amber-500/10 text-amber-500 dark:text-amber-400';
-    return 'bg-red-500/10 text-red-500 dark:text-red-400';
+    if (s === 'pass') return 'bg-green-500/10 text-green-500 dark:text-green-400 border border-green-500/10';
+    if (s === 'warn') return 'bg-amber-500/10 text-amber-500 dark:text-amber-400 border border-amber-500/10';
+    return 'bg-red-500/10 text-red-500 dark:text-red-400 border border-red-500/10';
   };
 
   const getScoreColor = (score) => {
-    if (score >= 80) return 'text-green-500 dark:text-green-400';
+    if (score >= 80) return 'text-green-500 dark:text-teal-400';
     if (score >= 50) return 'text-amber-500 dark:text-amber-400';
-    return 'text-red-500 dark:text-red-400';
+    return 'text-red-500 dark:text-rose-400';
   };
 
   return (
     <div className="grid lg:grid-cols-[1fr_1.3fr] gap-8 items-start w-full transition-colors duration-300">
       {/* LEFT COLUMN: FORM */}
-      <div className="w-full bg-white dark:bg-[#1e293b]/50 backdrop-blur-md border border-slate-200 dark:border-white/10 rounded-[2.5rem] p-8 shadow-xl dark:shadow-2xl relative overflow-hidden group transition-colors duration-300">
+      <div className="w-full bg-white/70 dark:bg-[#1e293b]/40 backdrop-blur-xl border border-slate-200/50 dark:border-white/10 rounded-[2.5rem] p-8 shadow-[0_20px_50px_rgba(0,0,0,0.04)] dark:shadow-[0_20px_50px_rgba(0,0,0,0.3)] relative overflow-hidden group transition-all duration-300 hover:shadow-[0_20px_60px_rgba(0,0,0,0.06)] dark:hover:shadow-[0_20px_60px_rgba(0,0,0,0.4)] hover:border-slate-300/50 dark:hover:border-white/15">
         <div className="absolute -top-10 -right-10 w-40 h-40 bg-teal-500/10 dark:bg-blue-500/10 rounded-full blur-3xl group-hover:bg-teal-500/20 dark:group-hover:bg-blue-500/20 transition-all duration-700" />
         <form onSubmit={runAudit} className="space-y-6 relative z-10">
           <div className="space-y-1 text-center lg:text-left">
@@ -159,23 +187,23 @@ export default function AuditTool() {
           <div className="space-y-4">
             <div className="space-y-1.5">
               <label className="text-xs font-bold text-slate-600 dark:text-slate-400 uppercase tracking-widest ml-1 transition-colors duration-300">Website URL</label>
-              <input type="text" placeholder="https://your-site.com" required className="w-full bg-slate-50 dark:bg-black/50 border border-slate-200 dark:border-white/10 rounded-xl p-4 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-700 focus:ring-2 focus:ring-teal-500/50 dark:focus:ring-blue-500/50 focus:border-teal-500/50 dark:focus:border-blue-500/50 outline-none transition-all duration-200 shadow-inner" value={url} onChange={(e) => setUrl(e.target.value)} onBlur={handleUrlBlur} disabled={status === 'loading'} />
+              <input type="text" placeholder="https://your-site.com" required className="w-full bg-slate-50/50 dark:bg-black/40 border border-slate-200 dark:border-white/10 rounded-xl p-4 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-700 focus:ring-2 focus:ring-teal-500/20 dark:focus:ring-blue-500/20 focus:border-teal-500 dark:focus:border-blue-500 hover:border-slate-300 dark:hover:border-white/20 outline-none transition-all duration-300 shadow-inner" value={url} onChange={(e) => setUrl(e.target.value)} onBlur={handleUrlBlur} disabled={status === 'loading'} />
             </div>
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-1.5">
                 <label className="text-xs font-bold text-slate-600 dark:text-slate-400 uppercase tracking-widest ml-1 transition-colors duration-300">Name</label>
-                <input type="text" placeholder="John Doe" className="w-full bg-slate-50 dark:bg-black/50 border border-slate-200 dark:border-white/10 rounded-xl p-4 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-700 focus:ring-2 focus:ring-teal-500/50 dark:focus:ring-blue-500/50 focus:border-teal-500/50 dark:focus:border-blue-500/50 outline-none transition-all duration-200 shadow-inner" value={name} onChange={(e) => setName(e.target.value)} disabled={status === 'loading'} />
+                <input type="text" placeholder="John Doe" className="w-full bg-slate-50/50 dark:bg-black/40 border border-slate-200 dark:border-white/10 rounded-xl p-4 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-700 focus:ring-2 focus:ring-teal-500/20 dark:focus:ring-blue-500/20 focus:border-teal-500 dark:focus:border-blue-500 hover:border-slate-300 dark:hover:border-white/20 outline-none transition-all duration-300 shadow-inner" value={name} onChange={(e) => setName(e.target.value)} disabled={status === 'loading'} />
               </div>
               <div className="space-y-1.5">
                 <label className="text-xs font-bold text-slate-600 dark:text-slate-400 uppercase tracking-widest ml-1 transition-colors duration-300">Email</label>
-                <input type="email" placeholder="you@company.com (optional)" className="w-full bg-slate-50 dark:bg-black/50 border border-slate-200 dark:border-white/10 rounded-xl p-4 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-700 focus:ring-2 focus:ring-teal-500/50 dark:focus:ring-blue-500/50 focus:border-teal-500/50 dark:focus:border-blue-500/50 outline-none transition-all duration-200 shadow-inner" value={email} onChange={(e) => setEmail(e.target.value)} disabled={status === 'loading'} />
+                <input type="email" placeholder="you@company.com (optional)" className="w-full bg-slate-50/50 dark:bg-black/40 border border-slate-200 dark:border-white/10 rounded-xl p-4 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-700 focus:ring-2 focus:ring-teal-500/20 dark:focus:ring-blue-500/20 focus:border-teal-500 dark:focus:border-blue-500 hover:border-slate-300 dark:hover:border-white/20 outline-none transition-all duration-300 shadow-inner" value={email} onChange={(e) => setEmail(e.target.value)} disabled={status === 'loading'} />
               </div>
             </div>
             <p className="text-xs text-slate-500 dark:text-slate-400 -mt-1 ml-1 flex items-center gap-1.5 transition-colors duration-300">
               <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="16" x="2" y="4" rx="2" /><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></svg>
               Enter your email to get the full report with fix-it recommendations delivered to your inbox.
             </p>
-            <button type="submit" disabled={status === 'loading'} className="w-full bg-slate-900 dark:bg-blue-600 hover:bg-slate-800 dark:hover:bg-blue-500 disabled:bg-slate-900/50 dark:disabled:bg-blue-600/50 disabled:cursor-not-allowed text-white font-bold uppercase tracking-tight py-4 rounded-xl flex items-center justify-center gap-2 transition-all shadow-lg hover:shadow-slate-500/25 active:scale-[0.98]">
+            <button type="submit" disabled={status === 'loading'} className="w-full bg-gradient-to-r from-slate-900 to-slate-800 dark:from-blue-600 dark:to-teal-500 hover:from-slate-800 hover:to-slate-700 dark:hover:from-blue-500 dark:hover:to-teal-400 disabled:from-slate-900/50 disabled:to-slate-800/50 dark:disabled:from-blue-600/50 dark:disabled:to-teal-500/50 disabled:cursor-not-allowed text-white font-bold uppercase tracking-tight py-4 rounded-xl flex items-center justify-center gap-2 shadow-lg shadow-slate-900/10 dark:shadow-blue-500/10 hover:shadow-xl hover:shadow-slate-900/20 dark:hover:shadow-blue-500/20 hover:-translate-y-0.5 active:scale-[0.98] transition-all duration-300">
               {status === 'loading' ? 'Analyzing...' : 'Execute Analysis'} <ArrowRight size={18} />
             </button>
           </div>
@@ -240,36 +268,36 @@ export default function AuditTool() {
         )}
 
         {status === 'results' && results && (
-          <div className="w-full space-y-4 animate-in fade-in slide-in-from-bottom-4 duration-500">
+          <div className="w-full space-y-5 animate-in fade-in slide-in-from-bottom-4 duration-500">
             {/* Score Overview */}
-            <div className="bg-white dark:bg-white/[0.03] border border-slate-200 dark:border-white/10 rounded-[2rem] p-6 relative overflow-hidden transition-colors duration-300 shadow-xl dark:shadow-none">
-              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-teal-400 via-purple-500 to-teal-400 dark:from-transparent dark:via-blue-500/50 dark:to-transparent" />
+            <div className="bg-white/70 dark:bg-white/[0.02] backdrop-blur-xl border border-slate-200/50 dark:border-white/10 rounded-[2.5rem] p-6 relative overflow-hidden transition-colors duration-300 shadow-[0_20px_40px_rgba(0,0,0,0.03)] dark:shadow-none">
+              <div className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-teal-400 via-purple-500 to-teal-400 dark:from-blue-500/40 dark:via-purple-500/40 dark:to-teal-500/40" />
               <div className="flex flex-col sm:flex-row items-center gap-6">
-                <ScoreRing score={results.overallScore} size={100} strokeWidth={6} />
+                <ScoreRing score={results.overallScore} size={90} strokeWidth={5} />
                 <div className="flex-1 text-center sm:text-left space-y-2">
                   <div>
-                    <span className={`text-2xl font-black uppercase ${getScoreColor(results.overallScore)}`}>Grade {results.grade}</span>
-                    <p className="text-slate-500 text-[10px] font-mono mt-0.5 truncate font-bold">{results.url}</p>
+                    <span className={`text-2xl font-black uppercase tracking-tight italic ${getScoreColor(results.overallScore)}`}>Grade {results.grade}</span>
+                    <p className="text-slate-500 dark:text-slate-400 text-[10px] font-mono mt-0.5 truncate font-bold">{results.url}</p>
                   </div>
                   <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2">
-                    {results.checks.filter(c => c.status === 'pass').length > 0 && <span className="flex items-center gap-1 text-xs font-bold text-green-600 dark:text-green-400 bg-green-500/10 border border-green-500/20 px-3 py-1 rounded-full"><CheckCircle size={12} />{results.checks.filter(c => c.status === 'pass').length} Passed</span>}
-                    {results.checks.filter(c => c.status === 'warn').length > 0 && <span className="flex items-center gap-1 text-xs font-bold text-amber-600 dark:text-amber-400 bg-amber-500/10 border border-amber-500/20 px-3 py-1 rounded-full"><AlertTriangle size={12} />{results.checks.filter(c => c.status === 'warn').length} Warn</span>}
-                    {results.checks.filter(c => c.status === 'fail').length > 0 && <span className="flex items-center gap-1 text-xs font-bold text-red-600 dark:text-red-400 bg-red-500/10 border border-red-500/20 px-3 py-1 rounded-full"><AlertCircle size={12} />{results.checks.filter(c => c.status === 'fail').length} Failed</span>}
+                    {results.checks.filter(c => c.status === 'pass').length > 0 && <span className="flex items-center gap-1.5 text-xs font-bold text-green-600 dark:text-green-400 bg-green-500/10 border border-green-500/20 px-3 py-1 rounded-full"><CheckCircle size={12} />{results.checks.filter(c => c.status === 'pass').length} Passed</span>}
+                    {results.checks.filter(c => c.status === 'warn').length > 0 && <span className="flex items-center gap-1.5 text-xs font-bold text-amber-600 dark:text-amber-400 bg-amber-500/10 border border-amber-500/20 px-3 py-1 rounded-full"><AlertTriangle size={12} />{results.checks.filter(c => c.status === 'warn').length} Warn</span>}
+                    {results.checks.filter(c => c.status === 'fail').length > 0 && <span className="flex items-center gap-1.5 text-xs font-bold text-red-600 dark:text-red-400 bg-red-500/10 border border-red-500/20 px-3 py-1 rounded-full"><AlertCircle size={12} />{results.checks.filter(c => c.status === 'fail').length} Failed</span>}
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Checks List */}
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-3.5">
               {results.checks.map((check, i) => {
                 const isOpen = expandedChecks[i];
                 const Icon = checkIcons[check.name] || Globe;
                 return (
-                  <div key={i} className={`bg-white dark:bg-white/[0.03] border rounded-[1.5rem] transition-all duration-300 ${getStatusBorderColor(check.status)} ${isOpen ? 'ring-2 ring-slate-200 dark:ring-white/10 shadow-lg' : 'shadow-sm dark:shadow-none'}`}>
-                    <button onClick={() => toggleCheck(i)} className="w-full flex items-center justify-between gap-4 p-5 text-left">
+                  <div key={i} className={`bg-white/40 dark:bg-white/[0.01] backdrop-blur-md border rounded-[1.5rem] transition-all duration-300 hover:scale-[1.01] hover:-translate-y-0.5 ${getStatusBorderColor(check.status, isOpen)}`}>
+                    <button onClick={() => toggleCheck(i)} className="w-full flex items-center justify-between gap-4 p-5 text-left active:scale-[0.99] transition-transform">
                       <div className="flex items-center gap-4 min-w-0 flex-1">
-                        <div className={`w-12 h-12 rounded-2xl flex items-center justify-center flex-shrink-0 ${getIconBg(check.status)}`}>
+                        <div className={`w-12 h-12 rounded-2xl flex items-center justify-center flex-shrink-0 transition-transform duration-300 ${getIconBg(check.status)}`}>
                           <Icon size={20} />
                         </div>
                         <div className="flex-1 min-w-0">
@@ -277,24 +305,24 @@ export default function AuditTool() {
                           <p className="text-slate-500 dark:text-slate-400 text-xs mt-0.5 truncate font-medium">{check.summary}</p>
                         </div>
                       </div>
-                      <div className="flex items-center gap-4 flex-shrink-0 border-l border-slate-200 dark:border-white/10 pl-4">
+                      <div className="flex items-center gap-4 flex-shrink-0 border-l border-slate-200/50 dark:border-white/10 pl-4">
                         <div className="flex flex-col items-end">
                           <span className={`text-xl font-black tabular-nums ${getScoreColor(check.score)}`}>{check.score}</span>
-                          <span className="text-[10px] text-slate-500 uppercase tracking-wider font-bold">Score</span>
+                          <span className="text-[10px] text-slate-400 dark:text-slate-500 uppercase tracking-wider font-bold">Score</span>
                         </div>
-                        <ChevronDown size={16} className={`text-slate-400 transition-transform duration-300 ${isOpen ? 'rotate-180 text-slate-900 dark:text-white' : ''}`} />
+                        <ChevronDown size={16} className={`text-slate-400 transition-transform duration-300 ${isOpen ? 'rotate-180 text-slate-950 dark:text-white' : ''}`} />
                       </div>
                     </button>
                     {isOpen && (
-                      <div className="px-5 pb-5 border-t border-slate-100 dark:border-white/5 bg-slate-50 dark:bg-black/10 rounded-b-[1.5rem]">
+                      <div className="px-5 pb-5 border-t border-slate-100 dark:border-white/5 bg-slate-50/50 dark:bg-black/10 rounded-b-[1.5rem] animate-in fade-in slide-in-from-top-1 duration-200">
                         <div className="pt-5 space-y-4">
                           <div className="space-y-2">
                             <div className="flex justify-between items-end mb-1">
-                              <span className="text-[10px] text-slate-500 uppercase font-black tracking-widest">Performance Metric</span>
+                              <span className="text-[10px] text-slate-400 dark:text-slate-500 uppercase font-black tracking-widest">Performance Metric</span>
                               <span className={`text-xs font-black ${getScoreColor(check.score)}`}>{check.score}%</span>
                             </div>
-                            <div className="w-full h-2 bg-slate-200 dark:bg-white/5 rounded-full overflow-hidden">
-                              <div className={`h-full rounded-full ${check.score >= 80 ? 'bg-green-500' : check.score >= 50 ? 'bg-amber-500' : 'bg-red-500'}`} style={{ width: `${check.score}%`, transition: 'width 1s cubic-bezier(0.4, 0, 0.2, 1)' }} />
+                            <div className="w-full h-2 bg-slate-100 dark:bg-white/5 rounded-full overflow-hidden border border-slate-200/30 dark:border-white/5">
+                              <div className={`h-full rounded-full transition-all duration-1000 ease-out ${check.score >= 80 ? 'bg-gradient-to-r from-teal-500 to-emerald-500 shadow-[0_0_10px_rgba(20,184,166,0.25)]' : check.score >= 50 ? 'bg-gradient-to-r from-amber-500 to-orange-500 shadow-[0_0_10px_rgba(245,158,11,0.25)]' : 'bg-gradient-to-r from-rose-500 to-red-500 shadow-[0_0_10px_rgba(239,68,68,0.25)]'}`} style={{ width: `${check.score}%` }} />
                             </div>
                           </div>
                           <div className="space-y-2">
@@ -302,7 +330,7 @@ export default function AuditTool() {
                               const isFail = detail.startsWith('❌');
                               const isWarn = detail.startsWith('⚠️') || detail.startsWith('💡');
                               return (
-                                <div key={j} className={`p-4 rounded-xl text-xs font-mono font-medium leading-relaxed border ${isFail ? 'bg-red-500/10 border-red-500/20 text-red-700 dark:text-red-300/90' : isWarn ? 'bg-amber-500/10 border-amber-500/20 text-amber-700 dark:text-amber-300/90' : 'bg-white dark:bg-white/[0.02] border-slate-200 dark:border-white/5 text-slate-600 dark:text-slate-400'}`}>
+                                <div key={j} className={`p-4 rounded-xl text-xs font-mono font-medium leading-relaxed border transition-all ${isFail ? 'bg-red-500/[0.04] border-red-500/10 text-red-700 dark:text-red-300/80 shadow-[0_2px_8px_rgba(239,68,68,0.02)]' : isWarn ? 'bg-amber-500/[0.04] border-amber-500/10 text-amber-700 dark:text-amber-300/80 shadow-[0_2px_8px_rgba(245,158,11,0.02)]' : 'bg-white/50 dark:bg-white/[0.01] border-slate-200/50 dark:border-white/5 text-slate-600 dark:text-slate-400'}`}>
                                   {detail}
                                 </div>
                               );
@@ -317,7 +345,7 @@ export default function AuditTool() {
             </div>
 
             {/* ── Action Buttons ── */}
-            <div className="flex gap-3 mt-6">
+            <div className="flex gap-4 mt-6">
               <button
                 onClick={() => {
                   const hash = encodeAuditResult(results);
@@ -333,7 +361,7 @@ export default function AuditTool() {
                     });
                   }
                 }}
-                className="flex-1 px-6 py-4 rounded-[1.5rem] bg-white dark:bg-white/[0.03] border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 font-bold uppercase tracking-tight text-sm hover:bg-slate-100 dark:hover:bg-white/[0.06] transition-all flex items-center justify-center gap-2 shadow-sm"
+                className="flex-1 px-6 py-4 rounded-[1.5rem] bg-white/70 dark:bg-white/[0.02] border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 font-bold uppercase tracking-tight text-sm hover:bg-slate-50 dark:hover:bg-white/[0.06] hover:border-slate-300 dark:hover:border-white/20 active:scale-[0.98] hover:shadow-md transition-all duration-300 flex items-center justify-center gap-2"
               >
                 {shareStatus === 'copied' ? <><Check size={16} className="text-green-500" /> Link Copied!</> : <><Share2 size={16} /> Share Results</>}
               </button>
@@ -347,13 +375,13 @@ export default function AuditTool() {
                     });
                   }
                 }}
-                className="flex-1 px-6 py-4 rounded-[1.5rem] bg-slate-900 dark:bg-teal-500 text-white dark:text-black font-black uppercase tracking-tight text-sm hover:bg-slate-800 dark:hover:bg-teal-400 transition-all flex items-center justify-center gap-2 shadow-xl shadow-slate-900/10 dark:shadow-teal-500/10 hover:-translate-y-1">
+                className="flex-1 px-6 py-4 rounded-[1.5rem] bg-gradient-to-r from-teal-500 to-emerald-500 dark:from-teal-400 dark:to-emerald-500 text-white dark:text-black font-black uppercase tracking-tight text-sm hover:opacity-95 hover:shadow-lg hover:shadow-teal-500/25 dark:hover:shadow-teal-400/25 hover:-translate-y-0.5 active:scale-[0.98] transition-all duration-300 flex items-center justify-center gap-2">
                 Discuss Results <ExternalLink size={16} />
               </Link>
             </div>
 
             {/* ── Social Share Strip ── */}
-            <div className="mt-4 p-4 rounded-2xl bg-white dark:bg-white/[0.02] border border-slate-200 dark:border-white/5">
+            <div className="mt-4 p-4 rounded-2xl bg-white/50 dark:bg-white/[0.02] border border-slate-200 dark:border-white/5">
               <p className="text-[10px] font-black uppercase tracking-widest text-slate-400 dark:text-slate-500 mb-3 text-center">Share your score & challenge others</p>
               <div className="flex items-center justify-center gap-3">
                 {/* Twitter/X */}
@@ -367,7 +395,7 @@ export default function AuditTool() {
                       window.gtag('event', 'audit_social_share', { event_category: 'Audit Tool', event_label: 'Twitter' });
                     }
                   }}
-                  className="w-10 h-10 rounded-xl bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 flex items-center justify-center text-slate-500 dark:text-slate-400 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all hover:scale-110"
+                  className="w-10 h-10 rounded-xl bg-slate-100/50 dark:bg-white/5 border border-slate-200 dark:border-white/10 flex items-center justify-center text-slate-500 dark:text-slate-400 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all hover:scale-110"
                   title="Share on X"
                 >
                   <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" /></svg>
@@ -382,7 +410,7 @@ export default function AuditTool() {
                       window.gtag('event', 'audit_social_share', { event_category: 'Audit Tool', event_label: 'LinkedIn' });
                     }
                   }}
-                  className="w-10 h-10 rounded-xl bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 flex items-center justify-center text-slate-500 dark:text-slate-400 hover:bg-[#0077b5] hover:text-white dark:hover:bg-[#0077b5] dark:hover:text-white transition-all hover:scale-110"
+                  className="w-10 h-10 rounded-xl bg-slate-100/50 dark:bg-white/5 border border-slate-200 dark:border-white/10 flex items-center justify-center text-slate-500 dark:text-slate-400 hover:bg-[#0077b5] hover:text-white dark:hover:bg-[#0077b5] dark:hover:text-white transition-all hover:scale-110"
                   title="Share on LinkedIn"
                 >
                   <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" /></svg>
@@ -397,7 +425,7 @@ export default function AuditTool() {
                       window.gtag('event', 'audit_social_share', { event_category: 'Audit Tool', event_label: 'Facebook' });
                     }
                   }}
-                  className="w-10 h-10 rounded-xl bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 flex items-center justify-center text-slate-500 dark:text-slate-400 hover:bg-[#1877f2] hover:text-white dark:hover:bg-[#1877f2] dark:hover:text-white transition-all hover:scale-110"
+                  className="w-10 h-10 rounded-xl bg-slate-100/50 dark:bg-white/5 border border-slate-200 dark:border-white/10 flex items-center justify-center text-slate-500 dark:text-slate-400 hover:bg-[#1877f2] hover:text-white dark:hover:bg-[#1877f2] dark:hover:text-white transition-all hover:scale-110"
                   title="Share on Facebook"
                 >
                   <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" /></svg>
@@ -460,13 +488,13 @@ export default function AuditTool() {
                     <Link
                       key={i}
                       href={rec.href}
-                      className={`flex items-center gap-3 p-3 rounded-xl bg-white dark:bg-white/[0.02] border border-slate-200 dark:border-white/5 hover:${rec.border} transition-all group hover:-translate-y-0.5`}
+                      className={`flex items-center gap-3 p-3.5 rounded-xl bg-white/60 dark:bg-white/[0.02] border border-slate-200 dark:border-white/5 hover:${rec.border} transition-all duration-300 group hover:-translate-y-0.5 hover:shadow-[0_4px_12px_rgba(0,0,0,0.02)]`}
                     >
                       <div className={`w-9 h-9 rounded-lg ${rec.bg} border ${rec.border} flex items-center justify-center ${rec.color} flex-shrink-0 group-hover:scale-110 transition-transform`}>
                         <rec.icon size={16} />
                       </div>
-                      <span className="text-slate-600 dark:text-slate-300 text-xs font-bold flex-1">{rec.text}</span>
-                      <ArrowRight size={14} className={`${rec.color} opacity-0 group-hover:opacity-100 transition-opacity`} />
+                      <span className="text-slate-600 dark:text-slate-350 text-xs font-bold flex-1">{rec.text}</span>
+                      <ArrowRight size={14} className={`${rec.color} opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300`} />
                     </Link>
                   ))}
                 </div>

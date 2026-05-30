@@ -28,6 +28,7 @@ export default function Footer() {
                             <li><Link href="/services/headless-architecture/" className="hover:text-teal-600 dark:hover:text-blue-400 transition-colors">Headless CMS</Link></li>
                             <li><Link href="/services/n8n-automation/" className="hover:text-teal-600 dark:hover:text-blue-400 transition-colors">Custom Automation</Link></li>
                             <li><Link href="/services/technical-seo/" className="hover:text-teal-600 dark:hover:text-blue-400 transition-colors">Technical SEO</Link></li>
+                            <li><Link href="/services/growth-consulting/" className="hover:text-teal-600 dark:hover:text-blue-400 transition-colors">Growth Consulting</Link></li>
                         </ul>
                     </div>
 
@@ -38,6 +39,8 @@ export default function Footer() {
                             <li><Link href="/audit/" className="hover:text-teal-600 dark:hover:text-blue-400 transition-colors">Website Audit Tool</Link></li>
                             <li><Link href="/labs/roi/" className="hover:text-teal-600 dark:hover:text-blue-400 transition-colors">ROI Calculator</Link></li>
                             <li><Link href="/labs/chat/" className="hover:text-teal-600 dark:hover:text-blue-400 transition-colors">AI Chat Assistant</Link></li>
+                            <li><a href="https://careerops.whoisalfaz.me/" target="_blank" className="hover:text-teal-600 dark:hover:text-blue-400 transition-colors">CareerOps AI Resume</a></li>
+                            <li><a href="https://cashops.whoisalfaz.me/" target="_blank" className="hover:text-teal-600 dark:hover:text-blue-400 transition-colors">CashOps Dashboard</a></li>
                             <li><Link href="/partners/" className="hover:text-teal-600 dark:hover:text-blue-400 transition-colors">Sponsorships</Link></li>
                         </ul>
                     </div>

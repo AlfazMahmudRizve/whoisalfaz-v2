@@ -172,10 +172,10 @@ export default function AuditContentFooter() {
       {/* ─── WHAT DOES THIS TOOL CHECK? ─── */}
       <div>
         <h2 className="text-3xl md:text-4xl font-black text-slate-900 dark:text-white mb-4 uppercase tracking-tight text-center transition-colors duration-300">
-          What Does This Tool <span className="text-teal-600 dark:text-blue-500">Check?</span>
+          What does our free website <span className="text-teal-600 dark:text-blue-500">audit tool check?</span>
         </h2>
-        <p className="text-slate-500 dark:text-slate-400 text-center max-w-2xl mx-auto mb-16 leading-relaxed transition-colors duration-300">
-          Our free website audit runs six independent checks against your site using real API connections, not simulated data. Each check maps directly to the <Link href="/services/" className="text-teal-600 dark:text-blue-400 font-bold hover:underline">solutions we offer</Link>.
+        <p className="text-slate-500 dark:text-slate-400 text-center max-w-2xl mx-auto mb-16 leading-relaxed transition-colors duration-300 text-[15px]">
+          Our free website audit tool performs comprehensive, real-time diagnostics on your server connectivity, SSL certificate encryption strength, search engine crawlability parameters, HTTP security headers, and Core Web Vitals performance. Each check is carefully mapped to the professional digital solutions we offer to accelerate your web operations.
         </p>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {checks.map((check) => (
@@ -206,10 +206,10 @@ export default function AuditContentFooter() {
       {/* ─── HOW TO IMPROVE YOUR SCORE ─── */}
       <div className="max-w-4xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-black text-slate-900 dark:text-white mb-4 uppercase tracking-tight text-center transition-colors duration-300">
-          How to Improve Your <span className="text-teal-600 dark:text-teal-500">Website Score</span>
+          How can you improve your <span className="text-teal-600 dark:text-teal-500">website audit score?</span>
         </h2>
-        <p className="text-slate-500 dark:text-slate-400 text-center max-w-2xl mx-auto mb-12 leading-relaxed transition-colors duration-300">
-          If your audit score is below 80, start with these high-impact fixes. Need hands-on help? <Link href="/contact/" className="text-teal-600 dark:text-blue-400 font-bold hover:underline">Talk to us</Link>.
+        <p className="text-slate-500 dark:text-slate-400 text-center max-w-2xl mx-auto mb-12 leading-relaxed transition-colors duration-300 text-[15px]">
+          You can improve your website audit score by compressing your images to next-generation formats (WebP/AVIF), installing and renewing security SSL certificates, enforcing HTTPS redirects, and validating metadata lengths. Start with these high-impact solutions, or consult with us directly to handle these technical fixes.
         </p>
         <div className="grid md:grid-cols-2 gap-4">
           {tips.map((tip, i) => (
@@ -234,13 +234,51 @@ export default function AuditContentFooter() {
         </div>
       </div>
 
+      {/* ─── DEEP-DIVE TECHNICAL ANALYSIS ─── */}
+      <div className="max-w-4xl mx-auto">
+        <h2 className="text-3xl md:text-4xl font-black text-slate-900 dark:text-white mb-6 uppercase tracking-tight text-center transition-colors duration-300">
+          Deep-Dive Technical Analysis: Understanding <span className="text-teal-600 dark:text-blue-500">Audit Metrics</span>
+        </h2>
+        <div className="space-y-6 text-slate-500 dark:text-slate-400 text-[15px] leading-relaxed transition-colors duration-300">
+          <p>
+            To achieve high visibility in search engine results, modern websites must satisfy sophisticated search engine optimization standards. When search engine crawlers like Googlebot index a webpage, they evaluate a combination of user experience factors, security protocols, and machine-readable metadata configurations. Understanding the technical architecture behind these checks is essential for growth engineering.
+          </p>
+          <div className="grid md:grid-cols-3 gap-6 my-8">
+            <div className="p-5 rounded-2xl bg-white dark:bg-white/[0.02] border border-slate-200 dark:border-white/5 hover:border-slate-300 dark:hover:border-white/10 transition-colors shadow-sm dark:shadow-none">
+              <h3 className="text-slate-900 dark:text-white font-bold text-base uppercase mb-3 tracking-tight">Core Web Vitals</h3>
+              <p className="text-xs leading-relaxed">
+                Core Web Vitals are a set of specific factors that Google considers important in a webpage's overall user experience. This audit maps metrics including Largest Contentful Paint (LCP) for loading performance, Cumulative Layout Shift (CLS) for visual stability, and Interaction to Next Paint (INP) for responsiveness. Fast page load times directly correlate with higher conversions and lower bounce rates.
+              </p>
+            </div>
+            <div className="p-5 rounded-2xl bg-white dark:bg-white/[0.02] border border-slate-200 dark:border-white/5 hover:border-slate-300 dark:hover:border-white/10 transition-colors shadow-sm dark:shadow-none">
+              <h3 className="text-slate-900 dark:text-white font-bold text-base uppercase mb-3 tracking-tight">SSL & TLS Handshakes</h3>
+              <p className="text-xs leading-relaxed">
+                Hypertext Transfer Protocol Secure (HTTPS) encrypts communication between the browser and server using a Secure Sockets Layer (SSL) or Transport Layer Security (TLS) certificate. Performing direct server-level checks ensures your certificate issuer is trusted, the keys are strong, and expiration thresholds are verified, maintaining security and user trust.
+              </p>
+            </div>
+            <div className="p-5 rounded-2xl bg-white dark:bg-white/[0.02] border border-slate-200 dark:border-white/5 hover:border-slate-300 dark:hover:border-white/10 transition-colors shadow-sm dark:shadow-none">
+              <h3 className="text-slate-900 dark:text-white font-bold text-base uppercase mb-3 tracking-tight">HTTP Security Headers</h3>
+              <p className="text-xs leading-relaxed">
+                HTTP security headers provide a vital layer of defense by directing browsers how to handle server responses safely. Configuring HTTP Strict Transport Security (HSTS) prevents downgrade attacks, while a robust Content Security Policy (CSP) restricts unauthorized scripts, preventing Cross-Site Scripting (XSS) and injection vulnerabilities.
+              </p>
+            </div>
+          </div>
+          <p>
+            Beyond speed and security, search engine crawlability relies on structural assets like XML sitemaps and robots.txt files. A robots.txt file guides search engine bots by indicating which directories to crawl or skip. Meanwhile, a sitemap.xml acts as a roadmap of all valuable URLs, allowing search engines to discover and index your pages quickly. Optimizing your DNS records and resolving network routing hops further reduces DNS lookup latency, accelerating above-the-fold content delivery.
+          </p>
+          <p>
+            As a professional Growth and Full-Stack Software Engineer, Alfaz Mahmud Rizve builds highly optimized web architectures utilizing headless CMS platforms, Next.js frameworks, and automated integrations. Resolving these performance and technical SEO gaps is critical for growing your digital footprint and scaling conversion metrics.
+          </p>
+        </div>
+      </div>
+
       {/* ─── MORE FREE TOOLS ─── */}
       <div className="max-w-4xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-black text-slate-900 dark:text-white mb-4 uppercase tracking-tight text-center transition-colors duration-300">
-          More Free <span className="text-emerald-600 dark:text-emerald-500">Tools</span>
+          Are there more free developer <span className="text-emerald-600 dark:text-emerald-500">tools available?</span>
         </h2>
-        <p className="text-slate-500 dark:text-slate-400 text-center max-w-2xl mx-auto mb-12 leading-relaxed transition-colors duration-300">
-          This audit is just the start. Explore our other free tools to grow your business.
+        <p className="text-slate-500 dark:text-slate-400 text-center max-w-2xl mx-auto mb-12 leading-relaxed transition-colors duration-300 text-[15px]">
+          Yes, we offer additional free growth engineering utilities, including an interactive ROI automation calculator, a custom AI architecture assistant, and a technical library of in-depth guides to support your digital scale-up.
         </p>
         <div className="grid sm:grid-cols-3 gap-5">
           {freeTools.map((tool) => (
@@ -269,10 +307,10 @@ export default function AuditContentFooter() {
       {/* ─── FREQUENTLY ASKED QUESTIONS ─── */}
       <div className="max-w-3xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-black text-slate-900 dark:text-white mb-4 uppercase tracking-tight text-center transition-colors duration-300">
-          Frequently Asked <span className="text-purple-600 dark:text-purple-500">Questions</span>
+          Frequently Asked Questions About <span className="text-purple-600 dark:text-purple-500">Website Audits</span>
         </h2>
-        <p className="text-slate-500 dark:text-slate-400 text-center max-w-2xl mx-auto mb-12 leading-relaxed transition-colors duration-300">
-          Everything you need to know about this free website audit tool.
+        <p className="text-slate-500 dark:text-slate-400 text-center max-w-2xl mx-auto mb-12 leading-relaxed transition-colors duration-300 text-[15px]">
+          Find detailed answers to the most common questions about website speed, search engine optimization, security protocols, and audit scoring systems.
         </p>
         <div className="space-y-3">
           {faqs.map((faq, i) => {
@@ -326,10 +364,10 @@ export default function AuditContentFooter() {
               <Wrench size={28} />
             </div>
             <h2 className="text-2xl md:text-3xl font-black text-white mb-4 uppercase tracking-tight">
-              Need Expert Help <span className="text-teal-400">Fixing These Issues?</span>
+              Need expert help <span className="text-teal-400">fixing these technical issues?</span>
             </h2>
             <p className="text-slate-300 max-w-xl mx-auto mb-8 text-[15px] leading-relaxed font-medium">
-              Don&apos;t waste hours Googling fixes. Our <Link href="/services/technical-seo/" className="text-teal-400 font-bold hover:underline">Technical SEO</Link> and <Link href="/services/headless-architecture/" className="text-teal-400 font-bold hover:underline">Headless Architecture</Link> services fix the exact issues this audit reveals.
+              Get professional growth engineering services, custom headless architecture integrations, and advanced technical SEO optimizations built directly by Alfaz Mahmud Rizve.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link

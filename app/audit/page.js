@@ -21,60 +21,37 @@ export const metadata = {
     }
 };
 
-const faqSchema = {
+const webAppSchema = {
     "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-        {
-            "@type": "Question",
-            "name": "Is this website audit tool free?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes, completely free. You can run unlimited audits without creating an account or entering any payment information. Optionally provide your email to receive a copy of your results."
-            }
-        },
-        {
-            "@type": "Question",
-            "name": "How accurate is this website audit?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "We use the official Google PageSpeed Insights API for performance data and connect directly to your server for SSL, DNS, and security header checks. The results reflect real-world conditions, not simulated tests."
-            }
-        },
-        {
-            "@type": "Question",
-            "name": "What is a good website audit score?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "A score of 80 or above is considered good. Scores of 90+ are excellent. Anything below 50 indicates critical issues that are likely hurting your search rankings and user experience."
-            }
-        },
-        {
-            "@type": "Question",
-            "name": "How often should I audit my website?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "We recommend running an audit after every major deployment, design change, or at least once a month. SSL certificates, security headers, and performance can change without you noticing."
-            }
-        },
-        {
-            "@type": "Question",
-            "name": "What should I fix first if my score is low?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Start with critical security issues (missing SSL, no security headers), then fix SEO fundamentals (title tags, meta descriptions, sitemap), and finally optimize performance (image compression, lazy loading, CDN)."
-            }
-        }
+    "@type": "WebApplication",
+    "name": "whoisalfaz Free Website Audit Tool",
+    "url": "https://whoisalfaz.me/audit/",
+    "image": "https://whoisalfaz.me/icon.png",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "All",
+    "browserRequirements": "Requires HTML5-compatible browser",
+    "offers": {
+        "@type": "Offer",
+        "price": "0.00",
+        "priceCurrency": "USD"
+    },
+    "featureList": [
+        "Google PageSpeed Insights core vitality analysis",
+        "SSL handshake security certificate check",
+        "Technical SEO meta tags & Open Graph verification",
+        "Crawlability robots.txt & sitemap.xml validation",
+        "HTTP security header audits",
+        "DNS latency & connectivity diagnostics"
     ]
 };
 
 export default function AuditPage() {
     return (
         <main className="min-h-screen pt-32 pb-20 px-6 bg-slate-50 dark:bg-[#0a0a0a] transition-colors duration-300">
-            {/* FAQ SCHEMA */}
+            {/* WEB APP SCHEMA */}
             <script
                 type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(webAppSchema) }}
             />
 
             {/* BACKGROUND */}
