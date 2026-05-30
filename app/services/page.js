@@ -119,7 +119,8 @@ export default function ServicesPage() {
                 { "@type": "Question", "name": "Do you offer ongoing support?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. All projects come with 30 days of free monitoring. After that, we offer monthly maintenance packages to ensure your automations run smoothly as platforms update their APIs." } },
                 { "@type": "Question", "name": "Can you integrate with my specific CRM?", "acceptedAnswer": { "@type": "Answer", "text": "Almost certainly. If it has an API, we can connect to it. We specialize in HubSpot, Airtable, Pipedrive, and GoHighLevel, but custom integrations are our bread and butter." } },
                 { "@type": "Question", "name": "What is your refund policy?", "acceptedAnswer": { "@type": "Answer", "text": "We work on a milestone basis. If we cannot deliver the agreed-upon scope, you don't pay for that milestone. We prioritize transparent communication to ensure you're always happy with the output." } },
-                { "@type": "Question", "name": "Do I need to pay for n8n hosting?", "acceptedAnswer": { "@type": "Answer", "text": "You have two options: Cloud (approx $20/mo) or Self-Hosted (approx $5-10/mo on a VPS). We can set up either for you, but we usually recommend self-hosting for maximum data privacy and lower costs at scale." } }
+                { "@type": "Question", "name": "Do I need to pay for n8n hosting?", "acceptedAnswer": { "@type": "Answer", "text": "You have two options: Cloud (approx $20/mo) or Self-Hosted (approx $5-10/mo on a VPS). We can set up either for you, but we usually recommend self-hosting for maximum data privacy and lower costs at scale." } },
+                { "@type": "Question", "name": "How do AI automation agencies price their services?", "acceptedAnswer": { "@type": "Answer", "text": "Most AI automation agencies charge via a monthly retainer model (ranging from $1,500 to $5,000/month) or a productized service package for specific custom workflows." } }
             ]
         }
     ];
@@ -295,6 +296,10 @@ export default function ServicesPage() {
                         {
                             q: "Do I need to pay for n8n hosting?",
                             a: "You have two options: Cloud (approx $20/mo) or Self-Hosted (approx $5-10/mo on a VPS). We can set up either for you, but we usually recommend self-hosting for maximum data privacy and lower costs at scale."
+                        },
+                        {
+                            q: "How do AI automation agencies price their services?",
+                            a: "Most AI automation agencies charge via a monthly retainer model (ranging from $1,500 to $5,000/month) or a productized service package for specific custom workflows."
                         }
                     ].map((item, i) => (
                         <details key={i} style={{ animationDelay: `${i * 100}ms` }} className="animate-in fade-in slide-in-from-bottom-4 duration-700 fill-mode-both bg-white dark:bg-[#0f172a] border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden group shadow-sm transition-colors duration-300">
