@@ -24,6 +24,34 @@ const checkIcons = {
   'DNS & Connectivity': Server,
 };
 
+const parseDetail = (text) => {
+  let status = 'pass';
+  let cleanText = text.trim();
+  
+  if (cleanText.startsWith('❌')) {
+    status = 'fail';
+    cleanText = cleanText.replace(/^❌\s*/, '');
+  } else if (cleanText.startsWith('⚠️')) {
+    status = 'warn';
+    cleanText = cleanText.replace(/^⚠️\s*/, '');
+  } else if (cleanText.startsWith('💡')) {
+    status = 'info';
+    cleanText = cleanText.replace(/^💡\s*/, '');
+  } else if (cleanText.startsWith('✅')) {
+    status = 'pass';
+    cleanText = cleanText.replace(/^✅\s*/, '');
+  }
+  
+  // Clean up HTML entities
+  cleanText = cleanText.replace(/&amp;/g, '&')
+                       .replace(/&lt;/g, '<')
+                       .replace(/&gt;/g, '>')
+                       .replace(/&quot;/g, '"')
+                       .replace(/&#39;/g, "'");
+  
+  return { status, text: cleanText };
+};
+
 // SVG Score Ring
 function ScoreRing({ score, size = 100, strokeWidth = 6 }) {
   const radius = (size - strokeWidth) / 2;
@@ -177,7 +205,7 @@ export default function AuditTool() {
   return (
     <div className="grid lg:grid-cols-[1fr_1.3fr] gap-8 items-start w-full transition-colors duration-300">
       {/* LEFT COLUMN: FORM */}
-      <div className="w-full bg-white/70 dark:bg-[#1e293b]/40 backdrop-blur-xl border border-slate-200/50 dark:border-white/10 rounded-3xl md:rounded-[2.5rem] p-5 sm:p-6 md:p-8 shadow-[0_20px_50px_rgba(0,0,0,0.04)] dark:shadow-[0_20px_50px_rgba(0,0,0,0.3)] relative overflow-hidden group transition-all duration-300 hover:shadow-[0_20px_60px_rgba(0,0,0,0.06)] dark:hover:shadow-[0_20px_60px_rgba(0,0,0,0.4)] hover:border-slate-300/50 dark:hover:border-white/15">
+      <div className="w-full lg:sticky lg:top-28 bg-white/70 dark:bg-[#1e293b]/40 backdrop-blur-xl border border-slate-200/50 dark:border-white/10 rounded-3xl md:rounded-[2.5rem] p-5 sm:p-6 md:p-8 shadow-[0_20px_50px_rgba(0,0,0,0.04)] dark:shadow-[0_20px_50px_rgba(0,0,0,0.3)] relative overflow-hidden group transition-all duration-300 hover:shadow-[0_20px_60px_rgba(0,0,0,0.06)] dark:hover:shadow-[0_20px_60px_rgba(0,0,0,0.4)] hover:border-slate-300/50 dark:hover:border-white/15">
         <div className="absolute -top-10 -right-10 w-40 h-40 bg-teal-500/10 dark:bg-blue-500/10 rounded-full blur-3xl group-hover:bg-teal-500/20 dark:group-hover:bg-blue-500/20 transition-all duration-700" />
         <form onSubmit={runAudit} className="space-y-6 relative z-10">
           <div className="space-y-1 text-center lg:text-left">
@@ -289,12 +317,30 @@ export default function AuditTool() {
             </div>
 
             {/* Checks List */}
-            <div className="flex flex-col gap-3">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {results.checks.map((check, i) => {
                 const isOpen = expandedChecks[i];
                 const Icon = checkIcons[check.name] || Globe;
+                const gridSpan = check.name === 'Performance & Core Web Vitals' || check.name === 'Meta Tags & Open Graph'
+                  ? 'md:col-span-2'
+                  : 'md:col-span-1';
+
+                const detailIcons = {
+                  pass: <Check className="text-green-600 dark:text-green-400 w-3.5 h-3.5 shrink-0" />,
+                  fail: <AlertCircle className="text-red-500 w-3.5 h-3.5 shrink-0" />,
+                  warn: <AlertTriangle className="text-amber-500 w-3.5 h-3.5 shrink-0" />,
+                  info: <Zap className="text-blue-500 w-3.5 h-3.5 shrink-0" />,
+                };
+
+                const detailStyles = {
+                  pass: 'bg-green-500/[0.02] dark:bg-green-500/[0.01] border-green-500/10 text-slate-700 dark:text-slate-350',
+                  fail: 'bg-red-500/[0.02] dark:bg-red-500/[0.01] border-red-500/10 text-slate-700 dark:text-slate-350',
+                  warn: 'bg-amber-500/[0.02] dark:bg-amber-500/[0.01] border-amber-500/10 text-slate-700 dark:text-slate-350',
+                  info: 'bg-blue-500/[0.02] dark:bg-blue-500/[0.01] border-blue-500/10 text-slate-700 dark:text-slate-355',
+                };
+
                 return (
-                  <div key={i} className={`bg-white/40 dark:bg-white/[0.01] backdrop-blur-md border rounded-2xl sm:rounded-[1.5rem] transition-all duration-300 hover:scale-[1.01] hover:-translate-y-0.5 ${getStatusBorderColor(check.status, isOpen)}`}>
+                  <div key={i} className={`bg-white/40 dark:bg-white/[0.01] backdrop-blur-md border rounded-2xl sm:rounded-[1.5rem] transition-all duration-300 hover:scale-[1.01] hover:-translate-y-0.5 ${gridSpan} ${getStatusBorderColor(check.status, isOpen)}`}>
                     <button onClick={() => toggleCheck(i)} className="w-full flex items-center justify-between gap-3 sm:gap-4 p-3.5 sm:p-5 text-left active:scale-[0.99] transition-transform">
                       <div className="flex items-center gap-3 sm:gap-4 min-w-0 flex-1">
                         <div className={`w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl flex items-center justify-center flex-shrink-0 transition-transform duration-300 ${getIconBg(check.status)}`}>
@@ -325,13 +371,15 @@ export default function AuditTool() {
                               <div className={`h-full rounded-full transition-all duration-1000 ease-out ${check.score >= 80 ? 'bg-gradient-to-r from-teal-500 to-emerald-500 shadow-[0_0_10px_rgba(20,184,166,0.25)]' : check.score >= 50 ? 'bg-gradient-to-r from-amber-500 to-orange-500 shadow-[0_0_10px_rgba(245,158,11,0.25)]' : 'bg-gradient-to-r from-rose-500 to-red-500 shadow-[0_0_10px_rgba(239,68,68,0.25)]'}`} style={{ width: `${check.score}%` }} />
                             </div>
                           </div>
-                          <div className="space-y-2">
+                          <div className="grid grid-cols-1 gap-2">
                             {check.details.map((detail, j) => {
-                              const isFail = detail.startsWith('❌');
-                              const isWarn = detail.startsWith('⚠️') || detail.startsWith('💡');
+                              const parsed = parseDetail(detail);
+                              const itemIcon = detailIcons[parsed.status] || detailIcons.pass;
+                              const itemStyle = detailStyles[parsed.status] || detailStyles.pass;
                               return (
-                                <div key={j} className={`p-3.5 rounded-xl text-xs font-mono font-medium leading-relaxed border transition-all ${isFail ? 'bg-red-500/[0.04] border-red-500/10 text-red-700 dark:text-red-300/80 shadow-[0_2px_8px_rgba(239,68,68,0.02)]' : isWarn ? 'bg-amber-500/[0.04] border-amber-500/10 text-amber-700 dark:text-amber-300/80 shadow-[0_2px_8px_rgba(245,158,11,0.02)]' : 'bg-white/50 dark:bg-white/[0.01] border-slate-200/50 dark:border-white/5 text-slate-600 dark:text-slate-400'}`}>
-                                  {detail}
+                                <div key={j} className={`flex items-start gap-3 p-3 sm:p-3.5 rounded-xl text-xs font-medium leading-relaxed border transition-all ${itemStyle}`}>
+                                  <div className="mt-0.5 shrink-0">{itemIcon}</div>
+                                  <span className="font-sans text-slate-700 dark:text-slate-350 break-words">{parsed.text}</span>
                                 </div>
                               );
                             })}
