@@ -113,6 +113,20 @@ const AFFILIATE_DATA = {
         url: "https://manychat.partnerlinks.io/jugrrxxzawym",
         buttonText: "Get ManyChat",
         badge: "Social Automation"
+    },
+    twilio: {
+        title: "Twilio",
+        description: "The industry-standard communications platform. Essential for provisioning numbers and streaming call audio.",
+        url: "https://www.twilio.com/",
+        buttonText: "Explore Twilio",
+        badge: "Telephony"
+    },
+    hubspot: {
+        title: "HubSpot CRM",
+        description: "The leading customer relationship platform. Perfect for centralizing contacts, logs, and pipeline workflows.",
+        url: "https://www.hubspot.com/",
+        buttonText: "Try HubSpot",
+        badge: "CRM"
     }
 };
 
