@@ -31,7 +31,8 @@ export async function getSanityPostBySlug(slug: string) {
     "image": image.asset->url,
     affiliates,
     "categories": categories[]->name,
-    body
+    body,
+    schemaMarkup
   }`
   return client.fetch(query, { slug })
 }

@@ -143,6 +143,14 @@ export default async function Post({ params }) {
           })
         }}
       />
+      {post.schemaMarkup && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: post.schemaMarkup,
+          }}
+        />
+      )}
 
       {/* --- HERO SECTION: HEADER CARD --- */}
       <header className="max-w-7xl mx-auto px-6 mb-10 animate-in fade-in slide-in-from-bottom-8 duration-1000">

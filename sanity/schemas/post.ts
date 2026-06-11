@@ -69,6 +69,12 @@ export default defineType({
       type: 'markdown',
       description: 'A Markdown editor for the blog content',
     }),
+    defineField({
+      name: 'schemaMarkup',
+      title: 'Custom Schema Markup',
+      type: 'text',
+      description: 'Optional custom JSON-LD schema (e.g., HowTo, FAQPage) to inject for this post. Make sure it is valid JSON.',
+    }),
   ],
   preview: {
     select: {
