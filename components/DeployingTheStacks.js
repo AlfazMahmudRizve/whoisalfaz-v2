@@ -26,8 +26,15 @@ const AFFILIATE_DATA = {
     pinecone: {
         title: "Pinecone Vector Database",
         description: "The vector database for building AI applications. Essential for RAG architectures.",
-        url: "https://try.pinecone.io/ra3cq48xakg6",
+        url: "/go/pinecone",
         buttonText: "Start Building with Pinecone",
+        badge: "Vector DB"
+    },
+    qdrant: {
+        title: "Qdrant Cloud",
+        description: "Rust-native vector search engine for the next generation of AI. Fast, scalable, and memory-efficient.",
+        url: "/go/qdrant",
+        buttonText: "Try Qdrant Cloud Free",
         badge: "Vector DB"
     },
     apollo: {

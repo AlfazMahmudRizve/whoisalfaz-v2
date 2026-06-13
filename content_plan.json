@@ -113,11 +113,11 @@
     "slug": "pinecone-vs-qdrant-n8n-rag-comparison",
     "description": "A technical comparison of Pinecone vs Qdrant for RAG workflows in n8n — covering indexing speed, cost, semantic search accuracy, and self-hosting trade-offs.",
     "categories": ["pJmrsKLAWC800vFHegUEU1"],
-    "affiliates": ["Pinecone", "n8n"],
+    "affiliates": ["Pinecone", "n8n", "qdrant"],
     "imagePrompt": "Premium tech-minimalist UI/UX, glassmorphic split comparison panel showing Pinecone as a managed cloud crystal vector store on the left and Qdrant as a self-hosted vector cluster on the right, connected by a cyber-cyan benchmark chart in the center, digital grid-mesh dark background, neon-purple winner highlight glow on key metrics, 3D render style with realistic material reflections.",
-    "status": "pending",
-    "publishedAt": null,
-    "sanityId": null
+    "status": "published",
+    "publishedAt": "2026-06-13T03:52:00.000Z",
+    "sanityId": "pinecone-vs-qdrant-n8n-rag-comparison"
   },
   {
     "day": 11,

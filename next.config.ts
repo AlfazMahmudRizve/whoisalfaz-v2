@@ -315,6 +315,16 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: '/go/pinecone',
+        destination: 'https://try.pinecone.io/ra3cq48xakg6',
+        permanent: true,
+      },
+      {
+        source: '/go/qdrant',
+        destination: 'https://cloud.qdrant.io/',
+        permanent: true,
+      },
+      {
         source: '/go/brevo',
         destination: 'https://get.brevo.com/6b88c13841c4',
         permanent: true,
