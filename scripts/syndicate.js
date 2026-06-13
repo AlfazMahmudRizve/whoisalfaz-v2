@@ -167,6 +167,26 @@ async function syndicateToDevTo(post) {
 
   try {
     console.log('📤 Syndicating to Dev.to...');
+    
+    // Check if there is an optimized dev.to markdown file
+    let bodyMarkdown = post.body;
+    const scriptsDir = __dirname;
+    const baseSlug = slug.split('-n8n')[0]; // e.g. pinecone-vs-qdrant
+    const devToMdPath = path.join(scriptsDir, `draft-${baseSlug}-devto.md`);
+    
+    if (fs.existsSync(devToMdPath)) {
+      console.log(`📖 Found optimized Dev.to markdown draft at: ${devToMdPath}`);
+      const rawMd = fs.readFileSync(devToMdPath, 'utf-8');
+      if (rawMd.startsWith('---')) {
+        const parts = rawMd.split('---');
+        if (parts.length >= 3) {
+          bodyMarkdown = parts.slice(2).join('---').trim();
+        }
+      } else {
+        bodyMarkdown = rawMd;
+      }
+    }
+
     const res = await fetch('https://dev.to/api/articles', {
       method: 'POST',
       headers: {
@@ -177,7 +197,7 @@ async function syndicateToDevTo(post) {
         article: {
           title: post.title,
           published: false, // Create as draft
-          body_markdown: post.body,
+          body_markdown: bodyMarkdown,
           tags: post.tags.slice(0, 4), // Dev.to supports max 4 tags
           canonical_url: post.canonicalUrl,
           description: post.description
