@@ -122,5 +122,21 @@
   "competitor_seo_audit_social": {
     "_id": "image-0c978146f887c4cc3050c27dfd81a2dbf20ee2b5-1280x720-webp",
     "url": "https://cdn.sanity.io/images/gfd4n1nu/production/0c978146f887c4cc3050c27dfd81a2dbf20ee2b5-1280x720.webp"
+  },
+  "screaming_frog_alternatives_featured": {
+    "_id": "image-e085754cf8ce5734076df26bd9765b4fc37aa338-1280x720-webp",
+    "url": "https://cdn.sanity.io/images/gfd4n1nu/production/e085754cf8ce5734076df26bd9765b4fc37aa338-1280x720.webp"
+  },
+  "screaming_frog_alternatives_body1": {
+    "_id": "image-64b9cd6f4126f1b8bb945158a91c531eea449ae0-1280x720-webp",
+    "url": "https://cdn.sanity.io/images/gfd4n1nu/production/64b9cd6f4126f1b8bb945158a91c531eea449ae0-1280x720.webp"
+  },
+  "screaming_frog_alternatives_body2": {
+    "_id": "image-e6469d22169a54f17e2c2776410711b30382f201-1280x720-webp",
+    "url": "https://cdn.sanity.io/images/gfd4n1nu/production/e6469d22169a54f17e2c2776410711b30382f201-1280x720.webp"
+  },
+  "screaming_frog_alternatives_social": {
+    "_id": "image-024e658becf52ffcbd11da29f1b565157187c21e-1280x720-webp",
+    "url": "https://cdn.sanity.io/images/gfd4n1nu/production/024e658becf52ffcbd11da29f1b565157187c21e-1280x720.webp"
   }
 }
