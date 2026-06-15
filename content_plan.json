@@ -127,9 +127,9 @@
     "categories": ["Al3E26R37amzsHAqPF1yCU", "pJmrsKLAWC800vFHegUEU1"],
     "affiliates": ["Apollo.io", "AiSDR, Inc.", "Brevo"],
     "imagePrompt": "Premium tech-minimalist UI/UX, glassmorphic automated email pipeline card with three connected engine blocks — lead source, AI personalization, and email delivery — rendered as glowing 3D vector modules, digital grid-mesh dark navy background, cyber-cyan data flow stream linking modules, neon-purple personalization AI node with pulsing ambient light, 3D render style with cinematic depth.",
-    "status": "pending",
-    "publishedAt": null,
-    "sanityId": null
+    "status": "published",
+    "publishedAt": "2026-06-15T22:01:00.000Z",
+    "sanityId": "cold-email-machine-apollo-aisdr-brevo"
   },
   {
     "day": 12,
