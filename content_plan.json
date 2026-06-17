@@ -139,9 +139,9 @@
     "categories": ["Al3E26R37amzsHAqPF1yCU"],
     "affiliates": ["Databox", "monday.com", "n8n"],
     "imagePrompt": "Premium tech-minimalist UI/UX, glassmorphic analytics dashboard with live KPI metric cards — pipeline velocity bar, win rate donut chart, ARR trend line — all glowing in cyber-cyan against a dark grid-mesh background, neon-purple alert threshold lines on charts, 3D render style with premium glass card material and ambient depth lighting.",
-    "status": "pending",
-    "publishedAt": null,
-    "sanityId": null
+    "status": "published",
+    "publishedAt": "2026-06-17T12:00:00.000Z",
+    "sanityId": "databox-revops-dashboard-pipeline-velocity"
   },
   {
     "day": 13,
