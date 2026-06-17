@@ -43,6 +43,8 @@ export async function generateMetadata({ params }) {
   const seoDesc = post.seoDescription || post.description;
   const canonicalUrl = `https://whoisalfaz.me/blog/${slug}/`;
 
+  const ogImage = post.image || '/featured-image.png';
+
   return {
     title: seoTitle,
     description: seoDesc,
@@ -59,9 +61,17 @@ export async function generateMetadata({ params }) {
       section: post.categories?.[0] || 'Technology',
       images: [
         {
-          url: post.image || '/featured-image.png',
+          url: ogImage,
         },
       ],
+    },
+    // Per-article Twitter card — overrides the global site-level twitter defaults in layout.tsx
+    twitter: {
+      card: 'summary_large_image',
+      creator: '@whoisalfaz',
+      title: seoTitle,
+      description: seoDesc,
+      images: [ogImage],
     },
   };
 }
@@ -92,43 +102,50 @@ export default async function Post({ params }) {
       {/* AMBIENT GLOWS */}
       <div className="fixed top-0 left-0 w-full h-[500px] bg-gradient-to-b from-teal-500/5 to-transparent dark:from-teal-900/10 dark:to-transparent -z-10 transition-colors duration-300" />
 
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BlogPosting",
-            "headline": post.seoTitle || post.title,
-            "description": post.seoDescription || post.description,
-            "datePublished": post.date,
-            "dateModified": post.modified || post.date,
-            "image": post.image ? [`https://whoisalfaz.me${post.image}`] : [],
-            "mainEntityOfPage": {
-              "@type": "WebPage",
-              "@id": `https://whoisalfaz.me/blog/${slug}/`
-            },
-            "author": {
-              "@type": "Person",
-              "name": "Alfaz Mahmud Rizve",
-              "url": "https://whoisalfaz.me",
-              "jobTitle": "RevOps Architect & Full Stack Automation Engineer",
-              "image": "https://whoisalfaz.me/profile.jpg",
-              "sameAs": [
-                "https://linkedin.com/in/alfaz-mahmud-rizve",
-                "https://x.com/whoisalfaz"
-              ]
-            },
-            "publisher": {
-              "@type": "Organization",
-              "name": "whoisalfaz",
-              "logo": {
-                "@type": "ImageObject",
-                "url": "https://whoisalfaz.me/logo.png"
+      {/* Auto-generated BlogPosting schema — only injected when the CMS post does NOT
+          already supply a schemaMarkup field. This prevents duplicate BlogPosting blocks
+          that cause Google to pick the first (potentially malformed) version. */}
+      {!post.schemaMarkup && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "BlogPosting",
+              "headline": post.seoTitle || post.title,
+              "description": post.seoDescription || post.description,
+              "datePublished": post.date,
+              "dateModified": post.modified || post.date,
+              // post.image from Sanity is already a fully-qualified absolute URL
+              // (https://cdn.sanity.io/...). Do NOT prepend the site origin.
+              "image": post.image ? [post.image] : [],
+              "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": `https://whoisalfaz.me/blog/${slug}/`
+              },
+              "author": {
+                "@type": "Person",
+                "name": "Alfaz Mahmud Rizve",
+                "url": "https://whoisalfaz.me",
+                "jobTitle": "RevOps Architect & Full Stack Automation Engineer",
+                "image": "https://whoisalfaz.me/profile.jpg",
+                "sameAs": [
+                  "https://linkedin.com/in/alfaz-mahmud-rizve",
+                  "https://x.com/whoisalfaz"
+                ]
+              },
+              "publisher": {
+                "@type": "Organization",
+                "name": "whoisalfaz",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://whoisalfaz.me/logo.png"
+                }
               }
-            }
-          })
-        }}
-      />
+            })
+          }}
+        />
+      )}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
