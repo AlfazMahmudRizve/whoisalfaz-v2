@@ -45,7 +45,7 @@ function buildJson() {
       "@context": "https://schema.org",
       "@type": "BlogPosting",
       "headline": "Databox RevOps Dashboard: How to Track Pipeline Velocity, Win Rate, and ARR in Real Time",
-      "description": "Learn how to build a real-time sales reporting engine using monday.com, n8n, and Databox. Includes step-by-step calculations for Pipeline Velocity, ARR, and performance logs for the top 3 AI Agent tools.",
+      "description": "Build a real-time RevOps dashboard using monday.com, n8n, and Databox. Calculate sales velocity, win rates, and track AI outbound SDR metrics automatically.",
       "image": [
         featuredUrl || "https://whoisalfaz.me/images/blog/default.jpg"
       ],
@@ -75,10 +75,10 @@ function buildJson() {
       _type: 'post',
       title: "Databox RevOps Dashboard: How to Track Pipeline Velocity, Win Rate, and ARR in Real Time",
       slug: { _type: 'slug', current: 'databox-revops-dashboard-pipeline-velocity' },
-      description: "Build a real-time sales reporting engine using monday.com, n8n, and Databox. Includes step-by-step calculations for Pipeline Velocity, ARR, and performance logs for the top 3 AI Agent tools (AiSDR, ElevenLabs, n8n).",
+      description: "Build a real-time RevOps dashboard using monday.com, n8n, and Databox. Calculate sales velocity, win rates, and track AI outbound SDR metrics automatically.",
       date: new Date().toISOString(),
       seoTitle: "Databox RevOps Dashboard: Track Pipeline Velocity & ARR in Real Time",
-      seoDescription: "Learn how to build a real-time sales reporting engine using monday.com, n8n, and Databox. Includes step-by-step calculations for Pipeline Velocity, ARR, and AI SDR tracking.",
+      seoDescription: "Build a real-time RevOps dashboard using monday.com, n8n, and Databox. Calculate sales velocity, win rates, and track AI outbound SDR metrics automatically.",
       image: {
         _type: 'image',
         asset: { _type: 'reference', _ref: featuredAssetId }
@@ -86,7 +86,7 @@ function buildJson() {
       categories: [
         { _type: 'reference', _ref: 'Al3E26R37amzsHAqPF1yCU' } // 30 Days of n8n & Automation
       ],
-      affiliates: ['Databox', 'monday.com', 'n8n'],
+      affiliates: ['databox', 'monday', 'n8n'],
       body: bodyContent,
       schemaMarkup: JSON.stringify(blogSchema)
     };
