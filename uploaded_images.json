@@ -170,5 +170,17 @@
   "databox_revops_dashboard_social": {
     "_id": "image-3ab131f06998e9ee1e89eaa22fa95b7bb12fd324-1024x1024-jpg",
     "url": "https://cdn.sanity.io/images/gfd4n1nu/production/3ab131f06998e9ee1e89eaa22fa95b7bb12fd324-1024x1024.jpg"
+  },
+  "manychat_whatsapp_b2b_featured": {
+    "_id": "image-ce6b03969436eb86083242246bb2080a7441ab05-1024x1024-jpg",
+    "url": "https://cdn.sanity.io/images/gfd4n1nu/production/ce6b03969436eb86083242246bb2080a7441ab05-1024x1024.jpg"
+  },
+  "manychat_whatsapp_b2b_body1": {
+    "_id": "image-bece58a80f39d9d63dd3418dfdf8edf91df7b39f-1024x1024-jpg",
+    "url": "https://cdn.sanity.io/images/gfd4n1nu/production/bece58a80f39d9d63dd3418dfdf8edf91df7b39f-1024x1024.jpg"
+  },
+  "manychat_whatsapp_b2b_body2": {
+    "_id": "image-726ffa7b01f39788a0d48cee4f8be4d3be7a01ad-1024x1024-jpg",
+    "url": "https://cdn.sanity.io/images/gfd4n1nu/production/726ffa7b01f39788a0d48cee4f8be4d3be7a01ad-1024x1024.jpg"
   }
 }
