@@ -35,7 +35,7 @@ The pipeline operates in six chronological stages:
 * **Stage 5: Corrective Web Search (Tavily):** A custom HTTP request is dispatched to **Tavily**, pulling down highly relevant, stripped-markdown search results matching the query.
 * **Stage 6: Context Fusion & LLM Synthesis:** The final prompt merges either the validated vector context or the fresh web-scraped context, instructing the LLM (e.g., **OpenAI GPT-4o** or **Anthropic Claude 3.5 Sonnet**) to synthesize a factual response.
 
-This architecture forms the backbone of a sophisticated, self-healing [automated n8n AI receptionist](/blog/n8n-ai-receptionist/) designed to handle customer queries with 100% factual accuracy. By incorporating dynamic external APIs, you are essentially [giving your n8n AI Agent hands with custom tools](/blog/n8n-ai-agent-tools/), allowing it to interact with live resources in real-time.
+This architecture forms the backbone of a sophisticated, self-healing [automated n8n AI receptionist](/blog/n8n-ai-receptionist/) designed to handle customer queries with 100% factual accuracy. By incorporating dynamic external APIs, you are essentially [giving your n8n AI Agent hands with custom tools](/blog/n8n-ai-agent-tools/), allowing it to interact with live resources in real-time. *(For a more streamlined, visual interface for managing AI agents and LLM prompt orchestration without coding, read our guide on [building self-hosted AI agents with Dify and n8n](/blog/dify-n8n-integration-self-hosted-ai-agent/))*.
 
 ---
 

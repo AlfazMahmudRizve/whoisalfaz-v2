@@ -19,7 +19,8 @@ This manual loop takes anywhere from **10 to 20 minutes per lead**. If your camp
 
 Furthermore, data quality decays quickly. Over 30% of B2B professionals change roles, company names, or email domains annually. Static databases decay faster than they can be populated.
 
-An automated B2B data enrichment system solves this latency by executing **instant, programmatic API lookups** at the exact millisecond a lead is captured. By enriching the data immediately, your systems can score, route, and personalize outreach asynchronously—allowing your SDRs to focus solely on high-value conversations.
+An automated B2B data enrichment system solves this latency by executing **instant, programmatic API lookups** at the exact millisecond a lead is captured. By enriching the data immediately, your systems can score, route, and personalize outreach asynchronously—allowing your SDRs to focus solely on high-value conversations. *(While Apollo.io excels at email and company data, you can dramatically improve direct-dial and mobile phone coverage by adding a secondary source. See our technical comparison: [Lusha vs Apollo for n8n Outreach Pipelines](/blog/lusha-vs-apollo-contact-enrichment-n8n-api/))*.
+
 
 <img src="https://cdn.sanity.io/images/gfd4n1nu/production/9bf441f1e270932cb7c036d48afcdb7aefc60cbf-1024x1024.webp" alt="Manual vs Automated Lead Enrichment Pipeline Comparison and Time Savings Analysis" />
 

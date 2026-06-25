@@ -98,7 +98,7 @@ To streamline your operations, we have structured the 12 recipes into four funct
 * **The Recipe:**
   * **Trigger:** `When Status changes to 'Closed Won'` (Status column).
   * **Action:** `Create item in Onboarding Board` `and link them via Connect Boards`.
-* **RevOps Benefit:** Eliminates manual administrative work, ensuring the customer onboarding process begins the same day the contract is signed.
+* **RevOps Benefit:** Eliminates manual administrative work, ensuring the customer onboarding process begins the same day the contract is signed. *(Once the onboarding board is active, automating role-based training path assignments becomes critical. Read our step-by-step tutorial on [automating Trainual SOPs with n8n](/blog/automate-trainual-sops-n8n-api-onboarding/) to link your monday.com Work OS to employee training pipelines)*.
 
 ### Recipe 8: Dynamic Handoff Data Mapping
 * **Objective:** Copy deal value, contract scope, and customer email from the sales CRM to the delivery board upon project kickoff.

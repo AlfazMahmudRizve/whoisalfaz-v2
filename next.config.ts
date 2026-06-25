@@ -376,6 +376,21 @@ const nextConfig: NextConfig = {
         destination: 'https://manychat.partnerlinks.io/jugrrxxzawym',
         permanent: true,
       },
+      {
+        source: '/go/dify',
+        destination: 'https://affiliate.dify.ai/wxgid30puoqg',
+        permanent: true,
+      },
+      {
+        source: '/go/trainual',
+        destination: 'https://start.trainual.com/m0kygjqcistb',
+        permanent: true,
+      },
+      {
+        source: '/go/lusha',
+        destination: 'https://partnerstack.lusha.com/0ghbkn0b1inm',
+        permanent: true,
+      },
     ];
   },
   async headers() {

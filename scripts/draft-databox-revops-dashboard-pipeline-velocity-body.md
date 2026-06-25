@@ -27,7 +27,8 @@ graph TD
 
 * **The Formula Column Trap:** Native formula columns in monday.com are calculated in the browser at render time. Because their values are never written back to the database as stored fields, they cannot trigger API webhooks or fire downstream automations. Any metric you see in a formula column is invisible to your reporting stack. The fix is to use physical date columns stamped by automations—covered in detail below.
 
-* **Aggregated AI Blindness:** While outbound tools like [AiSDR](/blog/cold-email-machine-apollo-aisdr-brevo/) or [ElevenLabs/Vapi](/blog/elevenlabs-n8n-voice-ai-sales-agent/) track their own reply and call rates, these metrics live in separate application silos. Leadership cannot see how AI outreach cost scales against actual CRM conversions—making ROI calculations impossible without manual assembly.
+* **Aggregated AI Blindness:** While outbound tools like [AiSDR](/blog/cold-email-machine-apollo-aisdr-brevo/) or [ElevenLabs/Vapi](/blog/elevenlabs-n8n-voice-ai-sales-agent/) track their own reply and call rates, these metrics live in separate application silos. Leadership cannot see how AI outreach cost scales against actual CRM conversions—making ROI calculations impossible without manual assembly. *(Bridging this visibility gap is also why standardized SOPs matter — when team processes are documented and tracked, operational metrics become measurable. See how to scale that with [Trainual vs Notion for RevOps SOPs](/blog/trainual-vs-notion-wiki-revops-sop/))*.
+
 
 * **Sync Latency and API Throttling:** Running batch-export scripts to update reporting databases frequently hits API rate limits, resulting in data discrepancy and delayed dashboard cards. A deal that closed 45 minutes ago may not appear in your dashboard for hours. For real-time decision making, this is unacceptable.
 

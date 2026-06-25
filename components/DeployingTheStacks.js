@@ -134,6 +134,27 @@ const AFFILIATE_DATA = {
         url: "https://www.hubspot.com/",
         buttonText: "Try HubSpot",
         badge: "CRM"
+    },
+    dify: {
+        title: "Dify.ai",
+        description: "An open-source LLM app development platform. Orchestrate agents, RAG pipelines, and LLM workflows with ease.",
+        url: "/go/dify",
+        buttonText: "Try Dify.ai",
+        badge: "AI Orchestration"
+    },
+    trainual: {
+        title: "Trainual",
+        description: "The leading standard operating procedure (SOP) and training platform for growing teams.",
+        url: "/go/trainual",
+        buttonText: "Try Trainual Free",
+        badge: "SOP & Training"
+    },
+    lusha: {
+        title: "Lusha",
+        description: "B2B database and contact enrichment platform. Find verified emails and phone numbers instantly.",
+        url: "/go/lusha",
+        buttonText: "Try Lusha Free",
+        badge: "Lead Gen & Data"
     }
 };
 

@@ -2,6 +2,11 @@ import { MetadataRoute } from 'next';
 import { getSanityPosts, getSanityCategories } from '@/lib/sanity.client';
 import { serviceData } from '@/lib/serviceData';
 
+// Cache the sitemap for 12 hours to avoid cold Sanity CDN hits on every Googlebot crawl.
+// Without this, each Googlebot fetch re-runs the async Sanity queries live, causing
+// "Temporary processing error" if Sanity is slow or returning a non-200 at that moment.
+export const revalidate = 43200; // 12 hours in seconds
+
 interface SanityPost {
     slug: { current: string };
     date: string;
@@ -47,8 +52,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         priority: 0.8,
     }));
 
-    // 3. Dynamic Blog Posts
-    const posts: SanityPost[] = await getSanityPosts();
+    // 3. Dynamic Blog Posts — fallback to [] if Sanity is unavailable
+    let posts: SanityPost[] = [];
+    try {
+        posts = await getSanityPosts();
+    } catch (err) {
+        console.error('[sitemap] Failed to fetch blog posts from Sanity:', err);
+    }
     const blogRoutes = posts.map((post) => ({
         url: `${baseUrl}/blog/${post.slug.current}/`,
         lastModified: new Date(post.date),
@@ -56,8 +66,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         priority: 0.7,
     }));
 
-    // 4. Dynamic Blog Categories
-    const categories: SanityCategory[] = await getSanityCategories();
+    // 4. Dynamic Blog Categories — fallback to [] if Sanity is unavailable
+    let categories: SanityCategory[] = [];
+    try {
+        categories = await getSanityCategories();
+    } catch (err) {
+        console.error('[sitemap] Failed to fetch categories from Sanity:', err);
+    }
     const validCategories = categories.filter((cat) => cat.count > 0);
     const categoryRoutes = validCategories.map((cat) => ({
         url: `${baseUrl}/blog/category/${cat.slug.current}/`,
@@ -68,3 +83,4 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
     return [...coreRoutes, ...serviceRoutes, ...blogRoutes, ...categoryRoutes];
 }
+

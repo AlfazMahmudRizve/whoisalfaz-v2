@@ -30,7 +30,7 @@ graph TD
 ```
 
 This architecture splits the outbound lifecycle into four distinct, highly specialized layers:
-1. **The Lead Intelligence Layer (Apollo.io):** Serves as the source of truth for B2B contact data, filtering, and real-time enrichment triggers.
+1. **The Lead Intelligence Layer (Apollo.io):** Serves as the source of truth for B2B contact data, filtering, and real-time enrichment triggers. *(For teams requiring superior mobile phone and direct-dial coverage on top of Apollo's dataset, see our technical breakdown: [Lusha vs Apollo for n8n Enrichment Pipelines](/blog/lusha-vs-apollo-contact-enrichment-n8n-api/))*.
 2. **The Orchestration Layer (n8n):** The central nervous system, handling webhook events, security checks, CRM deduplication, and asynchronous queue management.
 3. **The Cognitive Copywriting Layer (AiSDR):** An AI-driven agent that ingests prospect parameters (industry, job role, company size, bio) and drafts personalized outreach copy matching your brand guidelines.
 4. **The SMTP Delivery Layer (Brevo):** The transactional and outbound sending engine, responsible for routing the emails through warmed-up IP/domain configurations to ensure inbox placement.
