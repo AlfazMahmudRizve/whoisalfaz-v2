@@ -7,7 +7,7 @@
     "current": "apollo-brevo-n8n-outbound-pipeline"
   },
   "description": "Automate lead sync from Apollo.io to Brevo CRM with n8n. Includes deduplication logic, ICP scoring, sequence triggering, circular sync protection, and SMTP email delivery automation.",
-  "date": "2026-06-05T10:54:53.721Z",
+  "date": "2026-06-25T11:15:45.783Z",
   "seoTitle": "Apollo.io to Brevo CRM via n8n: Full Outbound Pipeline Tutorial (2026)",
   "seoDescription": "Build a production-grade Apollo.io → n8n → Brevo outbound pipeline with deduplication, ICP scoring, sequence triggering, and circular sync protection. Step-by-step with code.",
   "image": {

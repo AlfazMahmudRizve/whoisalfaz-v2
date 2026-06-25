@@ -48,7 +48,7 @@ This sounds obvious. In practice, at most SaaS companies under $10M ARR, Marketi
 - `lead_source`: exact UTM-mapped values (no free-text)
 - `automation_origin`: automation_engine / human_rep / api_ingest
 
-This schema is then enforced across your CRM, your work OS (e.g. **monday.com**), and your automation orchestrator (**n8n**). If the data isn't standardized, your automations push garbage downstream.
+This schema is then enforced across your CRM, your work OS (e.g. **monday.com**), and your automation orchestrator (**n8n**), laying a structured data foundation similar to the Next.js and database architecture detailed in our [Client Portfolio Delivery case study](/blog/case-study-client-portfolio-delivery). If the data isn't standardized, your automations push garbage downstream.
 
 ### Pillar 2 — Aligned Process Design & Handoffs
 
@@ -83,7 +83,7 @@ For a full teardown of this architecture, see our [complete RevOps automation st
 
 ### Pillar 4 — Measurement Cadence & Shared KPIs
 
-RevOps replaces departmental metrics with a shared KPI stack that leadership reviews in one dashboard. **Databox** is the reporting layer we recommend for this — it pulls live data from HubSpot, monday.com, Google Analytics, Facebook Ads, and Stripe into a single real-time view.
+RevOps replaces departmental metrics with a shared KPI stack that leadership reviews in one dashboard. **Databox** is the reporting layer we recommend for this — it pulls live data from HubSpot, monday.com, [Google Analytics](/blog/n8n-google-analytics-4-pipeline), Facebook Ads, and Stripe (which we integrated with a custom headless storefront in the [Veloryc Premium E-Commerce case study](/blog/case-study-veloryc-premium-ecommerce/)) into a single real-time view.
 
 The three metrics every RevOps function must track:
 
@@ -113,7 +113,7 @@ The most common RevOps mistake: copying an enterprise stack at the seed stage. I
 | Apollo.io | Contact database, sequences, email verification | $49/mo |
 | **n8n** (Self-hosted) | Orchestration brain — lead routing, enrichment, notifications | $0 (hosting ~$10/mo) |
 | Brevo | Transactional email delivery, contact storage | $25/mo |
-| Google Sheets | Lightweight reporting until Databox is warranted | $0 |
+| Google Sheets | Lightweight reporting (which you can build using our guide to [automate client reporting with n8n](/blog/automate-client-reporting-with-n8n)) | $0 |
 
 At this stage, your n8n workflows are simple: webhook → Apollo enrich → Brevo contact create → Slack notify SDR. No round-robin routing needed. No complex ICP scoring yet. Just make sure every lead is captured, enriched, and notified — automatically.
 
@@ -173,9 +173,9 @@ graph LR
 - Validate field schemas before pushing dirty data downstream
 - Prevent circular sync loops with origin metadata flags
 
-**What n8n does natively:** all of the above, in a visual workflow editor, with custom JavaScript execution in Code Nodes, full error handling via Error Trigger, and zero vendor lock-in because it's open source.
+**What n8n does natively:** all of the above, in a visual workflow editor, with custom JavaScript execution in Code Nodes (read our master list of [n8n Tips and Tricks](/blog/n8n-tips-and-tricks-by-alfaz-mahmud-rizve/) for advanced techniques), full error handling via Error Trigger, and zero vendor lock-in because it's open source.
 
-This is why the [Apollo→Brevo outbound pipeline](/blog/apollo-brevo-n8n-outbound-pipeline/) we built for a client reduced lead-to-outreach time from 48 hours to under 4 minutes — the automation does what no native sync plugin can.
+This is why the [Apollo→Brevo outbound pipeline](/blog/apollo-brevo-n8n-outbound-pipeline/) we built for a client (which also leverages custom [Apollo n8n outreach](/blog/apollo-n8n-outreach/) setups) reduced lead-to-outreach time from 48 hours to under 4 minutes — the automation does what no native sync plugin can.
 
 ---
 
@@ -189,7 +189,7 @@ If you're starting from zero, here is the minimum viable RevOps implementation f
 - [ ] Add `automation_origin` custom field to your CRM (prevents circular sync loops)
 
 **Day 3–4: Orchestration Setup**
-- [ ] Deploy n8n self-hosted (Docker + Postgres + Redis on a $10/mo VPS)
+- [ ] Deploy [n8n self-hosted](/blog/what-is-n8n-and-how-to-set-it-up) (Docker + Postgres + Redis on a $10/mo VPS)
 - [ ] Build your first webhook → Apollo enrich → Brevo create workflow
 - [ ] Add a Slack Error Trigger node for DLQ alerting
 

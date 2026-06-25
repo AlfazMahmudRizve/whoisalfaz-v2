@@ -1,4 +1,4 @@
-In modern high-velocity marketing and sales operations, **conversational AI is the frontline of user engagement**. Messaging channels like Instagram DMs, Facebook Messenger, and WhatsApp Business have transformed outbound prospecting and inbound lead qualification. However, when developers attempt to bridge conversational chat interfaces with enterprise orchestration systems, they run face-first into a devastating structural bottleneck: **ManyChat's strict 10-second webhook response timeout limit**.
+In modern high-velocity marketing and sales operations, **conversational AI is the frontline of user engagement**. Messaging channels like Instagram DMs, Facebook Messenger, and WhatsApp Business (read our playbook on [ManyChat WhatsApp B2B Lead Capture](/blog/manychat-whatsapp-b2b-lead-capture-agency/)) have transformed outbound prospecting and inbound lead qualification. However, when developers attempt to bridge conversational chat interfaces with enterprise orchestration systems, they run face-first into a devastating structural bottleneck: **ManyChat's strict 10-second webhook response timeout limit**.
 
 If your chat flow triggers an external webhook to execute complex operational paths—such as querying an LLM like Claude or GPT, running deep profile lookup sequences, or syncing database values across multiple pipelines—the process routinely exceeds 10 seconds. When this threshold is crossed, **ManyChat** immediately terminates the connection. The conversation hangs, the user experiences a broken loop, and qualified outbound pipeline velocity is lost.
 
@@ -12,7 +12,7 @@ This comprehensive engineering blueprint provides the exact step-by-step methodo
 
 Most marketing campaigns and revenue teams structure their webhooks linearly. A user submits a query or email address in a chat window, **ManyChat** triggers an external HTTP block, waits for the response, and then parses the returned values to display a message. 
 
-While this direct approach works for simple math operations or static database lookups, it fails completely under real-world enterprise workloads. Chaining modern operational pipelines incurs massive cumulative latency:
+While this direct approach works for simple math operations or static database lookups (like checking instant ticket queues or order status in our [Urban Cafe case study](/blog/case-study-urban-cafe-foodtech-platform/)), it fails completely under real-world enterprise workloads. Chaining modern operational pipelines incurs massive cumulative latency:
 
 1. **AI Reasoning & LLM Response Times:** Generating a personalized AI prompt, invoking RAG databases *(similar to [building a standard n8n RAG pipeline](/blog/n8n-rag-tutorial/) or designing a [Corrective RAG Knowledge Base with Pinecone and n8n](/blog/pinecone-n8n-rag-knowledge-base-blueprint/))*, and waiting for tokens to stream from an LLM takes anywhere from **5 to 30+ seconds**.
 2. **Programmatic Data Enrichment:** Calling third-party validation APIs like Apollo.io or Lusha to fetch company coordinates, revenue tiers, and direct phone numbers requires **6 to 12 seconds** of serial request handling. *(To see this enrichment logic in action, explore our production blueprint on the [AI-Powered Lead Enrichment Pipeline with n8n and Apollo.io](/blog/n8n-apollo-lead-enrichment-pipeline/))*.
@@ -47,7 +47,7 @@ Below is the step-by-step technical implementation to construct this decoupled a
 
 To bypass the timeout, the n8n Webhook Node must be configured to return an instant response rather than waiting for downstream nodes to complete execution.
 
-1. Create a new workflow in **n8n** and add a **Webhook Trigger Node**.
+1. Create a new workflow in **n8n** and add a **Webhook Trigger Node** (refer to our step-by-step tutorial on [how to build an API with n8n](/blog/how-to-build-an-api-with-n8n)).
 2. Set the **HTTP Method** to `POST`.
 3. Set the **Path** to `manychat-async-ingress`.
 4. Locate the **Response Mode** parameter and set it to **`Immediate Response`** (or `Response Code: 200`). This is the critical setting. It instructs **n8n** to return an instant `200 OK` code as soon as the incoming request is parsed, separating the execution paths.

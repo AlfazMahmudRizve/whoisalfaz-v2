@@ -296,7 +296,7 @@ When the agent closes the conversation, they manually update the `bot_paused` fl
 
 ## <mark>Agency Multi-Tenant Templating Blueprint</mark>
 
-How do agencies deploy ManyChat WhatsApp flows across multiple clients without duplicating configurations?
+How do [automation agencies](/blog/ai-automation-agency-business-model/) deploy ManyChat WhatsApp flows across multiple clients without duplicating configurations?
 
 The core architectural decision for agencies is separating **Bot Fields** from **User Custom Fields**:
 

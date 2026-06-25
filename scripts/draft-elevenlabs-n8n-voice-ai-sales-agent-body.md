@@ -21,7 +21,7 @@ To ensure stability, scalability, and absolute separation of concerns, our archi
 The system utilizes four core technical modules:
 
 1. **Telephony Connector (Twilio):** Twilio provisions the phone number, handles inbound SIP/PSTN calling routes, and establishes a secure audio connection. It leverages **Twilio Media Streams** or native SIP trunks to stream raw telephone audio.
-2. **Conversational Voice Core (ElevenLabs):** ElevenLabs acts as the conversational shell. It ingests the raw telephone audio, performs Speech-to-Text (STT) transcription, executes the LLM agent prompt loop, and synthesizes the final Text-to-Speech (TTS) audio.
+2. **Conversational Voice Core (ElevenLabs):** ElevenLabs acts as the conversational shell. It ingests the raw telephone audio, performs Speech-to-Text (STT) transcription, executes the LLM agent prompt loop, and synthesizes the final Text-to-Speech (TTS) audio (similar to the browser-native TTS queue designed for hands-free kitchen orders in our [Urban Cafe case study](/blog/case-study-urban-cafe-foodtech-platform/)).
 3. **Orchestration Layer (n8n):** When the ElevenLabs agent decides it needs to retrieve CRM records, check calendar slots, or book an appointment, it fires a webhook payload to **n8n**. n8n acts as the "brain," querying databases and executing integrations.
 4. **CRM and Database Tier (HubSpot & Google Calendar):** HubSpot holds prospect histories, lead statuses, and call logs. Google Calendar manages meeting slots and verifies calendar availability.
 

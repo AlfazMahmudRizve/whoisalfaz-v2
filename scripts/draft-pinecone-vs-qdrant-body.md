@@ -185,7 +185,7 @@ While Qdrant supports creating multiple **Collections**, running hundreds of sep
   ]
 }
 ```
-*   **Advantage:** Consolidates hundreds of clients on a single cheap server, maximizing agency profit margins.
+*   **Advantage:** Consolidates hundreds of clients on a single cheap server, maximizing [agency profit margins](/blog/ai-automation-agency-business-model/).
 
 ---
 

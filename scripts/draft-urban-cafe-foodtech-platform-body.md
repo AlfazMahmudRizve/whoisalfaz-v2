@@ -17,7 +17,7 @@ To bypass the need for a 5-person front-of-house crew, we re-engineered the enti
 2. **Eyes-Free Kitchen:** The kitchen runs completely hands-free. A browser-native Text-to-Speech (TTS) engine reads out incoming orders to the chef (e.g., *"New order for Rizve, Table 4. 1x Avocado Sourdough Toast"*).
 3. **Simple Completion Shouting:** When the food is hot, Marcus taps "Completed" on a wall-mounted tablet and calls out the name. The system handles the digital receipt and alerts the customer in real-time.
 
-To automate the indexing of these dynamic product and success pages instantly on every deployment, I integrated the same zero-touch [**SEO Indexing Pipeline**](https://whoisalfaz.me/blog/case-study-whoisalfaz-seo-indexing-engine/) used on this portfolio to ping search engine APIs in under 12 seconds.
+To automate the indexing of these dynamic product and success pages instantly on every deployment, I integrated the same zero-touch [SEO Indexing Engine case study](/blog/case-study-whoisalfaz-seo-indexing-engine/) used on this portfolio to ping search engine APIs in under 12 seconds.
 
 ---
 
@@ -54,7 +54,7 @@ Building a web app for a chaotic kitchen environment requires solving physical a
 2. **Network Drops:** Unstable cafe WiFi causes silent WebSocket dropouts, leading to missed tickets.
 3. **Kitchen Flooding:** A sudden spike in digital orders can easily overwhelm a solo operator, leading to long wait times and poor customer service.
 
-This architecture builds on the robust full-stack capabilities I designed for the [**Veloryc E-Commerce Case Study**](https://whoisalfaz.me/blog/case-study-veloryc-premium-ecommerce/) to handle high-performance state sync under heavy user loads.
+This architecture builds on the robust full-stack capabilities I designed for the [Veloryc Premium E-Commerce case study](/blog/case-study-veloryc-premium-ecommerce) to handle high-performance state sync under heavy user loads.
 
 ---
 

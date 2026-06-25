@@ -164,7 +164,7 @@ To scale:
 * **Board-per-Client Archive:** For complex enterprise onboardings that require individual boards, use **n8n** to automatically archive completed client boards into a separate workspace when a project is completed. This keeps the active board count well below the 50-board threshold.
 
 ### 3. Scaling Reporting with Databox
-While monday.com excels at operational tracking, it struggles with historical analytics and ARR charting. By pushing your closed-won deal data from monday.com to **Databox** via webhooks, you can track sales velocity, customer acquisition cost (CAC), and customer lifetime value (LTV) alongside metrics from other marketing platforms.
+While monday.com excels at operational tracking, it struggles with historical analytics and ARR charting. By pushing your closed-won deal data from monday.com to **Databox** via webhooks, you can track sales velocity, customer acquisition cost (CAC), and customer lifetime value (LTV) alongside metrics from other marketing platforms (to see how to consolidate this, review our setup for [automated marketing reporting with n8n](/blog/automated-marketing-reporting-with-n8n-at-whoisalfaz})).
 
 ---
 

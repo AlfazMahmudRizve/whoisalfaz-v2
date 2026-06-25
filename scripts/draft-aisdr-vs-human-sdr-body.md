@@ -269,7 +269,7 @@ return qualifiedProspects;
 
 If the lead is qualified, **n8n** passes the company description and target title to the LLM node. To accurately answer highly specific prospect questions regarding product features or pricing matrices, the agent should query a [Corrective RAG Knowledge Base with Pinecone and n8n](/blog/pinecone-n8n-rag-knowledge-base-blueprint/). 
 
-By leveraging vector databases and custom retrieval models, GTM architects can implement advanced personalization, similar to [building a standard n8n RAG pipeline](/blog/n8n-rag-tutorial/). To transition an outbound bot from a static responder to an active sales agent, developers focus on [giving your n8n AI Agent hands with custom tools](/blog/n8n-ai-agent-tools/).
+By leveraging vector databases and custom retrieval models (as implemented for real-time document optimization in our [CareerOps AI Resume Builder case study](/blog/case-study-careerops-ai-resume-builder/)), GTM architects can implement advanced personalization, similar to [building a standard n8n RAG pipeline](/blog/n8n-rag-tutorial/). To transition an outbound bot from a static responder to an active sales agent, developers focus on [giving your n8n AI Agent hands with custom tools](/blog/n8n-ai-agent-tools/).
 
 ### <mark>Brevo CRM Sync and Outreach Triggering</mark>
 
@@ -332,7 +332,7 @@ Failing to secure this data violates global regulations like the **General Data 
 
 ### <mark>Self-Hosting and Masking Sensitive Data</mark>
 
-To maintain full governance over your sales data, high-growth GTM teams bypass cloud-hosted SaaS automation brokers and choose to **self-host n8n** on private AWS, Google Cloud, or DigitalOcean servers behind VPC firewalls. Self-hosting ensures that your corporate database credentials and customer PII are never routed through third-party cloud servers.
+To maintain full governance over your sales data, high-growth GTM teams bypass cloud-hosted SaaS automation brokers and choose to [self-host n8n](/blog/what-is-n8n-and-how-to-set-it-up) on private AWS, Google Cloud, or DigitalOcean servers behind VPC firewalls. Self-hosting ensures that your corporate database credentials and customer PII are never routed through third-party cloud servers.
 
 Additionally, when prompting public LLM APIs (like OpenAI or Anthropic) for outreach personalization, implement a **PII Masking Node** in **n8n** prior to sending the context block. 
 
@@ -342,7 +342,7 @@ Use an **n8n Code Node** running custom regex to strip or mask highly sensitive 
 
 ## <mark>Should You Build Your AI SDR Stack In-House or Outsource It to an Automation Architect?</mark>
 
-The decision to build your AI SDR stack in-house or outsource it to a dedicated automation partner depends on whether your engineering team has the bandwidth to build and maintain complex webhook queues, error handlers, and LLM integrations without delaying your primary product roadmap. While visual platforms make workflow design look approachable, deploying production-grade, self-healing sales pipelines that run 24/7 requires specialized database and infrastructure expertise.
+The decision to build your AI SDR stack in-house or outsource it to a dedicated automation partner depends on whether your engineering team has the bandwidth to build and maintain complex webhook queues, error handlers, and LLM integrations without delaying your primary product roadmap. While visual platforms make [workflow design](/blog/n8n-workflow-design-best-practices) look approachable, deploying production-grade, self-healing sales pipelines that run 24/7 requires specialized database and infrastructure expertise.
 
 ### The Trade-Offs of In-House vs. Outsourced RevOps Engineering:
 * **The In-House Bottleneck:** Building the pipeline is only 20% of the lifecycle. The remaining 80% is operational maintenance: handling API schema changes, mitigating rate limits, managing domain IP reputation warming, updating prompt vector indexes, and resolving server crashes. Forcing your core product engineers to handle GTM maintenance pulls high-value resources away from building your SaaS features.
