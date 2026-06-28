@@ -182,5 +182,13 @@
   "manychat_whatsapp_b2b_body2": {
     "_id": "image-726ffa7b01f39788a0d48cee4f8be4d3be7a01ad-1024x1024-jpg",
     "url": "https://cdn.sanity.io/images/gfd4n1nu/production/726ffa7b01f39788a0d48cee4f8be4d3be7a01ad-1024x1024.jpg"
+  },
+  "headless_wordpress_seo_featured": {
+    "_id": "image-a34218999784e0a412e4b8658abc3ad48bfbdd8a-1024x1024-webp",
+    "url": "https://cdn.sanity.io/images/gfd4n1nu/production/a34218999784e0a412e4b8658abc3ad48bfbdd8a-1024x1024.webp"
+  },
+  "headless_wordpress_seo_body1": {
+    "_id": "image-04c4585a8afe170815f98a581addcded1daaeef5-1024x1024-webp",
+    "url": "https://cdn.sanity.io/images/gfd4n1nu/production/04c4585a8afe170815f98a581addcded1daaeef5-1024x1024.webp"
   }
 }
