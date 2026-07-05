@@ -1,4 +1,4 @@
-# Render Blueprint Specification for n8n Free Stack (Secure Config)
+# Render Blueprint Specification for n8n Free Stack (Neon DB with SSL)
 # Reference: https://render.com/docs/blueprints
 
 services:
@@ -23,6 +23,10 @@ services:
         value: neondb_owner
       - key: DB_POSTGRESDB_PASSWORD
         sync: false # Prompts the user for the password securely on Render (never stored in Git)
+      - key: DB_POSTGRESDB_SSL
+        value: "true" # Forces SSL connection required by Neon DB
+      - key: DB_POSTGRESDB_SSL_REJECT_UNAUTHORIZED
+        value: "false" # Prevents self-signed certificate rejection
       - key: N8N_ENCRYPTION_KEY
         generateValue: true
       - key: N8N_PORT
