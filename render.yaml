@@ -1,11 +1,11 @@
-# Render Blueprint Specification for n8n Free Stack (Neon DB SSL Fix)
+# Render Blueprint Specification for n8n Free Stack (Neon DB with native pg SSL)
 # Reference: https://render.com/docs/blueprints
 
 services:
   - type: web
     name: n8n-automation
     env: docker
-    plan: free # Bypasses credit card check
+    plan: free
     dockerfilePath: Dockerfile.n8n
     dockerContext: .
     healthCheckPath: /healthz
@@ -22,11 +22,11 @@ services:
       - key: DB_POSTGRESDB_USER
         value: neondb_owner
       - key: DB_POSTGRESDB_PASSWORD
-        sync: false # Prompts the user for the password securely on Render (never stored in Git)
-      - key: DB_POSTGRESDB_SSL_CA
-        value: "/etc/ssl/certs/ca-certificates.crt" # Points to container CA certificates to trigger SSL mode
+        sync: false # User enters this securely on Render dashboard
+      - key: PGSSLMODE
+        value: require # Native pg driver env var — forces SSL at the driver level
       - key: DB_POSTGRESDB_SSL_REJECT_UNAUTHORIZED
-        value: "false" # Prevents self-signed certificate rejection
+        value: "false"
       - key: N8N_ENCRYPTION_KEY
         generateValue: true
       - key: N8N_PORT
@@ -34,10 +34,10 @@ services:
       - key: PORT
         value: 5678
       - key: WEBHOOK_URL
-        sync: false # User will input their custom Render service URL here once assigned
+        sync: false
       - key: N8N_BASIC_AUTH_ACTIVE
         value: "true"
       - key: N8N_BASIC_AUTH_USER
-        sync: false # User will input their basic auth username
+        sync: false
       - key: N8N_BASIC_AUTH_PASSWORD
-        sync: false # User will input their secure basic auth password
+        sync: false
