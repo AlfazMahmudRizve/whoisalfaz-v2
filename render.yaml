@@ -1,11 +1,11 @@
-# Render Blueprint Specification for n8n Free Stack
+# Render Blueprint Specification for n8n Free Stack (Pre-configured Neon DB)
 # Reference: https://render.com/docs/blueprints
 
 services:
   - type: web
     name: n8n-automation
     env: docker
-    plan: free # Switch to Free plan to bypass the credit card verification check
+    plan: free # Bypasses credit card check
     dockerfilePath: Dockerfile.n8n
     dockerContext: .
     healthCheckPath: /healthz
@@ -13,17 +13,16 @@ services:
     envVars:
       - key: DB_TYPE
         value: postgresdb
-      # Database connection variables to be linked to your Supabase PostgreSQL instance
       - key: DB_POSTGRESDB_HOST
-        sync: false # User will input their Supabase Host (e.g. db.sfnvquyhsoriusyhdale.supabase.co)
+        value: ep-soft-thunder-aogtrtw6.c-2.ap-southeast-1.aws.neon.tech
       - key: DB_POSTGRESDB_PORT
-        value: 5432
+        value: "5432"
       - key: DB_POSTGRESDB_DATABASE
-        value: postgres
+        value: neondb
       - key: DB_POSTGRESDB_USER
-        value: postgres
+        value: neondb_owner
       - key: DB_POSTGRESDB_PASSWORD
-        sync: false # User will input their Supabase Database password
+        value: npg_u7QOiTY4wHmk
       - key: N8N_ENCRYPTION_KEY
         generateValue: true
       - key: N8N_PORT
