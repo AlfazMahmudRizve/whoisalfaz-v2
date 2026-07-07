@@ -349,77 +349,77 @@ export default async function Post({ params }) {
                   title: "AI Lead Enrichment Pipeline",
                   description: "Production-ready n8n workflow template. Automate lead gathering, scoring, and CRM insertion.",
                   price: "$49",
-                  checkoutUrl: "https://whop.com/checkout/plan_PLACEHOLDER/",
+                  checkoutUrl: "https://whop.com/checkout/plan_LAxinedkQYitE",
                   features: ["n8n JSON Workflow File", "Setup & Deployment Video Guide", "Lifetime Free Updates"]
                 },
                 "build-personal-ai-assistant": {
                   title: "RAG Knowledge Base Blueprint",
                   description: "Connect n8n to vector databases (Pinecone/Qdrant) for high-context semantic search and RAG.",
                   price: "$49",
-                  checkoutUrl: "https://whop.com/checkout/plan_PLACEHOLDER/",
+                  checkoutUrl: "https://whop.com/checkout/plan_D71ZRfF5b5QXl",
                   features: ["Semantic Search n8n Template", "Vector Database Provisioning Guide", "Prompt Templates Included"]
                 },
                 "n8n-ai-receptionist": {
                   title: "Voice AI Sales Agent & Memory Buffer",
                   description: "Production-ready Voice AI and agent nodes to qualify leads, manage memory buffers, and update CRM.",
                   price: "$49",
-                  checkoutUrl: "https://whop.com/checkout/plan_PLACEHOLDER/",
+                  checkoutUrl: "https://whop.com/checkout/plan_S50L0qOB3IvIp",
                   features: ["AI Voice & Memory Buffer Nodes", "Setup & API Key Provisioning Video", "Pre-configured System Prompts"]
                 },
                 "automate-personal-branding-with-n8n": {
                   title: "Autonomous Cold Email Machine",
                   description: "Deploy a fully automated outbound email prospecting machine utilizing n8n, Smartlead, and Instantly.",
                   price: "$49",
-                  checkoutUrl: "https://whop.com/checkout/plan_PLACEHOLDER/",
+                  checkoutUrl: "https://whop.com/checkout/plan_1eHKseUiDbVb8",
                   features: ["Cold Outreach n8n Blueprint", "HTML Email Templates Collection", "12-Month Breakage Guarantee"]
                 },
                 "capture-n8n-lead-data-from-wordpress-elementor": {
                   title: "ManyChat Async Webhook Queue",
                   description: "High-throughput webhook queue template to handle viral social traffic without dropping webhook payloads.",
                   price: "$19",
-                  checkoutUrl: "https://whop.com/checkout/plan_PLACEHOLDER/",
+                  checkoutUrl: "https://whop.com/checkout/plan_S7pBfJZkektqQ",
                   features: ["Async Webhook n8n Blueprint", "Webhook Retries & Error Catching", "Detailed Implementation Guide"]
                 },
                 "automated-email-follow-up-n8n-brevo": {
                   title: "Apollo-to-Brevo CRM Sync",
                   description: "Keep contact lists and marketing campaigns synchronized between Apollo.io prospecting and Brevo CRM.",
                   price: "$19",
-                  checkoutUrl: "https://whop.com/checkout/plan_PLACEHOLDER/",
+                  checkoutUrl: "https://whop.com/checkout/plan_w9KXzqC4XWnnp",
                   features: ["Sync & Enrichment n8n Nodes", "Field Mapping SOP Guide", "Lifetime Support Access"]
                 },
                 "monday-com-automation-recipes-revops-2026": {
                   title: "monday.com RevOps Recipes (12-pack)",
                   description: "Get 12 battle-tested monday.com automation blueprints to handle lead statuses, assignments, and reporting.",
                   price: "$19",
-                  checkoutUrl: "https://whop.com/checkout/plan_PLACEHOLDER/",
+                  checkoutUrl: "https://whop.com/checkout/plan_g3hMmwEx3CcCz",
                   features: ["12 monday.com Automation Recipes", "Implementation & Board Setup Video", "Custom Dashboards Blueprint"]
                 },
                 "n8n-google-analytics-4-pipeline": {
                   title: "Databox RevOps Dashboard Pipeline",
                   description: "Stream pipeline velocity, conversion metrics, and deal values straight to your Databox dashboards.",
                   price: "$19",
-                  checkoutUrl: "https://whop.com/checkout/plan_PLACEHOLDER/",
+                  checkoutUrl: "https://whop.com/checkout/plan_UCPmOKMFlvb8m",
                   features: ["GA4 & Databox Sync Blueprint", "Custom Dashboards Blueprint", "Setup Documentation SOP"]
                 },
                 "n8n-global-error-handling": {
                   title: "Self-Healing Error Handler",
                   description: "Global error-catching workflow that automatically captures execution logs, alerts Slack/Discord, and retries.",
                   price: "$49",
-                  checkoutUrl: "https://whop.com/checkout/plan_PLACEHOLDER/",
+                  checkoutUrl: "https://whop.com/checkout/plan_e6tgQDrp9DMDx",
                   features: ["Self-Healing Error Handler Blueprint", "Slack & Discord Webhook Templates", "Setup SOP & Video Guide"]
                 },
                 "n8n-workflow-design-best-practices": {
                   title: "Trainual SOP Documenting Engine",
                   description: "Automatically document all n8n workflows into SOPs inside Trainual as you deploy them in production.",
                   price: "$19",
-                  checkoutUrl: "https://whop.com/checkout/plan_PLACEHOLDER/",
+                  checkoutUrl: "https://whop.com/checkout/plan_3uvQxwz9jOM88",
                   features: ["SOP Generation n8n Template", "Custom Prompt Blueprints", "Lifetime Free Updates"]
                 },
                 "automation-operating-system-for-saas": {
                   title: "End-to-End Inbound RevOps Engine",
                   description: "Comprehensive blueprint managing your inbound lead routing, qualification, and sales booking pipelines.",
                   price: "$49",
-                  checkoutUrl: "https://whop.com/checkout/plan_PLACEHOLDER/",
+                  checkoutUrl: "https://whop.com/checkout/plan_RCBFP8rZBFkPP",
                   features: ["Full Inbound RevOps n8n Blueprint", "CRM Onboarding SOP Guide", "12-Month Breakage Guarantee"]
                 }
               };

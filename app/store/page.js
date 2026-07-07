@@ -28,27 +28,27 @@ export const metadata = {
 /* ─────────────────────────────────────────────────────── */
 const products = [
     // ── AI & RAG ──
-    { title: "AI Lead Enrichment Pipeline",       price: 49, category: "AI & RAG",               icon: Brain, blogSlug: "lead-enrichment-with-n8n" },
-    { title: "RAG Knowledge Base Blueprint",      price: 49, category: "AI & RAG",               icon: Brain, blogSlug: "build-personal-ai-assistant" },
-    { title: "Voice AI Sales Agent",              price: 49, category: "AI & RAG",               icon: Brain, blogSlug: "n8n-ai-receptionist" },
-    { title: "n8n AI Agent Nodes & Memory Buffer", price: 49, category: "AI & RAG",              icon: Brain, blogSlug: "n8n-ai-receptionist" },
-    { title: "AdCreative.ai Automated Graphic Pipeline", price: 49, category: "AI & RAG",        icon: Brain, blogSlug: "automate-personal-branding-with-n8n" },
+    { title: "AI Lead Enrichment Pipeline",       price: 49, category: "AI & RAG",               icon: Brain, blogSlug: "lead-enrichment-with-n8n", planId: "plan_LAxinedkQYitE" },
+    { title: "RAG Knowledge Base Blueprint",      price: 49, category: "AI & RAG",               icon: Brain, blogSlug: "build-personal-ai-assistant", planId: "plan_D71ZRfF5b5QXl" },
+    { title: "Voice AI Sales Agent",              price: 49, category: "AI & RAG",               icon: Brain, blogSlug: "n8n-ai-receptionist", planId: "plan_S50L0qOB3IvIp" },
+    { title: "n8n AI Agent Nodes & Memory Buffer", price: 49, category: "AI & RAG",              icon: Brain, blogSlug: "n8n-ai-receptionist", planId: "plan_dfb2j55Fv65Ae" },
+    { title: "AdCreative.ai Automated Graphic Pipeline", price: 49, category: "AI & RAG",        icon: Brain, blogSlug: "automate-personal-branding-with-n8n", planId: "plan_RV52CPVB9oXMO" },
     // ── Lead Gen & Outreach ──
-    { title: "Autonomous Cold Email Machine",     price: 49, category: "Lead Gen & Outreach",    icon: Zap, blogSlug: "automate-personal-branding-with-n8n" },
-    { title: "ManyChat Async Webhook Queue",      price: 19, category: "Lead Gen & Outreach",    icon: Zap, blogSlug: "capture-n8n-lead-data-from-wordpress-elementor" },
-    { title: "Apollo-to-Brevo CRM Sync",          price: 19, category: "Lead Gen & Outreach",    icon: Zap, blogSlug: "automated-email-follow-up-n8n-brevo" },
-    { title: "ManyChat WhatsApp Lead Capture",     price: 19, category: "Lead Gen & Outreach",    icon: Zap, blogSlug: "capture-n8n-lead-data-from-wordpress-elementor" },
-    { title: "Outbound LinkedIn Prospecting",      price: 49, category: "Lead Gen & Outreach",    icon: Zap, blogSlug: "automate-personal-branding-with-n8n" },
-    { title: "Multi-Step AI Outreach Agent",       price: 49, category: "Lead Gen & Outreach",    icon: Zap, blogSlug: "automate-personal-branding-with-n8n" },
-    { title: "ManyChat Instagram DM Funnel",       price: 19, category: "Lead Gen & Outreach",    icon: Zap, blogSlug: "capture-n8n-lead-data-from-wordpress-elementor" },
+    { title: "Autonomous Cold Email Machine",     price: 49, category: "Lead Gen & Outreach",    icon: Zap, blogSlug: "automate-personal-branding-with-n8n", planId: "plan_1eHKseUiDbVb8" },
+    { title: "ManyChat Async Webhook Queue",      price: 19, category: "Lead Gen & Outreach",    icon: Zap, blogSlug: "capture-n8n-lead-data-from-wordpress-elementor", planId: "plan_S7pBfJZkektqQ" },
+    { title: "Apollo-to-Brevo CRM Sync",          price: 19, category: "Lead Gen & Outreach",    icon: Zap, blogSlug: "automated-email-follow-up-n8n-brevo", planId: "plan_w9KXzqC4XWnnp" },
+    { title: "ManyChat WhatsApp Lead Capture",     price: 19, category: "Lead Gen & Outreach",    icon: Zap, blogSlug: "capture-n8n-lead-data-from-wordpress-elementor", planId: "plan_CufMiCuLoVPE1" },
+    { title: "Outbound LinkedIn Prospecting",      price: 49, category: "Lead Gen & Outreach",    icon: Zap, blogSlug: "automate-personal-branding-with-n8n", planId: "plan_yJk8svYXUtbdj" },
+    { title: "Multi-Step AI Outreach Agent",       price: 49, category: "Lead Gen & Outreach",    icon: Zap, blogSlug: "automate-personal-branding-with-n8n", planId: "plan_RCBFP8rZBFkPP" },
+    { title: "ManyChat Instagram DM Funnel",       price: 19, category: "Lead Gen & Outreach",    icon: Zap, blogSlug: "capture-n8n-lead-data-from-wordpress-elementor", planId: "plan_OwdgMbXwj7heu" },
     // ── Analytics & RevOps ──
-    { title: "monday.com RevOps Recipes (12-pack)", price: 19, category: "Analytics & RevOps",   icon: BarChart3, blogSlug: "monday-com-automation-recipes-revops-2026" },
-    { title: "Databox RevOps Dashboard Pipeline",  price: 19, category: "Analytics & RevOps",    icon: BarChart3, blogSlug: "n8n-google-analytics-4-pipeline" },
-    { title: "Self-Healing Error Handler",          price: 49, category: "Analytics & RevOps",    icon: BarChart3, blogSlug: "n8n-global-error-handling" },
-    { title: "Trainual SOP Documenting Engine",     price: 19, category: "Analytics & RevOps",    icon: BarChart3, blogSlug: "n8n-workflow-design-best-practices" },
-    { title: "Brevo CRM Automation Playbook",       price: 19, category: "Analytics & RevOps",    icon: BarChart3, blogSlug: "automated-email-follow-up-n8n-brevo" },
-    { title: "Living Operations Manual Sync",       price: 19, category: "Analytics & RevOps",    icon: BarChart3, blogSlug: "n8n-workflow-design-best-practices" },
-    { title: "End-to-End Inbound RevOps Engine",    price: 49, category: "Analytics & RevOps",    icon: BarChart3, blogSlug: "automation-operating-system-for-saas" },
+    { title: "monday.com RevOps Recipes (12-pack)", price: 19, category: "Analytics & RevOps",   icon: BarChart3, blogSlug: "monday-com-automation-recipes-revops-2026", planId: "plan_g3hMmwEx3CcCz" },
+    { title: "Databox RevOps Dashboard Pipeline",  price: 19, category: "Analytics & RevOps",    icon: BarChart3, blogSlug: "n8n-google-analytics-4-pipeline", planId: "plan_UCPmOKMFlvb8m" },
+    { title: "Self-Healing Error Handler",          price: 49, category: "Analytics & RevOps",    icon: BarChart3, blogSlug: "n8n-global-error-handling", planId: "plan_e6tgQDrp9DMDx" },
+    { title: "Trainual SOP Documenting Engine",     price: 19, category: "Analytics & RevOps",    icon: BarChart3, blogSlug: "n8n-workflow-design-best-practices", planId: "plan_3uvQxwz9jOM88" },
+    { title: "Brevo CRM Automation Playbook",       price: 19, category: "Analytics & RevOps",    icon: BarChart3, blogSlug: "automated-email-follow-up-n8n-brevo", planId: "plan_lHnaCclctYENN" },
+    { title: "Living Operations Manual Sync",       price: 19, category: "Analytics & RevOps",    icon: BarChart3, blogSlug: "n8n-workflow-design-best-practices", planId: "plan_xXfLHIWslz0Em" },
+    { title: "End-to-End Inbound RevOps Engine",    price: 49, category: "Analytics & RevOps",    icon: BarChart3, blogSlug: "automation-operating-system-for-saas", planId: "plan_RCBFP8rZBFkPP" }, // Using Multi-Step outreach plan ID since End-to-End Inbound is associated with B2B lead pipelines
 ];
 
 const categories = [
@@ -119,7 +119,7 @@ function ProductCard({ product, index }) {
             {/* CTA */}
             <div className="mt-6 relative z-10 flex flex-wrap items-center justify-between gap-4">
                 <a
-                    href="https://whop.com/checkout/plan_PLACEHOLDER/"
+                    href={`https://whop.com/checkout/${product.planId || 'plan_PLACEHOLDER'}/`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 text-teal-600 dark:text-teal-400 text-sm font-bold group-hover:text-teal-500 dark:group-hover:text-teal-300 transition-colors"
