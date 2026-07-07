@@ -61,6 +61,18 @@ export default async function SeriesIndexPage() {
               <div className="flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-purple-500" /> Advanced Architecture
               </div>
+              <div className="flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-amber-500 animate-pulse" /> Downloadable Workflows
+              </div>
+            </div>
+
+            <div className="mt-8">
+              <Link
+                href="/store/"
+                className="btn-shimmer inline-flex items-center gap-2 px-8 py-3 bg-teal-600 hover:bg-teal-500 text-white text-sm font-bold uppercase tracking-wider rounded-xl transition-all"
+              >
+                Get the Complete Bundle <ArrowRight size={16} />
+              </Link>
             </div>
           </div>
         </header>

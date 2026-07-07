@@ -13,6 +13,7 @@ import BlogImage from '@/components/BlogImage';
 import StepList from '@/components/StepList';
 import SearchWidget from '@/components/SearchWidget';
 import DeployingTheStacks from '@/components/DeployingTheStacks';
+import WhopProductCard from '@/components/WhopProductCard';
 import SeriesNavigation from '@/components/SeriesNavigation';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import rehypeRaw from 'rehype-raw';
@@ -336,6 +337,7 @@ export default async function Post({ params }) {
                 td: ({ children }) => (
                   <td className="px-4 py-3 text-slate-700 dark:text-slate-300">{children}</td>
                 ),
+                WhopProduct: WhopProductCard,
               }}
               options={{ mdxOptions: { format: 'md', remarkPlugins: [remarkGfm], rehypePlugins: [rehypeRaw] } }}
             />
