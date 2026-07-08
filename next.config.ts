@@ -29,6 +29,17 @@ const nextConfig: NextConfig = {
   output: 'standalone',
   async redirects() {
     return [
+      // Sitemap redirects to prevent GSC crawler 404s
+      {
+        source: '/sitemap_index.xml',
+        destination: '/sitemap.xml',
+        permanent: true,
+      },
+      {
+        source: '/sitemap-index.xml',
+        destination: '/sitemap.xml',
+        permanent: true,
+      },
       // 1. Redirect old Date-based WP URLs (Day precision)
       // Example: /2025/12/17/my-post -> /blog/my-post
       {

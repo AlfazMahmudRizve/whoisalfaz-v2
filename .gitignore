@@ -49,3 +49,6 @@ scripts/fix-*
 
 # puku embeddings
 .puku/
+
+# Google Indexing API secrets
+service_account_key.json
