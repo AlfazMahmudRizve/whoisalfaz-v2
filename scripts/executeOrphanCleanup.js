@@ -5,13 +5,16 @@ const dotenv = require('dotenv');
 
 dotenv.config({ path: path.resolve(__dirname, '../.env.local') });
 
-const client = createClient({
-  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
-  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || 'production',
-  useCdn: false,
-  token: process.env.SANITY_API_TOKEN,
-  apiVersion: '2026-05-13',
-});
+let client = null;
+if (process.env.NEXT_PUBLIC_SANITY_PROJECT_ID) {
+  client = createClient({
+    projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
+    dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || 'production',
+    useCdn: false,
+    token: process.env.SANITY_API_TOKEN,
+    apiVersion: '2026-05-13',
+  });
+}
 
 const linkInjections = [
   // --- 1. Case Studies ---
@@ -339,30 +342,34 @@ async function executeInjections() {
     console.log(`\n----------------------------------------`);
     console.log(`Processing injection for: ${sourceSlug}`);
     
-    // 1. Fetch document from Sanity
-    try {
-      const results = await client.fetch(`*[_type == "post" && slug.current == $slug]`, { slug: sourceSlug });
-      if (!results || results.length === 0) {
-        console.warn(`⚠️ Post not found in Sanity by slug: ${sourceSlug}. Skipping database update.`);
-      } else {
-        const post = results[0];
-        const body = post.body;
-        
-        if (!body) {
-          console.warn(`⚠️ Post ${sourceSlug} in Sanity has no body.`);
-        } else if (!body.includes(targetText)) {
-          console.warn(`⚠️ Target text NOT found in Sanity database body for: ${sourceSlug}`);
-          // Let's print out a snippet of the database body to see if it was already updated or has minor variations
-          console.log(`   DB body preview: ${body.slice(0, 300)}...`);
+        // 1. Fetch document from Sanity
+    if (client) {
+      try {
+        const results = await client.fetch(`*[_type == "post" && slug.current == $slug]`, { slug: sourceSlug });
+        if (!results || results.length === 0) {
+          console.warn(`⚠️ Post not found in Sanity by slug: ${sourceSlug}. Skipping database update.`);
         } else {
-          console.log(`   Target text found in Sanity. Replacing...`);
-          const newBody = body.replace(targetText, replacementText);
-          const patchResult = await client.patch(post._id).set({ body: newBody }).commit();
-          console.log(`   ✅ Database updated. Transaction ID: ${patchResult._id}`);
+          const post = results[0];
+          const body = post.body;
+          
+          if (!body) {
+            console.warn(`⚠️ Post ${sourceSlug} in Sanity has no body.`);
+          } else if (!body.includes(targetText)) {
+            console.warn(`⚠️ Target text NOT found in Sanity database body for: ${sourceSlug}`);
+            // Let's print out a snippet of the database body to see if it was already updated or has minor variations
+            console.log(`   DB body preview: ${body.slice(0, 300)}...`);
+          } else {
+            console.log(`   Target text found in Sanity. Replacing...`);
+            const newBody = body.replace(targetText, replacementText);
+            const patchResult = await client.patch(post._id).set({ body: newBody }).commit();
+            console.log(`   ✅ Database updated. Transaction ID: ${patchResult._id}`);
+          }
         }
+      } catch (e) {
+        console.error(`   ❌ Sanity database patch error:`, e.message);
       }
-    } catch (e) {
-      console.error(`   ❌ Sanity database patch error:`, e.message);
+    } else {
+      console.log(`   ℹ️ Sanity client not initialized (missing NEXT_PUBLIC_SANITY_PROJECT_ID). Skipping database update.`);
     }
     
     // 2. Update local markdown file if it exists

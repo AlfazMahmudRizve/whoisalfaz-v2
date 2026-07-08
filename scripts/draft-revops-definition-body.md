@@ -175,7 +175,7 @@ graph LR
 
 **What n8n does natively:** all of the above, in a visual workflow editor, with custom JavaScript execution in Code Nodes (read our master list of [n8n Tips and Tricks](/blog/n8n-tips-and-tricks-by-alfaz-mahmud-rizve/) for advanced techniques), full error handling via Error Trigger, and zero vendor lock-in because it's open source.
 
-This is why the [Apollo→Brevo outbound pipeline](/blog/apollo-brevo-n8n-outbound-pipeline/) we built for a client (which also leverages custom [Apollo n8n outreach](/blog/apollo-n8n-outreach/) setups) reduced lead-to-outreach time from 48 hours to under 4 minutes — the automation does what no native sync plugin can.
+This is why the [Apollo→Brevo outbound pipeline](/blog/apollo-brevo-n8n-outbound-pipeline/) we built for a client (which also leverages custom [Apollo n8n outreach](/blog/apollo-n8n-outreach/) setups) (which also leverages custom [Apollo n8n outreach](/blog/apollo-n8n-outreach/) setups) reduced lead-to-outreach time from 48 hours to under 4 minutes — the automation does what no native sync plugin can.
 
 ---
 

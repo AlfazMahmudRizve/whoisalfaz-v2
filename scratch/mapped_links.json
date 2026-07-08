@@ -1,0 +1,410 @@
+[
+  {
+    "source": "/blog/databox-revops-dashboard-pipeline-velocity/",
+    "target": "/portfolio/",
+    "anchor": "portfolio of RevOps automation case studies",
+    "type": "automatic_cleanup_wheel"
+  },
+  {
+    "source": "/blog/databox-revops-dashboard-pipeline-velocity/",
+    "target": "/blog/case-study-client-portfolio-delivery",
+    "anchor": "Client Portfolio Delivery case study",
+    "type": "automatic_cleanup_wheel"
+  },
+  {
+    "source": "/blog/what-is-revops-technical-definition-saas/",
+    "target": "/blog/case-study-client-portfolio-delivery",
+    "anchor": "Client Portfolio Delivery case study",
+    "type": "automatic_cleanup_wheel"
+  },
+  {
+    "source": "/blog/manychat-n8n-async-timeout-fix/",
+    "target": "/blog/case-study-urban-cafe-foodtech-platform/",
+    "anchor": "Urban Cafe case study",
+    "type": "automatic_cleanup_wheel"
+  },
+  {
+    "source": "/blog/elevenlabs-n8n-voice-ai-sales-agent/",
+    "target": "/blog/case-study-urban-cafe-foodtech-platform/",
+    "anchor": "Urban Cafe case study",
+    "type": "automatic_cleanup_wheel"
+  },
+  {
+    "source": "/blog/databox-revops-dashboard-pipeline-velocity/",
+    "target": "/blog/case-study-whoisalfaz-seo-indexing-engine/",
+    "anchor": "SEO Indexing Engine case study",
+    "type": "automatic_cleanup_wheel"
+  },
+  {
+    "source": "/blog/case-study-urban-cafe-foodtech-platform/",
+    "target": "/blog/case-study-whoisalfaz-seo-indexing-engine/",
+    "anchor": "SEO Indexing Engine case study",
+    "type": "automatic_cleanup_wheel"
+  },
+  {
+    "source": "/blog/case-study-urban-cafe-foodtech-platform/",
+    "target": "/blog/case-study-veloryc-premium-ecommerce",
+    "anchor": "Veloryc Premium E-Commerce case study",
+    "type": "automatic_cleanup_wheel"
+  },
+  {
+    "source": "/blog/what-is-revops-technical-definition-saas/",
+    "target": "/blog/case-study-veloryc-premium-ecommerce/",
+    "anchor": "Veloryc Premium E-Commerce case study",
+    "type": "automatic_cleanup_wheel"
+  },
+  {
+    "source": "/blog/pinecone-n8n-rag-knowledge-base-blueprint/",
+    "target": "/blog/case-study-careerops-ai-resume-builder/",
+    "anchor": "CareerOps AI Resume Builder case study",
+    "type": "automatic_cleanup_wheel"
+  },
+  {
+    "source": "/blog/aisdr-vs-human-sdr-performance-teardown/",
+    "target": "/blog/case-study-careerops-ai-resume-builder/",
+    "anchor": "CareerOps AI Resume Builder case study",
+    "type": "automatic_cleanup_wheel"
+  },
+  {
+    "source": "/blog/databox-revops-dashboard-pipeline-velocity/",
+    "target": "/blog/case-study-cashops-financial-dashboard/",
+    "anchor": "CashOps Financial Dashboard case study",
+    "type": "automatic_cleanup_wheel"
+  },
+  {
+    "source": "/blog/revops-automation-stack-saas-2026/",
+    "target": "/blog/case-study-cashops-financial-dashboard/",
+    "anchor": "CashOps Financial Dashboard case study",
+    "type": "automatic_cleanup_wheel"
+  },
+  {
+    "source": "/blog/screaming-frog-alternatives-free-seo-audit-tools/",
+    "target": "/blog/how-to-audit-competitor-seo-no-verification",
+    "anchor": "how-to-audit-competitor-seo-no-verification",
+    "type": "automatic_cleanup_wheel"
+  },
+  {
+    "source": "/blog/screaming-frog-alternatives-free-seo-audit-tools/",
+    "target": "/blog/build-an-automated-rank-tracker-tool-with-n8n",
+    "anchor": "monitor competitor rankings",
+    "type": "automatic_cleanup_wheel"
+  },
+  {
+    "source": "/blog/how-to-audit-competitor-seo-no-verification/",
+    "target": "/blog/build-an-automated-rank-tracker-tool-with-n8n",
+    "anchor": "search rankings game",
+    "type": "automatic_cleanup_wheel"
+  },
+  {
+    "source": "/blog/what-is-revops-technical-definition-saas/",
+    "target": "/blog/n8n-google-analytics-4-pipeline",
+    "anchor": "Google Analytics",
+    "type": "automatic_cleanup_wheel"
+  },
+  {
+    "source": "/blog/databox-revops-dashboard-pipeline-velocity/",
+    "target": "/blog/n8n-google-analytics-4-pipeline",
+    "anchor": "n8n Google Analytics 4 pipeline",
+    "type": "automatic_cleanup_wheel"
+  },
+  {
+    "source": "/blog/databox-revops-dashboard-pipeline-velocity/",
+    "target": "/blog/automate-client-reporting-with-n8n",
+    "anchor": "automate client reporting with n8n",
+    "type": "automatic_cleanup_wheel"
+  },
+  {
+    "source": "/blog/what-is-revops-technical-definition-saas/",
+    "target": "/blog/automate-client-reporting-with-n8n",
+    "anchor": "automate client reporting with n8n",
+    "type": "automatic_cleanup_wheel"
+  },
+  {
+    "source": "/blog/databox-revops-dashboard-pipeline-velocity/",
+    "target": "/blog/automated-marketing-reporting-with-n8n-at-whoisalfaz",
+    "anchor": "automated marketing reporting with n8n",
+    "type": "automatic_cleanup_wheel"
+  },
+  {
+    "source": "/blog/monday-com-automation-recipes-revops-2026/",
+    "target": "/blog/automated-marketing-reporting-with-n8n-at-whoisalfaz}",
+    "anchor": "automated marketing reporting with n8n",
+    "type": "automatic_cleanup_wheel"
+  },
+  {
+    "source": "/blog/n8n-apollo-lead-enrichment-pipeline/",
+    "target": "/blog/what-is-n8n-by-alfaz-mahmud-rizve",
+    "anchor": "n8n",
+    "type": "automatic_cleanup_wheel"
+  },
+  {
+    "source": "/blog/cold-email-machine-apollo-aisdr-brevo/",
+    "target": "/blog/what-is-n8n-by-alfaz-mahmud-rizve",
+    "anchor": "n8n",
+    "type": "automatic_cleanup_wheel"
+  },
+  {
+    "source": "/blog/what-is-revops-technical-definition-saas/",
+    "target": "/blog/what-is-n8n-and-how-to-set-it-up",
+    "anchor": "n8n self-hosted",
+    "type": "automatic_cleanup_wheel"
+  },
+  {
+    "source": "/blog/aisdr-vs-human-sdr-performance-teardown/",
+    "target": "/blog/what-is-n8n-and-how-to-set-it-up",
+    "anchor": "self-host n8n",
+    "type": "automatic_cleanup_wheel"
+  },
+  {
+    "source": "/blog/aisdr-vs-human-sdr-performance-teardown/",
+    "target": "/blog/n8n-workflow-design-best-practices",
+    "anchor": "workflow design",
+    "type": "automatic_cleanup_wheel"
+  },
+  {
+    "source": "/blog/pinecone-n8n-rag-knowledge-base-blueprint/",
+    "target": "/blog/n8n-workflow-design-best-practices",
+    "anchor": "modular workflow",
+    "type": "automatic_cleanup_wheel"
+  },
+  {
+    "source": "/blog/manychat-n8n-async-timeout-fix/",
+    "target": "/blog/how-to-build-an-api-with-n8n",
+    "anchor": "how to build an API with n8n",
+    "type": "automatic_cleanup_wheel"
+  },
+  {
+    "source": "/blog/cold-email-machine-apollo-aisdr-brevo/",
+    "target": "/blog/how-to-build-an-api-with-n8n",
+    "anchor": "how to build an API with n8n",
+    "type": "automatic_cleanup_wheel"
+  },
+  {
+    "source": "/blog/n8n-apollo-lead-enrichment-pipeline/",
+    "target": "/blog/automations-for-saas-and-agencies",
+    "anchor": "B2B agency or SaaS startup",
+    "type": "automatic_cleanup_wheel"
+  },
+  {
+    "source": "/blog/pinecone-n8n-rag-knowledge-base-blueprint/",
+    "target": "/blog/automations-for-saas-and-agencies",
+    "anchor": "automations for SaaS and agencies",
+    "type": "automatic_cleanup_wheel"
+  },
+  {
+    "source": "/blog/n8n-apollo-lead-enrichment-pipeline/",
+    "target": "/blog/essential-n8n-core-nodes-by-alfaz-mahmud-rizve",
+    "anchor": "essential n8n core nodes",
+    "type": "automatic_cleanup_wheel"
+  },
+  {
+    "source": "/blog/apollo-brevo-n8n-outbound-pipeline/",
+    "target": "/blog/essential-n8n-core-nodes-by-alfaz-mahmud-rizve",
+    "anchor": "essential n8n core nodes",
+    "type": "automatic_cleanup_wheel"
+  },
+  {
+    "source": "/blog/n8n-apollo-lead-enrichment-pipeline/",
+    "target": "/blog/n8n-global-error-handling/",
+    "anchor": "Error Workflow",
+    "type": "automatic_cleanup_wheel"
+  },
+  {
+    "source": "/blog/cold-email-machine-apollo-aisdr-brevo/",
+    "target": "/blog/n8n-global-error-handling/",
+    "anchor": "global Error Trigger",
+    "type": "automatic_cleanup_wheel"
+  },
+  {
+    "source": "/blog/n8n-apollo-lead-enrichment-pipeline/",
+    "target": "/blog/n8n-production-workflows-by-alfaz-mahmud-rizve/",
+    "anchor": "production-grade pipelines",
+    "type": "automatic_cleanup_wheel"
+  },
+  {
+    "source": "/blog/revops-automation-stack-saas-2026/",
+    "target": "/blog/n8n-production-workflows-by-alfaz-mahmud-rizve/",
+    "anchor": "production-grade pipelines",
+    "type": "automatic_cleanup_wheel"
+  },
+  {
+    "source": "/blog/manychat-whatsapp-b2b-lead-capture-agency/",
+    "target": "/blog/ai-automation-agency-business-model/",
+    "anchor": "automation agencies",
+    "type": "automatic_cleanup_wheel"
+  },
+  {
+    "source": "/blog/pinecone-vs-qdrant-n8n-rag-comparison/",
+    "target": "/blog/ai-automation-agency-business-model/",
+    "anchor": "agency profit margins",
+    "type": "automatic_cleanup_wheel"
+  },
+  {
+    "source": "/blog/what-is-revops-technical-definition-saas/",
+    "target": "/blog/n8n-tips-and-tricks-by-alfaz-mahmud-rizve/",
+    "anchor": "n8n Tips and Tricks",
+    "type": "automatic_cleanup_wheel"
+  },
+  {
+    "source": "/blog/cold-email-machine-apollo-aisdr-brevo/",
+    "target": "/blog/n8n-tips-and-tricks-by-alfaz-mahmud-rizve/",
+    "anchor": "n8n Tips and Tricks",
+    "type": "automatic_cleanup_wheel"
+  },
+  {
+    "source": "/blog/automate-personal-branding-with-n8n/",
+    "target": "/blog/automated-youtube-shorts-generator/",
+    "anchor": "Automated YouTube Shorts Generator",
+    "type": "automatic_cleanup_wheel"
+  },
+  {
+    "source": "/blog/databox-revops-dashboard-pipeline-velocity/",
+    "target": "/blog/cold-email-machine-apollo-aisdr-brevo/",
+    "anchor": "AiSDR",
+    "type": "automatic_cleanup_wheel"
+  },
+  {
+    "source": "/blog/databox-revops-dashboard-pipeline-velocity/",
+    "target": "/blog/elevenlabs-n8n-voice-ai-sales-agent/",
+    "anchor": "ElevenLabs/Vapi",
+    "type": "automatic_cleanup_wheel"
+  },
+  {
+    "source": "/blog/databox-revops-dashboard-pipeline-velocity/",
+    "target": "/blog/automated-youtube-shorts-generator/",
+    "anchor": "Automated YouTube Shorts Generator",
+    "type": "automatic_cleanup_wheel"
+  },
+  {
+    "source": "/blog/pinecone-n8n-rag-knowledge-base-blueprint/",
+    "target": "/blog/build-personal-ai-assistant/",
+    "anchor": "personal AI assistant",
+    "type": "automatic_cleanup_wheel"
+  },
+  {
+    "source": "/blog/elevenlabs-n8n-voice-ai-sales-agent/",
+    "target": "/blog/build-personal-ai-assistant/",
+    "anchor": "personal AI assistant",
+    "type": "automatic_cleanup_wheel"
+  },
+  {
+    "source": "/blog/cold-email-machine-apollo-aisdr-brevo/",
+    "target": "/blog/automate-personal-branding-with-n8n/",
+    "anchor": "automate personal branding with n8n",
+    "type": "automatic_cleanup_wheel"
+  },
+  {
+    "source": "/blog/how-to-audit-competitor-seo-no-verification/",
+    "target": "/blog/automate-personal-branding-with-n8n/",
+    "anchor": "automate personal branding with n8n",
+    "type": "automatic_cleanup_wheel"
+  },
+  {
+    "source": "/blog/manychat-n8n-async-timeout-fix/",
+    "target": "/blog/manychat-whatsapp-b2b-lead-capture-agency/",
+    "anchor": "ManyChat WhatsApp B2B Lead Capture",
+    "type": "automatic_cleanup_wheel"
+  },
+  {
+    "source": "/blog/n8n-apollo-lead-enrichment-pipeline/",
+    "target": "/blog/manychat-whatsapp-b2b-lead-capture-agency/",
+    "anchor": "ManyChat WhatsApp B2B Lead Capture",
+    "type": "automatic_cleanup_wheel"
+  },
+  {
+    "source": "/blog/revops-automation-stack-saas-2026/",
+    "target": "/blog/databox-revops-dashboard-pipeline-velocity/",
+    "anchor": "Databox RevOps Dashboard",
+    "type": "automatic_cleanup_wheel"
+  },
+  {
+    "source": "/blog/monday-com-automation-recipes-revops-2026/",
+    "target": "/blog/databox-revops-dashboard-pipeline-velocity/",
+    "anchor": "Databox RevOps Dashboard",
+    "type": "automatic_cleanup_wheel"
+  },
+  {
+    "source": "/blog/what-is-revops-technical-definition-saas/",
+    "target": "/blog/apollo-brevo-n8n-outbound-pipeline/",
+    "anchor": "Apollo→Brevo outbound pipeline",
+    "type": "automatic_cleanup_wheel"
+  },
+  {
+    "source": "/blog/what-is-revops-technical-definition-saas/",
+    "target": "/blog/apollo-n8n-outreach/",
+    "anchor": "Apollo n8n outreach",
+    "type": "automatic_cleanup_wheel"
+  },
+  {
+    "source": "/blog/cold-email-machine-apollo-aisdr-brevo/",
+    "target": "/blog/apollo-n8n-outreach/",
+    "anchor": "outbound outreach",
+    "type": "automatic_cleanup_wheel"
+  },
+  {
+    "source": "/blog/pinecone-n8n-rag-knowledge-base-blueprint/",
+    "target": "/blog/pinecone-vs-qdrant-n8n-rag-comparison/",
+    "anchor": "Pinecone vs Qdrant n8n RAG comparison",
+    "type": "automatic_cleanup_wheel"
+  },
+  {
+    "source": "/blog/manychat-pricing-2026/",
+    "target": "/blog/revops-automation-stack-saas-2026/",
+    "anchor": "RevOps stack",
+    "type": "manual_contextual_injection"
+  },
+  {
+    "source": "/blog/manychat-pricing-2026/",
+    "target": "/blog/what-is-revops-technical-definition-saas/",
+    "anchor": "what is RevOps",
+    "type": "manual_contextual_injection"
+  },
+  {
+    "source": "/blog/manychat-pricing-2026/",
+    "target": "/blog/manychat-whatsapp-b2b-lead-capture-agency/",
+    "anchor": "WhatsApp Flows",
+    "type": "manual_contextual_injection"
+  },
+  {
+    "source": "/blog/manychat-pricing-2026/",
+    "target": "/blog/manychat-whatsapp-b2b-lead-capture-agency/",
+    "anchor": "ManyChat WhatsApp B2B Lead Capture Agency playbook",
+    "type": "manual_contextual_injection"
+  },
+  {
+    "source": "/blog/manychat-pricing-2026/",
+    "target": "/blog/manychat-n8n-async-timeout-fix/",
+    "anchor": "ManyChat + n8n: Beat the 10-Second Webhook Timeout",
+    "type": "manual_contextual_injection"
+  },
+  {
+    "source": "/blog/manychat-pricing-2026/",
+    "target": "/blog/elevenlabs-n8n-voice-ai-sales-agent/",
+    "anchor": "AI agent conversations",
+    "type": "manual_contextual_injection"
+  },
+  {
+    "source": "/blog/manychat-pricing-2026/",
+    "target": "/blog/cold-email-machine-apollo-aisdr-brevo/",
+    "anchor": "cold email machine",
+    "type": "manual_contextual_injection"
+  },
+  {
+    "source": "/blog/headless-wordpress-vs-monolithic/",
+    "target": "/blog/headless-wordpress-seo-nextjs-guide/",
+    "anchor": "decoupled wordpress seo",
+    "type": "manual_contextual_injection"
+  },
+  {
+    "source": "/blog/headless-wordpress-vs-monolithic/",
+    "target": "/blog/headless-wordpress-seo-nextjs-guide/",
+    "anchor": "headless cms seo strategy",
+    "type": "manual_contextual_injection"
+  },
+  {
+    "source": "/blog/headless-wordpress-seo-nextjs-guide/",
+    "target": "/blog/headless-wordpress-vs-monolithic/",
+    "anchor": "headless WordPress vs monolithic",
+    "type": "manual_contextual_injection"
+  }
+]

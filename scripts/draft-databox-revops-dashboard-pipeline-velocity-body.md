@@ -536,7 +536,7 @@ The `getDaysBetween` helper returns `0` for any missing dates. A deal that skips
 
 **Q: Can I see a real example of this built for a SaaS company?**
 
-Yes—view our [portfolio of RevOps automation case studies](/portfolio/) (like our [Client Portfolio Delivery case study](/blog/case-study-client-portfolio-delivery)) for deployed examples, including the technology stack, before/after metrics, and implementation timelines.
+Yes—view our [portfolio of RevOps automation case studies](/portfolio/) (like our [Client Portfolio Delivery case study](/blog/case-study-client-portfolio-delivery)) (like our [Client Portfolio Delivery case study](/blog/case-study-client-portfolio-delivery)) for deployed examples, including the technology stack, before/after metrics, and implementation timelines.
 
 ---
 
