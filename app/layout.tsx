@@ -78,7 +78,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         "name": "Bangladesh"
       },
       "sameAs": [
-        "https://linkedin.com/in/alfaz-mahmud-rizve",
+        "https://www.linkedin.com/in/alfaz-mahmud-rizve/",
         "https://github.com/AlfazMahmudRizve",
         "https://x.com/whoisalfaz",
         "https://facebook.com/alfazmahmudrizve",
@@ -102,7 +102,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         "contactType": "customer service"
       },
       "sameAs": [
-        "https://linkedin.com/in/alfaz-mahmud-rizve",
+        "https://www.linkedin.com/in/alfaz-mahmud-rizve/",
         "https://github.com/AlfazMahmudRizve",
         "https://x.com/whoisalfaz",
         "https://facebook.com/alfazmahmudrizve",
