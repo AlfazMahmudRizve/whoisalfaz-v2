@@ -37,3 +37,5 @@ services:
         value: require
       - key: DB_POSTGRESDB_SSL_REJECT_UNAUTHORIZED
         value: "false"
+      - key: NODE_OPTIONS
+        value: "--max-old-space-size=300"
