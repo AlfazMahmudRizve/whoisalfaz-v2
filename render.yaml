@@ -32,8 +32,4 @@ services:
       - key: WEBHOOK_URL
         value: https://n8n-automation-owfh.onrender.com/
       - key: N8N_BASIC_AUTH_ACTIVE
-        value: "true"
-      - key: N8N_BASIC_AUTH_USER
-        sync: false
-      - key: N8N_BASIC_AUTH_PASSWORD
-        sync: false
+        value: "false"
