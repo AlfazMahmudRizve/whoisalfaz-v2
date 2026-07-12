@@ -69,7 +69,7 @@ export default function ContactPage() {
                         <div className="flex gap-4">
                             {[
                                 { icon: Facebook, href: "https://facebook.com/alfazmahmudrizve" },
-                                { icon: Linkedin, href: "https://linkedin.com/in/alfaz-mahmud-rizve" },
+                                { icon: Linkedin, href: "https://www.linkedin.com/in/alfaz-mahmud-rizve/" },
                                 { icon: Instagram, href: "https://www.instagram.com/whois.alfaz/" }
                             ].map((social, i) => (
                                 <a key={i} href={social.href} target="_blank" className="p-4 bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-2xl text-slate-500 dark:text-slate-400 hover:text-teal-600 dark:hover:text-white hover:bg-slate-50 dark:hover:bg-white/10 shadow-sm transition-all hover:-translate-y-1">

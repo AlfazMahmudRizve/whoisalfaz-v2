@@ -83,7 +83,7 @@ export default async function Home() {
           "jobTitle": "RevOps Architect & Full Stack Automation Engineer",
           "description": "Alfaz Mahmud Rizve is a RevOps architect and full-stack automation engineer specializing in building autonomous revenue systems for SaaS companies, digital agencies, and small businesses using n8n workflows, AI agents, and high-performance Next.js infrastructure.",
           "sameAs": [
-            "https://linkedin.com/in/alfaz-mahmud-rizve",
+            "https://www.linkedin.com/in/alfaz-mahmud-rizve/",
             "https://x.com/whoisalfaz",
             "https://github.com/AlfazMahmudRizve"
           ],

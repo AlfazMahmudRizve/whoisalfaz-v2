@@ -10,7 +10,7 @@
    - Area: `link_profile`
    - Evidence: See audit output.
    - Fix: Add internal links from relevant content pages to these orphan pages.
-2. **sameAs URL returns HTTP 999: https://linkedin.com/in/alfaz-mahmud-rizve**
+2. **sameAs URL returns HTTP 405: https://linkedin.com/in/alfaz-mahmud-rizve**
    - Priority: `Warning`
    - Area: `entity`
    - Evidence: See audit output.

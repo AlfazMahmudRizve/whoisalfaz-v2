@@ -1,7 +1,7 @@
 # Full Audit Report
 
 - URL: `https://whoisalfaz.me/`
-- Generated: `2026-07-09T00:23:32.548587`
+- Generated: `2026-07-09T01:01:39.149206`
 - Overall score: `83/100`
 - Score confidence: `Medium`
 - Scoring version: `1`
@@ -31,7 +31,7 @@
 | --- | --- | --- | --- | --- |
 | Critical | broken_links | 🔴 1 broken link(s) found |  |  |
 | Critical | link_profile | 1 orphan page(s) with zero inbound internal links. |  | Add internal links from relevant content pages to these orphan pages. |
-| Warning | entity | sameAs URL returns HTTP 999: https://linkedin.com/in/alfaz-mahmud-rizve |  | Update sameAs URL for LinkedIn to a valid, non-redirecting destination. |
+| Warning | entity | sameAs URL returns HTTP 405: https://linkedin.com/in/alfaz-mahmud-rizve |  | Update sameAs URL for LinkedIn to a valid, non-redirecting destination. |
 | Warning | entity | sameAs URL returns HTTP 404: https://x.com/whoisalfaz |  | Update sameAs URL for Twitter/X to a valid, non-redirecting destination. |
 | Warning | environment | 1 broken links detected | Broken internal links hurt crawl flow and user trust. | Fix links in route components and content source files; validate with link checks in CI. |
 | Warning | environment | Content readability is difficult | Long, complex text can reduce engagement and comprehension. | Rewrite key sections with shorter sentences (15-20 words), shorter paragraphs (2-4 sentences), and clearer subheadings. |

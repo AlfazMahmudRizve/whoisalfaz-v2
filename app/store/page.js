@@ -1,6 +1,7 @@
 import Link from 'next/link';
-import { ArrowRight, Zap, BarChart3, Sparkles } from 'lucide-react';
+import { ArrowRight, Zap, BarChart3, Sparkles, Construction, ChevronRight } from 'lucide-react';
 import StoreCatalog from '../../components/StoreCatalog';
+import NewsletterForm from '../../components/NewsletterForm';
 
 /* ─────────────────────────────────────────────────────── */
 /*  SEO METADATA                                          */
@@ -242,7 +243,10 @@ const services = [
     },
 ];
 
-export default function StorePage() {
+export default async function StorePage({ searchParams }) {
+    const resolvedSearchParams = await searchParams;
+    const isPreview = resolvedSearchParams?.preview === 'true';
+
     /* Schema.org JSON-LD */
     const jsonLd = [
         {
@@ -276,87 +280,120 @@ export default function StorePage() {
             {/* BACKGROUND */}
             <div className="fixed inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-teal-500/10 via-slate-50 to-slate-50 dark:from-slate-900/40 dark:via-[#0a0a0a] dark:to-[#0a0a0a] -z-10 transition-colors duration-300" />
 
-            <div className="max-w-6xl mx-auto px-6 space-y-16">
+            {isPreview ? (
+                <div className="max-w-6xl mx-auto px-6 space-y-16">
+                    {/* ═══════════════════════════════════════════ */}
+                    {/* HERO SECTION                               */}
+                    {/* ═══════════════════════════════════════════ */}
+                    <section className="text-center max-w-4xl mx-auto space-y-6">
+                        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-teal-500/10 border border-teal-500/20 text-teal-600 dark:text-teal-400 text-xs font-mono uppercase tracking-widest">
+                            <span className="w-1.5 h-1.5 rounded-full bg-teal-500 dark:bg-teal-400 animate-pulse"></span>
+                            PREVIEW MODE (ACTIVE)
+                        </div>
 
-                {/* ═══════════════════════════════════════════ */}
-                {/* HERO SECTION                               */}
-                {/* ═══════════════════════════════════════════ */}
-                <section className="text-center max-w-4xl mx-auto space-y-6">
-                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-teal-500/10 border border-teal-500/20 text-teal-600 dark:text-teal-400 text-xs font-mono uppercase tracking-widest">
-                        <span className="w-1.5 h-1.5 rounded-full bg-teal-500 dark:bg-teal-400 animate-pulse"></span>
-                        Production-Ready Workflows
-                    </div>
-
-                    <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-slate-900 dark:text-white leading-[1.05] tracking-tighter uppercase">
-                        n8n Automation{' '}
-                        <span className="block text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-purple-500 dark:from-teal-400 dark:to-purple-400">
-                            Workflow Store
-                        </span>
-                    </h1>
-
-                    <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed max-w-2xl mx-auto">
-                        Skip building from scratch. Access production-ready, stress-tested n8n blueprint templates to automate your RevOps, outreach, and AI pipelines.
-                    </p>
-                </section>
-
-                {/* ═══════════════════════════════════════════ */}
-                {/* PRODUCTS CATALOG SECTION                   */}
-                {/* ═══════════════════════════════════════════ */}
-                <section className="w-full">
-                    <StoreCatalog products={products} />
-                </section>
-
-                {/* ═══════════════════════════════════════════ */}
-                {/* SERVICES UPSELL                            */}
-                {/* ═══════════════════════════════════════════ */}
-                <section className="border-t border-slate-200 dark:border-white/5 pt-20">
-                    <div className="text-center mb-14">
-                        <span className="text-[10px] font-black text-slate-500 dark:text-slate-400 uppercase tracking-[0.3em] mb-4 block">
-                            Done-For-You Services
-                        </span>
-                        <h2 className="text-3xl md:text-5xl font-black text-slate-900 dark:text-white uppercase tracking-tighter mb-4">
-                            Need It Done{' '}
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-teal-600 dark:from-purple-400 dark:to-teal-400">
-                                For You?
+                        <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-slate-900 dark:text-white leading-[1.05] tracking-tighter uppercase">
+                            n8n Automation{' '}
+                            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-purple-500 dark:from-teal-400 dark:to-purple-400">
+                                Workflow Store
                             </span>
-                        </h2>
-                        <p className="text-slate-600 dark:text-slate-400 text-lg max-w-2xl mx-auto">
-                            Templates get you 80% of the way. For the other 20% — custom logic, integrations, and production hardening — let us handle it.
+                        </h1>
+
+                        <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed max-w-2xl mx-auto">
+                            Skip building from scratch. Access production-ready, stress-tested n8n blueprint templates to automate your RevOps, outreach, and AI pipelines.
                         </p>
-                    </div>
+                    </section>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        {services.map((s) => {
-                            const SIcon = s.icon;
-                            return (
-                                <Link
-                                    key={s.title}
-                                    href={s.slug}
-                                    className="bg-white dark:bg-[#0a0a0a] border border-slate-200 dark:border-purple-500/20 rounded-2xl p-7 shadow-xl dark:shadow-none hover:border-purple-500/50 hover:shadow-2xl transition-all group overflow-hidden relative block"
-                                >
-                                    {/* Hover Glow */}
-                                    <div className="absolute inset-0 bg-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    {/* ═══════════════════════════════════════════ */}
+                    {/* PRODUCTS CATALOG SECTION                   */}
+                    {/* ═══════════════════════════════════════════ */}
+                    <section className="w-full">
+                        <StoreCatalog products={products} />
+                    </section>
 
-                                    <div className="relative z-10">
-                                        <div className="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center mb-5">
-                                            <SIcon size={22} className="text-purple-600 dark:text-purple-400" />
+                    {/* ═══════════════════════════════════════════ */}
+                    {/* SERVICES UPSELL                            */}
+                    {/* ═══════════════════════════════════════════ */}
+                    <section className="border-t border-slate-200 dark:border-white/5 pt-20">
+                        <div className="text-center mb-14">
+                            <span className="text-[10px] font-black text-slate-500 dark:text-slate-400 uppercase tracking-[0.3em] mb-4 block">
+                                Done-For-You Services
+                            </span>
+                            <h2 className="text-3xl md:text-5xl font-black text-slate-900 dark:text-white uppercase tracking-tighter mb-4">
+                                Need It Done{' '}
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-teal-600 dark:from-purple-400 dark:to-teal-400">
+                                    For You?
+                                </span>
+                            </h2>
+                            <p className="text-slate-600 dark:text-slate-400 text-lg max-w-2xl mx-auto">
+                                Templates get you 80% of the way. For the other 20% — custom logic, integrations, and production hardening — let us handle it.
+                            </p>
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            {services.map((s) => {
+                                const SIcon = s.icon;
+                                return (
+                                    <Link
+                                        key={s.title}
+                                        href={s.slug}
+                                        className="bg-white dark:bg-[#0a0a0a] border border-slate-200 dark:border-purple-500/20 rounded-2xl p-7 shadow-xl dark:shadow-none hover:border-purple-500/50 hover:shadow-2xl transition-all group overflow-hidden relative block"
+                                    >
+                                        {/* Hover Glow */}
+                                        <div className="absolute inset-0 bg-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity" />
+
+                                        <div className="relative z-10">
+                                            <div className="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center mb-5">
+                                                <SIcon size={22} className="text-purple-600 dark:text-purple-400" />
+                                            </div>
+                                            <h3 className="text-slate-900 dark:text-white font-black text-lg mb-2 uppercase tracking-tight">{s.title}</h3>
+                                            <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6">{s.desc}</p>
+                                            <div className="flex items-center justify-between">
+                                                <span className="text-purple-600 dark:text-purple-400 font-black text-sm uppercase tracking-wider">{s.price}</span>
+                                                <span className="inline-flex items-center gap-1 text-purple-600 dark:text-purple-400 text-sm font-bold group-hover:text-purple-700 dark:group-hover:text-purple-300 transition-colors">
+                                                    Learn More <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+                                                </span>
+                                            </div>
                                         </div>
-                                        <h3 className="text-slate-900 dark:text-white font-black text-lg mb-2 uppercase tracking-tight">{s.title}</h3>
-                                        <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6">{s.desc}</p>
-                                        <div className="flex items-center justify-between">
-                                            <span className="text-purple-600 dark:text-purple-400 font-black text-sm uppercase tracking-wider">{s.price}</span>
-                                            <span className="inline-flex items-center gap-1 text-purple-600 dark:text-purple-400 text-sm font-bold group-hover:text-purple-700 dark:group-hover:text-purple-300 transition-colors">
-                                                Learn More <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
-                                            </span>
-                                        </div>
-                                    </div>
-                                </Link>
-                            );
-                        })}
-                    </div>
-                </section>
+                                    </Link>
+                                );
+                            })}
+                        </div>
+                    </section>
+                </div>
+            ) : (
+                <div className="max-w-xl mx-auto px-6 text-center mt-12 md:mt-20">
+                    <div className="bg-white dark:bg-slate-950/20 border border-slate-200 dark:border-white/10 rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden backdrop-blur-xl">
+                        <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-teal-500/10 to-purple-500/10 rounded-full blur-3xl translate-x-1/3 -translate-y-1/3 -z-10" />
 
-            </div>
+                        <div className="w-16 h-16 rounded-2xl bg-teal-500/10 border border-teal-500/20 flex items-center justify-center mx-auto mb-8">
+                            <Construction className="w-8 h-8 text-teal-600 dark:text-teal-400" />
+                        </div>
+
+                        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-teal-500/10 border border-teal-500/20 text-teal-600 dark:text-teal-400 text-xs font-mono uppercase tracking-widest mb-6">
+                            <span className="w-1.5 h-1.5 rounded-full bg-teal-500 dark:bg-teal-400 animate-pulse"></span>
+                            Under Construction
+                        </div>
+
+                        <h1 className="text-3xl md:text-4xl font-black text-slate-900 dark:text-white uppercase tracking-tight mb-4 animate-in fade-in slide-in-from-bottom duration-500">
+                            The Workflow Store
+                        </h1>
+
+                        <p className="text-slate-600 dark:text-slate-400 text-sm md:text-base leading-relaxed mb-8">
+                            Our storefront of production-grade n8n automation blueprints, RevOps recipes, and AI outbound machines is currently undergoing final polishing. Sign up to get notified the second we launch.
+                        </p>
+
+                        <div className="w-full max-w-sm mx-auto">
+                            <NewsletterForm source="store_coming_soon" />
+                        </div>
+
+                        <div className="mt-8 pt-6 border-t border-slate-200 dark:border-white/5">
+                            <Link href="/" className="inline-flex items-center gap-1.5 text-xs font-bold text-slate-500 dark:text-slate-400 hover:text-teal-600 dark:hover:text-teal-400 transition-colors uppercase tracking-wider">
+                                Back to Homepage <ChevronRight size={14} />
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+            )}
         </main>
     );
 }

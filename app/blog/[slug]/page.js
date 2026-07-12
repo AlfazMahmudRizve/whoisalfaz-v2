@@ -132,7 +132,7 @@ export default async function Post({ params }) {
                 "jobTitle": "RevOps Architect & Full Stack Automation Engineer",
                 "image": "https://whoisalfaz.me/profile.jpg",
                 "sameAs": [
-                  "https://linkedin.com/in/alfaz-mahmud-rizve",
+                  "https://www.linkedin.com/in/alfaz-mahmud-rizve/",
                   "https://x.com/whoisalfaz"
                 ]
               },
