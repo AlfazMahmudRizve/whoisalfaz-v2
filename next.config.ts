@@ -407,6 +407,11 @@ const nextConfig: NextConfig = {
         destination: 'https://partnerstack.lusha.com/0ghbkn0b1inm',
         permanent: true,
       },
+      {
+        source: '/go/whatconverts',
+        destination: 'https://partners.whatconverts.com/9drg99k8gt06',
+        permanent: true,
+      },
     ];
   },
   async headers() {

@@ -1,0 +1,555 @@
+{
+  "pillars": {
+    "Pillar 1: RevOps Analytics & Lead Attribution": {
+      "avg_score": 69.6,
+      "items": [
+        {
+          "filepath": "draft-closed-loop-lead-attribution-engine.json",
+          "title": "Closed-Loop Lead Attribution Engine: n8n & monday.com",
+          "title_len": 53,
+          "title_pass": true,
+          "search_intent": "Technical / Informational",
+          "keyword_at_start": true,
+          "entity_count": 11,
+          "aeo_compliance": "6/10",
+          "avg_h2_p1_words": 89.3,
+          "h2_p1_counts": [
+            149,
+            145,
+            17,
+            142,
+            137,
+            1,
+            1,
+            135,
+            155,
+            11
+          ],
+          "code_blocks": 3,
+          "schema_present": false,
+          "score": 80
+        },
+        {
+          "filepath": "draft-competitor-seo-audit.json",
+          "title": "How to Audit Your Competitors' Technical SEO (Without DNS Verification)",
+          "title_len": 71,
+          "title_pass": false,
+          "search_intent": "Technical / Informational",
+          "keyword_at_start": false,
+          "entity_count": 6,
+          "aeo_compliance": "0/8",
+          "avg_h2_p1_words": 27.0,
+          "h2_p1_counts": [
+            30,
+            26,
+            27,
+            30,
+            25,
+            18,
+            37,
+            23
+          ],
+          "code_blocks": 0,
+          "schema_present": true,
+          "score": 31
+        },
+        {
+          "filepath": "draft-databox-revops-dashboard-pipeline-velocity.json",
+          "title": "Databox Executive RevOps Dashboards: n8n & monday.com",
+          "title_len": 53,
+          "title_pass": true,
+          "search_intent": "Technical / Informational",
+          "keyword_at_start": true,
+          "entity_count": 11,
+          "aeo_compliance": "6/9",
+          "avg_h2_p1_words": 98.2,
+          "h2_p1_counts": [
+            137,
+            148,
+            151,
+            137,
+            1,
+            1,
+            136,
+            161,
+            12
+          ],
+          "code_blocks": 3,
+          "schema_present": false,
+          "score": 81
+        },
+        {
+          "filepath": "draft-monday-crm-advanced-lead-scoring.json",
+          "title": "monday.com CRM Advanced Lead Scoring: n8n Workflow Engine",
+          "title_len": 57,
+          "title_pass": true,
+          "search_intent": "Technical / Informational",
+          "keyword_at_start": true,
+          "entity_count": 10,
+          "aeo_compliance": "6/9",
+          "avg_h2_p1_words": 97.8,
+          "h2_p1_counts": [
+            148,
+            150,
+            141,
+            138,
+            1,
+            1,
+            141,
+            148,
+            12
+          ],
+          "code_blocks": 3,
+          "schema_present": false,
+          "score": 81
+        },
+        {
+          "filepath": "draft-turbotic-automation-governance.json",
+          "title": "Turbotic Automation Governance: n8n & monday.com CRM",
+          "title_len": 52,
+          "title_pass": true,
+          "search_intent": "Technical / Informational",
+          "keyword_at_start": true,
+          "entity_count": 7,
+          "aeo_compliance": "6/9",
+          "avg_h2_p1_words": 97.0,
+          "h2_p1_counts": [
+            135,
+            156,
+            144,
+            140,
+            1,
+            1,
+            137,
+            148,
+            11
+          ],
+          "code_blocks": 3,
+          "schema_present": false,
+          "score": 75
+        }
+      ]
+    },
+    "Pillar 2: Outbound Sales & B2B Prospecting": {
+      "avg_score": 88.6,
+      "items": [
+        {
+          "filepath": "draft-2-1-apollo-brevo-n8n-pipeline.json",
+          "title": "Apollo to Brevo n8n Pipeline: B2B Automated Outreach Guide",
+          "title_len": 58,
+          "title_pass": true,
+          "search_intent": "Technical / Informational",
+          "keyword_at_start": true,
+          "entity_count": 13,
+          "aeo_compliance": "5/6",
+          "avg_h2_p1_words": 126.3,
+          "h2_p1_counts": [
+            149,
+            151,
+            149,
+            147,
+            145,
+            17
+          ],
+          "code_blocks": 3,
+          "schema_present": false,
+          "score": 85
+        },
+        {
+          "filepath": "draft-2-2-apollo-vs-lusha-vs-aisdr.json",
+          "title": "Apollo vs Lusha vs AiSDR: B2B Sales Prospecting Tech Stack",
+          "title_len": 58,
+          "title_pass": true,
+          "search_intent": "Commercial / Comparison",
+          "keyword_at_start": true,
+          "entity_count": 11,
+          "aeo_compliance": "5/5",
+          "avg_h2_p1_words": 140.2,
+          "h2_p1_counts": [
+            146,
+            136,
+            139,
+            141,
+            139
+          ],
+          "code_blocks": 3,
+          "schema_present": false,
+          "score": 90
+        },
+        {
+          "filepath": "draft-2-3-aisdr-vs-human-sdr-unit-economics.json",
+          "title": "AiSDR vs Human SDR: B2B Sales Outbound Unit Economics",
+          "title_len": 53,
+          "title_pass": true,
+          "search_intent": "Commercial / Comparison",
+          "keyword_at_start": true,
+          "entity_count": 10,
+          "aeo_compliance": "5/5",
+          "avg_h2_p1_words": 136.6,
+          "h2_p1_counts": [
+            141,
+            136,
+            135,
+            134,
+            137
+          ],
+          "code_blocks": 3,
+          "schema_present": false,
+          "score": 90
+        },
+        {
+          "filepath": "draft-2-4-waterfall-data-enrichment-pipeline.json",
+          "title": "Waterfall Data Enrichment Pipeline: n8n Outbound Guide",
+          "title_len": 54,
+          "title_pass": true,
+          "search_intent": "Technical / Informational",
+          "keyword_at_start": true,
+          "entity_count": 10,
+          "aeo_compliance": "5/5",
+          "avg_h2_p1_words": 136.6,
+          "h2_p1_counts": [
+            139,
+            137,
+            137,
+            135,
+            135
+          ],
+          "code_blocks": 3,
+          "schema_present": false,
+          "score": 90
+        },
+        {
+          "filepath": "draft-2-5-brevo-cold-email-ip-warming-guide.json",
+          "title": "Brevo Cold Email & IP Warming: Dedicated SMTP Deliverability",
+          "title_len": 60,
+          "title_pass": true,
+          "search_intent": "Technical / Informational",
+          "keyword_at_start": true,
+          "entity_count": 9,
+          "aeo_compliance": "5/5",
+          "avg_h2_p1_words": 140.8,
+          "h2_p1_counts": [
+            141,
+            134,
+            136,
+            136,
+            157
+          ],
+          "code_blocks": 3,
+          "schema_present": false,
+          "score": 88
+        }
+      ]
+    },
+    "Pillar 3: Voice & Conversational AI": {
+      "avg_score": 85.2,
+      "items": [
+        {
+          "filepath": "draft-cometchat-dify-inapp-voice.json",
+          "title": "CometChat Dify.ai In-App Voice: React & Webhook Guide",
+          "title_len": 53,
+          "title_pass": true,
+          "search_intent": "Technical / Informational",
+          "keyword_at_start": true,
+          "entity_count": 9,
+          "aeo_compliance": "5/5",
+          "avg_h2_p1_words": 137.4,
+          "h2_p1_counts": [
+            136,
+            138,
+            137,
+            139,
+            137
+          ],
+          "code_blocks": 5,
+          "schema_present": false,
+          "score": 88
+        },
+        {
+          "filepath": "draft-dify-vs-n8n-architecture.json",
+          "title": "Dify.ai vs n8n Architecture: Docker & API Comparison",
+          "title_len": 52,
+          "title_pass": true,
+          "search_intent": "Commercial / Comparison",
+          "keyword_at_start": true,
+          "entity_count": 16,
+          "aeo_compliance": "5/5",
+          "avg_h2_p1_words": 140.0,
+          "h2_p1_counts": [
+            140,
+            145,
+            135,
+            142,
+            138
+          ],
+          "code_blocks": 5,
+          "schema_present": false,
+          "score": 90
+        },
+        {
+          "filepath": "draft-elevenlabs-n8n-voice-ai-sales-agent.json",
+          "title": "ElevenLabs n8n Voice AI Agent: Twilio & API Guide",
+          "title_len": 49,
+          "title_pass": true,
+          "search_intent": "Technical / Informational",
+          "keyword_at_start": true,
+          "entity_count": 7,
+          "aeo_compliance": "5/5",
+          "avg_h2_p1_words": 137.6,
+          "h2_p1_counts": [
+            143,
+            139,
+            136,
+            136,
+            134
+          ],
+          "code_blocks": 5,
+          "schema_present": false,
+          "score": 84
+        },
+        {
+          "filepath": "draft-manychat-n8n-whatsapp-voice-bot.json",
+          "title": "ManyChat n8n WhatsApp Voice Bot: ElevenLabs API Guide",
+          "title_len": 53,
+          "title_pass": true,
+          "search_intent": "Technical / Informational",
+          "keyword_at_start": true,
+          "entity_count": 8,
+          "aeo_compliance": "5/5",
+          "avg_h2_p1_words": 138.6,
+          "h2_p1_counts": [
+            136,
+            134,
+            142,
+            140,
+            141
+          ],
+          "code_blocks": 5,
+          "schema_present": false,
+          "score": 86
+        },
+        {
+          "filepath": "draft-omnichannel-ai-voice-note-handler.json",
+          "title": "Omnichannel AI Agent Voice Note Handler: n8n, WhatsApp API",
+          "title_len": 58,
+          "title_pass": true,
+          "search_intent": "Technical / Informational",
+          "keyword_at_start": false,
+          "entity_count": 9,
+          "aeo_compliance": "5/5",
+          "avg_h2_p1_words": 141.2,
+          "h2_p1_counts": [
+            147,
+            138,
+            138,
+            145,
+            138
+          ],
+          "code_blocks": 4,
+          "schema_present": false,
+          "score": 78
+        }
+      ]
+    },
+    "Pillar 4: Vector DB & RAG Infrastructure": {
+      "avg_score": 81.0,
+      "items": [
+        {
+          "filepath": "draft-corrective-rag-crag-n8n.json",
+          "title": "Corrective RAG CRAG n8n Blueprint: Vector DB Search",
+          "title_len": 51,
+          "title_pass": true,
+          "search_intent": "Technical / Informational",
+          "keyword_at_start": false,
+          "entity_count": 9,
+          "aeo_compliance": "5/5",
+          "avg_h2_p1_words": 137.8,
+          "h2_p1_counts": [
+            139,
+            136,
+            137,
+            140,
+            137
+          ],
+          "code_blocks": 0,
+          "schema_present": true,
+          "score": 73
+        },
+        {
+          "filepath": "draft-n8n-multi-tenant-vector-schema.json",
+          "title": "n8n Multi-Tenant Vector Schema Guide: Qdrant Docker",
+          "title_len": 51,
+          "title_pass": true,
+          "search_intent": "Technical / Informational",
+          "keyword_at_start": true,
+          "entity_count": 8,
+          "aeo_compliance": "5/5",
+          "avg_h2_p1_words": 136.8,
+          "h2_p1_counts": [
+            136,
+            139,
+            136,
+            135,
+            138
+          ],
+          "code_blocks": 0,
+          "schema_present": true,
+          "score": 81
+        },
+        {
+          "filepath": "draft-pinecone-vs-qdrant-vultr-benchmark.json",
+          "title": "Pinecone vs Qdrant Vultr Benchmark: Docker Vector DB",
+          "title_len": 52,
+          "title_pass": true,
+          "search_intent": "Commercial / Comparison",
+          "keyword_at_start": true,
+          "entity_count": 11,
+          "aeo_compliance": "5/5",
+          "avg_h2_p1_words": 140.4,
+          "h2_p1_counts": [
+            143,
+            140,
+            143,
+            135,
+            141
+          ],
+          "code_blocks": 0,
+          "schema_present": true,
+          "score": 85
+        },
+        {
+          "filepath": "draft-self-hosted-qdrant-docker-vultr.json",
+          "title": "Self-Hosted Qdrant Docker Vultr SOP: Vector DB Guide",
+          "title_len": 52,
+          "title_pass": true,
+          "search_intent": "Technical / Informational",
+          "keyword_at_start": true,
+          "entity_count": 10,
+          "aeo_compliance": "5/5",
+          "avg_h2_p1_words": 138.0,
+          "h2_p1_counts": [
+            141,
+            135,
+            135,
+            142,
+            137
+          ],
+          "code_blocks": 0,
+          "schema_present": true,
+          "score": 85
+        }
+      ]
+    },
+    "Pillar 5: Growth Operations, Ad AI & SOP Systems": {
+      "avg_score": 86.4,
+      "items": [
+        {
+          "filepath": "draft-accelerated-growth-studio-plg-playbook.json",
+          "title": "Accelerated Growth Studio PLG Playbook: n8n SaaS Funnel",
+          "title_len": 55,
+          "title_pass": true,
+          "search_intent": "Technical / Informational",
+          "keyword_at_start": true,
+          "entity_count": 7,
+          "aeo_compliance": "5/5",
+          "avg_h2_p1_words": 146.0,
+          "h2_p1_counts": [
+            150,
+            139,
+            144,
+            149,
+            148
+          ],
+          "code_blocks": 2,
+          "schema_present": false,
+          "score": 84
+        },
+        {
+          "filepath": "draft-adcreative-ai-n8n-ad-refresh.json",
+          "title": "AdCreative.ai Review: n8n Ad Refresh Loop in Meta AI",
+          "title_len": 52,
+          "title_pass": true,
+          "search_intent": "Commercial / Comparison",
+          "keyword_at_start": true,
+          "entity_count": 7,
+          "aeo_compliance": "5/5",
+          "avg_h2_p1_words": 143.8,
+          "h2_p1_counts": [
+            143,
+            138,
+            139,
+            141,
+            158
+          ],
+          "code_blocks": 2,
+          "schema_present": false,
+          "score": 84
+        },
+        {
+          "filepath": "draft-emergent-ai-autonomous-gtm-guide.json",
+          "title": "Emergent AI Autonomous GTM Guide: n8n Workflow in SaaS",
+          "title_len": 54,
+          "title_pass": true,
+          "search_intent": "Technical / Informational",
+          "keyword_at_start": true,
+          "entity_count": 12,
+          "aeo_compliance": "5/5",
+          "avg_h2_p1_words": 147.6,
+          "h2_p1_counts": [
+            154,
+            148,
+            144,
+            153,
+            139
+          ],
+          "code_blocks": 2,
+          "schema_present": false,
+          "score": 90
+        },
+        {
+          "filepath": "draft-tapstitch-vs-printful-ecommerce-pipeline.json",
+          "title": "Tapstitch vs Printful E-Commerce Pipeline: n8n Shopify AI",
+          "title_len": 57,
+          "title_pass": true,
+          "search_intent": "Commercial / Comparison",
+          "keyword_at_start": true,
+          "entity_count": 7,
+          "aeo_compliance": "5/5",
+          "avg_h2_p1_words": 150.8,
+          "h2_p1_counts": [
+            158,
+            154,
+            147,
+            146,
+            149
+          ],
+          "code_blocks": 2,
+          "schema_present": false,
+          "score": 84
+        },
+        {
+          "filepath": "draft-trainual-alternatives-active-agency-sop.json",
+          "title": "Trainual Alternatives: Active Agency SOP Engine in n8n SaaS",
+          "title_len": 59,
+          "title_pass": true,
+          "search_intent": "Commercial / Comparison",
+          "keyword_at_start": true,
+          "entity_count": 12,
+          "aeo_compliance": "5/5",
+          "avg_h2_p1_words": 146.4,
+          "h2_p1_counts": [
+            138,
+            158,
+            148,
+            145,
+            143
+          ],
+          "code_blocks": 2,
+          "schema_present": false,
+          "score": 90
+        }
+      ]
+    }
+  },
+  "overall_score": 82.2
+}

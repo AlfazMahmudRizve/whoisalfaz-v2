@@ -86,7 +86,7 @@ function buildJson() {
       categories: [
         { _type: 'reference', _ref: 'Al3E26R37amzsHAqPF1yCU' } // 30 Days of n8n & Automation
       ],
-      affiliates: ['databox', 'monday', 'n8n'],
+      affiliates: ['databox', 'monday', 'n8n', 'whatconverts'],
       body: bodyContent,
       schemaMarkup: JSON.stringify(blogSchema)
     };

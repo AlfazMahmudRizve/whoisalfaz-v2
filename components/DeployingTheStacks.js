@@ -155,6 +155,13 @@ const AFFILIATE_DATA = {
         url: "/go/lusha",
         buttonText: "Try Lusha Free",
         badge: "Lead Gen & Data"
+    },
+    whatconverts: {
+        title: "WhatConverts",
+        description: "Call, form, chat, and lead tracking software for complete GTM attribution and marketing analytics.",
+        url: "/go/whatconverts",
+        buttonText: "Try WhatConverts",
+        badge: "Lead Attribution"
     }
 };
 
