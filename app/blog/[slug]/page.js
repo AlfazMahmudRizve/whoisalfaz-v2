@@ -94,9 +94,26 @@ export default async function Post({ params }) {
     notFound();
   }
 
-  // Calculate read time
-  const wordCount = post.body?.split(/\s+/g).length || 0;
-  const readTime = Math.ceil(wordCount / 200);
+  // Calculate read time safely for both string MDX and PortableText arrays
+  const getWordCount = (body) => {
+    if (!body) return 0;
+    if (typeof body === 'string') {
+      return body.split(/\s+/g).filter(Boolean).length;
+    }
+    if (Array.isArray(body)) {
+      const text = body.map(block => {
+        if (block && Array.isArray(block.children)) {
+          return block.children.map(c => c.text || '').join(' ');
+        }
+        return '';
+      }).join(' ');
+      return text.split(/\s+/g).filter(Boolean).length;
+    }
+    return 0;
+  };
+
+  const wordCount = getWordCount(post.body);
+  const readTime = Math.max(1, Math.ceil(wordCount / 200));
 
   return (
     <article className="min-h-screen bg-slate-50 dark:bg-[#0a0a0a] transition-colors duration-300 selection:bg-teal-500/30 selection:text-teal-900 dark:selection:text-teal-200 pb-20 pt-24">
