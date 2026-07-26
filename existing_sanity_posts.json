@@ -1,0 +1,548 @@
+[
+  {
+    "index": 1,
+    "id": "Al3E26R37amzsHAqPF1nmg",
+    "slug": "n8n-data-privacy-security-guide",
+    "title": "Is Your n8n Workflow Leaking Client Data? (n8n Data Privacy Protocol for agencies) - 30 Days of n8n & Automation – Day 18",
+    "description": "Stop the 'Silent Leak.' Learn the 6-layer Agency Privacy Protocol for n8n Data Privacy, from self-hosted Vultr security to auto-pruning and Ghost Mode."
+  },
+  {
+    "index": 2,
+    "id": "Al3E26R37amzsHAqPF1nz6",
+    "slug": "n8n-tips-and-tricks-by-alfaz-mahmud-rizve",
+    "title": "5 n8n Hidden Tricks That Save Agency Owners 10+ Hours a Week – Day 19",
+    "description": "Stop rebuilding workflows from scratch. These 5 advanced n8n tips — from workflow templates to batch processing — will cut your build time in half."
+  },
+  {
+    "index": 3,
+    "id": "Al3E26R37amzsHAqPF1r6U",
+    "slug": "n8n-rag-tutorial",
+    "title": "Your AI Is Hallucinating Because It Can't Read Your Docs — Fix It with n8n RAG – Day 26",
+    "description": "Stop AI hallucinations on your own data. Build an n8n RAG (Retrieval-Augmented Generation) pipeline that reads your private PDFs, stores them as vectors in Pinecone, and lets your AI answer with 100% source accuracy."
+  },
+  {
+    "index": 4,
+    "id": "Al3E26R37amzsHAqPF1sOK",
+    "slug": "n8n-ai-receptionist",
+    "title": "Stop Missing Client Calls — Build an n8n AI Receptionist for Pennies a Minute – Day 27",
+    "description": "A missed call is a missed deal. Build an n8n AI Receptionist using Twilio and OpenAI Whisper that answers calls, transcribes voicemails, classifies urgency, and calls you back instantly for high-priority leads."
+  },
+  {
+    "index": 5,
+    "id": "Al3E26R37amzsHAqPF1ugG",
+    "slug": "automated-youtube-shorts-generator",
+    "title": "Stop Editing Videos Manually — Build an Automated YouTube Shorts Generator with n8n – Day 28",
+    "description": "4 hours of editing for 30 seconds of content is unscalable. Build an automated YouTube Shorts generator using n8n, GPT-4o, DALL-E 3, and Creatomate that scripts, illustrates, voices, renders, and uploads videos from a single text topic."
+  },
+  {
+    "index": 6,
+    "id": "Al3E26R37amzsHAqPF1uqu",
+    "slug": "build-personal-ai-assistant",
+    "title": "Stop Managing 5 Dashboards — Build Your Personal AI Operating System with n8n – Day 29",
+    "description": "Siloed automation tools are dead weight. Build a Master Orchestrator AIOS in n8n that routes natural language Telegram commands to your Research, Video, and Finance agents automatically — like a personal J.A.R.V.I.S."
+  },
+  {
+    "index": 7,
+    "id": "Al3E26R37amzsHAqPF1xXg",
+    "slug": "n8n-debugging-error-handling-basics",
+    "title": "n8n Debugging & Error Handling Basics (Logs, Retries, Alerts to Slack & Email)-30 Days of n8n & Automation- Day 7",
+    "description": "Master n8n debugging and error handling with logs, retries, and alerts. Real examples for SaaS & agencies by Alfaz Mahmud Rizve at whoisalfaz.me."
+  },
+  {
+    "index": 8,
+    "id": "Al3E26R37amzsHAqPF1xem",
+    "slug": "capture-n8n-lead-data-from-wordpress-elementor",
+    "title": "Capture n8n lead data from WordPress/Elementor to Google Sheets + email notification - 30 Days of n8n & Automation – Day 8",
+    "description": "Capture every n8n lead from WordPress and Elementor into Google Sheets with instant email alerts. Step‑by‑step automation for SaaS and agencies by Alfaz"
+  },
+  {
+    "index": 9,
+    "id": "Al3E26R37amzsHAqPF1xsy",
+    "slug": "lead-scoring-automation-with-alfaz-mahmud-rizve",
+    "title": "Lead Scoring Automation: Auto-tag Leads in Brevo & Trigger LinkedIn Outreach via HeyReach (Intent, Source, Language) – 30 Days of n8n & Automation – Day 9",
+    "description": "Master lead scoring automation with n8n: Auto-tag Brevo leads by form intent, source, and language — then automatically trigger LinkedIn outreach via HeyReach for high-intent prospects. Save hours using a real multi-channel workflow by Alfaz Mahmud Rizve."
+  },
+  {
+    "index": 10,
+    "id": "Al3E26R37amzsHAqPF24Lw",
+    "slug": "case-study-client-portfolio-delivery",
+    "title": "Transforming a Static Portfolio into a Dynamic Content Engine: The Abu Zubayer Delivery",
+    "description": "A technical delivery teardown of transforming a Customer Service Specialist's static Google Site into a high-performance, Prisma-backed Next.js experience."
+  },
+  {
+    "index": 11,
+    "id": "Al3E26R37amzsHAqPF24Uo",
+    "slug": "case-study-urban-cafe-foodtech-platform",
+    "title": "Zero-Hardware Kitchen OS: How I Replaced a $2,000 POS System With a Next.js PWA",
+    "description": "A deep dive into how I built a real-time, browser-native restaurant OS to automate orders, kitchen queues, and voice alerts with zero hardware cost."
+  },
+  {
+    "index": 12,
+    "id": "Al3E26R37amzsHAqPF24hE",
+    "slug": "case-study-whoisalfaz-seo-indexing-engine",
+    "title": "How I Engineered a Zero-Touch SEO Indexing Pipeline That Submits 41 URLs Across 3 Search Engines on Every Deploy",
+    "description": "From a sluggish WordPress blog to a 98+ PageSpeed score and automated triple-threat search engine indexing — a complete architecture teardown of whoisalfaz.me's content engine."
+  },
+  {
+    "index": 13,
+    "id": "RG0kr2oNPMWGLodGU1dssA",
+    "slug": "manychat-to-n8n-integration-lead-scoring",
+    "title": "ManyChat to n8n Integration: The Complete Lead Scoring Pipeline (2025)",
+    "description": "Learn how to build a production-grade ManyChat to n8n integration using webhooks. Includes AI lead scoring, Brevo CRM sync, and how to beat the 10-second timeout — with real code."
+  },
+  {
+    "index": 14,
+    "id": "a6v9PVOR4mUdBqGwKHyGfh",
+    "slug": "automation-operating-system-for-saas",
+    "title": "Architecting the SaaS Automation OS: The Enterprise Playbook (Day 1)",
+    "description": "Stop relying on fragile Zapier templates. Learn how to architect a true event-driven Automation Operating System for your SaaS or agency using n8n, webhooks, and enterprise data orchestration."
+  },
+  {
+    "index": 15,
+    "id": "a6v9PVOR4mUdBqGwKHyGun",
+    "slug": "n8n-slack-notifications-by-alfaz-mahmud-rizve",
+    "title": "n8n Slack Notifications – 30 Days of n8n & Automation – Day 10",
+    "description": "Stop losing VIP prospects in your email inbox. Learn how to engineer n8n Slack notifications to instantly alert your sales team the second a high-intent lead converts."
+  },
+  {
+    "index": 16,
+    "id": "a6v9PVOR4mUdBqGwKHyIZx",
+    "slug": "lead-enrichment-with-n8n",
+    "title": "Lead Enrichment with n8n: Build a Reliable Company, Website and Location Enrichment Workflow - 30 Days of n8n & Automation – Day 11",
+    "description": "Stop routing naked emails to your sales team. Learn how to architect an automated n8n lead enrichment workflow to append company, website, and location data instantly."
+  },
+  {
+    "index": 17,
+    "id": "a6v9PVOR4mUdBqGwKHyIz7",
+    "slug": "automated-content-research-by-alfaz-mahmud-rizve",
+    "title": "Automated Content Research: Build an Infinite Strategy Engine with n8n – 30 Days of n8n & Automation – Day 15",
+    "description": "Automated content research with n8n: pull trending topics and keywords straight into Google Sheets with Alfaz Mahmud Rizve so you never guess what to write again."
+  },
+  {
+    "index": 18,
+    "id": "a6v9PVOR4mUdBqGwKHyL3R",
+    "slug": "n8n-production-workflows-by-alfaz-mahmud-rizve",
+    "title": "n8n Production Workflows & The Reliability Gap: Why Your n8n Workflows Fail (And How to Build Agency-Grade Systems) – 30 Days of n8n & Automation – Day 17",
+    "description": "Stop building fragile automations. Learn the enterprise architecture of a crash-proof n8n production workflow using Redis, Postgres, and Vultr."
+  },
+  {
+    "index": 19,
+    "id": "a6v9PVOR4mUdBqGwKHyQKX",
+    "slug": "n8n-google-analytics-4-pipeline",
+    "title": "Stop Sending Manual GA4 Reports — Automate Your Agency Analytics with n8n – Day 20",
+    "description": "Your clients deserve real-time dashboards, not end-of-month screenshots. Build an automated GA4 reporting pipeline with n8n that delivers live data to Google Sheets automatically."
+  },
+  {
+    "index": 20,
+    "id": "a6v9PVOR4mUdBqGwKHyQmD",
+    "slug": "n8n-global-error-handling",
+    "title": "Your n8n Workflows Are Failing Silently — Fix It with The Watchtower Protocol – Day 23",
+    "description": "Stop discovering n8n crashes from angry clients. Build a centralized Watchtower error handler that monitors your entire instance and fires Discord alerts with deep links to failed executions."
+  },
+  {
+    "index": 21,
+    "id": "a6v9PVOR4mUdBqGwKHySvZ",
+    "slug": "n8n-ai-agent-tools",
+    "title": "Give Your n8n AI Agent Hands: Build Autonomous Agents That Use Real APIs – Day 25",
+    "description": "Chatbots guess. Agents act. Learn how to use n8n AI Agent Tools (Function Calling) to give your AI real capabilities — live database lookups, API calls, and PDF generation — without hardcoding a single workflow."
+  },
+  {
+    "index": 22,
+    "id": "a6v9PVOR4mUdBqGwKHyWa1",
+    "slug": "ai-automation-agency-business-model",
+    "title": "Skills Don't Make Money — Here's How to Package Them into a $10k/Month Automation Agency – Day 30",
+    "description": "The Grand Finale. You have 29 days of n8n knowledge. Now learn how to package those workflows into three high-ticket agency offers — Growth Engine, Iron Receptionist, and Executive Brain — and land clients using the Trojan Horse method."
+  },
+  {
+    "index": 23,
+    "id": "a6v9PVOR4mUdBqGwKHyaTZ",
+    "slug": "essential-n8n-core-nodes-by-alfaz-mahmud-rizve",
+    "title": "Essential n8n Core Nodes (Master HTTP Request, IF, Set, Merge & Code) – 30 Days of n8n & Automation – Day 6",
+    "description": "Stop relying on pre-built app integrations. Master the 5 essential n8n core nodes (HTTP Request, IF, Set, Merge, Code) to build enterprise-grade architectures."
+  },
+  {
+    "index": 24,
+    "id": "a6v9PVOR4mUdBqGwKHyi6b",
+    "slug": "case-study-veloryc-premium-ecommerce",
+    "title": "Veloryc E-Commerce: High-Performance Architecture Using Supabase RLS and Pure CSS Modules",
+    "description": "A technical breakdown of Veloryc, a premium skincare storefront engineered with Next.js, Supabase Real-Time, and a strict zero-dependency CSS architecture."
+  },
+  {
+    "index": 25,
+    "id": "accelerated-growth-studio-plg-playbook",
+    "slug": "accelerated-growth-studio-plg-playbook",
+    "title": "Accelerated Growth Studio PLG Playbook: n8n SaaS Funnel",
+    "description": "Implement product-led growth strategies with our Accelerated Growth Studio PLG playbook, complete with n8n automation blueprints and JavaScript analytics."
+  },
+  {
+    "index": 26,
+    "id": "adcreative-ai-review-n8n-ad-refresh-loop",
+    "slug": "adcreative-ai-review-n8n-ad-refresh-loop",
+    "title": "AdCreative.ai Review: n8n Ad Refresh Loop in Meta AI",
+    "description": "Discover our in-depth AdCreative.ai review and build an automated n8n ad refresh loop for Meta ads to prevent creative fatigue using JavaScript AI algorithms."
+  },
+  {
+    "index": 27,
+    "id": "aisdr-vs-human-sdr-performance-teardown",
+    "slug": "aisdr-vs-human-sdr-performance-teardown",
+    "title": "AiSDR vs Human SDR: A Technical Performance Teardown for B2B SaaS Sales Teams",
+    "description": "A deep-dive technical comparison of AiSDR vs Human SDR fully loaded costs, outreach volumes, reply rates, show rates, and a complete hybrid stack architecture utilizing n8n, Apollo.io, and Brevo."
+  },
+  {
+    "index": 28,
+    "id": "aisdr-vs-human-sdr-unit-economics-benchmark",
+    "slug": "aisdr-vs-human-sdr-unit-economics-benchmark",
+    "title": "AiSDR vs Human SDR: B2B Sales Outbound Unit Economics",
+    "description": "Benchmark AiSDR vs Human SDR unit economics for B2B SaaS. Analysis of cost per booked meeting, reply rates, pipeline velocity, and hybrid scaling models."
+  },
+  {
+    "index": 29,
+    "id": "apollo-brevo-n8n-outbound-pipeline",
+    "slug": "apollo-brevo-n8n-outbound-pipeline",
+    "title": "How to Sync Apollo.io Leads to Brevo CRM Using n8n: Full Outbound Pipeline Walkthrough",
+    "description": "Automate lead sync from Apollo.io to Brevo CRM with n8n. Includes deduplication logic, ICP scoring, sequence triggering, circular sync protection, and SMTP email delivery automation."
+  },
+  {
+    "index": 30,
+    "id": "apollo-to-brevo-n8n-pipeline-guide",
+    "slug": "apollo-to-brevo-n8n-pipeline-guide",
+    "title": "Apollo to Brevo n8n Pipeline: B2B Automated Outreach Guide",
+    "description": "Build an automated Apollo to Brevo n8n pipeline for B2B prospecting. Includes copy-pasteable JSON blueprints, JavaScript deduplication, and CRM sync."
+  },
+  {
+    "index": 31,
+    "id": "apollo-vs-lusha-vs-aisdr-comparison",
+    "slug": "apollo-vs-lusha-vs-aisdr-comparison",
+    "title": "Apollo vs Lusha vs AiSDR: B2B Sales Prospecting Tech Stack",
+    "description": "Compare Apollo vs Lusha vs AiSDR for B2B outbound prospecting. Deep breakdown of phone accuracy, AI copy generation, unit costs, and n8n stack integration."
+  },
+  {
+    "index": 32,
+    "id": "brevo-cold-email-ip-warming-guide",
+    "slug": "brevo-cold-email-ip-warming-guide",
+    "title": "Brevo Cold Email & IP Warming: Dedicated SMTP Deliverability",
+    "description": "Master Brevo cold email deliverability and dedicated IP warming. Step-by-step schedule, SPF/DKIM/DMARC setup, and automated n8n throttling logic."
+  },
+  {
+    "index": 33,
+    "id": "closed-loop-lead-attribution-engine",
+    "slug": "closed-loop-lead-attribution-engine",
+    "title": "Closed-Loop Lead Attribution Engine: n8n & monday.com",
+    "description": "Build a closed-loop lead attribution engine using n8n, monday.com, and WhatConverts. Track ROI, first-touch, and multi-touch revenue data automatically."
+  },
+  {
+    "index": 34,
+    "id": "cold-email-machine-apollo-aisdr-brevo",
+    "slug": "cold-email-machine-apollo-aisdr-brevo",
+    "title": "How to Build an Automated Cold Email Machine with Apollo.io, AiSDR, and Brevo",
+    "description": "Build a fully automated cold email system using Apollo.io for prospecting, AiSDR for personalized copy, and Brevo for transactional SMTP delivery at scale."
+  },
+  {
+    "index": 35,
+    "id": "cometchat-dify-inapp-voice",
+    "slug": "cometchat-dify-inapp-voice",
+    "title": "CometChat Dify.ai In-App Voice: React & Webhook Guide",
+    "description": "Integrate CometChat and Dify.ai for in-app voice AI agents. Step-by-step guide covering React SDK setup, Webhook authentication, and custom Python nodes."
+  },
+  {
+    "index": 36,
+    "id": "corrective-rag-crag-n8n-blueprint",
+    "slug": "corrective-rag-crag-n8n-blueprint",
+    "title": "Corrective RAG CRAG n8n Blueprint: Vector DB Search",
+    "description": "Step-by-step blueprint to build a Corrective RAG (CRAG) workflow in n8n with Qdrant vector search, automated grading, Tavily web fallback, and context synthesis."
+  },
+  {
+    "index": 37,
+    "id": "databox-revops-dashboard-pipeline-velocity",
+    "slug": "databox-revops-dashboard-pipeline-velocity",
+    "title": "Databox Executive RevOps Dashboards: n8n & monday.com",
+    "description": "Build real-time Databox executive RevOps dashboards with n8n and monday.com. Track sales pipeline velocity, ARR, win rates, and SDR ROI metrics live."
+  },
+  {
+    "index": 38,
+    "id": "dify-vs-n8n-architecture",
+    "slug": "dify-vs-n8n-architecture",
+    "title": "Dify.ai vs n8n Architecture: Docker & API Comparison",
+    "description": "Compare Dify.ai vs n8n architecture for enterprise AI orchestration. Learn how self-hosted Docker containers, Python code nodes, and APIs scale workflows."
+  },
+  {
+    "index": 39,
+    "id": "elevenlabs-n8n-voice-ai-sales-agent",
+    "slug": "elevenlabs-n8n-voice-ai-sales-agent",
+    "title": "ElevenLabs n8n Voice AI Agent: Twilio & API Guide",
+    "description": "Build a production ElevenLabs n8n voice AI agent with low latency. Step-by-step tutorial covering Twilio Webhooks, OpenAI LLMs, and HubSpot CRM sync."
+  },
+  {
+    "index": 40,
+    "id": "emergent-ai-autonomous-gtm-guide",
+    "slug": "emergent-ai-autonomous-gtm-guide",
+    "title": "Emergent AI Autonomous GTM Guide: n8n Workflow in SaaS",
+    "description": "Master autonomous go-to-market execution with our Emergent AI autonomous GTM guide, featuring complete n8n workflow blueprints and JavaScript routing nodes."
+  },
+  {
+    "index": 41,
+    "id": "headless-wordpress-seo-nextjs-guide",
+    "slug": "headless-wordpress-seo-nextjs-guide",
+    "title": "Headless WordPress SEO: Next.js 15 App Router Blueprint",
+    "description": "Headless WordPress SEO: Learn to rewrite canonicals, sync middleware redirects, and generate dynamic Next.js 15 sitemaps to prevent traffic drops."
+  },
+  {
+    "index": 42,
+    "id": "headless-wordpress-vs-monolithic",
+    "slug": "headless-wordpress-vs-monolithic",
+    "title": "Headless WordPress vs Monolithic: Enterprise Decoupled Guide",
+    "description": "Headless WordPress vs Monolithic: Compare performance, core web vitals, security, TCO, and API integrations to select the right CMS architecture."
+  },
+  {
+    "index": 43,
+    "id": "how-to-audit-competitor-seo-no-verification",
+    "slug": "how-to-audit-competitor-seo-no-verification",
+    "title": "How to Audit Your Competitors' Technical SEO (Without DNS Verification)",
+    "description": "Learn how to audit competitor SEO parameters anonymously. Step-by-step guide to crawling Core Web Vitals, metadata, SSL, security headers, and robots/sitemaps."
+  },
+  {
+    "index": 44,
+    "id": "manychat-n8n-async-timeout-fix",
+    "slug": "manychat-n8n-async-timeout-fix",
+    "title": "ManyChat + n8n: How to Beat the 10-Second Response Timeout and Build Async Chat Flows",
+    "description": "Fix ManyChat's 10-second webhook timeout using n8n async queues. Step-by-step tutorial covering decoupled webhooks, n8n queue architectures, and async REST API handoffs."
+  },
+  {
+    "index": 45,
+    "id": "manychat-n8n-whatsapp-voice-bot",
+    "slug": "manychat-n8n-whatsapp-voice-bot",
+    "title": "ManyChat n8n WhatsApp Voice Bot: ElevenLabs API Guide",
+    "description": "Build a ManyChat n8n WhatsApp voice bot using ElevenLabs and Whisper STT. Step-by-step tutorial for asynchronous voice message processing and CRM updates."
+  },
+  {
+    "index": 46,
+    "id": "manychat-whatsapp-b2b-lead-capture-agency",
+    "slug": "manychat-whatsapp-b2b-lead-capture-agency",
+    "title": "ManyChat WhatsApp B2B Lead Capture: The Agency Blueprint (With n8n + Brevo CRM Sync)",
+    "description": "Build a production-grade WhatsApp B2B lead capture system using ManyChat, n8n, and Brevo. Covers the 10-second timeout fix, Meta compliance, AI lead scoring, human handoff, and multi-tenant agency architecture."
+  },
+  {
+    "index": 47,
+    "id": "monday-com-automation-recipes-revops-2026",
+    "slug": "monday-com-automation-recipes-revops-2026",
+    "title": "monday.com Automation Recipes Every RevOps Team Should Deploy in 2026",
+    "description": "12 battle-tested monday.com automation recipes for RevOps teams — from pipeline stage alerts to cross-board reporting syncs and client onboarding flows."
+  },
+  {
+    "index": 48,
+    "id": "monday-crm-advanced-lead-scoring",
+    "slug": "monday-crm-advanced-lead-scoring",
+    "title": "monday.com CRM Advanced Lead Scoring: n8n Workflow Engine",
+    "description": "Automate monday.com CRM advanced lead scoring with n8n workflow JavaScript code nodes. Calculate dynamic fit, intent signals, and firmographic metrics."
+  },
+  {
+    "index": 49,
+    "id": "n8n-apollo-lead-enrichment-pipeline",
+    "slug": "n8n-apollo-lead-enrichment-pipeline",
+    "title": "How to Build an AI-Powered Lead Enrichment Pipeline with n8n and Apollo.io",
+    "description": "Step-by-step guide to automating B2B lead enrichment using n8n + Apollo.io API. Build a self-healing outbound data pipeline in under 2 hours."
+  },
+  {
+    "index": 50,
+    "id": "n8n-multi-tenant-vector-schema",
+    "slug": "n8n-multi-tenant-vector-schema",
+    "title": "n8n Multi-Tenant Vector Schema Guide: Qdrant Docker",
+    "description": "Architectural guide for designing a multi-tenant vector schema in n8n using Qdrant payload isolation, pre-filtering rules, and automated tenant offboarding."
+  },
+  {
+    "index": 51,
+    "id": "omnichannel-ai-voice-note-handler",
+    "slug": "omnichannel-ai-voice-note-handler",
+    "title": "n8n Omnichannel Voice Note Handler: WhatsApp AI Agent Guide",
+    "description": "Build an omnichannel AI agent voice note handler with n8n, Whisper, and WhatsApp API. Normalize audio files across Telegram, Slack, and web widgets."
+  },
+  {
+    "index": 52,
+    "id": "pJmrsKLAWC800vFHegTxif",
+    "slug": "automated-email-follow-up-n8n-brevo",
+    "title": "Automated Email Follow Up: How to Build a Smart System with n8n & Brevo – 30 Days of n8n & Automation – Day 12",
+    "description": "Stop losing leads. Learn to build an automated email follow up system with n8n and Brevo. A guide to catch up no-reply leads 24/7 using smart workflows."
+  },
+  {
+    "index": 53,
+    "id": "pJmrsKLAWC800vFHegTxwD",
+    "slug": "facebook-lead-ads-automation-by-alfaz-mahmud-rizve",
+    "title": "Facebook Lead Ads Automation: Sync Leads to CRM for Free with n8n – 30 Days of n8n & Automation – Day 13",
+    "description": "Stop paying for Zapier. Learn Facebook Lead Ads Automation with n8n. A complete guide to syncing leads to your CRM instantly and for free. Build your real-time pipeline today."
+  },
+  {
+    "index": 54,
+    "id": "pJmrsKLAWC800vFHegTy3x",
+    "slug": "automated-marketing-reporting-with-n8n-at-whoisalfaz",
+    "title": "Automated Marketing Reporting: Send Weekly Lead Summaries with n8n – 30 Days of n8n & Automation – Day 14",
+    "description": "Stop manually building spreadsheets. Learn how to architect automated marketing reporting with n8n to send weekly data summaries directly to your client's inbox."
+  },
+  {
+    "index": 55,
+    "id": "pJmrsKLAWC800vFHegTzUz",
+    "slug": "build-an-automated-rank-tracker-tool-with-n8n",
+    "title": "Build an Automated Rank Tracker Tool with n8n (Save $1,200/Year) – 30 Days of n8n & Automation – Day 16",
+    "description": "Stop paying the SEO lazy tax. Learn how to architect your own automated rank tracker tool using n8n, the Serper.dev API, and Databox."
+  },
+  {
+    "index": 56,
+    "id": "pJmrsKLAWC800vFHegU17d",
+    "slug": "what-is-n8n-by-alfaz-mahmud-rizve",
+    "title": "What is n8n? Core concepts – 30 Days of n8n & Automation – Day 2",
+    "description": "What is n8n? Learn the core concepts of n8n from Alfaz Mahmud Rizve with real SaaS use cases and automation examples for beginners"
+  },
+  {
+    "index": 57,
+    "id": "pJmrsKLAWC800vFHegU2q5",
+    "slug": "automate-personal-branding-with-n8n",
+    "title": "Your Competitors Are Automating Their Brand — Build Your n8n Digital Twin – Day 21",
+    "description": "While you manually post content, the top agencies run Digital Twin workflows in n8n. Learn how to automate personal branding — content repurposing, social listening, and SEO auditing — on autopilot."
+  },
+  {
+    "index": 58,
+    "id": "pJmrsKLAWC800vFHegU33d",
+    "slug": "automate-client-reporting-with-n8n",
+    "title": "Stop Taking Screenshots for Clients — Build an Automated PDF Report Engine with n8n – Day 22",
+    "description": "Ditch the Canva slides and manual data pulls. Build a fully automated client reporting system with n8n that generates white-labeled PDFs from GA4 data and delivers them automatically."
+  },
+  {
+    "index": 59,
+    "id": "pJmrsKLAWC800vFHegU4gH",
+    "slug": "how-to-build-an-api-with-n8n",
+    "title": "Stop Deploying Servers for Simple Logic — Build a Serverless API with n8n – Day 24",
+    "description": "Stop paying for Lambda functions and Heroku dynos for simple backend logic. Build a secure, serverless API with n8n that handles verification, form processing, and OpenAI proxying in minutes."
+  },
+  {
+    "index": 60,
+    "id": "pJmrsKLAWC800vFHegU8Ob",
+    "slug": "what-is-n8n-and-how-to-set-it-up",
+    "title": "Architecting the Infrastructure: n8n Cloud vs. Self-Hosted (Day 3)",
+    "description": "Stop guessing about your infrastructure. Learn the exact architectural differences between n8n Cloud and Self-Hosted deployments, Docker, Postgres, and Redis scaling."
+  },
+  {
+    "index": 61,
+    "id": "pJmrsKLAWC800vFHegU8e5",
+    "slug": "n8n-workflow-design-best-practices",
+    "title": "n8n Workflow Design Best Practices (Inputs, Processing, Outputs, Error Paths) – Day 4",
+    "description": "Learn n8n workflow design best practices: how to think and build error paths so your SaaS or agency automations are reliable, crash-proof, and easy to scale."
+  },
+  {
+    "index": 62,
+    "id": "pJmrsKLAWC800vFHegU8rd",
+    "slug": "automations-for-saas-and-agencies",
+    "title": "Picking your first 3 automations for SaaS and agencies (framework + examples) - 30 Days of n8n & Automation – Day 5",
+    "description": "Stop trying to boil the ocean. Learn the exact framework SaaS and agencies use to pick their first 3 revenue-generating automations. Real examples, n8n architecture, and deployment rules."
+  },
+  {
+    "index": 63,
+    "id": "pJmrsKLAWC800vFHegUEKL",
+    "slug": "manychat-pricing-2026",
+    "title": "ManyChat Pricing 2026: Is It Still Worth It for Agencies? (An Automation Engineer's Verdict)",
+    "description": "A deep dive into ManyChat's 2026 pricing overhaul, real costs for agencies, and how to build a scalable ManyChat + n8n + Brevo automation stack."
+  },
+  {
+    "index": 64,
+    "id": "pJmrsKLAWC800vFHegUFnJ",
+    "slug": "apollo-n8n-outreach",
+    "title": "Build an AI Cold Outreach Machine with Apollo.io + n8n in 2026 (Zero Manual Effort)",
+    "description": "How Apollo.io, n8n, and a lightweight AI enrichment layer work together to replace an SDR workflow at a fraction of the cost."
+  },
+  {
+    "index": 65,
+    "id": "pJmrsKLAWC800vFHegUG6f",
+    "slug": "case-study-careerops-ai-resume-builder",
+    "title": "Architecting a Stateless AI Career Strategist: Integrating Next.js with n8n and React PDF",
+    "description": "A profound teardown of CareerOps — a privacy-first AI platform that orchestrates real-time resume optimization using n8n and generates pixel-perfect PDFs entirely in the browser."
+  },
+  {
+    "index": 66,
+    "id": "pJmrsKLAWC800vFHegUGO5",
+    "slug": "case-study-cashops-financial-dashboard",
+    "title": "Building a High-Velocity Financial Dashboard: Optimistic UI, NextAuth, and Real-Time Analytics",
+    "description": "A deep dive into CashOps.app: A developer-focused personal finance dashboard featuring instant data visualization, CSV bulk imports, and absolute data privacy."
+  },
+  {
+    "index": 67,
+    "id": "pinecone-n8n-rag-knowledge-base-blueprint",
+    "slug": "pinecone-n8n-rag-knowledge-base-blueprint",
+    "title": "Building a RAG Knowledge Base with Pinecone and n8n: A Production-Ready Blueprint",
+    "description": "Build an enterprise-grade Corrective RAG (CRAG) knowledge base with n8n and Pinecone. Step-by-step blueprint covering document grading, hybrid search, and self-healing web search fallbacks."
+  },
+  {
+    "index": 68,
+    "id": "pinecone-vs-qdrant-n8n-rag-comparison",
+    "slug": "pinecone-vs-qdrant-n8n-rag-comparison",
+    "title": "Pinecone vs Qdrant for n8n RAG Pipelines: Which Vector DB Should You Choose?",
+    "description": "A technical comparison of Pinecone vs Qdrant for RAG workflows in n8n — covering indexing speed, cost, semantic search accuracy, and self-hosting trade-offs."
+  },
+  {
+    "index": 69,
+    "id": "pinecone-vs-qdrant-vultr-benchmark",
+    "slug": "pinecone-vs-qdrant-vultr-benchmark",
+    "title": "Pinecone vs Qdrant Vultr Benchmark: Docker Vector DB",
+    "description": "A comprehensive benchmark comparing Pinecone Serverless and self-hosted Qdrant on Vultr for n8n RAG workflows — covering query latency, RAM, and cost."
+  },
+  {
+    "index": 70,
+    "id": "revops-automation-stack-saas-2026",
+    "slug": "revops-automation-stack-saas-2026",
+    "title": "The RevOps Automation Stack: How SaaS Teams Eliminate Manual Bottlenecks in 2026",
+    "description": "Learn how to eliminate B2B GTM bottlenecks using an API-first RevOps stack foundation with n8n, monday.com, and Databox. Real architectural blueprints and bidirectional sync schema guides inside."
+  },
+  {
+    "index": 71,
+    "id": "screaming-frog-alternatives-free-seo-audit-tools",
+    "slug": "screaming-frog-alternatives-free-seo-audit-tools",
+    "title": "5 Best Screaming Frog Alternatives: Free Browser-Based SEO Audit Tools",
+    "description": "Looking for Screaming Frog alternatives? Compare the 5 best free, browser-based website crawlers that require no software installs or domain verification."
+  },
+  {
+    "index": 72,
+    "id": "self-hosted-qdrant-docker-vultr",
+    "slug": "self-hosted-qdrant-docker-vultr",
+    "title": "Self-Hosted Qdrant Docker Vultr SOP: Vector DB Guide",
+    "description": "Production SOP for deploying self-hosted Qdrant on Vultr with Docker Compose, systemd, memory quantization, TLS reverse proxy, and n8n integration."
+  },
+  {
+    "index": 73,
+    "id": "tapstitch-vs-printful-ecommerce-pipeline",
+    "slug": "tapstitch-vs-printful-ecommerce-pipeline",
+    "title": "Tapstitch vs Printful E-Commerce Pipeline: n8n Shopify AI",
+    "description": "Compare Tapstitch vs Printful e-commerce pipeline fulfillment and build an automated n8n order routing workflow with JavaScript for Shopify store scaling."
+  },
+  {
+    "index": 74,
+    "id": "trainual-alternatives-active-agency-sop-engine",
+    "slug": "trainual-alternatives-active-agency-sop-engine",
+    "title": "Trainual Alternatives: Active Agency SOP Engine in n8n SaaS",
+    "description": "Explore top Trainual alternatives and learn how to build an active agency SOP engine using n8n and JavaScript to automate onboarding, tasks, and documentation."
+  },
+  {
+    "index": 75,
+    "id": "turbotic-automation-governance",
+    "slug": "turbotic-automation-governance",
+    "title": "Turbotic Automation Governance: n8n & monday.com CRM",
+    "description": "Implement Turbotic automation governance for n8n workflows and monday.com CRM. Enforce security, API quota compliance, and enterprise bot auditing."
+  },
+  {
+    "index": 76,
+    "id": "waterfall-data-enrichment-pipeline-n8n-guide",
+    "slug": "waterfall-data-enrichment-pipeline-n8n-guide",
+    "title": "Waterfall Data Enrichment Pipeline: n8n Outbound Guide",
+    "description": "Build a waterfall data enrichment pipeline in n8n using Apollo and Lusha APIs. Learn step-by-step fallback logic, credit optimization, and code node setup."
+  },
+  {
+    "index": 77,
+    "id": "what-is-revops-technical-definition-saas",
+    "slug": "what-is-revops-technical-definition-saas",
+    "title": "What Is RevOps? The Technical Definition for SaaS Teams",
+    "description": "RevOps isn't a team rename. Here's the precise technical definition — data unification, pipeline governance, automation architecture, and n8n orchestration — built for SaaS founders and ops leads."
+  },
+  {
+    "index": 78,
+    "id": "whatconverts-vs-callrail-attribution",
+    "slug": "whatconverts-vs-callrail-attribution",
+    "title": "WhatConverts vs CallRail Attribution: n8n & monday.com",
+    "description": "Compare WhatConverts vs CallRail attribution for B2B SaaS. Route phone call leads and dynamic pool data to monday.com using copy-pasteable n8n workflows."
+  }
+]

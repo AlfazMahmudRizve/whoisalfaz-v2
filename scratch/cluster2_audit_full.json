@@ -1,0 +1,1596 @@
+[
+  {
+    "filename": "draft-cluster2-01.json",
+    "title": "Self-Hosted Qdrant Vultr Cluster: Docker SOP",
+    "title_len": 44,
+    "funnel_stage": "BOFU (Bottom of Funnel - Implementation SOP/Blueprint)",
+    "total_words": 1379,
+    "found_entities_count": 23,
+    "found_entities": [
+      "Vector Database",
+      "Latency",
+      "Docker Compose",
+      "Pinecone",
+      "Payload Filtering",
+      "Embedding",
+      "n8n",
+      "JSON",
+      "Retrieval-Augmented Generation",
+      "SOP",
+      "Semantic Search",
+      "Vultr",
+      "Cosine Similarity",
+      "Reverse Proxy",
+      "RAG",
+      "Docker",
+      "API",
+      "Qdrant",
+      "HNSW",
+      "Throughput",
+      "YAML",
+      "Large Language Model",
+      "Vector Search"
+    ],
+    "h2_count": 5,
+    "aeo_details": [
+      {
+        "h2": "<mark>What is a Self-Hosted Qdrant Vultr Cluster Docker SOP?</mark>",
+        "word_count": 151,
+        "in_target_range": true
+      },
+      {
+        "h2": "<mark>How Do You Harden Ubuntu 24.04 and Install Docker on Vultr?</mark>",
+        "word_count": 153,
+        "in_target_range": true
+      },
+      {
+        "h2": "<mark>How Do You Write the Production Qdrant Docker Compose Manifest?</mark>",
+        "word_count": 151,
+        "in_target_range": true
+      },
+      {
+        "h2": "<mark>How Do You Tune Linux Kernel mmap and Quantization Settings?</mark>",
+        "word_count": 146,
+        "in_target_range": true
+      },
+      {
+        "h2": "<mark>How Do You Integrate Qdrant Vector Search into n8n RAG Workflows?</mark>",
+        "word_count": 142,
+        "in_target_range": true
+      }
+    ],
+    "aeo_pass_rate": "5/5",
+    "code_blocks_count": 4,
+    "code_languages": [
+      "json",
+      "bash",
+      "yaml"
+    ],
+    "affiliates": {
+      "vultr": 2,
+      "qdrant": 2,
+      "pinecone": 0,
+      "dify": 0,
+      "n8n": 2,
+      "has_300_credit": true,
+      "metadata_affiliates": [
+        "vultr",
+        "qdrant",
+        "n8n"
+      ]
+    },
+    "scores": {
+      "intent": 20,
+      "title_ctr": 20,
+      "aeo_geo": 20.0,
+      "code_blueprint": 20,
+      "affiliate_monetization": 20,
+      "final_score": 100.0
+    }
+  },
+  {
+    "filename": "draft-cluster2-02.json",
+    "title": "Vultr Cloud GPU vs AWS EC2: AI Cost Teardown",
+    "title_len": 44,
+    "funnel_stage": "MOFU (Middle of Funnel - Evaluation/Comparison)",
+    "total_words": 1309,
+    "found_entities_count": 15,
+    "found_entities": [
+      "API",
+      "BGE",
+      "Qdrant",
+      "Latency",
+      "RAG",
+      "LLM",
+      "YAML",
+      "Vultr",
+      "Docker Compose",
+      "Throughput",
+      "AWS EC2",
+      "n8n",
+      "JSON",
+      "Embedding",
+      "Docker"
+    ],
+    "h2_count": 5,
+    "aeo_details": [
+      {
+        "h2": "<mark>What is Vultr Cloud GPU vs AWS EC2 AI Inference Cost Analysis?</mark>",
+        "word_count": 145,
+        "in_target_range": true
+      },
+      {
+        "h2": "<mark>How Does Vultr GPU Infrastructure Pricing Compare to AWS EC2?</mark>",
+        "word_count": 144,
+        "in_target_range": true
+      },
+      {
+        "h2": "<mark>How Do You Deploy vLLM and Qdrant on Vultr GPU via Docker?</mark>",
+        "word_count": 136,
+        "in_target_range": true
+      },
+      {
+        "h2": "<mark>How Do Egress Bandwidth Fees Distort AWS EC2 AI Inference TCO?</mark>",
+        "word_count": 139,
+        "in_target_range": true
+      },
+      {
+        "h2": "<mark>How Do You Connect Vultr Cloud GPU Inference Endpoints to n8n?</mark>",
+        "word_count": 136,
+        "in_target_range": true
+      }
+    ],
+    "aeo_pass_rate": "5/5",
+    "code_blocks_count": 2,
+    "code_languages": [
+      "json",
+      "yaml"
+    ],
+    "affiliates": {
+      "vultr": 2,
+      "qdrant": 2,
+      "pinecone": 0,
+      "dify": 0,
+      "n8n": 2,
+      "has_300_credit": true,
+      "metadata_affiliates": [
+        "vultr",
+        "qdrant",
+        "n8n"
+      ]
+    },
+    "scores": {
+      "intent": 20,
+      "title_ctr": 20,
+      "aeo_geo": 20.0,
+      "code_blueprint": 20,
+      "affiliate_monetization": 20,
+      "final_score": 100.0
+    }
+  },
+  {
+    "filename": "draft-cluster2-03.json",
+    "title": "Securing Self-Hosted Vector DBs: Vultr SOP",
+    "title_len": 42,
+    "funnel_stage": "BOFU (Bottom of Funnel - Implementation SOP/Blueprint)",
+    "total_words": 1179,
+    "found_entities_count": 15,
+    "found_entities": [
+      "Nginx",
+      "Caddy",
+      "SOP",
+      "API",
+      "Qdrant",
+      "Vector Database",
+      "Let's Encrypt",
+      "YAML",
+      "Vultr",
+      "Python",
+      "Reverse Proxy",
+      "n8n",
+      "JSON",
+      "Vector Search",
+      "Docker"
+    ],
+    "h2_count": 5,
+    "aeo_details": [
+      {
+        "h2": "<mark>What is Securing Self-Hosted Vector DBs on Vultr Firewall SOP?</mark>",
+        "word_count": 145,
+        "in_target_range": true
+      },
+      {
+        "h2": "<mark>How Do You Configure Vultr Cloud Firewall and Host UFW Rules?</mark>",
+        "word_count": 141,
+        "in_target_range": true
+      },
+      {
+        "h2": "<mark>How Do You Deploy Caddy TLS Reverse Proxy with Auto Let's Encrypt?</mark>",
+        "word_count": 135,
+        "in_target_range": true
+      },
+      {
+        "h2": "<mark>How Do You Enforce Cryptographic API Authentication in Qdrant?</mark>",
+        "word_count": 134,
+        "in_target_range": true
+      },
+      {
+        "h2": "<mark>How Do You Authenticate Secure n8n Workflows with Encrypted Vector DBs?</mark>",
+        "word_count": 143,
+        "in_target_range": true
+      }
+    ],
+    "aeo_pass_rate": "5/5",
+    "code_blocks_count": 4,
+    "code_languages": [
+      "caddy",
+      "json",
+      "bash",
+      "yaml"
+    ],
+    "affiliates": {
+      "vultr": 2,
+      "qdrant": 2,
+      "pinecone": 0,
+      "dify": 0,
+      "n8n": 2,
+      "has_300_credit": true,
+      "metadata_affiliates": [
+        "vultr",
+        "qdrant",
+        "n8n"
+      ]
+    },
+    "scores": {
+      "intent": 20,
+      "title_ctr": 20,
+      "aeo_geo": 20.0,
+      "code_blueprint": 20,
+      "affiliate_monetization": 20,
+      "final_score": 100.0
+    }
+  },
+  {
+    "filename": "draft-cluster2-04.json",
+    "title": "Self-Hosted AI Stack 2026: Vultr & n8n Guide",
+    "title_len": 44,
+    "funnel_stage": "BOFU (Bottom of Funnel - Implementation SOP/Blueprint)",
+    "total_words": 1212,
+    "found_entities_count": 19,
+    "found_entities": [
+      "Vector Database",
+      "Dify",
+      "Docker Compose",
+      "Embedding",
+      "Caddy",
+      "n8n",
+      "JSON",
+      "PostgreSQL",
+      "Retrieval-Augmented Generation",
+      "Vultr",
+      "Reverse Proxy",
+      "RAG",
+      "Docker",
+      "API",
+      "Qdrant",
+      "HNSW",
+      "Throughput",
+      "LLM",
+      "YAML"
+    ],
+    "h2_count": 5,
+    "aeo_details": [
+      {
+        "h2": "<mark>What is the Ultimate 2026 Self-Hosted AI Stack with Vultr, Qdrant, Dify & n8n?</mark>",
+        "word_count": 137,
+        "in_target_range": true
+      },
+      {
+        "h2": "<mark>How Is the 2026 Self-Hosted AI Stack Architecture Structured?</mark>",
+        "word_count": 142,
+        "in_target_range": true
+      },
+      {
+        "h2": "<mark>How Do You Deploy the Complete Vultr Qdrant Dify n8n Docker Compose?</mark>",
+        "word_count": 134,
+        "in_target_range": true
+      },
+      {
+        "h2": "<mark>How Do You Connect Dify Agents to Qdrant Vector Stores and n8n Workflows?</mark>",
+        "word_count": 139,
+        "in_target_range": true
+      },
+      {
+        "h2": "<mark>How Do You Orchestrate End-to-End Enterprise RAG Pipelines in n8n?</mark>",
+        "word_count": 140,
+        "in_target_range": true
+      }
+    ],
+    "aeo_pass_rate": "5/5",
+    "code_blocks_count": 4,
+    "code_languages": [
+      "json",
+      "mermaid",
+      "yaml"
+    ],
+    "affiliates": {
+      "vultr": 2,
+      "qdrant": 2,
+      "pinecone": 0,
+      "dify": 0,
+      "n8n": 2,
+      "has_300_credit": true,
+      "metadata_affiliates": [
+        "vultr",
+        "qdrant",
+        "n8n"
+      ]
+    },
+    "scores": {
+      "intent": 20,
+      "title_ctr": 20,
+      "aeo_geo": 20.0,
+      "code_blueprint": 20,
+      "affiliate_monetization": 20,
+      "final_score": 100.0
+    }
+  },
+  {
+    "filename": "draft-cluster2-05.json",
+    "title": "Pinecone vs Qdrant Vultr: RAG Latency Benchmark",
+    "title_len": 47,
+    "funnel_stage": "MOFU (Middle of Funnel - Evaluation/Comparison)",
+    "total_words": 1209,
+    "found_entities_count": 19,
+    "found_entities": [
+      "Vector Database",
+      "Latency",
+      "Docker Compose",
+      "Pinecone",
+      "Python",
+      "Embedding",
+      "n8n",
+      "JSON",
+      "Retrieval-Augmented Generation",
+      "SOP",
+      "Vultr",
+      "RAG",
+      "Docker",
+      "API",
+      "Qdrant",
+      "HNSW",
+      "Throughput",
+      "YAML",
+      "Vector Search"
+    ],
+    "h2_count": 5,
+    "aeo_details": [
+      {
+        "h2": "<mark>Vector DB Benchmark Methodology on Vultr Cloud</mark>",
+        "word_count": 144,
+        "in_target_range": true
+      },
+      {
+        "h2": "<mark>Latency Performance: Pinecone Serverless vs Qdrant Docker</mark>",
+        "word_count": 137,
+        "in_target_range": true
+      },
+      {
+        "h2": "<mark>Memory Efficiency and Quantization Tradeoffs</mark>",
+        "word_count": 138,
+        "in_target_range": true
+      },
+      {
+        "h2": "<mark>n8n RAG Integration and Benchmark Execution SOP</mark>",
+        "word_count": 138,
+        "in_target_range": true
+      },
+      {
+        "h2": "<mark>Total Cost of Ownership and Infrastructure Tradeoffs</mark>",
+        "word_count": 144,
+        "in_target_range": true
+      }
+    ],
+    "aeo_pass_rate": "5/5",
+    "code_blocks_count": 3,
+    "code_languages": [
+      "python",
+      "json",
+      "yaml"
+    ],
+    "affiliates": {
+      "vultr": 2,
+      "qdrant": 2,
+      "pinecone": 2,
+      "dify": 0,
+      "n8n": 2,
+      "has_300_credit": true,
+      "metadata_affiliates": [
+        "pinecone",
+        "qdrant",
+        "vultr",
+        "n8n"
+      ]
+    },
+    "scores": {
+      "intent": 20,
+      "title_ctr": 20,
+      "aeo_geo": 20.0,
+      "code_blueprint": 20,
+      "affiliate_monetization": 20,
+      "final_score": 100.0
+    }
+  },
+  {
+    "filename": "draft-cluster2-06.json",
+    "title": "Pinecone Namespaces vs Qdrant Payload Filters",
+    "title_len": 45,
+    "funnel_stage": "MOFU (Middle of Funnel - Evaluation/Comparison)",
+    "total_words": 1114,
+    "found_entities_count": 17,
+    "found_entities": [
+      "Retrieval-Augmented Generation",
+      "API",
+      "SOP",
+      "Qdrant",
+      "Vector Database",
+      "HNSW",
+      "RAG",
+      "Latency",
+      "Vultr",
+      "JavaScript",
+      "Payload Filtering",
+      "Pinecone",
+      "Python",
+      "n8n",
+      "JSON",
+      "Vector Search",
+      "Docker"
+    ],
+    "h2_count": 5,
+    "aeo_details": [
+      {
+        "h2": "<mark>Multi-Tenant Vector Isolation: Namespaces vs Payload Filtering</mark>",
+        "word_count": 140,
+        "in_target_range": true
+      },
+      {
+        "h2": "<mark>Pinecone Namespace Architecture: Benefits and Limitations</mark>",
+        "word_count": 134,
+        "in_target_range": true
+      },
+      {
+        "h2": "<mark>Qdrant Payload Filtering Architecture: Dynamic Metadata Indexing</mark>",
+        "word_count": 136,
+        "in_target_range": true
+      },
+      {
+        "h2": "<mark>n8n Multi-Tenant Integration: Building Payload Filter Workflows</mark>",
+        "word_count": 136,
+        "in_target_range": true
+      },
+      {
+        "h2": "<mark>Performance, Scalability, and Index Optimization SOP</mark>",
+        "word_count": 138,
+        "in_target_range": true
+      }
+    ],
+    "aeo_pass_rate": "5/5",
+    "code_blocks_count": 2,
+    "code_languages": [
+      "python",
+      "javascript"
+    ],
+    "affiliates": {
+      "vultr": 2,
+      "qdrant": 2,
+      "pinecone": 2,
+      "dify": 0,
+      "n8n": 2,
+      "has_300_credit": true,
+      "metadata_affiliates": [
+        "pinecone",
+        "qdrant",
+        "vultr",
+        "n8n"
+      ]
+    },
+    "scores": {
+      "intent": 20,
+      "title_ctr": 20,
+      "aeo_geo": 20.0,
+      "code_blueprint": 20,
+      "affiliate_monetization": 20,
+      "final_score": 100.0
+    }
+  },
+  {
+    "filename": "draft-cluster2-07.json",
+    "title": "Hybrid Vector & Keyword Search: Qdrant n8n SOP",
+    "title_len": 46,
+    "funnel_stage": "BOFU (Bottom of Funnel - Implementation SOP/Blueprint)",
+    "total_words": 1177,
+    "found_entities_count": 16,
+    "found_entities": [
+      "Retrieval-Augmented Generation",
+      "API",
+      "SOP",
+      "Qdrant",
+      "Hybrid Search",
+      "Vector Database",
+      "Latency",
+      "Vultr",
+      "JavaScript",
+      "Pinecone",
+      "Python",
+      "n8n",
+      "JSON",
+      "Vector Search",
+      "Embedding",
+      "RAG"
+    ],
+    "h2_count": 5,
+    "aeo_details": [
+      {
+        "h2": "<mark>What Is Hybrid Vector and Keyword Search in Qdrant?</mark>",
+        "word_count": 138,
+        "in_target_range": true
+      },
+      {
+        "h2": "<mark>Sparse-Dense Vector Architecture and BM25 Fusion SOP</mark>",
+        "word_count": 136,
+        "in_target_range": true
+      },
+      {
+        "h2": "<mark>Reciprocal Rank Fusion (RRF) Implementation in JavaScript</mark>",
+        "word_count": 139,
+        "in_target_range": true
+      },
+      {
+        "h2": "<mark>n8n Hybrid Search Pipeline Blueprint and Node Configuration</mark>",
+        "word_count": 139,
+        "in_target_range": true
+      },
+      {
+        "h2": "<mark>Benchmark Results and Accuracy Optimization Guidelines</mark>",
+        "word_count": 137,
+        "in_target_range": true
+      }
+    ],
+    "aeo_pass_rate": "5/5",
+    "code_blocks_count": 2,
+    "code_languages": [
+      "python",
+      "javascript"
+    ],
+    "affiliates": {
+      "vultr": 2,
+      "qdrant": 2,
+      "pinecone": 2,
+      "dify": 0,
+      "n8n": 2,
+      "has_300_credit": true,
+      "metadata_affiliates": [
+        "qdrant",
+        "pinecone",
+        "vultr",
+        "n8n"
+      ]
+    },
+    "scores": {
+      "intent": 20,
+      "title_ctr": 20,
+      "aeo_geo": 20.0,
+      "code_blueprint": 20,
+      "affiliate_monetization": 20,
+      "final_score": 100.0
+    }
+  },
+  {
+    "filename": "draft-cluster2-08.json",
+    "title": "Scaling Qdrant to 10M Embeddings on Vultr VPS",
+    "title_len": 45,
+    "funnel_stage": "BOFU (Bottom of Funnel - Implementation SOP/Blueprint)",
+    "total_words": 1039,
+    "found_entities_count": 15,
+    "found_entities": [
+      "API",
+      "SOP",
+      "Qdrant",
+      "Vector Database",
+      "HNSW",
+      "Latency",
+      "YAML",
+      "Throughput",
+      "Vultr",
+      "Pinecone",
+      "Python",
+      "n8n",
+      "JSON",
+      "Vector Search",
+      "RAG"
+    ],
+    "h2_count": 5,
+    "aeo_details": [
+      {
+        "h2": "<mark>Hardware Sizing & Infrastructure Math for 10M Embeddings</mark>",
+        "word_count": 139,
+        "in_target_range": true
+      },
+      {
+        "h2": "<mark>Memory Compression SOP: Scalar (int8) & Binary Quantization</mark>",
+        "word_count": 134,
+        "in_target_range": true
+      },
+      {
+        "h2": "<mark>HNSW Index Tuning & On-Disk Vector Storage Configuration</mark>",
+        "word_count": 134,
+        "in_target_range": true
+      },
+      {
+        "h2": "<mark>High-Throughput Batch Ingestion Script & n8n Pipeline SOP</mark>",
+        "word_count": 137,
+        "in_target_range": true
+      },
+      {
+        "h2": "<mark>Production Monitoring, Backup, and Disaster Recovery SOP</mark>",
+        "word_count": 135,
+        "in_target_range": true
+      }
+    ],
+    "aeo_pass_rate": "5/5",
+    "code_blocks_count": 3,
+    "code_languages": [
+      "python",
+      "yaml"
+    ],
+    "affiliates": {
+      "vultr": 2,
+      "qdrant": 2,
+      "pinecone": 2,
+      "dify": 0,
+      "n8n": 2,
+      "has_300_credit": true,
+      "metadata_affiliates": [
+        "qdrant",
+        "pinecone",
+        "vultr",
+        "n8n"
+      ]
+    },
+    "scores": {
+      "intent": 20,
+      "title_ctr": 20,
+      "aeo_geo": 20.0,
+      "code_blueprint": 20,
+      "affiliate_monetization": 20,
+      "final_score": 100.0
+    }
+  },
+  {
+    "filename": "draft-cluster2-09.json",
+    "title": "Corrective RAG CRAG Blueprint: n8n & Tavily",
+    "title_len": 43,
+    "funnel_stage": "BOFU (Bottom of Funnel - Implementation SOP/Blueprint)",
+    "total_words": 1436,
+    "found_entities_count": 18,
+    "found_entities": [
+      "Retrieval-Augmented Generation",
+      "API",
+      "Qdrant",
+      "Vector Database",
+      "Latency",
+      "RAG",
+      "LLM",
+      "Vultr",
+      "Docker Compose",
+      "JavaScript",
+      "Pinecone",
+      "Cosine Similarity",
+      "Tavily",
+      "n8n",
+      "JSON",
+      "Vector Search",
+      "Embedding",
+      "Docker"
+    ],
+    "h2_count": 5,
+    "aeo_details": [
+      {
+        "h2": "<mark>What is Corrective RAG (CRAG) in n8n Automation?</mark>",
+        "word_count": 159,
+        "in_target_range": true
+      },
+      {
+        "h2": "<mark>Automated Document Grading & Vector Confidence Scoring</mark>",
+        "word_count": 159,
+        "in_target_range": true
+      },
+      {
+        "h2": "<mark>Tavily Live Web Search Fallback Integration in n8n</mark>",
+        "word_count": 149,
+        "in_target_range": true
+      },
+      {
+        "h2": "<mark>Context Refinement & Sentence Decomposition Logic</mark>",
+        "word_count": 151,
+        "in_target_range": true
+      },
+      {
+        "h2": "<mark>Deploying the End-to-End Production CRAG n8n Blueprint</mark>",
+        "word_count": 154,
+        "in_target_range": true
+      }
+    ],
+    "aeo_pass_rate": "5/5",
+    "code_blocks_count": 3,
+    "code_languages": [
+      "json",
+      "javascript"
+    ],
+    "affiliates": {
+      "vultr": 2,
+      "qdrant": 2,
+      "pinecone": 2,
+      "dify": 0,
+      "n8n": 2,
+      "has_300_credit": true,
+      "metadata_affiliates": [
+        "n8n",
+        "qdrant",
+        "pinecone",
+        "vultr"
+      ]
+    },
+    "scores": {
+      "intent": 20,
+      "title_ctr": 20,
+      "aeo_geo": 20.0,
+      "code_blueprint": 20,
+      "affiliate_monetization": 20,
+      "final_score": 100.0
+    }
+  },
+  {
+    "filename": "draft-cluster2-10.json",
+    "title": "Automated PDF Document Chunking in n8n Guide",
+    "title_len": 44,
+    "funnel_stage": "BOFU (Bottom of Funnel - Implementation SOP/Blueprint)",
+    "total_words": 1363,
+    "found_entities_count": 19,
+    "found_entities": [
+      "Vector Database",
+      "Latency",
+      "Docker Compose",
+      "Pinecone",
+      "Python",
+      "Embedding",
+      "n8n",
+      "JSON",
+      "Retrieval-Augmented Generation",
+      "SOP",
+      "Vultr",
+      "Cosine Similarity",
+      "RAG",
+      "Docker",
+      "API",
+      "Qdrant",
+      "Throughput",
+      "JavaScript",
+      "Vector Search"
+    ],
+    "h2_count": 5,
+    "aeo_details": [
+      {
+        "h2": "<mark>What is Automated PDF Document Chunking in n8n?</mark>",
+        "word_count": 141,
+        "in_target_range": true
+      },
+      {
+        "h2": "<mark>Semantic Chunking Algorithms & Python/JS Extraction Logic</mark>",
+        "word_count": 142,
+        "in_target_range": true
+      },
+      {
+        "h2": "<mark>Vector DB Ingestion: Qdrant & Pinecone Indexing Pipeline</mark>",
+        "word_count": 137,
+        "in_target_range": true
+      },
+      {
+        "h2": "<mark>Metadata Extraction & Document Hierarchy Preservation</mark>",
+        "word_count": 137,
+        "in_target_range": true
+      },
+      {
+        "h2": "<mark>Production PDF Vectorization SOP on Vultr GPU</mark>",
+        "word_count": 136,
+        "in_target_range": true
+      }
+    ],
+    "aeo_pass_rate": "5/5",
+    "code_blocks_count": 3,
+    "code_languages": [
+      "json",
+      "javascript"
+    ],
+    "affiliates": {
+      "vultr": 2,
+      "qdrant": 2,
+      "pinecone": 2,
+      "dify": 0,
+      "n8n": 2,
+      "has_300_credit": true,
+      "metadata_affiliates": [
+        "n8n",
+        "qdrant",
+        "pinecone",
+        "vultr"
+      ]
+    },
+    "scores": {
+      "intent": 20,
+      "title_ctr": 20,
+      "aeo_geo": 20.0,
+      "code_blueprint": 20,
+      "affiliate_monetization": 20,
+      "final_score": 100.0
+    }
+  },
+  {
+    "filename": "draft-cluster2-11.json",
+    "title": "Enterprise Knowledge Graph RAG in n8n Blueprint",
+    "title_len": 47,
+    "funnel_stage": "BOFU (Bottom of Funnel - Implementation SOP/Blueprint)",
+    "total_words": 1409,
+    "found_entities_count": 18,
+    "found_entities": [
+      "Knowledge Graph",
+      "Graph RAG",
+      "Qdrant",
+      "Hybrid Search",
+      "Latency",
+      "RAG",
+      "LLM",
+      "Throughput",
+      "Vultr",
+      "Docker Compose",
+      "JavaScript",
+      "Pinecone",
+      "Cosine Similarity",
+      "n8n",
+      "JSON",
+      "Vector Search",
+      "Embedding",
+      "Docker"
+    ],
+    "h2_count": 5,
+    "aeo_details": [
+      {
+        "h2": "<mark>What is Enterprise Knowledge Graph RAG in n8n?</mark>",
+        "word_count": 156,
+        "in_target_range": true
+      },
+      {
+        "h2": "<mark>Entity-Relation Extraction & Cypher Query Generation</mark>",
+        "word_count": 137,
+        "in_target_range": true
+      },
+      {
+        "h2": "<mark>Hybrid Graph-Vector Search Orchestration in n8n</mark>",
+        "word_count": 147,
+        "in_target_range": true
+      },
+      {
+        "h2": "<mark>Subgraph Context Synthesis & Traversal Algorithms</mark>",
+        "word_count": 134,
+        "in_target_range": true
+      },
+      {
+        "h2": "<mark>Enterprise Self-Hosted Infrastructure Setup on Vultr</mark>",
+        "word_count": 134,
+        "in_target_range": true
+      }
+    ],
+    "aeo_pass_rate": "5/5",
+    "code_blocks_count": 3,
+    "code_languages": [
+      "json",
+      "javascript"
+    ],
+    "affiliates": {
+      "vultr": 2,
+      "qdrant": 2,
+      "pinecone": 2,
+      "dify": 0,
+      "n8n": 2,
+      "has_300_credit": true,
+      "metadata_affiliates": [
+        "n8n",
+        "qdrant",
+        "pinecone",
+        "vultr"
+      ]
+    },
+    "scores": {
+      "intent": 20,
+      "title_ctr": 20,
+      "aeo_geo": 20.0,
+      "code_blueprint": 20,
+      "affiliate_monetization": 20,
+      "final_score": 100.0
+    }
+  },
+  {
+    "filename": "draft-cluster2-12.json",
+    "title": "Open-Source LLM Embeddings: BGE vs Voyage RAG",
+    "title_len": 45,
+    "funnel_stage": "MOFU (Middle of Funnel - Evaluation/Comparison)",
+    "total_words": 1246,
+    "found_entities_count": 20,
+    "found_entities": [
+      "Voyage AI",
+      "Vector Database",
+      "Latency",
+      "Docker Compose",
+      "Pinecone",
+      "Payload Filtering",
+      "Embedding",
+      "n8n",
+      "JSON",
+      "SOP",
+      "Vultr",
+      "RAG",
+      "Docker",
+      "API",
+      "Qdrant",
+      "Hybrid Search",
+      "Throughput",
+      "LLM",
+      "BGE",
+      "Vector Search"
+    ],
+    "h2_count": 5,
+    "aeo_details": [
+      {
+        "h2": "<mark>What is Open-Source LLM Embeddings Benchmark in n8n?</mark>",
+        "word_count": 144,
+        "in_target_range": true
+      },
+      {
+        "h2": "<mark>MTEB Benchmark Analysis & Accuracy Metrics</mark>",
+        "word_count": 135,
+        "in_target_range": true
+      },
+      {
+        "h2": "<mark>n8n Multi-Embedding Orchestration Blueprint</mark>",
+        "word_count": 134,
+        "in_target_range": true
+      },
+      {
+        "h2": "<mark>Qdrant Vector DB Quantization & Embedding Storage SOP</mark>",
+        "word_count": 134,
+        "in_target_range": true
+      },
+      {
+        "h2": "<mark>Self-Hosting Local Embedding Models on Vultr Cloud GPU</mark>",
+        "word_count": 134,
+        "in_target_range": true
+      }
+    ],
+    "aeo_pass_rate": "5/5",
+    "code_blocks_count": 3,
+    "code_languages": [
+      "json"
+    ],
+    "affiliates": {
+      "vultr": 2,
+      "qdrant": 2,
+      "pinecone": 2,
+      "dify": 0,
+      "n8n": 2,
+      "has_300_credit": true,
+      "metadata_affiliates": [
+        "n8n",
+        "qdrant",
+        "pinecone",
+        "vultr"
+      ]
+    },
+    "scores": {
+      "intent": 20,
+      "title_ctr": 20,
+      "aeo_geo": 20.0,
+      "code_blueprint": 20,
+      "affiliate_monetization": 20,
+      "final_score": 100.0
+    }
+  },
+  {
+    "filename": "draft-cluster2-13.json",
+    "title": "Dify.ai Vultr GPU Docker Deployment Blueprint",
+    "title_len": 45,
+    "funnel_stage": "BOFU (Bottom of Funnel - Implementation SOP/Blueprint)",
+    "total_words": 947,
+    "found_entities_count": 21,
+    "found_entities": [
+      "Vector Database",
+      "Dify",
+      "Latency",
+      "Docker Compose",
+      "Embedding",
+      "n8n",
+      "JSON",
+      "PostgreSQL",
+      "Retrieval-Augmented Generation",
+      "Semantic Search",
+      "Vultr",
+      "RAG",
+      "Docker",
+      "API",
+      "Qdrant",
+      "Throughput",
+      "LLM",
+      "YAML",
+      "BGE",
+      "Large Language Model",
+      "Vector Search"
+    ],
+    "h2_count": 4,
+    "aeo_details": [
+      {
+        "h2": "What is Dify.ai Vultr GPU Docker Deployment?",
+        "word_count": 159,
+        "in_target_range": true
+      },
+      {
+        "h2": "Production Docker Compose Blueprint for Dify.ai on Vultr GPU",
+        "word_count": 149,
+        "in_target_range": true
+      },
+      {
+        "h2": "Configuring NVIDIA GPU Drivers and CUDA Toolkit for Docker",
+        "word_count": 146,
+        "in_target_range": true
+      },
+      {
+        "h2": "Integrating Dify.ai Workflows with n8n Automation Engine",
+        "word_count": 139,
+        "in_target_range": true
+      }
+    ],
+    "aeo_pass_rate": "4/4",
+    "code_blocks_count": 3,
+    "code_languages": [
+      "bash",
+      "yaml"
+    ],
+    "affiliates": {
+      "vultr": 2,
+      "qdrant": 2,
+      "pinecone": 0,
+      "dify": 2,
+      "n8n": 2,
+      "has_300_credit": true,
+      "metadata_affiliates": []
+    },
+    "scores": {
+      "intent": 20,
+      "title_ctr": 20,
+      "aeo_geo": 20.0,
+      "code_blueprint": 20,
+      "affiliate_monetization": 20,
+      "final_score": 100.0
+    }
+  },
+  {
+    "filename": "draft-cluster2-14.json",
+    "title": "Dify.ai vs n8n AI Agents: Architecture Guide",
+    "title_len": 44,
+    "funnel_stage": "MOFU (Middle of Funnel - Evaluation/Comparison)",
+    "total_words": 829,
+    "found_entities_count": 17,
+    "found_entities": [
+      "Retrieval-Augmented Generation",
+      "API",
+      "Qdrant",
+      "Hybrid Search",
+      "Vector Database",
+      "Dify",
+      "Vector Search",
+      "Throughput",
+      "LLM",
+      "YAML",
+      "Vultr",
+      "n8n",
+      "Large Language Model",
+      "JSON",
+      "PostgreSQL",
+      "Embedding",
+      "RAG"
+    ],
+    "h2_count": 4,
+    "aeo_details": [
+      {
+        "h2": "Architectural Comparison: Dify.ai vs n8n AI Agent Nodes",
+        "word_count": 145,
+        "in_target_range": true
+      },
+      {
+        "h2": "Evaluating RAG Capabilities, Vector Storage, and Prompt Control",
+        "word_count": 144,
+        "in_target_range": true
+      },
+      {
+        "h2": "Hybrid Deployment Architecture: Pairing Dify Logic with n8n Webhooks",
+        "word_count": 138,
+        "in_target_range": true
+      },
+      {
+        "h2": "Exporting and Executing Production Dify YAML and n8n JSON Workflows",
+        "word_count": 140,
+        "in_target_range": true
+      }
+    ],
+    "aeo_pass_rate": "4/4",
+    "code_blocks_count": 2,
+    "code_languages": [
+      "json",
+      "yaml"
+    ],
+    "affiliates": {
+      "vultr": 2,
+      "qdrant": 2,
+      "pinecone": 0,
+      "dify": 3,
+      "n8n": 3,
+      "has_300_credit": true,
+      "metadata_affiliates": []
+    },
+    "scores": {
+      "intent": 20,
+      "title_ctr": 20,
+      "aeo_geo": 20.0,
+      "code_blueprint": 20,
+      "affiliate_monetization": 20,
+      "final_score": 100.0
+    }
+  },
+  {
+    "filename": "draft-cluster2-15.json",
+    "title": "Semantic Search API: n8n Qdrant FastAPI Guide",
+    "title_len": 45,
+    "funnel_stage": "BOFU (Bottom of Funnel - Implementation SOP/Blueprint)",
+    "total_words": 841,
+    "found_entities_count": 17,
+    "found_entities": [
+      "Nginx",
+      "Caddy",
+      "API",
+      "Qdrant",
+      "Vector Database",
+      "Dify",
+      "Throughput",
+      "Semantic Search",
+      "LLM",
+      "Vultr",
+      "Python",
+      "FastAPI",
+      "n8n",
+      "JSON",
+      "Vector Search",
+      "Embedding",
+      "Docker"
+    ],
+    "h2_count": 4,
+    "aeo_details": [
+      {
+        "h2": "Building a High-Throughput Semantic Search Bridge with FastAPI and Qdrant",
+        "word_count": 138,
+        "in_target_range": true
+      },
+      {
+        "h2": "Designing the Async Python FastAPI Middleware and Embedding Vector Pipeline",
+        "word_count": 137,
+        "in_target_range": true
+      },
+      {
+        "h2": "Connecting n8n Workflow Automation to the FastAPI Semantic Search Endpoint",
+        "word_count": 134,
+        "in_target_range": true
+      },
+      {
+        "h2": "Deploying Enterprise Vector Infrastructure on Vultr VPS with SSL",
+        "word_count": 136,
+        "in_target_range": true
+      }
+    ],
+    "aeo_pass_rate": "4/4",
+    "code_blocks_count": 2,
+    "code_languages": [
+      "python",
+      "json"
+    ],
+    "affiliates": {
+      "vultr": 3,
+      "qdrant": 4,
+      "pinecone": 0,
+      "dify": 2,
+      "n8n": 4,
+      "has_300_credit": true,
+      "metadata_affiliates": []
+    },
+    "scores": {
+      "intent": 20,
+      "title_ctr": 20,
+      "aeo_geo": 20.0,
+      "code_blueprint": 20,
+      "affiliate_monetization": 20,
+      "final_score": 100.0
+    }
+  },
+  {
+    "filename": "draft-cluster2-16.json",
+    "title": "Zero-Data-Retention Enterprise RAG: Vultr SOP",
+    "title_len": 45,
+    "funnel_stage": "BOFU (Bottom of Funnel - Implementation SOP/Blueprint)",
+    "total_words": 749,
+    "found_entities_count": 16,
+    "found_entities": [
+      "Retrieval-Augmented Generation",
+      "API",
+      "Qdrant",
+      "Vector Database",
+      "Dify",
+      "RAG",
+      "LLM",
+      "YAML",
+      "Vultr",
+      "Docker Compose",
+      "Python",
+      "FastAPI",
+      "n8n",
+      "JSON",
+      "Vector Search",
+      "Docker"
+    ],
+    "h2_count": 4,
+    "aeo_details": [
+      {
+        "h2": "What is Zero-Data-Retention Enterprise RAG on Vultr VPS?",
+        "word_count": 141,
+        "in_target_range": true
+      },
+      {
+        "h2": "Implementing In-Memory Vector Storage with Ephemeral Qdrant",
+        "word_count": 136,
+        "in_target_range": true
+      },
+      {
+        "h2": "Privacy-Conscious FastAPI Proxy Middleware for Scrubbing PII",
+        "word_count": 138,
+        "in_target_range": true
+      },
+      {
+        "h2": "Audit Logging and Automated Compliance Cleanup with n8n Cron",
+        "word_count": 134,
+        "in_target_range": true
+      }
+    ],
+    "aeo_pass_rate": "4/4",
+    "code_blocks_count": 2,
+    "code_languages": [
+      "python",
+      "yaml"
+    ],
+    "affiliates": {
+      "vultr": 4,
+      "qdrant": 3,
+      "pinecone": 0,
+      "dify": 3,
+      "n8n": 2,
+      "has_300_credit": true,
+      "metadata_affiliates": []
+    },
+    "scores": {
+      "intent": 20,
+      "title_ctr": 20,
+      "aeo_geo": 20.0,
+      "code_blueprint": 20,
+      "affiliate_monetization": 20,
+      "final_score": 100.0
+    }
+  },
+  {
+    "filename": "draft-cluster2-17.json",
+    "title": "Multi-Tenant Vector Search: n8n Qdrant Blueprint",
+    "title_len": 48,
+    "funnel_stage": "BOFU (Bottom of Funnel - Implementation SOP/Blueprint)",
+    "total_words": 1318,
+    "found_entities_count": 14,
+    "found_entities": [
+      "API",
+      "SOP",
+      "Qdrant",
+      "Vector Database",
+      "Vector Search",
+      "HNSW",
+      "Latency",
+      "Throughput",
+      "Vultr",
+      "JavaScript",
+      "Payload Filtering",
+      "n8n",
+      "JSON",
+      "PostgreSQL"
+    ],
+    "h2_count": 4,
+    "aeo_details": [
+      {
+        "h2": "<mark>How Does Multi-Tenant Vector Search Work in n8n and Qdrant?</mark>",
+        "word_count": 139,
+        "in_target_range": true
+      },
+      {
+        "h2": "<mark>How Do You Configure Qdrant Payload Filter Schemas in n8n?</mark>",
+        "word_count": 139,
+        "in_target_range": true
+      },
+      {
+        "h2": "<mark>How Do You Implement Tenant Token Authorization in n8n AI Agents?</mark>",
+        "word_count": 142,
+        "in_target_range": true
+      },
+      {
+        "h2": "<mark>How Do You Benchmark Multi-Tenant Search Latency and Isolation Security?</mark>",
+        "word_count": 136,
+        "in_target_range": true
+      }
+    ],
+    "aeo_pass_rate": "4/4",
+    "code_blocks_count": 4,
+    "code_languages": [
+      "javascript",
+      "json",
+      "mermaid"
+    ],
+    "affiliates": {
+      "vultr": 5,
+      "qdrant": 3,
+      "pinecone": 0,
+      "dify": 0,
+      "n8n": 4,
+      "has_300_credit": true,
+      "metadata_affiliates": [
+        "n8n",
+        "qdrant",
+        "vultr"
+      ]
+    },
+    "scores": {
+      "intent": 20,
+      "title_ctr": 20,
+      "aeo_geo": 20.0,
+      "code_blueprint": 20,
+      "affiliate_monetization": 20,
+      "final_score": 100.0
+    }
+  },
+  {
+    "filename": "draft-cluster2-18.json",
+    "title": "n8n AI Agent Memory Persistence: Qdrant Guide",
+    "title_len": 45,
+    "funnel_stage": "BOFU (Bottom of Funnel - Implementation SOP/Blueprint)",
+    "total_words": 1274,
+    "found_entities_count": 12,
+    "found_entities": [
+      "API",
+      "Qdrant",
+      "Vector Search",
+      "Latency",
+      "LLM",
+      "Vultr",
+      "JavaScript",
+      "n8n",
+      "JSON",
+      "PostgreSQL",
+      "Embedding",
+      "RAG"
+    ],
+    "h2_count": 4,
+    "aeo_details": [
+      {
+        "h2": "<mark>What Is n8n AI Agent Memory Persistence with Qdrant Vector Store?</mark>",
+        "word_count": 135,
+        "in_target_range": true
+      },
+      {
+        "h2": "<mark>How Do You Architect Dual-Layer Short-Term and Long-Term Agent Memory?</mark>",
+        "word_count": 136,
+        "in_target_range": true
+      },
+      {
+        "h2": "<mark>How Do You Build the n8n Memory Ingestion and Retrieval Workflow?</mark>",
+        "word_count": 139,
+        "in_target_range": true
+      },
+      {
+        "h2": "<mark>How Do You Prevent Memory Drift and Benchmark Memory Lookup Performance?</mark>",
+        "word_count": 136,
+        "in_target_range": true
+      }
+    ],
+    "aeo_pass_rate": "4/4",
+    "code_blocks_count": 4,
+    "code_languages": [
+      "sql",
+      "json",
+      "javascript",
+      "mermaid"
+    ],
+    "affiliates": {
+      "vultr": 5,
+      "qdrant": 5,
+      "pinecone": 0,
+      "dify": 0,
+      "n8n": 5,
+      "has_300_credit": true,
+      "metadata_affiliates": [
+        "n8n",
+        "qdrant",
+        "vultr"
+      ]
+    },
+    "scores": {
+      "intent": 20,
+      "title_ctr": 20,
+      "aeo_geo": 20.0,
+      "code_blueprint": 20,
+      "affiliate_monetization": 20,
+      "final_score": 100.0
+    }
+  },
+  {
+    "filename": "draft-cluster2-19.json",
+    "title": "High-Throughput Batch Vector Ingestion: n8n SOP",
+    "title_len": 47,
+    "funnel_stage": "BOFU (Bottom of Funnel - Implementation SOP/Blueprint)",
+    "total_words": 1246,
+    "found_entities_count": 12,
+    "found_entities": [
+      "API",
+      "SOP",
+      "Qdrant",
+      "HNSW",
+      "Latency",
+      "Throughput",
+      "Vultr",
+      "JavaScript",
+      "n8n",
+      "JSON",
+      "PostgreSQL",
+      "Embedding"
+    ],
+    "h2_count": 4,
+    "aeo_details": [
+      {
+        "h2": "<mark>What Is High-Throughput Batch Vector Ingestion in n8n and Qdrant?</mark>",
+        "word_count": 139,
+        "in_target_range": true
+      },
+      {
+        "h2": "<mark>How Do You Configure Dynamic Batching in n8n JavaScript Code Nodes?</mark>",
+        "word_count": 140,
+        "in_target_range": true
+      },
+      {
+        "h2": "<mark>How Do You Build a Self-Healing Batch Ingestion n8n Workflow Blueprint?</mark>",
+        "word_count": 134,
+        "in_target_range": true
+      },
+      {
+        "h2": "<mark>How Do You Optimize Host OS Kernel and Qdrant Indexing Parameters for Maximum Velocity?</mark>",
+        "word_count": 134,
+        "in_target_range": true
+      }
+    ],
+    "aeo_pass_rate": "4/4",
+    "code_blocks_count": 4,
+    "code_languages": [
+      "json",
+      "javascript",
+      "mermaid"
+    ],
+    "affiliates": {
+      "vultr": 5,
+      "qdrant": 4,
+      "pinecone": 0,
+      "dify": 0,
+      "n8n": 5,
+      "has_300_credit": true,
+      "metadata_affiliates": [
+        "n8n",
+        "qdrant",
+        "vultr"
+      ]
+    },
+    "scores": {
+      "intent": 20,
+      "title_ctr": 20,
+      "aeo_geo": 20.0,
+      "code_blueprint": 20,
+      "affiliate_monetization": 20,
+      "final_score": 100.0
+    }
+  },
+  {
+    "filename": "draft-cluster2-20.json",
+    "title": "n8n Context Compression: Qdrant Memory Guide",
+    "title_len": 44,
+    "funnel_stage": "BOFU (Bottom of Funnel - Implementation SOP/Blueprint)",
+    "total_words": 1214,
+    "found_entities_count": 10,
+    "found_entities": [
+      "API",
+      "Qdrant",
+      "Latency",
+      "LLM",
+      "Vultr",
+      "JavaScript",
+      "n8n",
+      "JSON",
+      "Embedding",
+      "RAG"
+    ],
+    "h2_count": 4,
+    "aeo_details": [
+      {
+        "h2": "<mark>What Is n8n Context Compression for Qdrant Memory Stores?</mark>",
+        "word_count": 138,
+        "in_target_range": true
+      },
+      {
+        "h2": "<mark>How Do You Implement Programmatic Context Compression in n8n Code Nodes?</mark>",
+        "word_count": 134,
+        "in_target_range": true
+      },
+      {
+        "h2": "<mark>How Do You Build the Complete n8n Context Compression Workflow Blueprint?</mark>",
+        "word_count": 136,
+        "in_target_range": true
+      },
+      {
+        "h2": "<mark>How Do You Benchmark Token Savings and Retrieval Precision Across Compression Ratios?</mark>",
+        "word_count": 136,
+        "in_target_range": true
+      }
+    ],
+    "aeo_pass_rate": "4/4",
+    "code_blocks_count": 4,
+    "code_languages": [
+      "json",
+      "javascript",
+      "mermaid"
+    ],
+    "affiliates": {
+      "vultr": 5,
+      "qdrant": 5,
+      "pinecone": 0,
+      "dify": 0,
+      "n8n": 5,
+      "has_300_credit": true,
+      "metadata_affiliates": [
+        "n8n",
+        "qdrant",
+        "vultr"
+      ]
+    },
+    "scores": {
+      "intent": 20,
+      "title_ctr": 20,
+      "aeo_geo": 20.0,
+      "code_blueprint": 20,
+      "affiliate_monetization": 20,
+      "final_score": 100.0
+    }
+  }
+]

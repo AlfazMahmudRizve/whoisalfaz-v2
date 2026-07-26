@@ -379,12 +379,12 @@ const nextConfig: NextConfig = {
       },
       {
         source: '/go/vultr-promo',
-        destination: 'https://www.vultr.com/?ref=9859101-9J',
+        destination: 'https://www.vultr.com/?ref=9849830-9J',
         permanent: true,
       },
       {
         source: '/go/vultr',
-        destination: 'https://www.vultr.com/?ref=9859100',
+        destination: 'https://www.vultr.com/?ref=9849830-9J',
         permanent: true,
       },
       {

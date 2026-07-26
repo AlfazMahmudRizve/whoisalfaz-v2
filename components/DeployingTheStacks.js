@@ -10,10 +10,10 @@ const AFFILIATE_DATA = {
         badge: "Infrastructure"
     },
     vultr: {
-        title: "Vultr High-Performance VPS",
-        description: "Deploy self-hosted instances worldwide with enterprise NVMe storage. Get $300 in free credit.",
-        url: "https://www.vultr.com/?ref=9530510-8H",
-        buttonText: "Claim $300 Vultr Credit",
+        title: "Vultr High-Performance Cloud",
+        description: "Deploy self-hosted vector databases & AI infrastructure worldwide. Get $300 in free credit.",
+        url: "/go/vultr-promo",
+        buttonText: "Claim $300 Free Vultr Credit",
         badge: "Compute"
     },
     brevo: {

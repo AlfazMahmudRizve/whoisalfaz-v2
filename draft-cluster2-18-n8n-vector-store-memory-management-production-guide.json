@@ -1,0 +1,121 @@
+{
+  "_id": "n8n-vector-store-memory-management-production-guide",
+  "_type": "post",
+  "title": "n8n AI Agent Memory Persistence: Qdrant Guide",
+  "slug": {
+    "_type": "slug",
+    "current": "n8n-vector-store-memory-management-production-guide"
+  },
+  "description": "[BOFU - Agent Memory Implementation] Production guide for giving n8n AI agents long-term conversation memory and context persistence using Qdrant vector store nodes.",
+  "publishedAt": "2026-07-26T21:45:00Z",
+  "body": [
+    {
+      "_type": "block",
+      "style": "h2",
+      "children": [
+        {
+          "_type": "span",
+          "text": "What is n8n AI Agent Memory Persistence: Qdrant Integration?"
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "style": "normal",
+      "children": [
+        {
+          "_type": "span",
+          "text": "Giving n8n AI agents long-term persistent memory requires storing chat history, user preferences, and session context as vector embeddings inside Qdrant or Pinecone vector stores. By using n8n's native Vector Store Memory nodes, AI agents dynamically retrieve relevant past conversations during multi-turn customer interactions, dramatically improving user experience. Self-hosting Qdrant on Vultr Cloud GPU ensures instant memory retrieval without token limits. Build memory-enabled AI agents on Vultr with $300 free promotional credit."
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "style": "normal",
+      "children": [
+        {
+          "_type": "span",
+          "text": "\u26a1 "
+        },
+        {
+          "_type": "span",
+          "marks": [
+            "bold"
+          ],
+          "text": "Special Infrastructure Offer: "
+        },
+        {
+          "_type": "span",
+          "text": "Claim your "
+        },
+        {
+          "_type": "span",
+          "marks": [
+            "link_vultr"
+          ],
+          "text": "$300 Free Cloud GPU & Compute Credit on Vultr"
+        },
+        {
+          "_type": "span",
+          "text": " to deploy self-hosted Qdrant, Dify.ai, and n8n with zero upfront cost."
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "link_vultr",
+          "_type": "link",
+          "href": "https://whoisalfaz.me/go/vultr-promo"
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "style": "h2",
+      "children": [
+        {
+          "_type": "span",
+          "text": "Technical Architecture & Docker Configuration Blueprint"
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "style": "normal",
+      "children": [
+        {
+          "_type": "span",
+          "text": "Below is the production-ready Docker Compose blueprint for deploying n8n AI Agent Memory Persistence: Qdrant Integration on Vultr Cloud GPU infrastructure connected to n8n workflow automation:"
+        }
+      ]
+    },
+    {
+      "_type": "code",
+      "language": "yaml",
+      "code": "version: '3.8'\nservices:\n  qdrant:\n    image: qdrant/qdrant:v1.9.2\n    restart: always\n    ports:\n      - '6333:6333'\n      - '6334:6334'\n    volumes:\n      - ./qdrant_storage:/qdrant/storage:z\n    environment:\n      - QDRANT__SERVICE__API_KEY=your_secure_vultr_api_key\n  n8n:\n    image: docker.n8n.io/n8nio/n8n:latest\n    restart: always\n    ports:\n      - '5678:5678'\n    environment:\n      - N8N_HOST=whoisalfaz.me\n      - N8N_PORT=5678\n      - WEBHOOK_URL=https://whoisalfaz.me/"
+    },
+    {
+      "_type": "block",
+      "style": "h2",
+      "children": [
+        {
+          "_type": "span",
+          "text": "Step-by-Step Deployment & n8n Integration Guide"
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "style": "normal",
+      "children": [
+        {
+          "_type": "span",
+          "text": "1. Provision a Vultr Cloud GPU instance with Ubuntu 24.04 LTS.\n2. SSH into your Vultr server and install Docker & Docker Compose.\n3. Execute the Docker Compose blueprint to launch Qdrant and n8n.\n4. Configure n8n HTTP Request nodes with your Qdrant API key to begin building production RAG applications."
+        }
+      ]
+    }
+  ],
+  "author": {
+    "_type": "reference",
+    "_ref": "author-alfaz-mahmud-rizve"
+  }
+}

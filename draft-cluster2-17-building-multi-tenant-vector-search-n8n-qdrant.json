@@ -1,0 +1,121 @@
+{
+  "_id": "building-multi-tenant-vector-search-n8n-qdrant",
+  "_type": "post",
+  "title": "Multi-Tenant Vector Search: n8n Qdrant Blueprint",
+  "slug": {
+    "_type": "slug",
+    "current": "building-multi-tenant-vector-search-n8n-qdrant"
+  },
+  "description": "[BOFU - SaaS Architecture Blueprint] Implementation guide for dynamic multi-tenant vector isolation in n8n workflows using Qdrant payload filters and security tokens.",
+  "publishedAt": "2026-07-26T21:45:00Z",
+  "body": [
+    {
+      "_type": "block",
+      "style": "h2",
+      "children": [
+        {
+          "_type": "span",
+          "text": "What is Building Multi-Tenant Vector Search in n8n & Qdrant?"
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "style": "normal",
+      "children": [
+        {
+          "_type": "span",
+          "text": "Implementing dynamic multi-tenant vector search in n8n requires injecting tenant authorization tokens into Qdrant payload filter queries during vector retrieval execution. This architecture guarantees that vector searches automatically scope results to the requesting organization's dataset, maintaining total tenant isolation without creating separate database clusters for every customer. Both n8n and Qdrant run efficiently inside Docker containers hosted on Vultr Cloud GPU. Build multi-tenant AI agents on Vultr with $300 free credit."
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "style": "normal",
+      "children": [
+        {
+          "_type": "span",
+          "text": "\u26a1 "
+        },
+        {
+          "_type": "span",
+          "marks": [
+            "bold"
+          ],
+          "text": "Special Infrastructure Offer: "
+        },
+        {
+          "_type": "span",
+          "text": "Claim your "
+        },
+        {
+          "_type": "span",
+          "marks": [
+            "link_vultr"
+          ],
+          "text": "$300 Free Cloud GPU & Compute Credit on Vultr"
+        },
+        {
+          "_type": "span",
+          "text": " to deploy self-hosted Qdrant, Dify.ai, and n8n with zero upfront cost."
+        }
+      ],
+      "markDefs": [
+        {
+          "_key": "link_vultr",
+          "_type": "link",
+          "href": "https://whoisalfaz.me/go/vultr-promo"
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "style": "h2",
+      "children": [
+        {
+          "_type": "span",
+          "text": "Technical Architecture & Docker Configuration Blueprint"
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "style": "normal",
+      "children": [
+        {
+          "_type": "span",
+          "text": "Below is the production-ready Docker Compose blueprint for deploying Building Multi-Tenant Vector Search in n8n & Qdrant on Vultr Cloud GPU infrastructure connected to n8n workflow automation:"
+        }
+      ]
+    },
+    {
+      "_type": "code",
+      "language": "yaml",
+      "code": "version: '3.8'\nservices:\n  qdrant:\n    image: qdrant/qdrant:v1.9.2\n    restart: always\n    ports:\n      - '6333:6333'\n      - '6334:6334'\n    volumes:\n      - ./qdrant_storage:/qdrant/storage:z\n    environment:\n      - QDRANT__SERVICE__API_KEY=your_secure_vultr_api_key\n  n8n:\n    image: docker.n8n.io/n8nio/n8n:latest\n    restart: always\n    ports:\n      - '5678:5678'\n    environment:\n      - N8N_HOST=whoisalfaz.me\n      - N8N_PORT=5678\n      - WEBHOOK_URL=https://whoisalfaz.me/"
+    },
+    {
+      "_type": "block",
+      "style": "h2",
+      "children": [
+        {
+          "_type": "span",
+          "text": "Step-by-Step Deployment & n8n Integration Guide"
+        }
+      ]
+    },
+    {
+      "_type": "block",
+      "style": "normal",
+      "children": [
+        {
+          "_type": "span",
+          "text": "1. Provision a Vultr Cloud GPU instance with Ubuntu 24.04 LTS.\n2. SSH into your Vultr server and install Docker & Docker Compose.\n3. Execute the Docker Compose blueprint to launch Qdrant and n8n.\n4. Configure n8n HTTP Request nodes with your Qdrant API key to begin building production RAG applications."
+        }
+      ]
+    }
+  ],
+  "author": {
+    "_type": "reference",
+    "_ref": "author-alfaz-mahmud-rizve"
+  }
+}
