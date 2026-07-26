@@ -94,25 +94,80 @@ export default async function Post({ params }) {
     notFound();
   }
 
-  // Calculate read time safely for both string MDX and PortableText arrays
-  const getWordCount = (body) => {
-    if (!body) return 0;
-    if (typeof body === 'string') {
-      return body.split(/\s+/g).filter(Boolean).length;
-    }
-    if (Array.isArray(body)) {
-      const text = body.map(block => {
-        if (block && Array.isArray(block.children)) {
-          return block.children.map(c => c.text || '').join(' ');
+  // Convert Sanity PortableText array blocks or string MDX to clean Markdown for MDXRemote
+  const portableTextToMarkdown = (body) => {
+    if (!body) return '';
+    if (typeof body === 'string') return body;
+    if (!Array.isArray(body)) return '';
+
+    return body.map(block => {
+      if (!block) return '';
+
+      // Handle Code Blocks
+      if (block._type === 'code' || block.style === 'code') {
+        const lang = block.language || block.lang || '';
+        const codeText = block.code || (block.children ? block.children.map(c => c.text).join('') : '');
+        return `\`\`\`${lang}\n${codeText}\n\`\`\`\n\n`;
+      }
+
+      // Handle Standard Blocks (headings, paragraphs, lists, blockquotes)
+      if (block._type === 'block') {
+        let markDefsMap = {};
+        if (Array.isArray(block.markDefs)) {
+          block.markDefs.forEach(def => {
+            if (def && def._key) markDefsMap[def._key] = def;
+          });
         }
-        return '';
-      }).join(' ');
-      return text.split(/\s+/g).filter(Boolean).length;
-    }
-    return 0;
+
+        let inlineText = '';
+        if (Array.isArray(block.children)) {
+          inlineText = block.children.map(child => {
+            let text = child.text || '';
+            if (Array.isArray(child.marks)) {
+              child.marks.forEach(markKey => {
+                if (markKey === 'bold') {
+                  text = `**${text}**`;
+                } else if (markKey === 'italic') {
+                  text = `*${text}*`;
+                } else if (markKey === 'code') {
+                  text = `\`${text}\``;
+                } else if (markDefsMap[markKey]) {
+                  const def = markDefsMap[markKey];
+                  if (def._type === 'link' && def.href) {
+                    text = `[${text}](${def.href})`;
+                  }
+                }
+              });
+            }
+            return text;
+          }).join('');
+        }
+
+        const style = block.style || 'normal';
+        if (style === 'h1') return `# ${inlineText}\n\n`;
+        if (style === 'h2') return `## ${inlineText}\n\n`;
+        if (style === 'h3') return `### ${inlineText}\n\n`;
+        if (style === 'h4') return `#### ${inlineText}\n\n`;
+        if (style === 'blockquote') return `> ${inlineText}\n\n`;
+        if (block.listItem === 'bullet') return `* ${inlineText}\n`;
+        if (block.listItem === 'number') return `1. ${inlineText}\n`;
+
+        return `${inlineText}\n\n`;
+      }
+
+      return '';
+    }).join('');
   };
 
-  const wordCount = getWordCount(post.body);
+  const contentMarkdown = portableTextToMarkdown(post.body);
+
+  // Calculate read time safely
+  const getWordCount = (text) => {
+    if (!text) return 0;
+    return text.split(/\s+/g).filter(Boolean).length;
+  };
+
+  const wordCount = getWordCount(contentMarkdown);
   const readTime = Math.max(1, Math.ceil(wordCount / 200));
 
   return (
@@ -327,7 +382,7 @@ export default async function Post({ params }) {
 
 
             <MDXRemote
-              source={post.body || ''}
+              source={contentMarkdown || ''}
               components={{
                 hr: () => <hr className="wp-block-separator has-alpha-channel-opacity my-16 border-slate-200 dark:border-white/10 w-full" />,
                 pre: CodeBlock,
