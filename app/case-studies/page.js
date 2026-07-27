@@ -114,12 +114,17 @@ export default async function CaseStudiesPage() {
                     <div className="bg-gradient-to-b from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/10 border border-blue-200/50 dark:border-blue-500/20 rounded-[2.5rem] p-8 relative overflow-hidden shadow-xl dark:shadow-none">
                         <div className="relative z-10">
                             <h4 className="text-2xl font-black text-slate-900 dark:text-white mb-4 uppercase tracking-tight">Build This Stack</h4>
-                            <p className="text-slate-600 dark:text-slate-400 text-[15px] font-medium mb-8 leading-relaxed">
-                                Want to deploy one of these exact architectures for your agency? Let&apos;s map it out.
+                            <p className="text-slate-600 dark:text-slate-400 text-[15px] font-medium mb-6 leading-relaxed">
+                                Want to deploy one of these exact architectures? Explore our <Link href="/services/growth-consulting/" className="text-purple-600 dark:text-purple-400 font-bold underline hover:text-purple-500 transition-colors">Strategy &amp; Growth Consulting</Link> or book a discovery call.
                             </p>
-                            <Link href="/contact/" className="block text-center w-full py-4 bg-slate-900 dark:bg-white text-white dark:text-black font-black uppercase tracking-widest text-[11px] rounded-xl hover:bg-slate-800 dark:hover:bg-slate-200 transition-colors shadow-lg dark:shadow-none">
-                                Book a Technical Call
-                            </Link>
+                            <div className="flex flex-col gap-3">
+                                <Link href="/services/growth-consulting/" className="block text-center w-full py-3.5 bg-purple-600 hover:bg-purple-700 text-white font-black uppercase tracking-widest text-[11px] rounded-xl transition-colors shadow-md">
+                                    Growth Consulting
+                                </Link>
+                                <Link href="/contact/" className="block text-center w-full py-3.5 bg-slate-900 dark:bg-white text-white dark:text-black font-black uppercase tracking-widest text-[11px] rounded-xl hover:bg-slate-800 dark:hover:bg-slate-200 transition-colors shadow-lg dark:shadow-none">
+                                    Book a Technical Call
+                                </Link>
+                            </div>
                         </div>
                         <div className="absolute top-0 right-0 w-48 h-48 bg-blue-500/10 dark:bg-blue-500/20 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none"></div>
                     </div>

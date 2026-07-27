@@ -76,7 +76,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }
     const validCategories = categories.filter((cat) => cat.count > 0);
     const categoryRoutes = validCategories.map((cat) => ({
-        url: `${baseUrl}/blog/category/${cat.slug.current}/`,
+        url: `${baseUrl}/blog/category/${cat.slug.current}`,
         lastModified: new Date(),
         changeFrequency: 'weekly' as const,
         priority: 0.6,

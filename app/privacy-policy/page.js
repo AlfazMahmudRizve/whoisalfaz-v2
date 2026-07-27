@@ -99,7 +99,7 @@ export default function PrivacyPolicy() {
                         <div className="flex flex-col gap-4 mt-6">
                             <div className="flex items-start gap-3 text-sm text-slate-300">
                                 <div className="mt-1 min-w-[20px]"><Eye className="text-blue-500" size={16} /></div>
-                                <span>Visit our website at <Link href="https://whoisalfaz.me">https://whoisalfaz.me</Link></span>
+                                <span>Visit our website at <Link href="https://whoisalfaz.me" aria-label="Alfaz Mahmud Rizve — Home">https://whoisalfaz.me</Link></span>
                             </div>
                             <div className="flex items-start gap-3 text-sm text-slate-300">
                                 <div className="mt-1 min-w-[20px]"><FileText className="text-purple-500" size={16} /></div>

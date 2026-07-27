@@ -82,7 +82,18 @@ export default async function Post({ params }) {
   const { slug } = await params;
   const post = await getSanityPostBySlug(slug);
   const posts = await getSanityPosts();
-  const categories = await getSanityCategories();
+  const rawCategories = await getSanityCategories();
+  const defaultRequiredCategories = [
+    { name: "AI Content Systems", slug: { current: "ai-content-systems" } },
+    { name: "Learn Automation in 30 Days", slug: { current: "learn-automation-in-30-days" } }
+  ];
+  const categories = [...(rawCategories || [])];
+  defaultRequiredCategories.forEach(req => {
+    if (!categories.some(c => c.slug?.current === req.slug.current)) {
+      categories.push(req);
+    }
+  });
+
   const recentPosts = posts.filter(p => p.slug.current !== slug).slice(0, 5);
 
   const currentIndex = posts.findIndex(p => p.slug.current === slug);
@@ -621,8 +632,11 @@ export default async function Post({ params }) {
               <Link href="/contact/" className="px-8 py-4 bg-slate-900 dark:bg-white text-white dark:text-black font-black uppercase tracking-widest text-xs rounded-xl shadow-lg dark:shadow-none hover:bg-slate-800 dark:hover:bg-slate-200 transition-all hover:-translate-y-1">
                 Book a Strategy Call
               </Link>
+              <Link href="/services/growth-consulting/" className="px-8 py-4 bg-purple-600 dark:bg-purple-500 text-white font-black uppercase tracking-widest text-xs rounded-xl shadow-lg hover:bg-purple-700 dark:hover:bg-purple-400 transition-all hover:-translate-y-1">
+                Growth Consulting
+              </Link>
               <Link href="/services/" className="px-8 py-4 bg-slate-50 dark:bg-white/5 text-slate-900 dark:text-white font-black uppercase tracking-widest text-xs rounded-xl border border-slate-200 dark:border-white/10 hover:bg-slate-100 dark:hover:bg-white/10 transition-all hover:-translate-y-1 shadow-sm dark:shadow-none">
-                View Services
+                View All Services
               </Link>
             </div>
           </div>

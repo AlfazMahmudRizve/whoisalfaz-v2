@@ -30,7 +30,17 @@ export const metadata = {
 
 export default async function BlogPage() {
     const posts = await getSanityPosts();
-    const categories = await getSanityCategories();
+    const rawCategories = await getSanityCategories();
+    const defaultRequiredCategories = [
+        { name: "AI Content Systems", slug: { current: "ai-content-systems" }, count: "Featured" },
+        { name: "Learn Automation in 30 Days", slug: { current: "learn-automation-in-30-days" }, count: "Series" }
+    ];
+    const categories = [...(rawCategories || [])];
+    defaultRequiredCategories.forEach(req => {
+        if (!categories.some(c => c.slug?.current === req.slug.current)) {
+            categories.push(req);
+        }
+    });
 
     const recentPosts = posts?.slice(0, 5); // Top 5 for sidebar
 

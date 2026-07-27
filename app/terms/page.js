@@ -1,40 +1,39 @@
-
 import Link from 'next/link';
-import { ScrollText, Mail, FileText, Scale, AlertTriangle } from 'lucide-react';
+import { ScrollText, Mail, FileText, Scale, AlertTriangle, ShieldCheck, Clock, CreditCard, Lock } from 'lucide-react';
 
 export const metadata = {
-    title: "Terms of Use | Alfaz Mahmud Rizve",
-    description: "Review the comprehensive Terms and Conditions for whoisalfaz.me. This legal document outlines user responsibilities, permissible usage, and our data handling commitments.",
+    title: "Terms of Service & Consulting SLA | Alfaz Mahmud Rizve",
+    description: "Legal Terms of Service and RevOps consulting Service Level Agreement (SLA) for whoisalfaz.me, covering intellectual property, SLAs, payment terms, and liability limits.",
     alternates: {
         canonical: '/terms/',
     },
     openGraph: {
-        title: "Terms of Use | Alfaz Mahmud Rizve",
-        description: "Review the comprehensive Terms and Conditions for whoisalfaz.me. This legal document outlines user responsibilities, permissible usage, and our data handling commitments.",
+        title: "Terms of Service & Consulting SLA | Alfaz Mahmud Rizve",
+        description: "Legal Terms of Service and RevOps consulting Service Level Agreement (SLA) for whoisalfaz.me, covering intellectual property, SLAs, payment terms, and liability limits.",
         url: 'https://whoisalfaz.me/terms/',
         type: 'website',
     },
     twitter: {
         card: 'summary_large_image',
-        title: "Terms of Use | Alfaz Mahmud Rizve",
-        description: "Review the comprehensive Terms and Conditions for whoisalfaz.me. This legal document outlines user responsibilities, permissible usage, and our data handling commitments.",
+        title: "Terms of Service & Consulting SLA | Alfaz Mahmud Rizve",
+        description: "Legal Terms of Service and RevOps consulting Service Level Agreement (SLA) for whoisalfaz.me, covering intellectual property, SLAs, payment terms, and liability limits.",
     }
 };
 
 export default function TermsPage() {
     const TOC = [
-        { id: "services", label: "1. Our Services" },
-        { id: "intellectual", label: "2. Intellectual Property" },
-        { id: "representations", label: "3. User Representations" },
-        { id: "prohibited", label: "4. Prohibited Activities" },
-        { id: "contributions", label: "5. User Contributions" },
-        { id: "license", label: "6. Contribution License" },
-        { id: "management", label: "9. Site Management" },
+        { id: "services", label: "1. Services & RevOps Scope" },
+        { id: "slas", label: "2. RevOps Consulting SLAs" },
+        { id: "payment", label: "3. Payment Terms & Billing" },
+        { id: "intellectual", label: "4. Intellectual Property" },
+        { id: "representations", label: "5. User Representations" },
+        { id: "prohibited", label: "6. Prohibited Activities" },
+        { id: "disclaimer", label: "7. Disclaimer of Warranties" },
+        { id: "liability", label: "8. Limitation of Liability" },
+        { id: "indemnification", label: "9. Indemnification" },
+        { id: "disputes", label: "10. Governing Law & Disputes" },
         { id: "termination", label: "11. Term & Termination" },
-        { id: "modifications", label: "12. Modifications" },
-        { id: "disputes", label: "14. Dispute Resolution" },
-        { id: "liability", label: "17. Limitations of Liability" },
-        { id: "contact", label: "23. Contact Us" },
+        { id: "contact", label: "12. Contact Legal" },
     ];
 
     return (
@@ -67,7 +66,7 @@ export default function TermsPage() {
                     <div className="p-6 rounded-2xl bg-gradient-to-br from-blue-900/20 to-purple-900/20 border border-blue-500/20">
                         <h4 className="text-white font-bold mb-2">Legal Inquiries?</h4>
                         <p className="text-slate-400 text-xs mb-4">
-                            For specific questions regarding these terms, please contact us directly.
+                            For specific questions regarding consulting SLAs, retainer terms, or custom agreements, contact us directly.
                         </p>
                         <a href="mailto:contact@whoisalfaz.me" className="flex items-center gap-2 text-blue-400 text-sm font-bold hover:underline">
                             <Mail size={16} /> Contact Legal
@@ -86,158 +85,185 @@ export default function TermsPage() {
                     {/* Header */}
                     <div className="mb-16 border-b border-white/10 pb-12">
                         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-bold uppercase tracking-wider mb-6">
-                            <Scale size={12} /> Terms of Service
+                            <Scale size={12} /> Terms of Service &amp; SLA
                         </div>
-                        <h1 className="text-5xl font-black text-white mb-6">Terms of Use</h1>
-                        <p className="text-lg text-slate-400 max-w-2xl">
-                            Please read these terms carefully before using our services.
+                        <h1 className="text-5xl font-black text-white mb-6">Terms of Service</h1>
+                        <p className="text-lg text-slate-400 max-w-3xl">
+                            Comprehensive Master Services Agreement governing website usage, software development, RevOps engineering, custom n8n automation builds, and consulting SLAs.
                         </p>
                         <p className="text-sm text-slate-500 mt-4 font-mono">
-                            Last updated: December 30, 2025
+                            Effective Date: January 1, 2026 | Last updated: July 28, 2026
                         </p>
                     </div>
 
                     {/* Agreement Blurb */}
                     <div className="bg-white/5 p-8 rounded-2xl border border-white/10 mb-12">
-                        <h3 className="text-white mt-0 mb-4">AGREEMENT TO TERMS</h3>
+                        <h3 className="text-white mt-0 mb-4 uppercase tracking-wider text-sm font-black">Agreement to Terms</h3>
                         <p className="mt-0">
-                            We are <strong>whoisalfaz.me</strong> (&quot;Company,&quot; &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;), operating in Bangladesh. We operate the website <Link href="https://whoisalfaz.me">https://whoisalfaz.me</Link> (the &quot;Site&quot;), as well as any other related products and services that refer or link to these legal terms (the &quot;Legal Terms&quot;) (collectively, the &quot;Services&quot;).
+                            These Legal Terms constitute a legally binding agreement between you, whether personally or on behalf of an entity (&quot;Client,&quot; &quot;User,&quot; or &quot;you&quot;), and <strong>whoisalfaz.me</strong> (&quot;Company,&quot; &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;), operated by Alfaz Mahmud Rizve in Chittagong, Bangladesh.
                         </p>
                         <p>
-                            You can contact us by phone at +8801991210347, email or by mail to Alkaran, Chittagong, Bangladesh, 4000.
+                            These terms apply to all access to and use of <Link href="https://whoisalfaz.me">https://whoisalfaz.me</Link> (the &quot;Site&quot;), as well as all RevOps consulting, custom full-stack web applications, n8n workflow automations, technical SEO audits, and managed infrastructure services (collectively, the &quot;Services&quot;).
                         </p>
-                        <p>
-                            These Legal Terms constitute a legally binding agreement made between you, whether personally or on behalf of an entity (&quot;you&quot;), and whoisalfaz.me, concerning your access to and use of the Services. You agree that by accessing the Services, you have read, understood, and agreed to be bound by all of these Legal Terms.
-                        </p>
-                        <div className="bg-red-500/10 border border-red-500/20 p-4 rounded-lg flex gap-4 items-start not-prose">
+                        <div className="bg-red-500/10 border border-red-500/20 p-4 rounded-lg flex gap-4 items-start not-prose mt-4">
                             <AlertTriangle className="text-red-400 shrink-0 mt-1" size={20} />
-                            <p className="text-red-200 text-sm mb-0">IF YOU DO NOT AGREE WITH ALL OF THESE LEGAL TERMS, THEN YOU ARE EXPRESSLY PROHIBITED FROM USING THE SERVICES AND YOU MUST DISCONTINUE USE IMMEDIATELY.</p>
+                            <p className="text-red-200 text-sm mb-0">IF YOU DO NOT AGREE WITH ALL OF THESE LEGAL TERMS, THEN YOU ARE EXPRESSLY PROHIBITED FROM USING THE SERVICES AND MUST DISCONTINUE USE IMMEDIATELY.</p>
                         </div>
                     </div>
 
-                    <h2 id="services" className="scroll-mt-32">1. OUR SERVICES</h2>
-                    <p>The information provided when using the Services is not intended for distribution to or use by any person or entity in any jurisdiction or country where such distribution or use would be contrary to law or regulation or which would subject us to any registration requirement within such jurisdiction or country. Accordingly, those persons who choose to access the Services from other locations do so on their own initiative and are solely responsible for compliance with local laws, if and to the extent local laws are applicable.</p>
-
-                    <h2 id="intellectual" className="scroll-mt-32">2. INTELLECTUAL PROPERTY RIGHTS</h2>
-                    <h3>Our intellectual property</h3>
-                    <p>We are the owner or the licensee of all intellectual property rights in our Services, including all source code, databases, functionality, software, website designs, audio, video, text, photographs, and graphics in the Services (collectively, the &quot;Content&quot;), as well as the trademarks, service marks, and logos contained therein (the &quot;Marks&quot;).</p>
-                    <p>Our Content and Marks are protected by copyright and trademark laws (and various other intellectual property rights and unfair competition laws) and treaties in the United States, Bangladesh, and around the world.</p>
-                    <p>The Content and Marks are provided in or through the Services &quot;AS IS&quot; for your personal, non-commercial use or internal business purpose only.</p>
-
-                    <h3>Your use of our Services</h3>
-                    <p>Subject to your compliance with these Legal Terms, including the &quot;PROHIBITED ACTIVITIES&quot; section below, we grant you a non-exclusive, non-transferable, revocable license to:</p>
+                    <h2 id="services" className="scroll-mt-32">1. OUR SERVICES &amp; REVOPS SCOPE</h2>
+                    <p>
+                        whoisalfaz.me provides high-ticket revenue operations engineering, technical architecture, and custom automation development for SaaS founders and digital agencies. Our offerings include:
+                    </p>
                     <ul>
-                        <li>Access the Services; and</li>
-                        <li>Download or print a copy of any portion of the Content to which you have properly gained access,</li>
+                        <li><Link href="/services/growth-consulting/">Strategy &amp; Growth Consulting</Link>: Tech stack audits, SOP development, and revenue leak analyses billed hourly ($200/hr) or via fixed-scope retainer.</li>
+                        <li><Link href="/services/n8n-automation/">Custom Workflow Automation</Link>: Engineering, deployment, and optimization of autonomous n8n workflows, CRM data syncs, and AI lead qualification agents.</li>
+                        <li><Link href="/services/headless-architecture/">Headless CMS Infrastructure</Link>: Next.js frontend development decoupled from traditional CMS backends for sub-second page performance.</li>
+                        <li><Link href="/services/technical-seo/">Technical SEO Audits</Link>: Forensic auditing of JavaScript rendering, crawl budget, structured data, and indexability errors.</li>
                     </ul>
-                    <p>solely for your personal, non-commercial use or internal business purpose.</p>
+                    <p>
+                        Specific scopes of work, deliverables, deadlines, and project milestones are defined in individual Statement of Work (&quot;SOW&quot;) documents or agreed project proposals executed between the Client and Company.
+                    </p>
 
-                    <h2 id="representations" className="scroll-mt-32">3. USER REPRESENTATIONS</h2>
-                    <p>By using the Services, you represent and warrant that:</p>
+                    <h2 id="slas" className="scroll-mt-32">2. REVOPS CONSULTING SERVICE LEVEL AGREEMENTS (SLAS)</h2>
+                    <p>
+                        To ensure enterprise reliability, all managed workflow automations, retainer services, and technical consulting engagements operate under strict Service Level Agreements:
+                    </p>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 not-prose my-8">
+                        <div className="p-6 bg-white/5 border border-white/10 rounded-xl">
+                            <div className="flex items-center gap-3 mb-3 text-emerald-400 font-bold">
+                                <ShieldCheck size={20} /> Uptime Commitment
+                            </div>
+                            <p className="text-slate-300 text-sm mb-0">
+                                <strong>99.5% Monthly Target Uptime</strong> for self-hosted or managed n8n workflow engines deployed under our active maintenance packages. Excludes planned maintenance windows and third-party API provider outages (e.g., OpenAI, Apollo, Brevo).
+                            </p>
+                        </div>
+                        <div className="p-6 bg-white/5 border border-white/10 rounded-xl">
+                            <div className="flex items-center gap-3 mb-3 text-blue-400 font-bold">
+                                <Clock size={20} /> Support Response Timelines
+                            </div>
+                            <p className="text-slate-300 text-sm mb-0">
+                                <strong>Standard Tickets:</strong> 24 business hours.<br />
+                                <strong>Priority Revenue Critical Outages:</strong> Initial triage within 4 business hours for active monthly retainer clients.
+                            </p>
+                        </div>
+                    </div>
+
+                    <h3>2.1 Scope Boundaries &amp; Change Requests</h3>
+                    <p>
+                        Any modifications, feature additions, or architectural changes requested outside the agreed SOW will be documented as a formal Change Request. Change Requests will be quoted at our standard consulting rate of $200/hour or as an addendum fee before work commences.
+                    </p>
+
+                    <h2 id="payment" className="scroll-mt-32">3. PAYMENT TERMS, HOURLY RATES &amp; BILLING</h2>
+                    <p>
+                        Engagement pricing and payment terms are structured as follows:
+                    </p>
+
+                    <div className="p-6 bg-white/5 border border-white/10 rounded-xl not-prose my-6 space-y-4">
+                        <div className="flex items-start gap-4">
+                            <CreditCard className="text-purple-400 shrink-0 mt-1" size={20} />
+                            <div>
+                                <h4 className="text-white font-bold text-base mb-1">Hourly &amp; Project Rates</h4>
+                                <p className="text-slate-400 text-sm mb-0">
+                                    Ad-hoc strategy sessions and un-scoped consulting are billed at <strong>$200 USD per hour</strong>. Fixed-scope projects (e.g., n8n workflow builds starting at $750, Headless CMS builds at $1,500) require an upfront deposit.
+                                </p>
+                            </div>
+                        </div>
+                        <div className="border-t border-white/10 pt-4 flex items-start gap-4">
+                            <Lock className="text-blue-400 shrink-0 mt-1" size={20} />
+                            <div>
+                                <h4 className="text-white font-bold text-base mb-1">Deposit &amp; Invoicing Terms</h4>
+                                <p className="text-slate-400 text-sm mb-0">
+                                    A <strong>50% non-refundable deposit</strong> is required prior to project kickoff. Final payment (50%) is due upon milestone completion or workflow deployment. Invoices are issued with NET 15 payment terms via Stripe or bank transfer.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3>3.1 Overdue Invoices &amp; Late Fees</h3>
+                    <p>
+                        Invoices unpaid after 30 calendar days will accrue late interest at the rate of 1.5% per month (or the maximum allowed by law). We reserve the right to pause active consulting, disable hosting access, or suspend automated workflows for accounts with past-due balances exceeding 15 calendar days.
+                    </p>
+
+                    <h3>3.2 Refund Policy</h3>
+                    <p>
+                        Due to the custom engineering nature of our deliverables, initial deposit payments are non-refundable once discovery work has commenced. Milestone-based contracts allow for refunds only if the Company is unable to deliver the agreed-upon technical scope due to technical infeasibility.
+                    </p>
+
+                    <h2 id="intellectual" className="scroll-mt-32">4. INTELLECTUAL PROPERTY &amp; WORK PRODUCT OWNERSHIP</h2>
+                    <h3>4.1 Client Data Confidentiality</h3>
+                    <p>
+                        Clients retain 100% full, exclusive ownership of all proprietary data, CRM leads, customer records, database schemas, and API tokens provided to us during an engagement.
+                    </p>
+
+                    <h3>4.2 Custom Deliverables &amp; Code Ownership</h3>
+                    <p>
+                        Upon payment in full of all outstanding project fees, we grant the Client a perpetual, worldwide, non-exclusive, non-transferable license to use, execute, modify, and deploy all custom n8n JSON workflow scripts, Next.js frontend code, and custom API bridges created specifically for the Client.
+                    </p>
+
+                    <h3>4.3 Pre-existing Frameworks &amp; Open-Source License</h3>
+                    <p>
+                        We retain ownership of all pre-existing code libraries, reusable utility functions, boilerplate schemas, and generic automation patterns (&quot;Company Pre-Existing IP&quot;). Third-party open-source libraries (e.g., Next.js under MIT license, n8n under Sustainable Use License) remain subject to their respective original software licenses.
+                    </p>
+
+                    <h2 id="representations" className="scroll-mt-32">5. USER REPRESENTATIONS &amp; RESPONSIBILITIES</h2>
+                    <p>By accessing the Services or engaging our consulting, you represent and warrant that:</p>
                     <ol>
-                        <li>all registration information you submit will be true, accurate, current, and complete;</li>
-                        <li>you will maintain the accuracy of such information and promptly update such registration information as necessary;</li>
-                        <li>you have the legal capacity and you agree to comply with these Legal Terms;</li>
-                        <li>you are not a minor in the jurisdiction in which you reside;</li>
-                        <li>you will not access the Services through automated or non-human means, whether through a bot, script or otherwise;</li>
-                        <li>you will not use the Services for any illegal or unauthorized purpose; and</li>
-                        <li>your use of the Services will not violate any applicable law or regulation.</li>
+                        <li>All registration and contact information you submit is true, accurate, current, and complete;</li>
+                        <li>You have full legal authority to enter into binding agreements on behalf of your entity;</li>
+                        <li>You will provide necessary API access tokens, server credentials, and timely feedback required to fulfill project milestones;</li>
+                        <li>Your use of our automated workflows complies with third-party platform policies (e.g., Meta API rules, LinkedIn terms, email anti-spam laws including CAN-SPAM and GDPR).</li>
                     </ol>
 
-                    <h2 id="prohibited" className="scroll-mt-32">4. PROHIBITED ACTIVITIES</h2>
-                    <p>You may not access or use the Services for any purpose other than that for which we make the Services available. The Services may not be used in connection with any commercial endeavors except those that are specifically endorsed or approved by us.</p>
-                    <p>As a user of the Services, you agree not to:</p>
+                    <h2 id="prohibited" className="scroll-mt-32">6. PROHIBITED ACTIVITIES</h2>
+                    <p>You may not access or use the Services for any unlawful purpose. Prohibited activities include:</p>
                     <ul>
-                        <li>Systematically retrieve data or other content from the Services to create or compile, directly or indirectly, a collection, compilation, database, or directory without written permission from us.</li>
-                        <li>Trick, defraud, or mislead us and other users, especially in any attempt to learn sensitive account information such as user passwords.</li>
-                        <li>Circumvent, disable, or otherwise interfere with security-related features of the Services.</li>
-                        <li>Disparage, tarnish, or otherwise harm, in our opinion, us and/or the Services.</li>
-                        <li>Use any information obtained from the Services in order to harass, abuse, or harm another person.</li>
-                        <li>Make improper use of our support services or submit false reports of abuse or misconduct.</li>
-                        <li>Use the Services in a manner inconsistent with any applicable laws or regulations.</li>
-                        <li>Engage in unauthorized framing of or linking to the Services.</li>
-                        <li>Upload or transmit (or attempt to upload or to transmit) viruses, Trojan horses, or other material.</li>
-                        <li>Engage in any automated use of the system, such as using scripts to send comments or messages, or using any data mining, robots, or similar data gathering and extraction tools.</li>
-                        <li>Delete the copyright or other proprietary rights notice from any Content.</li>
-                        <li>Attempt to impersonate another user or person or use the username of another user.</li>
-                        <li>Interfere with, disrupt, or create an undue burden on the Services or the networks or services connected to the Services.</li>
-                        <li>Harass, annoy, intimidate, or threaten any of our employees or agents.</li>
-                        <li>Attempt to bypass any measures of the Services designed to prevent or restrict access to the Services.</li>
-                        <li>Copy or adapt the Services&apos; software, including but not limited to Flash, PHP, HTML, JavaScript, or other code.</li>
-                        <li>Decipher, decompile, disassemble, or reverse engineer any of the software.</li>
-                        <li>Use the Services as part of any effort to compete with us.</li>
+                        <li>Using automated workflows to distribute unsolicited bulk commercial email (spam) in violation of applicable laws;</li>
+                        <li>Systematically scraping or harvesting data from the Site without explicit written permission;</li>
+                        <li>Attempting to bypass security measures, reverse-engineer proprietary code, or interfere with network infrastructure;</li>
+                        <li>Impersonating another user or submitting false reports of abuse or system errors.</li>
                     </ul>
 
-                    <h2 id="contributions" className="scroll-mt-32">5. USER GENERATED CONTRIBUTIONS</h2>
-                    <p>The Services does not offer users to submit or post content. We may provide you with the opportunity to create, submit, post, display, transmit, perform, publish, distribute, or broadcast content and materials to us or on the Services (collectively, &quot;Contributions&quot;). Contributions may be viewable by other users of the Services and through third-party websites.</p>
-
-                    <h2 id="license" className="scroll-mt-32">6. CONTRIBUTION LICENSE</h2>
-                    <p>You and Services agree that we may access, store, process, and use any information and personal data that you provide following the terms of the Privacy Policy and your choices (including settings).</p>
-                    <p>By submitting suggestions or other feedback regarding the Services, you agree that we can use and share such feedback for any purpose without compensation to you.</p>
-
-                    <h2 id="submissions" className="scroll-mt-32">7. SUBMISSIONS</h2>
-                    <p>You acknowledge and agree that any questions, comments, suggestions, ideas, feedback, or other information regarding the Services (&quot;Submissions&quot;) provided by you to us are non-confidential and shall become our sole property.</p>
-
-                    <h2 id="third-party" className="scroll-mt-32">8. THIRD-PARTY WEBSITES AND CONTENT</h2>
-                    <p>The Services may contain links to other websites (&quot;Third-Party Websites&quot;) and third-party content. Such Third-Party Websites and Third-Party Content are not investigated, monitored, or checked for accuracy, appropriateness, or completeness by us, and we are not responsible for any Third-Party Websites accessed through the Services.</p>
-
-                    <h2 id="management" className="scroll-mt-32">9. SITE MANAGEMENT</h2>
-                    <p>We reserve the right, but not the obligation, to: (1) monitor the Services for violations of these Legal Terms; (2) take appropriate legal action against anyone who, in our sole discretion, violates the law or these Legal Terms; (3) in our sole discretion, refuse, restrict access to, limit the availability of, or disable any of your Contributions; (4) remove from the Services or otherwise disable all files and content that are excessive in size or are in any way burdensome to our systems; and (5) otherwise manage the Services in a manner designed to protect our rights and property and to facilitate the proper functioning of the Services.</p>
-
-                    <h2 id="privacy" className="scroll-mt-32">10. PRIVACY POLICY</h2>
-                    <p>We care about data privacy and security. Please review our <Link href="/privacy-policy/">Privacy Policy</Link>. By using the Services, you agree to be bound by our Privacy Policy, which is incorporated into these Legal Terms.</p>
-
-                    <h2 id="termination" className="scroll-mt-32">11. TERM AND TERMINATION</h2>
-                    <p>These Legal Terms shall remain in full force and effect while you use the Services. WITHOUT LIMITING ANY OTHER PROVISION OF THESE LEGAL TERMS, WE RESERVE THE RIGHT TO, IN OUR SOLE DISCRETION AND WITHOUT NOTICE OR LIABILITY, DENY ACCESS TO AND USE OF THE SERVICES (INCLUDING BLOCKING CERTAIN IP ADDRESSES), TO ANY PERSON FOR ANY REASON OR FOR NO REASON.</p>
-
-                    <h2 id="modifications" className="scroll-mt-32">12. MODIFICATIONS AND INTERRUPTIONS</h2>
-                    <p>We reserve the right to change, modify, or remove the contents of the Services at any time or for any reason at our sole discretion without notice. However, we have no obligation to update any information on our Services. We will not be liable to you or any third party for any modification, price change, suspension, or discontinuance of the Services.</p>
-
-                    <h2 id="imprint" className="scroll-mt-32">13. GOVERNING LAW</h2>
-                    <p>These Legal Terms and your use of the Services are governed by and construed in accordance with the laws of Bangladesh applicable to agreements made and to be entirely performed within Bangladesh, without regard to its conflict of law principles.</p>
-
-                    <h2 id="disputes" className="scroll-mt-32">14. DISPUTE RESOLUTION</h2>
-                    <p>Any dispute related to these Legal Terms and your use of the Services will be decided by binding arbitration. YOU AGREE TO GIVE UP YOUR RIGHT TO GO TO COURT to assert or defend your rights under this contract (except for matters that may be taken to small claims court). Your rights will be determined by a NEUTRAL ARBITRATOR and NOT a judge or jury.</p>
-
-                    <h2 id="corrections" className="scroll-mt-32">15. CORRECTIONS</h2>
-                    <p>There may be information on the Services that contains typographical errors, inaccuracies, or omissions, including descriptions, pricing, availability, and various other information. We reserve the right to correct any errors, inaccuracies, or omissions and to change or update the information on the Services at any time, without prior notice.</p>
-
-                    <h2 id="disclaimer" className="scroll-mt-32">16. DISCLAIMER</h2>
-                    <div className="p-6 border border-yellow-500/20 bg-yellow-900/10 rounded-xl">
-                        <p className="font-bold text-yellow-500 mb-2 mt-0">DISCLAIMER</p>
-                        <p className="text-yellow-100/80 mb-0 text-sm italic">
-                            THE SERVICES ARE PROVIDED ON AN AS-IS AND AS-AVAILABLE BASIS. YOU AGREE THAT YOUR USE OF THE SERVICES WILL BE AT YOUR SOLE RISK. TO THE FULLEST EXTENT PERMITTED BY LAW, WE DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED, IN CONNECTION WITH THE SERVICES AND YOUR USE THEREOF.
+                    <h2 id="disclaimer" className="scroll-mt-32">7. DISCLAIMER OF WARRANTIES</h2>
+                    <div className="p-6 border border-yellow-500/20 bg-yellow-900/10 rounded-xl not-prose">
+                        <p className="font-bold text-yellow-500 mb-2">LIMITED WARRANTY DISCLAIMER</p>
+                        <p className="text-yellow-100/80 mb-0 text-sm leading-relaxed">
+                            THE SERVICES, SOFTWARE DELIVERABLES, AND AUTOMATION WORKFLOWS ARE PROVIDED ON AN &quot;AS IS&quot; AND &quot;AS AVAILABLE&quot; BASIS. TO THE FULLEST EXTENT PERMITTED BY APPLICABLE LAW, WE DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. WE DO NOT GUARANTEE THAT THIRD-PARTY APIS (OPENAI, APOLLO, BREVO, STRIPE) WILL REMAIN UNINTERRUPTED OR UNCHANGED.
                         </p>
                     </div>
 
-                    <h2 id="liability" className="scroll-mt-32">17. LIMITATIONS OF LIABILITY</h2>
-                    <p className="p-4 bg-white/5 border border-white/10 rounded-lg text-sm">
-                        IN NO EVENT WILL WE OR OUR DIRECTORS, EMPLOYEES, OR AGENTS BE LIABLE TO YOU OR ANY THIRD PARTY FOR ANY DIRECT, INDIRECT, CONSEQUENTIAL, EXEMPLARY, INCIDENTAL, SPECIAL, OR PUNITIVE DAMAGES, INCLUDING LOST PROFIT, LOST REVENUE, LOSS OF DATA, OR OTHER DAMAGES ARISING FROM YOUR USE OF THE SERVICES.
+                    <h2 id="liability" className="scroll-mt-32">8. LIMITATION OF LIABILITY</h2>
+                    <div className="p-6 bg-white/5 border border-white/10 rounded-xl not-prose my-6">
+                        <h4 className="text-white font-bold text-base mb-2">AGGREGATE FINANCIAL LIABILITY CAP</h4>
+                        <p className="text-slate-300 text-sm mb-0 leading-relaxed">
+                            IN NO EVENT SHALL WHOISALFAZ.ME, ALFAZ MAHMUD RIZVE, OR ITS SUPPLIERS BE LIABLE FOR ANY INDIRECT, INCIDENTAL, CONSEQUENTIAL, SPECIAL, OR PUNITIVE DAMAGES (INCLUDING LOSS OF PROFITS, LOST REVENUE, DATA CORRUPTION, OR BUSINESS INTERRUPTION). OUR TOTAL CUMULATIVE LIABILITY ARISING OUT OF ANY CLAIM RELATED TO THE SERVICES SHALL BE STRICTLY LIMITED TO THE TOTAL AMOUNT OF FEES PAID BY CLIENT TO COMPANY IN THE <strong>THIRTY (30) CALENDAR DAYS</strong> IMMEDIATELY PRECEDING THE EVENT GIVING RISE TO LIABILITY.
+                        </p>
+                    </div>
+
+                    <h2 id="indemnification" className="scroll-mt-32">9. INDEMNIFICATION</h2>
+                    <p>
+                        You agree to defend, indemnify, and hold harmless whoisalfaz.me and Alfaz Mahmud Rizve from and against any claims, liabilities, damages, judgments, or expenses (including reasonable attorney fees) arising from your breach of these Legal Terms, misuse of automated workflows, or violation of third-party API terms.
                     </p>
 
-                    <h2 id="indemnification" className="scroll-mt-32">18. INDEMNIFICATION</h2>
-                    <p>You agree to defend, indemnify, and hold us harmless, including our subsidiaries, affiliates, and all of our respective officers, agents, partners, and employees, from and against any loss, damage, liability, claim, or demand, including reasonable attorneys’ fees and expenses, made by any third party due to or arising out of your use of the Services.</p>
+                    <h2 id="disputes" className="scroll-mt-32">10. GOVERNING LAW &amp; DISPUTE RESOLUTION</h2>
+                    <p>
+                        These Legal Terms shall be governed by and construed in accordance with the laws of Bangladesh, without giving effect to conflict of law principles. Any legal dispute or claim arising from these terms shall be resolved through final and binding arbitration in Chittagong, Bangladesh, conducted in the English language.
+                    </p>
 
-                    <h2 id="userdata" className="scroll-mt-32">19. USER DATA</h2>
-                    <p>We will maintain certain data that you transmit to the Services for the purpose of managing the performance of the Services, as well as data relating to your use of the Services. Although we perform regular routine backups of data, you are solely responsible for all data that you transmit or that relates to any activity you have undertaken using the Services.</p>
+                    <h2 id="termination" className="scroll-mt-32">11. TERM AND TERMINATION</h2>
+                    <p>
+                        These Legal Terms remain in full force while you use the Site or active consulting services. Either party may terminate an ongoing retainer agreement upon 30 days written notice. Upon termination, Client shall immediately pay all outstanding balances for completed work up to the termination date.
+                    </p>
 
-                    <h2 id="electronic" className="scroll-mt-32">20. ELECTRONIC COMMUNICATIONS</h2>
-                    <p>Visiting the Services, sending us emails, and completing online forms constitute electronic communications. You consent to receive electronic communications, and you agree that all agreements, notices, disclosures, and other communications we provide to you electronically, via email and on the Services, satisfy any legal requirement that such communication be in writing.</p>
-
-                    <h2 id="california" className="scroll-mt-32">21. CALIFORNIA USERS AND RESIDENTS</h2>
-                    <p>If any complaint with us is not satisfactorily resolved, you can contact the Complaint Assistance Unit of the Division of Consumer Services of the California Department of Consumer Affairs in writing at 1625 North Market Blvd., Suite N 112, Sacramento, California 95834 or by telephone at (800) 952-5210 or (916) 445-1254.</p>
-
-                    <h2 id="miscellaneous" className="scroll-mt-32">22. MISCELLANEOUS</h2>
-                    <p>These Legal Terms and any policies or operating rules posted by us on the Services or in respect to the Services constitute the entire agreement and understanding between you and us. Our failure to exercise or enforce any right or provision of these Legal Terms shall not operate as a waiver of such right or provision.</p>
-
-                    <h2 id="contact" className="scroll-mt-32">23. CONTACT US</h2>
-                    <p>In order to resolve a complaint regarding the Services or to receive further information regarding use of the Services, please contact us at:</p>
+                    <h2 id="contact" className="scroll-mt-32">12. CONTACT LEGAL &amp; CONSULTING INQUIRIES</h2>
+                    <p>For questions regarding these Terms of Service, RevOps SLAs, or legal inquiries, please contact:</p>
 
                     <div className="flex flex-col md:flex-row gap-6 not-prose mt-8">
                         <a href="mailto:contact@whoisalfaz.me" className="flex-1 p-6 bg-blue-600/10 border border-blue-500/20 rounded-xl hover:bg-blue-600/20 transition-colors group">
                             <div className="flex items-center gap-3 mb-2">
                                 <Mail className="text-blue-400" />
-                                <span className="text-white font-bold">Email Us</span>
+                                <span className="text-white font-bold">Email Legal Team</span>
                             </div>
                             <span className="text-blue-200 group-hover:underline">contact@whoisalfaz.me</span>
                         </a>
@@ -245,9 +271,9 @@ export default function TermsPage() {
                         <div className="flex-1 p-6 bg-white/5 border border-white/10 rounded-xl">
                             <div className="flex items-center gap-3 mb-2">
                                 <FileText className="text-slate-400" />
-                                <span className="text-white font-bold">Mail & Phone</span>
+                                <span className="text-white font-bold">Official Headquarters</span>
                             </div>
-                            <address className="text-slate-400 not-italic text-sm space-y-2">
+                            <address className="text-slate-400 not-italic text-sm space-y-1">
                                 <p><strong>whoisalfaz.me</strong></p>
                                 <p>Alkaran, Chittagong, Bangladesh, 4000</p>
                                 <p>Phone: +8801991210347</p>

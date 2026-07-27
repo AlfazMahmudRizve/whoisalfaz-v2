@@ -22,6 +22,14 @@ A comprehensive 30-part technical series covering production-grade n8n automatio
 
 - [30 Days of n8n & Automation Series](https://whoisalfaz.me/blog/30-days-of-n8n/)
 
+### Cluster #2 — Self-Hosted AI Infrastructure & Vector DBs
+A 20-part deep-dive technical series covering production deployment, memory tuning, vector search optimization, hybrid search, RAG pipelines, and self-hosted AI stacks using Qdrant, Pinecone, Dify.ai, Vultr Cloud GPU, Neo4j, and n8n.
+
+- [Qdrant Docker SOP](https://whoisalfaz.me/blog/self-hosted-qdrant-cluster-vultr-docker-sop/)
+- [Pinecone vs Qdrant Latency Benchmark](https://whoisalfaz.me/blog/pinecone-serverless-vs-qdrant-vultr-latency-benchmark/)
+- [Dify.ai GPU Blueprint](https://whoisalfaz.me/blog/dify-ai-vultr-gpu-docker-deployment-guide/)
+- [n8n RAG & Memory Persistence](https://whoisalfaz.me/blog/n8n-vector-store-memory-management-production-guide/)
+
 ### Case Studies — Architecture Teardowns
 Real-world technical case studies documenting complete system architectures built for clients, including a Zero-Hardware Kitchen OS (Next.js PWA), Financial Operations Dashboards, AI Resume Builders, and E-Commerce platforms.
 

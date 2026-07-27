@@ -29,6 +29,18 @@ const nextConfig: NextConfig = {
   output: 'standalone',
   async redirects() {
     return [
+      // 0. Domain Canonicalization: www to non-www apex domain
+      {
+        source: '/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'www.whoisalfaz.me',
+          },
+        ],
+        destination: 'https://whoisalfaz.me/:path*',
+        permanent: true,
+      },
       // Sitemap redirects to prevent GSC crawler 404s
       {
         source: '/sitemap_index.xml',
@@ -258,6 +270,11 @@ const nextConfig: NextConfig = {
       {
         source: '/blog/automated-facebook-leads-n8n',
         destination: '/blog/facebook-lead-ads-automation-by-alfaz-mahmud-rizve/',
+        permanent: true,
+      },
+      {
+        source: '/blog/capture-n8n-lead-data',
+        destination: '/blog/capture-n8n-lead-data-from-wordpress-elementor/',
         permanent: true,
       },
       {

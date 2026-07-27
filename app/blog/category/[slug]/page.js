@@ -39,7 +39,17 @@ export default async function CategoryPage({ params }) {
     const { slug } = await params;
     const posts = await getSanityPostsByCategory(slug);
     const category = await getSanityCategoryBySlug(slug);
-    const allCategories = await getSanityCategories();
+    const rawCategories = await getSanityCategories();
+    const defaultRequiredCategories = [
+        { name: "AI Content Systems", slug: { current: "ai-content-systems" } },
+        { name: "Learn Automation in 30 Days", slug: { current: "learn-automation-in-30-days" } }
+    ];
+    const allCategories = [...(rawCategories || [])];
+    defaultRequiredCategories.forEach(req => {
+        if (!allCategories.some(c => c.slug?.current === req.slug.current)) {
+            allCategories.push(req);
+        }
+    });
     const recentPosts = await getSidebarData();
 
     return (
