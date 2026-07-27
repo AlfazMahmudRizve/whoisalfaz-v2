@@ -18,5 +18,5 @@ jobs:
       - name: Trigger Triple Threat Indexing API
         run: |
           echo "Triggering SEO Auto-Indexer..."
-          curl -L -f -s -X GET "https://whoisalfaz.me/api/bing/submit/?secret=bing_auto_submission_secret_2024"
+          curl -L -f -s -X GET "https://whoisalfaz.me/api/bing/submit?secret=bing_auto_submission_secret_2024"
           echo -e "\nIndexing Payload Submitted."
