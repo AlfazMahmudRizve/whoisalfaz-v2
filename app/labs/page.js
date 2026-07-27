@@ -1,23 +1,23 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { Search, Calculator, Bot, ArrowRight, BarChart3 } from 'lucide-react';
+import { Search, Calculator, Bot, ArrowRight, BarChart3, Shield, Cpu, BookOpen, Layers, Terminal } from 'lucide-react';
 
 export const metadata = {
     title: 'Free Tools & Resources | WhoIsAlfaz.me',
-    description: 'Explore free automation tools, ROI calculators, and custom AI agents designed to help you streamline operations, eliminate manual work, and scale your agency or SaaS business.',
+    description: 'Explore free automation tools, ROI calculators, custom AI agents, and telemetry dashboards designed to streamline operations, eliminate manual bottlenecks, and scale your agency.',
     alternates: {
         canonical: '/labs/',
     },
     openGraph: {
         title: 'Free Tools & Resources | WhoIsAlfaz.me',
-        description: 'Explore free automation tools, ROI calculators, and custom AI agents designed to help you streamline operations, eliminate manual work, and scale your agency or SaaS business.',
+        description: 'Explore free automation tools, ROI calculators, custom AI agents, and telemetry dashboards designed to streamline operations, eliminate manual bottlenecks, and scale your agency.',
         url: 'https://whoisalfaz.me/labs/',
         type: 'website',
     },
     twitter: {
         card: 'summary_large_image',
         title: 'Free Tools & Resources | WhoIsAlfaz.me',
-        description: 'Explore free automation tools, ROI calculators, and custom AI agents designed to help you streamline operations, eliminate manual work, and scale your agency or SaaS business.',
+        description: 'Explore free automation tools, ROI calculators, custom AI agents, and telemetry dashboards designed to streamline operations, eliminate manual bottlenecks, and scale your agency.',
     }
 };
 
@@ -25,7 +25,7 @@ export default function ToolsPage() {
     const tools = [
         {
             title: 'Agency Audit',
-            desc: 'Get a comprehensive audit of your automation potential and hidden bottlenecks.',
+            desc: 'Get an instant, comprehensive technical audit of your operational workflows, SEO infrastructure, performance metrics, and hidden data bottlenecks.',
             icon: Search,
             href: '/audit/',
             color: 'text-blue-600 dark:text-blue-400',
@@ -34,7 +34,7 @@ export default function ToolsPage() {
         },
         {
             title: 'ROI Calculator',
-            desc: 'Calculate exactly how much money you can save by automating your manual tasks.',
+            desc: 'Quantify the financial drain of manual operations. Calculate yearly dollar losses, hourly efficiency metrics, and payback timelines for automated fixes.',
             icon: Calculator,
             href: '/labs/roi/',
             color: 'text-emerald-600 dark:text-emerald-400',
@@ -43,7 +43,7 @@ export default function ToolsPage() {
         },
         {
             title: 'CashOps',
-            desc: 'Developer-focused financial dashboard with real-time telemetry and zero-latency data visualization.',
+            desc: 'Developer-focused financial dashboard featuring real-time telemetry, zero-latency data aggregation, and autonomous revenue tracking.',
             icon: BarChart3,
             image: '/cashops-logo.png',
             href: 'https://cashops.whoisalfaz.me',
@@ -53,7 +53,7 @@ export default function ToolsPage() {
         },
         {
             title: 'CareerOps',
-            desc: 'Privacy-first resume optimization. AI-powered role matching without storing your data.',
+            desc: 'Privacy-first resume optimization tool built with custom AI prompts to match job requirements without retaining or selling personal applicant data.',
             icon: Bot,
             image: '/careerops-logo.png',
             href: 'https://careerops.whoisalfaz.me',
@@ -63,7 +63,7 @@ export default function ToolsPage() {
         },
         {
             title: 'Ask Alfaz AI',
-            desc: 'Chat with our custom AI agent trained on n8n workflows and growth strategies.',
+            desc: 'Interactive custom AI agent trained on n8n architecture, full-stack Next.js patterns, and RevOps workflow optimization methodologies.',
             icon: Bot,
             href: '/labs/chat/',
             color: 'text-purple-600 dark:text-purple-400',
@@ -80,18 +80,17 @@ export default function ToolsPage() {
             <div className="fixed top-20 left-10 w-96 h-96 bg-purple-500/10 dark:bg-purple-500/5 rounded-full blur-[100px] -z-10 animate-pulse transition-opacity duration-300" />
 
             {/* Hero Header */}
-            <div className="max-w-4xl mx-auto text-center mb-20 animate-in fade-in slide-in-from-bottom-8 duration-1000">
+            <div className="max-w-4xl mx-auto text-center mb-16 animate-in fade-in slide-in-from-bottom-8 duration-1000">
                 <h1 className="text-4xl md:text-6xl font-black text-slate-900 dark:text-white mb-6 uppercase tracking-tight transition-colors duration-300">
                     Automation <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-purple-600 dark:from-teal-400 dark:to-blue-500">Playground</span>
                 </h1>
                 <p className="text-lg font-medium text-slate-500 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed transition-colors duration-300">
-                    Free tools to calculate your ROI, audit your site, and test our custom AI agents.
-                    Stop guessing and start optimizing.
+                    Interactive engineering tools, calculators, and AI agents built to audit your tech stack, calculate workflow ROI, and test real-time operational logic.
                 </p>
             </div>
 
             {/* Tools Grid */}
-            <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8 pb-10">
+            <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8 pb-16">
                 {tools.map((tool, i) => (
                     <Link
                         key={i}
@@ -116,9 +115,9 @@ export default function ToolsPage() {
                         </div>
 
                         {/* Content */}
-                        <h3 className="text-2xl font-black text-slate-900 dark:text-white mb-4 uppercase tracking-tight group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">
+                        <h2 className="text-2xl font-black text-slate-900 dark:text-white mb-4 uppercase tracking-tight group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">
                             {tool.title}
-                        </h3>
+                        </h2>
                         <p className="text-slate-500 dark:text-slate-400 text-[15px] font-medium leading-relaxed mb-10 flex-grow transition-colors">
                             {tool.desc}
                         </p>
@@ -131,11 +130,69 @@ export default function ToolsPage() {
                     </Link>
                 ))}
             </div>
-            
-            <div className="max-w-4xl mx-auto mt-16 text-center animate-in fade-in duration-1000 delay-1000 fill-mode-both">
-               <p className="text-slate-400 dark:text-slate-500 text-xs font-black uppercase tracking-widest">More algorithms in architecture phase. Check back soon.</p> 
+
+            {/* GUIDELINES & ARCHITECTURE OVERVIEW */}
+            <div className="max-w-4xl mx-auto space-y-8 mb-16">
+                <div className="bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-3xl p-8 md:p-10 shadow-sm">
+                    <div className="flex items-center gap-3 mb-6">
+                        <div className="w-10 h-10 rounded-xl bg-teal-500/10 text-teal-600 dark:text-teal-400 flex items-center justify-center">
+                            <Layers size={20} />
+                        </div>
+                        <h3 className="text-2xl font-black text-slate-900 dark:text-white uppercase tracking-tight">
+                            Labs Architecture & Technical Overview
+                        </h3>
+                    </div>
+                    <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-6">
+                        The tools in our Labs playground are built on self-hosted n8n engine logic, serverless Next.js edge functions, and client-side reactive state machines. Designed with performance and security in mind, these utilities provide instant, actionable insights without operational bloat.
+                    </p>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4 border-t border-slate-200 dark:border-white/10">
+                        <div className="flex items-start gap-3">
+                            <Shield size={18} className="text-teal-500 mt-1 shrink-0" />
+                            <div>
+                                <h4 className="font-bold text-slate-900 dark:text-white text-sm">Zero Data Retention</h4>
+                                <p className="text-slate-500 dark:text-slate-400 text-xs mt-1">Calculations and audit data remain strictly in memory or client-side context; inputs are never sold or stored permanently.</p>
+                            </div>
+                        </div>
+                        <div className="flex items-start gap-3">
+                            <Cpu size={18} className="text-purple-500 mt-1 shrink-0" />
+                            <div>
+                                <h4 className="font-bold text-slate-900 dark:text-white text-sm">Deterministic Simulation</h4>
+                                <p className="text-slate-500 dark:text-slate-400 text-xs mt-1">Calculators use mathematical models derived from real agency benchmarks to project payback periods and operational cost reductions accurately.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-3xl p-8 md:p-10 shadow-sm">
+                    <div className="flex items-center gap-3 mb-6">
+                        <div className="w-10 h-10 rounded-xl bg-blue-500/10 text-blue-600 dark:text-blue-400 flex items-center justify-center">
+                            <BookOpen size={20} />
+                        </div>
+                        <h3 className="text-2xl font-black text-slate-900 dark:text-white uppercase tracking-tight">
+                            Usage Guidelines for Agency Leaders
+                        </h3>
+                    </div>
+                    <div className="space-y-4 text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+                        <p>
+                            <strong>1. Audit First:</strong> Run the <em>Agency Audit</em> tool to baseline your website speed, security posture, and missing automation hooks before committing capital.
+                        </p>
+                        <p>
+                            <strong>2. Quantify Loss:</strong> Use the <em>ROI Calculator</em> with your team&apos;s effective hourly rate to pinpoint exact weekly financial leakage caused by manual tasks.
+                        </p>
+                        <p>
+                            <strong>3. Consult AI Agent:</strong> Ask <em>Alfaz AI</em> targeted questions regarding n8n node structures, lead routing logic, or Next.js integration architectures to evaluate solutions quickly.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div className="max-w-4xl mx-auto text-center animate-in fade-in duration-1000 fill-mode-both">
+                <p className="text-slate-400 dark:text-slate-500 text-xs font-black uppercase tracking-widest flex items-center justify-center gap-2">
+                    <Terminal size={14} /> More algorithms in architecture phase. Check back soon.
+                </p> 
             </div>
 
         </main>
     );
 }
+

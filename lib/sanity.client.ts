@@ -62,7 +62,8 @@ export async function getSanityPostsByCategory(categorySlug: string) {
 export async function getSanityCategoryBySlug(categorySlug: string) {
   const query = `*[_type == "category" && slug.current == $categorySlug][0] {
     name,
-    slug
+    slug,
+    description
   }`
   return client.fetch(query, { categorySlug })
 }

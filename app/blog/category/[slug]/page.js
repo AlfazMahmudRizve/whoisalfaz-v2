@@ -18,7 +18,9 @@ export async function generateMetadata({ params }) {
     const category = await getSanityCategoryBySlug(slug);
     const name = category?.name || slug;
     const title = `${name} — Blog`;
-    const description = `Read all articles about ${name}. Technical tutorials, case studies, and architectural blueprints by Alfaz Mahmud Rizve.`;
+    const description = category?.description
+        ? `${category.description.slice(0, 155).trim()}...`
+        : `Read all articles about ${name}. Technical tutorials, case studies, and architectural blueprints by Alfaz Mahmud Rizve.`;
 
     return {
         title,
@@ -62,7 +64,7 @@ export default async function CategoryPage({ params }) {
                         "@context": "https://schema.org",
                         "@type": "CollectionPage",
                         "name": `${category?.name || slug} — Blog`,
-                        "description": `All articles about ${category?.name || slug} by Alfaz Mahmud Rizve.`,
+                        "description": category?.description || `All articles about ${category?.name || slug} by Alfaz Mahmud Rizve.`,
                         "url": `https://whoisalfaz.me/blog/category/${slug}/`,
                         "mainEntity": {
                             "@type": "ItemList",
@@ -84,21 +86,36 @@ export default async function CategoryPage({ params }) {
 
                 {/* === LEFT COLUMN: MAIN CONTENT === */}
                 <div>
-                    {/* HEADER */}
-                    <section className="mb-12">
-                        <div className="flex items-center gap-2 text-sm text-slate-400 dark:text-slate-400 mb-4">
+                    {/* HERO SECTION */}
+                    <section className="mb-12 bg-white dark:bg-[#111111]/80 border border-slate-200 dark:border-white/10 rounded-2xl p-6 sm:p-8 shadow-sm backdrop-blur-sm transition-colors duration-300">
+                        <div className="flex items-center gap-2 text-sm text-slate-500 dark:text-slate-400 mb-4">
                             <Link href="/blog/" className="hover:text-slate-900 dark:hover:text-white transition-colors">Blog</Link>
                             <ChevronRight size={14} />
-                            <span className="text-teal-600 dark:text-blue-400">Category</span>
+                            <span className="text-teal-600 dark:text-blue-400 font-medium">Category</span>
                             <ChevronRight size={14} />
-                            <span className="text-slate-900 dark:text-white capitalize transition-colors duration-300">{category?.name || slug}</span>
+                            <span className="text-slate-900 dark:text-white font-semibold transition-colors duration-300">{category?.name || slug}</span>
                         </div>
-                        <h1 className="text-4xl font-bold text-slate-900 dark:text-white mb-4 transition-colors duration-300">
-                            <span className="text-teal-600 dark:text-blue-500">#</span> {category?.name || slug}
-                        </h1>
-                        <p className="text-slate-500 dark:text-slate-400 transition-colors duration-300">
-                            Browsing all articles in <span className="text-slate-900 dark:text-white font-medium transition-colors duration-300">&quot;{category?.name || slug}&quot;</span>.
-                        </p>
+
+                        <div className="flex flex-wrap items-center justify-between gap-4 mb-6 pb-6 border-b border-slate-100 dark:border-white/10">
+                            <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight transition-colors duration-300">
+                                <span className="text-teal-600 dark:text-blue-500">#</span> {category?.name || slug}
+                            </h1>
+                            <span className="px-3 py-1 bg-teal-50 dark:bg-blue-950/50 text-teal-700 dark:text-blue-400 text-xs font-semibold rounded-full border border-teal-200/50 dark:border-blue-800/50">
+                                {posts.length} {posts.length === 1 ? 'Article' : 'Articles'}
+                            </span>
+                        </div>
+
+                        {category?.description ? (
+                            <div className="space-y-4 text-slate-600 dark:text-slate-300 text-base leading-relaxed">
+                                {category.description.split('\n\n').map((paragraph, idx) => (
+                                    <p key={idx}>{paragraph.trim()}</p>
+                                ))}
+                            </div>
+                        ) : (
+                            <p className="text-slate-500 dark:text-slate-400 transition-colors duration-300">
+                                Browsing all articles in <span className="text-slate-900 dark:text-white font-medium transition-colors duration-300">&quot;{category?.name || slug}&quot;</span>.
+                            </p>
+                        )}
                     </section>
 
                     {/* BLOG ARCHIVE */}
