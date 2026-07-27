@@ -6,12 +6,12 @@ export const metadata = {
   title: 'Alfaz Mahmud Rizve - RevOps Architect & Full Stack Engineer',
   description: 'Alfaz Mahmud Rizve is a RevOps automation architect and full-stack engineer. Learn about his credentials, engineering methodology, client outcomes, and system architecture philosophy.',
   alternates: {
-    canonical: 'https://whoisalfaz.me/about/alfaz-mahmud-rizve/',
+    canonical: 'https://whoisalfaz.me/about/alfaz-mahmud-rizve',
   },
   openGraph: {
     title: 'Alfaz Mahmud Rizve - RevOps Architect & Full Stack Engineer',
     description: 'Alfaz Mahmud Rizve is a RevOps automation architect and full-stack engineer. Learn about his credentials, engineering methodology, client outcomes, and system architecture philosophy.',
-    url: 'https://whoisalfaz.me/about/alfaz-mahmud-rizve/',
+    url: 'https://whoisalfaz.me/about/alfaz-mahmud-rizve',
     type: 'profile',
     images: [
       {

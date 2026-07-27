@@ -6,12 +6,12 @@ export const metadata = {
     title: 'Free Tools & Resources | WhoIsAlfaz.me',
     description: 'Explore free automation tools, ROI calculators, custom AI agents, and telemetry dashboards designed to streamline operations, eliminate manual bottlenecks, and scale your agency.',
     alternates: {
-        canonical: '/labs/',
+        canonical: 'https://whoisalfaz.me/labs',
     },
     openGraph: {
         title: 'Free Tools & Resources | WhoIsAlfaz.me',
         description: 'Explore free automation tools, ROI calculators, custom AI agents, and telemetry dashboards designed to streamline operations, eliminate manual bottlenecks, and scale your agency.',
-        url: 'https://whoisalfaz.me/labs/',
+        url: 'https://whoisalfaz.me/labs',
         type: 'website',
     },
     twitter: {

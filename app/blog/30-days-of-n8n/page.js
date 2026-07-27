@@ -4,21 +4,31 @@ import Image from 'next/image';
 import { ArrowLeft, Clock, ArrowRight, PlayCircle } from 'lucide-react';
 
 export const metadata = {
-  title: '30 Days of n8n & Automation Series | Alfaz Mahmud Rizve',
-  description: 'A comprehensive 30-day architectural blueprint for mastering n8n, automation, and enterprise RevOps. Complete guide from bare-metal servers to AI agents.',
+  title: '30 Days of n8n & Automation Series | whoisalfaz',
+  description: 'A comprehensive 30-day architectural blueprint for mastering n8n, self-hosted automation, and enterprise RevOps. Complete guide from bare-metal servers to AI agents.',
   alternates: {
-    canonical: 'https://whoisalfaz.me/blog/30-days-of-n8n/',
+    canonical: 'https://whoisalfaz.me/blog/30-days-of-n8n',
   },
   openGraph: {
     title: '30 Days of n8n & Automation Series | Alfaz Mahmud Rizve',
     description: 'A comprehensive 30-day architectural blueprint for mastering n8n, automation, and enterprise RevOps. Complete guide from bare-metal servers to AI agents.',
-    url: 'https://whoisalfaz.me/blog/30-days-of-n8n/',
+    url: 'https://whoisalfaz.me/blog/30-days-of-n8n',
     type: 'website',
+    siteName: 'whoisalfaz',
+    images: [
+      {
+        url: 'https://whoisalfaz.me/featured-image.png',
+        width: 1200,
+        height: 630,
+        alt: '30 Days of n8n & Automation Series – whoisalfaz',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: '30 Days of n8n & Automation Series | Alfaz Mahmud Rizve',
-    description: 'A comprehensive 30-day architectural blueprint for mastering n8n, automation, and enterprise RevOps. Complete guide from bare-metal servers to AI agents.',
+    title: '30 Days of n8n & Automation Series | whoisalfaz',
+    description: 'A comprehensive 30-day architectural blueprint for mastering n8n, self-hosted automation, and enterprise RevOps. Complete guide from bare-metal servers to AI agents.',
+    images: ['https://whoisalfaz.me/featured-image.png'],
   },
 };
 
@@ -28,8 +38,58 @@ export default async function SeriesIndexPage() {
   // Sort posts chronologically for a series
   const seriesPosts = [...posts].sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
 
+  const seriesJsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "name": "30 Days of n8n & Automation Series",
+        "description": "A comprehensive 30-day architectural blueprint for mastering n8n, self-hosted automation, and enterprise RevOps.",
+        "url": "https://whoisalfaz.me/blog/30-days-of-n8n/",
+        "mainEntity": {
+          "@type": "ItemList",
+          "numberOfItems": seriesPosts.length,
+          "itemListElement": seriesPosts.map((post, i) => ({
+            "@type": "ListItem",
+            "position": i + 1,
+            "url": `https://whoisalfaz.me/blog/${post.slug.current}/`,
+            "name": post.title
+          }))
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://whoisalfaz.me/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://whoisalfaz.me/blog/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "30 Days of n8n",
+            "item": "https://whoisalfaz.me/blog/30-days-of-n8n/"
+          }
+        ]
+      }
+    ]
+  };
+
   return (
     <main className="min-h-screen pt-32 pb-20 px-6 bg-slate-50 dark:bg-[#0a0a0a] transition-colors duration-300">
+      {/* JSON-LD SCHEMA */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(seriesJsonLd) }}
+      />
       <div className="fixed top-0 left-0 w-full h-[600px] bg-gradient-to-b from-teal-500/10 to-transparent dark:from-teal-900/10 dark:to-transparent -z-10" />
 
       <div className="max-w-5xl mx-auto">
@@ -120,6 +180,27 @@ export default async function SeriesIndexPage() {
             </Link>
           ))}
         </div>
+
+        {/* DIRECT H2 ANSWER SUMMARIES FOR SEMRUSH OPTIMIZATION */}
+        <section className="mt-20 pt-12 border-t border-slate-200 dark:border-white/10 space-y-10">
+          <div>
+            <h2 className="text-2xl font-black text-slate-900 dark:text-white uppercase tracking-tight mb-3">
+              What Is The 30 Days of n8n Series?
+            </h2>
+            <p className="text-slate-600 dark:text-slate-400 text-[15px] leading-relaxed">
+              The 30 Days of n8n series is an intensive, 30-part architectural blueprint for engineering self-hosted, enterprise-grade automation infrastructures, production n8n workflows, and AI agent integrations.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-2xl font-black text-slate-900 dark:text-white uppercase tracking-tight mb-3">
+              How Do You Deploy Self-Hosted n8n Workflows?
+            </h2>
+            <p className="text-slate-600 dark:text-slate-400 text-[15px] leading-relaxed">
+              You deploy self-hosted n8n workflows by launching Docker containers on cloud VPS providers (such as Vultr or Hetzner), configuring SSL TLS handshakes, setting up PostgreSQL database persistence, and securing webhook endpoints.
+            </p>
+          </div>
+        </section>
 
       </div>
     </main>

@@ -20,5 +20,5 @@ export default async function DynamicRootPage({ params }) {
     }
 
     // Redirect to the canonical blog post path
-    redirect(`/blog/${slug}/`);
+    redirect(`/blog/${slug}`);
 }

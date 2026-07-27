@@ -6,12 +6,12 @@ export const metadata = {
     title: "Privacy Policy | Alfaz Mahmud Rizve",
     description: "Read the Privacy Notice and Data Protection Policy for whoisalfaz.me. Learn exactly how we collect, process, and secure your personal information in compliance with global laws.",
     alternates: {
-        canonical: '/privacy-policy/',
+        canonical: 'https://whoisalfaz.me/privacy-policy',
     },
     openGraph: {
         title: "Privacy Policy | Alfaz Mahmud Rizve",
         description: "Read the Privacy Notice and Data Protection Policy for whoisalfaz.me. Learn exactly how we collect, process, and secure your personal information in compliance with global laws.",
-        url: 'https://whoisalfaz.me/privacy-policy/',
+        url: 'https://whoisalfaz.me/privacy-policy',
         type: 'website',
     },
     twitter: {

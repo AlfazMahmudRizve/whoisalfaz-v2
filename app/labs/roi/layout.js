@@ -2,12 +2,12 @@ export const metadata = {
     title: "ROI Calculator | Real Cost of Manual Work",
     description: "Calculate exactly how much money you can save by automating your manual tasks. Find the hidden drain on your business resources.",
     alternates: {
-        canonical: '/labs/roi/',
+        canonical: 'https://whoisalfaz.me/labs/roi',
     },
     openGraph: {
         title: "ROI Calculator | Real Cost of Manual Work",
         description: "Calculate exactly how much money you can save by automating your manual tasks. Find the hidden drain on your business resources.",
-        url: 'https://whoisalfaz.me/labs/roi/',
+        url: 'https://whoisalfaz.me/labs/roi',
         type: 'website',
     },
     twitter: {

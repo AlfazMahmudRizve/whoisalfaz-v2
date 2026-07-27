@@ -2,22 +2,66 @@ import Link from 'next/link';
 import { ScrollText, Mail, FileText, Scale, AlertTriangle, ShieldCheck, Clock, CreditCard, Lock } from 'lucide-react';
 
 export const metadata = {
-    title: "Terms of Service & Consulting SLA | Alfaz Mahmud Rizve",
+    title: "Terms of Service & Consulting SLA | whoisalfaz",
     description: "Legal Terms of Service and RevOps consulting Service Level Agreement (SLA) for whoisalfaz.me, covering intellectual property, SLAs, payment terms, and liability limits.",
     alternates: {
-        canonical: '/terms/',
+        canonical: 'https://whoisalfaz.me/terms',
     },
     openGraph: {
         title: "Terms of Service & Consulting SLA | Alfaz Mahmud Rizve",
         description: "Legal Terms of Service and RevOps consulting Service Level Agreement (SLA) for whoisalfaz.me, covering intellectual property, SLAs, payment terms, and liability limits.",
-        url: 'https://whoisalfaz.me/terms/',
+        url: 'https://whoisalfaz.me/terms',
         type: 'website',
+        siteName: 'whoisalfaz',
+        images: [
+            {
+                url: 'https://whoisalfaz.me/featured-image.png',
+                width: 1200,
+                height: 630,
+                alt: 'Terms of Service & Consulting SLA – whoisalfaz',
+            },
+        ],
     },
     twitter: {
         card: 'summary_large_image',
-        title: "Terms of Service & Consulting SLA | Alfaz Mahmud Rizve",
+        title: "Terms of Service & Consulting SLA | whoisalfaz",
         description: "Legal Terms of Service and RevOps consulting Service Level Agreement (SLA) for whoisalfaz.me, covering intellectual property, SLAs, payment terms, and liability limits.",
+        images: ['https://whoisalfaz.me/featured-image.png'],
     }
+};
+
+const termsJsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "WebPage",
+            "name": "Terms of Service & Consulting SLA",
+            "description": "Legal Terms of Service and RevOps consulting Service Level Agreement (SLA) for whoisalfaz.me.",
+            "url": "https://whoisalfaz.me/terms/",
+            "publisher": {
+                "@type": "Person",
+                "name": "Alfaz Mahmud Rizve",
+                "url": "https://whoisalfaz.me"
+            }
+        },
+        {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://whoisalfaz.me/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Terms of Service",
+                    "item": "https://whoisalfaz.me/terms/"
+                }
+            ]
+        }
+    ]
 };
 
 export default function TermsPage() {
@@ -38,6 +82,12 @@ export default function TermsPage() {
 
     return (
         <main className="min-h-screen pt-32 pb-20 px-6 bg-[#0a0a0a] selection:bg-purple-500/30 selection:text-white">
+            {/* JSON-LD SCHEMA */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(termsJsonLd) }}
+            />
+
             {/* BACKGROUND ELEMENTS */}
             <div className="fixed inset-0 bg-[#0a0a0a] -z-20" />
             <div className="fixed inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-900/20 via-[#0a0a0a] to-[#0a0a0a] -z-10" />

@@ -9,20 +9,30 @@ import DefaultContentFooter from '../../components/footers/DefaultContentFooter'
 
 export const metadata = {
     title: "Case Studies & Architecture Teardowns | Alfaz Mahmud Rizve",
-    description: "Deep dive technical breakdowns of production automated systems, Next.js architecture, and AI agents.",
+    description: "Deep dive technical case studies detailing production automated systems, Next.js architecture, n8n RevOps pipelines, and enterprise AI agents.",
     alternates: {
-        canonical: "https://whoisalfaz.me/case-studies/",
+        canonical: "https://whoisalfaz.me/case-studies",
     },
     openGraph: {
         title: "Case Studies & Architecture Teardowns | Alfaz Mahmud Rizve",
         description: "Deep dive technical breakdowns of production automated systems, Next.js architecture, and AI agents.",
-        url: "https://whoisalfaz.me/case-studies/",
+        url: "https://whoisalfaz.me/case-studies",
         type: "website",
+        siteName: "whoisalfaz",
+        images: [
+            {
+                url: "https://whoisalfaz.me/featured-image.png",
+                width: 1200,
+                height: 630,
+                alt: "Case Studies & Architecture Teardowns – whoisalfaz",
+            },
+        ],
     },
     twitter: {
         card: "summary_large_image",
         title: "Case Studies & Architecture Teardowns | Alfaz Mahmud Rizve",
-        description: "Deep dive technical breakdowns of production automated systems, Next.js architecture, and AI agents.",
+        description: "Deep dive technical case studies detailing production automated systems, Next.js architecture, n8n RevOps pipelines, and enterprise AI agents.",
+        images: ["https://whoisalfaz.me/featured-image.png"],
     },
 };
 
@@ -30,8 +40,74 @@ export default async function CaseStudiesPage() {
     // We already know the category name we want
     const posts = await getSanityPostsByCategory('architecture-teardowns');
 
+    const caseStudiesJsonLd = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "CollectionPage",
+                "name": "Case Studies & Architecture Teardowns",
+                "description": "Deep dive technical case studies detailing production automated systems, Next.js architecture, n8n RevOps pipelines, and enterprise AI agents.",
+                "url": "https://whoisalfaz.me/case-studies/",
+                "mainEntity": {
+                    "@type": "ItemList",
+                    "numberOfItems": posts?.length || 0,
+                    "itemListElement": (posts || []).map((post, i) => ({
+                        "@type": "ListItem",
+                        "position": i + 1,
+                        "url": `https://whoisalfaz.me/blog/${post.slug.current}/`,
+                        "name": post.title
+                    }))
+                }
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://whoisalfaz.me/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Case Studies",
+                        "item": "https://whoisalfaz.me/case-studies/"
+                    }
+                ]
+            },
+            {
+                "@type": "FAQPage",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "What technologies are covered in these case studies?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Our case studies cover self-hosted n8n automation, Next.js headless web applications, vector databases (Qdrant/Pinecone), AI agents (Dify/OpenAI), and RevOps integration pipelines."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Can these architectural blueprints be deployed for my business?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Yes. Each case study details production-ready architecture that can be customized and deployed via our custom engineering and consulting services."
+                        }
+                    }
+                ]
+            }
+        ]
+    };
+
     return (
         <main className="min-h-screen pt-32 pb-20 px-6 bg-slate-50 dark:bg-[#0a0a0a] transition-colors duration-300">
+            {/* JSON-LD SCHEMA */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(caseStudiesJsonLd) }}
+            />
+
             {/* BACKGROUND */}
             <div className="fixed inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-500/10 via-slate-50 to-slate-50 dark:from-blue-900/10 dark:via-[#0a0a0a] dark:to-[#0a0a0a] -z-10 transition-colors duration-300" />
 
@@ -99,6 +175,27 @@ export default async function CaseStudiesPage() {
                                 ))}
                             </div>
                         )}
+                    </section>
+
+                    {/* DIRECT H2 ANSWER SUMMARIES FOR SEMRUSH OPTIMIZATION */}
+                    <section className="mt-20 pt-12 border-t border-slate-200 dark:border-white/10 space-y-10">
+                        <div>
+                            <h2 className="text-2xl font-black text-slate-900 dark:text-white uppercase tracking-tight mb-3">
+                                What Are Systems Architecture Teardowns &amp; Case Studies?
+                            </h2>
+                            <p className="text-slate-600 dark:text-slate-400 text-[15px] leading-relaxed">
+                                Systems architecture teardowns are comprehensive technical case studies detailing production-tested n8n automation workflows, Next.js web applications, vector database infrastructures, and AI agent frameworks built to optimize revenue operations and scale SaaS platforms.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h2 className="text-2xl font-black text-slate-900 dark:text-white uppercase tracking-tight mb-3">
+                                How Do Our Engineering Blueprints Accelerate Growth?
+                            </h2>
+                            <p className="text-slate-600 dark:text-slate-400 text-[15px] leading-relaxed">
+                                Our engineering blueprints accelerate growth by providing exact, battle-tested code structures, self-hosted deployment guides, API integration patterns, and unit economics calculations that eliminate trial-and-error in enterprise RevOps.
+                            </p>
+                        </div>
                     </section>
                 </div>
 

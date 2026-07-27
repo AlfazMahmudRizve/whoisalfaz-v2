@@ -20,34 +20,34 @@ export async function GET(request: Request) {
 
         // 1. Static Routes (Core Pages - mirrors sitemap.ts)
         const staticRoutes = [
-            '/',
-            '/portfolio/',
-            '/blog/',
-            '/blog/30-days-of-n8n/',
-            '/about/alfaz-mahmud-rizve/',
-            '/case-studies/',
-            '/contact/',
-            '/services/',
-            '/partners/',
-            '/labs/',
-            '/labs/roi/',
-            '/audit/',
-            '/terms/',
-            '/privacy-policy/',
+            '',
+            '/portfolio',
+            '/blog',
+            '/blog/30-days-of-n8n',
+            '/about/alfaz-mahmud-rizve',
+            '/case-studies',
+            '/contact',
+            '/services',
+            '/partners',
+            '/labs',
+            '/labs/roi',
+            '/audit',
+            '/terms',
+            '/privacy-policy',
         ].map(route => `${baseUrl}${route}`);
 
         // 2. Dynamic Service Pages (mirrors sitemap.ts)
         const serviceSlugs = Object.keys(serviceData);
-        const serviceRoutes = serviceSlugs.map(slug => `${baseUrl}/services/${slug}/`);
+        const serviceRoutes = serviceSlugs.map(slug => `${baseUrl}/services/${slug}`);
 
         // 3. Dynamic Blog Posts (mirrors sitemap.ts)
         const posts = await getSanityPosts();
-        const blogRoutes = posts.map((post: { slug: { current: string } }) => `${baseUrl}/blog/${post.slug.current}/`);
+        const blogRoutes = posts.map((post: { slug: { current: string } }) => `${baseUrl}/blog/${post.slug.current}`);
 
         // 4. Dynamic Blog Categories (mirrors sitemap.ts)
         const categories = await getSanityCategories();
         const validCategories = categories.filter((cat: { count: number }) => cat.count > 0);
-        const categoryRoutes = validCategories.map((cat: { slug: { current: string } }) => `${baseUrl}/blog/category/${cat.slug.current}/`);
+        const categoryRoutes = validCategories.map((cat: { slug: { current: string } }) => `${baseUrl}/blog/category/${cat.slug.current}`);
 
         // Combine all canonical search engine indexable routes
         const allUrls = [...staticRoutes, ...serviceRoutes, ...blogRoutes, ...categoryRoutes];

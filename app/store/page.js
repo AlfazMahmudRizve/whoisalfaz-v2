@@ -10,12 +10,12 @@ export const metadata = {
     title: "Automation Templates & Digital Products | whoisalfaz.me",
     description: "Production-ready n8n workflow templates, AI automation blueprints, and RevOps systems. Get access to 18 premium templates.",
     alternates: {
-        canonical: "https://whoisalfaz.me/store/",
+        canonical: "https://whoisalfaz.me/store",
     },
     openGraph: {
         title: "Automation Templates & Digital Products | whoisalfaz.me",
         description: "Production-ready n8n workflow templates, AI automation blueprints, and RevOps systems. Get access to 18 premium templates.",
-        url: "https://whoisalfaz.me/store/",
+        url: "https://whoisalfaz.me/store",
         type: "website",
     },
     twitter: {

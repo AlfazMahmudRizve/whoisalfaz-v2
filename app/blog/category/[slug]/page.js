@@ -13,27 +13,67 @@ async function getSidebarData() {
     return posts?.slice(0, 5) || [];
 }
 
+const CATEGORY_MAP = {
+    '30-days-of-n8n-automation': {
+        name: '30 Days of n8n Automation',
+        title: '30 Days of n8n Automation Series | whoisalfaz',
+        description: 'A comprehensive 30-day architectural blueprint for mastering n8n, self-hosted automation, and enterprise RevOps workflows.'
+    },
+    'architecture-teardowns': {
+        name: 'Architecture Teardowns',
+        title: 'Architecture Teardowns & Systems Blueprints | whoisalfaz',
+        description: 'Deep dive technical case studies detailing production automated systems, Next.js architecture, and AI agent frameworks.'
+    },
+    'ai-content-systems': {
+        name: 'AI Content Systems',
+        title: 'AI Content Systems & LLM Automation | whoisalfaz',
+        description: 'Guides and blueprints for building autonomous AI content generation engines, vector databases, and programmatic workflow pipelines.'
+    },
+    'learn-automation-in-30-days': {
+        name: 'Learn Automation in 30 Days',
+        title: 'Learn Automation in 30 Days | whoisalfaz',
+        description: 'Step-by-step 30-day guide to building production-grade automation workflows with n8n, webhooks, and AI agents.'
+    }
+};
+
 export async function generateMetadata({ params }) {
     const { slug } = await params;
     const category = await getSanityCategoryBySlug(slug);
-    const name = category?.name || slug;
-    const title = `${name} — Blog`;
-    const description = category?.description
+    const custom = CATEGORY_MAP[slug];
+
+    const name = custom?.name || category?.name || slug.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+    const title = custom?.title || `${name} — Technical Guides & Blueprints | whoisalfaz`;
+    const description = custom?.description || (category?.description
         ? `${category.description.slice(0, 155).trim()}...`
-        : `Read all articles about ${name}. Technical tutorials, case studies, and architectural blueprints by Alfaz Mahmud Rizve.`;
+        : `Read all articles about ${name}. Technical tutorials, case studies, and architectural blueprints by Alfaz Mahmud Rizve.`);
 
     return {
         title,
         description,
         alternates: {
-            canonical: `/blog/category/${slug}/`,
+            canonical: `https://whoisalfaz.me/blog/category/${slug}`,
         },
         openGraph: {
             title,
             description,
-            url: `https://whoisalfaz.me/blog/category/${slug}/`,
+            url: `https://whoisalfaz.me/blog/category/${slug}`,
             type: 'website',
+            siteName: 'whoisalfaz',
+            images: [
+                {
+                    url: 'https://whoisalfaz.me/featured-image.png',
+                    width: 1200,
+                    height: 630,
+                    alt: `${name} Category – whoisalfaz`,
+                },
+            ],
         },
+        twitter: {
+            card: 'summary_large_image',
+            title,
+            description,
+            images: ['https://whoisalfaz.me/featured-image.png'],
+        }
     };
 }
 
@@ -41,10 +81,16 @@ export default async function CategoryPage({ params }) {
     const { slug } = await params;
     const posts = await getSanityPostsByCategory(slug);
     const category = await getSanityCategoryBySlug(slug);
+    const custom = CATEGORY_MAP[slug];
+    const categoryName = custom?.name || category?.name || slug.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+    const categoryDescription = custom?.description || category?.description;
+
     const rawCategories = await getSanityCategories();
     const defaultRequiredCategories = [
         { name: "AI Content Systems", slug: { current: "ai-content-systems" } },
-        { name: "Learn Automation in 30 Days", slug: { current: "learn-automation-in-30-days" } }
+        { name: "Learn Automation in 30 Days", slug: { current: "learn-automation-in-30-days" } },
+        { name: "30 Days of n8n Automation", slug: { current: "30-days-of-n8n-automation" } },
+        { name: "Architecture Teardowns", slug: { current: "architecture-teardowns" } }
     ];
     const allCategories = [...(rawCategories || [])];
     defaultRequiredCategories.forEach(req => {
@@ -54,29 +100,57 @@ export default async function CategoryPage({ params }) {
     });
     const recentPosts = await getSidebarData();
 
+    const categoryJsonLd = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "CollectionPage",
+                "name": `${categoryName} — Blog`,
+                "description": categoryDescription || `All articles about ${categoryName} by Alfaz Mahmud Rizve.`,
+                "url": `https://whoisalfaz.me/blog/category/${slug}/`,
+                "mainEntity": {
+                    "@type": "ItemList",
+                    "numberOfItems": posts?.length || 0,
+                    "itemListElement": (posts || []).map((post, i) => ({
+                        "@type": "ListItem",
+                        "position": i + 1,
+                        "url": `https://whoisalfaz.me/blog/${post.slug.current}/`,
+                        "name": post.title
+                    }))
+                }
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://whoisalfaz.me/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Blog",
+                        "item": "https://whoisalfaz.me/blog/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": categoryName,
+                        "item": `https://whoisalfaz.me/blog/category/${slug}/`
+                    }
+                ]
+            }
+        ]
+    };
+
     return (
         <main className="min-h-screen pt-32 pb-20 px-6 bg-slate-50 dark:bg-[#0a0a0a] transition-colors duration-300">
-            {/* CollectionPage Schema */}
+            {/* JSON-LD SCHEMA */}
             <script
                 type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                    __html: JSON.stringify({
-                        "@context": "https://schema.org",
-                        "@type": "CollectionPage",
-                        "name": `${category?.name || slug} — Blog`,
-                        "description": category?.description || `All articles about ${category?.name || slug} by Alfaz Mahmud Rizve.`,
-                        "url": `https://whoisalfaz.me/blog/category/${slug}/`,
-                        "mainEntity": {
-                            "@type": "ItemList",
-                            "numberOfItems": posts.length,
-                            "itemListElement": posts.map((post, i) => ({
-                                "@type": "ListItem",
-                                "position": i + 1,
-                                "url": `https://whoisalfaz.me/blog/${post.slug.current}/`
-                            }))
-                        }
-                    })
-                }}
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(categoryJsonLd) }}
             />
             {/* BACKGROUND */}
             <div className="fixed inset-0 bg-slate-50 dark:bg-[#0a0a0a] -z-20 transition-colors duration-300" />
@@ -93,27 +167,27 @@ export default async function CategoryPage({ params }) {
                             <ChevronRight size={14} />
                             <span className="text-teal-600 dark:text-blue-400 font-medium">Category</span>
                             <ChevronRight size={14} />
-                            <span className="text-slate-900 dark:text-white font-semibold transition-colors duration-300">{category?.name || slug}</span>
+                            <span className="text-slate-900 dark:text-white font-semibold transition-colors duration-300">{categoryName}</span>
                         </div>
 
                         <div className="flex flex-wrap items-center justify-between gap-4 mb-6 pb-6 border-b border-slate-100 dark:border-white/10">
                             <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight transition-colors duration-300">
-                                <span className="text-teal-600 dark:text-blue-500">#</span> {category?.name || slug}
+                                <span className="text-teal-600 dark:text-blue-500">#</span> {categoryName}
                             </h1>
                             <span className="px-3 py-1 bg-teal-50 dark:bg-blue-950/50 text-teal-700 dark:text-blue-400 text-xs font-semibold rounded-full border border-teal-200/50 dark:border-blue-800/50">
                                 {posts.length} {posts.length === 1 ? 'Article' : 'Articles'}
                             </span>
                         </div>
 
-                        {category?.description ? (
+                        {categoryDescription ? (
                             <div className="space-y-4 text-slate-600 dark:text-slate-300 text-base leading-relaxed">
-                                {category.description.split('\n\n').map((paragraph, idx) => (
+                                {categoryDescription.split('\n\n').map((paragraph, idx) => (
                                     <p key={idx}>{paragraph.trim()}</p>
                                 ))}
                             </div>
                         ) : (
                             <p className="text-slate-500 dark:text-slate-400 transition-colors duration-300">
-                                Browsing all articles in <span className="text-slate-900 dark:text-white font-medium transition-colors duration-300">&quot;{category?.name || slug}&quot;</span>.
+                                Browsing all articles in <span className="text-slate-900 dark:text-white font-medium transition-colors duration-300">&quot;{categoryName}&quot;</span>.
                             </p>
                         )}
                     </section>
@@ -162,6 +236,27 @@ export default async function CategoryPage({ params }) {
                                 </Link>
                             </div>
                         )}
+                    </section>
+
+                    {/* DIRECT H2 ANSWER SUMMARIES FOR SEMRUSH OPTIMIZATION */}
+                    <section className="mt-20 pt-12 border-t border-slate-200 dark:border-white/10 space-y-10">
+                        <div>
+                            <h2 className="text-2xl font-black text-slate-900 dark:text-white uppercase tracking-tight mb-3">
+                                What is included in the {categoryName} category?
+                            </h2>
+                            <p className="text-slate-600 dark:text-slate-400 text-[15px] leading-relaxed">
+                                The {categoryName} category features in-depth technical guides, production-tested code examples, architectural blueprints, and step-by-step implementation tutorials designed by Alfaz Mahmud Rizve to help engineers and founders scale their RevOps and automation infrastructure.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h2 className="text-2xl font-black text-slate-900 dark:text-white uppercase tracking-tight mb-3">
+                                How to apply these {categoryName} architectural blueprints
+                            </h2>
+                            <p className="text-slate-600 dark:text-slate-400 text-[15px] leading-relaxed">
+                                You can apply these {categoryName} blueprints directly by downloading the included workflow JSON files, following the step-by-step deployment instructions for self-hosted servers, or contacting our team for custom infrastructure implementation.
+                            </p>
+                        </div>
                     </section>
                 </div>
 

@@ -8,9 +8,9 @@ export const metadata = {
     openGraph: {
         title: "Technical Partnerships & B2B Architecture Placements",
         description: "High-authority contextual link integrations and sponsored API tear-downs for B2B SaaS, DevTools, and RevOps platforms.",
-        url: "https://whoisalfaz.me/partners/",
+        url: "https://whoisalfaz.me/partners",
     },
-    alternates: { canonical: "https://whoisalfaz.me/partners/" },
+    alternates: { canonical: "https://whoisalfaz.me/partners" },
 };
 
 export default function PartnersPage() {

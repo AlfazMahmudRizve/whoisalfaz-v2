@@ -1,4 +1,4 @@
-﻿import { MetadataRoute } from 'next'
+import { MetadataRoute } from 'next'
 
 export default function robots(): MetadataRoute.Robots {
     return {
@@ -10,7 +10,6 @@ export default function robots(): MetadataRoute.Robots {
                 disallow: [
                     '/private/',
                     '/go/',
-                    '/_next/static/',
                     '/wp-admin/',
                     '/rest/',
                     '*/feed/',
@@ -23,10 +22,10 @@ export default function robots(): MetadataRoute.Robots {
                 userAgent: 'GPTBot',
                 disallow: ['/'],
             },
-            // OpenAI browsing crawler — disallow (scraper)
+            // OpenAI browsing crawler — allow (beneficial AI search engine)
             {
                 userAgent: 'ChatGPT-User',
-                disallow: ['/'],
+                allow: ['/'],
             },
             // Anthropic Claude — allow (beneficial AI indexer)
             {

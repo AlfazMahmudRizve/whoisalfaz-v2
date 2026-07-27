@@ -55,7 +55,7 @@ export async function generateMetadata({ params }) {
 
   const finalTitle = cleanTruncate(rawTitle, 60);
   const seoDesc = post.seoDescription || post.description;
-  const canonicalUrl = `https://whoisalfaz.me/blog/${slug}/`;
+  const canonicalUrl = `https://whoisalfaz.me/blog/${slug}`;
 
   const ogImage = post.image || '/featured-image.png';
 

@@ -247,7 +247,7 @@ export default function AuditContentFooter() {
             <div className="p-5 rounded-2xl bg-white dark:bg-white/[0.02] border border-slate-200 dark:border-white/5 hover:border-slate-300 dark:hover:border-white/10 transition-colors shadow-sm dark:shadow-none">
               <h3 className="text-slate-900 dark:text-white font-bold text-base uppercase mb-3 tracking-tight">Core Web Vitals</h3>
               <p className="text-xs leading-relaxed">
-                Core Web Vitals are a set of specific factors that Google considers important in a webpage's overall user experience. This audit maps metrics including Largest Contentful Paint (LCP) for loading performance, Cumulative Layout Shift (CLS) for visual stability, and Interaction to Next Paint (INP) for responsiveness. Fast page load times directly correlate with higher conversions and lower bounce rates.
+                Core Web Vitals are a set of specific factors that Google considers important in a webpage&apos;s overall user experience. This audit maps metrics including Largest Contentful Paint (LCP) for loading performance, Cumulative Layout Shift (CLS) for visual stability, and Interaction to Next Paint (INP) for responsiveness. Fast page load times directly correlate with higher conversions and lower bounce rates.
               </p>
             </div>
             <div className="p-5 rounded-2xl bg-white dark:bg-white/[0.02] border border-slate-200 dark:border-white/5 hover:border-slate-300 dark:hover:border-white/10 transition-colors shadow-sm dark:shadow-none">

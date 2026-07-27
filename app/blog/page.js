@@ -13,12 +13,12 @@ export const metadata = {
     title: "Blog | AI Automation, Next.js & RevOps Insights",
     description: "Actionable engineering playbooks, n8n automation tutorials, and architectural insights for scaling SaaS founders and agencies.",
     alternates: {
-        canonical: '/blog/',
+        canonical: 'https://whoisalfaz.me/blog',
     },
     openGraph: {
         title: "Blog | AI Automation, Next.js & RevOps Insights",
         description: "Actionable engineering playbooks, n8n automation tutorials, and architectural insights for scaling SaaS founders and agencies.",
-        url: 'https://whoisalfaz.me/blog/',
+        url: 'https://whoisalfaz.me/blog',
         type: 'website',
     },
     twitter: {

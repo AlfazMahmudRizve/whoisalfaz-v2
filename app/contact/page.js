@@ -7,12 +7,12 @@ export const metadata = {
     title: "Contact Alfaz | RevOps & Automation Consulting",
     description: "Ready to automate your agency scale? Book a strategy call or get a technical SEO audit from Alfaz Mahmud Rizve. Review response SLAs and engagement prerequisites.",
     alternates: {
-        canonical: '/contact/',
+        canonical: 'https://whoisalfaz.me/contact',
     },
     openGraph: {
         title: "Contact Alfaz | RevOps & Automation Consulting",
         description: "Ready to automate your agency scale? Book a strategy call or get a technical SEO audit from Alfaz Mahmud Rizve.",
-        url: 'https://whoisalfaz.me/contact/',
+        url: 'https://whoisalfaz.me/contact',
         type: 'website',
     },
     twitter: {

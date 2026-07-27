@@ -10,12 +10,12 @@ export const metadata = {
     title: "Revenue Automation & Technical Solutions | Alfaz Mahmud Rizve",
     description: "Eliminate manual bottlenecks with autonomous n8n workflows, bespoke full-stack applications, and high-performance headless infrastructure.",
     alternates: {
-        canonical: '/services/',
+        canonical: 'https://whoisalfaz.me/services',
     },
     openGraph: {
         title: "Revenue Automation & Technical Solutions | Alfaz Mahmud Rizve",
         description: "Eliminate manual bottlenecks with autonomous n8n workflows, bespoke full-stack applications, and high-performance headless infrastructure.",
-        url: 'https://whoisalfaz.me/services/',
+        url: 'https://whoisalfaz.me/services',
         type: 'website',
     },
     twitter: {

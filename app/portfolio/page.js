@@ -7,12 +7,12 @@ export const metadata = {
     title: "Portfolio | Alfaz Mahmud Rizve",
     description: "I design business growth strategies and then architect the automated infrastructure to execute them.",
     alternates: {
-        canonical: '/portfolio/',
+        canonical: 'https://whoisalfaz.me/portfolio',
     },
     openGraph: {
         title: "Portfolio | Alfaz Mahmud Rizve",
         description: "I design business growth strategies and then architect the automated infrastructure to execute them.",
-        url: 'https://whoisalfaz.me/portfolio/',
+        url: 'https://whoisalfaz.me/portfolio',
         type: 'website',
     },
     twitter: {
