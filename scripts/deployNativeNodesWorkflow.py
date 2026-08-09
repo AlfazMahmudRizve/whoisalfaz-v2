@@ -1,9 +1,10 @@
+import os
 import json
 import urllib.request
 import urllib.error
 
-N8N_API_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlMzUzNmYzMy1kZmZiLTQyNjAtYmZjYi0zZGQ2ZDk3MGRlOWUiLCJpc3MiOiJuOG4iLCJhdWQiOiJwdWJsaWMtYXBpIiwianRpIjoiOWZlZGQ1ZDctZTNjZC00ZmI2LWE1YmYtMmVmZDk3NGRkZTdkIiwiaWF0IjoxNzg1NDQ0MDg2fQ.8NF8ODEbyIENYhO0K2UsZxK6-_T7KvFUtnjhfC1ALyc"
-N8N_URL = "http://localhost:5678/api/v1"
+N8N_API_KEY = os.environ.get("N8N_API_KEY", "")
+N8N_URL = os.environ.get("N8N_BASE_URL", "http://localhost:5678/api/v1")
 
 def deploy_native_workflow():
     workflow_payload = {
