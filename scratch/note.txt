@@ -1,0 +1,6 @@
+import os
+import json
+import re
+from sanity import create_client # or using sanity client JS script
+
+# Let's create a JS script scripts/fixBrokenAffiliateLinksSanity.js for node.js using @sanity/client!

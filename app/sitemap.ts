@@ -22,32 +22,31 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
     // 1. Static Routes (Core Pages)
     const coreRoutes = [
-        '',
-        '/portfolio',
-        '/blog',
-        '/blog/30-days-of-n8n',
-        '/about/alfaz-mahmud-rizve',
-        '/case-studies',
-        '/contact',
-        '/services',
-        '/partners',
-        '/labs',
-        '/labs/roi',
-        '/audit',
-        '/terms',
-        '/privacy-policy',
-        '/editorial-policy',
+        '/',
+        '/portfolio/',
+        '/blog/',
+        '/blog/30-days-of-n8n/',
+        '/case-studies/',
+        '/contact/',
+        '/services/',
+        '/partners/',
+        '/labs/',
+        '/labs/roi/',
+        '/audit/',
+        '/terms/',
+        '/privacy-policy/',
+        '/editorial-policy/',
     ].map((route) => ({
-        url: `${baseUrl}${route}`,
+        url: route === '/' ? `${baseUrl}/` : `${baseUrl}${route}`,
         lastModified: new Date(),
         changeFrequency: 'weekly' as const,
-        priority: route === '' ? 1 : 0.8,
+        priority: route === '/' ? 1 : 0.8,
     }));
 
     // 2. Dynamic Service Pages
     const serviceSlugs = Object.keys(serviceData);
     const serviceRoutes = serviceSlugs.map((slug) => ({
-        url: `${baseUrl}/services/${slug}`,
+        url: `${baseUrl}/services/${slug}/`,
         lastModified: new Date(),
         changeFrequency: 'monthly' as const,
         priority: 0.8,
@@ -61,7 +60,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         console.error('[sitemap] Failed to fetch blog posts from Sanity:', err);
     }
     const blogRoutes = posts.map((post) => ({
-        url: `${baseUrl}/blog/${post.slug.current}`,
+        url: `${baseUrl}/blog/${post.slug.current}/`,
         lastModified: new Date(post.date),
         changeFrequency: 'weekly' as const,
         priority: 0.7,
@@ -76,7 +75,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }
     const validCategories = categories.filter((cat) => cat.count > 0);
     const categoryRoutes = validCategories.map((cat) => ({
-        url: `${baseUrl}/blog/category/${cat.slug.current}`,
+        url: `${baseUrl}/blog/category/${cat.slug.current}/`,
         lastModified: new Date(),
         changeFrequency: 'weekly' as const,
         priority: 0.6,

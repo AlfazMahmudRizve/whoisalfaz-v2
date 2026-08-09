@@ -30,6 +30,12 @@ async function publishDraft() {
     // Ensure _type is set
     draftData._type = 'post';
 
+    // Ensure _id is set for createOrReplace
+    if (!draftData._id) {
+      const slugStr = typeof draftData.slug === 'object' ? draftData.slug.current : draftData.slug;
+      draftData._id = `post-${slugStr}`;
+    }
+
     const result = await client.createOrReplace(draftData);
     console.log('✅ Successfully published to Sanity:', result._id);
   } catch (error) {

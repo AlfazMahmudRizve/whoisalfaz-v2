@@ -41,21 +41,25 @@ export async function generateMetadata({ params }) {
     };
   }
 
-  let rawTitle = post.seoTitle || post.title;
-  if (!post.seoTitle || post.seoTitle === post.title) {
-    rawTitle = `${post.title} | Alfaz Mahmud Rizve`;
+  let rawTitle = post.seoTitle;
+  if (!rawTitle || rawTitle === post.title) {
+    if (post.title.length <= 48) {
+      rawTitle = `${post.title} | Alfaz`;
+    } else {
+      rawTitle = `${post.title} (2026 Guide)`;
+    }
   }
 
-  const cleanTruncate = (str, maxLen = 60) => {
+  const cleanTruncate = (str, maxLen = 65) => {
     if (!str || str.length <= maxLen) return str;
     const sliced = str.slice(0, maxLen);
     const lastSpace = sliced.lastIndexOf(' ');
     return (lastSpace > 0 ? sliced.slice(0, lastSpace) : sliced).trim();
   };
 
-  const finalTitle = cleanTruncate(rawTitle, 60);
+  const finalTitle = cleanTruncate(rawTitle, 65);
   const seoDesc = post.seoDescription || post.description;
-  const canonicalUrl = `https://whoisalfaz.me/blog/${slug}`;
+  const canonicalUrl = `https://whoisalfaz.me/blog/${slug}/`;
 
   const ogImage = post.image || '/featured-image.png';
 
