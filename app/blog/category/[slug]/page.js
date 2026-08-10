@@ -20,8 +20,8 @@ const CATEGORY_MAP = {
         description: 'A comprehensive 30-day architectural blueprint for mastering n8n, self-hosted automation, and enterprise RevOps workflows.'
     },
     'architecture-teardowns': {
-        name: 'Architecture Teardowns',
-        title: 'Architecture Teardowns & Systems Blueprints | whoisalfaz',
+        name: 'Architecture Teardowns & Case Studies',
+        title: 'Architecture Teardowns & Case Studies | whoisalfaz',
         description: 'Deep dive technical case studies detailing production automated systems, Next.js architecture, and AI agent frameworks.'
     },
     'ai-content-systems': {
@@ -29,10 +29,30 @@ const CATEGORY_MAP = {
         title: 'AI Content Systems & LLM Automation | whoisalfaz',
         description: 'Guides and blueprints for building autonomous AI content generation engines, vector databases, and programmatic workflow pipelines.'
     },
-    'learn-automation-in-30-days': {
-        name: 'Learn Automation in 30 Days',
-        title: 'Learn Automation in 30 Days | whoisalfaz',
-        description: 'Step-by-step 30-day guide to building production-grade automation workflows with n8n, webhooks, and AI agents.'
+    'ai-lead-generation': {
+        name: 'AI Lead Generation',
+        title: 'AI Lead Generation & Outbound Automation | whoisalfaz',
+        description: 'Technical blueprints for building automated B2B lead generation infrastructure, Apollo.io scraping, Brevo cold email, and AI SDRs.'
+    },
+    'n8n-automation': {
+        name: 'n8n Automation',
+        title: 'n8n Automation — Technical Guides & Blueprints | whoisalfaz',
+        description: 'Definitive technical guides for building self-hosted, scalable, and enterprise-ready workflow automations using n8n and vector DBs.'
+    },
+    'revops-architecture': {
+        name: 'RevOps Architecture',
+        title: 'RevOps Architecture & Data Attribution | whoisalfaz',
+        description: 'Engineering methodologies for unifying revenue operations, CRM data pipelines, attribution models, and Databox dashboards.'
+    },
+    'tool-comparisons': {
+        name: 'Tool Comparisons',
+        title: 'Tool Comparisons & Benchmarks | whoisalfaz',
+        description: 'Objective, benchmark-driven technical evaluations comparing modern automation platforms, vector databases, and AI tools.'
+    },
+    'seo-optimization': {
+        name: 'SEO & Optimization',
+        title: 'SEO & Optimization — Technical Guides | whoisalfaz',
+        description: 'Forensic technical SEO guides, programmatic indexation blueprints, and Generative Engine Optimization (GEO) strategies.'
     }
 };
 
@@ -51,12 +71,12 @@ export async function generateMetadata({ params }) {
         title,
         description,
         alternates: {
-            canonical: `https://whoisalfaz.me/blog/category/${slug}`,
+            canonical: `https://whoisalfaz.me/blog/category/${slug}/`,
         },
         openGraph: {
             title,
             description,
-            url: `https://whoisalfaz.me/blog/category/${slug}`,
+            url: `https://whoisalfaz.me/blog/category/${slug}/`,
             type: 'website',
             siteName: 'whoisalfaz',
             images: [
