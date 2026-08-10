@@ -5,12 +5,12 @@ export const metadata = {
     title: "Editorial & Fact-Checking Policy | Alfaz Mahmud Rizve",
     description: "Read the Editorial, Review, and AI Disclosure Policy for whoisalfaz.me. Learn our hands-on testing methodologies, expert guidelines, and transparency standards.",
     alternates: {
-        canonical: 'https://whoisalfaz.me/editorial-policy',
+        canonical: 'https://whoisalfaz.me/editorial-policy/',
     },
     openGraph: {
         title: "Editorial & Fact-Checking Policy | Alfaz Mahmud Rizve",
         description: "Read the Editorial, Review, and AI Disclosure Policy for whoisalfaz.me. Learn our hands-on testing methodologies, expert guidelines, and transparency standards.",
-        url: 'https://whoisalfaz.me/editorial-policy',
+        url: 'https://whoisalfaz.me/editorial-policy/',
         type: 'website',
     },
     twitter: {
@@ -30,7 +30,7 @@ export default function EditorialPolicy() {
         "author": {
             "@type": "Person",
             "name": "Alfaz Mahmud Rizve",
-            "url": "https://whoisalfaz.me/about/alfaz-mahmud-rizve/"
+            "url": "https://whoisalfaz.me/portfolio/"
         },
         "publisher": {
             "@type": "Organization",
