@@ -61,177 +61,88 @@ export function HeroMarketeamUpgrade() {
   const tickerItems = [...TECH_PARTNERS, ...TECH_PARTNERS];
 
   return (
-    <section className="relative w-full bg-slate-50 dark:bg-[#060218] text-slate-900 dark:text-white overflow-hidden pt-6 pb-14 sm:pt-10 sm:pb-20 transition-colors duration-300 select-none">
-      {/* Dynamic Keyframes and Entrance Styles */}
-      <style jsx global>{`
-        @keyframes heroFadeDown {
-          0% {
-            opacity: 0;
-            transform: translateY(-24px);
-          }
-          100% {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-
-        @keyframes heroFadeUpSmooth {
-          0% {
-            opacity: 0;
-            transform: translateY(32px);
-          }
-          100% {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-
-        @keyframes heroScaleInOrbits {
-          0% {
-            opacity: 0;
-            transform: scale(0.85);
-          }
-          100% {
-            opacity: 1;
-            transform: scale(1);
-          }
-        }
-
-        @keyframes cursorFloatIn {
-          0% {
-            opacity: 0;
-            transform: translate(-24px, 24px) scale(0.7);
-          }
-          100% {
-            opacity: 1;
-            transform: translate(0, 0) scale(1);
-          }
-        }
-
-        @keyframes cursorGentleBob {
-          0% {
-            transform: translateY(0px);
-          }
-          100% {
-            transform: translateY(-6px);
-          }
-        }
-
-        .anim-hero-badge {
-          animation: heroFadeDown 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.1s both;
-        }
-
-        .anim-hero-subtext {
-          animation: heroFadeUpSmooth 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.3s both;
-        }
-
-        .anim-hero-ctas {
-          animation: heroFadeUpSmooth 0.9s cubic-bezier(0.22, 1, 0.36, 1) 3.2s both;
-        }
-
-        .anim-hero-cursor {
-          animation: 
-            cursorFloatIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) 3.6s both,
-            cursorGentleBob 2.5s ease-in-out 4.4s infinite alternate;
-        }
-
-        .anim-hero-orbits {
-          animation: heroScaleInOrbits 1.1s cubic-bezier(0.22, 1, 0.36, 1) 0.2s both;
-        }
-
-        .anim-hero-ticker {
-          animation: heroFadeUpSmooth 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.5s both;
-        }
-      `}</style>
-
+    <section className="relative w-full bg-slate-50 dark:bg-[#060218] text-slate-900 dark:text-white overflow-hidden pt-6 pb-12 sm:pt-8 sm:pb-16 transition-colors duration-300 select-none">
       {/* ========================================================================= */}
-      {/* AMBIENT BACKGROUND & NEBULA FLARES (THEME ADAPTIVE)                       */}
+      {/* AMBIENT BACKGROUND & NEBULA FLARES (HARDWARE COMPOSITED)                   */}
       {/* ========================================================================= */}
-      {/* Subtle grid mesh overlay */}
-      <div className="absolute inset-0 grid-mesh opacity-30 dark:opacity-20 pointer-events-none -z-10" />
+      <div className="absolute inset-0 grid-mesh opacity-20 pointer-events-none -z-10" />
 
-      {/* Top-left Purple nebula flare */}
-      <div className="absolute -top-[15%] -left-[10%] w-[550px] sm:w-[700px] h-[550px] sm:h-[700px] rounded-full bg-[#A068FF]/10 dark:bg-[#A068FF]/18 blur-[140px] pointer-events-none -z-10 animate-ambient-1" />
+      {/* Top-left Purple flare */}
+      <div className="absolute -top-[10%] -left-[5%] w-[450px] sm:w-[600px] h-[450px] sm:h-[600px] rounded-full bg-[#A068FF]/10 dark:bg-[#A068FF]/15 blur-[90px] pointer-events-none -z-10" />
 
-      {/* Bottom-right Teal nebula flare */}
-      <div className="absolute top-[20%] -right-[15%] w-[500px] sm:w-[650px] h-[500px] sm:h-[650px] rounded-full bg-[#2DD4BF]/10 dark:bg-[#2DD4BF]/15 blur-[150px] pointer-events-none -z-10 animate-ambient-2" />
-
-      {/* Center atmospheric ambient glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] rounded-full bg-teal-500/5 dark:bg-purple-950/20 blur-[160px] pointer-events-none -z-10" />
+      {/* Bottom-right Teal flare */}
+      <div className="absolute top-[20%] -right-[10%] w-[400px] sm:w-[550px] h-[400px] sm:h-[550px] rounded-full bg-[#2DD4BF]/10 dark:bg-[#2DD4BF]/12 blur-[100px] pointer-events-none -z-10" />
 
       {/* ========================================================================= */}
       {/* MAIN HERO CONTENT CONTAINER                                              */}
       {/* ========================================================================= */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 items-center">
           
           {/* ======================================================================= */}
-          {/* LEFT COLUMN: Badge, Typewriter Heading, Subtitle, CTAs & Floating Cursor */}
+          {/* LEFT COLUMN: Immediate Paint, Zero LCP / CLS Delay                     */}
           {/* ======================================================================= */}
           <div className="lg:col-span-6 xl:col-span-6 flex flex-col items-start text-left z-20">
             
-            {/* Live Indicator Status Badge */}
-            <div className="anim-hero-badge inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/80 dark:bg-white/[0.04] border border-slate-200/80 dark:border-purple-500/30 backdrop-blur-md shadow-sm dark:shadow-[0_0_20px_rgba(160,104,255,0.15)] mb-6 transition-colors">
+            {/* Live Status Badge */}
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/90 dark:bg-white/[0.04] border border-slate-200 dark:border-purple-500/30 shadow-xs mb-5 transition-colors">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-teal-400 opacity-75" />
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-[#2DD4BF] shadow-[0_0_8px_#2DD4BF]" />
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-[#2DD4BF]" />
               </span>
-              <span className="text-[10px] sm:text-[11px] font-mono font-bold tracking-[0.18em] text-teal-700 dark:text-teal-300 uppercase">
+              <span className="text-[10px] sm:text-[11px] font-mono font-bold tracking-[0.16em] text-teal-700 dark:text-teal-300 uppercase">
                 AUTONOMOUS REVENUE SYSTEMS
               </span>
             </div>
 
-            {/* Typewriter Heading in Urbanist font */}
-            <div className="w-full mb-6">
+            {/* Typewriter Heading in Urbanist font (Instant Paint for <0.8s LCP) */}
+            <div className="w-full mb-5">
               <TypewriterHeading
                 text1="Autonomous Revenue Engines Built on Sub-Second Infrastructure"
                 text2=" — Engineered to Scale Your Agency to 8 Figures!"
-                typingSpeed={35}
-                startDelay={400}
-                className="text-[30px] xs:text-[36px] sm:text-[44px] md:text-[50px] lg:text-[52px] xl:text-[58px] 2xl:text-[64px]"
+                className="text-[28px] xs:text-[34px] sm:text-[42px] md:text-[46px] lg:text-[48px] xl:text-[54px] 2xl:text-[60px]"
               />
             </div>
 
             {/* Subtext description */}
-            <p className="anim-hero-subtext text-sm sm:text-base md:text-lg text-slate-600 dark:text-slate-300/90 font-medium leading-relaxed max-w-xl mb-9 transition-colors">
+            <p className="text-sm sm:text-base md:text-lg text-slate-600 dark:text-slate-300/90 font-medium leading-relaxed max-w-xl mb-8 transition-colors">
               I eliminate manual bottlenecks for scaling agencies with self-healing n8n workflows, AI agents, and high-performance Next.js architecture.
             </p>
 
-            {/* CTA Action Buttons & Floating Cursor */}
-            <div className="relative w-full max-w-lg mb-4">
+            {/* CTA Action Buttons & Floating Badge */}
+            <div className="relative w-full max-w-lg mb-2">
               
-              <div className="anim-hero-ctas flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
                 
-                {/* Primary CTA: Book Strategy Call (Rotating conic-gradient border & slide hover fill) */}
-                <div className="btn-border-wrap shadow-[0_0_20px_rgba(160,104,255,0.2)] dark:shadow-[0_0_30px_rgba(160,104,255,0.3)] hover:shadow-[0_0_40px_rgba(160,104,255,0.5)] transition-all duration-300">
+                {/* Primary CTA: Book Strategy Call */}
+                <div className="btn-border-wrap shadow-sm hover:shadow-[0_0_25px_rgba(160,104,255,0.4)] transition-shadow duration-300">
                   <Link
                     href="/contact/"
-                    className="btn-slide-fill w-full sm:w-auto px-7 py-3.5 sm:px-8 sm:py-4 rounded-full bg-slate-900 dark:bg-[#0A0520] hover:bg-[#A068FF] text-white font-bold text-sm sm:text-base transition-all duration-300 flex items-center justify-center gap-2.5 group"
+                    className="btn-slide-fill w-full sm:w-auto px-7 py-3.5 sm:px-8 sm:py-4 rounded-full bg-slate-900 dark:bg-[#0A0520] hover:bg-[#A068FF] text-white font-bold text-sm sm:text-base transition-colors duration-200 flex items-center justify-center gap-2.5 group"
                   >
                     <span>Book Strategy Call</span>
-                    <ArrowRight className="w-4 h-4 text-[#2DD4BF] group-hover:text-white group-hover:translate-x-1 transition-all duration-300 shrink-0" />
+                    <ArrowRight className="w-4 h-4 text-[#2DD4BF] group-hover:text-white group-hover:translate-x-1 transition-transform duration-200 shrink-0" />
                   </Link>
                 </div>
 
                 {/* Secondary CTA: Our Solutions */}
                 <Link
                   href="/services/"
-                  className="px-7 py-3.5 sm:px-8 sm:py-4 rounded-full border border-slate-200 dark:border-slate-700/80 hover:border-teal-500/50 dark:hover:border-teal-400/50 bg-white dark:bg-white/[0.03] hover:bg-slate-100 dark:hover:bg-white/[0.08] text-slate-800 dark:text-slate-200 hover:text-slate-950 dark:hover:text-white font-bold text-sm sm:text-base backdrop-blur-md transition-all duration-300 flex items-center justify-center gap-2 shadow-sm hover:shadow-[0_0_20px_rgba(45,212,191,0.15)]"
+                  className="px-7 py-3.5 sm:px-8 sm:py-4 rounded-full border border-slate-200 dark:border-slate-700/80 hover:border-teal-500/50 dark:hover:border-teal-400/50 bg-white dark:bg-white/[0.03] hover:bg-slate-100 dark:hover:bg-white/[0.08] text-slate-800 dark:text-slate-200 hover:text-slate-950 dark:hover:text-white font-bold text-sm sm:text-base transition-all duration-200 flex items-center justify-center gap-2 shadow-xs"
                 >
                   <span>Our Solutions</span>
                 </Link>
 
               </div>
 
-              {/* Floating Alfaz Pointer Badge (Appears delayed at 3.6s with gentle float) */}
-              <div className="anim-hero-cursor hidden sm:flex absolute -bottom-14 right-4 sm:right-10 items-center gap-2 pointer-events-none z-30">
-                {/* Pointer Arrow SVG in #A068FF */}
+              {/* Floating Alfaz Pointer Badge */}
+              <div className="hidden sm:flex absolute -bottom-12 right-2 sm:right-6 items-center gap-1.5 pointer-events-none z-30">
                 <svg
-                  width="22"
-                  height="22"
+                  width="20"
+                  height="20"
                   viewBox="0 0 24 24"
                   fill="none"
-                  className="drop-shadow-[0_4px_12px_rgba(160,104,255,0.7)] shrink-0 transform -rotate-12 -mt-3"
+                  className="drop-shadow-md shrink-0 transform -rotate-12 -mt-2"
                 >
                   <path
                     d="M4 0L20 12L12 14L8 22L4 0Z"
@@ -242,29 +153,25 @@ export function HeroMarketeamUpgrade() {
                   />
                 </svg>
 
-                {/* RevOps Architect Pill Badge */}
                 <div
-                  className="px-4 py-2 rounded-[20px] bg-[#A068FF] text-white text-[14px] sm:text-[15px] font-medium shadow-[0_10px_30px_rgba(160,104,255,0.4)] flex items-center gap-2 border border-white/20 backdrop-blur-sm"
+                  className="px-3.5 py-1.5 rounded-full bg-[#A068FF] text-white text-[13px] font-medium shadow-md flex items-center gap-1.5 border border-white/20"
                 >
-                  <span className="relative flex h-2 w-2">
-                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-teal-300 opacity-80" />
-                    <span className="relative inline-flex rounded-full h-2 w-2 bg-[#2DD4BF]" />
-                  </span>
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#2DD4BF]" />
                   <span>Alfaz</span>
                   <span className="opacity-60 text-xs">•</span>
-                  <span className="text-xs sm:text-sm font-normal text-purple-100">RevOps Architect</span>
+                  <span className="text-xs font-normal text-purple-100">RevOps Architect</span>
                 </div>
               </div>
 
             </div>
 
             {/* Micro Highlights Pill Bar */}
-            <div className="mt-8 flex flex-wrap items-center gap-3 text-xs text-slate-500 dark:text-slate-400">
-              <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/80 dark:bg-white/[0.02] border border-slate-200/80 dark:border-white/5 shadow-xs">
+            <div className="mt-6 flex flex-wrap items-center gap-2.5 text-xs text-slate-500 dark:text-slate-400">
+              <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/90 dark:bg-white/[0.02] border border-slate-200 dark:border-white/5 shadow-2xs">
                 <ShieldCheck className="w-3.5 h-3.5 text-teal-600 dark:text-teal-400" />
                 <span>Zero Headcount Ops</span>
               </div>
-              <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/80 dark:bg-white/[0.02] border border-slate-200/80 dark:border-white/5 shadow-xs">
+              <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/90 dark:bg-white/[0.02] border border-slate-200 dark:border-white/5 shadow-2xs">
                 <Zap className="w-3.5 h-3.5 text-purple-600 dark:text-purple-400" />
                 <span>Sub-Second Latency</span>
               </div>
@@ -273,18 +180,15 @@ export function HeroMarketeamUpgrade() {
           </div>
 
           {/* ======================================================================= */}
-          {/* RIGHT COLUMN: Concentric Orbits Visualization                           */}
+          {/* RIGHT COLUMN: 60fps Hardware Accelerated Concentric Orbits               */}
           {/* ======================================================================= */}
-          <div className="lg:col-span-6 xl:col-span-6 flex items-center justify-center w-full anim-hero-orbits overflow-visible py-4 lg:py-0">
+          <div className="lg:col-span-6 xl:col-span-6 flex items-center justify-center w-full overflow-visible py-2 lg:py-0">
             <ConcentricOrbits
               targetCount={30}
               countSuffix="+"
               centerLabel="Systems Deployed"
               centerBadge="AUTONOMOUS REVOPS"
-              countDuration={2000}
-              countDelay={1200}
-              pauseOnHover={true}
-              className="w-full flex items-center justify-center scale-90 xs:scale-95 sm:scale-100"
+              className="w-full flex items-center justify-center"
             />
           </div>
 
@@ -293,24 +197,24 @@ export function HeroMarketeamUpgrade() {
         {/* ======================================================================= */}
         {/* BOTTOM: Infinitely Scrolling Logo Ticker with Edge Fade Masks           */}
         {/* ======================================================================= */}
-        <div className="anim-hero-ticker mt-14 sm:mt-20 pt-8 border-t border-slate-200/80 dark:border-purple-500/10 transition-colors">
-          <p className="text-[10px] sm:text-xs font-mono font-bold text-slate-500 dark:text-slate-400/80 uppercase tracking-[0.25em] mb-6 text-center">
+        <div className="mt-10 sm:mt-14 pt-6 border-t border-slate-200 dark:border-purple-500/10 transition-colors">
+          <p className="text-[10px] sm:text-xs font-mono font-bold text-slate-500 dark:text-slate-400/80 uppercase tracking-[0.25em] mb-5 text-center">
             ENGINEERED WITH MODERN REVENUE INFRASTRUCTURE
           </p>
 
           <div className="relative overflow-hidden w-full max-w-6xl mx-auto">
             {/* Left Edge Gradient Fade Mask */}
-            <div className="absolute left-0 top-0 bottom-0 w-16 sm:w-32 bg-gradient-to-r from-slate-50 via-slate-50/90 to-transparent dark:from-[#060218] dark:via-[#060218]/90 dark:to-transparent z-20 pointer-events-none transition-colors" />
+            <div className="absolute left-0 top-0 bottom-0 w-16 sm:w-28 bg-gradient-to-r from-slate-50 via-slate-50/90 to-transparent dark:from-[#060218] dark:via-[#060218]/90 dark:to-transparent z-20 pointer-events-none transition-colors" />
 
             {/* Right Edge Gradient Fade Mask */}
-            <div className="absolute right-0 top-0 bottom-0 w-16 sm:w-32 bg-gradient-to-l from-slate-50 via-slate-50/90 to-transparent dark:from-[#060218] dark:via-[#060218]/90 dark:to-transparent z-20 pointer-events-none transition-colors" />
+            <div className="absolute right-0 top-0 bottom-0 w-16 sm:w-28 bg-gradient-to-l from-slate-50 via-slate-50/90 to-transparent dark:from-[#060218] dark:via-[#060218]/90 dark:to-transparent z-20 pointer-events-none transition-colors" />
 
             {/* Marquee Track */}
             <div className="flex gap-4 sm:gap-6 items-center justify-start animate-marquee hover:[animation-play-state:paused] w-max">
               {tickerItems.map((partner, index) => (
                 <div
                   key={`${partner.name}-${index}`}
-                  className="flex items-center gap-2.5 px-5 py-2.5 rounded-full border border-slate-200/80 dark:border-white/5 bg-white dark:bg-white/[0.02] hover:bg-slate-50 dark:hover:bg-white/[0.06] text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:border-purple-400/50 dark:hover:border-purple-500/30 transition-all duration-300 shrink-0 cursor-default select-none group shadow-xs dark:shadow-[0_4px_15px_rgba(0,0,0,0.2)]"
+                  className="flex items-center gap-2.5 px-4 py-2 sm:px-5 sm:py-2.5 rounded-full border border-slate-200 dark:border-white/5 bg-white dark:bg-white/[0.02] hover:bg-slate-50 dark:hover:bg-white/[0.06] text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors duration-200 shrink-0 cursor-default select-none shadow-2xs"
                 >
                   <svg
                     role="img"
