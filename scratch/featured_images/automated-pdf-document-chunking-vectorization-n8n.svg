@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background Gradients -->
+    <radialGradient id="radialGlow1" cx="0.8" cy="0.2" r="0.8">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.30" />
+      <stop offset="60%" stop-color="#0b101e" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="radialGlow2" cx="0.2" cy="0.9" r="0.7">
+      <stop offset="0%" stop-color="#ef4444" stop-opacity="0.25" />
+      <stop offset="70%" stop-color="#070a12" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="pillGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f97316" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.10" />
+    </linearGradient>
+    <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f97316" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.2" />
+    </linearGradient>
+  </defs>
+
+  <!-- Deep Background Layer -->
+  <rect width="1200" height="630" fill="#070a13" />
+  <rect width="1200" height="630" fill="url(#radialGlow1)" />
+  <rect width="1200" height="630" fill="url(#radialGlow2)" />
+
+  <!-- Subtle Engineering Grid -->
+  <g opacity="0.10" stroke="#ffffff" stroke-width="1" stroke-dasharray="4 8">
+    <line x1="100" y1="0" x2="100" y2="630" />
+    <line x1="300" y1="0" x2="300" y2="630" />
+    <line x1="500" y1="0" x2="500" y2="630" />
+    <line x1="700" y1="0" x2="700" y2="630" />
+    <line x1="900" y1="0" x2="900" y2="630" />
+    <line x1="1100" y1="0" x2="1100" y2="630" />
+    <line x1="0" y1="120" x2="1200" y2="120" />
+    <line x1="0" y1="240" x2="1200" y2="240" />
+    <line x1="0" y1="360" x2="1200" y2="360" />
+    <line x1="0" y1="480" x2="1200" y2="480" />
+  </g>
+
+  <!-- Abstract Vector Node Architecture -->
+  <g opacity="0.4">
+    <circle cx="1050" cy="180" r="160" stroke="#f97316" stroke-width="1.5" stroke-dasharray="6 12" />
+    <circle cx="1050" cy="180" r="90" stroke="#f59e0b" stroke-width="2" />
+    <circle cx="1050" cy="180" r="6" fill="#f97316" />
+    <circle cx="960" cy="120" r="4" fill="#ffffff" />
+    <circle cx="1140" cy="240" r="4" fill="#f59e0b" />
+    <line x1="960" y1="120" x2="1050" y2="180" stroke="#f97316" stroke-width="1.5" />
+    <line x1="1050" y1="180" x2="1140" y2="240" stroke="#f59e0b" stroke-width="1.5" />
+  </g>
+
+  <!-- Category Badge Pill -->
+  <g transform="translate(100, 95)">
+    <rect width="auto" height="38" rx="19" fill="url(#pillGrad)" stroke="#f97316" stroke-width="1.2" />
+    <circle cx="18" cy="19" r="5" fill="#f59e0b" />
+    <text x="32" y="24" fill="#f97316" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="900" letter-spacing="2">ARCHITECTURE TEARDOWN &amp; SYSTEMS</text>
+  </g>
+
+  <!-- Main Headline -->
+  <g>
+    <text x="100" y="280" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="48" font-weight="900" letter-spacing="-1.5" style="text-shadow: 0 4px 16px rgba(0,0,0,0.8);">Automated PDF Document Chunking</text>
+      <text x="100" y="344" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="48" font-weight="900" letter-spacing="-1.5" style="text-shadow: 0 4px 16px rgba(0,0,0,0.8);">in n8n Guide</text>
+  </g>
+
+  <!-- Accent Divider Line -->
+  <rect x="100" y="470" width="220" height="4" rx="2" fill="url(#lineGrad)" />
+
+  <!-- Bottom Brand Watermark -->
+  <g transform="translate(100, 530)">
+    <text x="0" y="0" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="700" letter-spacing="1">
+      WHOISALFAZ.ME <tspan fill="#475569" font-weight="400">•</tspan> <tspan fill="#64748b" font-weight="600">REVOPS &amp; AUTOMATION ARCHITECTURE</tspan>
+    </text>
+  </g>
+
+  <!-- Decorative Outer Frame Border -->
+  <rect x="1" y="1" width="1198" height="628" rx="8" stroke="rgba(255,255,255,0.08)" stroke-width="2" />
+</svg>
