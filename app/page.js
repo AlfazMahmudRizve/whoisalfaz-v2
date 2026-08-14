@@ -5,9 +5,9 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowRight, Zap, Code2, Globe, Mail } from 'lucide-react';
 import NewsletterForm from '../components/NewsletterForm';
-import PartnerLogos from '../components/PartnerLogos';
 import HomeContentFooter from '../components/footers/HomeContentFooter';
 import { FadeUp, StaggerContainer, StaggerItem } from '@/components/MotionWrappers';
+import { HeroMarketeamUpgrade } from '@/components/hero';
 
 export default async function Home() {
   const posts = await getSanityPosts();
@@ -60,7 +60,7 @@ export default async function Home() {
   };
 
   return (
-    <main className="min-h-screen bg-slate-50 dark:bg-[#0a0a0a] grid-mesh selection:bg-teal-500/20 selection:text-teal-900 dark:selection:text-teal-100 overflow-hidden relative transition-colors duration-300 pb-20 pt-24">
+    <main className="min-h-screen bg-slate-50 dark:bg-[#0a0a0a] grid-mesh selection:bg-teal-500/20 selection:text-teal-900 dark:selection:text-teal-100 overflow-hidden relative transition-colors duration-300 pb-20">
       {/* AMBIENT BACKGROUND GLOWS */}
       <div className="absolute top-[-10%] left-[-10%] w-[50%] aspect-square rounded-full bg-teal-500/5 dark:bg-teal-500/5 blur-[120px] pointer-events-none -z-10 animate-ambient-1" />
       <div className="absolute bottom-[20%] right-[-10%] w-[50%] aspect-square rounded-full bg-purple-500/5 dark:bg-purple-500/5 blur-[120px] pointer-events-none -z-10 animate-ambient-2" />
@@ -110,184 +110,55 @@ export default async function Home() {
       {/* BACKGROUND ELEMENTS */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-teal-50/50 via-slate-50 to-slate-50 dark:from-blue-900/10 dark:via-[#0a0a0a] dark:to-[#0a0a0a] -z-10 transition-colors duration-300" />
 
-      {/* SECTION 0: HERO */}
-      <section className="relative pt-12 pb-16 px-6 overflow-hidden z-10">
-        <div className="max-w-7xl mx-auto relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            
-            {/* Left Column: Headings, CTAs & Stats */}
-            <div className="lg:col-span-7 flex flex-col items-start text-left">
-              <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white/60 dark:bg-white/5 backdrop-blur-sm border border-slate-200 dark:border-white/10 rounded-full text-xs font-bold text-teal-700 dark:text-teal-300 mb-8 shadow-sm">
-                <span className="w-1.5 h-1.5 rounded-full bg-teal-500 dark:bg-teal-400 animate-led-blink shrink-0" />
-                <span>AUTONOMOUS REVENUE SYSTEMS</span>
+      {/* SECTION 0: UPGRADED COSMIC HERO */}
+      <HeroMarketeamUpgrade />
+
+      {/* Featured Case Study Banner */}
+      <section className="relative px-6 mt-8 sm:mt-12 mb-8 z-10">
+        <div className="max-w-7xl mx-auto">
+          <Link 
+            href="/blog/case-study-urban-cafe-foodtech-platform/" 
+            className="group block"
+          >
+            <div className="bento-card rounded-[2.5rem] p-6 md:p-8 flex flex-col md:flex-row items-center gap-8 overflow-hidden relative">
+              {/* Glow decorative orb */}
+              <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-72 h-72 bg-teal-500/5 dark:bg-teal-500/10 rounded-full blur-[100px] pointer-events-none" />
+
+              {/* Left Side: Thumbnail */}
+              <div className="w-full md:w-80 lg:w-96 aspect-[16/10] relative rounded-2xl overflow-hidden shadow-md group-hover:shadow-xl transition-all duration-300 shrink-0 bg-slate-100 dark:bg-slate-800">
+                <Image
+                  src="/images/blog/case-study-urban-cafe-foodtech-platform-featured.webp"
+                  alt="Kitchen OS Featured Case Study"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 384px"
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                />
               </div>
 
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 dark:text-white mb-8 leading-[0.9] tracking-tighter uppercase transition-colors duration-300">
-                Autonomous <span className="text-teal-600 dark:text-teal-400">Revenue Engines</span> <br /> Built on Sub-Second <span className="text-purple-600 dark:text-purple-400">Infrastructure</span>
-              </h1>
-
-              <p className="text-base md:text-lg text-slate-500 dark:text-slate-400 mb-12 leading-relaxed max-w-xl font-medium transition-colors duration-300">
-                I eliminate manual bottlenecks for scaling agencies with self-healing n8n workflows, AI agents, and high-performance Next.js architecture.
-              </p>
-
-              <div className="flex flex-col sm:flex-row items-center gap-4 w-full max-w-md mb-12">
-                <Link href="/contact/" className="w-full sm:w-auto px-8 py-4.5 bg-slate-900 dark:bg-teal-400 text-white dark:text-black font-black rounded-2xl shadow-xl hover:shadow-2xl hover:scale-[1.03] active:scale-[0.98] transition-all transform flex items-center justify-center gap-2 btn-shimmer">
-                  Book Strategy Call <ArrowRight size={18} />
-                </Link>
-                <Link href="/services/" className="w-full sm:w-auto px-8 py-4.5 bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 text-slate-900 dark:text-white font-black rounded-2xl hover:bg-slate-50 dark:hover:bg-white/10 transition-all shadow-sm flex items-center justify-center">
-                  Our Solutions
-                </Link>
-              </div>
-
-              {/* Stat Bar - Bento Glassmorphic Strip */}
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-4 p-6 sm:p-5 bento-card rounded-[2rem] w-full max-w-2xl">
-                {[
-                  { value: '30+', label: 'Systems Documented', href: '/case-studies/' },
-                  { value: '6', label: 'AI Integrations', href: '/portfolio/' },
-                  { value: '< 1s', label: 'Load Time', href: '/services/headless-architecture/' },
-                ].map((stat, i) => {
-                  const content = (
-                    <div className="flex flex-col items-center text-center gap-0.5 h-full justify-center group/stat">
-                      <span className="text-xl md:text-2xl font-black text-slate-900 dark:text-white tracking-tighter transition-colors duration-300 group-hover/stat:text-teal-600 dark:group-hover/stat:text-teal-400">{stat.value}</span>
-                      <span className="text-[9px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-widest transition-colors duration-300 group-hover/stat:text-slate-600 dark:group-hover/stat:text-slate-300">{stat.label}</span>
-                    </div>
-                  );
-                  return (
-                    <Link key={i} href={stat.href} className="transition-all hover:scale-105">
-                      {content}
-                    </Link>
-                  );
-                })}
-              </div>
-            </div>
-
-            {/* Right Column: Premium Interactive Tech Graphic */}
-            <div className="lg:col-span-5 flex justify-center">
-              <div className="w-full max-w-md aspect-[4/3] flex">
-                <div className="bento-card w-full rounded-[2.5rem] p-6 flex flex-col justify-between overflow-hidden relative group">
-                  
-                  {/* Floating blurred orb background inside visual */}
-                  <div className="absolute top-[20%] right-[10%] w-[120px] h-[120px] bg-teal-500/10 rounded-full blur-[40px] pointer-events-none z-0" />
-                  <div className="absolute bottom-[20%] left-[10%] w-[120px] h-[120px] bg-purple-500/10 rounded-full blur-[40px] pointer-events-none z-0" />
-
-                  {/* Header metadata */}
-                  <div className="flex items-center justify-between border-b border-slate-200/50 dark:border-white/5 pb-4 z-10">
-                    <div className="flex items-center gap-2">
-                      <div className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse shrink-0" />
-                      <span className="text-[10px] font-black text-slate-800 dark:text-slate-200 uppercase tracking-widest font-mono">Operations Tracker</span>
-                    </div>
-                    <span className="text-[9px] font-mono text-teal-600 dark:text-teal-400 font-bold bg-teal-50 dark:bg-teal-500/10 px-2.5 py-1 rounded-md border border-teal-100 dark:border-teal-500/20">Active Qualifies</span>
-                  </div>
-
-                  {/* High fidelity pure-CSS graph visualizer */}
-                  <div className="flex-grow flex items-center justify-center py-4 z-10 relative">
-                    <div className="w-full h-36 relative flex flex-col justify-end">
-                      
-                      {/* SVG line and gradient graph */}
-                      <svg className="w-full h-24 overflow-visible" viewBox="0 0 300 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <defs>
-                          <linearGradient id="graphGradient" x1="0" y1="0" x2="0" y2="1">
-                            <stop offset="0%" stopColor="#14b8a6" stopOpacity="0.25" />
-                            <stop offset="100%" stopColor="#14b8a6" stopOpacity="0" />
-                          </linearGradient>
-                        </defs>
-                        {/* Area Gradient */}
-                        <path d="M 0 90 Q 50 80 100 50 T 200 30 T 300 10 L 300 100 L 0 100 Z" fill="url(#graphGradient)" />
-                        {/* Animated Line */}
-                        <path d="M 0 90 Q 50 80 100 50 T 200 30 T 300 10" stroke="#14b8a6" strokeWidth="3" strokeLinecap="round" className="animate-flow-line" />
-                        {/* Interactive Dot */}
-                        <circle cx="300" cy="10" r="5" fill="#14b8a6" className="animate-pulse" />
-                      </svg>
-
-                      {/* Y Axis ticks */}
-                      <div className="absolute left-0 top-0 flex flex-col justify-between h-full text-[8px] font-bold text-slate-400 dark:text-slate-600 font-mono">
-                        <span>$50k</span>
-                        <span>$25k</span>
-                        <span>$0</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Float nodes card overlay layout */}
-                  <div className="grid grid-cols-2 gap-3 mt-2 z-10 relative">
-                    <div className="bg-white/80 dark:bg-white/5 p-3 rounded-2xl border border-slate-200/50 dark:border-white/5 backdrop-blur-md flex items-center gap-3">
-                      <div className="w-8 h-8 rounded-lg bg-teal-500/10 border border-teal-500/20 flex items-center justify-center text-teal-600 dark:text-teal-400 shrink-0">
-                        <Zap size={16} />
-                      </div>
-                      <div className="leading-tight">
-                        <div className="text-[10px] font-black text-slate-800 dark:text-slate-200 uppercase">n8n Node</div>
-                        <div className="text-[8px] font-mono text-slate-400 dark:text-slate-500">2ms response</div>
-                      </div>
-                    </div>
-
-                    <div className="bg-white/80 dark:bg-white/5 p-3 rounded-2xl border border-slate-200/50 dark:border-white/5 backdrop-blur-md flex items-center gap-3">
-                      <div className="w-8 h-8 rounded-lg bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-600 dark:text-purple-400 shrink-0">
-                        <Globe size={16} />
-                      </div>
-                      <div className="leading-tight">
-                        <div className="text-[10px] font-black text-slate-800 dark:text-slate-200 uppercase">CRM Sync</div>
-                        <div className="text-[8px] font-mono text-slate-400 dark:text-slate-500">Real-Time</div>
-                      </div>
-                    </div>
-                  </div>
-
+              {/* Right Side: Text details */}
+              <div className="flex-1 flex flex-col items-start relative z-10">
+                <span className="px-3.5 py-1.5 rounded-lg bg-teal-500/10 border border-teal-500/20 text-teal-600 dark:text-teal-400 text-[10px] font-black uppercase tracking-widest mb-4">
+                  Featured Case Study
+                </span>
+                
+                <h3 className="text-xl md:text-2xl font-black text-slate-900 dark:text-white mb-3 tracking-tight uppercase group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">
+                  Zero-Hardware Kitchen OS: How I Replaced a $2,000 POS System With a Next.js PWA
+                </h3>
+                
+                <p className="text-sm text-slate-500 dark:text-slate-400 mb-6 leading-relaxed max-w-2xl font-medium">
+                  A deep dive into building a real-time, browser-native restaurant OS. Replaced proprietary tablets with voice-activated alerts and a Supabase real-time sync engine, saving $2,000 in upfront hardware costs and 3% commission on every transaction.
+                </p>
+                
+                <div className="inline-flex items-center gap-2 text-xs font-black text-teal-700 dark:text-teal-400 uppercase tracking-widest group-hover:translate-x-1 transition-transform">
+                  See how I replaced a $2,000 POS system <ArrowRight size={14} />
                 </div>
               </div>
             </div>
-
-          </div>
-
-          {/* Featured Case Study Banner */}
-          <div className="mt-16 pt-8 border-t border-slate-200/50 dark:border-white/5 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200">
-            <Link 
-              href="/blog/case-study-urban-cafe-foodtech-platform/" 
-              className="group block"
-            >
-              <div className="bento-card rounded-[2.5rem] p-6 md:p-8 flex flex-col md:flex-row items-center gap-8 overflow-hidden relative">
-                {/* Glow decorative orb */}
-                <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-72 h-72 bg-teal-500/5 dark:bg-teal-500/10 rounded-full blur-[100px] pointer-events-none" />
-
-                {/* Left Side: Thumbnail */}
-                <div className="w-full md:w-80 lg:w-96 aspect-[16/10] relative rounded-2xl overflow-hidden shadow-md group-hover:shadow-xl transition-all duration-300 shrink-0 bg-slate-100 dark:bg-slate-800">
-                  <Image
-                    src="/images/blog/case-study-urban-cafe-foodtech-platform-featured.webp"
-                    alt="Kitchen OS Featured Case Study"
-                    fill
-                    sizes="(max-width: 768px) 100vw, 384px"
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                </div>
-
-                {/* Right Side: Text details */}
-                <div className="flex-1 flex flex-col items-start relative z-10">
-                  <span className="px-3.5 py-1.5 rounded-lg bg-teal-500/10 border border-teal-500/20 text-teal-600 dark:text-teal-400 text-[10px] font-black uppercase tracking-widest mb-4">
-                    Featured Case Study
-                  </span>
-                  
-                  <h3 className="text-xl md:text-2xl font-black text-slate-900 dark:text-white mb-3 tracking-tight uppercase group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">
-                    Zero-Hardware Kitchen OS: How I Replaced a $2,000 POS System With a Next.js PWA
-                  </h3>
-                  
-                  <p className="text-sm text-slate-500 dark:text-slate-400 mb-6 leading-relaxed max-w-2xl font-medium">
-                    A deep dive into building a real-time, browser-native restaurant OS. Replaced proprietary tablets with voice-activated alerts and a Supabase real-time sync engine, saving $2,000 in upfront hardware costs and 3% commission on every transaction.
-                  </p>
-                  
-                  <div className="inline-flex items-center gap-2 text-xs font-black text-teal-700 dark:text-teal-400 uppercase tracking-widest group-hover:translate-x-1 transition-transform">
-                    See how I replaced a $2,000 POS system <ArrowRight size={14} />
-                  </div>
-                </div>
-              </div>
-            </Link>
-          </div>
+          </Link>
         </div>
       </section>
 
-      {/* Partner Divider */}
-      <section className="py-12 bg-white/30 dark:bg-white/5 backdrop-blur-sm border-y border-slate-200 dark:border-white/10 transition-colors duration-300">
-        <div className="max-w-6xl mx-auto px-6">
-          <PartnerLogos title="POWERING SCALE FOR MODERN INFRASTRUCTURE" />
-        </div>
-      </section>
+
       {/* Value Proposition */}
       <section className="py-20 px-6 relative z-10">
         <div className="max-w-7xl mx-auto">

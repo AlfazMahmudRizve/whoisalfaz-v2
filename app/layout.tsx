@@ -1,6 +1,6 @@
 import "./globals.css";
 import Script from 'next/script';
-import { inter, mono } from "@/app/fonts";
+import { inter, mono, urbanist } from "@/app/fonts";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
@@ -113,7 +113,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   ];
 
   return (
-    <html lang="en" className={`${inter.variable} ${mono.variable}`} suppressHydrationWarning>
+    <html lang="en" className={`${inter.variable} ${mono.variable} ${urbanist.variable}`} suppressHydrationWarning>
       <body
         className="bg-[var(--background)] text-[var(--foreground)] min-h-screen flex flex-col transition-colors duration-300"
         suppressHydrationWarning
