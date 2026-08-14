@@ -383,6 +383,24 @@ body {
    ORBIT ANIMATIONS & RING MASKS
    ========================================================================== */
 
+@keyframes orbitSpinCW {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes orbitSpinCCW {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
 @keyframes spinClockwise {
   from {
     transform: rotate(0deg);
@@ -401,12 +419,110 @@ body {
   }
 }
 
-.animate-spin-clockwise {
-  animation: spinClockwise 25s linear infinite;
+.orbit-spin-ccw-30 {
+  animation: orbitSpinCCW 30s linear infinite !important;
+  will-change: transform;
 }
 
-.animate-spin-counter-clockwise {
-  animation: spinCounterClockwise 25s linear infinite;
+.orbit-spin-cw-30 {
+  animation: orbitSpinCW 30s linear infinite !important;
+  will-change: transform;
+}
+
+.orbit-spin-cw-40 {
+  animation: orbitSpinCW 40s linear infinite !important;
+  will-change: transform;
+}
+
+.orbit-spin-ccw-40 {
+  animation: orbitSpinCCW 40s linear infinite !important;
+  will-change: transform;
+}
+
+.orbit-spin-cw-50 {
+  animation: orbitSpinCW 50s linear infinite !important;
+  will-change: transform;
+}
+
+.orbit-spin-ccw-50 {
+  animation: orbitSpinCCW 50s linear infinite !important;
+  will-change: transform;
+}
+
+.orbit-spin-ccw-60 {
+  animation: orbitSpinCCW 60s linear infinite !important;
+  will-change: transform;
+}
+
+.orbit-spin-cw-60 {
+  animation: orbitSpinCW 60s linear infinite !important;
+  will-change: transform;
+}
+
+.pause-orbit-hover:hover .orbit-spin-ccw-30,
+.pause-orbit-hover:hover .orbit-spin-cw-30,
+.pause-orbit-hover:hover .orbit-spin-cw-40,
+.pause-orbit-hover:hover .orbit-spin-ccw-40,
+.pause-orbit-hover:hover .orbit-spin-cw-50,
+.pause-orbit-hover:hover .orbit-spin-ccw-50,
+.pause-orbit-hover:hover .orbit-spin-ccw-60,
+.pause-orbit-hover:hover .orbit-spin-cw-60 {
+  animation-play-state: paused !important;
+}
+
+@keyframes centerPulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 35px rgba(160, 104, 255, 0.2), 0 0 70px rgba(45, 212, 191, 0.12);
+  }
+  50% {
+    box-shadow: 0 0 60px rgba(160, 104, 255, 0.4), 0 0 100px rgba(45, 212, 191, 0.25);
+  }
+}
+
+@keyframes cursorFloatIn {
+  0% {
+    opacity: 0;
+    transform: translate(-24px, 24px) scale(0.7);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+@keyframes cursorGentleBob {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-6px);
+  }
+}
+
+.anim-hero-badge {
+  animation: heroFadeDown 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.1s both;
+}
+
+.anim-hero-subtext {
+  animation: heroFadeUpSmooth 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.3s both;
+}
+
+.anim-hero-ctas {
+  animation: heroFadeUpSmooth 0.9s cubic-bezier(0.22, 1, 0.36, 1) 3.2s both;
+}
+
+.anim-hero-cursor {
+  animation: 
+    cursorFloatIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) 3.6s both,
+    cursorGentleBob 2.5s ease-in-out 4.4s infinite alternate;
+}
+
+.anim-hero-orbits {
+  animation: heroScaleIn 1.1s cubic-bezier(0.22, 1, 0.36, 1) 0.2s both;
+}
+
+.anim-hero-ticker {
+  animation: heroFadeUpSmooth 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.5s both;
 }
 
 .orbit-ring-mask {

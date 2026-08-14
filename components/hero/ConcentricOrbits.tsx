@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect, useRef, useId } from 'react';
+import React, { useState, useId } from 'react';
 import Image from 'next/image';
 import { useCountUp } from './useCountUp';
 import { 
@@ -249,7 +249,7 @@ function OrbitNodeCard({
     <div
       className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-auto"
       style={{
-        transform: `translate3d(-50%, -50%, 0) rotate(${node.angle}deg) translate(${node.radius}px) rotate(-${node.angle}deg)`,
+        transform: `translate(-50%, -50%) rotate(${node.angle}deg) translate(${node.radius}px) rotate(-${node.angle}deg)`,
       }}
     >
       {/* Fly-in Animation Container */}
@@ -351,7 +351,6 @@ function OrbitNodeCard({
  * - Orbit 4: 797px diameter, spins CCW 60s
  * - Center Card: Upright counter-rotating live count-up badge in Urbanist bold
  * - 9 Specialist nodes positioned along orbit arcs with staggered fly-ins
- * - IntersectionObserver to automatically pause animations when off-screen for 0% CPU overhead
  */
 export function ConcentricOrbits({
   targetCount = 30,
@@ -364,25 +363,7 @@ export function ConcentricOrbits({
   customNodes,
   pauseOnHover = false,
 }: ConcentricOrbitsProps) {
-  const containerRef = useRef<HTMLDivElement | null>(null);
-  const [isInViewport, setIsInViewport] = useState<boolean>(true);
   const nodes = customNodes || DEFAULT_NODES;
-
-  // IntersectionObserver: Pause all orbit rotations when scrolled out of view (0% idle battery / CPU drain)
-  useEffect(() => {
-    const el = containerRef.current;
-    if (!el || typeof IntersectionObserver === 'undefined') return;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setIsInViewport(entry.isIntersecting);
-      },
-      { rootMargin: '100px 0px 100px 0px', threshold: 0.05 }
-    );
-
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, []);
 
   // Smooth live count-up animation hook
   const { count } = useCountUp({
@@ -394,144 +375,14 @@ export function ConcentricOrbits({
 
   return (
     <div 
-      ref={containerRef}
       className={`relative flex items-center justify-center select-none ${className}`}
       style={{
         contain: 'layout paint',
       }}
     >
-      {/* Global CSS keyframes for 60fps GPU-accelerated orbit rotations and fly-ins */}
-      <style jsx global>{`
-        @keyframes orbitSpinCW {
-          0% {
-            transform: rotate(0deg);
-          }
-          100% {
-            transform: rotate(360deg);
-          }
-        }
-
-        @keyframes orbitSpinCCW {
-          0% {
-            transform: rotate(0deg);
-          }
-          100% {
-            transform: rotate(-360deg);
-          }
-        }
-
-        @keyframes avatarFlyIn {
-          0% {
-            opacity: 0;
-            transform: scale(0.2) translateY(30px);
-          }
-          65% {
-            transform: scale(1.08) translateY(-4px);
-          }
-          100% {
-            opacity: 1;
-            transform: scale(1) translateY(0);
-          }
-        }
-
-        @keyframes centerPulseGlow {
-          0%, 100% {
-            box-shadow: 0 0 35px rgba(160, 104, 255, 0.2), 0 0 70px rgba(45, 212, 191, 0.12);
-          }
-          50% {
-            box-shadow: 0 0 60px rgba(160, 104, 255, 0.4), 0 0 100px rgba(45, 212, 191, 0.25);
-          }
-        }
-
-        .orbit-spin-ccw-30 {
-          animation: orbitSpinCCW 30s linear infinite;
-          will-change: transform;
-          backface-visibility: hidden;
-        }
-
-        .orbit-spin-cw-30 {
-          animation: orbitSpinCW 30s linear infinite;
-          will-change: transform;
-          backface-visibility: hidden;
-        }
-
-        .orbit-spin-cw-40 {
-          animation: orbitSpinCW 40s linear infinite;
-          will-change: transform;
-          backface-visibility: hidden;
-        }
-
-        .orbit-spin-ccw-40 {
-          animation: orbitSpinCCW 40s linear infinite;
-          will-change: transform;
-          backface-visibility: hidden;
-        }
-
-        .orbit-spin-cw-50 {
-          animation: orbitSpinCW 50s linear infinite;
-          will-change: transform;
-          backface-visibility: hidden;
-        }
-
-        .orbit-spin-ccw-50 {
-          animation: orbitSpinCCW 50s linear infinite;
-          will-change: transform;
-          backface-visibility: hidden;
-        }
-
-        .orbit-spin-ccw-60 {
-          animation: orbitSpinCCW 60s linear infinite;
-          will-change: transform;
-          backface-visibility: hidden;
-        }
-
-        .orbit-spin-cw-60 {
-          animation: orbitSpinCW 60s linear infinite;
-          will-change: transform;
-          backface-visibility: hidden;
-        }
-
-        .pause-orbit-hover:hover .orbit-spin-ccw-30,
-        .pause-orbit-hover:hover .orbit-spin-cw-30,
-        .pause-orbit-hover:hover .orbit-spin-cw-40,
-        .pause-orbit-hover:hover .orbit-spin-ccw-40,
-        .pause-orbit-hover:hover .orbit-spin-cw-50,
-        .pause-orbit-hover:hover .orbit-spin-ccw-50,
-        .pause-orbit-hover:hover .orbit-spin-ccw-60,
-        .pause-orbit-hover:hover .orbit-spin-cw-60 {
-          animation-play-state: paused;
-        }
-
-        /* Auto-pause when scrolled offscreen */
-        .orbit-offscreen .orbit-spin-ccw-30,
-        .orbit-offscreen .orbit-spin-cw-30,
-        .orbit-offscreen .orbit-spin-cw-40,
-        .orbit-offscreen .orbit-spin-ccw-40,
-        .orbit-offscreen .orbit-spin-cw-50,
-        .orbit-offscreen .orbit-spin-ccw-50,
-        .orbit-offscreen .orbit-spin-ccw-60,
-        .orbit-offscreen .orbit-spin-cw-60 {
-          animation-play-state: paused !important;
-        }
-
-        /* Accessibility: respect user prefers-reduced-motion */
-        @media (prefers-reduced-motion: reduce) {
-          .orbit-spin-ccw-30,
-          .orbit-spin-cw-30,
-          .orbit-spin-cw-40,
-          .orbit-spin-ccw-40,
-          .orbit-spin-cw-50,
-          .orbit-spin-ccw-50,
-          .orbit-spin-ccw-60,
-          .orbit-spin-cw-60 {
-            animation: none !important;
-          }
-        }
-      `}</style>
-
       {/* Responsive Scaling Viewport Container */}
       <div 
-        className={`relative w-[340px] h-[340px] xs:w-[420px] xs:h-[420px] sm:w-[540px] sm:h-[540px] md:w-[620px] md:h-[620px] lg:w-[680px] lg:h-[680px] xl:w-[720px] xl:h-[720px] max-w-full aspect-square flex items-center justify-center ${pauseOnHover ? 'pause-orbit-hover' : ''} ${!isInViewport ? 'orbit-offscreen' : ''}`}
+        className={`relative w-[340px] h-[340px] xs:w-[420px] xs:h-[420px] sm:w-[540px] sm:h-[540px] md:w-[620px] md:h-[620px] lg:w-[680px] lg:h-[680px] xl:w-[720px] xl:h-[720px] max-w-full aspect-square flex items-center justify-center ${pauseOnHover ? 'pause-orbit-hover' : ''}`}
       >
         {/* Scaling Transform Wrapper to map the native 797px orbit coordinate system */}
         <div className="absolute w-[800px] h-[800px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 scale-[0.42] xs:scale-[0.52] sm:scale-[0.67] md:scale-[0.77] lg:scale-[0.85] xl:scale-[0.9] 2xl:scale-[0.98] transform-gpu origin-center pointer-events-none">
@@ -539,12 +390,12 @@ export function ConcentricOrbits({
           {/* ===================================================================== */}
           {/* ORBIT 4 (Outermost): 797px Diameter, Spins Counter-Clockwise (60s)    */}
           {/* ===================================================================== */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[797px] h-[797px] rounded-full pointer-events-none">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[797px] h-[797px] rounded-full pointer-events-none origin-center">
             {/* 1px Gradient Border Ring with theme awareness */}
             <div className="absolute inset-0 rounded-full border border-purple-400/20 dark:border-purple-400/30 shadow-[0_0_20px_rgba(160,104,255,0.08)] pointer-events-none" />
             
             {/* Spinning Container */}
-            <div className="w-full h-full rounded-full orbit-spin-ccw-60 pointer-events-none">
+            <div className="w-full h-full rounded-full orbit-spin-ccw-60 pointer-events-none origin-center">
               {nodes
                 .filter((n) => n.orbit === 4)
                 .map((node) => (
@@ -560,12 +411,12 @@ export function ConcentricOrbits({
           {/* ===================================================================== */}
           {/* ORBIT 3: 649px Diameter, Spins Clockwise (50s)                         */}
           {/* ===================================================================== */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[649px] h-[649px] rounded-full pointer-events-none">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[649px] h-[649px] rounded-full pointer-events-none origin-center">
             {/* 1px Gradient Border Ring */}
             <div className="absolute inset-0 rounded-full border border-teal-400/25 dark:border-teal-400/30 shadow-[0_0_20px_rgba(45,212,191,0.08)] pointer-events-none" />
             
             {/* Spinning Container */}
-            <div className="w-full h-full rounded-full orbit-spin-cw-50 pointer-events-none">
+            <div className="w-full h-full rounded-full orbit-spin-cw-50 pointer-events-none origin-center">
               {nodes
                 .filter((n) => n.orbit === 3)
                 .map((node) => (
@@ -581,12 +432,12 @@ export function ConcentricOrbits({
           {/* ===================================================================== */}
           {/* ORBIT 2: 501px Diameter, Spins Clockwise (40s)                         */}
           {/* ===================================================================== */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[501px] h-[501px] rounded-full pointer-events-none">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[501px] h-[501px] rounded-full pointer-events-none origin-center">
             {/* 1px Gradient Border Ring */}
             <div className="absolute inset-0 rounded-full border border-purple-400/30 dark:border-purple-400/40 shadow-[0_0_25px_rgba(160,104,255,0.1)] pointer-events-none" />
             
             {/* Spinning Container */}
-            <div className="w-full h-full rounded-full orbit-spin-cw-40 pointer-events-none">
+            <div className="w-full h-full rounded-full orbit-spin-cw-40 pointer-events-none origin-center">
               {nodes
                 .filter((n) => n.orbit === 2)
                 .map((node) => (
@@ -602,12 +453,12 @@ export function ConcentricOrbits({
           {/* ===================================================================== */}
           {/* ORBIT 1 (Innermost): 353px Diameter, Spins Counter-Clockwise (30s)     */}
           {/* ===================================================================== */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[353px] h-[353px] rounded-full pointer-events-none">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[353px] h-[353px] rounded-full pointer-events-none origin-center">
             {/* 1px Gradient Border Ring */}
             <div className="absolute inset-0 rounded-full border border-teal-400/40 dark:border-teal-400/50 shadow-[0_0_30px_rgba(45,212,191,0.15)] pointer-events-none" />
             
             {/* Spinning Container */}
-            <div className="w-full h-full rounded-full orbit-spin-ccw-30 pointer-events-none">
+            <div className="w-full h-full rounded-full orbit-spin-ccw-30 pointer-events-none origin-center">
               {nodes
                 .filter((n) => n.orbit === 1)
                 .map((node) => (
@@ -620,9 +471,9 @@ export function ConcentricOrbits({
 
               {/* Center Metric Card: Placed inside Orbit 1 and Counter-Rotated (CW 30s) */}
               <div 
-                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-auto"
+                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-auto origin-center"
               >
-                <div className="orbit-spin-cw-30">
+                <div className="orbit-spin-cw-30 origin-center">
                   <div 
                     className="relative w-[190px] h-[190px] rounded-[32px] p-5 flex flex-col items-center justify-between text-center bg-white/95 dark:bg-[#0A0520]/95 border border-slate-200/90 dark:border-white/15 backdrop-blur-2xl shadow-[0_20px_60px_rgba(0,0,0,0.1)] dark:shadow-[0_25px_60px_rgba(0,0,0,0.8)] transition-all duration-300 group hover:scale-105"
                     style={{
