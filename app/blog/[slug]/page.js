@@ -338,6 +338,7 @@ export default async function Post({ params }) {
               src={post.image}
               alt={post.title}
               fill
+              unoptimized
               sizes="(max-width: 768px) 100vw, 1200px"
               className="object-cover transition-transform duration-1000 group-hover:scale-105"
               priority

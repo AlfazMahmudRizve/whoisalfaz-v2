@@ -138,7 +138,7 @@ export default async function BlogPage() {
                                             {/* TOP IMAGE AREA WITH PILLS */}
                                             <div className="h-64 bg-slate-100 dark:bg-slate-800 relative overflow-hidden p-6 flex flex-col justify-start">
                                                 {post.image ? (
-                                                    <Image src={post.image} alt={post.title} fill className="object-cover group-hover:scale-105 transition-transform duration-1000" />
+                                                    <Image src={post.image} alt={post.title} fill unoptimized sizes="(max-width: 768px) 100vw, 50vw" className="object-cover group-hover:scale-105 transition-transform duration-1000" />
                                                 ) : (
                                                     <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-teal-500/20" />
                                                 )}

@@ -221,7 +221,7 @@ export default async function CategoryPage({ params }) {
                                         <article className="h-full bg-white dark:bg-[#0a0a0a] border border-slate-200 dark:border-white/10 rounded-xl overflow-hidden hover:border-teal-500/50 dark:hover:border-blue-500/50 transition-all hover:-translate-y-1 shadow-sm dark:shadow-none">
                                             <div className="h-48 bg-slate-100 dark:bg-slate-800 relative">
                                                 {post.image ? (
-                                                    <Image src={post.image} alt={post.title} fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" />
+                                                    <Image src={post.image} alt={post.title} fill unoptimized sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" />
                                                 ) : (
                                                     <div className="absolute inset-0 flex items-center justify-center bg-slate-100 dark:bg-slate-900 text-slate-400 dark:text-slate-700">
                                                         <span className="text-xs">No Image</span>

@@ -146,7 +146,7 @@ export default async function CaseStudiesPage() {
                                         <article style={{ animationDelay: `${i * 150}ms` }} className="animate-in fade-in zoom-in-95 duration-700 fill-mode-both h-full bg-white dark:bg-[#0a0a0a] border border-slate-200 dark:border-white/10 rounded-[2rem] overflow-hidden hover:border-blue-400/50 dark:hover:border-blue-500/50 transition-all hover:-translate-y-2 shadow-xl dark:shadow-sm">
                                             <div className="h-48 bg-slate-100 dark:bg-slate-800 relative overflow-hidden">
                                                 {post.image ? (
-                                                    <Image src={post.image} alt={post.title} fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+                                                    <Image src={post.image} alt={post.title} fill unoptimized sizes="(max-width: 768px) 100vw, 50vw" className="object-cover group-hover:scale-105 transition-transform duration-500" />
                                                 ) : (
                                                     <div className="absolute inset-0 flex items-center justify-center bg-slate-100 dark:bg-slate-900 text-slate-400 dark:text-slate-700">
                                                         <span className="text-xs font-black uppercase tracking-widest">No Image</span>
