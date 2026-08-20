@@ -1,4 +1,9 @@
-{
+const fs = require('fs');
+const path = require('path');
+
+const filePath = path.resolve(__dirname, '../ecosystem/n8n-templates/manychat-async-timeout-handler.json');
+
+const workflow = {
   "name": "Handle ManyChat WhatsApp leads with OpenAI, Brevo CRM and Slack alerts",
   "nodes": [
     {
@@ -12,10 +17,7 @@
       "name": "Sticky: Overview & Architecture",
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
-      "position": [
-        0,
-        -350
-      ]
+      "position": [0, -350]
     },
     {
       "parameters": {
@@ -28,10 +30,7 @@
       "name": "Sticky: Setup & Credentials",
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
-      "position": [
-        620,
-        -350
-      ]
+      "position": [620, -350]
     },
     {
       "parameters": {
@@ -44,10 +43,7 @@
       "name": "Sticky: Step 1 Ingestion",
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
-      "position": [
-        0,
-        -50
-      ]
+      "position": [0, -50]
     },
     {
       "parameters": {
@@ -60,10 +56,7 @@
       "name": "Sticky: Step 2 Lead Scoring",
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
-      "position": [
-        540,
-        -50
-      ]
+      "position": [520, -50]
     },
     {
       "parameters": {
@@ -76,10 +69,7 @@
       "name": "Sticky: Step 3 AI & CRM",
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
-      "position": [
-        920,
-        -50
-      ]
+      "position": [880, -50]
     },
     {
       "parameters": {
@@ -92,10 +82,7 @@
       "name": "Sticky: Step 4 Delivery",
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
-      "position": [
-        1360,
-        -50
-      ]
+      "position": [1300, -50]
     },
     {
       "parameters": {
@@ -108,10 +95,7 @@
       "name": "ManyChat Webhook Ingest",
       "type": "n8n-nodes-base.webhook",
       "typeVersion": 1,
-      "position": [
-        0,
-        200
-      ],
+      "position": [0, 180],
       "webhookId": "manychat-async-ingress"
     },
     {
@@ -126,10 +110,7 @@
       "name": "Instant 200 OK Handshake (<150ms)",
       "type": "n8n-nodes-base.respondToWebhook",
       "typeVersion": 1.1,
-      "position": [
-        340,
-        200
-      ]
+      "position": [240, 180]
     },
     {
       "parameters": {
@@ -139,10 +120,7 @@
       "name": "Parse & Qualify Subscriber",
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
-      "position": [
-        680,
-        200
-      ]
+      "position": [540, 180]
     },
     {
       "parameters": {
@@ -170,10 +148,7 @@
       "name": "AI WhatsApp Copy Generator",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2,
-      "position": [
-        1020,
-        200
-      ]
+      "position": [900, 140]
     },
     {
       "parameters": {
@@ -201,10 +176,7 @@
       "name": "Brevo CRM Async Upsert",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2,
-      "position": [
-        1360,
-        200
-      ]
+      "position": [900, 360]
     },
     {
       "parameters": {
@@ -214,10 +186,7 @@
       "name": "Format WhatsApp Message",
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
-      "position": [
-        1700,
-        200
-      ]
+      "position": [1280, 140]
     },
     {
       "parameters": {
@@ -245,10 +214,7 @@
       "name": "ManyChat WhatsApp Callback API",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2,
-      "position": [
-        2040,
-        200
-      ]
+      "position": [1560, 140]
     },
     {
       "parameters": {
@@ -276,10 +242,7 @@
       "name": "Is Hot WhatsApp Lead?",
       "type": "n8n-nodes-base.if",
       "typeVersion": 2,
-      "position": [
-        2380,
-        200
-      ]
+      "position": [1840, 140]
     },
     {
       "parameters": {
@@ -303,10 +266,7 @@
       "name": "Slack SDR WhatsApp Alert",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2,
-      "position": [
-        2720,
-        200
-      ]
+      "position": [2120, 140]
     }
   ],
   "pinData": {},
@@ -394,4 +354,7 @@
       ]
     }
   }
-}
+};
+
+fs.writeFileSync(filePath, JSON.stringify(workflow, null, 2));
+console.log('✅ Wrote perfectly aligned, non-overlapping ManyChat n8n workflow!');
