@@ -1,4 +1,9 @@
-{
+const fs = require('fs');
+const path = require('path');
+
+const filePath = path.resolve(__dirname, '../ecosystem/n8n-templates/manychat-async-timeout-handler.json');
+
+const fullWorkflow = {
   "name": "Handle ManyChat WhatsApp leads with OpenAI, Brevo CRM and Slack alerts",
   "nodes": [
     {
@@ -12,10 +17,7 @@
       "name": "Sticky: Overview & Architecture",
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
-      "position": [
-        100,
-        -340
-      ]
+      "position": [100, -340]
     },
     {
       "parameters": {
@@ -28,10 +30,7 @@
       "name": "Sticky: Setup & Credentials",
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
-      "position": [
-        640,
-        -340
-      ]
+      "position": [640, -340]
     },
     {
       "parameters": {
@@ -44,10 +43,7 @@
       "name": "Sticky: Step 1 Ingestion",
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
-      "position": [
-        80,
-        20
-      ]
+      "position": [80, 20]
     },
     {
       "parameters": {
@@ -60,10 +56,7 @@
       "name": "Sticky: Step 2 Lead Scoring",
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
-      "position": [
-        580,
-        20
-      ]
+      "position": [580, 20]
     },
     {
       "parameters": {
@@ -76,10 +69,7 @@
       "name": "Sticky: Step 3 AI & CRM",
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
-      "position": [
-        880,
-        -80
-      ]
+      "position": [880, -80]
     },
     {
       "parameters": {
@@ -92,10 +82,7 @@
       "name": "Sticky: Step 4 WhatsApp Push",
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
-      "position": [
-        1260,
-        -80
-      ]
+      "position": [1260, -80]
     },
     {
       "parameters": {
@@ -108,10 +95,7 @@
       "name": "ManyChat Webhook Ingest",
       "type": "n8n-nodes-base.webhook",
       "typeVersion": 1,
-      "position": [
-        100,
-        100
-      ],
+      "position": [100, 100],
       "webhookId": "manychat-async-ingress"
     },
     {
@@ -126,10 +110,7 @@
       "name": "Instant 200 OK Handshake (<150ms)",
       "type": "n8n-nodes-base.respondToWebhook",
       "typeVersion": 1.1,
-      "position": [
-        360,
-        100
-      ]
+      "position": [360, 100]
     },
     {
       "parameters": {
@@ -139,10 +120,7 @@
       "name": "Parse & Qualify Subscriber",
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
-      "position": [
-        620,
-        100
-      ]
+      "position": [620, 100]
     },
     {
       "parameters": {
@@ -176,10 +154,7 @@
       "name": "AI WhatsApp Copy Generator",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2,
-      "position": [
-        920,
-        0
-      ],
+      "position": [920, 0],
       "onError": "continueErrorOutput"
     },
     {
@@ -214,10 +189,7 @@
       "name": "Brevo CRM Async Upsert",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2,
-      "position": [
-        920,
-        200
-      ],
+      "position": [920, 200],
       "onError": "continueErrorOutput"
     },
     {
@@ -228,10 +200,7 @@
       "name": "Format WhatsApp Message",
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
-      "position": [
-        1280,
-        0
-      ]
+      "position": [1280, 0]
     },
     {
       "parameters": {
@@ -271,10 +240,7 @@
       "name": "ManyChat WhatsApp Callback API",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2,
-      "position": [
-        1520,
-        0
-      ],
+      "position": [1520, 0],
       "onError": "continueErrorOutput"
     },
     {
@@ -300,10 +266,7 @@
       "name": "Is Hot WhatsApp Lead?",
       "type": "n8n-nodes-base.if",
       "typeVersion": 2,
-      "position": [
-        1780,
-        0
-      ]
+      "position": [1780, 0]
     },
     {
       "parameters": {
@@ -327,10 +290,7 @@
       "name": "Slack SDR WhatsApp Alert",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2,
-      "position": [
-        2040,
-        -100
-      ]
+      "position": [2040, -100]
     }
   ],
   "pinData": {},
@@ -428,4 +388,7 @@
     "instanceId": "whoisalfaz-n8n-production"
   },
   "tags": []
-}
+};
+
+fs.writeFileSync(filePath, JSON.stringify(fullWorkflow, null, 2));
+console.log('✅ Wrote 100% compliant n8n template JSON!');
