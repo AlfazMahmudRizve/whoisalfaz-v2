@@ -1,78 +1,105 @@
 import { MetadataRoute } from 'next'
 
+const privateDisallows = [
+    '/private/',
+    '/go/',
+    '/wp-admin/',
+    '/rest/',
+    '*/feed/',
+    '*feed*',
+]
+
 export default function robots(): MetadataRoute.Robots {
     return {
         rules: [
-            // Default rule for all crawlers
+            // Default rule for all search engine crawlers
             {
                 userAgent: '*',
                 allow: '/',
-                disallow: [
-                    '/private/',
-                    '/go/',
-                    '/wp-admin/',
-                    '/rest/',
-                    '*/feed/',
-                    '*feed*',
-                ],
+                disallow: privateDisallows,
             },
-            // AI crawlers — allow beneficial indexers, disallow scrapers
-            // OpenAI training crawler — disallow (scraper)
+
+            // Explicitly allowlisted AI Search, Citation & Real-time Discovery crawlers
+            // OpenAI SearchGPT indexer
             {
-                userAgent: 'GPTBot',
-                disallow: ['/'],
+                userAgent: 'OAI-SearchBot',
+                allow: '/',
+                disallow: privateDisallows,
             },
-            // OpenAI browsing crawler — allow (beneficial AI search engine)
+            // OpenAI ChatGPT live search & browsing
             {
                 userAgent: 'ChatGPT-User',
-                allow: ['/'],
+                allow: '/',
+                disallow: privateDisallows,
             },
-            // Anthropic Claude — allow (beneficial AI indexer)
-            {
-                userAgent: 'ClaudeBot',
-                allow: ['/'],
-            },
-            // Perplexity AI — allow (beneficial AI search engine)
+            // Perplexity AI search crawler
             {
                 userAgent: 'PerplexityBot',
-                allow: ['/'],
+                allow: '/',
+                disallow: privateDisallows,
             },
-            // Google AI (Bard/Gemini) — allow (Google ecosystem)
+            // Anthropic Claude web search & citation crawler
+            {
+                userAgent: 'ClaudeBot',
+                allow: '/',
+                disallow: privateDisallows,
+            },
+            // Google Gemini / AI Overviews discovery crawler
             {
                 userAgent: 'Google-Extended',
-                allow: ['/'],
+                allow: '/',
+                disallow: privateDisallows,
             },
-            // Apple AI (Siri/Apple Intelligence) — allow (beneficial)
+            // Apple Intelligence & Siri search crawler
             {
                 userAgent: 'Applebot-Extended',
-                allow: ['/'],
+                allow: '/',
+                disallow: privateDisallows,
             },
-            // ByteDance/TikTok — disallow (scraper)
+
+            // Blocked AI Model Training-Only & Bulk Scrapers
+            // ByteDance / TikTok crawler
             {
                 userAgent: 'Bytespider',
                 disallow: ['/'],
             },
-            // Common Crawl — disallow (bulk scraper, low signal)
+            // Common Crawl bulk data scraper
             {
                 userAgent: 'CCBot',
                 disallow: ['/'],
             },
-            // Amazon Alexa/product research — disallow (scraper)
-            {
-                userAgent: 'Amazonbot',
-                disallow: ['/'],
-            },
-            // Meta/Facebook — disallow (scraper)
-            {
-                userAgent: 'FacebookBot',
-                disallow: ['/'],
-            },
-            // Diffbot — disallow (commercial scraper)
+            // Diffbot commercial scraper
             {
                 userAgent: 'Diffbot',
                 disallow: ['/'],
             },
+            // OpenAI model training scraper (blocks scraping for training while allowing OAI-SearchBot)
+            {
+                userAgent: 'GPTBot',
+                disallow: ['/'],
+            },
+            // Anthropic model training crawler
+            {
+                userAgent: 'anthropic-ai',
+                disallow: ['/'],
+            },
+            {
+                userAgent: 'Claude-Web',
+                disallow: ['/'],
+            },
+            // Amazon Alexa / automated scraper
+            {
+                userAgent: 'Amazonbot',
+                disallow: ['/'],
+            },
+            // Meta / Facebook crawler
+            {
+                userAgent: 'FacebookBot',
+                disallow: ['/'],
+            },
         ],
         sitemap: 'https://whoisalfaz.me/sitemap.xml',
+        host: 'https://whoisalfaz.me',
     }
 }
+

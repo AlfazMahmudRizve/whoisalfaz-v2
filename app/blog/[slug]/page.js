@@ -1,5 +1,6 @@
 import { Suspense } from 'react';
 import { getSanityPosts, getSanityPostBySlug, getSanityCategories } from '@/lib/sanity.client';
+import { generateUnifiedArticleGraph } from '@/lib/seo-schema';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -197,78 +198,36 @@ export default async function Post({ params }) {
   const wordCount = getWordCount(contentMarkdown);
   const readTime = Math.max(1, Math.ceil(wordCount / 200));
 
+  const canonicalUrl = `https://whoisalfaz.me/blog/${slug}/`;
+
+  const unifiedSchemaGraph = generateUnifiedArticleGraph({
+    title: post.seoTitle || post.title,
+    description: post.seoDescription || post.description,
+    slug,
+    canonicalUrl,
+    datePublished: post.date,
+    dateModified: post.modified || post.date,
+    image: post.image,
+    category: post.categories?.[0] || 'Technology',
+    categories: post.categories,
+    wordCount,
+    markdownContent: contentMarkdown,
+    schemaMarkup: post.schemaMarkup,
+  });
+
   return (
     <article className="min-h-screen bg-slate-50 dark:bg-[#0a0a0a] transition-colors duration-300 selection:bg-teal-500/30 selection:text-teal-900 dark:selection:text-teal-200 pb-20 pt-24">
 
       {/* AMBIENT GLOWS */}
       <div className="fixed top-0 left-0 w-full h-[500px] bg-gradient-to-b from-teal-500/5 to-transparent dark:from-teal-900/10 dark:to-transparent -z-10 transition-colors duration-300" />
 
-      {/* Auto-generated BlogPosting schema — only injected when the CMS post does NOT
-          already supply a schemaMarkup field. This prevents duplicate BlogPosting blocks
-          that cause Google to pick the first (potentially malformed) version. */}
-      {!post.schemaMarkup && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "BlogPosting",
-              "headline": post.seoTitle || post.title,
-              "description": post.seoDescription || post.description,
-              "datePublished": post.date,
-              "dateModified": post.modified || post.date,
-              // post.image from Sanity is already a fully-qualified absolute URL
-              // (https://cdn.sanity.io/...). Do NOT prepend the site origin.
-              "image": post.image ? [post.image] : [],
-              "mainEntityOfPage": {
-                "@type": "WebPage",
-                "@id": `https://whoisalfaz.me/blog/${slug}/`
-              },
-              "author": {
-                "@type": "Person",
-                "name": "Alfaz Mahmud Rizve",
-                "url": "https://whoisalfaz.me",
-                "jobTitle": "RevOps Architect & Full Stack Automation Engineer",
-                "image": "https://whoisalfaz.me/profile.jpg",
-                "sameAs": [
-                  "https://www.linkedin.com/in/alfaz-mahmud-rizve/",
-                  "https://x.com/whoisalfaz"
-                ]
-              },
-              "publisher": {
-                "@type": "Organization",
-                "name": "whoisalfaz",
-                "logo": {
-                  "@type": "ImageObject",
-                  "url": "https://whoisalfaz.me/logo.png"
-                }
-              }
-            })
-          }}
-        />
-      )}
+      {/* Unified Schema.org Interconnected Entity Graph (WebSite, Person, Organization, WebPage, BreadcrumbList, TechArticle, FAQPage) */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://whoisalfaz.me/" },
-              { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://whoisalfaz.me/blog/" },
-              { "@type": "ListItem", "position": 3, "name": post.seoTitle || post.title, "item": `https://whoisalfaz.me/blog/${slug}/` }
-            ]
-          })
+          __html: JSON.stringify(unifiedSchemaGraph),
         }}
       />
-      {post.schemaMarkup && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: post.schemaMarkup,
-          }}
-        />
-      )}
 
       {/* --- HERO SECTION: HEADER CARD --- */}
       <header className="max-w-7xl mx-auto px-6 mb-10 animate-in fade-in slide-in-from-bottom-8 duration-1000">
@@ -417,25 +376,25 @@ export default async function Post({ params }) {
                 blockquote: Callout,
                 img: BlogImage,
                 ol: StepList,
-                table: ({ children }) => (
-                  <div className="overflow-x-auto my-8 rounded-xl border border-slate-200 dark:border-white/10">
-                    <table className="w-full text-sm text-left">{children}</table>
+                table: ({ children, ...props }) => (
+                  <div className="overflow-x-auto my-10 rounded-2xl border border-slate-200 dark:border-white/10 shadow-sm bg-white/70 dark:bg-slate-900/50 backdrop-blur-sm">
+                    <table className="w-full text-sm text-left border-collapse min-w-[600px] my-0" {...props}>{children}</table>
                   </div>
                 ),
-                thead: ({ children }) => (
-                  <thead className="bg-slate-100 dark:bg-white/5 text-slate-700 dark:text-slate-200 uppercase text-xs tracking-wider">{children}</thead>
+                thead: ({ children, ...props }) => (
+                  <thead className="bg-slate-100/90 dark:bg-white/[0.06] text-slate-900 dark:text-white uppercase text-xs font-black tracking-wider border-b border-slate-200 dark:border-white/10" {...props}>{children}</thead>
                 ),
-                tbody: ({ children }) => (
-                  <tbody className="divide-y divide-slate-200 dark:divide-white/10">{children}</tbody>
+                tbody: ({ children, ...props }) => (
+                  <tbody className="divide-y divide-slate-200/80 dark:divide-white/10 font-medium text-slate-700 dark:text-slate-300" {...props}>{children}</tbody>
                 ),
-                tr: ({ children }) => (
-                  <tr className="hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">{children}</tr>
+                tr: ({ children, ...props }) => (
+                  <tr className="hover:bg-teal-500/[0.04] dark:hover:bg-white/[0.04] transition-colors even:bg-slate-50/50 dark:even:bg-white/[0.015]" {...props}>{children}</tr>
                 ),
-                th: ({ children }) => (
-                  <th className="px-4 py-3 font-semibold whitespace-nowrap">{children}</th>
+                th: ({ children, ...props }) => (
+                  <th className="px-5 py-4 font-black uppercase text-xs tracking-wider text-slate-900 dark:text-white whitespace-nowrap" {...props}>{children}</th>
                 ),
-                td: ({ children }) => (
-                  <td className="px-4 py-3 text-slate-700 dark:text-slate-300">{children}</td>
+                td: ({ children, ...props }) => (
+                  <td className="px-5 py-4 text-slate-700 dark:text-slate-300 text-sm leading-relaxed" {...props}>{children}</td>
                 ),
                 WhopProduct: WhopProductCard,
               }}
