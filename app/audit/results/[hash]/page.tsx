@@ -152,8 +152,27 @@ export default function SharedResultsPage() {
           })}
         </div>
 
+        {/* Embed Badge Banner */}
+        <div className="bg-white dark:bg-white/[0.03] border border-slate-200 dark:border-white/10 rounded-2xl p-5 sm:p-6 transition-colors duration-300 shadow-sm dark:shadow-none">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div className="flex items-center gap-3.5">
+              <img src="/badges/audited-by-whoisalfaz.svg" alt="Audited by WhoisAlfaz" className="h-7 w-auto shadow-sm" />
+              <div className="text-left">
+                <p className="text-xs font-bold text-slate-900 dark:text-white">Embed Verified Audit Badge</p>
+                <p className="text-[11px] text-slate-500 dark:text-slate-400">Add to your GitHub README or website footer</p>
+              </div>
+            </div>
+            <Link
+              href="/audit/#embed-badge"
+              className="px-4 py-2 bg-teal-500/10 hover:bg-teal-500/20 border border-teal-500/20 text-teal-600 dark:text-teal-400 font-bold text-xs rounded-xl transition-all hover:scale-105"
+            >
+              Get Badge Snippet &rarr;
+            </Link>
+          </div>
+        </div>
+
         {/* Share + CTA Row */}
-        <div className="flex flex-col sm:flex-row gap-3 pt-4">
+        <div className="flex flex-col sm:flex-row gap-3 pt-2">
           <button
             onClick={handleCopy}
             className="flex-1 flex items-center justify-center gap-2 px-6 py-4 bg-white dark:bg-white/[0.03] border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 font-bold uppercase tracking-wider text-xs rounded-2xl hover:bg-slate-100 dark:hover:bg-white/[0.06] transition-all shadow-sm"

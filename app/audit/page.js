@@ -1,5 +1,6 @@
 
 import AuditTool from '../../components/AuditTool';
+import AuditBadgeSection from '../../components/AuditBadgeSection';
 import AuditContentFooter from '../../components/footers/AuditContentFooter';
 
 export const metadata = {
@@ -165,6 +166,9 @@ export default function AuditPage() {
                 <section className="mb-16">
                     <AuditTool />
                 </section>
+
+                {/* EMBEDDABLE AUDIT BADGE SECTION */}
+                <AuditBadgeSection />
 
                 {/* SEO CONTENT FOOTER */}
                 <AuditContentFooter />
