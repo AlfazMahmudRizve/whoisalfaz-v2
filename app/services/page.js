@@ -279,27 +279,27 @@ export default function ServicesPage() {
                     {[
                         {
                             q: "How long does it take to build an automation?",
-                            a: "Simple workflows (e.g., lead sync) take 2-3 days. Complex agency operating systems can take 2-4 weeks. We always start with a discovery call to give you an exact timeline."
+                            a: <>Simple workflows (e.g., lead sync) take 2-3 days. Complex agency operating systems can take 2-4 weeks. For multi-agent workflows, we deploy proven <Link href="/blog/dify-ai-workflow-orchestration-vs-n8n-ai-agent-nodes/" className="text-teal-600 dark:text-emerald-400 font-semibold hover:underline">Dify vs n8n AI workflow architecture</Link> to accelerate deployment.</>
                         },
                         {
                             q: "Do you offer ongoing support?",
                             a: "Yes. All projects come with 30 days of free monitoring. After that, we offer monthly maintenance packages to ensure your automations run smoothly as platforms update their APIs."
                         },
                         {
-                            q: "Can you integrate with my specific CRM?",
-                            a: "Almost certainly. If it has an API, we can connect to it. We specialize in HubSpot, Airtable, Pipedrive, and GoHighLevel, but custom integrations are our bread and butter."
+                            q: "Can you integrate with my specific CRM or chatbot stack?",
+                            a: <>Almost certainly. If it has an API, we can connect to it. We specialize in HubSpot, Airtable, Brevo, and ManyChat — see our <Link href="/blog/manychat-pricing-2026/" className="text-teal-600 dark:text-emerald-400 font-semibold hover:underline">ManyChat 2026 pricing teardown</Link> for webhook and CRM sync strategies.</>
                         },
                         {
-                            q: "What is your refund policy?",
-                            a: "We work on a milestone basis. If we cannot deliver the agreed-upon scope, you don't pay for that milestone. We prioritize transparent communication to ensure you're always happy with the output."
+                            q: "How can I audit my site before hiring?",
+                            a: <>Run our instant browser-native <Link href="/blog/screaming-frog-alternatives-free-seo-audit-tools/" className="text-teal-600 dark:text-emerald-400 font-semibold hover:underline">free Screaming Frog alternative</Link> to inspect Core Web Vitals, SSL, and security headers without any software download.</>
                         },
                         {
                             q: "Do I need to pay for n8n hosting?",
-                            a: "You have two options: Cloud (approx $20/mo) or Self-Hosted (approx $5-10/mo on a VPS). We can set up either for you, but we usually recommend self-hosting for maximum data privacy and lower costs at scale."
+                            a: <>You have two options: Cloud (approx $20/mo) or Self-Hosted (approx $5-10/mo on a VPS). We usually recommend self-hosting for maximum data privacy. When evaluating vector search memory costs, review our <Link href="/blog/pinecone-vs-qdrant-vultr-benchmark/" className="text-teal-600 dark:text-emerald-400 font-semibold hover:underline">Pinecone vs Qdrant benchmark on Vultr</Link>.</>
                         },
                         {
                             q: "How do AI automation agencies price their services?",
-                            a: "Most AI automation agencies charge via a monthly retainer model (ranging from $1,500 to $5,000/month) or a productized service package for specific custom workflows."
+                            a: <>Most agencies charge via monthly retainers ($1,500-$5,000/mo) or productized build packages. Read our complete guide to the <Link href="/blog/ai-automation-agency-business-model/" className="text-teal-600 dark:text-emerald-400 font-semibold hover:underline">AI automation agency business model</Link> for detailed pricing formulas and high-ticket service packaging.</>
                         }
                     ].map((item, i) => (
                         <details key={i} style={{ animationDelay: `${i * 100}ms` }} className="animate-in fade-in slide-in-from-bottom-4 duration-700 fill-mode-both bg-white dark:bg-[#0f172a] border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden group shadow-sm transition-colors duration-300">

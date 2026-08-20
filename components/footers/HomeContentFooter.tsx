@@ -5,7 +5,18 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { ChevronDown, Zap, Globe, Code2, BarChart3, Mail, Server } from 'lucide-react';
 
-const techStack = [
+interface TechStackItem {
+  name: string;
+  role: string;
+  icon: any;
+  color: string;
+  bg: string;
+  border: string;
+  desc: string;
+  link: string;
+}
+
+const techStack: TechStackItem[] = [
   {
     name: 'n8n',
     role: 'Workflow Automation',
@@ -13,7 +24,7 @@ const techStack = [
     color: 'text-orange-500',
     bg: 'bg-orange-500/10',
     border: 'border-orange-500/20',
-    desc: 'Open-source automation engine for building self-healing workflows. No per-task pricing.',
+    desc: 'Open-source automation engine for building self-healing workflows without per-task fee locks.',
     link: '/services/n8n-automation/',
   },
   {
@@ -43,8 +54,8 @@ const techStack = [
     color: 'text-purple-500',
     bg: 'bg-purple-500/10',
     border: 'border-purple-500/20',
-    desc: 'LLM-powered agents for lead qualification, content generation, and autonomous decision-making.',
-    link: '/blog/',
+    desc: 'LLM-powered agents for lead qualification, RAG retrieval, and autonomous decision-making.',
+    link: '/blog/dify-ai-workflow-orchestration-vs-n8n-ai-agent-nodes/',
   },
   {
     name: 'Technical SEO',
@@ -54,7 +65,7 @@ const techStack = [
     bg: 'bg-teal-500/10',
     border: 'border-teal-500/20',
     desc: 'Structured data, Core Web Vitals optimization, sitemap architecture, and crawl budget management.',
-    link: '/services/technical-seo/',
+    link: '/blog/screaming-frog-alternatives-free-seo-audit-tools/',
   },
   {
     name: 'Email Systems',
@@ -63,31 +74,56 @@ const techStack = [
     color: 'text-blue-500',
     bg: 'bg-blue-500/10',
     border: 'border-blue-500/20',
-    desc: 'Automated drip sequences, transactional emails, and newsletter infrastructure via Brevo.',
+    desc: 'Automated drip sequences, transactional emails, and lead nurture infrastructure via Brevo.',
     link: '/contact/',
   },
 ];
 
-const faqs = [
+interface FaqItem {
+  q: string;
+  a: React.ReactNode;
+}
+
+const faqs: FaqItem[] = [
   {
     q: 'Who is Alfaz Mahmud Rizve?',
-    a: 'Alfaz Mahmud Rizve is a RevOps architect and full-stack automation engineer based in Bangladesh. He specializes in building autonomous revenue systems for SaaS companies, digital agencies, and small businesses using n8n workflows, AI agents, and high-performance Next.js infrastructure. His mission is to help business owners escape the "Content Treadmill" and build systems that run on autopilot.',
+    a: (
+      <>
+        Alfaz Mahmud Rizve is a RevOps architect and full-stack automation engineer based in Bangladesh. He specializes in building autonomous revenue systems for SaaS companies, digital agencies, and small businesses using n8n workflows, <Link href="/blog/dify-ai-workflow-orchestration-vs-n8n-ai-agent-nodes/" className="text-teal-600 dark:text-teal-400 font-semibold hover:underline">Dify vs n8n AI workflow architecture</Link>, and high-performance Next.js infrastructure. His mission is to help business owners adopt the <Link href="/blog/ai-automation-agency-business-model/" className="text-teal-600 dark:text-teal-400 font-semibold hover:underline">AI automation agency business model</Link> and build systems that run on autopilot.
+      </>
+    ),
   },
   {
     q: 'What is workflow automation?',
-    a: 'Workflow automation is the process of replacing manual, repetitive business tasks with automated systems. Instead of manually copying data between your CRM, email tool, and spreadsheets, an automation engine like n8n handles it instantly via webhooks and API integrations — saving hundreds of hours per month.',
+    a: (
+      <>
+        Workflow automation is the process of replacing manual, repetitive business tasks with automated systems. Instead of manually copying data between your CRM, email tool, and spreadsheets, an automation engine like n8n handles it instantly via webhooks and API integrations — saving hundreds of hours per month. For messaging funnels, review our <Link href="/blog/manychat-pricing-2026/" className="text-teal-600 dark:text-teal-400 font-semibold hover:underline">ManyChat 2026 pricing teardown</Link> to eliminate per-contact penalty costs.
+      </>
+    ),
   },
   {
     q: 'How much does n8n cost?',
-    a: 'n8n offers a free self-hosted option that you can deploy on any cloud server for roughly $5-20/month in hosting costs. Unlike Zapier or Make, n8n does not charge per task execution, making it dramatically cheaper for high-volume automation. n8n Cloud plans start at $20/month for managed hosting.',
+    a: (
+      <>
+        n8n offers a free self-hosted option that you can deploy on any cloud server for roughly $5-20/month in hosting costs. Unlike Zapier or Make, n8n does not charge per task execution, making it dramatically cheaper for high-volume automation. When engineering self-hosted RAG systems with n8n, consult our <Link href="/blog/pinecone-vs-qdrant-vultr-benchmark/" className="text-teal-600 dark:text-teal-400 font-semibold hover:underline">Pinecone vs Qdrant benchmark on Vultr</Link> for detailed memory and hardware cost comparisons.
+      </>
+    ),
   },
   {
-    q: 'What is a headless CMS?',
-    a: 'A headless CMS decouples your content management from your frontend presentation. Your content lives in one system (like WordPress, Strapi, or local MDX files), while your frontend is built with a modern framework like Next.js. This architecture delivers faster page loads, better SEO, and stronger security.',
+    q: 'What is a headless CMS and how do I audit my technical SEO?',
+    a: (
+      <>
+        A headless CMS decouples your content management from your frontend presentation. Your content lives in one system while your frontend is built with a modern framework like Next.js, delivering faster page loads, better SEO, and stronger security. You can inspect your Core Web Vitals and security headers using our browser-based <Link href="/blog/screaming-frog-alternatives-free-seo-audit-tools/" className="text-teal-600 dark:text-teal-400 font-semibold hover:underline">free Screaming Frog alternative</Link>.
+      </>
+    ),
   },
   {
     q: 'Do you offer free consultations?',
-    a: 'Yes. Book a free strategy call to discuss your automation needs, current tech stack, and growth goals. There is no obligation — the call is designed to identify bottlenecks and determine if a custom automation system is the right fit for your business.',
+    a: (
+      <>
+        Yes. Book a free strategy call to discuss your automation needs, current tech stack, and growth goals. There is no obligation — the call is designed to identify bottlenecks and determine if a custom automation system is the right fit for your business.
+      </>
+    ),
   },
 ];
 
@@ -119,13 +155,13 @@ export default function HomeContentFooter() {
               </h2>
               <div className="space-y-4 text-slate-600 dark:text-slate-400 leading-relaxed transition-colors duration-300">
                 <p>
-                  Alfaz Mahmud Rizve is a RevOps architect and full-stack automation engineer who builds autonomous revenue systems for scaling agencies, SaaS companies, and small businesses. Based in Bangladesh and working with clients globally, he specializes in eliminating manual bottlenecks through self-healing n8n workflows, AI agent deployments, and high-performance Next.js infrastructure.
+                  Alfaz Mahmud Rizve is a RevOps architect and full-stack automation engineer who builds autonomous revenue systems for scaling agencies, SaaS companies, and small businesses. Based in Bangladesh and working with clients globally, he specializes in eliminating manual bottlenecks through self-healing n8n workflows, production-grade <Link href="/blog/dify-ai-workflow-orchestration-vs-n8n-ai-agent-nodes/" className="text-teal-600 dark:text-teal-400 font-bold hover:underline">Dify vs n8n AI workflow architecture</Link>, and high-performance Next.js infrastructure.
                 </p>
                 <p>
-                  With a focus on practical, revenue-driven engineering, Alfaz helps business owners escape the &quot;Content Treadmill&quot; — replacing fragile Zapier chains and manual processes with enterprise-grade automation architectures that run 24/7 without human intervention. His work spans custom full-stack applications, headless CMS infrastructure, technical SEO, and workflow automation consulting.
+                  With a focus on practical, revenue-driven engineering, Alfaz helps agency founders execute the <Link href="/blog/ai-automation-agency-business-model/" className="text-teal-600 dark:text-teal-400 font-bold hover:underline">AI automation agency business model</Link> — replacing fragile Zapier chains and manual processes with enterprise-grade automation architectures that run 24/7 without human intervention. His work spans custom full-stack applications, headless CMS infrastructure, technical SEO, and workflow automation consulting.
                 </p>
                 <p>
-                  Through <Link href="/blog/" className="text-teal-600 dark:text-blue-400 font-bold hover:underline">his blog</Link>, Alfaz documents the exact systems, tools, and frameworks he uses — including the 30-day automation engineering series and in-depth technical guides. He also provides <Link href="/audit/" className="text-teal-600 dark:text-blue-400 font-bold hover:underline">a free website audit tool</Link> and an <Link href="/labs/roi/" className="text-teal-600 dark:text-blue-400 font-bold hover:underline">ROI calculator</Link> to help agencies measure automation impact before investing.
+                  Through <Link href="/blog/" className="text-teal-600 dark:text-blue-400 font-bold hover:underline">his blog</Link>, Alfaz documents the exact systems, tools, and frameworks he uses — including our comprehensive <Link href="/blog/manychat-pricing-2026/" className="text-teal-600 dark:text-teal-400 font-bold hover:underline">ManyChat 2026 pricing teardown</Link> and empirical <Link href="/blog/pinecone-vs-qdrant-vultr-benchmark/" className="text-teal-600 dark:text-teal-400 font-bold hover:underline">Pinecone vs Qdrant benchmark on Vultr</Link>. He also provides a <Link href="/blog/screaming-frog-alternatives-free-seo-audit-tools/" className="text-teal-600 dark:text-teal-400 font-bold hover:underline">free Screaming Frog alternative</Link> via his <Link href="/audit/" className="text-teal-600 dark:text-blue-400 font-bold hover:underline">free website audit tool</Link> and an <Link href="/labs/roi/" className="text-teal-600 dark:text-blue-400 font-bold hover:underline">ROI calculator</Link> to help agencies measure automation impact before investing.
                 </p>
               </div>
               <div className="flex flex-wrap gap-3 mt-8">
@@ -220,9 +256,9 @@ export default function HomeContentFooter() {
                   </button>
                   {isOpen && (
                     <div className="px-5 pb-5 -mt-1">
-                      <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed transition-colors">
+                      <div className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed transition-colors">
                         {faq.a}
-                      </p>
+                      </div>
                     </div>
                   )}
                 </div>

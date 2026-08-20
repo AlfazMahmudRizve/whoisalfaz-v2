@@ -88,7 +88,7 @@
     "id": "RG0kr2oNPMWGLodGU1dssA",
     "slug": "manychat-to-n8n-integration-lead-scoring",
     "title": "ManyChat to n8n Integration: The Complete Lead Scoring Pipeline (2025)",
-    "description": "Learn how to build a production-grade ManyChat to n8n integration using webhooks. Includes AI lead scoring, Brevo CRM sync, and how to beat the 10-second timeout — with real code."
+    "description": "Build a ManyChat to n8n integration for AI lead scoring. Technical guide covering webhooks, Brevo CRM sync, and beating the 10-second response timeout."
   },
   {
     "index": 14,
@@ -218,499 +218,506 @@
   },
   {
     "index": 32,
-    "id": "automated-pdf-document-chunking-vectorization-n8n",
-    "slug": "automated-pdf-document-chunking-vectorization-n8n",
-    "title": "Automated PDF Document Chunking in n8n Guide",
-    "description": "Step-by-step guide to building automated PDF text extraction, recursive semantic chunking, metadata enrichment, and vector ingestion pipelines in n8n."
-  },
-  {
-    "index": 33,
     "id": "brevo-cold-email-ip-warming-guide",
     "slug": "brevo-cold-email-ip-warming-guide",
     "title": "Brevo Cold Email & IP Warming: Dedicated SMTP Deliverability",
     "description": "Master Brevo cold email deliverability and dedicated IP warming. Step-by-step schedule, SPF/DKIM/DMARC setup, and automated n8n throttling logic."
   },
   {
-    "index": 34,
-    "id": "building-an-enterprise-knowledge-graph-rag-n8n",
-    "slug": "building-an-enterprise-knowledge-graph-rag-n8n",
-    "title": "Enterprise Knowledge Graph RAG in n8n Blueprint",
-    "description": "Complete blueprint for building hybrid Knowledge Graph RAG (GraphRAG) workflows in n8n combining Neo4j graph databases with Qdrant vector retrieval."
-  },
-  {
-    "index": 35,
+    "index": 33,
     "id": "building-multi-tenant-vector-search-n8n-qdrant",
     "slug": "building-multi-tenant-vector-search-n8n-qdrant",
     "title": "Multi-Tenant Vector Search: n8n Qdrant Blueprint",
-    "description": "Architect enterprise multi-tenant vector search in n8n using Qdrant payload isolation schemas, HTTP header security middleware, and Vultr VPS infrastructure."
+    "description": "Blueprint for architecting isolated multi-tenant vector search pipelines using n8n workflows, Qdrant payload filters, security key scoping, and Vultr infrastructure."
   },
   {
-    "index": 36,
+    "index": 34,
     "id": "closed-loop-lead-attribution-engine",
     "slug": "closed-loop-lead-attribution-engine",
     "title": "Closed-Loop Lead Attribution Engine: n8n & monday.com",
     "description": "Build a closed-loop lead attribution engine using n8n, monday.com, and WhatConverts. Track ROI, first-touch, and multi-touch revenue data automatically."
   },
   {
-    "index": 37,
+    "index": 35,
     "id": "cold-email-machine-apollo-aisdr-brevo",
     "slug": "cold-email-machine-apollo-aisdr-brevo",
     "title": "How to Build an Automated Cold Email Machine with Apollo.io, AiSDR, and Brevo",
     "description": "Build a fully automated cold email system using Apollo.io for prospecting, AiSDR for personalized copy, and Brevo for transactional SMTP delivery at scale."
   },
   {
-    "index": 38,
+    "index": 36,
     "id": "cometchat-dify-inapp-voice",
     "slug": "cometchat-dify-inapp-voice",
     "title": "CometChat Dify.ai In-App Voice: React & Webhook Guide",
     "description": "Integrate CometChat and Dify.ai for in-app voice AI agents. Step-by-step guide covering React SDK setup, Webhook authentication, and custom Python nodes."
   },
   {
-    "index": 39,
-    "id": "corrective-rag-crag-blueprint-n8n-tavily-fallback",
-    "slug": "corrective-rag-crag-blueprint-n8n-tavily-fallback",
-    "title": "Corrective RAG CRAG Blueprint: n8n & Tavily",
-    "description": "Complete architectural blueprint for implementing Corrective RAG (CRAG) in n8n using internal vector retrieval evaluation and dynamic Tavily web search fallbacks."
-  },
-  {
-    "index": 40,
+    "index": 37,
     "id": "corrective-rag-crag-n8n-blueprint",
     "slug": "corrective-rag-crag-n8n-blueprint",
     "title": "Corrective RAG CRAG n8n Blueprint: Vector DB Search",
     "description": "Step-by-step blueprint to build a Corrective RAG (CRAG) workflow in n8n with Qdrant vector search, automated grading, Tavily web fallback, and context synthesis."
   },
   {
-    "index": 41,
+    "index": 38,
     "id": "databox-revops-dashboard-pipeline-velocity",
     "slug": "databox-revops-dashboard-pipeline-velocity",
-    "title": "Databox Executive RevOps Dashboards: n8n & monday.com",
+    "title": "Databox Executive RevOps Dashboards: Pipeline Velocity & n8n SOP",
     "description": "Build real-time Databox executive RevOps dashboards with n8n and monday.com. Track sales pipeline velocity, ARR, win rates, and SDR ROI metrics live."
   },
   {
-    "index": 42,
-    "id": "dify-ai-vultr-gpu-docker-deployment-guide",
-    "slug": "dify-ai-vultr-gpu-docker-deployment-guide",
-    "title": "Dify.ai Vultr GPU Docker Deployment Blueprint",
-    "description": "Production SOP for deploying Dify.ai open-source LLM application platform on Vultr Cloud GPU using Docker Compose, NVIDIA Container Toolkit, SSL proxy, and Qdrant."
-  },
-  {
-    "index": 43,
-    "id": "dify-ai-workflow-orchestration-vs-n8n-ai-agent-nodes",
-    "slug": "dify-ai-workflow-orchestration-vs-n8n-ai-agent-nodes",
-    "title": "Dify.ai vs n8n AI Agents: Architecture Guide",
-    "description": "Architectural teardown comparing Dify.ai native workflow orchestration against n8n LangChain AI Agent nodes for enterprise automation."
-  },
-  {
-    "index": 44,
+    "index": 39,
     "id": "dify-vs-n8n-architecture",
     "slug": "dify-vs-n8n-architecture",
     "title": "Dify.ai vs n8n Architecture: Docker & API Comparison",
     "description": "Compare Dify.ai vs n8n architecture for enterprise AI orchestration. Learn how self-hosted Docker containers, Python code nodes, and APIs scale workflows."
   },
   {
-    "index": 45,
+    "index": 40,
     "id": "elevenlabs-n8n-voice-ai-sales-agent",
     "slug": "elevenlabs-n8n-voice-ai-sales-agent",
     "title": "ElevenLabs n8n Voice AI Agent: Twilio & API Guide",
     "description": "Build a production ElevenLabs n8n voice AI agent with low latency. Step-by-step tutorial covering Twilio Webhooks, OpenAI LLMs, and HubSpot CRM sync."
   },
   {
-    "index": 46,
+    "index": 41,
     "id": "emergent-ai-autonomous-gtm-guide",
     "slug": "emergent-ai-autonomous-gtm-guide",
     "title": "Emergent AI Autonomous GTM Guide: n8n Workflow in SaaS",
     "description": "Master autonomous go-to-market execution with our Emergent AI autonomous GTM guide, featuring complete n8n workflow blueprints and JavaScript routing nodes."
   },
   {
-    "index": 47,
+    "index": 42,
     "id": "headless-wordpress-seo-nextjs-guide",
     "slug": "headless-wordpress-seo-nextjs-guide",
     "title": "Headless WordPress SEO: Next.js 15 App Router Blueprint",
     "description": "Headless WordPress SEO: Learn to rewrite canonicals, sync middleware redirects, and generate dynamic Next.js 15 sitemaps to prevent traffic drops."
   },
   {
-    "index": 48,
+    "index": 43,
     "id": "headless-wordpress-vs-monolithic",
     "slug": "headless-wordpress-vs-monolithic",
     "title": "Headless WordPress vs Monolithic: Enterprise Decoupled Guide",
-    "description": "Headless WordPress vs Monolithic: Compare performance, core web vitals, security, TCO, and API integrations to select the right CMS architecture."
+    "description": "Headless WordPress vs Monolithic comparison: Evaluate Core Web Vitals, security, TCO, performance, and API integration for enterprise CMS architectures."
   },
   {
-    "index": 49,
+    "index": 44,
     "id": "high-throughput-batch-vector-ingestion-n8n-qdrant",
     "slug": "high-throughput-batch-vector-ingestion-n8n-qdrant",
     "title": "High-Throughput Batch Vector Ingestion: n8n SOP",
-    "description": "Standard operating procedure for processing, chunking, and ingesting high-volume batch vector datasets using n8n workflows, worker queues, and Qdrant."
+    "description": "Step-by-step SOP for architecting high-throughput batch vector ingestion pipelines in n8n with Qdrant, concurrency limits, and retry queues on Vultr."
   },
   {
-    "index": 50,
+    "index": 45,
     "id": "how-to-audit-competitor-seo-no-verification",
     "slug": "how-to-audit-competitor-seo-no-verification",
-    "title": "How to Audit Your Competitors' Technical SEO (Without DNS Verification)",
+    "title": "Competitor Technical SEO Audit: No DNS Access Blueprint",
     "description": "Learn how to audit competitor SEO parameters anonymously. Step-by-step guide to crawling Core Web Vitals, metadata, SSL, security headers, and robots/sitemaps."
   },
   {
-    "index": 51,
-    "id": "hybrid-vector-keyword-search-qdrant-n8n-pipeline",
-    "slug": "hybrid-vector-keyword-search-qdrant-n8n-pipeline",
-    "title": "Hybrid Vector & Keyword Search: Qdrant n8n SOP",
-    "description": "Step-by-step SOP for implementing hybrid search in n8n using BM25 sparse keyword matching and Qdrant dense vector embeddings combined via Reciprocal Rank Fusion."
-  },
-  {
-    "index": 52,
+    "index": 46,
     "id": "manychat-n8n-async-timeout-fix",
     "slug": "manychat-n8n-async-timeout-fix",
     "title": "ManyChat + n8n: How to Beat the 10-Second Response Timeout and Build Async Chat Flows",
     "description": "Fix ManyChat's 10-second webhook timeout using n8n async queues. Step-by-step tutorial covering decoupled webhooks, n8n queue architectures, and async REST API handoffs."
   },
   {
-    "index": 53,
+    "index": 47,
     "id": "manychat-n8n-whatsapp-voice-bot",
     "slug": "manychat-n8n-whatsapp-voice-bot",
     "title": "ManyChat n8n WhatsApp Voice Bot: ElevenLabs API Guide",
     "description": "Build a ManyChat n8n WhatsApp voice bot using ElevenLabs and Whisper STT. Step-by-step tutorial for asynchronous voice message processing and CRM updates."
   },
   {
-    "index": 54,
+    "index": 48,
     "id": "manychat-whatsapp-b2b-lead-capture-agency",
     "slug": "manychat-whatsapp-b2b-lead-capture-agency",
     "title": "ManyChat WhatsApp B2B Lead Capture: The Agency Blueprint (With n8n + Brevo CRM Sync)",
     "description": "Build a production-grade WhatsApp B2B lead capture system using ManyChat, n8n, and Brevo. Covers the 10-second timeout fix, Meta compliance, AI lead scoring, human handoff, and multi-tenant agency architecture."
   },
   {
-    "index": 55,
+    "index": 49,
     "id": "monday-com-automation-recipes-revops-2026",
     "slug": "monday-com-automation-recipes-revops-2026",
     "title": "monday.com Automation Recipes Every RevOps Team Should Deploy in 2026",
     "description": "12 battle-tested monday.com automation recipes for RevOps teams — from pipeline stage alerts to cross-board reporting syncs and client onboarding flows."
   },
   {
-    "index": 56,
+    "index": 50,
     "id": "monday-crm-advanced-lead-scoring",
     "slug": "monday-crm-advanced-lead-scoring",
     "title": "monday.com CRM Advanced Lead Scoring: n8n Workflow Engine",
     "description": "Automate monday.com CRM advanced lead scoring with n8n workflow JavaScript code nodes. Calculate dynamic fit, intent signals, and firmographic metrics."
   },
   {
-    "index": 57,
+    "index": 51,
     "id": "n8n-ai-agent-memory-persistence-qdrant-vector-store",
     "slug": "n8n-ai-agent-memory-persistence-qdrant-vector-store",
     "title": "n8n Context Compression: Qdrant Memory Guide",
-    "description": "Master context compression for n8n AI agents using Qdrant vector memory storage, token truncation algorithms, and semantic summarization pipelines."
+    "description": "In-depth guide on implementing n8n context compression with Qdrant vector memory to eliminate token window bloat and reduce LLM inference costs."
   },
   {
-    "index": 58,
+    "index": 52,
     "id": "n8n-apollo-lead-enrichment-pipeline",
     "slug": "n8n-apollo-lead-enrichment-pipeline",
     "title": "How to Build an AI-Powered Lead Enrichment Pipeline with n8n and Apollo.io",
     "description": "Step-by-step guide to automating B2B lead enrichment using n8n + Apollo.io API. Build a self-healing outbound data pipeline in under 2 hours."
   },
   {
-    "index": 59,
+    "index": 53,
     "id": "n8n-multi-tenant-vector-schema",
     "slug": "n8n-multi-tenant-vector-schema",
     "title": "n8n Multi-Tenant Vector Schema Guide: Qdrant Docker",
     "description": "Architectural guide for designing a multi-tenant vector schema in n8n using Qdrant payload isolation, pre-filtering rules, and automated tenant offboarding."
   },
   {
-    "index": 60,
+    "index": 54,
     "id": "n8n-vector-store-memory-management-production-guide",
     "slug": "n8n-vector-store-memory-management-production-guide",
     "title": "n8n AI Agent Memory Persistence: Qdrant Guide",
-    "description": "Complete guide to building persistent dual-layer memory for n8n AI agents using Qdrant vector storage, sliding window buffers, and automated conversation summarization."
+    "description": "Complete production guide for implementing hybrid n8n AI agent memory persistence using Qdrant vector storage, PostgreSQL chat history, and auto-archiving."
   },
   {
-    "index": 61,
+    "index": 55,
     "id": "omnichannel-ai-voice-note-handler",
     "slug": "omnichannel-ai-voice-note-handler",
     "title": "n8n Omnichannel Voice Note Handler: WhatsApp AI Agent Guide",
     "description": "Build an omnichannel AI agent voice note handler with n8n, Whisper, and WhatsApp API. Normalize audio files across Telegram, Slack, and web widgets."
   },
   {
-    "index": 62,
-    "id": "open-source-llm-embeddings-voyage-bge-mxbai-n8n-benchmark",
-    "slug": "open-source-llm-embeddings-voyage-bge-mxbai-n8n-benchmark",
-    "title": "Open-Source LLM Embeddings: BGE vs Voyage RAG",
-    "description": "Comprehensive empirical benchmark comparing BGE-M3, Voyage-3, Nomic-Embed, mxbai-embed-large, and OpenAI text-embedding-3 for n8n vector search."
-  },
-  {
-    "index": 63,
+    "index": 56,
     "id": "pJmrsKLAWC800vFHegTxif",
     "slug": "automated-email-follow-up-n8n-brevo",
     "title": "Automated Email Follow Up: How to Build a Smart System with n8n & Brevo – 30 Days of n8n & Automation – Day 12",
     "description": "Stop losing leads. Learn to build an automated email follow up system with n8n and Brevo. A guide to catch up no-reply leads 24/7 using smart workflows."
   },
   {
-    "index": 64,
+    "index": 57,
     "id": "pJmrsKLAWC800vFHegTxwD",
     "slug": "facebook-lead-ads-automation-by-alfaz-mahmud-rizve",
     "title": "Facebook Lead Ads Automation: Sync Leads to CRM for Free with n8n – 30 Days of n8n & Automation – Day 13",
     "description": "Stop paying for Zapier. Learn Facebook Lead Ads Automation with n8n. A complete guide to syncing leads to your CRM instantly and for free. Build your real-time pipeline today."
   },
   {
-    "index": 65,
+    "index": 58,
     "id": "pJmrsKLAWC800vFHegTy3x",
     "slug": "automated-marketing-reporting-with-n8n-at-whoisalfaz",
     "title": "Automated Marketing Reporting: Send Weekly Lead Summaries with n8n – 30 Days of n8n & Automation – Day 14",
     "description": "Stop manually building spreadsheets. Learn how to architect automated marketing reporting with n8n to send weekly data summaries directly to your client's inbox."
   },
   {
-    "index": 66,
+    "index": 59,
     "id": "pJmrsKLAWC800vFHegTzUz",
     "slug": "build-an-automated-rank-tracker-tool-with-n8n",
     "title": "Build an Automated Rank Tracker Tool with n8n (Save $1,200/Year) – 30 Days of n8n & Automation – Day 16",
     "description": "Stop paying the SEO lazy tax. Learn how to architect your own automated rank tracker tool using n8n, the Serper.dev API, and Databox."
   },
   {
-    "index": 67,
+    "index": 60,
     "id": "pJmrsKLAWC800vFHegU17d",
     "slug": "what-is-n8n-by-alfaz-mahmud-rizve",
     "title": "What is n8n? Core concepts – 30 Days of n8n & Automation – Day 2",
     "description": "What is n8n? Learn the core concepts of n8n from Alfaz Mahmud Rizve with real SaaS use cases and automation examples for beginners"
   },
   {
-    "index": 68,
+    "index": 61,
     "id": "pJmrsKLAWC800vFHegU2q5",
     "slug": "automate-personal-branding-with-n8n",
     "title": "Your Competitors Are Automating Their Brand — Build Your n8n Digital Twin – Day 21",
     "description": "While you manually post content, the top agencies run Digital Twin workflows in n8n. Learn how to automate personal branding — content repurposing, social listening, and SEO auditing — on autopilot."
   },
   {
-    "index": 69,
+    "index": 62,
     "id": "pJmrsKLAWC800vFHegU33d",
     "slug": "automate-client-reporting-with-n8n",
     "title": "Stop Taking Screenshots for Clients — Build an Automated PDF Report Engine with n8n – Day 22",
     "description": "Ditch the Canva slides and manual data pulls. Build a fully automated client reporting system with n8n that generates white-labeled PDFs from GA4 data and delivers them automatically."
   },
   {
-    "index": 70,
+    "index": 63,
     "id": "pJmrsKLAWC800vFHegU4gH",
     "slug": "how-to-build-an-api-with-n8n",
     "title": "Stop Deploying Servers for Simple Logic — Build a Serverless API with n8n – Day 24",
     "description": "Stop paying for Lambda functions and Heroku dynos for simple backend logic. Build a secure, serverless API with n8n that handles verification, form processing, and OpenAI proxying in minutes."
   },
   {
-    "index": 71,
+    "index": 64,
     "id": "pJmrsKLAWC800vFHegU8Ob",
     "slug": "what-is-n8n-and-how-to-set-it-up",
     "title": "Architecting the Infrastructure: n8n Cloud vs. Self-Hosted (Day 3)",
     "description": "Stop guessing about your infrastructure. Learn the exact architectural differences between n8n Cloud and Self-Hosted deployments, Docker, Postgres, and Redis scaling."
   },
   {
-    "index": 72,
+    "index": 65,
     "id": "pJmrsKLAWC800vFHegU8e5",
     "slug": "n8n-workflow-design-best-practices",
     "title": "n8n Workflow Design Best Practices (Inputs, Processing, Outputs, Error Paths) – Day 4",
     "description": "Learn n8n workflow design best practices: how to think and build error paths so your SaaS or agency automations are reliable, crash-proof, and easy to scale."
   },
   {
-    "index": 73,
+    "index": 66,
     "id": "pJmrsKLAWC800vFHegU8rd",
     "slug": "automations-for-saas-and-agencies",
     "title": "Picking your first 3 automations for SaaS and agencies (framework + examples) - 30 Days of n8n & Automation – Day 5",
     "description": "Stop trying to boil the ocean. Learn the exact framework SaaS and agencies use to pick their first 3 revenue-generating automations. Real examples, n8n architecture, and deployment rules."
   },
   {
-    "index": 74,
+    "index": 67,
     "id": "pJmrsKLAWC800vFHegUEKL",
     "slug": "manychat-pricing-2026",
     "title": "ManyChat Pricing 2026: Is It Still Worth It for Agencies? (An Automation Engineer's Verdict)",
     "description": "A deep dive into ManyChat's 2026 pricing overhaul, real costs for agencies, and how to build a scalable ManyChat + n8n + Brevo automation stack."
   },
   {
-    "index": 75,
+    "index": 68,
     "id": "pJmrsKLAWC800vFHegUFnJ",
     "slug": "apollo-n8n-outreach",
     "title": "Build an AI Cold Outreach Machine with Apollo.io + n8n in 2026 (Zero Manual Effort)",
     "description": "How Apollo.io, n8n, and a lightweight AI enrichment layer work together to replace an SDR workflow at a fraction of the cost."
   },
   {
-    "index": 76,
+    "index": 69,
     "id": "pJmrsKLAWC800vFHegUG6f",
     "slug": "case-study-careerops-ai-resume-builder",
     "title": "Architecting a Stateless AI Career Strategist: Integrating Next.js with n8n and React PDF",
     "description": "A profound teardown of CareerOps — a privacy-first AI platform that orchestrates real-time resume optimization using n8n and generates pixel-perfect PDFs entirely in the browser."
   },
   {
-    "index": 77,
+    "index": 70,
     "id": "pJmrsKLAWC800vFHegUGO5",
     "slug": "case-study-cashops-financial-dashboard",
     "title": "Building a High-Velocity Financial Dashboard: Optimistic UI, NextAuth, and Real-Time Analytics",
     "description": "A deep dive into CashOps.app: A developer-focused personal finance dashboard featuring instant data visualization, CSV bulk imports, and absolute data privacy."
   },
   {
-    "index": 78,
+    "index": 71,
     "id": "pinecone-n8n-rag-knowledge-base-blueprint",
     "slug": "pinecone-n8n-rag-knowledge-base-blueprint",
     "title": "Building a RAG Knowledge Base with Pinecone and n8n: A Production-Ready Blueprint",
-    "description": "Build an enterprise-grade Corrective RAG (CRAG) knowledge base with n8n and Pinecone. Step-by-step blueprint covering document grading, hybrid search, and self-healing web search fallbacks."
+    "description": "Build a Pinecone n8n RAG knowledge base blueprint. Production guide covering document chunking, vector retrieval, document grading, and web search fallback."
   },
   {
-    "index": 79,
-    "id": "pinecone-namespaces-vs-qdrant-payload-filters-comparison",
-    "slug": "pinecone-namespaces-vs-qdrant-payload-filters-comparison",
-    "title": "Pinecone Namespaces vs Qdrant Payload Filters",
-    "description": "Architectural comparison of multi-tenant data isolation techniques: Pinecone Namespaces versus Qdrant Payload Filters with index performance benchmarks."
-  },
-  {
-    "index": 80,
-    "id": "pinecone-serverless-vs-qdrant-vultr-latency-benchmark",
-    "slug": "pinecone-serverless-vs-qdrant-vultr-latency-benchmark",
-    "title": "Pinecone vs Qdrant Vultr: RAG Latency Benchmark",
-    "description": "Benchmark teardown comparing Pinecone Serverless latency against self-hosted Qdrant on Vultr Cloud VPS across 1M 1536-dimensional embeddings."
-  },
-  {
-    "index": 81,
+    "index": 72,
     "id": "pinecone-vs-qdrant-n8n-rag-comparison",
     "slug": "pinecone-vs-qdrant-n8n-rag-comparison",
     "title": "Pinecone vs Qdrant for n8n RAG Pipelines: Which Vector DB Should You Choose?",
     "description": "A technical comparison of Pinecone vs Qdrant for RAG workflows in n8n — covering indexing speed, cost, semantic search accuracy, and self-hosting trade-offs."
   },
   {
-    "index": 82,
+    "index": 73,
     "id": "pinecone-vs-qdrant-vultr-benchmark",
     "slug": "pinecone-vs-qdrant-vultr-benchmark",
     "title": "Pinecone vs Qdrant Vultr Benchmark: Docker Vector DB",
     "description": "A comprehensive benchmark comparing Pinecone Serverless and self-hosted Qdrant on Vultr for n8n RAG workflows — covering query latency, RAM, and cost."
   },
   {
-    "index": 83,
+    "index": 74,
+    "id": "post-manychat-alternatives-2026-top-tools-by-use-case",
+    "slug": "manychat-alternatives-2026-top-tools-by-use-case",
+    "title": "ManyChat Alternatives 2026: Top Tools by Use Case",
+    "description": "Comprehensive 2026 buyer guide analyzing the top ManyChat alternatives by use case, pricing structure, Instagram DM triggers, WhatsApp API capabilities, and AI support."
+  },
+  {
+    "index": 75,
     "id": "revops-automation-stack-saas-2026",
     "slug": "revops-automation-stack-saas-2026",
     "title": "The RevOps Automation Stack: How SaaS Teams Eliminate Manual Bottlenecks in 2026",
     "description": "Learn how to eliminate B2B GTM bottlenecks using an API-first RevOps stack foundation with n8n, monday.com, and Databox. Real architectural blueprints and bidirectional sync schema guides inside."
   },
   {
-    "index": 84,
-    "id": "scaling-qdrant-vector-database-to-10-million-embeddings",
-    "slug": "scaling-qdrant-vector-database-to-10-million-embeddings",
-    "title": "Scaling Qdrant to 10M Embeddings on Vultr VPS",
-    "description": "Engineering guide to indexing and querying 10 million 1536-dim vector embeddings on Vultr VPS using HNSW graph tuning and 8-bit scalar quantization."
-  },
-  {
-    "index": 85,
+    "index": 76,
     "id": "screaming-frog-alternatives-free-seo-audit-tools",
     "slug": "screaming-frog-alternatives-free-seo-audit-tools",
     "title": "5 Best Screaming Frog Alternatives: Free Browser-Based SEO Audit Tools",
     "description": "Looking for Screaming Frog alternatives? Compare the 5 best free, browser-based website crawlers that require no software installs or domain verification."
   },
   {
-    "index": 86,
+    "index": 77,
+    "id": "securing-self-hosted-vector-databases-ssl-vultr-firewall",
+    "slug": "securing-self-hosted-vector-databases-ssl-vultr-firewall",
+    "title": "Securing Self-Hosted Vector DBs: Vultr SOP",
+    "description": "Production security SOP for self-hosted vector databases on Vultr with Caddy TLS, Let's Encrypt SSL, UFW firewall rules, and API key authentication."
+  },
+  {
+    "index": 78,
+    "id": "self-hosted-qdrant-cluster-vultr-docker-sop",
+    "slug": "self-hosted-qdrant-cluster-vultr-docker-sop",
+    "title": "Self-Hosted Qdrant Vultr Cluster: Docker SOP",
+    "description": "Production SOP for self-hosting Qdrant vector database on Vultr Cloud GPU with Docker Compose, mmap memory tuning, quantization, and n8n integration."
+  },
+  {
+    "index": 79,
     "id": "self-hosted-qdrant-docker-vultr",
     "slug": "self-hosted-qdrant-docker-vultr",
     "title": "Self-Hosted Qdrant Docker Vultr SOP: Vector DB Guide",
     "description": "Production SOP for deploying self-hosted Qdrant on Vultr with Docker Compose, systemd, memory quantization, TLS reverse proxy, and n8n integration."
   },
   {
-    "index": 87,
-    "id": "semantic-search-api-n8n-qdrant-fastapi-bridge",
-    "slug": "semantic-search-api-n8n-qdrant-fastapi-bridge",
-    "title": "Semantic Search API: n8n Qdrant FastAPI Guide",
-    "description": "Production guide for building a high-throughput Semantic Search REST API using FastAPI, n8n workflow automation, and self-hosted Qdrant vector database."
-  },
-  {
-    "index": 88,
+    "index": 80,
     "id": "tapstitch-vs-printful-ecommerce-pipeline",
     "slug": "tapstitch-vs-printful-ecommerce-pipeline",
     "title": "Tapstitch vs Printful E-Commerce Pipeline: n8n Shopify AI",
     "description": "Compare Tapstitch vs Printful e-commerce pipeline fulfillment and build an automated n8n order routing workflow with JavaScript for Shopify store scaling."
   },
   {
-    "index": 89,
+    "index": 81,
+    "id": "the-ultimate-2026-self-hosted-ai-stack-vultr-qdrant-dify-n8n",
+    "slug": "the-ultimate-2026-self-hosted-ai-stack-vultr-qdrant-dify-n8n",
+    "title": "Self-Hosted AI Stack 2026: Vultr & n8n Guide",
+    "description": "Complete architecture guide for deploying the ultimate 2026 self-hosted AI stack with Vultr GPU, Qdrant, Dify.ai, and n8n workflow automation."
+  },
+  {
+    "index": 82,
     "id": "trainual-alternatives-active-agency-sop-engine",
     "slug": "trainual-alternatives-active-agency-sop-engine",
     "title": "Trainual Alternatives: Active Agency SOP Engine in n8n SaaS",
     "description": "Explore top Trainual alternatives and learn how to build an active agency SOP engine using n8n and JavaScript to automate onboarding, tasks, and documentation."
   },
   {
-    "index": 90,
+    "index": 83,
     "id": "turbotic-automation-governance",
     "slug": "turbotic-automation-governance",
     "title": "Turbotic Automation Governance: n8n & monday.com CRM",
     "description": "Implement Turbotic automation governance for n8n workflows and monday.com CRM. Enforce security, API quota compliance, and enterprise bot auditing."
   },
   {
-    "index": 91,
+    "index": 84,
+    "id": "vultr-cloud-gpu-vs-aws-ec2-ai-inference-cost-guide",
+    "slug": "vultr-cloud-gpu-vs-aws-ec2-ai-inference-cost-guide",
+    "title": "Vultr Cloud GPU vs AWS EC2: AI Cost Teardown",
+    "description": "Comprehensive cost teardown comparing Vultr Cloud GPU and AWS EC2 for self-hosted AI inference, vector databases, and vLLM workloads."
+  },
+  {
+    "index": 85,
     "id": "waterfall-data-enrichment-pipeline-n8n-guide",
     "slug": "waterfall-data-enrichment-pipeline-n8n-guide",
-    "title": "Waterfall Data Enrichment Pipeline: n8n Outbound Guide",
+    "title": "Waterfall Data Enrichment Pipeline: n8n, Apollo & Lusha Guide",
     "description": "Build a waterfall data enrichment pipeline in n8n using Apollo and Lusha APIs. Learn step-by-step fallback logic, credit optimization, and code node setup."
   },
   {
-    "index": 92,
+    "index": 86,
     "id": "what-is-revops-technical-definition-saas",
     "slug": "what-is-revops-technical-definition-saas",
     "title": "What Is RevOps? The Technical Definition for SaaS Teams",
     "description": "RevOps isn't a team rename. Here's the precise technical definition — data unification, pipeline governance, automation architecture, and n8n orchestration — built for SaaS founders and ops leads."
   },
   {
-    "index": 93,
+    "index": 87,
     "id": "whatconverts-vs-callrail-attribution",
     "slug": "whatconverts-vs-callrail-attribution",
     "title": "WhatConverts vs CallRail Attribution: n8n & monday.com",
     "description": "Compare WhatConverts vs CallRail attribution for B2B SaaS. Route phone call leads and dynamic pool data to monday.com using copy-pasteable n8n workflows."
   },
   {
-    "index": 94,
-    "id": "zero-data-retention-enterprise-rag-vultr-vps",
-    "slug": "zero-data-retention-enterprise-rag-vultr-vps",
-    "title": "Zero-Data-Retention Enterprise RAG: Vultr SOP",
-    "description": "Production SOP for deploying Zero-Data-Retention (ZDR) Enterprise RAG on Vultr VPS using RAM-disk tmpfs vector storage and automated RAM wiping."
-  },
-  {
-    "index": 95,
+    "index": 88,
     "id": "outstanding-ideas-for-youtube-shorts",
     "slug": "outstanding-ideas-for-youtube-shorts",
     "title": "Automated YouTube Shorts Pipelines: Tech Creator Workflow & AI Video Engine (2026)",
     "description": "Stop editing videos manually. Build an automated YouTube Shorts generator using n8n, OpenAI, ElevenLabs, and Creatomate. Complete technical SOP for creators and agencies."
   },
   {
-    "index": 96,
+    "index": 89,
     "id": "outstanding-ideas-for-saas-mvps",
     "slug": "outstanding-ideas-for-saas-mvps",
     "title": "SaaS MVP Architecture: 10 Scalable Micro-SaaS Ideas & Rapid Build SOP (2026)",
     "description": "Discover 10 high-margin SaaS MVP ideas for 2026 and learn how to build production-grade micro-SaaS products in days using n8n, Next.js, Supabase, and AI agents."
   },
   {
-    "index": 97,
+    "index": 90,
     "id": "outstanding-ideas-for-b2b-lead-generation",
     "slug": "outstanding-ideas-for-b2b-lead-generation",
     "title": "B2B Lead Generation: The Automated Multi-Channel Pipeline Playbook (2026)",
     "description": "Master modern B2B lead generation with automated waterfall data enrichment, Apollo outbound scraping, Brevo warm-up sequences, and n8n orchestration."
   },
   {
-    "index": 98,
+    "index": 91,
     "id": "outstanding-ideas-for-b2b-lead-capture",
     "slug": "outstanding-ideas-for-b2b-lead-capture",
     "title": "B2B Lead Capture: 10 High-Converting Tactics & Form Automation SOP (2026)",
     "description": "Transform low-converting B2B lead forms into autonomous, zero-friction lead capture engines. Learn 10 proven lead capture tactics, form enrichment architectures, and n8n webhook workflows."
   },
   {
+    "index": 92,
+    "id": "open-source-llm-embeddings-voyage-bge-mxbai-n8n-benchmark",
+    "slug": "open-source-llm-embeddings-voyage-bge-mxbai-n8n-benchmark",
+    "title": "Open-Source LLM Embeddings: BGE vs Voyage RAG",
+    "description": "Production benchmark and setup guide evaluating open-source LLM embeddings (BAAI BGE-M3, mixedbread mxbai-embed-large) versus Voyage AI (Voyage-large-2) and OpenAI text-embedding-3 inside n8n RAG pipelines."
+  },
+  {
+    "index": 93,
+    "id": "zero-data-retention-enterprise-rag-vultr-vps",
+    "slug": "zero-data-retention-enterprise-rag-vultr-vps",
+    "title": "Zero-Data-Retention Enterprise RAG: Vultr SOP",
+    "description": "Standard Operating Procedure for implementing Zero-Data-Retention Enterprise RAG on Vultr VPS using ephemeral vector memory and PII scrubbing."
+  },
+  {
+    "index": 94,
+    "id": "automated-pdf-document-chunking-vectorization-n8n",
+    "slug": "automated-pdf-document-chunking-vectorization-n8n",
+    "title": "Automated PDF Document Chunking in n8n Guide",
+    "description": "Master automated PDF document chunking and vectorization in n8n with semantic splitting algorithms, layout parsing, Qdrant vector database ingestion, and Pinecone serverless indexing."
+  },
+  {
+    "index": 95,
+    "id": "building-an-enterprise-knowledge-graph-rag-n8n",
+    "slug": "building-an-enterprise-knowledge-graph-rag-n8n",
+    "title": "Enterprise Knowledge Graph RAG in n8n Blueprint",
+    "description": "Construct an enterprise Knowledge Graph RAG pipeline in n8n leveraging GraphRAG entity extraction, Neo4j graph databases, Qdrant vector stores, and automated relationship mapping."
+  },
+  {
+    "index": 96,
+    "id": "corrective-rag-crag-blueprint-n8n-tavily-fallback",
+    "slug": "corrective-rag-crag-blueprint-n8n-tavily-fallback",
+    "title": "Corrective RAG CRAG Blueprint: n8n & Tavily",
+    "description": "Step-by-step Corrective RAG (CRAG) blueprint in n8n featuring Qdrant vector retrieval, automated evaluator grading logic, Tavily web search fallback, and context synthesis."
+  },
+  {
+    "index": 97,
+    "id": "dify-ai-vultr-gpu-docker-deployment-guide",
+    "slug": "dify-ai-vultr-gpu-docker-deployment-guide",
+    "title": "Dify.ai Vultr GPU Docker Deployment Guide: AI Stack Blueprint",
+    "description": "Production SOP for deploying Dify.ai open-source LLM platform on Vultr Cloud GPU using Docker Compose, Redis, PostgreSQL, and Qdrant."
+  },
+  {
+    "index": 98,
+    "id": "dify-ai-workflow-orchestration-vs-n8n-ai-agent-nodes",
+    "slug": "dify-ai-workflow-orchestration-vs-n8n-ai-agent-nodes",
+    "title": "Dify.ai vs n8n AI Agents: Architecture Guide",
+    "description": "In-depth architectural comparison between Dify.ai visual LLM orchestration and n8n AI agent workflows for enterprise automation."
+  },
+  {
     "index": 99,
-    "id": "securing-self-hosted-vector-databases-ssl-vultr-firewall",
-    "slug": "securing-self-hosted-vector-databases-ssl-vultr-firewall",
-    "title": "Securing Self-Hosted Vector DBs: Vultr SOP",
-    "description": "Zero-trust security SOP for hardening self-hosted vector databases on Vultr using UFW firewall rules, Caddy/Nginx TLS reverse proxies, fail2ban rate limiting, and API token rotation."
+    "id": "hybrid-vector-keyword-search-qdrant-n8n-pipeline",
+    "slug": "hybrid-vector-keyword-search-qdrant-n8n-pipeline",
+    "title": "Hybrid Vector & Keyword Search: Qdrant n8n SOP",
+    "description": "Step-by-step SOP for building hybrid dense vector and sparse keyword (BM25) search pipelines using self-hosted Qdrant and n8n workflow automation."
   },
   {
     "index": 100,
-    "id": "self-hosted-qdrant-cluster-vultr-docker-sop",
-    "slug": "self-hosted-qdrant-cluster-vultr-docker-sop",
-    "title": "Self-Hosted Qdrant Vultr Cluster: Docker SOP",
-    "description": "Production SOP for self-hosting Qdrant vector database clusters on Vultr VPS using Docker Compose, memory-mapped storage tuning, scalar quantization, and snapshot backup automation."
+    "id": "pinecone-namespaces-vs-qdrant-payload-filters-comparison",
+    "slug": "pinecone-namespaces-vs-qdrant-payload-filters-comparison",
+    "title": "Pinecone Namespaces vs Qdrant Payload Filters",
+    "description": "Architectural breakdown comparing Pinecone Namespaces with Qdrant JSON Payload Filters for multi-tenant vector search in n8n RAG pipelines."
   },
   {
     "index": 101,
-    "id": "the-ultimate-2026-self-hosted-ai-stack-vultr-qdrant-dify-n8n",
-    "slug": "the-ultimate-2026-self-hosted-ai-stack-vultr-qdrant-dify-n8n",
-    "title": "Self-Hosted AI Stack 2026: Vultr & n8n Guide",
-    "description": "The definitive 2026 blueprint for deploying a complete self-hosted AI stack on Vultr Cloud GPU, unifying Qdrant vector DB, Dify.ai agent workflow builder, n8n automation engine, and Ollama/vLLM."
+    "id": "pinecone-serverless-vs-qdrant-vultr-latency-benchmark",
+    "slug": "pinecone-serverless-vs-qdrant-vultr-latency-benchmark",
+    "title": "Pinecone vs Qdrant Vultr: RAG Latency Benchmark",
+    "description": "Empirical p95/p99 latency, RAM throughput, and cost benchmark comparing Pinecone Serverless with self-hosted Qdrant on Vultr VPS for n8n RAG workflows."
   },
   {
     "index": 102,
-    "id": "vultr-cloud-gpu-vs-aws-ec2-ai-inference-cost-guide",
-    "slug": "vultr-cloud-gpu-vs-aws-ec2-ai-inference-cost-guide",
-    "title": "Vultr Cloud GPU vs AWS EC2: AI Cost Teardown",
-    "description": "Comprehensive cost teardown comparing Vultr Cloud GPUs against AWS EC2 g5/p4 instances for LLM inference and vector embedding workloads, revealing hidden AWS fees and TCO models."
+    "id": "scaling-qdrant-vector-database-to-10-million-embeddings",
+    "slug": "scaling-qdrant-vector-database-to-10-million-embeddings",
+    "title": "Scaling Qdrant Vector Database to 10 Million Embeddings: Vultr SOP",
+    "description": "Production infrastructure guide for scaling self-hosted Qdrant vector database to 10 million vector embeddings on Vultr VPS with memory quantization and NVMe storage."
+  },
+  {
+    "index": 103,
+    "id": "semantic-search-api-n8n-qdrant-fastapi-bridge",
+    "slug": "semantic-search-api-n8n-qdrant-fastapi-bridge",
+    "title": "Semantic Search API: n8n Qdrant FastAPI Guide",
+    "description": "Build a production semantic search API bridging n8n, Qdrant vector database, and FastAPI with hybrid search and cross-encoder reranking."
   }
 ]

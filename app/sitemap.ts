@@ -12,6 +12,15 @@ interface SanityPost {
     date: string;
 }
 
+// 5 High-Impact Diamond Posts for Maximum Search Authority & Crawl Prioritization
+const DIAMOND_POST_SLUGS = new Set([
+    'screaming-frog-alternatives-free-seo-audit-tools',
+    'manychat-pricing-2026',
+    'dify-ai-workflow-orchestration-vs-n8n-ai-agent-nodes',
+    'ai-automation-agency-business-model',
+    'pinecone-vs-qdrant-vultr-benchmark',
+]);
+
 interface SanityCategory {
     slug: { current: string };
     count: number;
@@ -59,12 +68,15 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     } catch (err) {
         console.error('[sitemap] Failed to fetch blog posts from Sanity:', err);
     }
-    const blogRoutes = posts.map((post) => ({
-        url: `${baseUrl}/blog/${post.slug.current}/`,
-        lastModified: new Date(post.date),
-        changeFrequency: 'weekly' as const,
-        priority: 0.7,
-    }));
+    const blogRoutes = posts.map((post) => {
+        const isDiamond = DIAMOND_POST_SLUGS.has(post.slug?.current);
+        return {
+            url: `${baseUrl}/blog/${post.slug.current}/`,
+            lastModified: new Date(post.date || new Date().toISOString()),
+            changeFrequency: 'weekly' as const,
+            priority: isDiamond ? 1.0 : 0.7,
+        };
+    });
 
     // 4. Dynamic Blog Categories — fallback to [] if Sanity is unavailable
     let categories: SanityCategory[] = [];

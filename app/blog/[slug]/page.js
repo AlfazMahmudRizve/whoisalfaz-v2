@@ -23,6 +23,11 @@ import remarkGfm from 'remark-gfm';
 export const dynamicParams = true;
 export const revalidate = 3600; // 1 hour — reduces background Sanity refetch pressure
 
+export const CANONICAL_OVERRIDES = {
+  'dify-vs-n8n-architecture': 'https://whoisalfaz.me/blog/dify-ai-workflow-orchestration-vs-n8n-ai-agent-nodes/',
+  'pinecone-serverless-vs-qdrant-vultr-latency-benchmark': 'https://whoisalfaz.me/blog/pinecone-vs-qdrant-vultr-benchmark/',
+  'pinecone-namespaces-vs-qdrant-payload-filters-comparison': 'https://whoisalfaz.me/blog/pinecone-vs-qdrant-vultr-benchmark/',
+};
 
 export async function generateStaticParams() {
   const posts = await getSanityPosts();
@@ -60,7 +65,7 @@ export async function generateMetadata({ params }) {
 
   const finalTitle = cleanTruncate(rawTitle, 65);
   const seoDesc = post.seoDescription || post.description;
-  const canonicalUrl = `https://whoisalfaz.me/blog/${slug}/`;
+  const canonicalUrl = CANONICAL_OVERRIDES[slug] || `https://whoisalfaz.me/blog/${slug}/`;
 
   const ogImage = post.image || '/featured-image.png';
 
@@ -198,7 +203,7 @@ export default async function Post({ params }) {
   const wordCount = getWordCount(contentMarkdown);
   const readTime = Math.max(1, Math.ceil(wordCount / 200));
 
-  const canonicalUrl = `https://whoisalfaz.me/blog/${slug}/`;
+  const canonicalUrl = CANONICAL_OVERRIDES[slug] || `https://whoisalfaz.me/blog/${slug}/`;
 
   const unifiedSchemaGraph = generateUnifiedArticleGraph({
     title: post.seoTitle || post.title,

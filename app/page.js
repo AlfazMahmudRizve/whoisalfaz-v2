@@ -177,9 +177,24 @@ export default async function Home() {
 
               <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
                 {[
-                  { icon: Zap, title: "Autonomous Workflows", desc: "Self-healing AI agents that instantly qualify leads, sync your CRM, and scale your pipeline.", span: "sm:col-span-2" },
-                  { icon: Code2, title: "Full-Stack Applications", desc: "Bespoke agency portals and client dashboards engineered for massive scale.", span: "sm:col-span-1" },
-                  { icon: Globe, title: "Headless Infrastructure", desc: "The high-performance Next.js foundation that powers your entire revenue engine.", span: "sm:col-span-1" }
+                  { 
+                    icon: Zap, 
+                    title: "Autonomous Workflows", 
+                    desc: <>Self-healing AI agents that qualify leads, sync CRMs, and scale pipelines using our verified <Link href="/blog/dify-ai-workflow-orchestration-vs-n8n-ai-agent-nodes/" className="text-teal-600 dark:text-teal-400 font-semibold hover:underline">Dify vs n8n AI workflow architecture</Link>.</>, 
+                    span: "sm:col-span-2" 
+                  },
+                  { 
+                    icon: Code2, 
+                    title: "Full-Stack Applications", 
+                    desc: <>Bespoke agency portals and client dashboards engineered around the high-margin <Link href="/blog/ai-automation-agency-business-model/" className="text-teal-600 dark:text-teal-400 font-semibold hover:underline">AI automation agency business model</Link>.</>, 
+                    span: "sm:col-span-1" 
+                  },
+                  { 
+                    icon: Globe, 
+                    title: "Headless Infrastructure", 
+                    desc: <>High-performance Next.js and sub-second vector search informed by our <Link href="/blog/pinecone-vs-qdrant-vultr-benchmark/" className="text-teal-600 dark:text-teal-400 font-semibold hover:underline">Pinecone vs Qdrant benchmark on Vultr</Link>.</>, 
+                    span: "sm:col-span-1" 
+                  }
                 ].map((item, i) => (
                   <StaggerItem key={i} className={`bento-card rounded-[2rem] p-6 flex flex-col justify-between group h-full ${item.span}`}>
                     <div className="flex gap-4 items-start">
@@ -217,12 +232,12 @@ export default async function Home() {
                       </svg>
 
                       {/* Source Node (ManyChat/Webhook) */}
-                      <div className="z-10 flex flex-col items-center gap-2">
-                        <div className="w-12 h-12 rounded-xl bg-white dark:bg-[#1e293b] border border-slate-200 dark:border-white/10 flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform duration-300">
+                      <Link href="/blog/manychat-pricing-2026/" className="z-10 flex flex-col items-center gap-2 group/node" title="ManyChat 2026 pricing teardown">
+                        <div className="w-12 h-12 rounded-xl bg-white dark:bg-[#1e293b] border border-slate-200 dark:border-white/10 flex items-center justify-center shadow-lg group-hover/node:scale-105 group-hover/node:border-teal-500 transition-all duration-300">
                           <Zap size={20} className="text-teal-500" />
                         </div>
-                        <span className="text-[9px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-widest">Inbound</span>
-                      </div>
+                        <span className="text-[9px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-widest group-hover/node:text-teal-500 transition-colors">Inbound</span>
+                      </Link>
 
                       {/* Process Node (n8n Engine) */}
                       <div className="z-10 flex flex-col items-center gap-2">
@@ -381,6 +396,17 @@ export default async function Home() {
       {/* Audit Tool Section */}
       <section className="py-16 px-6 flex justify-center">
         <div className="w-full max-w-6xl">
+          <div className="text-center mb-8">
+            <div className="inline-block px-4 py-1 bg-teal-50 dark:bg-teal-500/10 border border-teal-100 dark:border-teal-500/20 rounded-lg text-[10px] font-black text-teal-600 dark:text-teal-400 uppercase tracking-widest mb-3">
+              INSTANT FORENSIC AUDIT
+            </div>
+            <h2 className="text-2xl md:text-3xl font-black text-slate-900 dark:text-white uppercase tracking-tight mb-2">
+              Free Technical Website Audit
+            </h2>
+            <p className="text-slate-500 dark:text-slate-400 text-sm max-w-xl mx-auto font-medium">
+              Run real-time diagnostics on SSL, security headers, Core Web Vitals, and indexability with our browser-native <Link href="/blog/screaming-frog-alternatives-free-seo-audit-tools/" className="text-teal-600 dark:text-teal-400 font-semibold hover:underline">free Screaming Frog alternative</Link>.
+            </p>
+          </div>
           <LazyAuditTool />
         </div>
       </section>
@@ -403,19 +429,19 @@ export default async function Home() {
             {[
               {
                 title: "Custom Workflow Automation", icon: Zap,
-                desc: "Self-healing AI workflows that instantly enrich leads and scale your sales engine without adding headcount.",
+                desc: <>Self-healing AI workflows that instantly enrich leads and scale your sales engine without adding headcount. Read our in-depth <Link href="/blog/manychat-pricing-2026/" className="text-emerald-600 dark:text-emerald-400 font-bold hover:underline">ManyChat 2026 pricing teardown</Link> to optimize integration economics.</>,
                 bg: "bg-emerald-500/10", border: "border-emerald-500/20", text: "text-emerald-500 dark:text-emerald-400",
                 link: "/services/n8n-automation/"
               },
               {
                 title: "Custom Full-Stack Applications", icon: Code2,
-                desc: "Bespoke Agency Infrastructure. When off-the-shelf software blocks your growth, I build the exact internal tools you need.",
+                desc: <>Bespoke Agency Infrastructure. When off-the-shelf software blocks your growth, I build the exact internal tools you need for the <Link href="/blog/ai-automation-agency-business-model/" className="text-rose-600 dark:text-rose-400 font-bold hover:underline">AI automation agency business model</Link>.</>,
                 bg: "bg-rose-500/10", border: "border-rose-500/20", text: "text-rose-500 dark:text-rose-400",
                 link: "/services/custom-full-stack/"
               },
               {
                 title: "Headless CMS Infrastructure", icon: Globe,
-                desc: "The high-performance Next.js foundation that powers your revenue engine with sub-second load times.",
+                desc: <>The high-performance Next.js foundation that powers your revenue engine with sub-second load times and robust RAG latency validated in our <Link href="/blog/pinecone-vs-qdrant-vultr-benchmark/" className="text-blue-600 dark:text-blue-400 font-bold hover:underline">Pinecone vs Qdrant benchmark on Vultr</Link>.</>,
                 bg: "bg-blue-500/10", border: "border-blue-500/20", text: "text-blue-500 dark:text-blue-400",
                 link: "/services/headless-architecture/"
               }

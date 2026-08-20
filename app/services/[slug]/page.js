@@ -39,6 +39,40 @@ const serviceCaseStudyMap = {
     'custom-full-stack': ['case-study-cashops-financial-dashboard', 'case-study-urban-cafe-foodtech-platform', 'case-study-veloryc-premium-ecommerce'],
 };
 
+function renderFormattedParagraph(text) {
+    if (!text || typeof text !== 'string') return text;
+    const parts = [];
+    const regex = /\[(.*?)\]\((.*?)\)|\*\*(.*?)\*\*/g;
+    let lastIndex = 0;
+    let match;
+
+    while ((match = regex.exec(text)) !== null) {
+        if (match.index > lastIndex) {
+            parts.push(text.substring(lastIndex, match.index));
+        }
+        if (match[1] && match[2]) {
+            parts.push(
+                <Link
+                    key={match.index}
+                    href={match[2]}
+                    className="text-teal-600 dark:text-teal-400 font-semibold hover:underline transition-colors"
+                >
+                    {match[1]}
+                </Link>
+            );
+        } else if (match[3]) {
+            parts.push(<strong key={match.index} className="font-bold text-slate-900 dark:text-white">{match[3]}</strong>);
+        }
+        lastIndex = regex.lastIndex;
+    }
+
+    if (lastIndex < text.length) {
+        parts.push(text.substring(lastIndex));
+    }
+
+    return parts.length > 0 ? parts : text;
+}
+
 export default async function ServiceDetailPage({ params }) {
     const { slug } = await params;
     let service = serviceData[slug];
@@ -136,7 +170,7 @@ export default async function ServiceDetailPage({ params }) {
                             {detailedContent ? (
                                 detailedContent.map((paragraph, index) => (
                                     <p key={index} className="mb-5 text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
-                                        {paragraph}
+                                        {renderFormattedParagraph(paragraph)}
                                     </p>
                                 ))
                             ) : null}
