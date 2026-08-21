@@ -1,3 +1,5 @@
+import React from 'react';
+import Link from 'next/link';
 import { Sparkles, ArrowRight, Video, CheckCircle, ShieldCheck, Gift, Info, Bot, Zap } from 'lucide-react';
 
 export default function ManyChatSummitBanner({
@@ -14,13 +16,13 @@ export default function ManyChatSummitBanner({
 
       <div className="relative z-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
         <div className="flex flex-col sm:flex-row items-start gap-5 max-w-2xl">
-          {/* High-Tech Animated Icon Badge */}
-          <div className="shrink-0 w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-gradient-to-br from-purple-600 to-indigo-700 p-0.5 shadow-lg shadow-purple-500/30">
-            <div className="w-full h-full bg-slate-950/90 backdrop-blur-md rounded-[14px] flex flex-col items-center justify-center text-center p-2 relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/20 to-teal-500/20" />
-              <Bot className="w-7 h-7 sm:w-8 sm:h-8 text-purple-400 mb-1 relative z-10" />
-              <span className="text-[9px] font-black uppercase tracking-wider text-teal-300 relative z-10">SUMMIT</span>
-            </div>
+          {/* 2026 Summit Graphic Asset */}
+          <div className="hidden sm:block shrink-0 w-24 h-30 aspect-[4/5] rounded-2xl overflow-hidden border border-purple-500/40 shadow-xl shadow-purple-500/20 bg-slate-950">
+            <img
+              src="/images/manychat-summit/summit-2026-portrait.svg"
+              alt="ManyChat Instagram Summit 2026 Official Keynote"
+              className="w-full h-full object-cover"
+            />
           </div>
 
           <div className="space-y-3">

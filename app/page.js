@@ -121,17 +121,14 @@ export default async function Home() {
             <div className="absolute top-0 right-0 w-96 h-96 bg-purple-500/10 dark:bg-purple-500/15 rounded-full blur-[100px] pointer-events-none" />
 
             <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-8">
-              {/* Left Side: Glowing Badge + Copy */}
+              {/* Left Side: 2026 Summit Creative + Copy */}
               <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 max-w-3xl text-center sm:text-left">
-                <div className="shrink-0 w-24 h-24 sm:w-28 sm:h-28 rounded-3xl bg-gradient-to-br from-purple-600 via-indigo-600 to-teal-500 p-0.5 shadow-2xl shadow-purple-500/25">
-                  <div className="w-full h-full bg-slate-950/95 backdrop-blur-xl rounded-[22px] flex flex-col items-center justify-center text-center p-3 relative overflow-hidden group">
-                    <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-500/30 via-transparent to-transparent opacity-80" />
-                    <Sparkles className="w-4 h-4 text-teal-400 absolute top-2 right-2 animate-pulse" />
-                    <Bot className="w-10 h-10 sm:w-12 sm:h-12 text-purple-400 mb-1 relative z-10 drop-shadow-md" />
-                    <span className="text-[10px] font-black uppercase tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-teal-300 relative z-10">
-                      SUMMIT
-                    </span>
-                  </div>
+                <div className="shrink-0 w-28 h-36 sm:w-32 sm:h-40 rounded-2xl overflow-hidden border border-purple-500/40 shadow-2xl shadow-purple-500/25 bg-slate-950">
+                  <img
+                    src="/images/manychat-summit/summit-2026-portrait.svg"
+                    alt="ManyChat Instagram Summit 2026 Official Keynote"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
 
                 <div className="space-y-3">
