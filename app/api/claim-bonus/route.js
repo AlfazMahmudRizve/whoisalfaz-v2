@@ -13,14 +13,26 @@ export async function POST(request) {
       return NextResponse.json({ success: true, message: 'Your request is being processed.' });
     }
 
-    // 2. Validation
+    // 2. Email Validation
     if (!email || !email.includes('@') || !email.includes('.')) {
       return NextResponse.json({ error: 'Please provide a valid work email address.' }, { status: 400 });
     }
 
     const cleanName = (name || 'Friend').trim();
     const cleanEmail = email.toLowerCase().trim();
-    const cleanOrderId = (orderId || 'N/A').trim();
+    const cleanOrderId = (orderId || '').trim();
+
+    // 3. Order ID / Checkout Email Validation
+    const junkInputs = ['test', 'asdf', '123', '1234', '12345', 'none', 'n/a', 'na', 'no', 'free', 'nil', 'null', 'fake', 'fakeid', 'sample', 'id', 'xxx', 'abc'];
+    const isEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(cleanOrderId);
+    const isOrderPattern = /^[a-zA-Z0-9_\-#]{5,40}$/.test(cleanOrderId);
+
+    if (!cleanOrderId || cleanOrderId.length < 5 || junkInputs.includes(cleanOrderId.toLowerCase()) || (!isEmail && !isOrderPattern)) {
+      return NextResponse.json({
+        error: 'Please provide a valid ManyChat confirmation Order ID (e.g. MC-XXXXXX, Stripe Receipt ID) or the exact email address you used at checkout on ManyChat.'
+      }, { status: 400 });
+    }
+
     const downloadUrl = 'https://whoisalfaz.me/downloads/manychat-automation-bonus-pack.zip';
 
     // 3. Brevo Transactional Email & CRM Sync

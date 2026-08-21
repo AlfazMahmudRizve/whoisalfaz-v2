@@ -18,8 +18,15 @@ export default function ClaimBonusClient() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setStatus('loading');
     setErrorMessage('');
+
+    if (!formData.orderId || formData.orderId.trim().length < 5) {
+      setStatus('error');
+      setErrorMessage('Please enter a valid ManyChat Order ID (e.g. MC-XXXXXX) or the email you used when purchasing your ticket.');
+      return;
+    }
+
+    setStatus('loading');
 
     try {
       const res = await fetch('/api/claim-bonus', {
@@ -229,6 +236,7 @@ export default function ClaimBonusClient() {
               <label className="text-xs font-semibold text-slate-300">ManyChat Ticket Order ID or Email Used at Checkout</label>
               <input
                 type="text"
+                required
                 placeholder="e.g. MC-982341 or the email used when purchasing on ManyChat"
                 className="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-purple-500"
                 value={formData.orderId}
