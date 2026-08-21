@@ -103,9 +103,26 @@ export async function POST(request) {
         </html>
       `;
 
-      // Dispatch Brevo Transactional Email & Sync Contact
+      // Dispatch Brevo Transactional Emails (User Delivery + Admin Notification) & Sync Contact
       try {
+        const adminAlertHtml = `
+          <div style="font-family: sans-serif; background: #0f172a; color: #f8fafc; padding: 24px; border-radius: 12px;">
+            <h2 style="color: #38bdf8; margin-top: 0;">🚨 New ManyChat Summit Bonus Claim</h2>
+            <p>A new user has claimed the $147 ManyChat &amp; n8n Automation Bonus Pack:</p>
+            <div style="background: #1e293b; padding: 16px; border-radius: 8px; margin: 16px 0;">
+              <p style="margin: 6px 0;"><strong>👤 Name:</strong> ${cleanName}</p>
+              <p style="margin: 6px 0;"><strong>✉️ Email:</strong> <a href="mailto:${cleanEmail}" style="color: #2dd4bf;">${cleanEmail}</a></p>
+              <p style="margin: 6px 0;"><strong>🏷️ Order ID / Ref:</strong> <code style="background: #0f172a; padding: 2px 6px; border-radius: 4px; color: #facc15;">${cleanOrderId}</code></p>
+              <p style="margin: 6px 0;"><strong>🕒 Date:</strong> ${new Date().toUTCString()}</p>
+            </div>
+            <p style="font-size: 12px; color: #94a3b8;">
+              This contact has been tagged with <code>MANYCHAT_SUMMIT_BUYER: true</code> in your Brevo CRM.
+            </p>
+          </div>
+        `;
+
         await Promise.allSettled([
+          // 1. Email to the Buyer with Download Link
           fetch('https://api.brevo.com/v3/smtp/email', {
             method: 'POST',
             headers: { 'api-key': apiKey, 'Content-Type': 'application/json' },
@@ -117,6 +134,21 @@ export async function POST(request) {
               htmlContent: htmlContent
             })
           }),
+
+          // 2. Instant Admin Alert to Alfaz (info@whoisalfaz.me)
+          fetch('https://api.brevo.com/v3/smtp/email', {
+            method: 'POST',
+            headers: { 'api-key': apiKey, 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              sender: { name: 'WhoisAlfaz Bonus Engine', email: senderEmail },
+              to: [{ email: senderEmail, name: 'Alfaz Admin' }],
+              replyTo: { email: cleanEmail, name: cleanName },
+              subject: `🚨 New ManyChat Summit Bonus Claim: ${cleanName} (${cleanOrderId})`,
+              htmlContent: adminAlertHtml
+            })
+          }),
+
+          // 3. Upsert Contact in Brevo CRM
           fetch('https://api.brevo.com/v3/contacts', {
             method: 'POST',
             headers: { 'api-key': apiKey, 'Content-Type': 'application/json' },
