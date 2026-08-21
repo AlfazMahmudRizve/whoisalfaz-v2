@@ -16,7 +16,9 @@ const referralUrl = "https://igsummit.manychat.com/virtual?utm_source=5e9c7e0209
 
 const calloutMarkdown = `
 
-> 🎟️ **Live Virtual Event Recommendation [2026]:** Looking to scale Instagram DM automation, AI chat agents, and high-converting message funnels for your agency or e-commerce store? ManyChat is hosting their official **[Instagram Summit (Virtual Edition)](${referralUrl})** featuring live masterclasses from the top 1% of agency leaders and automation architects. **[Claim your virtual summit pass here →](${referralUrl})**
+> 🎟️ **Featured Partner Event [2026]:** Looking to scale Instagram DM automation, AI chat agents, and high-converting message funnels? ManyChat is hosting their official **[Instagram Summit (Virtual Edition)](${referralUrl})** featuring live masterclasses from top agency leaders.
+>
+> 💡 *Affiliate Disclosure: When you register via our partner link, we receive a partner commission at no extra cost to you, which unlocks our complimentary **$147 n8n Companion Blueprint Pack**.* **[Claim your $20 pass & bonus pack here →](${referralUrl})** *(Already bought? [Download your bonus pack here](/claim-manychat-bonus/))*
 
 `;
 
@@ -32,13 +34,17 @@ async function injectCallouts() {
 
   for (const post of posts) {
     if (typeof post.body === 'string') {
-      if (post.body.includes('igsummit.manychat.com')) {
-        console.log(`   ⏭️ [${post.slug}] already contains Summit link.`);
+      let updatedBody = post.body;
+
+      if (updatedBody.includes('igsummit.manychat.com')) {
+        // Replace existing blockquote
+        updatedBody = updatedBody.replace(/> 🎟️ \*\*[\s\S]*?\n\n/g, calloutMarkdown.trim() + '\n\n');
+        await client.patch(post._id).set({ body: updatedBody }).commit();
+        console.log(`   🔄 Refreshed Compliant Callout in [${post.slug}]!`);
         continue;
       }
 
       // Inject callout after the first H2 or at the end
-      let updatedBody = post.body;
       const firstH2Index = updatedBody.indexOf('## ');
       if (firstH2Index !== -1) {
         const nextParagraphEnd = updatedBody.indexOf('\n\n', firstH2Index + 4);

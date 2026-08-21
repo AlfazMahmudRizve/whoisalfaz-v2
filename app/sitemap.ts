@@ -42,6 +42,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         '/labs/',
         '/labs/roi/',
         '/audit/',
+        '/claim-manychat-bonus/',
         '/terms/',
         '/privacy-policy/',
         '/editorial-policy/',
