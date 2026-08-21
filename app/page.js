@@ -139,7 +139,7 @@ export default async function Home() {
                     </span>
                     <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-slate-600 dark:text-slate-400">
                       <Video className="w-3.5 h-3.5 text-teal-600 dark:text-teal-400" />
-                      Virtual Pass ($20)
+                      Virtual Event Pass
                     </span>
                     <span className="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 px-2.5 py-0.5 rounded-full border border-emerald-500/20">
                       <Gift className="w-3 h-3" />
@@ -185,7 +185,7 @@ export default async function Home() {
                   rel="sponsored noopener noreferrer"
                   className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl bg-gradient-to-r from-purple-600 via-indigo-600 to-teal-600 hover:from-purple-500 hover:to-teal-500 text-white font-black text-sm uppercase tracking-wider shadow-xl shadow-purple-500/25 hover:shadow-purple-500/40 hover:-translate-y-0.5 transition-all text-center"
                 >
-                  <span>Claim Virtual Pass ($20)</span>
+                  <span>Claim Virtual Summit Pass</span>
                   <ArrowRight className="w-4 h-4" />
                 </a>
 

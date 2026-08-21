@@ -18,7 +18,7 @@ const calloutMarkdown = `
 
 > 🎟️ **Featured Partner Event [2026]:** Looking to scale Instagram DM automation, AI chat agents, and high-converting message funnels? ManyChat is hosting their official **[Instagram Summit (Virtual Edition)](${referralUrl})** featuring live masterclasses from top agency leaders.
 >
-> 💡 *Affiliate Disclosure: When you register via our partner link, we receive a partner commission at no extra cost to you, which unlocks our complimentary **$147 n8n Companion Blueprint Pack**.* **[Claim your $20 pass & bonus pack here →](${referralUrl})** *(Already bought? [Download your bonus pack here](/claim-manychat-bonus/))*
+> 💡 *Affiliate Disclosure: When you register via our partner link, we receive a partner commission at no extra cost to you, which unlocks our complimentary **$147 n8n Companion Blueprint Pack**.* **[Claim your summit pass & bonus pack here →](${referralUrl})** *(Already bought? [Download your bonus pack here](/claim-manychat-bonus/))*
 
 `;
 

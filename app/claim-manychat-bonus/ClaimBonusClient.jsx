@@ -68,7 +68,7 @@ export default function ClaimBonusClient() {
         </h1>
 
         <p className="max-w-2xl mx-auto text-slate-300 text-base md:text-lg leading-relaxed">
-          Secured your <strong>$20 Virtual Pass</strong> for the Instagram Summit by ManyChat? Enter your details below to instantly unlock our 3 production-ready n8n workflow blueprints.
+          Secured your <strong>Virtual Pass</strong> for the Instagram Summit by ManyChat? Enter your details below to instantly unlock our 3 production-ready n8n workflow blueprints.
         </p>
 
         {/* Haven't bought yet CTA */}
@@ -79,7 +79,7 @@ export default function ClaimBonusClient() {
             rel="sponsored noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-purple-600 to-teal-500 hover:from-purple-500 hover:to-teal-400 text-white font-bold text-sm shadow-lg shadow-purple-500/20 hover:shadow-purple-500/30 hover:-translate-y-0.5 transition-all"
           >
-            <span>Don't have a ticket yet? Grab your $20 pass here</span>
+            <span>Don't have a ticket yet? Grab your summit pass here</span>
             <ArrowRight className="w-4 h-4" />
           </a>
         </div>
@@ -235,7 +235,7 @@ export default function ClaimBonusClient() {
                 onChange={(e) => setFormData({ ...formData, orderId: e.target.value })}
               />
               <p className="text-[11px] text-slate-500">
-                Found in your confirmation email from ManyChat / Stripe. If you haven't bought yet, <a href={referralUrl} target="_blank" rel="sponsored noopener noreferrer" className="text-purple-400 hover:underline">get your $20 ticket here first</a>.
+                Found in your confirmation email from ManyChat / Stripe. If you haven't bought yet, <a href={referralUrl} target="_blank" rel="sponsored noopener noreferrer" className="text-purple-400 hover:underline">get your summit ticket here first</a>.
               </p>
             </div>
 
