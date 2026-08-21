@@ -53,13 +53,19 @@ export default function ClaimBonusClient() {
           Official Partner Bonus Portal
         </div>
 
-        <div className="flex justify-center my-4">
-          <div className="w-28 h-36 sm:w-32 sm:h-40 rounded-2xl overflow-hidden border border-purple-500/40 shadow-2xl shadow-purple-500/20">
-            <img
-              src="/images/manychat-summit/summit-promo-portrait.png"
-              alt="ManyChat Instagram Summit Official Artwork"
-              className="w-full h-full object-cover"
-            />
+        <div className="flex justify-center my-6">
+          <div className="relative group">
+            <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 via-teal-500 to-indigo-600 rounded-3xl blur-xl opacity-60 group-hover:opacity-100 transition duration-500" />
+            <div className="relative w-28 h-28 sm:w-32 sm:h-32 rounded-3xl bg-slate-950 border border-purple-500/40 flex flex-col items-center justify-center p-3 shadow-2xl overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-transparent to-teal-500/10" />
+              <div className="flex items-center gap-1.5 relative z-10 mb-1">
+                <Bot className="w-7 h-7 sm:w-8 sm:h-8 text-purple-400" />
+                <Zap className="w-5 h-5 text-teal-400" />
+              </div>
+              <span className="text-[10px] font-black uppercase tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-teal-300 relative z-10">
+                BONUS VAULT
+              </span>
+            </div>
           </div>
         </div>
 

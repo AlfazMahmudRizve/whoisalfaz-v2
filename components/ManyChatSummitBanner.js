@@ -1,26 +1,26 @@
-import React from 'react';
-import Link from 'next/link';
-import { Sparkles, ArrowRight, Video, CheckCircle, ShieldCheck, Gift, Info } from 'lucide-react';
+import { Sparkles, ArrowRight, Video, CheckCircle, ShieldCheck, Gift, Info, Bot, Zap } from 'lucide-react';
 
 export default function ManyChatSummitBanner({
-  title = "Instagram Summit by ManyChat: The 2026 Growth Blueprint",
+  title = "Instagram Summit by ManyChat: The Growth Blueprint",
   description = "Join 15,000+ top marketing agencies, e-commerce brand owners, and automation architects to master Instagram DM automation funnels, AI voice agents, and Meta-compliant lead capture.",
   referralUrl = "https://igsummit.manychat.com/virtual?utm_source=5e9c7e02098b&utm_campaign=partnerstack",
   claimUrl = "/claim-manychat-bonus"
 }) {
   return (
-    <aside className="my-10 relative overflow-hidden rounded-2xl border border-purple-500/30 dark:border-purple-500/20 bg-gradient-to-br from-purple-50/80 via-white to-teal-50/50 dark:from-purple-950/30 dark:via-slate-900/80 dark:to-teal-950/20 p-6 md:p-8 shadow-xl shadow-purple-500/5 backdrop-blur-md">
-      {/* Decorative Glow */}
-      <div className="absolute -top-24 -right-24 w-64 h-64 bg-gradient-to-bl from-purple-500/15 via-teal-500/10 to-transparent rounded-full blur-3xl pointer-events-none" />
+    <aside className="my-10 relative overflow-hidden rounded-3xl border border-purple-500/30 dark:border-purple-500/20 bg-gradient-to-br from-purple-50/90 via-white to-teal-50/60 dark:from-purple-950/40 dark:via-slate-900/90 dark:to-teal-950/30 p-6 md:p-8 shadow-2xl shadow-purple-500/10 backdrop-blur-md">
+      {/* Decorative Radial Ambient Glow */}
+      <div className="absolute -top-24 -right-24 w-72 h-72 bg-gradient-to-bl from-purple-500/20 via-teal-500/15 to-transparent rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute -bottom-20 -left-20 w-60 h-60 bg-gradient-to-tr from-teal-500/15 via-purple-500/10 to-transparent rounded-full blur-3xl pointer-events-none" />
 
       <div className="relative z-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
         <div className="flex flex-col sm:flex-row items-start gap-5 max-w-2xl">
-          <div className="hidden sm:block shrink-0 w-24 h-28 rounded-xl overflow-hidden border border-purple-500/30 shadow-md">
-            <img
-              src="/images/manychat-summit/summit-promo-portrait.png"
-              alt="ManyChat Instagram Summit 2026 Official Keynote"
-              className="w-full h-full object-cover"
-            />
+          {/* High-Tech Animated Icon Badge */}
+          <div className="shrink-0 w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-gradient-to-br from-purple-600 to-indigo-700 p-0.5 shadow-lg shadow-purple-500/30">
+            <div className="w-full h-full bg-slate-950/90 backdrop-blur-md rounded-[14px] flex flex-col items-center justify-center text-center p-2 relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/20 to-teal-500/20" />
+              <Bot className="w-7 h-7 sm:w-8 sm:h-8 text-purple-400 mb-1 relative z-10" />
+              <span className="text-[9px] font-black uppercase tracking-wider text-teal-300 relative z-10">SUMMIT</span>
+            </div>
           </div>
 
           <div className="space-y-3">
