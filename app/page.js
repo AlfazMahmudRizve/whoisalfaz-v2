@@ -3,7 +3,7 @@ import WorkflowSteps from '../components/WorkflowSteps';
 import LazyAuditTool from '../components/LazyAuditTool';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowRight, Zap, Code2, Globe, Mail } from 'lucide-react';
+import { ArrowRight, Zap, Code2, Globe, Mail, Sparkles, Gift, Video, CheckCircle, Info } from 'lucide-react';
 import NewsletterForm from '../components/NewsletterForm';
 import HomeContentFooter from '../components/footers/HomeContentFooter';
 import { FadeUp, StaggerContainer, StaggerItem } from '@/components/MotionWrappers';
@@ -112,6 +112,95 @@ export default async function Home() {
 
       {/* SECTION 0: UPGRADED COSMIC HERO */}
       <HeroMarketeamUpgrade />
+
+      {/* OFFICIAL MANYCHAT INSTAGRAM SUMMIT 2026 FEATURED PROMO */}
+      <section className="relative px-6 mt-8 sm:mt-10 mb-4 z-10">
+        <div className="max-w-7xl mx-auto">
+          <div className="relative overflow-hidden rounded-[2.5rem] border border-purple-500/30 dark:border-purple-500/20 bg-gradient-to-br from-purple-50 via-white to-teal-50/60 dark:from-purple-950/40 dark:via-slate-900/90 dark:to-teal-950/30 p-6 md:p-10 shadow-2xl shadow-purple-500/10">
+            {/* Ambient Glow */}
+            <div className="absolute top-0 right-0 w-96 h-96 bg-purple-500/10 dark:bg-purple-500/15 rounded-full blur-[100px] pointer-events-none" />
+
+            <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-8">
+              {/* Left Side: Creative Thumbnail + Copy */}
+              <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 max-w-3xl text-center sm:text-left">
+                <div className="shrink-0 w-28 h-36 sm:w-32 sm:h-40 rounded-2xl overflow-hidden border border-purple-500/40 shadow-xl shadow-purple-500/20 bg-slate-900">
+                  <img
+                    src="/images/manychat-summit/summit-promo-portrait.png"
+                    alt="Instagram Summit by ManyChat 2026 Official Keynote"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+
+                <div className="space-y-3">
+                  <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2">
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1 text-[11px] font-black uppercase tracking-wider rounded-full bg-purple-500/15 text-purple-700 dark:text-purple-300 border border-purple-500/30">
+                      <Sparkles className="w-3.5 h-3.5" />
+                      Featured Partner Event
+                    </span>
+                    <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-slate-600 dark:text-slate-400">
+                      <Video className="w-3.5 h-3.5 text-teal-600 dark:text-teal-400" />
+                      Virtual Pass ($20)
+                    </span>
+                    <span className="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 px-2.5 py-0.5 rounded-full border border-emerald-500/20">
+                      <Gift className="w-3 h-3" />
+                      +$147 n8n Blueprint Pack Included
+                    </span>
+                  </div>
+
+                  <h3 className="text-2xl md:text-3xl font-black text-slate-900 dark:text-white tracking-tight uppercase leading-tight">
+                    Instagram Summit <span className="text-purple-600 dark:text-purple-400">by ManyChat</span> [2026]
+                  </h3>
+
+                  <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed max-w-xl">
+                    Master Instagram DM funnels, AI voice agents, and high-converting lead pipelines. Register via our official partner link to instantly unlock our <strong>$147 n8n Automation Vault</strong> (Async Webhook Fix + Apollo Lead Scoring).
+                  </p>
+
+                  <div className="flex flex-wrap items-center justify-center sm:justify-start gap-4 pt-1 text-xs font-medium text-slate-500 dark:text-slate-400">
+                    <span className="flex items-center gap-1">
+                      <CheckCircle className="w-3.5 h-3.5 text-teal-500" /> Live AI Teardowns
+                    </span>
+                    <span className="flex items-center gap-1">
+                      <CheckCircle className="w-3.5 h-3.5 text-teal-500" /> Agency Funnels
+                    </span>
+                    <span className="flex items-center gap-1">
+                      <CheckCircle className="w-3.5 h-3.5 text-teal-500" /> Lifetime Replay Access
+                    </span>
+                  </div>
+
+                  {/* FTC Disclosure */}
+                  <div className="pt-2 flex items-start gap-1.5 text-[10px] text-slate-500 dark:text-slate-400 leading-normal">
+                    <Info className="w-3.5 h-3.5 text-purple-600 dark:text-purple-400 shrink-0 mt-0.5" />
+                    <span>
+                      <strong>Affiliate Disclosure:</strong> When purchasing through our link, we receive a partner commission at no extra cost to you, unlocking your complimentary companion blueprint pack.
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Right Side: Dual CTAs */}
+              <div className="flex flex-col sm:flex-row lg:flex-col items-center lg:items-end gap-3 w-full lg:w-auto shrink-0">
+                <a
+                  href="https://igsummit.manychat.com/virtual?utm_source=5e9c7e02098b&utm_campaign=partnerstack"
+                  target="_blank"
+                  rel="sponsored noopener noreferrer"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl bg-gradient-to-r from-purple-600 via-indigo-600 to-teal-600 hover:from-purple-500 hover:to-teal-500 text-white font-black text-sm uppercase tracking-wider shadow-xl shadow-purple-500/25 hover:shadow-purple-500/40 hover:-translate-y-0.5 transition-all text-center"
+                >
+                  <span>Claim Virtual Pass ($20)</span>
+                  <ArrowRight className="w-4 h-4" />
+                </a>
+
+                <Link
+                  href="/claim-manychat-bonus/"
+                  className="inline-flex items-center justify-center gap-1.5 text-xs font-bold text-purple-600 dark:text-purple-400 hover:underline text-center pt-1"
+                >
+                  <Gift className="w-3.5 h-3.5" />
+                  Already have a ticket? Claim $147 Bonus →
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Featured Case Study Banner */}
       <section className="relative px-6 mt-8 sm:mt-12 mb-8 z-10">

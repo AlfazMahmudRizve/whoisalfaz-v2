@@ -53,6 +53,16 @@ export default function ClaimBonusClient() {
           Official Partner Bonus Portal
         </div>
 
+        <div className="flex justify-center my-4">
+          <div className="w-28 h-36 sm:w-32 sm:h-40 rounded-2xl overflow-hidden border border-purple-500/40 shadow-2xl shadow-purple-500/20">
+            <img
+              src="/images/manychat-summit/summit-promo-portrait.png"
+              alt="ManyChat Instagram Summit Official Artwork"
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-white leading-tight">
           Claim Your <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-teal-300 to-emerald-400">$147 ManyChat & n8n</span> Automation Pack
         </h1>

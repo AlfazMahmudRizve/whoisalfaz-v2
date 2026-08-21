@@ -14,48 +14,58 @@ export default function ManyChatSummitBanner({
       <div className="absolute -top-24 -right-24 w-64 h-64 bg-gradient-to-bl from-purple-500/15 via-teal-500/10 to-transparent rounded-full blur-3xl pointer-events-none" />
 
       <div className="relative z-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
-        <div className="space-y-3 max-w-2xl">
-          <div className="flex flex-wrap items-center gap-2">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-black uppercase tracking-wider rounded-full bg-purple-500/15 text-purple-700 dark:text-purple-300 border border-purple-500/30">
-              <Sparkles className="w-3.5 h-3.5" />
-              Featured Partner Event
-            </span>
-            <span className="inline-flex items-center gap-1 text-xs font-semibold text-slate-600 dark:text-slate-400">
-              <Video className="w-3.5 h-3.5 text-teal-600 dark:text-teal-400" />
-              Virtual Masterclass Pass ($20)
-            </span>
-            <span className="inline-flex items-center gap-1 text-xs font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 px-2.5 py-0.5 rounded-full border border-emerald-500/20">
-              <Gift className="w-3 h-3" />
-              Includes $147 n8n Bonus Pack
-            </span>
+        <div className="flex flex-col sm:flex-row items-start gap-5 max-w-2xl">
+          <div className="hidden sm:block shrink-0 w-24 h-28 rounded-xl overflow-hidden border border-purple-500/30 shadow-md">
+            <img
+              src="/images/manychat-summit/summit-promo-portrait.png"
+              alt="ManyChat Instagram Summit 2026 Official Keynote"
+              className="w-full h-full object-cover"
+            />
           </div>
 
-          <h3 className="text-xl md:text-2xl font-black text-slate-900 dark:text-white tracking-tight leading-snug">
-            {title}
-          </h3>
+          <div className="space-y-3">
+            <div className="flex flex-wrap items-center gap-2">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-black uppercase tracking-wider rounded-full bg-purple-500/15 text-purple-700 dark:text-purple-300 border border-purple-500/30">
+                <Sparkles className="w-3.5 h-3.5" />
+                Featured Partner Event
+              </span>
+              <span className="inline-flex items-center gap-1 text-xs font-semibold text-slate-600 dark:text-slate-400">
+                <Video className="w-3.5 h-3.5 text-teal-600 dark:text-teal-400" />
+                Virtual Masterclass Pass ($20)
+              </span>
+              <span className="inline-flex items-center gap-1 text-xs font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 px-2.5 py-0.5 rounded-full border border-emerald-500/20">
+                <Gift className="w-3 h-3" />
+                Includes $147 n8n Bonus Pack
+              </span>
+            </div>
 
-          <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-            {description}
-          </p>
+            <h3 className="text-xl md:text-2xl font-black text-slate-900 dark:text-white tracking-tight leading-snug">
+              {title}
+            </h3>
 
-          <div className="flex flex-wrap items-center gap-4 pt-1 text-xs font-medium text-slate-500 dark:text-slate-400">
-            <span className="flex items-center gap-1">
-              <CheckCircle className="w-3.5 h-3.5 text-teal-500" /> Live AI Bot Teardowns
-            </span>
-            <span className="flex items-center gap-1">
-              <CheckCircle className="w-3.5 h-3.5 text-teal-500" /> Agency Scale Frameworks
-            </span>
-            <span className="flex items-center gap-1">
-              <CheckCircle className="w-3.5 h-3.5 text-teal-500" /> Full Replay Access
-            </span>
-          </div>
+            <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+              {description}
+            </p>
 
-          {/* FTC Disclosure */}
-          <div className="pt-2 flex items-start gap-1.5 text-[11px] text-slate-500 dark:text-slate-400 leading-normal">
-            <Info className="w-3.5 h-3.5 text-purple-600 dark:text-purple-400 shrink-0 mt-0.5" />
-            <span>
-              <strong>Affiliate Disclosure:</strong> When you purchase your pass via our partner link, we receive a commission at no extra cost to you, which unlocks our complimentary n8n Companion Blueprint Pack.
-            </span>
+            <div className="flex flex-wrap items-center gap-4 pt-1 text-xs font-medium text-slate-500 dark:text-slate-400">
+              <span className="flex items-center gap-1">
+                <CheckCircle className="w-3.5 h-3.5 text-teal-500" /> Live AI Bot Teardowns
+              </span>
+              <span className="flex items-center gap-1">
+                <CheckCircle className="w-3.5 h-3.5 text-teal-500" /> Agency Scale Frameworks
+              </span>
+              <span className="flex items-center gap-1">
+                <CheckCircle className="w-3.5 h-3.5 text-teal-500" /> Full Replay Access
+              </span>
+            </div>
+
+            {/* FTC Disclosure */}
+            <div className="pt-2 flex items-start gap-1.5 text-[11px] text-slate-500 dark:text-slate-400 leading-normal">
+              <Info className="w-3.5 h-3.5 text-purple-600 dark:text-purple-400 shrink-0 mt-0.5" />
+              <span>
+                <strong>Affiliate Disclosure:</strong> When you purchase your pass via our partner link, we receive a commission at no extra cost to you, which unlocks our complimentary n8n Companion Blueprint Pack.
+              </span>
+            </div>
           </div>
         </div>
 
