@@ -16,6 +16,7 @@ import SearchWidget from '@/components/SearchWidget';
 import DeployingTheStacks from '@/components/DeployingTheStacks';
 import WhopProductCard from '@/components/WhopProductCard';
 import SeriesNavigation from '@/components/SeriesNavigation';
+import ManyChatSummitBanner from '@/components/ManyChatSummitBanner';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import rehypeRaw from 'rehype-raw';
 import remarkGfm from 'remark-gfm';
@@ -402,9 +403,16 @@ export default async function Post({ params }) {
                   <td className="px-5 py-4 text-slate-700 dark:text-slate-300 text-sm leading-relaxed" {...props}>{children}</td>
                 ),
                 WhopProduct: WhopProductCard,
+                ManyChatSummitBanner: ManyChatSummitBanner,
+                InstagramSummit: ManyChatSummitBanner,
               }}
               options={{ mdxOptions: { format: 'md', remarkPlugins: [remarkGfm], rehypePlugins: [rehypeRaw] } }}
             />
+
+            {/* ManyChat Instagram Summit 2026 Featured Promotion */}
+            {(slug.includes('manychat') || slug.includes('instagram')) && (
+              <ManyChatSummitBanner />
+            )}
 
             {/* Downloadable Workflow Promo */}
             {(() => {
