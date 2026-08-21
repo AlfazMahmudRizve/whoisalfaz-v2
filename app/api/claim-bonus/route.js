@@ -135,13 +135,16 @@ export async function POST(request) {
             })
           }),
 
-          // 2. Instant Admin Alert to Alfaz (info@whoisalfaz.me)
+          // 2. Instant Admin Alert to Alfaz (contact@whoisalfaz.me + configured admin email)
           fetch('https://api.brevo.com/v3/smtp/email', {
             method: 'POST',
             headers: { 'api-key': apiKey, 'Content-Type': 'application/json' },
             body: JSON.stringify({
               sender: { name: 'WhoisAlfaz Bonus Engine', email: senderEmail },
-              to: [{ email: senderEmail, name: 'Alfaz Admin' }],
+              to: [
+                { email: 'contact@whoisalfaz.me', name: 'Alfaz Contact' },
+                ...(process.env.BREVO_ADMIN_EMAIL ? [{ email: process.env.BREVO_ADMIN_EMAIL, name: 'Alfaz Admin' }] : [])
+              ],
               replyTo: { email: cleanEmail, name: cleanName },
               subject: `🚨 New ManyChat Summit Bonus Claim: ${cleanName} (${cleanOrderId})`,
               htmlContent: adminAlertHtml
