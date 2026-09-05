@@ -1,27 +1,42 @@
 import Link from 'next/link';
-import { ArrowRight, Zap, BarChart3, Sparkles, Construction, ChevronRight } from 'lucide-react';
+import { 
+    ArrowRight, 
+    Zap, 
+    BarChart3, 
+    Sparkles, 
+    Layers, 
+    Cpu, 
+    ShieldCheck, 
+    ChevronRight, 
+    CheckCircle2,
+    Lock,
+    Clock,
+    FileCode,
+    Bot
+} from 'lucide-react';
 import StoreCatalog from '../../components/StoreCatalog';
+import VaultPlatformsCatalog from '../../components/VaultPlatformsCatalog';
 import NewsletterForm from '../../components/NewsletterForm';
 
 /* ─────────────────────────────────────────────────────── */
 /*  SEO METADATA                                          */
 /* ─────────────────────────────────────────────────────── */
 export const metadata = {
-    title: "Automation Templates & Digital Products | whoisalfaz.me",
-    description: "Production-ready n8n workflow templates, AI automation blueprints, and RevOps systems. Get access to 18 premium templates.",
+    title: "Vault — Turnkey Platforms & Automation Blueprints | whoisalfaz.me",
+    description: "Acquire production-grade turnkey web applications, flagship concept builds, and 18 battle-tested n8n automation blueprints. Full commercial code licenses & white-glove cloud deployment.",
     alternates: {
-        canonical: "https://whoisalfaz.me/store",
+        canonical: "https://whoisalfaz.me/store/",
     },
     openGraph: {
-        title: "Automation Templates & Digital Products | whoisalfaz.me",
-        description: "Production-ready n8n workflow templates, AI automation blueprints, and RevOps systems. Get access to 18 premium templates.",
-        url: "https://whoisalfaz.me/store",
+        title: "Vault — Turnkey Platforms & Automation Blueprints | whoisalfaz.me",
+        description: "Acquire production-grade turnkey web applications, flagship concept builds, and 18 battle-tested n8n automation blueprints. Full commercial code licenses & white-glove cloud deployment.",
+        url: "https://whoisalfaz.me/store/",
         type: "website",
     },
     twitter: {
         card: "summary_large_image",
-        title: "Automation Templates & Digital Products | whoisalfaz.me",
-        description: "Production-ready n8n workflow templates, AI automation blueprints, and RevOps systems. Get access to 18 premium templates.",
+        title: "Vault — Turnkey Platforms & Automation Blueprints | whoisalfaz.me",
+        description: "Acquire production-grade turnkey web applications, flagship concept builds, and 18 battle-tested n8n automation blueprints. Full commercial code licenses & white-glove cloud deployment.",
     },
 };
 
@@ -262,7 +277,7 @@ export default async function StorePage({ searchParams }) {
                 {
                     "@type": "ListItem",
                     "position": 2,
-                    "name": "Store",
+                    "name": "Vault",
                     "item": "https://whoisalfaz.me/store/"
                 }
             ]
@@ -270,62 +285,119 @@ export default async function StorePage({ searchParams }) {
     ];
 
     return (
-        <main className="min-h-screen pb-32 pt-32 bg-slate-50 dark:bg-[#0a0a0a] transition-colors duration-300">
+        <main className="min-h-screen pb-32 pt-28 md:pt-36 bg-slate-50 dark:bg-[#0a0a0a] transition-colors duration-300">
             {/* JSON-LD */}
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
             />
 
-            {/* BACKGROUND */}
+            {/* BACKGROUND GRADIENT */}
             <div className="fixed inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-teal-500/10 via-slate-50 to-slate-50 dark:from-slate-900/40 dark:via-[#0a0a0a] dark:to-[#0a0a0a] -z-10 transition-colors duration-300" />
 
             {isPreview ? (
-                <div className="max-w-6xl mx-auto px-6 space-y-16">
-                    {/* ═══════════════════════════════════════════ */}
-                    {/* HERO SECTION                               */}
-                    {/* ═══════════════════════════════════════════ */}
+                /* ═══════════════════════════════════════════════════════ */
+                /* AUTHORIZED PREVIEW CATALOG MODE                         */
+                /* ═══════════════════════════════════════════════════════ */
+                <div className="max-w-6xl mx-auto px-6 space-y-20">
+                    {/* HERO SECTION */}
                     <section className="text-center max-w-4xl mx-auto space-y-6">
-                        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-teal-500/10 border border-teal-500/20 text-teal-600 dark:text-teal-400 text-xs font-mono uppercase tracking-widest">
+                        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-teal-500/10 border border-teal-500/20 text-teal-700 dark:text-teal-400 text-xs font-mono uppercase tracking-widest">
                             <span className="w-1.5 h-1.5 rounded-full bg-teal-500 dark:bg-teal-400 animate-pulse"></span>
-                            PREVIEW MODE (ACTIVE)
+                            VAULT PREVIEW // AUTHORIZED STAGING ACTIVE
                         </div>
 
                         <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-slate-900 dark:text-white leading-[1.05] tracking-tighter uppercase">
-                            n8n Automation{' '}
-                            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-purple-500 dark:from-teal-400 dark:to-purple-400">
-                                Workflow Store
+                            Vault{' '}
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-500 via-purple-500 to-amber-500 dark:from-teal-400 dark:via-purple-400 dark:to-amber-300">
+                                Systems
                             </span>
                         </h1>
 
-                        <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed max-w-2xl mx-auto">
-                            Skip building from scratch. Access production-ready, stress-tested n8n blueprint templates to automate your RevOps, outreach, and AI pipelines.
+                        <p className="text-lg md:text-xl text-slate-600 dark:text-slate-300 leading-relaxed max-w-3xl mx-auto">
+                            Skip 3 to 6 months of engineering cycles. Explore and acquire commercial-grade turnkey web platforms, flagship concept builds, and battle-tested n8n automation blueprints with instant delivery and white-glove cloud deployment.
                         </p>
+
+                        {/* Quick Anchor Jumps */}
+                        <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
+                            <a
+                                href="#turnkey-platforms"
+                                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider bg-slate-900 dark:bg-white text-white dark:text-slate-950 hover:bg-teal-700 dark:hover:bg-slate-200 transition-all shadow-md"
+                            >
+                                <Cpu size={14} /> Turnkey Platforms (6)
+                            </a>
+                            <a
+                                href="#automation-blueprints"
+                                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider bg-white dark:bg-white/[0.05] text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/10 border border-slate-200 dark:border-white/10 transition-all"
+                            >
+                                <Zap size={14} className="text-amber-500" /> n8n Workflows (18)
+                            </a>
+                            <a
+                                href="#custom-services"
+                                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider bg-white dark:bg-white/[0.05] text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/10 border border-slate-200 dark:border-white/10 transition-all"
+                            >
+                                <Sparkles size={14} className="text-purple-500" /> Done-For-You Services
+                            </a>
+                        </div>
                     </section>
 
-                    {/* ═══════════════════════════════════════════ */}
-                    {/* PRODUCTS CATALOG SECTION                   */}
-                    {/* ═══════════════════════════════════════════ */}
-                    <section className="w-full">
+                    {/* 1. TURNKEY WEB PLATFORMS SECTION */}
+                    <section id="turnkey-platforms" className="scroll-mt-24 space-y-8">
+                        <div className="border-b border-slate-200 dark:border-white/10 pb-6 flex flex-col md:flex-row md:items-end justify-between gap-4">
+                            <div>
+                                <div className="inline-flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-widest text-teal-600 dark:text-teal-400 mb-2">
+                                    <Cpu size={14} /> TIER I: COMPLETE APPLICATION ARCHITECTURES
+                                </div>
+                                <h2 className="text-3xl md:text-5xl font-black text-slate-900 dark:text-white uppercase tracking-tight">
+                                    Turnkey Platforms &amp; Concept Builds
+                                </h2>
+                                <p className="text-slate-600 dark:text-slate-400 text-base max-w-2xl mt-2">
+                                    Production-hardened web applications and flagship prototypes ready for full commercial acquisition. Each includes unrestricted repository ownership, Supabase database schemas, and white-glove cloud deployment.
+                                </p>
+                            </div>
+
+                            <Link
+                                href="/portfolio/"
+                                className="inline-flex items-center gap-1.5 text-xs font-bold text-teal-600 dark:text-teal-400 hover:underline uppercase tracking-wider shrink-0"
+                            >
+                                View Engineering Portfolio <ArrowRight size={13} />
+                            </Link>
+                        </div>
+
+                        <VaultPlatformsCatalog />
+                    </section>
+
+                    {/* 2. N8N WORKFLOW TEMPLATES CATALOG */}
+                    <section id="automation-blueprints" className="scroll-mt-24 border-t border-slate-200 dark:border-white/10 pt-20 space-y-8">
+                        <div className="text-center max-w-3xl mx-auto space-y-3">
+                            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-600 dark:text-purple-400 text-xs font-mono uppercase tracking-widest">
+                                <Zap size={14} /> TIER II: REVENUE &amp; AGENTIC AUTOMATION BLUEPRINTS
+                            </div>
+                            <h2 className="text-3xl md:text-5xl font-black text-slate-900 dark:text-white uppercase tracking-tight">
+                                Production n8n Workflow Templates
+                            </h2>
+                            <p className="text-slate-600 dark:text-slate-400 text-base">
+                                Battle-tested n8n blueprint templates to automate your RevOps, outbound prospecting, customer inbound funnels, and AI multi-agent pipelines. Instant Whop digital checkout.
+                            </p>
+                        </div>
+
                         <StoreCatalog products={products} />
                     </section>
 
-                    {/* ═══════════════════════════════════════════ */}
-                    {/* SERVICES UPSELL                            */}
-                    {/* ═══════════════════════════════════════════ */}
-                    <section className="border-t border-slate-200 dark:border-white/5 pt-20">
+                    {/* 3. SERVICES UPSELL */}
+                    <section id="custom-services" className="scroll-mt-24 border-t border-slate-200 dark:border-white/5 pt-20">
                         <div className="text-center mb-14">
                             <span className="text-[10px] font-black text-slate-500 dark:text-slate-400 uppercase tracking-[0.3em] mb-4 block">
-                                Done-For-You Services
+                                TIER III: BESPOKE ENGINEERING &amp; ROADMAPPING
                             </span>
                             <h2 className="text-3xl md:text-5xl font-black text-slate-900 dark:text-white uppercase tracking-tighter mb-4">
-                                Need It Done{' '}
+                                Need A Custom Architecture{' '}
                                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-teal-600 dark:from-purple-400 dark:to-teal-400">
-                                    For You?
+                                    Built For You?
                                 </span>
                             </h2>
                             <p className="text-slate-600 dark:text-slate-400 text-lg max-w-2xl mx-auto">
-                                Templates get you 80% of the way. For the other 20% — custom logic, integrations, and production hardening — let us handle it.
+                                Turnkey platforms and blueprints give you an instant foundation. For custom proprietary logic, legacy API integrations, and enterprise hardening, let us build your custom stack.
                             </p>
                         </div>
 
@@ -336,9 +408,8 @@ export default async function StorePage({ searchParams }) {
                                     <Link
                                         key={s.title}
                                         href={s.slug}
-                                        className="bg-white dark:bg-[#0a0a0a] border border-slate-200 dark:border-purple-500/20 rounded-2xl p-7 shadow-xl dark:shadow-none hover:border-purple-500/50 hover:shadow-2xl transition-all group overflow-hidden relative block"
+                                        className="bg-white dark:bg-[#0c0c0c] border border-slate-200 dark:border-purple-500/20 rounded-2xl p-7 shadow-xl dark:shadow-none hover:border-purple-500/50 hover:shadow-2xl transition-all group overflow-hidden relative block"
                                     >
-                                        {/* Hover Glow */}
                                         <div className="absolute inset-0 bg-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity" />
 
                                         <div className="relative z-10">
@@ -361,35 +432,94 @@ export default async function StorePage({ searchParams }) {
                     </section>
                 </div>
             ) : (
-                <div className="max-w-xl mx-auto px-6 text-center mt-12 md:mt-20">
-                    <div className="bg-white dark:bg-slate-950/20 border border-slate-200 dark:border-white/10 rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden backdrop-blur-xl">
-                        <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-teal-500/10 to-purple-500/10 rounded-full blur-3xl translate-x-1/3 -translate-y-1/3 -z-10" />
+                /* ═══════════════════════════════════════════════════════ */
+                /* PUBLIC COMING SOON / GATED PORTAL MODE                  */
+                /* ═══════════════════════════════════════════════════════ */
+                <div className="max-w-4xl mx-auto px-6 text-center mt-6 md:mt-12 space-y-12">
+                    <div className="bg-white dark:bg-[#0c0c0c] border border-slate-200 dark:border-white/10 rounded-[2.5rem] p-8 md:p-14 shadow-2xl relative overflow-hidden backdrop-blur-2xl">
+                        {/* Subtle ambient lighting */}
+                        <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-teal-500/15 via-purple-500/10 to-amber-500/10 rounded-full blur-3xl pointer-events-none -translate-y-1/3 translate-x-1/3" />
+                        <div className="absolute bottom-0 left-0 w-72 h-72 bg-teal-500/10 rounded-full blur-3xl pointer-events-none translate-y-1/3 -translate-x-1/3" />
 
-                        <div className="w-16 h-16 rounded-2xl bg-teal-500/10 border border-teal-500/20 flex items-center justify-center mx-auto mb-8">
-                            <Construction className="w-8 h-8 text-teal-600 dark:text-teal-400" />
-                        </div>
+                        <div className="relative z-10 space-y-8">
+                            {/* Icon & Status Pill */}
+                            <div className="flex flex-col items-center gap-4">
+                                <div className="w-16 h-16 rounded-2xl bg-teal-500/10 border border-teal-500/20 flex items-center justify-center text-teal-600 dark:text-teal-400 shadow-inner">
+                                    <Lock size={28} />
+                                </div>
 
-                        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-teal-500/10 border border-teal-500/20 text-teal-600 dark:text-teal-400 text-xs font-mono uppercase tracking-widest mb-6">
-                            <span className="w-1.5 h-1.5 rounded-full bg-teal-500 dark:bg-teal-400 animate-pulse"></span>
-                            Under Construction
-                        </div>
+                                <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-100 dark:bg-white/[0.05] border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 text-xs font-mono uppercase tracking-widest">
+                                    <span className="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
+                                    VAULT // COMING SOON
+                                </div>
+                            </div>
 
-                        <h1 className="text-3xl md:text-4xl font-black text-slate-900 dark:text-white uppercase tracking-tight mb-4 animate-in fade-in slide-in-from-bottom duration-500">
-                            The Workflow Store
-                        </h1>
+                            {/* Headline */}
+                            <div className="space-y-4 max-w-2xl mx-auto">
+                                <h1 className="text-4xl md:text-6xl font-black text-slate-900 dark:text-white uppercase tracking-tight leading-none">
+                                    Vault
+                                </h1>
+                                <p className="text-slate-600 dark:text-slate-400 text-base md:text-lg leading-relaxed">
+                                    Curated turnkey web platforms, flagship concept builds, and battle-tested n8n automation blueprints. Access is currently in private staging while commercial licensing frameworks and live sandbox environments undergo final calibration.
+                                </p>
+                            </div>
 
-                        <p className="text-slate-600 dark:text-slate-400 text-sm md:text-base leading-relaxed mb-8">
-                            Our storefront of production-grade n8n automation blueprints, RevOps recipes, and AI outbound machines is currently undergoing final polishing. Sign up to get notified the second we launch.
-                        </p>
+                            {/* Waitlist Form */}
+                            <div className="w-full max-w-md mx-auto space-y-3 pt-2">
+                                <NewsletterForm source="vault_waitlist" />
+                                <p className="text-[11px] font-mono text-slate-400 uppercase tracking-widest">
+                                    Enter your email for priority batch deployment notification
+                                </p>
+                            </div>
 
-                        <div className="w-full max-w-sm mx-auto">
-                            <NewsletterForm source="store_coming_soon" />
-                        </div>
+                            {/* Teaser Feature Cards */}
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-8 border-t border-slate-200/80 dark:border-white/10 text-left">
+                                <div className="p-5 rounded-2xl bg-slate-50 dark:bg-white/[0.02] border border-slate-200/60 dark:border-white/5 space-y-2">
+                                    <div className="w-8 h-8 rounded-lg bg-teal-500/10 text-teal-600 dark:text-teal-400 flex items-center justify-center">
+                                        <Cpu size={16} />
+                                    </div>
+                                    <h3 className="text-xs font-black uppercase tracking-wider text-slate-900 dark:text-white">
+                                        Turnkey Web Platforms
+                                    </h3>
+                                    <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+                                        Full-stack systems (Heaven Atelier, Urban Cafe OS, Veloryc, Spectre 3D, CashOps, CareerOps) with full source rights &amp; deployment.
+                                    </p>
+                                </div>
 
-                        <div className="mt-8 pt-6 border-t border-slate-200 dark:border-white/5">
-                            <Link href="/" className="inline-flex items-center gap-1.5 text-xs font-bold text-slate-500 dark:text-slate-400 hover:text-teal-600 dark:hover:text-teal-400 transition-colors uppercase tracking-wider">
-                                Back to Homepage <ChevronRight size={14} />
-                            </Link>
+                                <div className="p-5 rounded-2xl bg-slate-50 dark:bg-white/[0.02] border border-slate-200/60 dark:border-white/5 space-y-2">
+                                    <div className="w-8 h-8 rounded-lg bg-amber-500/10 text-amber-600 dark:text-amber-400 flex items-center justify-center">
+                                        <Zap size={16} />
+                                    </div>
+                                    <h3 className="text-xs font-black uppercase tracking-wider text-slate-900 dark:text-white">
+                                        18 n8n Blueprints
+                                    </h3>
+                                    <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+                                        Production-verified workflow JSON files for AI RAG, autonomous outreach, and self-healing RevOps telemetry.
+                                    </p>
+                                </div>
+
+                                <div className="p-5 rounded-2xl bg-slate-50 dark:bg-white/[0.02] border border-slate-200/60 dark:border-white/5 space-y-2">
+                                    <div className="w-8 h-8 rounded-lg bg-purple-500/10 text-purple-600 dark:text-purple-400 flex items-center justify-center">
+                                        <ShieldCheck size={16} />
+                                    </div>
+                                    <h3 className="text-xs font-black uppercase tracking-wider text-slate-900 dark:text-white">
+                                        Zero Platform Rent
+                                    </h3>
+                                    <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+                                        Direct code ownership. Deploy on your own Vercel, Supabase, and self-hosted n8n infrastructure without monthly vendor fees.
+                                    </p>
+                                </div>
+                            </div>
+
+                            {/* Footer Links */}
+                            <div className="pt-6 border-t border-slate-200/60 dark:border-white/5 flex items-center justify-center text-xs font-medium text-slate-500 dark:text-slate-400">
+                                <Link 
+                                    href="/" 
+                                    className="hover:text-teal-600 dark:hover:text-white transition-colors uppercase tracking-wider font-bold"
+                                >
+                                    ← Back to Homepage
+                                </Link>
+                            </div>
                         </div>
                     </div>
                 </div>

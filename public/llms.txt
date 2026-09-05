@@ -61,6 +61,7 @@ High-authority contextual link integrations and sponsored API tear-downs for B2B
 
 - [About Alfaz Mahmud Rizve](https://whoisalfaz.me/about/alfaz-mahmud-rizve/)
 - [Portfolio](https://whoisalfaz.me/portfolio/)
+- [Heaven Atelier Flagship](https://heaven.whoisalfaz.me)
 - [Contact](https://whoisalfaz.me/contact/)
 - [Full Content Index for LLMs](https://whoisalfaz.me/llms-full.txt)
 

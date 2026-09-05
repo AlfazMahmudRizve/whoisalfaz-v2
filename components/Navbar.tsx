@@ -26,7 +26,7 @@ export default function Navbar() {
     { name: 'Case Studies', href: '/case-studies/' },
     { name: 'Blog', href: '/blog/' },
     { name: 'Lab', href: '/labs/' },
-    { name: 'Store', href: '/store/' },
+    { name: 'Vault', href: '/store/' },
   ];
 
   return (

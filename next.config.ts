@@ -520,6 +520,14 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  async rewrites() {
+    return [
+      {
+        source: '/vault/',
+        destination: '/store/',
+      },
+    ];
+  },
   async headers() {
     const isDev = process.env.NODE_ENV === 'development';
 

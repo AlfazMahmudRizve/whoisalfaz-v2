@@ -28,6 +28,7 @@ export default function Footer() {
                             <li><Link href="/services/headless-architecture/" className="hover:text-teal-600 dark:hover:text-blue-400 transition-colors">Headless CMS Infrastructure</Link></li>
                             <li><Link href="/services/n8n-automation/" className="hover:text-teal-600 dark:hover:text-blue-400 transition-colors">Custom Workflow Automation</Link></li>
                             <li><Link href="/services/seo-organic-growth/" className="hover:text-teal-600 dark:hover:text-blue-400 transition-colors">SEO &amp; Organic Growth</Link></li>
+                            <li><Link href="/store/" className="hover:text-teal-600 dark:hover:text-blue-400 transition-colors">Vault (Turnkey &amp; Blueprints)</Link></li>
                             <li><Link href="/services/growth-consulting/" className="hover:text-teal-600 dark:hover:text-blue-400 transition-colors">Strategy &amp; Growth Consulting</Link></li>
                         </ul>
                     </div>

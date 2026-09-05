@@ -37,6 +37,7 @@ whoisalfaz.me is the technical portfolio and blog of Alfaz Mahmud Rizve, a Reven
 - [Ask Alfaz AI](https://whoisalfaz.me/labs/chat/): Custom AI agent trained on n8n workflows and growth strategies.
 - [CashOps Financial Dashboard](https://cashops.whoisalfaz.me): Developer-focused personal finance dashboard with real-time telemetry and zero-latency data visualization.
 - [CareerOps AI Resume Builder](https://careerops.whoisalfaz.me): Privacy-first resume optimization with AI-powered role matching.
+- [Heaven Atelier](https://heaven.whoisalfaz.me): Flagship concept platform & luxury interior architecture atelier built with React 19, Supabase, and Tailwind CSS for the Racdox Hackathon 2026. Code: https://github.com/AlfazMahmudRizve/heaven-furniture-atelier
 
 ## Technical Partnerships
 

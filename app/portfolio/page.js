@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { ExternalLink } from 'lucide-react';
 import DefaultContentFooter from '../../components/footers/DefaultContentFooter';
+import PortfolioProjectsSection from '../../components/PortfolioProjectsSection';
 
 export const metadata = {
     title: "Alfaz Mahmud Rizve - GTM & RevOps Architect | Portfolio",
@@ -129,132 +129,9 @@ export default function Portfolio() {
                     </div>
                 </section>
 
-                {/* PROJECTS GRID */}
+                {/* PROJECTS SHOWCASE */}
                 <section className="animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-300 fill-mode-both">
-                    <div className="flex items-end justify-between mb-12">
-                        <div>
-                            <h2 className="text-3xl md:text-4xl font-black text-slate-900 dark:text-white mb-2 uppercase tracking-tight">Featured Work</h2>
-                            <p className="text-slate-500 dark:text-slate-400 font-medium">Selected automation and web projects.</p>
-                        </div>
-                        <Link href="/services/" className="text-teal-600 dark:text-blue-400 font-bold text-sm hover:text-teal-700 dark:hover:text-white transition-colors hidden md:block uppercase tracking-wider">View Services &rarr;</Link>
-                    </div>
-
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {/* Project - Urban Harvest Cafe */}
-                        <a href="https://urbancafe.whoisalfaz.me" target="_blank" rel="noopener noreferrer" style={{ animationDelay: '0ms' }} className="animate-in fade-in zoom-in-95 duration-700 fill-mode-both group bg-white dark:bg-[#111] border border-slate-200 dark:border-white/10 rounded-[3rem] overflow-hidden hover:border-amber-500/50 shadow-xl hover:shadow-2xl dark:shadow-none transition-all cursor-pointer">
-                            <div className="h-48 bg-slate-50 dark:bg-[#050505] border-b border-slate-100 dark:border-white/5 group-hover:bg-amber-50 dark:group-hover:bg-amber-950/30 transition-colors relative p-8">
-                                <div className="relative w-full h-full">
-                                    <Image src="/urban.png" alt="Urban Harvest Cafe Logo" fill className="object-contain" />
-                                </div>
-                            </div>
-                            <div className="p-8">
-                                <div className="flex flex-wrap gap-2 mb-6">
-                                    <span className="px-3 py-1.5 bg-amber-50 dark:bg-amber-500/10 text-amber-600 dark:text-amber-400 border border-amber-200 dark:border-amber-500/20 rounded-full text-[10px] uppercase tracking-widest font-black shadow-sm dark:shadow-none">FoodTech</span>
-                                    <span className="px-3 py-1.5 bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-transparent rounded-full text-[10px] text-slate-500 dark:text-slate-400 uppercase tracking-widest font-black shadow-sm dark:shadow-none">Next.js</span>
-                                    <span className="px-3 py-1.5 bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-transparent rounded-full text-[10px] text-slate-500 dark:text-slate-400 uppercase tracking-widest font-black shadow-sm dark:shadow-none">Real-time</span>
-                                </div>
-                                <h3 className="text-2xl font-black text-slate-900 dark:text-white mb-3 uppercase tracking-tight">Urban Harvest Cafe</h3>
-                                <p className="text-slate-500 dark:text-slate-400 text-sm mb-8 leading-relaxed font-medium">
-                                    Modern, artisan food ordering application built for warmth and cravings. Features a seamless serving tray system, real-time kitchen logic, and a &quot;fresh-first&quot; design philosophy.
-                                </p>
-                                <span className="text-amber-600 dark:text-amber-400 text-xs font-black uppercase tracking-widest border-b border-transparent group-hover:border-amber-600 dark:group-hover:border-amber-400 transition-colors flex items-center gap-2 w-max">
-                                    View Experience <ExternalLink size={14} />
-                                </span>
-                            </div>
-                        </a>
-
-                        {/* Project - Veloryc */}
-                        <a href="https://veloryc.whoisalfaz.me/" target="_blank" rel="noopener noreferrer" style={{ animationDelay: '150ms' }} className="animate-in fade-in zoom-in-95 duration-700 fill-mode-both group bg-white dark:bg-[#111] border border-slate-200 dark:border-white/10 rounded-[3rem] overflow-hidden hover:border-purple-500/50 shadow-xl hover:shadow-2xl dark:shadow-none transition-all cursor-pointer">
-                            <div className="h-48 bg-slate-50 dark:bg-[#050505] border-b border-slate-100 dark:border-white/5 group-hover:bg-purple-50 dark:group-hover:bg-purple-950/30 transition-colors relative p-8 flex items-center justify-center">
-                                <div className="relative w-full h-full">
-                                    <Image src="/veloryc.png" alt="Veloryc Logo" fill className="object-contain" />
-                                </div>
-                            </div>
-                            <div className="p-8">
-                                <div className="flex flex-wrap gap-2 mb-6">
-                                    <span className="px-3 py-1.5 bg-purple-50 dark:bg-purple-500/10 text-purple-600 dark:text-purple-400 border border-purple-200 dark:border-purple-500/20 rounded-full text-[10px] uppercase tracking-widest font-black shadow-sm dark:shadow-none">Next.js</span>
-                                    <span className="px-3 py-1.5 bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-transparent rounded-full text-[10px] text-slate-500 dark:text-slate-400 uppercase tracking-widest font-black shadow-sm dark:shadow-none">Supabase</span>
-                                    <span className="px-3 py-1.5 bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-transparent rounded-full text-[10px] text-slate-500 dark:text-slate-400 uppercase tracking-widest font-black shadow-sm dark:shadow-none">Pure CSS</span>
-                                </div>
-                                <h3 className="text-2xl font-black text-slate-900 dark:text-white mb-3 uppercase tracking-tight">Veloryc</h3>
-                                <p className="text-slate-500 dark:text-slate-400 text-sm mb-8 leading-relaxed font-medium">
-                                    Premium, high-performance e-commerce platform engineered for advanced skincare products. Features a real-time Supabase integration, sophisticated fluid UI, and a dedicated headless admin command center.
-                                </p>
-                                <span className="text-purple-600 dark:text-purple-400 text-xs font-black uppercase tracking-widest border-b border-transparent group-hover:border-purple-600 dark:group-hover:border-purple-400 transition-colors flex items-center gap-2 w-max">
-                                    View Experience <ExternalLink size={14} />
-                                </span>
-                            </div>
-                        </a>
-
-                        {/* Project - Spectre */}
-                        <a href="https://spectre.whoisalfaz.me/" target="_blank" rel="noopener noreferrer" style={{ animationDelay: '300ms' }} className="animate-in fade-in zoom-in-95 duration-700 fill-mode-both group bg-white dark:bg-[#111] border border-slate-200 dark:border-white/10 rounded-[3rem] overflow-hidden hover:border-cyan-500/50 shadow-xl hover:shadow-2xl dark:shadow-none transition-all cursor-pointer">
-                            <div className="h-48 bg-slate-50 dark:bg-[#050505] border-b border-slate-100 dark:border-white/5 group-hover:bg-cyan-50 dark:group-hover:bg-cyan-950/30 transition-colors relative p-8">
-                                <div className="relative w-full h-full">
-                                    <Image src="/spectre-logo.png" alt="Spectre Logo" fill className="object-contain" />
-                                </div>
-                            </div>
-                            <div className="p-8">
-                                <div className="flex flex-wrap gap-2 mb-6">
-                                    <span className="px-3 py-1.5 bg-cyan-50 dark:bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 border border-cyan-200 dark:border-cyan-500/20 rounded-full text-[10px] uppercase tracking-widest font-black shadow-sm dark:shadow-none">R3F</span>
-                                    <span className="px-3 py-1.5 bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-transparent rounded-full text-[10px] text-slate-500 dark:text-slate-400 uppercase tracking-widest font-black shadow-sm dark:shadow-none">Next.js</span>
-                                    <span className="px-3 py-1.5 bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-transparent rounded-full text-[10px] text-slate-500 dark:text-slate-400 uppercase tracking-widest font-black shadow-sm dark:shadow-none">Canvas API</span>
-                                </div>
-                                <h3 className="text-2xl font-black text-slate-900 dark:text-white mb-3 uppercase tracking-tight">Spectre</h3>
-                                <p className="text-slate-500 dark:text-slate-400 text-sm mb-8 leading-relaxed font-medium">
-                                    Immersive Commerce Experience. Cinema-quality 3D product disassembly with custom &apos;Progressive Buffering&apos; for instant TTI and locked 60FPS fluid scroll.
-                                </p>
-                                <span className="text-cyan-600 dark:text-cyan-400 text-xs font-black uppercase tracking-widest border-b border-transparent group-hover:border-cyan-600 dark:group-hover:border-cyan-400 transition-colors flex items-center gap-2 w-max">
-                                    View Experience <ExternalLink size={14} />
-                                </span>
-                            </div>
-                        </a>
-
-                        {/* Project 3 - CashOps */}
-                        <a href="https://cashops.whoisalfaz.me" target="_blank" rel="noopener noreferrer" style={{ animationDelay: '450ms' }} className="animate-in fade-in zoom-in-95 duration-700 fill-mode-both group bg-white dark:bg-[#111] border border-slate-200 dark:border-white/10 rounded-[3rem] overflow-hidden hover:border-emerald-500/50 shadow-xl hover:shadow-2xl dark:shadow-none transition-all cursor-pointer">
-                            <div className="h-48 bg-slate-50 dark:bg-[#050505] border-b border-slate-100 dark:border-white/5 group-hover:bg-emerald-50 dark:group-hover:bg-emerald-950/30 transition-colors relative p-8">
-                                <div className="relative w-full h-full">
-                                    <Image src="/cashops-logo.png" alt="CashOps Logo" fill className="object-contain" />
-                                </div>
-                            </div>
-                            <div className="p-8">
-                                <div className="flex flex-wrap gap-2 mb-6">
-                                    <span className="px-3 py-1.5 bg-emerald-50 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-500/20 rounded-full text-[10px] uppercase tracking-widest font-black shadow-sm dark:shadow-none">Next.js</span>
-                                    <span className="px-3 py-1.5 bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-transparent rounded-full text-[10px] text-slate-500 dark:text-slate-400 uppercase tracking-widest font-black shadow-sm dark:shadow-none">React Context</span>
-                                    <span className="px-3 py-1.5 bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-transparent rounded-full text-[10px] text-slate-500 dark:text-slate-400 uppercase tracking-widest font-black shadow-sm dark:shadow-none">Tailwind</span>
-                                </div>
-                                <h3 className="text-2xl font-black text-slate-900 dark:text-white mb-3 uppercase tracking-tight">CashOps.app</h3>
-                                <p className="text-slate-500 dark:text-slate-400 text-sm mb-8 leading-relaxed font-medium">
-                                    A developer-focused financial dashboard featuring real-time state management and zero-latency data visualization.
-                                </p>
-                                <span className="text-emerald-600 dark:text-emerald-400 text-xs font-black uppercase tracking-widest border-b border-transparent group-hover:border-emerald-600 dark:group-hover:border-emerald-400 transition-colors flex items-center gap-2 w-max">
-                                    Live Beta <ExternalLink size={14} />
-                                </span>
-                            </div>
-                        </a>
-
-                        {/* Project 4 - CareerOps */}
-                        <a href="https://careerops.whoisalfaz.me/" target="_blank" rel="noopener noreferrer" style={{ animationDelay: '600ms' }} className="animate-in fade-in zoom-in-95 duration-700 fill-mode-both group bg-white dark:bg-[#111] border border-slate-200 dark:border-white/10 rounded-[3rem] overflow-hidden hover:border-blue-500/50 shadow-xl hover:shadow-2xl dark:shadow-none transition-all cursor-pointer">
-                            <div className="h-48 bg-slate-50 dark:bg-[#050505] border-b border-slate-100 dark:border-white/5 group-hover:bg-blue-50 dark:group-hover:bg-blue-950/30 transition-colors relative p-8">
-                                <div className="relative w-full h-full">
-                                    <Image src="/careerops-logo.png" alt="CareerOps Logo" fill className="object-contain" />
-                                </div>
-                            </div>
-                            <div className="p-8">
-                                <div className="flex flex-wrap gap-2 mb-6">
-                                    <span className="px-3 py-1.5 bg-blue-50 dark:bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-200 dark:border-blue-500/20 rounded-full text-[10px] uppercase tracking-widest font-black shadow-sm dark:shadow-none">AI</span>
-                                    <span className="px-3 py-1.5 bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-transparent rounded-full text-[10px] text-slate-500 dark:text-slate-400 uppercase tracking-widest font-black shadow-sm dark:shadow-none">n8n</span>
-                                    <span className="px-3 py-1.5 bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-transparent rounded-full text-[10px] text-slate-500 dark:text-slate-400 uppercase tracking-widest font-black shadow-sm dark:shadow-none">Next.js</span>
-                                </div>
-                                <h3 className="text-2xl font-black text-slate-900 dark:text-white mb-3 uppercase tracking-tight">CareerOps</h3>
-                                <p className="text-slate-500 dark:text-slate-400 text-sm mb-8 leading-relaxed font-medium">
-                                    The Stateless AI Career Strategist. Privacy-first resume optimization using local-first logic and n8n orchestration.
-                                </p>
-                                <span className="text-blue-600 dark:text-blue-400 text-xs font-black uppercase tracking-widest border-b border-transparent group-hover:border-blue-600 dark:group-hover:border-blue-400 transition-colors flex items-center gap-2 w-max">
-                                    Make Resume <ExternalLink size={14} />
-                                </span>
-                            </div>
-                        </a>
-                    </div>
+                    <PortfolioProjectsSection />
                 </section>
 
                 {/* EXPERIENCE TIMELINE */}
