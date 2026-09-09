@@ -4,20 +4,20 @@ import { Shield, Eye, FileText, Mail } from 'lucide-react';
 
 export const metadata = {
     title: "Privacy Policy | Alfaz Mahmud Rizve",
-    description: "Read the Privacy Notice and Data Protection Policy for whoisalfaz.me. Learn exactly how we collect, process, and secure your personal information in compliance with global laws.",
+    description: "Privacy Notice and Data Protection Policy for whoisalfaz.me. Learn how client data, analytics, and contact info are processed and protected under GDPR.",
     alternates: {
         canonical: 'https://whoisalfaz.me/privacy-policy',
     },
     openGraph: {
         title: "Privacy Policy | Alfaz Mahmud Rizve",
-        description: "Read the Privacy Notice and Data Protection Policy for whoisalfaz.me. Learn exactly how we collect, process, and secure your personal information in compliance with global laws.",
+        description: "Privacy Notice and Data Protection Policy for whoisalfaz.me. Learn how client data, analytics, and contact info are processed and protected under GDPR.",
         url: 'https://whoisalfaz.me/privacy-policy',
         type: 'website',
     },
     twitter: {
         card: 'summary_large_image',
         title: "Privacy Policy | Alfaz Mahmud Rizve",
-        description: "Read the Privacy Notice and Data Protection Policy for whoisalfaz.me. Learn exactly how we collect, process, and secure your personal information in compliance with global laws.",
+        description: "Privacy Notice and Data Protection Policy for whoisalfaz.me. Learn how client data, analytics, and contact info are processed and protected under GDPR.",
     }
 };
 
@@ -33,9 +33,9 @@ export default function PrivacyPolicy() {
                 {/* LEFT: SIDEBAR NAV (Sticky) */}
                 <aside className="hidden lg:block h-fit sticky top-32 space-y-8">
                     <div className="p-6 bg-white/5 border border-white/10 rounded-2xl backdrop-blur-md">
-                        <h4 className="text-xs font-bold text-slate-500 uppercase tracking-widest mb-6 flex items-center gap-2">
+                        <div className="text-xs font-bold text-slate-500 uppercase tracking-widest mb-6 flex items-center gap-2">
                             <FileText size={14} /> Table of Contents
-                        </h4>
+                        </div>
                         <nav className="space-y-1">
                             {[
                                 { id: "summary", label: "Summary of Key Points" },
@@ -60,7 +60,7 @@ export default function PrivacyPolicy() {
                     </div>
 
                     <div className="p-6 rounded-2xl bg-gradient-to-br from-blue-900/20 to-purple-900/20 border border-blue-500/20">
-                        <h4 className="text-white font-bold mb-2">Have Questions?</h4>
+                        <div className="text-white font-bold mb-2">Have Questions?</div>
                         <p className="text-slate-400 text-xs mb-4">
                             If anything in this policy is unclear, please don&apos;t hesitate to reach out.
                         </p>

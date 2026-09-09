@@ -4,13 +4,13 @@ import AuditBadgeSection from '../../components/AuditBadgeSection';
 import AuditContentFooter from '../../components/footers/AuditContentFooter';
 
 export const metadata = {
-    title: "Free Website Audit Tool – Check SEO, Speed & Security Score | whoisalfaz",
+    title: "Free Website Audit Tool – SEO, Speed & Security | whoisalfaz",
     description: "Run a free website audit in 30 seconds. Instantly check your PageSpeed score, SEO health, SSL certificate, security headers, and sitemap. No signup required.",
     alternates: {
         canonical: 'https://whoisalfaz.me/audit',
     },
     openGraph: {
-        title: "Free Website Audit Tool – Check SEO, Speed & Security Score",
+        title: "Free Website Audit Tool – SEO, Speed & Security",
         description: "Run a free website audit in 30 seconds. Instantly check your PageSpeed score, SEO health, SSL certificate, security headers, and sitemap. No signup required.",
         url: 'https://whoisalfaz.me/audit',
         type: 'website',
@@ -26,7 +26,7 @@ export const metadata = {
     },
     twitter: {
         card: 'summary_large_image',
-        title: "Free Website Audit Tool – Check SEO, Speed & Security Score",
+        title: "Free Website Audit Tool – SEO, Speed & Security",
         description: "Run a free website audit in 30 seconds. Check PageSpeed, SSL, security headers, and more. No signup required.",
         images: ['https://whoisalfaz.me/featured-image.png'],
     }

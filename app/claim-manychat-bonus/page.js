@@ -2,10 +2,21 @@ import React from 'react';
 import ClaimBonusClient from './ClaimBonusClient';
 
 export const metadata = {
-  title: 'Claim Your $147 ManyChat & n8n Automation Bonus Pack | WhoisAlfaz',
-  description: 'Exclusive $147 companion automation bundle for Instagram Summit by ManyChat virtual attendees. Instant access to production-ready n8n workflows, WhatsApp async timeout handlers, and Apollo enrichment pipelines.',
+  title: 'Claim Your $147 ManyChat & n8n Automation Bonus | WhoisAlfaz',
+  description: 'Exclusive $147 companion automation bundle for Summit attendees. Production n8n templates, lead scoring engines, and viral DM blueprints by Alfaz.',
   alternates: {
     canonical: 'https://whoisalfaz.me/claim-manychat-bonus/'
+  },
+  openGraph: {
+    title: 'Claim Your $147 ManyChat & n8n Automation Bonus | WhoisAlfaz',
+    description: 'Exclusive $147 companion automation bundle for Summit attendees. Production n8n templates, lead scoring engines, and viral DM blueprints by Alfaz.',
+    url: 'https://whoisalfaz.me/claim-manychat-bonus/',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Claim Your $147 ManyChat & n8n Automation Bonus | WhoisAlfaz',
+    description: 'Exclusive $147 companion automation bundle for Summit attendees. Production n8n templates, lead scoring engines, and viral DM blueprints by Alfaz.',
   }
 };
 

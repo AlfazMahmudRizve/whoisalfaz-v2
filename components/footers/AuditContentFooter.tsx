@@ -14,7 +14,7 @@ const checks = [
     description:
       'We use the official Google PageSpeed Insights API to measure your real-world performance. This includes First Contentful Paint (FCP), Largest Contentful Paint (LCP), Cumulative Layout Shift (CLS), Total Blocking Time (TBT), and Speed Index. These Core Web Vitals directly impact your Google search rankings.',
     linkText: 'Improve your performance with headless architecture →',
-    linkHref: '/services/headless-architecture/',
+    linkHref: '/services/',
   },
   {
     icon: Search,
@@ -69,7 +69,7 @@ const checks = [
     description:
       'We resolve your domain\'s A and AAAA records, measure DNS lookup latency, detect CDN usage via multiple IP addresses, check IPv6 support, and identify redirect chains. Slow DNS resolution or unnecessary redirects add latency to every page load.',
     linkText: 'Optimize your infrastructure with headless architecture →',
-    linkHref: '/services/headless-architecture/',
+    linkHref: '/services/',
   },
 ];
 
@@ -82,7 +82,7 @@ const tips = [
   {
     text: 'Compress images to WebP or AVIF format and lazy-load below-the-fold content to improve your PageSpeed score.',
     linkText: 'See how headless architecture delivers sub-second loads',
-    linkHref: '/services/headless-architecture/',
+    linkHref: '/services/',
   },
   {
     text: 'Create a complete sitemap.xml listing all important pages and reference it in your robots.txt file.',
@@ -102,7 +102,7 @@ const tips = [
   {
     text: 'Use a Content Delivery Network (CDN) to reduce DNS latency and serve assets from edge locations globally.',
     linkText: 'Explore our headless infrastructure solutions',
-    linkHref: '/services/headless-architecture/',
+    linkHref: '/services/',
   },
 ];
 

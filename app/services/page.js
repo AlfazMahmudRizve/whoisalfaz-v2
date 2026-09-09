@@ -58,6 +58,7 @@ export default function ServicesPage() {
         {
             title: "Headless CMS Infrastructure",
             slug: "headless-architecture",
+            href: "/services/",
             desc: "The high-performance foundation your revenue engine runs on. Sub-second load times, perfect Core Web Vitals, and full content editing for your marketing team.",
             price: "1,500",
             icon: Globe,
@@ -198,7 +199,7 @@ export default function ServicesPage() {
 
                             <div className={`mt-auto pt-6 border-t ${s.borderClass}`}>
                                 <div className="text-xs font-black uppercase tracking-widest text-slate-500 dark:text-slate-400 mb-4">Starting From <span className={`font-black text-xl block mt-1 ${s.priceClass} dark:text-white`}>${s.price}</span></div>
-                                <Link href={`/services/${s.slug}`} className={`w-full block py-3 text-center rounded-lg font-black uppercase tracking-widest text-xs transition-transform hover:-translate-y-1 shadow-md dark:shadow-sm ${s.btnClass}`}>
+                                <Link href={s.href || `/services/${s.slug}/`} className={`w-full block py-3 text-center rounded-lg font-black uppercase tracking-widest text-xs transition-transform hover:-translate-y-1 shadow-md dark:shadow-sm ${s.btnClass}`}>
                                     {s.cta}
                                 </Link>
                             </div>

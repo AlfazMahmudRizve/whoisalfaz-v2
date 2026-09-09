@@ -4,20 +4,20 @@ import { Search, Calculator, Bot, ArrowRight, BarChart3, Shield, Cpu, BookOpen, 
 
 export const metadata = {
     title: 'Free Tools & Resources | WhoIsAlfaz.me',
-    description: 'Explore free automation tools, ROI calculators, custom AI agents, and telemetry dashboards designed to streamline operations, eliminate manual bottlenecks, and scale your agency.',
+    description: 'Free automation tools, ROI calculators, custom AI agents, and developer resources to scale agency operations without manual overhead by Alfaz.',
     alternates: {
         canonical: 'https://whoisalfaz.me/labs',
     },
     openGraph: {
         title: 'Free Tools & Resources | WhoIsAlfaz.me',
-        description: 'Explore free automation tools, ROI calculators, custom AI agents, and telemetry dashboards designed to streamline operations, eliminate manual bottlenecks, and scale your agency.',
+        description: 'Free automation tools, ROI calculators, custom AI agents, and developer resources to scale agency operations without manual overhead by Alfaz.',
         url: 'https://whoisalfaz.me/labs',
         type: 'website',
     },
     twitter: {
         card: 'summary_large_image',
         title: 'Free Tools & Resources | WhoIsAlfaz.me',
-        description: 'Explore free automation tools, ROI calculators, custom AI agents, and telemetry dashboards designed to streamline operations, eliminate manual bottlenecks, and scale your agency.',
+        description: 'Free automation tools, ROI calculators, custom AI agents, and developer resources to scale agency operations without manual overhead by Alfaz.',
     }
 };
 

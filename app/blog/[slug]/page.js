@@ -50,21 +50,25 @@ export async function generateMetadata({ params }) {
 
   let rawTitle = post.seoTitle;
   if (!rawTitle || rawTitle === post.title) {
-    if (post.title.length <= 48) {
-      rawTitle = `${post.title} | Alfaz`;
+    const titleText = post.title || '';
+    const hasYearOrGuide = /2026|blueprint|guide/i.test(titleText);
+    if (titleText.length <= 48) {
+      rawTitle = `${titleText} | Alfaz`;
+    } else if (hasYearOrGuide) {
+      rawTitle = titleText;
     } else {
-      rawTitle = `${post.title} (2026 Guide)`;
+      rawTitle = `${titleText} (2026 Guide)`;
     }
   }
 
-  const cleanTruncate = (str, maxLen = 65) => {
+  const cleanTruncate = (str, maxLen = 60) => {
     if (!str || str.length <= maxLen) return str;
     const sliced = str.slice(0, maxLen);
     const lastSpace = sliced.lastIndexOf(' ');
     return (lastSpace > 0 ? sliced.slice(0, lastSpace) : sliced).trim();
   };
 
-  const finalTitle = cleanTruncate(rawTitle, 65);
+  const finalTitle = cleanTruncate(rawTitle, 60);
   const seoDesc = post.seoDescription || post.description;
   const canonicalUrl = CANONICAL_OVERRIDES[slug] || `https://whoisalfaz.me/blog/${slug}/`;
 
@@ -325,24 +329,24 @@ export default async function Post({ params }) {
         <div className="hidden lg:block sticky top-32 h-fit">
           <aside className="space-y-8">
             <div className="bg-white dark:bg-white/5 p-6 rounded-[2.5rem] border border-slate-200 dark:border-white/5 shadow-sm dark:shadow-none animate-in fade-in slide-in-from-left-8 duration-1000 delay-300 fill-mode-both">
-              <h4 className="text-[10px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-[0.2em] mb-6 border-b border-slate-100 dark:border-white/5 pb-3">
+              <div className="text-[10px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-[0.2em] mb-6 border-b border-slate-100 dark:border-white/5 pb-3">
                 In this Article
-              </h4>
+              </div>
               <TableOfContents />
             </div>
 
             {/* SHARE AREA (Detached below TOC) */}
             <div className="bg-white dark:bg-white/5 p-6 rounded-[2.5rem] border border-slate-200 dark:border-white/5 shadow-sm dark:shadow-none animate-in fade-in slide-in-from-left-8 duration-1000 delay-500 fill-mode-both">
-              <h4 className="text-[10px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-[0.2em] mb-6 border-b border-slate-100 dark:border-white/5 pb-3">
+              <div className="text-[10px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-[0.2em] mb-6 border-b border-slate-100 dark:border-white/5 pb-3">
                 Share
-              </h4>
+              </div>
               <ShareButtons />
             </div>
 
             {/* NEWSLETTER (Detached) */}
             <div className="animate-in fade-in slide-in-from-left-8 duration-1000 delay-700 fill-mode-both">
               <div className="p-8 rounded-[2rem] bg-slate-900 dark:bg-gradient-to-b dark:from-slate-900 dark:to-slate-950 border border-slate-800 dark:border-white/10 shadow-xl">
-                <h4 className="text-white font-black uppercase tracking-tight mb-3 text-lg">Join the Inner Circle</h4>
+                <div className="text-white font-black uppercase tracking-tight mb-3 text-lg">Join the Inner Circle</div>
                 <p className="text-xs text-slate-400 font-medium mb-6 leading-relaxed">Exclusive automation tips, directly to your inbox.</p>
                 <NewsletterForm />
               </div>
@@ -540,14 +544,14 @@ export default async function Post({ params }) {
                 {prevPost ? (
                   <Link href={`/blog/${prevPost.slug.current}/`} className="group p-8 rounded-[2rem] bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 hover:border-teal-500/50 hover:shadow-xl dark:shadow-none transition-all flex flex-col justify-center">
                     <span className="text-[10px] text-slate-500 uppercase font-black tracking-widest mb-3 flex items-center gap-2"><ArrowLeft size={14} className="group-hover:-translate-x-1 transition-transform" /> Previous Post</span>
-                    <h4 className="text-slate-900 dark:text-white font-black text-lg group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors line-clamp-2 uppercase tracking-tight">{prevPost.title}</h4>
+                    <div className="text-slate-900 dark:text-white font-black text-lg group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors line-clamp-2 uppercase tracking-tight">{prevPost.title}</div>
                   </Link>
                 ) : <div />}
 
                 {nextPost ? (
                   <Link href={`/blog/${nextPost.slug.current}/`} className="group p-8 rounded-[2rem] bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 hover:border-teal-500/50 hover:shadow-xl dark:shadow-none transition-all flex flex-col justify-center text-right">
                     <span className="text-[10px] text-slate-500 uppercase font-black tracking-widest mb-3 flex items-center justify-end gap-2">Next Post <ArrowLeft size={14} className="rotate-180 group-hover:translate-x-1 transition-transform" /></span>
-                    <h4 className="text-slate-900 dark:text-white font-black text-lg group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors line-clamp-2 uppercase tracking-tight">{nextPost.title}</h4>
+                    <div className="text-slate-900 dark:text-white font-black text-lg group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors line-clamp-2 uppercase tracking-tight">{nextPost.title}</div>
                   </Link>
                 ) : <div />}
               </div>
@@ -556,7 +560,7 @@ export default async function Post({ params }) {
 
           {/* Mobile TOC (Visible only on small screens) */}
           <div className="lg:hidden mt-20 py-10 border-t border-slate-200 dark:border-white/10">
-            <h4 className="text-sm font-black text-slate-900 dark:text-white uppercase tracking-widest mb-6 border-b border-slate-100 dark:border-white/5 pb-3">In this Article</h4>
+            <div className="text-sm font-black text-slate-900 dark:text-white uppercase tracking-widest mb-6 border-b border-slate-100 dark:border-white/5 pb-3">In this Article</div>
             <div className="prose-toc">
               <TableOfContents />
             </div>
@@ -577,14 +581,14 @@ export default async function Post({ params }) {
 
           {/* RECENT POSTS */}
           <div className="bg-white dark:bg-transparent p-6 rounded-[2rem] border border-slate-200 dark:border-transparent shadow-sm dark:shadow-none">
-            <h4 className="text-lg font-black text-slate-900 dark:text-white uppercase tracking-tight mb-8">Recent Posts</h4>
+            <div className="text-lg font-black text-slate-900 dark:text-white uppercase tracking-tight mb-8">Recent Posts</div>
             <ul className="space-y-6">
               {recentPosts?.map(post => (
                 <li key={post.slug.current}>
                   <Link href={`/blog/${post.slug.current}/`} className="group block">
-                    <h5 className="text-slate-800 dark:text-slate-300 text-[15px] font-bold group-hover:text-teal-600 dark:group-hover:text-blue-400 transition-colors line-clamp-2 mb-2 leading-snug">
+                    <div className="text-slate-800 dark:text-slate-300 text-[15px] font-bold group-hover:text-teal-600 dark:group-hover:text-blue-400 transition-colors line-clamp-2 mb-2 leading-snug">
                       {post.title}
-                    </h5>
+                    </div>
                     <span className="text-[10px] uppercase font-black tracking-widest text-slate-400 dark:text-slate-600 block">{new Date(post.date).toLocaleDateString()}</span>
                   </Link>
                 </li>
@@ -594,7 +598,7 @@ export default async function Post({ params }) {
 
           {/* CATEGORIES */}
           <div className="bg-white dark:bg-transparent p-6 rounded-[2rem] border border-slate-200 dark:border-transparent shadow-sm dark:shadow-none">
-            <h4 className="text-lg font-black text-slate-900 dark:text-white uppercase tracking-tight mb-8">Categories</h4>
+            <div className="text-lg font-black text-slate-900 dark:text-white uppercase tracking-tight mb-8">Categories</div>
             <ul className="space-y-3">
               {categories?.map(cat => (
                 <li key={cat.slug.current}>
@@ -615,7 +619,7 @@ export default async function Post({ params }) {
       <div className="max-w-5xl mx-auto px-6 mt-32">
         <div className="p-1.5 rounded-[3rem] bg-gradient-to-br from-teal-400 via-emerald-500 to-teal-600 dark:from-teal-500 dark:via-purple-600 dark:to-pink-500 shadow-2xl">
           <div className="bg-white dark:bg-[#0f172a] rounded-[2.5rem] p-10 md:p-14 text-center">
-            <h3 className="text-3xl md:text-4xl font-black text-slate-900 dark:text-white mb-6 uppercase tracking-tight">Ready to <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-emerald-500 dark:from-teal-400 dark:to-emerald-300">automate your agency?</span></h3>
+            <h2 className="text-3xl md:text-4xl font-black text-slate-900 dark:text-white mb-6 uppercase tracking-tight">Ready to <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-emerald-500 dark:from-teal-400 dark:to-emerald-300">automate your agency?</span></h2>
             <p className="text-slate-600 dark:text-slate-400 font-medium text-lg md:text-xl mb-10 max-w-2xl mx-auto leading-relaxed">Skip the manual grunt work. Let&apos;s build a custom system that runs your business on autopilot 24/7.</p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Link href="/contact/" className="px-8 py-4 bg-slate-900 dark:bg-white text-white dark:text-black font-black uppercase tracking-widest text-xs rounded-xl shadow-lg dark:shadow-none hover:bg-slate-800 dark:hover:bg-slate-200 transition-all hover:-translate-y-1">

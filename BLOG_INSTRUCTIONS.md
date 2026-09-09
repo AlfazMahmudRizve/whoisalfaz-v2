@@ -15,7 +15,7 @@ All content is managed via the **Sanity CMS**. There are two ways to publish:
 1. Create a JSON file matching the Sanity `post` schema (see Section 4).
 2. Run: `node scripts/publishToSanity.js <path-to-draft.json>`
 3. The post is instantly live in the database.
-4. **CRITICAL GIT & DEPLOY SYNC:** You MUST run `npm run push-all` after any content additions, ledger updates, or code changes to push the commits to GitHub (`origin main`) and trigger the live production deployment to DigitalOcean (`deploy main`).
+4. **CRITICAL GIT SYNC:** Run `git push origin main` after any content additions, ledger updates, or code changes to push the commits to GitHub.
 
 ## 2. Content Schema
 

@@ -9,6 +9,16 @@ import HomeContentFooter from '../components/footers/HomeContentFooter';
 import { FadeUp, StaggerContainer, StaggerItem } from '@/components/MotionWrappers';
 import { HeroMarketeamUpgrade } from '@/components/hero';
 
+export const metadata = {
+  description: "I engineer autonomous revenue engines — bridging SEO, high-speed Next.js web applications, and self-healing n8n RevOps pipelines for scaling brands.",
+  openGraph: {
+    description: "I engineer autonomous revenue engines — bridging SEO, high-speed Next.js web applications, and self-healing n8n RevOps pipelines for scaling brands.",
+  },
+  twitter: {
+    description: "I engineer autonomous revenue engines — bridging SEO, high-speed Next.js web applications, and self-healing n8n RevOps pipelines for scaling brands.",
+  },
+};
+
 export default async function Home() {
   const posts = await getSanityPosts();
 
@@ -148,9 +158,9 @@ export default async function Home() {
                     </span>
                   </div>
 
-                  <h3 className="text-2xl md:text-3xl font-black text-slate-900 dark:text-white tracking-tight uppercase leading-tight">
+                  <h2 className="text-2xl md:text-3xl font-black text-slate-900 dark:text-white tracking-tight uppercase leading-tight">
                     Instagram Summit <span className="text-purple-600 dark:text-purple-400">by ManyChat</span>
-                  </h3>
+                  </h2>
 
                   <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed max-w-xl">
                     Master Instagram DM funnels, AI voice agents, and high-converting lead pipelines. Register via our official partner link to instantly unlock our <strong>$147 n8n Automation Vault</strong> (Async Webhook Fix + Apollo Lead Scoring).
@@ -231,9 +241,9 @@ export default async function Home() {
                   Featured Case Study
                 </span>
                 
-                <h3 className="text-xl md:text-2xl font-black text-slate-900 dark:text-white mb-3 tracking-tight uppercase group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">
+                <h2 className="text-xl md:text-2xl font-black text-slate-900 dark:text-white mb-3 tracking-tight uppercase group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">
                   Zero-Hardware Kitchen OS: How I Replaced a $2,000 POS System With a Next.js PWA
-                </h3>
+                </h2>
                 
                 <p className="text-sm text-slate-500 dark:text-slate-400 mb-6 leading-relaxed max-w-2xl font-medium">
                   A deep dive into building a real-time, browser-native restaurant OS. Replaced proprietary tablets with voice-activated alerts and a Supabase real-time sync engine, saving $2,000 in upfront hardware costs and 3% commission on every transaction.
@@ -533,7 +543,7 @@ export default async function Home() {
                 title: "Headless CMS Infrastructure", icon: Globe,
                 desc: <>The high-performance Next.js foundation that powers your revenue engine with sub-second load times and robust RAG latency validated in our <Link href="/blog/pinecone-vs-qdrant-vultr-benchmark/" className="text-blue-600 dark:text-blue-400 font-bold hover:underline">Pinecone vs Qdrant benchmark on Vultr</Link>.</>,
                 bg: "bg-blue-500/10", border: "border-blue-500/20", text: "text-blue-500 dark:text-blue-400",
-                link: "/services/headless-architecture/"
+                link: "/services/"
               }
             ].map((service, i) => (
               <article key={i} style={{ animationDelay: `${i * 150}ms` }} className={`animate-in fade-in slide-in-from-bottom-8 duration-700 fill-mode-both rounded-[2rem] bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 p-6 hover:-translate-y-2 hover:shadow-xl transition-all duration-300 flex flex-col group`}>

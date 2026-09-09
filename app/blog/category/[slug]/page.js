@@ -36,7 +36,7 @@ const CATEGORY_MAP = {
     },
     'n8n-automation': {
         name: 'n8n Automation',
-        title: 'n8n Automation — Technical Guides & Blueprints | whoisalfaz',
+        title: 'n8n Automation Guides | whoisalfaz',
         description: 'Definitive technical guides for building self-hosted, scalable, and enterprise-ready workflow automations using n8n and vector DBs.'
     },
     'revops-architecture': {
@@ -61,8 +61,8 @@ export async function generateMetadata({ params }) {
     const category = await getSanityCategoryBySlug(slug);
     const custom = CATEGORY_MAP[slug];
 
-    const name = custom?.name || category?.name || slug.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
-    const title = custom?.title || `${name} — Technical Guides & Blueprints | whoisalfaz`;
+    const name = custom?.name || category?.title || category?.name || slug.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+    const title = custom?.title || `${name} Guides | whoisalfaz`;
     const description = custom?.description || (category?.description
         ? `${category.description.slice(0, 155).trim()}...`
         : `Read all articles about ${name}. Technical tutorials, case studies, and architectural blueprints by Alfaz Mahmud Rizve.`);
@@ -234,9 +234,9 @@ export default async function CategoryPage({ params }) {
                                                 </div>
                                             </div>
                                             <div className="p-6">
-                                                <h3 className="text-slate-900 dark:text-white font-bold text-lg mb-3 group-hover:text-teal-600 dark:group-hover:text-blue-400 transition-colors leading-snug">
+                                                <h2 className="text-slate-900 dark:text-white font-bold text-lg mb-3 group-hover:text-teal-600 dark:group-hover:text-blue-400 transition-colors leading-snug">
                                                     {post.title}
-                                                </h3>
+                                                </h2>
                                                 <p className="text-slate-500 dark:text-slate-400 text-xs line-clamp-3 leading-relaxed mb-4">{post.description}</p>
                                                 <span className="text-teal-600 dark:text-blue-500 text-xs font-bold uppercase tracking-wider flex items-center gap-1 group-hover:gap-2 transition-all">
                                                     Read Article <ArrowRight size={12} />
@@ -249,7 +249,7 @@ export default async function CategoryPage({ params }) {
                         ) : (
                             <div className="text-center py-20 bg-slate-100 dark:bg-white/5 rounded-2xl border border-slate-200 dark:border-white/10">
                                 <BookOpen size={48} className="mx-auto text-slate-300 dark:text-slate-600 mb-4" />
-                                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2 transition-colors duration-300">No posts found</h3>
+                                <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-2 transition-colors duration-300">No posts found</h2>
                                 <p className="text-slate-500 dark:text-slate-400">We couldn&apos;t find any articles in this category.</p>
                                 <Link href="/blog/" className="inline-block mt-6 px-6 py-2 bg-teal-600 dark:bg-blue-600 text-white rounded-full font-bold text-sm hover:bg-teal-500 dark:hover:bg-blue-500 transition-colors">
                                     Return to Blog
@@ -291,14 +291,14 @@ export default async function CategoryPage({ params }) {
 
                     {/* RECENT POSTS */}
                     <div>
-                        <h4 className="text-xl font-bold text-slate-900 dark:text-white mb-6 transition-colors duration-300">Recent Posts</h4>
+                        <div className="text-xl font-bold text-slate-900 dark:text-white mb-6 transition-colors duration-300">Recent Posts</div>
                         <ul className="space-y-4">
                             {recentPosts?.map(post => (
                                 <li key={post.slug.current}>
                                     <Link href={`/blog/${post.slug.current}/`} className="group block">
-                                        <h5 className="text-slate-600 dark:text-slate-300 text-sm font-medium group-hover:text-teal-600 dark:group-hover:text-blue-400 transition-colors line-clamp-2 mb-1">
+                                        <div className="text-slate-600 dark:text-slate-300 text-sm font-medium group-hover:text-teal-600 dark:group-hover:text-blue-400 transition-colors line-clamp-2 mb-1">
                                             {post.title}
-                                        </h5>
+                                        </div>
                                         <span className="text-xs text-slate-400 dark:text-slate-600 block">{new Date(post.date).toLocaleDateString()}</span>
                                     </Link>
                                 </li>
@@ -308,7 +308,7 @@ export default async function CategoryPage({ params }) {
 
                     {/* CATEGORIES */}
                     <div>
-                        <h4 className="text-xl font-bold text-slate-900 dark:text-white mb-6 transition-colors duration-300">Categories</h4>
+                        <div className="text-xl font-bold text-slate-900 dark:text-white mb-6 transition-colors duration-300">Categories</div>
                         <ul className="space-y-2">
                             {allCategories?.map(cat => (
                                 <li key={cat.slug.current}>

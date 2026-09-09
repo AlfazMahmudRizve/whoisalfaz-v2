@@ -25,7 +25,7 @@ export default function Footer() {
                         <h3 className="text-slate-900 dark:text-white font-bold mb-4 transition-colors duration-300">Solutions</h3>
                         <ul className="space-y-2 text-sm text-slate-500 dark:text-slate-400">
                             <li><Link href="/services/custom-full-stack/" className="hover:text-teal-600 dark:hover:text-blue-400 transition-colors">Custom Full-Stack Applications</Link></li>
-                            <li><Link href="/services/headless-architecture/" className="hover:text-teal-600 dark:hover:text-blue-400 transition-colors">Headless CMS Infrastructure</Link></li>
+                            <li><Link href="/services/" className="hover:text-teal-600 dark:hover:text-blue-400 transition-colors">Headless CMS Infrastructure</Link></li>
                             <li><Link href="/services/n8n-automation/" className="hover:text-teal-600 dark:hover:text-blue-400 transition-colors">Custom Workflow Automation</Link></li>
                             <li><Link href="/services/seo-organic-growth/" className="hover:text-teal-600 dark:hover:text-blue-400 transition-colors">SEO &amp; Organic Growth</Link></li>
                             <li><Link href="/store/" className="hover:text-teal-600 dark:hover:text-blue-400 transition-colors">Vault (Turnkey &amp; Blueprints)</Link></li>

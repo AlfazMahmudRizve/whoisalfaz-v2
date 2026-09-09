@@ -176,7 +176,7 @@ export const VAULT_WORKFLOWS: VaultWorkflow[] = [
     price: 49,
     purchaseUrl: "https://whop.com/checkout/plan_RCBFP8rZBFkPP",
     category: "outreach",
-    image: "outstanding-ideas-for-b2b-lead-generation-featured.webp",
+    image: "build-personal-ai-assistant-featured.webp",
     description: "Autonomous SDR engine with OpenAI sentiment analysis to automatically classify prospect replies (Positive, Objection, Not Interested) and route accordingly.",
     integrations: ["n8n", "OpenAI", "Brevo CRM", "Slack"],
     nodeCount: 17,

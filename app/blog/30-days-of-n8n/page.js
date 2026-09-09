@@ -5,13 +5,13 @@ import { ArrowLeft, Clock, ArrowRight, PlayCircle } from 'lucide-react';
 
 export const metadata = {
   title: '30 Days of n8n & Automation Series | whoisalfaz',
-  description: 'A comprehensive 30-day architectural blueprint for mastering n8n, self-hosted automation, and enterprise RevOps. Complete guide from bare-metal servers to AI agents.',
+  description: 'A 30-day architectural blueprint for mastering n8n, self-hosted automation, and enterprise RevOps. Complete guide from bare-metal servers to AI agents.',
   alternates: {
     canonical: 'https://whoisalfaz.me/blog/30-days-of-n8n',
   },
   openGraph: {
     title: '30 Days of n8n & Automation Series | Alfaz Mahmud Rizve',
-    description: 'A comprehensive 30-day architectural blueprint for mastering n8n, automation, and enterprise RevOps. Complete guide from bare-metal servers to AI agents.',
+    description: 'A 30-day architectural blueprint for mastering n8n, self-hosted automation, and enterprise RevOps. Complete guide from bare-metal servers to AI agents.',
     url: 'https://whoisalfaz.me/blog/30-days-of-n8n',
     type: 'website',
     siteName: 'whoisalfaz',
@@ -27,7 +27,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: '30 Days of n8n & Automation Series | whoisalfaz',
-    description: 'A comprehensive 30-day architectural blueprint for mastering n8n, self-hosted automation, and enterprise RevOps. Complete guide from bare-metal servers to AI agents.',
+    description: 'A 30-day architectural blueprint for mastering n8n, self-hosted automation, and enterprise RevOps. Complete guide from bare-metal servers to AI agents.',
     images: ['https://whoisalfaz.me/featured-image.png'],
   },
 };

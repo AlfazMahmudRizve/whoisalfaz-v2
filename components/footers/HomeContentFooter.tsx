@@ -35,7 +35,7 @@ const techStack: TechStackItem[] = [
     bg: 'bg-white/5',
     border: 'border-white/10',
     desc: 'React framework for server-rendered, SEO-optimized web applications with sub-second load times.',
-    link: '/services/headless-architecture/',
+    link: '/services/',
   },
   {
     name: 'Custom Apps',

@@ -7,14 +7,14 @@ import Footer from "../components/Footer";
 export const metadata = {
   metadataBase: new URL('https://whoisalfaz.me'),
   title: "Alfaz Mahmud Rizve | GTM & RevOps Architect",
-  description: "I engineer autonomous revenue engines — bridging SEO & Organic Growth, high-speed Next.js web applications, and self-healing n8n RevOps pipelines for scaling brands and agencies.",
+  description: "I engineer autonomous revenue engines — bridging SEO, high-speed Next.js web applications, and self-healing n8n RevOps pipelines for scaling brands.",
   authors: [{ name: 'Alfaz Mahmud Rizve', url: 'https://whoisalfaz.me' }],
   alternates: {
     canonical: '/',
   },
   openGraph: {
     title: "Alfaz Mahmud Rizve | GTM & RevOps Architect",
-    description: "I engineer autonomous revenue engines — bridging SEO & Organic Growth, high-speed Next.js web applications, and self-healing n8n RevOps pipelines for scaling brands and agencies.",
+    description: "I engineer autonomous revenue engines — bridging SEO, high-speed Next.js web applications, and self-healing n8n RevOps pipelines for scaling brands.",
     url: 'https://whoisalfaz.me',
     siteName: 'Alfaz Mahmud Rizve',
     locale: 'en_US',
@@ -31,7 +31,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Alfaz Mahmud Rizve | GTM & RevOps Architect',
-    description: 'I engineer autonomous revenue engines — bridging SEO & Organic Growth, high-speed Next.js web applications, and self-healing n8n RevOps pipelines for scaling brands and agencies.',
+    description: "I engineer autonomous revenue engines — bridging SEO, high-speed Next.js web applications, and self-healing n8n RevOps pipelines for scaling brands.",
     creator: '@whois_alfaz',
     images: ['/featured-image.png'],
   },

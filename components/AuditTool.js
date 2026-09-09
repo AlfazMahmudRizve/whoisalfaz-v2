@@ -657,7 +657,7 @@ export default function AuditTool() {
                 recommendations.push({
                   icon: Gauge,
                   text: 'Your performance needs work — headless architecture delivers sub-second loads',
-                  href: '/services/headless-architecture/',
+                  href: '/services/',
                   color: 'text-teal-500 dark:text-teal-400',
                   bg: 'bg-teal-500/10',
                   border: 'border-teal-500/20',

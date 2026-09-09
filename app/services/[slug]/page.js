@@ -34,7 +34,6 @@ export const generateMetadata = async ({ params }) => {
 // Service-to-case-study mapping
 const serviceCaseStudyMap = {
     'n8n-automation': ['case-study-cashops-financial-dashboard', 'case-study-careerops-ai-resume-builder'],
-    'headless-architecture': ['case-study-cashops-financial-dashboard', 'case-study-urban-cafe-foodtech-platform'],
     'seo-organic-growth': ['case-study-whoisalfaz-seo-indexing-engine'],
     'technical-seo': ['case-study-whoisalfaz-seo-indexing-engine'],
     'custom-full-stack': ['case-study-cashops-financial-dashboard', 'case-study-urban-cafe-foodtech-platform', 'case-study-veloryc-premium-ecommerce'],

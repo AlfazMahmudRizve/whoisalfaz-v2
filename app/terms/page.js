@@ -3,13 +3,13 @@ import { ScrollText, Mail, FileText, Scale, AlertTriangle, ShieldCheck, Clock, C
 
 export const metadata = {
     title: "Terms of Service & Consulting SLA | whoisalfaz",
-    description: "Legal Terms of Service and RevOps consulting Service Level Agreement (SLA) for whoisalfaz.me, covering intellectual property, SLAs, payment terms, and liability limits.",
+    description: "Terms of Service and RevOps consulting SLAs for whoisalfaz.me. Review project scope, IP rights, payment terms, and confidentiality standards.",
     alternates: {
         canonical: 'https://whoisalfaz.me/terms',
     },
     openGraph: {
         title: "Terms of Service & Consulting SLA | Alfaz Mahmud Rizve",
-        description: "Legal Terms of Service and RevOps consulting Service Level Agreement (SLA) for whoisalfaz.me, covering intellectual property, SLAs, payment terms, and liability limits.",
+        description: "Terms of Service and RevOps consulting SLAs for whoisalfaz.me. Review project scope, IP rights, payment terms, and confidentiality standards.",
         url: 'https://whoisalfaz.me/terms',
         type: 'website',
         siteName: 'whoisalfaz',
@@ -25,7 +25,7 @@ export const metadata = {
     twitter: {
         card: 'summary_large_image',
         title: "Terms of Service & Consulting SLA | whoisalfaz",
-        description: "Legal Terms of Service and RevOps consulting Service Level Agreement (SLA) for whoisalfaz.me, covering intellectual property, SLAs, payment terms, and liability limits.",
+        description: "Terms of Service and RevOps consulting SLAs for whoisalfaz.me. Review project scope, IP rights, payment terms, and confidentiality standards.",
         images: ['https://whoisalfaz.me/featured-image.png'],
     }
 };
@@ -97,9 +97,9 @@ export default function TermsPage() {
                 {/* LEFT: SIDEBAR NAV (Sticky) */}
                 <aside className="hidden lg:block h-fit sticky top-32 space-y-8">
                     <div className="p-6 bg-white/5 border border-white/10 rounded-2xl backdrop-blur-md">
-                        <h4 className="text-xs font-bold text-slate-500 uppercase tracking-widest mb-6 flex items-center gap-2">
+                        <div className="text-xs font-bold text-slate-500 uppercase tracking-widest mb-6 flex items-center gap-2">
                             <ScrollText size={14} /> Table of Contents
-                        </h4>
+                        </div>
                         <nav className="space-y-1">
                             {TOC.map((item) => (
                                 <a
@@ -114,7 +114,7 @@ export default function TermsPage() {
                     </div>
 
                     <div className="p-6 rounded-2xl bg-gradient-to-br from-blue-900/20 to-purple-900/20 border border-blue-500/20">
-                        <h4 className="text-white font-bold mb-2">Legal Inquiries?</h4>
+                        <div className="text-white font-bold mb-2">Legal Inquiries?</div>
                         <p className="text-slate-400 text-xs mb-4">
                             For specific questions regarding consulting SLAs, retainer terms, or custom agreements, contact us directly.
                         </p>
@@ -148,7 +148,7 @@ export default function TermsPage() {
 
                     {/* Agreement Blurb */}
                     <div className="bg-white/5 p-8 rounded-2xl border border-white/10 mb-12">
-                        <h3 className="text-white mt-0 mb-4 uppercase tracking-wider text-sm font-black">Agreement to Terms</h3>
+                        <h2 className="text-white mt-0 mb-4 uppercase tracking-wider text-sm font-black">Agreement to Terms</h2>
                         <p className="mt-0">
                             These Legal Terms constitute a legally binding agreement between you, whether personally or on behalf of an entity (&quot;Client,&quot; &quot;User,&quot; or &quot;you&quot;), and <strong>whoisalfaz.me</strong> (&quot;Company,&quot; &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;), operated by Alfaz Mahmud Rizve in Chittagong, Bangladesh.
                         </p>
@@ -168,7 +168,7 @@ export default function TermsPage() {
                     <ul>
                         <li><Link href="/services/growth-consulting/">Strategy &amp; Growth Consulting</Link>: Tech stack audits, SOP development, and revenue leak analyses billed hourly ($200/hr) or via fixed-scope retainer.</li>
                         <li><Link href="/services/n8n-automation/">Custom Workflow Automation</Link>: Engineering, deployment, and optimization of autonomous n8n workflows, CRM data syncs, and AI lead qualification agents.</li>
-                        <li><Link href="/services/headless-architecture/">Headless CMS Infrastructure</Link>: Next.js frontend development decoupled from traditional CMS backends for sub-second page performance.</li>
+                        <li><Link href="/services/">Headless CMS Infrastructure</Link>: Next.js frontend development decoupled from traditional CMS backends for sub-second page performance.</li>
                         <li><Link href="/services/seo-organic-growth/">SEO &amp; Organic Growth</Link>: Comprehensive topical authority mapping, programmatic entity clusters, code-level audits, and zero-touch automated search indexing engines.</li>
                     </ul>
                     <p>
@@ -214,7 +214,7 @@ export default function TermsPage() {
                         <div className="flex items-start gap-4">
                             <CreditCard className="text-purple-400 shrink-0 mt-1" size={20} />
                             <div>
-                                <h4 className="text-white font-bold text-base mb-1">Hourly &amp; Project Rates</h4>
+                                <div className="text-white font-bold text-base mb-1">Hourly &amp; Project Rates</div>
                                 <p className="text-slate-400 text-sm mb-0">
                                     Ad-hoc strategy sessions and un-scoped consulting are billed at <strong>$200 USD per hour</strong>. Fixed-scope projects (e.g., n8n workflow builds starting at $750, Headless CMS builds at $1,500) require an upfront deposit.
                                 </p>
@@ -223,7 +223,7 @@ export default function TermsPage() {
                         <div className="border-t border-white/10 pt-4 flex items-start gap-4">
                             <Lock className="text-blue-400 shrink-0 mt-1" size={20} />
                             <div>
-                                <h4 className="text-white font-bold text-base mb-1">Deposit &amp; Invoicing Terms</h4>
+                                <div className="text-white font-bold text-base mb-1">Deposit &amp; Invoicing Terms</div>
                                 <p className="text-slate-400 text-sm mb-0">
                                     A <strong>50% non-refundable deposit</strong> is required prior to project kickoff. Final payment (50%) is due upon milestone completion or workflow deployment. Invoices are issued with NET 15 payment terms via Stripe or bank transfer.
                                 </p>
@@ -285,7 +285,7 @@ export default function TermsPage() {
 
                     <h2 id="liability" className="scroll-mt-32">8. LIMITATION OF LIABILITY</h2>
                     <div className="p-6 bg-white/5 border border-white/10 rounded-xl not-prose my-6">
-                        <h4 className="text-white font-bold text-base mb-2">AGGREGATE FINANCIAL LIABILITY CAP</h4>
+                        <div className="text-white font-bold text-base mb-2">AGGREGATE FINANCIAL LIABILITY CAP</div>
                         <p className="text-slate-300 text-sm mb-0 leading-relaxed">
                             IN NO EVENT SHALL WHOISALFAZ.ME, ALFAZ MAHMUD RIZVE, OR ITS SUPPLIERS BE LIABLE FOR ANY INDIRECT, INCIDENTAL, CONSEQUENTIAL, SPECIAL, OR PUNITIVE DAMAGES (INCLUDING LOSS OF PROFITS, LOST REVENUE, DATA CORRUPTION, OR BUSINESS INTERRUPTION). OUR TOTAL CUMULATIVE LIABILITY ARISING OUT OF ANY CLAIM RELATED TO THE SERVICES SHALL BE STRICTLY LIMITED TO THE TOTAL AMOUNT OF FEES PAID BY CLIENT TO COMPANY IN THE <strong>THIRTY (30) CALENDAR DAYS</strong> IMMEDIATELY PRECEDING THE EVENT GIVING RISE TO LIABILITY.
                         </p>

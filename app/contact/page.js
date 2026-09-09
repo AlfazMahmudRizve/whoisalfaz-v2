@@ -5,20 +5,20 @@ import DefaultContentFooter from '../../components/footers/DefaultContentFooter'
 
 export const metadata = {
     title: "Contact Alfaz | RevOps & Automation Consulting",
-    description: "Ready to automate your agency scale? Book a strategy call or get a technical SEO audit from Alfaz Mahmud Rizve. Review response SLAs and engagement prerequisites.",
+    description: "Ready to automate agency scale? Book a strategy call or technical SEO audit with Alfaz Mahmud Rizve. Review response SLAs and prerequisites.",
     alternates: {
         canonical: 'https://whoisalfaz.me/contact',
     },
     openGraph: {
         title: "Contact Alfaz | RevOps & Automation Consulting",
-        description: "Ready to automate your agency scale? Book a strategy call or get a technical SEO audit from Alfaz Mahmud Rizve.",
+        description: "Ready to automate agency scale? Book a strategy call or technical SEO audit with Alfaz Mahmud Rizve. Review response SLAs and prerequisites.",
         url: 'https://whoisalfaz.me/contact',
         type: 'website',
     },
     twitter: {
         card: 'summary_large_image',
         title: "Contact Alfaz | RevOps & Automation Consulting",
-        description: "Ready to automate your agency scale? Book a strategy call or get a technical SEO audit from Alfaz Mahmud Rizve.",
+        description: "Ready to automate agency scale? Book a strategy call or technical SEO audit with Alfaz Mahmud Rizve. Review response SLAs and prerequisites.",
     }
 };
 
@@ -65,7 +65,7 @@ export default function ContactPage() {
                                 <Mail size={24} />
                             </div>
                             <div>
-                                <h3 className="text-slate-900 dark:text-white font-black text-xl tracking-tight uppercase transition-colors duration-300">Direct Protocol</h3>
+                                <h2 className="text-slate-900 dark:text-white font-black text-xl tracking-tight uppercase transition-colors duration-300">Direct Protocol</h2>
                                 <p className="text-slate-500 dark:text-slate-400 text-sm mb-2 font-medium">Guaranteed reply within 24 business hours.</p>
                                 <a href="mailto:contact@whoisalfaz.me" className="text-teal-600 dark:text-blue-400 font-bold hover:underline transition-colors duration-300">contact@whoisalfaz.me</a>
                             </div>
@@ -76,7 +76,7 @@ export default function ContactPage() {
                                 <MessageSquare size={24} />
                             </div>
                             <div>
-                                <h3 className="text-slate-900 dark:text-white font-black text-xl tracking-tight uppercase transition-colors duration-300">Consulting Calls</h3>
+                                <h2 className="text-slate-900 dark:text-white font-black text-xl tracking-tight uppercase transition-colors duration-300">Consulting Calls</h2>
                                 <p className="text-slate-500 dark:text-slate-400 text-sm mb-2 font-medium">Book a 30-minute deep-dive architecture session.</p>
                                 <Link href="#contact-form" className="text-purple-600 dark:text-purple-400 font-bold hover:underline transition-colors duration-300">Book availability &rarr;</Link>
                             </div>
@@ -113,7 +113,7 @@ export default function ContactPage() {
                         <div className="w-10 h-10 rounded-xl bg-teal-500/10 text-teal-600 dark:text-teal-400 flex items-center justify-center">
                             <CheckCircle2 size={20} />
                         </div>
-                        <h3 className="text-xl font-black text-slate-900 dark:text-white uppercase tracking-tight">Engagement Prerequisites</h3>
+                        <h2 className="text-xl font-black text-slate-900 dark:text-white uppercase tracking-tight">Engagement Prerequisites</h2>
                     </div>
                     <p className="text-slate-500 dark:text-slate-400 text-sm mb-6 leading-relaxed">
                         To ensure high execution speed and maximum return on your strategy call, please ensure your team has prepared:
@@ -139,7 +139,7 @@ export default function ContactPage() {
                         <div className="w-10 h-10 rounded-xl bg-purple-500/10 text-purple-600 dark:text-purple-400 flex items-center justify-center">
                             <Clock size={20} />
                         </div>
-                        <h3 className="text-xl font-black text-slate-900 dark:text-white uppercase tracking-tight">Response SLAs & Standards</h3>
+                        <h2 className="text-xl font-black text-slate-900 dark:text-white uppercase tracking-tight">Response SLAs & Standards</h2>
                     </div>
                     <p className="text-slate-500 dark:text-slate-400 text-sm mb-6 leading-relaxed">
                         Operational transparency is built directly into our client communication guidelines:
