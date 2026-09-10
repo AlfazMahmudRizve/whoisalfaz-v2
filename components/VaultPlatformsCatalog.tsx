@@ -265,7 +265,7 @@ export default function VaultPlatformsCatalog() {
               <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-teal-400">
                 <Code2 size={20} />
               </div>
-              <h4 className="font-bold text-sm uppercase tracking-tight">1. Unrestricted Codebase</h4>
+              <h3 className="font-bold text-sm uppercase tracking-tight">1. Unrestricted Codebase</h3>
               <p className="text-xs text-slate-400 leading-relaxed">
                 Full Git repository transfer. Pure TypeScript, Next.js, or React 19 code with zero vendor lock-in.
               </p>
@@ -275,7 +275,7 @@ export default function VaultPlatformsCatalog() {
               <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-purple-400">
                 <Layers size={20} />
               </div>
-              <h4 className="font-bold text-sm uppercase tracking-tight">2. Schemas &amp; Migrations</h4>
+              <h3 className="font-bold text-sm uppercase tracking-tight">2. Schemas &amp; Migrations</h3>
               <p className="text-xs text-slate-400 leading-relaxed">
                 Complete PostgreSQL / Supabase schema migrations, row-level security (RLS), and database seed files.
               </p>
@@ -285,7 +285,7 @@ export default function VaultPlatformsCatalog() {
               <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-blue-400">
                 <Rocket size={20} />
               </div>
-              <h4 className="font-bold text-sm uppercase tracking-tight">3. White-Glove Setup</h4>
+              <h3 className="font-bold text-sm uppercase tracking-tight">3. White-Glove Setup</h3>
               <p className="text-xs text-slate-400 leading-relaxed">
                 We configure DNS, SSL certificates, environment secrets, and deploy to your Vercel or Cloudflare account.
               </p>
@@ -295,7 +295,7 @@ export default function VaultPlatformsCatalog() {
               <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-amber-400">
                 <ShieldCheck size={20} />
               </div>
-              <h4 className="font-bold text-sm uppercase tracking-tight">4. 30-Day Warranty</h4>
+              <h3 className="font-bold text-sm uppercase tracking-tight">4. 30-Day Warranty</h3>
               <p className="text-xs text-slate-400 leading-relaxed">
                 Direct 1-on-1 technical handover, setup walkthrough call, and 30 days of priority bugfix coverage.
               </p>

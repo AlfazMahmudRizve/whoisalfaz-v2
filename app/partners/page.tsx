@@ -62,7 +62,7 @@ export default function PartnersPage() {
                                 <div className="w-10 h-10 rounded-xl bg-teal-500/10 border border-teal-500/20 flex items-center justify-center">
                                     <Globe size={20} className="text-teal-400" />
                                 </div>
-                                <h3 className="text-white font-black uppercase tracking-tight">The Infrastructure</h3>
+                                <h2 className="text-white font-black uppercase tracking-tight">The Infrastructure</h2>
                             </div>
                             <p className="text-slate-400 leading-relaxed mb-6">
                                 A Next.js-powered technical hub strictly focused on workflow automation, system architecture, and RevOps engineering. Zero fluff. Pure technical execution.
@@ -85,7 +85,7 @@ export default function PartnersPage() {
                                 <div className="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center">
                                     <Link2 size={20} className="text-purple-400" />
                                 </div>
-                                <h3 className="text-white font-black uppercase tracking-tight text-sm">Contextual Link Integration</h3>
+                                <h2 className="text-white font-black uppercase tracking-tight text-sm">Contextual Link Integration</h2>
                             </div>
                             <p className="text-slate-400 text-sm leading-relaxed">
                                 Seamless, highly relevant backlink placements within aging, high-authority technical content. Permanently embedded into the server architecture. 24-hour turnaround.
@@ -101,7 +101,7 @@ export default function PartnersPage() {
                                 <div className="w-10 h-10 rounded-xl bg-red-500/10 border border-red-500/20 flex items-center justify-center">
                                     <ShieldAlert size={20} className="text-red-400" />
                                 </div>
-                                <h3 className="text-white font-black uppercase tracking-tight text-sm">The Strict Filter</h3>
+                                <h2 className="text-white font-black uppercase tracking-tight text-sm">The Strict Filter</h2>
                             </div>
                             <p className="text-slate-400 text-sm leading-relaxed">
                                 To protect domain authority, I operate a zero-tolerance policy for low-tier niches. No Casino. No Crypto. No CBD. No Generic AI Wrappers. <span className="text-white font-bold">B2B Tech and SaaS only.</span>
@@ -117,7 +117,7 @@ export default function PartnersPage() {
                                 <div className="w-10 h-10 rounded-xl bg-teal-500/10 border border-teal-500/20 flex items-center justify-center">
                                     <FileCode size={20} className="text-teal-400" />
                                 </div>
-                                <h3 className="text-white font-black uppercase tracking-tight">Sponsored API & Tool Tear-Downs</h3>
+                                <h2 className="text-white font-black uppercase tracking-tight">Sponsored API & Tool Tear-Downs</h2>
                                 <span className="md:hidden px-3 py-1 bg-teal-500/10 border border-teal-500/20 rounded-full text-[10px] font-black text-teal-400 uppercase tracking-wider">$300 — $500</span>
                             </div>
                             <p className="text-slate-400 leading-relaxed">
@@ -239,19 +239,19 @@ export default function PartnersPage() {
                             </div>
                             <div className="md:w-1/2 grid grid-cols-2 gap-8">
                                 <div>
-                                    <h4 className="font-bold border-b-2 border-black/10 pb-2 mb-4 uppercase text-xs">Automation</h4>
+                                    <h3 className="font-bold border-b-2 border-black/10 pb-2 mb-4 uppercase text-xs">Automation</h3>
                                     <ul className="text-sm font-medium space-y-1"><li>n8n.io</li><li>Make.com</li><li>Python/Node</li></ul>
                                 </div>
                                 <div>
-                                    <h4 className="font-bold border-b-2 border-black/10 pb-2 mb-4 uppercase text-xs">Data/CRM</h4>
+                                    <h3 className="font-bold border-b-2 border-black/10 pb-2 mb-4 uppercase text-xs">Data/CRM</h3>
                                     <ul className="text-sm font-medium space-y-1"><li>HubSpot</li><li>Supabase</li><li>Pipedrive</li></ul>
                                 </div>
                                 <div>
-                                    <h4 className="font-bold border-b-2 border-black/10 pb-2 mb-4 uppercase text-xs">Headless</h4>
+                                    <h3 className="font-bold border-b-2 border-black/10 pb-2 mb-4 uppercase text-xs">Headless</h3>
                                     <ul className="text-sm font-medium space-y-1"><li>Strapi</li><li>Contentful</li><li>Sanity</li></ul>
                                 </div>
                                 <div>
-                                    <h4 className="font-bold border-b-2 border-black/10 pb-2 mb-4 uppercase text-xs">Infra</h4>
+                                    <h3 className="font-bold border-b-2 border-black/10 pb-2 mb-4 uppercase text-xs">Infra</h3>
                                     <ul className="text-sm font-medium space-y-1"><li>Vercel</li><li>AWS</li><li>DigitalOcean</li></ul>
                                 </div>
                             </div>

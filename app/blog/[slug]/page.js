@@ -68,21 +68,30 @@ export async function generateMetadata({ params }) {
     return (lastSpace > 0 ? sliced.slice(0, lastSpace) : sliced).trim();
   };
 
+  const cleanTruncateDesc = (str, maxLen = 155) => {
+    if (!str || str.length <= maxLen) return str;
+    const sliced = str.slice(0, maxLen);
+    const lastSpace = sliced.lastIndexOf(' ');
+    const trimmed = (lastSpace > 0 ? sliced.slice(0, lastSpace) : sliced).trim();
+    return trimmed.endsWith('.') ? trimmed : `${trimmed}.`;
+  };
+
   const finalTitle = cleanTruncate(rawTitle, 60);
-  const seoDesc = post.seoDescription || post.description;
+  const rawDesc = post.seoDescription || post.description || '';
+  const finalDesc = cleanTruncateDesc(rawDesc, 155);
   const canonicalUrl = CANONICAL_OVERRIDES[slug] || `https://whoisalfaz.me/blog/${slug}/`;
 
   const ogImage = post.image || '/featured-image.png';
 
   return {
     title: finalTitle,
-    description: seoDesc,
+    description: finalDesc,
     alternates: {
       canonical: canonicalUrl,
     },
     openGraph: {
       title: finalTitle,
-      description: seoDesc,
+      description: finalDesc,
       url: canonicalUrl,
       type: 'article',
       publishedTime: post.date ? new Date(post.date).toISOString() : undefined,
@@ -99,7 +108,7 @@ export async function generateMetadata({ params }) {
       card: 'summary_large_image',
       creator: '@whoisalfaz',
       title: finalTitle,
-      description: seoDesc,
+      description: finalDesc,
       images: [ogImage],
     },
   };

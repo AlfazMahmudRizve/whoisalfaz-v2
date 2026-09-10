@@ -210,27 +210,27 @@ export default function AuditBadgeSection() {
         {/* Benefits for Devs & Agencies */}
         <div className="mt-10 pt-8 border-t border-slate-200 dark:border-white/10 grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="p-4 rounded-2xl bg-slate-50 dark:bg-white/[0.02] border border-slate-200/60 dark:border-white/5">
-            <h4 className="text-sm font-bold text-slate-900 dark:text-white flex items-center gap-2 mb-1.5">
+            <h3 className="text-sm font-bold text-slate-900 dark:text-white flex items-center gap-2 mb-1.5">
               <span className="text-teal-500 font-black">01.</span> GitHub READMEs
-            </h4>
+            </h3>
             <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
               Showcase top-tier technical performance, DNS latency, and SEO compliance on open source repositories.
             </p>
           </div>
 
           <div className="p-4 rounded-2xl bg-slate-50 dark:bg-white/[0.02] border border-slate-200/60 dark:border-white/5">
-            <h4 className="text-sm font-bold text-slate-900 dark:text-white flex items-center gap-2 mb-1.5">
+            <h3 className="text-sm font-bold text-slate-900 dark:text-white flex items-center gap-2 mb-1.5">
               <span className="text-teal-500 font-black">02.</span> Website Footers
-            </h4>
+            </h3>
             <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
               Provide third-party audit verification for users, boosting client confidence and conversion rates.
             </p>
           </div>
 
           <div className="p-4 rounded-2xl bg-slate-50 dark:bg-white/[0.02] border border-slate-200/60 dark:border-white/5">
-            <h4 className="text-sm font-bold text-slate-900 dark:text-white flex items-center gap-2 mb-1.5">
+            <h3 className="text-sm font-bold text-slate-900 dark:text-white flex items-center gap-2 mb-1.5">
               <span className="text-teal-500 font-black">03.</span> Agency Client Handoffs
-            </h4>
+            </h3>
             <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
               Include proof of quality assurance and SSL security verification in your final client deliverables.
             </p>

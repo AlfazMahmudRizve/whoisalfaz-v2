@@ -182,7 +182,7 @@ const AffiliateCard = ({ data, id, index = 0 }) => (
                 <span className="inline-block px-2.5 py-1 rounded bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-white/5 text-slate-500 dark:text-slate-400 text-[10px] font-bold uppercase tracking-wider mb-4">
                     {data.badge}
                 </span>
-                <h4 className="text-lg font-bold text-slate-900 dark:text-white mb-2">{data.title}</h4>
+                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">{data.title}</h3>
                 <p className="text-sm text-slate-600 dark:text-slate-400 line-clamp-2">{data.description}</p>
             </div>
         </div>
@@ -239,7 +239,7 @@ export default function DeployingTheStacks({ affiliates = [] }) {
             {/* Secondary Section */}
             {secondaryKeys.length > 0 && (
                 <div className="relative z-10">
-                    <h4 className="text-2xl font-bold text-slate-800 dark:text-slate-200 mb-8 tracking-tight border-b border-slate-200 dark:border-white/5 pb-4">Complementary RevOps Toolchain</h4>
+                    <h3 className="text-2xl font-bold text-slate-800 dark:text-slate-200 mb-8 tracking-tight border-b border-slate-200 dark:border-white/5 pb-4">Complementary RevOps Toolchain</h3>
                     <div className="grid sm:grid-cols-2 gap-6">
                         {secondaryKeys.map((key, index) => <AffiliateCard key={key} id={key} data={AFFILIATE_DATA[key]} index={index} />)}
                     </div>

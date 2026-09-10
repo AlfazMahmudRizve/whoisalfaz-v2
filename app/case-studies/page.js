@@ -131,7 +131,7 @@ export default async function CaseStudiesPage() {
                     {/* BLOG ARCHIVE */}
                     <section className="animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-150 fill-mode-both">
                         <div className="text-center md:text-left mb-12 flex items-center justify-center md:justify-start gap-4 border-b border-slate-200 dark:border-white/10 pb-4">
-                            <h3 className="text-2xl font-black text-slate-900 dark:text-white inline-block uppercase tracking-tight">All Case Studies</h3>
+                            <h2 className="text-2xl font-black text-slate-900 dark:text-white inline-block uppercase tracking-tight">All Case Studies</h2>
                             <span className="text-[10px] font-black uppercase text-slate-500 dark:text-slate-400 bg-slate-200 dark:bg-white/10 px-3 py-1 rounded-md">{posts?.length || 0}</span>
                         </div>
 
@@ -210,7 +210,7 @@ export default async function CaseStudiesPage() {
 
                     <div className="bg-gradient-to-b from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/10 border border-blue-200/50 dark:border-blue-500/20 rounded-[2.5rem] p-8 relative overflow-hidden shadow-xl dark:shadow-none">
                         <div className="relative z-10">
-                            <h4 className="text-2xl font-black text-slate-900 dark:text-white mb-4 uppercase tracking-tight">Build This Stack</h4>
+                            <h3 className="text-2xl font-black text-slate-900 dark:text-white mb-4 uppercase tracking-tight">Build This Stack</h3>
                             <p className="text-slate-600 dark:text-slate-400 text-[15px] font-medium mb-6 leading-relaxed">
                                 Want to deploy one of these exact architectures? Explore our <Link href="/services/growth-consulting/" className="text-purple-600 dark:text-purple-400 font-bold underline hover:text-purple-500 transition-colors">Strategy &amp; Growth Consulting</Link> or book a discovery call.
                             </p>

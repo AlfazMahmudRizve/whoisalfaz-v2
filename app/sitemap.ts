@@ -70,15 +70,39 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     } catch (err) {
         console.error('[sitemap] Failed to fetch blog posts from Sanity:', err);
     }
-    const blogRoutes = posts.map((post) => {
-        const isDiamond = DIAMOND_POST_SLUGS.has(post.slug?.current);
-        return {
-            url: `${baseUrl}/blog/${post.slug.current}/`,
+    const seenBlogUrls = new Set<string>();
+    const blogRoutes: MetadataRoute.Sitemap = [];
+
+    for (const post of posts) {
+        let slug = post.slug?.current;
+        if (!slug) continue;
+
+        // Exclude legacy slugs that redirect to /blog/
+        if (slug === 'outstanding-ideas-for-b2b-lead-generation' || slug === 'outstanding-ideas-for-b2b-lead-capture') {
+            continue;
+        }
+
+        // Map legacy slugs to active slugs
+        if (slug === 'outstanding-ideas-for-youtube-shorts') {
+            slug = 'automated-youtube-shorts-generator';
+        } else if (slug === 'outstanding-ideas-for-saas-mvps') {
+            slug = 'build-personal-ai-assistant';
+        }
+
+        const url = `${baseUrl}/blog/${slug}/`;
+        if (seenBlogUrls.has(url)) {
+            continue;
+        }
+        seenBlogUrls.add(url);
+
+        const isDiamond = DIAMOND_POST_SLUGS.has(slug);
+        blogRoutes.push({
+            url,
             lastModified: new Date(post.date || new Date().toISOString()),
             changeFrequency: 'weekly' as const,
             priority: isDiamond ? 1.0 : 0.7,
-        };
-    });
+        });
+    }
 
     // 4. Dynamic Blog Categories — fallback to [] if Sanity is unavailable
     let categories: SanityCategory[] = [];

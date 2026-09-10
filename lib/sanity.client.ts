@@ -9,6 +9,19 @@ export const client = createClient({
   perspective: 'published',
 })
 
+// Legacy 308 redirect slug normalizer to prevent internal redirect chains
+const LEGACY_SLUG_MAP: Record<string, string> = {
+  'outstanding-ideas-for-youtube-shorts': 'automated-youtube-shorts-generator',
+  'outstanding-ideas-for-saas-mvps': 'build-personal-ai-assistant',
+  'outstanding-ideas-for-b2b-lead-generation': 'cold-email-machine-apollo-aisdr-brevo',
+  'outstanding-ideas-for-b2b-lead-capture': 'manychat-whatsapp-b2b-lead-capture-agency',
+}
+
+export function normalizePostSlug(slug: string): string {
+  if (!slug) return slug
+  return LEGACY_SLUG_MAP[slug] || slug
+}
+
 export async function getSanityPosts() {
   const query = `*[_type == "post"] | order(date desc) {
     title,
@@ -18,7 +31,13 @@ export async function getSanityPosts() {
     "image": image.asset->url,
     "categories": categories[]->name
   }`
-  return client.fetch(query)
+  const posts = await client.fetch(query)
+  return (posts || []).map((post: any) => {
+    if (post?.slug?.current) {
+      post.slug.current = normalizePostSlug(post.slug.current)
+    }
+    return post
+  })
 }
 
 export async function getSanityPostBySlug(slug: string) {
@@ -56,7 +75,13 @@ export async function getSanityPostsByCategory(categorySlug: string) {
     "image": image.asset->url,
     "categories": categories[]->name
   }`
-  return client.fetch(query, { categorySlug })
+  const posts = await client.fetch(query, { categorySlug })
+  return (posts || []).map((post: any) => {
+    if (post?.slug?.current) {
+      post.slug.current = normalizePostSlug(post.slug.current)
+    }
+    return post
+  })
 }
 
 export async function getSanityCategoryBySlug(categorySlug: string) {
