@@ -108,3 +108,21 @@
 1. **Ad Creative Refresh Loop**: n8n workflow monitoring Meta CTR (<1.0%) -> auto-call AdCreative.ai API -> push 5 new variants to Meta Ads.
 2. **Active vs Static SOP Systems**: Link Trainual to n8n triggers so SOP tasks are automatically assigned in monday.com/Slack during deal stage transitions.
 3. **Autonomous AI RevOps Architecture**: Provide real API payloads for Emergent AI lead scoring and automated prospect research.
+
+---
+
+## 7. SearchApi.io Ambassador Program & Contract Review Checklist (October 2026 Cohort)
+
+- **Prospect**: SearchApi.io (Sam Gale, Growth Engineer)
+- **Agreed Rate**: **$450 USD** (Upgraded from baseline $250 due to full build scope)
+- **Deliverables**:
+  1. **Interactive Micro-Tool**: Live on `whoisalfaz.me/labs/serp-intel` with BYOK (Bring Your Own Key) architecture.
+  2. **Deep-Dive Technical Guide**: Production walkthrough published on `whoisalfaz.me`.
+  3. **Turnkey n8n Blueprint**: Open-source JSON automation template on GitHub.
+
+### 🚨 Immediate Actions When Contract Arrives (Before October):
+1. **Verify Rate**: Double-check the contract document explicitly states **$450 USD** (prevent template reversion to $250).
+2. **Affiliate Link Request (Rewardful)**:
+   - Remind Sam to hook up the tracked link to their **Rewardful affiliate program** (`data-rewardful='864ae8'`) for recurring revenue share on paid plan upgrades ($49–$499/mo).
+3. **Payment Setup**: Confirm payout rail (Payoneer US Checking/Routing ACH or Wise).
+4. **API Provisioning**: Confirm delivery of the 100k development API credits.
