@@ -192,14 +192,14 @@ export default async function BlogPage() {
 
                     {/* RECENT POSTS */}
                     <div className="bg-white dark:bg-transparent p-6 rounded-[2rem] border border-slate-200 dark:border-transparent shadow-sm dark:shadow-none">
-                        <h4 className="text-xl font-black text-slate-900 dark:text-white mb-6 uppercase tracking-tight">Recent Posts</h4>
+                        <div className="text-xl font-black text-slate-900 dark:text-white mb-6 uppercase tracking-tight">Recent Posts</div>
                         <StaggerContainer className="space-y-6">
                             {recentPosts?.map((post) => (
                                 <StaggerItem key={post.slug.current} className="block">
                                     <Link href={`/blog/${post.slug.current}/`} className="group block">
-                                        <h5 className="text-slate-800 dark:text-slate-300 text-[15px] font-bold group-hover:text-teal-600 dark:group-hover:text-blue-400 transition-colors line-clamp-2 mb-2 leading-snug">
+                                        <div className="text-slate-800 dark:text-slate-300 text-[15px] font-bold group-hover:text-teal-600 dark:group-hover:text-blue-400 transition-colors line-clamp-2 mb-2 leading-snug">
                                             {post.title}
-                                        </h5>
+                                        </div>
                                         <span className="text-[10px] uppercase font-black tracking-widest text-slate-400 dark:text-slate-600 block">{new Date(post.date).toLocaleDateString()}</span>
                                     </Link>
                                 </StaggerItem>
@@ -211,7 +211,7 @@ export default async function BlogPage() {
 
                     {/* ARCHIVES (Mock) */}
                     <div className="bg-white dark:bg-transparent p-6 rounded-[2rem] border border-slate-200 dark:border-transparent shadow-sm dark:shadow-none">
-                        <h4 className="text-xl font-black text-slate-900 dark:text-white mb-6 uppercase tracking-tight">Archives</h4>
+                        <div className="text-xl font-black text-slate-900 dark:text-white mb-6 uppercase tracking-tight">Archives</div>
                         <ul className="space-y-3 text-[15px] font-medium text-slate-500 dark:text-slate-400">
                             <li><Link href="#" className="hover:text-teal-600 dark:hover:text-blue-400 block py-1 transition-colors">January 2026</Link></li>
                             <li><Link href="#" className="hover:text-teal-600 dark:hover:text-blue-400 block py-1 transition-colors">December 2025</Link></li>
@@ -220,7 +220,7 @@ export default async function BlogPage() {
 
                     {/* CATEGORIES (Sidebar Duplicate) */}
                     <div className="bg-white dark:bg-transparent p-6 rounded-[2rem] border border-slate-200 dark:border-transparent shadow-sm dark:shadow-none">
-                        <h4 className="text-xl font-black text-slate-900 dark:text-white mb-6 uppercase tracking-tight">Categories</h4>
+                        <div className="text-xl font-black text-slate-900 dark:text-white mb-6 uppercase tracking-tight">Categories</div>
                         <ul className="space-y-3">
                             {categories?.map(cat => (
                                 <li key={cat.slug}>

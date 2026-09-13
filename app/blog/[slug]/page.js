@@ -520,9 +520,9 @@ export default async function Post({ params }) {
                       <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-teal-500/10 border border-teal-500/20 text-teal-600 dark:text-teal-400 text-[10px] font-bold uppercase tracking-wider mb-4">
                         Get the Blueprint
                       </span>
-                      <h3 className="text-2xl font-black text-slate-900 dark:text-white uppercase tracking-tight mb-2">
+                      <h2 className="text-2xl font-black text-slate-900 dark:text-white uppercase tracking-tight mb-2">
                         Deploy this Workflow
-                      </h3>
+                      </h2>
                       <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed max-w-xl">
                         Skip building from scratch. Download the production-ready n8n template JSON and start running it in 5 minutes.
                       </p>
