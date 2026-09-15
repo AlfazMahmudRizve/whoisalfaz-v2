@@ -13,12 +13,12 @@ export const metadata = {
     title: "Blog | AI Automation, Next.js & RevOps Insights",
     description: "Actionable engineering playbooks, n8n automation tutorials, and architectural insights for scaling SaaS founders and agencies.",
     alternates: {
-        canonical: 'https://whoisalfaz.me/blog',
+        canonical: 'https://whoisalfaz.me/blog/',
     },
     openGraph: {
         title: "Blog | AI Automation, Next.js & RevOps Insights",
         description: "Actionable engineering playbooks, n8n automation tutorials, and architectural insights for scaling SaaS founders and agencies.",
-        url: 'https://whoisalfaz.me/blog',
+        url: 'https://whoisalfaz.me/blog/',
         type: 'website',
     },
     twitter: {
@@ -209,12 +209,12 @@ export default async function BlogPage() {
 
 
 
-                    {/* ARCHIVES (Mock) */}
+                    {/* FEATURED HUBS */}
                     <div className="bg-white dark:bg-transparent p-6 rounded-[2rem] border border-slate-200 dark:border-transparent shadow-sm dark:shadow-none">
-                        <div className="text-xl font-black text-slate-900 dark:text-white mb-6 uppercase tracking-tight">Archives</div>
+                        <div className="text-xl font-black text-slate-900 dark:text-white mb-6 uppercase tracking-tight">Featured Series</div>
                         <ul className="space-y-3 text-[15px] font-medium text-slate-500 dark:text-slate-400">
-                            <li><Link href="#" className="hover:text-teal-600 dark:hover:text-blue-400 block py-1 transition-colors">January 2026</Link></li>
-                            <li><Link href="#" className="hover:text-teal-600 dark:hover:text-blue-400 block py-1 transition-colors">December 2025</Link></li>
+                            <li><Link href="/blog/30-days-of-n8n/" className="hover:text-teal-600 dark:hover:text-blue-400 block py-1 transition-colors font-bold">30 Days of n8n Mastery</Link></li>
+                            <li><Link href="/case-studies/" className="hover:text-teal-600 dark:hover:text-blue-400 block py-1 transition-colors font-bold">Client Case Studies & ROI</Link></li>
                         </ul>
                     </div>
 

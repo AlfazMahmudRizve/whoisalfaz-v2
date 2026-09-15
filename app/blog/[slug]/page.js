@@ -20,15 +20,13 @@ import ManyChatSummitBanner from '@/components/ManyChatSummitBanner';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import rehypeRaw from 'rehype-raw';
 import remarkGfm from 'remark-gfm';
+import Breadcrumbs from '@/components/Breadcrumbs';
+import { CANONICAL_OVERRIDES } from '@/lib/seo-constants';
 
 export const dynamicParams = true;
 export const revalidate = 3600; // 1 hour — reduces background Sanity refetch pressure
 
-export const CANONICAL_OVERRIDES = {
-  'dify-vs-n8n-architecture': 'https://whoisalfaz.me/blog/dify-ai-workflow-orchestration-vs-n8n-ai-agent-nodes/',
-  'pinecone-serverless-vs-qdrant-vultr-latency-benchmark': 'https://whoisalfaz.me/blog/pinecone-vs-qdrant-vultr-benchmark/',
-  'pinecone-namespaces-vs-qdrant-payload-filters-comparison': 'https://whoisalfaz.me/blog/pinecone-vs-qdrant-vultr-benchmark/',
-};
+export { CANONICAL_OVERRIDES };
 
 export async function generateStaticParams() {
   const posts = await getSanityPosts();
@@ -81,7 +79,10 @@ export async function generateMetadata({ params }) {
   const finalDesc = cleanTruncateDesc(rawDesc, 155);
   const canonicalUrl = CANONICAL_OVERRIDES[slug] || `https://whoisalfaz.me/blog/${slug}/`;
 
-  const ogImage = post.image || '/featured-image.png';
+  const rawOgImage = post.image || '/featured-image.png';
+  const ogImageUrl = rawOgImage.startsWith('http')
+    ? rawOgImage
+    : `https://whoisalfaz.me${rawOgImage.startsWith('/') ? '' : '/'}${rawOgImage}`;
 
   return {
     title: finalTitle,
@@ -99,7 +100,10 @@ export async function generateMetadata({ params }) {
       section: post.categories?.[0] || 'Technology',
       images: [
         {
-          url: ogImage,
+          url: ogImageUrl,
+          width: 1200,
+          height: 630,
+          alt: finalTitle,
         },
       ],
     },
@@ -109,7 +113,7 @@ export async function generateMetadata({ params }) {
       creator: '@whoisalfaz',
       title: finalTitle,
       description: finalDesc,
-      images: [ogImage],
+      images: [ogImageUrl],
     },
   };
 }
@@ -219,6 +223,14 @@ export default async function Post({ params }) {
 
   const canonicalUrl = CANONICAL_OVERRIDES[slug] || `https://whoisalfaz.me/blog/${slug}/`;
 
+  const primaryCategory = post.categories?.[0] || 'Technology';
+  const categorySlug = primaryCategory.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+  const breadcrumbItems = [
+    { name: 'Blog', url: '/blog/' },
+    { name: primaryCategory, url: `/blog/category/${categorySlug}/` },
+    { name: post.seoTitle || post.title, url: canonicalUrl },
+  ];
+
   const unifiedSchemaGraph = generateUnifiedArticleGraph({
     title: post.seoTitle || post.title,
     description: post.seoDescription || post.description,
@@ -227,7 +239,7 @@ export default async function Post({ params }) {
     datePublished: post.date,
     dateModified: post.modified || post.date,
     image: post.image,
-    category: post.categories?.[0] || 'Technology',
+    category: primaryCategory,
     categories: post.categories,
     wordCount,
     markdownContent: contentMarkdown,
@@ -251,10 +263,13 @@ export default async function Post({ params }) {
       {/* --- HERO SECTION: HEADER CARD --- */}
       <header className="max-w-7xl mx-auto px-6 mb-10 animate-in fade-in slide-in-from-bottom-8 duration-1000">
 
-        {/* Back Link */}
-        <Link href="/blog/" className="inline-flex items-center gap-2 text-slate-500 font-bold uppercase tracking-widest hover:text-slate-900 dark:hover:text-white transition-colors mb-12 text-xs group">
-          <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" /> Back to Library
-        </Link>
+        {/* Navigation Bar: Breadcrumbs & Back Link */}
+        <div className="flex flex-wrap items-center justify-between gap-4 mb-8">
+          <Breadcrumbs items={breadcrumbItems} className="mb-0" />
+          <Link href="/blog/" className="inline-flex items-center gap-2 text-slate-500 font-bold uppercase tracking-widest hover:text-slate-900 dark:hover:text-white transition-colors text-xs group">
+            <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" /> Back to Library
+          </Link>
+        </div>
 
         <div className="bg-white dark:bg-gradient-to-br dark:from-slate-900 dark:via-[#0f172a] dark:to-slate-900 border border-slate-200 dark:border-white/10 rounded-[3rem] p-8 md:p-12 relative overflow-hidden shadow-2xl dark:shadow-xl transition-colors duration-300">
 

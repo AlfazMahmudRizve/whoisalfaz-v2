@@ -1,0 +1,169 @@
+{
+  "totalPosts": 104,
+  "wordCountDistribution": {
+    "under1000": 3,
+    "between1000and2000": 22,
+    "between2000and3000": 64,
+    "over3000": 15
+  },
+  "titleStats": {
+    "hasBrackets": 104,
+    "missingBrackets": 0,
+    "over60Chars": 0,
+    "under40Chars": 0
+  },
+  "metaStats": {
+    "over155Chars": 0,
+    "under120Chars": 0,
+    "missing": 0
+  },
+  "contentElements": {
+    "hasTable": 68,
+    "missingTable": 36,
+    "hasCodeBlock": 94,
+    "hasFAQ": 81,
+    "missingFAQ": 23,
+    "hasInternalLinks": 104,
+    "missingInternalLinks": 0
+  },
+  "postsNeedingAttention": [
+    {
+      "slug": "case-study-client-portfolio-delivery",
+      "title": "[Case Study] Next.js Client Portfolio Architecture",
+      "words": 744,
+      "flags": [
+        "Thin Content (744 words)",
+        "No Comparison Table",
+        "No FAQ Section"
+      ]
+    },
+    {
+      "slug": "case-study-urban-cafe-foodtech-platform",
+      "title": "[Case Study] Zero-Hardware Kitchen POS Next.js PWA",
+      "words": 1726,
+      "flags": [
+        "No Comparison Table",
+        "No FAQ Section"
+      ]
+    },
+    {
+      "slug": "case-study-whoisalfaz-seo-indexing-engine",
+      "title": "[Case Study] Automated SEO Indexing Pipeline Engine",
+      "words": 774,
+      "flags": [
+        "Thin Content (774 words)",
+        "No Comparison Table",
+        "No FAQ Section"
+      ]
+    },
+    {
+      "slug": "n8n-slack-notifications-by-alfaz-mahmud-rizve",
+      "title": "n8n Slack Notifications: Lead Alerts [2026 Blueprint]",
+      "words": 1465,
+      "flags": [
+        "No Comparison Table",
+        "No FAQ Section"
+      ]
+    },
+    {
+      "slug": "automated-content-research-by-alfaz-mahmud-rizve",
+      "title": "Automated Content Research with n8n [2026 Blueprint]",
+      "words": 1923,
+      "flags": [
+        "No Comparison Table",
+        "No FAQ Section"
+      ]
+    },
+    {
+      "slug": "n8n-production-workflows-by-alfaz-mahmud-rizve",
+      "title": "n8n Production Workflows: Scale Guide [2026 Blueprint]",
+      "words": 1678,
+      "flags": [
+        "No Comparison Table",
+        "No FAQ Section"
+      ]
+    },
+    {
+      "slug": "n8n-google-analytics-4-pipeline",
+      "title": "n8n Google Analytics 4 Pipeline [2026 Blueprint]",
+      "words": 1663,
+      "flags": [
+        "No Comparison Table",
+        "No FAQ Section"
+      ]
+    },
+    {
+      "slug": "case-study-veloryc-premium-ecommerce",
+      "title": "[Case Study] Veloryc E-Commerce Operations System",
+      "words": 694,
+      "flags": [
+        "Thin Content (694 words)",
+        "No Comparison Table",
+        "No FAQ Section"
+      ]
+    },
+    {
+      "slug": "automated-email-follow-up-n8n-brevo",
+      "title": "Automated Email Follow-Up: n8n & Brevo [2026 Blueprint]",
+      "words": 1487,
+      "flags": [
+        "No Comparison Table",
+        "No FAQ Section"
+      ]
+    },
+    {
+      "slug": "facebook-lead-ads-automation-by-alfaz-mahmud-rizve",
+      "title": "Facebook Lead Ads Automation with n8n [2026 Blueprint]",
+      "words": 1276,
+      "flags": [
+        "No Comparison Table",
+        "No FAQ Section"
+      ]
+    },
+    {
+      "slug": "automated-marketing-reporting-with-n8n-at-whoisalfaz",
+      "title": "Automated Marketing Reporting with n8n [2026 Blueprint]",
+      "words": 1513,
+      "flags": [
+        "No Comparison Table",
+        "No FAQ Section"
+      ]
+    },
+    {
+      "slug": "automate-personal-branding-with-n8n",
+      "title": "Automate Personal Branding with n8n [2026 Blueprint]",
+      "words": 1853,
+      "flags": [
+        "No Comparison Table",
+        "No FAQ Section"
+      ]
+    },
+    {
+      "slug": "automate-client-reporting-with-n8n",
+      "title": "Automate Client Reporting with n8n [2026 Blueprint]",
+      "words": 1562,
+      "flags": [
+        "No Comparison Table",
+        "No FAQ Section"
+      ]
+    },
+    {
+      "slug": "automations-for-saas-and-agencies",
+      "title": "Automations for SaaS and Agencies [2026 Blueprint]",
+      "words": 2118,
+      "flags": [
+        "No Comparison Table",
+        "No FAQ Section"
+      ]
+    },
+    {
+      "slug": "tapstitch-vs-printful-ecommerce-pipeline",
+      "title": "[Benchmark] Tapstitch vs Printful: n8n Shopify Pipeline",
+      "words": 1187,
+      "flags": [
+        "Thin Content (1187 words)",
+        "No Comparison Table"
+      ]
+    }
+  ]
+}

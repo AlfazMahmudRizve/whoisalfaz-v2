@@ -15,11 +15,16 @@ target_slugs = [
     'dify-ai-workflow-orchestration-vs-n8n-ai-agent-nodes',
     'tapstitch-vs-printful-ecommerce-pipeline',
     'manychat-pricing-2026',
+    'pinecone-vs-qdrant-n8n-rag-comparison',
+    'pinecone-vs-qdrant-vultr-benchmark',
+    'open-source-llm-embeddings-voyage-bge-mxbai-n8n-benchmark',
+    'n8n-rag-tutorial',
     'databox-revops-dashboard-pipeline-velocity',
     'dify-ai-vultr-gpu-docker-deployment-guide',
     'manychat-instagram-summit-2026-agenda-review-bonus',
     'scaling-qdrant-vector-database-to-10-million-embeddings',
-    'waterfall-data-enrichment-pipeline-n8n-guide'
+    'waterfall-data-enrichment-pipeline-n8n-guide',
+    'self-hosted-qdrant-docker-vultr'
 ]
 
 urls_to_submit = [

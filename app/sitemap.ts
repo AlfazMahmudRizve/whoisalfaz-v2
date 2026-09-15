@@ -1,6 +1,7 @@
 import { MetadataRoute } from 'next';
 import { getSanityPosts, getSanityCategories } from '@/lib/sanity.client';
 import { serviceData } from '@/lib/serviceData';
+import { NON_CANONICAL_SLUGS } from '@/lib/seo-constants';
 
 // Cache the sitemap for 12 hours to avoid cold Sanity CDN hits on every Googlebot crawl.
 // Without this, each Googlebot fetch re-runs the async Sanity queries live, causing
@@ -79,6 +80,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
         // Exclude legacy slugs that redirect to /blog/
         if (slug === 'outstanding-ideas-for-b2b-lead-generation' || slug === 'outstanding-ideas-for-b2b-lead-capture') {
+            continue;
+        }
+
+        // Exclude slugs that have canonical overrides to ensure only self-referencing canonicals are in sitemap
+        if (NON_CANONICAL_SLUGS.has(slug)) {
             continue;
         }
 
