@@ -2,21 +2,21 @@ import React from 'react';
 import ClaimBonusClient from './ClaimBonusClient';
 
 export const metadata = {
-  title: 'Claim Your $147 ManyChat & n8n Automation Bonus | WhoisAlfaz',
-  description: 'Exclusive $147 companion automation bundle for Summit attendees. Production n8n templates, lead scoring engines, and viral DM blueprints by Alfaz.',
+  title: 'Free ManyChat & n8n Automation Blueprint Pack | WhoisAlfaz',
+  description: 'Download 3 production-ready n8n automation blueprints for ManyChat operators: 10s async timeout handler, Apollo lead enrichment, and multi-tenant RAG.',
   alternates: {
     canonical: 'https://whoisalfaz.me/claim-manychat-bonus/'
   },
   openGraph: {
-    title: 'Claim Your $147 ManyChat & n8n Automation Bonus | WhoisAlfaz',
-    description: 'Exclusive $147 companion automation bundle for Summit attendees. Production n8n templates, lead scoring engines, and viral DM blueprints by Alfaz.',
+    title: 'Free ManyChat & n8n Automation Blueprint Pack | WhoisAlfaz',
+    description: 'Download 3 production-ready n8n automation blueprints for ManyChat operators: 10s async timeout handler, Apollo lead enrichment, and multi-tenant RAG.',
     url: 'https://whoisalfaz.me/claim-manychat-bonus/',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Claim Your $147 ManyChat & n8n Automation Bonus | WhoisAlfaz',
-    description: 'Exclusive $147 companion automation bundle for Summit attendees. Production n8n templates, lead scoring engines, and viral DM blueprints by Alfaz.',
+    title: 'Free ManyChat & n8n Automation Blueprint Pack | WhoisAlfaz',
+    description: 'Download 3 production-ready n8n automation blueprints for ManyChat operators: 10s async timeout handler, Apollo lead enrichment, and multi-tenant RAG.',
   }
 };
 

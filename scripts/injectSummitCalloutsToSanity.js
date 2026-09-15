@@ -12,13 +12,13 @@ const client = createClient({
   apiVersion: '2024-01-01'
 });
 
-const referralUrl = "https://igsummit.manychat.com/virtual?utm_source=5e9c7e02098b&utm_campaign=partnerstack";
+const referralUrl = "https://igsummit.manychat.com/virtual";
 
 const calloutMarkdown = `
 
-> 🎟️ **Featured Partner Event [2026]:** Looking to scale Instagram DM automation, AI chat agents, and high-converting message funnels? ManyChat is hosting their official **[Instagram Summit (Virtual Edition)](${referralUrl})** featuring live masterclasses from top agency leaders.
+> 🎟️ **Industry Event [2026]:** Looking to scale Instagram DM automation, AI chat agents, and high-converting message funnels? ManyChat is hosting their virtual **[Instagram Summit (Virtual Edition)](${referralUrl})** featuring live masterclasses from top agency leaders.
 >
-> 💡 *Affiliate Disclosure: When you register via our partner link, we receive a partner commission at no extra cost to you, which unlocks our complimentary **$147 n8n Companion Blueprint Pack**.* **[Claim your summit pass & bonus pack here →](${referralUrl})** *(Already bought? [Download your bonus pack here](/claim-manychat-bonus/))*
+> 💡 *Community Resource: Download our free [Community n8n Blueprint Pack](/claim-manychat-bonus/) to decouple high-volume webhooks and enrich lead data in real time.*
 
 `;
 

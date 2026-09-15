@@ -5,7 +5,7 @@ import { Sparkles, ArrowRight, Video, CheckCircle, ShieldCheck, Gift, Info, Bot,
 export default function ManyChatSummitBanner({
   title = "Instagram Summit by ManyChat: The Growth Blueprint",
   description = "Join 15,000+ top marketing agencies, e-commerce brand owners, and automation architects to master Instagram DM automation funnels, AI voice agents, and Meta-compliant lead capture.",
-  referralUrl = "https://igsummit.manychat.com/virtual?utm_source=5e9c7e02098b&utm_campaign=partnerstack",
+  referralUrl = "https://igsummit.manychat.com/virtual",
   claimUrl = "/claim-manychat-bonus"
 }) {
   return (
@@ -29,7 +29,7 @@ export default function ManyChatSummitBanner({
             <div className="flex flex-wrap items-center gap-2">
               <span className="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-black uppercase tracking-wider rounded-full bg-purple-500/15 text-purple-700 dark:text-purple-300 border border-purple-500/30">
                 <Sparkles className="w-3.5 h-3.5" />
-                Featured Partner Event
+                Industry Event
               </span>
               <span className="inline-flex items-center gap-1 text-xs font-semibold text-slate-600 dark:text-slate-400">
                 <Video className="w-3.5 h-3.5 text-teal-600 dark:text-teal-400" />
@@ -37,7 +37,7 @@ export default function ManyChatSummitBanner({
               </span>
               <span className="inline-flex items-center gap-1 text-xs font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 px-2.5 py-0.5 rounded-full border border-emerald-500/20">
                 <Gift className="w-3 h-3" />
-                Includes $147 n8n Bonus Pack
+                Free n8n Blueprint Pack
               </span>
             </div>
 
@@ -61,11 +61,11 @@ export default function ManyChatSummitBanner({
               </span>
             </div>
 
-            {/* FTC Disclosure */}
+            {/* Community Notice */}
             <div className="pt-2 flex items-start gap-1.5 text-[11px] text-slate-500 dark:text-slate-400 leading-normal">
-              <Info className="w-3.5 h-3.5 text-purple-600 dark:text-purple-400 shrink-0 mt-0.5" />
+              <Info className="w-3.5 h-3.5 text-teal-600 dark:text-teal-400 shrink-0 mt-0.5" />
               <span>
-                <strong>Affiliate Disclosure:</strong> When you purchase your pass via our partner link, we receive a commission at no extra cost to you, which unlocks our complimentary n8n Companion Blueprint Pack.
+                <strong>Independent Resource:</strong> We provide complimentary open-source n8n automation blueprints to support developers and agencies deploying high-volume ManyChat workflows.
               </span>
             </div>
           </div>
@@ -75,19 +75,19 @@ export default function ManyChatSummitBanner({
           <a
             href={referralUrl}
             target="_blank"
-            rel="sponsored noopener noreferrer"
+            rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-gradient-to-r from-purple-600 via-indigo-600 to-teal-600 hover:from-purple-500 hover:to-teal-500 text-white font-bold text-sm shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40 hover:-translate-y-0.5 transition-all duration-200 text-center"
           >
-            <span>Claim Virtual Summit Pass</span>
+            <span>View Summit Pass Details</span>
             <ArrowRight className="w-4 h-4" />
           </a>
 
           <Link
             href={claimUrl}
-            className="inline-flex items-center justify-center gap-1.5 text-xs font-semibold text-purple-600 dark:text-purple-400 hover:underline text-center"
+            className="inline-flex items-center justify-center gap-1.5 text-xs font-semibold text-teal-600 dark:text-teal-400 hover:underline text-center"
           >
             <Gift className="w-3.5 h-3.5" />
-            Already bought? Claim $147 Bonus →
+            Download Free n8n Blueprint Pack →
           </Link>
         </div>
       </div>

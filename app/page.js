@@ -178,11 +178,11 @@ export default async function Home() {
                     </span>
                   </div>
 
-                  {/* FTC Disclosure */}
+                  {/* Community Notice */}
                   <div className="pt-2 flex items-start gap-1.5 text-[10px] text-slate-500 dark:text-slate-400 leading-normal">
-                    <Info className="w-3.5 h-3.5 text-purple-600 dark:text-purple-400 shrink-0 mt-0.5" />
+                    <Info className="w-3.5 h-3.5 text-teal-600 dark:text-teal-400 shrink-0 mt-0.5" />
                     <span>
-                      <strong>Affiliate Disclosure:</strong> When purchasing through our link, we receive a partner commission at no extra cost to you, unlocking your complimentary companion blueprint pack.
+                      <strong>Independent Resource:</strong> We provide complimentary open-source n8n automation blueprints to support builders deploying high-volume ManyChat workflows.
                     </span>
                   </div>
                 </div>
@@ -191,21 +191,21 @@ export default async function Home() {
               {/* Right Side: Dual CTAs */}
               <div className="flex flex-col sm:flex-row lg:flex-col items-center lg:items-end gap-3 w-full lg:w-auto shrink-0">
                 <a
-                  href="https://igsummit.manychat.com/virtual?utm_source=5e9c7e02098b&utm_campaign=partnerstack"
+                  href="https://igsummit.manychat.com/virtual"
                   target="_blank"
-                  rel="sponsored noopener noreferrer"
+                  rel="noopener noreferrer"
                   className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl bg-gradient-to-r from-purple-600 via-indigo-600 to-teal-600 hover:from-purple-500 hover:to-teal-500 text-white font-black text-sm uppercase tracking-wider shadow-xl shadow-purple-500/25 hover:shadow-purple-500/40 hover:-translate-y-0.5 transition-all text-center"
                 >
-                  <span>Claim Virtual Summit Pass</span>
+                  <span>View Virtual Summit Pass</span>
                   <ArrowRight className="w-4 h-4" />
                 </a>
 
                 <Link
                   href="/claim-manychat-bonus/"
-                  className="inline-flex items-center justify-center gap-1.5 text-xs font-bold text-purple-600 dark:text-purple-400 hover:underline text-center pt-1"
+                  className="inline-flex items-center justify-center gap-1.5 text-xs font-bold text-teal-600 dark:text-teal-400 hover:underline text-center pt-1"
                 >
                   <Gift className="w-3.5 h-3.5" />
-                  Already have a ticket? Claim $147 Bonus →
+                  Download Free n8n Blueprint Pack →
                 </Link>
               </div>
             </div>

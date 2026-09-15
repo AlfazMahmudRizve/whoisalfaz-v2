@@ -20,18 +20,7 @@ export async function POST(request) {
 
     const cleanName = (name || 'Friend').trim();
     const cleanEmail = email.toLowerCase().trim();
-    const cleanOrderId = (orderId || '').trim();
-
-    // 3. Order ID / Checkout Email Validation
-    const junkInputs = ['test', 'asdf', '123', '1234', '12345', 'none', 'n/a', 'na', 'no', 'free', 'nil', 'null', 'fake', 'fakeid', 'sample', 'id', 'xxx', 'abc'];
-    const isEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(cleanOrderId);
-    const isOrderPattern = /^[a-zA-Z0-9_\-#]{5,40}$/.test(cleanOrderId);
-
-    if (!cleanOrderId || cleanOrderId.length < 5 || junkInputs.includes(cleanOrderId.toLowerCase()) || (!isEmail && !isOrderPattern)) {
-      return NextResponse.json({
-        error: 'Please provide a valid ManyChat confirmation Order ID (e.g. MC-XXXXXX, Stripe Receipt ID) or the exact email address you used at checkout on ManyChat.'
-      }, { status: 400 });
-    }
+    const cleanOrderId = (orderId || 'FREE_COMMUNITY_ACCESS').trim();
 
     const downloadUrl = 'https://whoisalfaz.me/downloads/manychat-automation-bonus-pack.zip';
 
@@ -60,16 +49,12 @@ export async function POST(request) {
         <body>
           <div class="card">
             <div class="header">
-              <h1>🎉 Your ManyChat Automation Bonus Pack</h1>
+              <h1>🎉 Your ManyChat Automation Blueprint Pack</h1>
             </div>
             <div class="content">
               <p>Hi <strong>${cleanName}</strong>,</p>
-              <p>Thank you for claiming your <strong>$147 Companion Automation Blueprint Pack</strong> for the ManyChat Instagram Summit 2026!</p>
+              <p>Thank you for requesting your <strong>Production Automation Blueprint Pack</strong> for ManyChat and n8n!</p>
               
-              <div class="box">
-                <strong>Registered Order ID / Reference:</strong> ${cleanOrderId}
-              </div>
-
               <p>Your production-ready n8n workflow templates, schemas, and Quick Start Guide are ready to download below:</p>
 
               <div style="text-align: center;">
@@ -107,22 +92,21 @@ export async function POST(request) {
       try {
         const adminAlertHtml = `
           <div style="font-family: sans-serif; background: #0f172a; color: #f8fafc; padding: 24px; border-radius: 12px;">
-            <h2 style="color: #38bdf8; margin-top: 0;">🚨 New ManyChat Summit Bonus Claim</h2>
-            <p>A new user has claimed the $147 ManyChat &amp; n8n Automation Bonus Pack:</p>
+            <h2 style="color: #38bdf8; margin-top: 0;">🚨 New Blueprint Pack Download</h2>
+            <p>A new user has requested the ManyChat &amp; n8n Automation Blueprint Pack:</p>
             <div style="background: #1e293b; padding: 16px; border-radius: 8px; margin: 16px 0;">
               <p style="margin: 6px 0;"><strong>👤 Name:</strong> ${cleanName}</p>
               <p style="margin: 6px 0;"><strong>✉️ Email:</strong> <a href="mailto:${cleanEmail}" style="color: #2dd4bf;">${cleanEmail}</a></p>
-              <p style="margin: 6px 0;"><strong>🏷️ Order ID / Ref:</strong> <code style="background: #0f172a; padding: 2px 6px; border-radius: 4px; color: #facc15;">${cleanOrderId}</code></p>
               <p style="margin: 6px 0;"><strong>🕒 Date:</strong> ${new Date().toUTCString()}</p>
             </div>
             <p style="font-size: 12px; color: #94a3b8;">
-              This contact has been tagged with <code>MANYCHAT_SUMMIT_BUYER: true</code> in your Brevo CRM.
+              This contact has been tagged with <code>MANYCHAT_BLUEPRINT_DOWNLOAD: true</code> in your Brevo CRM.
             </p>
           </div>
         `;
 
         await Promise.allSettled([
-          // 1. Email to the Buyer with Download Link
+          // 1. Email to User with Download Link
           fetch('https://api.brevo.com/v3/smtp/email', {
             method: 'POST',
             headers: { 'api-key': apiKey, 'Content-Type': 'application/json' },
@@ -130,7 +114,7 @@ export async function POST(request) {
               sender: { name: 'Alfaz Mahmud Rizve', email: senderEmail },
               to: [{ email: cleanEmail, name: cleanName }],
               replyTo: { email: senderEmail, name: 'Alfaz Mahmud Rizve' },
-              subject: '🎁 Your $147 ManyChat & n8n Automation Bonus Pack is Ready!',
+              subject: '🎁 Your ManyChat & n8n Automation Blueprint Pack is Ready!',
               htmlContent: htmlContent
             })
           }),
@@ -140,46 +124,44 @@ export async function POST(request) {
             method: 'POST',
             headers: { 'api-key': apiKey, 'Content-Type': 'application/json' },
             body: JSON.stringify({
-              sender: { name: 'WhoisAlfaz Bonus Engine', email: senderEmail },
+              sender: { name: 'WhoisAlfaz Lead Engine', email: senderEmail },
               to: [
                 { email: 'contact@whoisalfaz.me', name: 'Alfaz Contact' },
                 ...(process.env.BREVO_ADMIN_EMAIL ? [{ email: process.env.BREVO_ADMIN_EMAIL, name: 'Alfaz Admin' }] : [])
               ],
               replyTo: { email: cleanEmail, name: cleanName },
-              subject: `🚨 New ManyChat Summit Bonus Claim: ${cleanName} (${cleanOrderId})`,
+              subject: `🚨 New Blueprint Download: ${cleanName}`,
               htmlContent: adminAlertHtml
             })
           }),
 
-          // 3. Upsert Contact in Brevo CRM
+          // 3. Upsert Contact in Brevo CRM with Tag
           fetch('https://api.brevo.com/v3/contacts', {
             method: 'POST',
             headers: { 'api-key': apiKey, 'Content-Type': 'application/json' },
             body: JSON.stringify({
               email: cleanEmail,
               attributes: {
-                FIRSTNAME: cleanName.split(' ')[0],
-                LASTNAME: cleanName.split(' ').slice(1).join(' '),
-                MANYCHAT_SUMMIT_BUYER: true,
-                MANYCHAT_ORDER_ID: cleanOrderId
+                FIRSTNAME: cleanName,
+                MANYCHAT_BLUEPRINT_DOWNLOAD: true
               },
               updateEnabled: true
             })
           })
         ]);
       } catch (brevoErr) {
-        console.error('[Brevo Error]', brevoErr);
+        console.error('[Brevo Sync Error]', brevoErr);
       }
     }
 
     return NextResponse.json({
       success: true,
-      message: 'Bonus pack unlocked successfully!',
-      downloadUrl: downloadUrl
+      downloadUrl: downloadUrl,
+      message: 'Download link successfully prepared and dispatched to your email.'
     });
 
   } catch (err) {
-    console.error('[API claim-bonus Error]', err);
-    return NextResponse.json({ error: 'Internal server error. Please try again.' }, { status: 500 });
+    console.error('[Claim API Error]', err);
+    return NextResponse.json({ error: 'An unexpected server error occurred.' }, { status: 500 });
   }
 }
