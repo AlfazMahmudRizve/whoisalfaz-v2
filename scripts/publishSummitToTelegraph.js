@@ -20,7 +20,7 @@ async function publishSummitTelegraph() {
 
   const accessToken = accountData.result.access_token;
 
-  const referralUrl = "https://igsummit.manychat.com/virtual?utm_source=5e9c7e02098b&utm_campaign=partnerstack";
+  const referralUrl = "https://igsummit.manychat.com/virtual";
   const claimUrl = "https://whoisalfaz.me/claim-manychat-bonus/";
 
   const content = [
@@ -71,18 +71,18 @@ async function publishSummitTelegraph() {
         {
           tag: 'a',
           attrs: { href: referralUrl },
-          children: ['Claim Your $20 Virtual Summit Pass Here']
+          children: ['Review the Virtual Summit Schedule Here']
         }
       ]
     },
     {
       tag: 'h3',
-      children: ['🎁 Exclusive $147 Automation Blueprint Bonus Pack']
+      children: ['🎁 Free Community Automation Blueprint Pack']
     },
     {
       tag: 'p',
       children: [
-        'As an authorized partner, Accelerated Growth Studio is providing our complete $147 n8n automation template pack free to summit attendees:\n',
+        'To help builders and agencies implement these systems, we provide our complete n8n automation blueprint pack free for the community:\n',
         '• ManyChat Async 10s Timeout Handler (n8n JSON)\n',
         '• Apollo to Brevo Automated Lead Enrichment Pipeline\n',
         '• Multi-Tenant Qdrant AI RAG Engine Blueprint'
@@ -95,7 +95,7 @@ async function publishSummitTelegraph() {
         {
           tag: 'a',
           attrs: { href: claimUrl },
-          children: ['Claim Your Free $147 Automation Blueprint Pack Here']
+          children: ['Download Your Free Community Blueprint Pack Here']
         }
       ]
     },
@@ -104,7 +104,7 @@ async function publishSummitTelegraph() {
       children: [
         {
           tag: 'i',
-          children: ['Transparency Note: We are an authorized ManyChat affiliate partner. Registering via our link provides our companion blueprint pack at zero extra cost to you.']
+          children: ['Note: This guide and accompanying blueprints are provided independently as free community resources.']
         }
       ]
     }

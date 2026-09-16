@@ -1,6 +1,6 @@
 # 🚀 Omnichannel Viral Syndication Suite: ManyChat Instagram Summit 2026
-**Campaign:** ManyChat Instagram Summit ($20 Virtual Pass) + Free $147 n8n Companion Blueprint Pack  
-**Partner Registration Link:** `https://igsummit.manychat.com/virtual?utm_source=5e9c7e02098b&utm_campaign=partnerstack`  
+**Campaign:** ManyChat Instagram Summit ($20 Virtual Pass) + Free Community n8n Blueprint Pack  
+**Summit Registration Link:** `https://igsummit.manychat.com/virtual`  
 **Bonus Claim URL:** `https://whoisalfaz.me/claim-manychat-bonus/`  
 **Featured Poster Asset:** `/images/manychat-summit/manychat_summit_poster.jpg`
 
@@ -43,14 +43,14 @@ ManyChat is hosting their official virtual Instagram Summit 2026 with keynotes f
 The Virtual Pass is literally $20.
 
 🎁 EXCLUSIVE COMPANION BLUEPRINT PACK:
-If you grab your pass through our official partner link below, I will send you our complete $147 n8n Automation Companion Pack 100% Free:
+To help builders deploy these systems without timeouts, we provide our complete Community n8n Automation Blueprint Pack 100% Free:
 ✅ ManyChat Decoupled Async Timeout Handler (n8n JSON)
 ✅ Apollo to Brevo Automated Lead Enrichment Pipeline
 ✅ Qdrant Multi-Tenant RAG Vector Knowledge Base
 
-👉 Drop a comment with "SUMMIT" below and my bot will automatically DM you the private partner invite + the free template download!
+👉 Drop a comment with "SUMMIT" below and my bot will automatically DM you the event link + the free template download!
 
-(Or grab your pass directly here: https://igsummit.manychat.com/virtual?utm_source=5e9c7e02098b&utm_campaign=partnerstack)
+(Or review the summit directly here: https://igsummit.manychat.com/virtual)
 
 #ManyChat #InstagramAutomation #RevOps #n8n #MarketingAutomation #LeadGeneration #B2BGrowth #ArtificialIntelligence
 ```
@@ -65,7 +65,7 @@ Instagram DM funnels are out-converting static landing pages 4-to-1 in 2026.
 
 Top e-commerce brands and agencies are seeing 65%+ opt-in rates by turning comments into automated conversations.
 
-Here’s the breakdown of the official ManyChat Instagram Summit 2026 + how to grab our $147 n8n blueprint pack free 🧵👇
+Here’s the breakdown of the official ManyChat Instagram Summit 2026 + how to download our free Community n8n blueprint pack 🧵👇
 ```
 
 ### 7-Tweet Thread:
@@ -75,7 +75,7 @@ Instagram DM funnels are making a massive comeback in 2026.
 
 Top brands are seeing 65%+ opt-in rates by replacing static landing pages with conversational AI pipelines.
 
-Here’s the complete 2026 Instagram Automation Stack (plus how to get a $147 blueprint pack free) 🧵👇
+Here’s the complete 2026 Instagram Automation Stack (plus how to get our free Community blueprint pack) 🧵👇
 
 2/7
 The biggest mistake operators make:
@@ -99,35 +99,29 @@ ManyChat API Callback (/setCustomField)
 Zero dropped leads. Instant responses.
 
 4/7
-The entire industry is meeting to break down these exact systems at the official ManyChat Instagram Summit 2026.
-
-Keynotes from:
-• @ColinAndSamir (The 2026 Creator Funnel)
-• @ZachKing (Visual Retention on Reels)
-• Natasha Willis / @SchoolOfBots (Conversational Conversions)
-• Mike Yan (CEO, ManyChat)
+Live Architecture Breakdown:
+ManyChat triggers the webhook ➔ returns 200 OK immediately.
+Worker queue handles Apollo enrichment & Claude intent evaluation.
+Worker triggers ManyChat to resume conversation with qualified offer.
 
 5/7
-The Virtual Pass is only $20 for 2 full days of live masterclasses + 30-day replay access.
-
-Landing just one DM automation client bills at $1,500 - $2,500/mo. 
-The ROI on this ticket is a 100x asymmetric bet.
+ManyChat is breaking down advanced DM funnels at the official Instagram Summit 2026 (Colin & Samir, Zach King, School of Bots). Virtual passes are $20.
 
 6/7
-🎁 EXCLUSIVE COMPANION BONUS:
-Grab your pass via our partner link and I’ll send you our complete $147 n8n Automation Pack free:
+🎁 COMMUNITY BLUEPRINT PACK:
+To support builders deploying these systems, we share our complete Community n8n Automation Pack 100% free:
 • ManyChat Async Timeout Handler (.json)
 • Apollo to Brevo Lead Enrichment Pipeline
 • Qdrant Multi-Tenant RAG Engine
 
 7/7
-🎟️ Register for the Virtual Pass ($20):
-https://igsummit.manychat.com/virtual?utm_source=5e9c7e02098b&utm_campaign=partnerstack
+🎟️ Review the Virtual Pass ($20):
+https://igsummit.manychat.com/virtual
 
-📦 Claim your free $147 template pack here:
+📦 Download your free Community template pack here:
 https://whoisalfaz.me/claim-manychat-bonus/
 
-(Transparency: Authorized affiliate partner. Purchasing unlocks your free bonus pack at zero extra cost!)
+(Independent Guide: Workflows and guides provided free by WhoisAlfaz.)
 ```
 
 ---
@@ -162,10 +156,10 @@ This exact shift is the focus of the upcoming **ManyChat Instagram Summit 2026**
 
 The Virtual Masterclass Pass is available for just $20.
 
-To support the automation community, we have packaged our complete production workflows into the **$147 n8n Automation Companion Pack** (including the Decoupled Timeout Handler, Apollo Lead Enrichment, and Qdrant RAG templates), bundled free for anyone registering through our partner link.
+To support the automation community, we have packaged our complete production workflows into the **Community n8n Automation Blueprint Pack** (including the Decoupled Timeout Handler, Apollo Lead Enrichment, and Qdrant RAG templates), bundled free for anyone registering through our partner link.
 
-- **Register for the Virtual Pass ($20):** [ManyChat Summit Registration](https://igsummit.manychat.com/virtual?utm_source=5e9c7e02098b&utm_campaign=partnerstack)
-- **Claim Your $147 Automation Blueprint Pack:** [Bonus Claim Portal](https://whoisalfaz.me/claim-manychat-bonus/)
+- **Review the Virtual Pass ($20):** [ManyChat Summit Registration](https://igsummit.manychat.com/virtual)
+- **Download Your Free Community Automation Blueprint Pack:** [Bonus Claim Portal](https://whoisalfaz.me/claim-manychat-bonus/)
 ```
 
 ---
@@ -201,16 +195,16 @@ Next month, ManyChat is hosting their official **Instagram Summit 2026**, gather
 
 The Virtual Pass is only **$20**.
 
-🎁 **Special Bonus for Our Subscribers:**
-If you register using our partner link, I'm giving you our complete **$147 n8n Automation Companion Pack** for free. You get the exact .JSON workflow files for:
+🎁 **Special Blueprint Pack for Our Subscribers:**
+To help you implement this architecture, I'm sharing our complete **Community n8n Automation Blueprint Pack** 100% free. You get the exact .JSON workflow files for:
 1. The ManyChat Decoupled 10s Timeout Handler
 2. The Apollo.io to Brevo Lead Enrichment Pipeline
 3. The Qdrant Vector Search RAG Blueprint
 
-👉 **Grab your $20 Virtual Pass here:**  
-https://igsummit.manychat.com/virtual?utm_source=5e9c7e02098b&utm_campaign=partnerstack
+👉 **Review the $20 Virtual Pass here:**  
+https://igsummit.manychat.com/virtual
 
-👉 **Claim your $147 blueprint pack after registering:**  
+👉 **Download your free Community blueprint pack here:**  
 https://whoisalfaz.me/claim-manychat-bonus/
 
 See you in the masterclass!
@@ -245,7 +239,7 @@ The only place ManyChat falls short is complex backend processing. ManyChat has 
 
 ### Upcoming Learning Resource:
 If you want to master these modern frameworks, ManyChat is hosting their official **Instagram Summit 2026** (keynotes from Colin & Samir, Zach King, Natasha Willis). The virtual pass is only $20:
-👉 [ManyChat Virtual Summit 2026 Pass](https://igsummit.manychat.com/virtual?utm_source=5e9c7e02098b&utm_campaign=partnerstack)
+👉 [ManyChat Virtual Summit 2026 Pass](https://igsummit.manychat.com/virtual)
 
 You can also read my complete technical breakdown of ManyChat's new pricing and architecture here:  
 [ManyChat Pricing [2026]: Hidden Fees & Real Cost Teardown](https://whoisalfaz.me/blog/manychat-pricing-2026/)
@@ -277,7 +271,7 @@ When ad campaigns scaled past $1,000/day, inbound comment volume spiked. The cli
 - +44% increase in qualified demo calls booked.
 - Cost-per-acquisition reduced by 37%.
 
-Want to deploy this exact architecture in your agency? Learn the core principles at the upcoming [ManyChat Instagram Summit 2026](https://igsummit.manychat.com/virtual?utm_source=5e9c7e02098b&utm_campaign=partnerstack) or claim our free companion n8n pack at [whoisalfaz.me/claim-manychat-bonus/](https://whoisalfaz.me/claim-manychat-bonus/).
+Want to deploy this exact architecture in your agency? Learn the core principles at the upcoming [ManyChat Instagram Summit 2026](https://igsummit.manychat.com/virtual) or claim our free companion n8n pack at [whoisalfaz.me/claim-manychat-bonus/](https://whoisalfaz.me/claim-manychat-bonus/).
 ```
 
 ---
@@ -333,7 +327,7 @@ This decouples your latency from ManyChat's thread lifecycle entirely.
 
 ManyChat is discussing modern API workflows at their upcoming **Instagram Summit 2026** (virtual pass is $20). I’ve open-sourced the complete n8n decoupled workflow template here:  
 👉 **Download the Blueprint:** [whoisalfaz.me/claim-manychat-bonus/](https://whoisalfaz.me/claim-manychat-bonus/)  
-👉 **Summit Event Link:** [ManyChat Virtual Pass](https://igsummit.manychat.com/virtual?utm_source=5e9c7e02098b&utm_campaign=partnerstack)
+👉 **Summit Event Link:** [ManyChat Virtual Pass](https://igsummit.manychat.com/virtual)
 ```
 
 ---
@@ -353,7 +347,7 @@ Covers:
 • Why 90% of complex ManyChat funnels crash past 10,000 conversations due to the 10-second external HTTP timeout error.
 • The decoupled asynchronous n8n webhook architecture that enables sub-150ms instant handshakes.
 • Key takeaways from the ManyChat Instagram Summit 2026 featuring Colin & Samir, Zach King, and Natasha Willis.
-• Access to the free $147 n8n Automation Companion Pack (.json blueprints included).
+• Access to the free Community n8n Automation Blueprint Pack (.json blueprints included).
 
 Download the presentation PDF and claim the workflow files at:
 https://whoisalfaz.me/claim-manychat-bonus/
@@ -363,7 +357,7 @@ https://whoisalfaz.me/claim-manychat-bonus/
 
 ## 9. 🌐 Telegra.ph (Instant View Editorial Draft)
 
-**Title:** The 2026 Instagram Summit by ManyChat: Complete Agenda, Keynotes & Free $147 Bonus Pack  
+**Title:** The 2026 Instagram Summit by ManyChat: Complete Agenda, Keynotes & Free Community Blueprint Pack  
 **Author:** Alfaz Mahmud Rizve  
 **Author URL:** `https://whoisalfaz.me`  
 
@@ -383,16 +377,16 @@ Ticket Tiers:
 • In-Person Hollywood Experience: $299 - $399
 • VIP All-Access: $699+
 
-🎁 Free $147 Automation Companion Bonus Pack:
-Attendees who register for the $20 Virtual Pass through our official partner link can unlock our complete production-ready n8n automation blueprints at zero extra charge:
+🎁 Free Community Automation Blueprint Pack:
+To support builders deploying these systems, we provide our complete production-ready n8n automation blueprints 100% free:
 1. ManyChat Decoupled 10s Timeout Handler (.json)
 2. Apollo to Brevo Automated Lead Enrichment Pipeline
 3. Qdrant Multi-Tenant RAG Vector Knowledge Base
 
-Register for the Virtual Pass:
-https://igsummit.manychat.com/virtual?utm_source=5e9c7e02098b&utm_campaign=partnerstack
+Review the Virtual Pass:
+https://igsummit.manychat.com/virtual
 
-Claim Your Free Bonus Pack:
+Download Your Free Blueprint Pack:
 https://whoisalfaz.me/claim-manychat-bonus/
 ```
 

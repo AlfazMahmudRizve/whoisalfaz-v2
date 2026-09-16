@@ -1,9 +1,9 @@
 # 🎬 Viral Video & Short-Form Content Production Kit
-**Campaign:** ManyChat Instagram Summit 2026 ($20 Virtual Pass) + Free $147 n8n Automation Companion Pack  
+**Campaign:** ManyChat Instagram Summit 2026 ($20 Virtual Pass) + Free Community n8n Automation Blueprint Pack  
 **Target Platforms:** Instagram Reels, YouTube Shorts, TikTok, LinkedIn Video  
 **Core Conversion Mechanism:** ManyChat "Comment-to-DM" Flywheel (Comment `SUMMIT` ➔ Automated DM Delivery)  
 **Primary URLs:**  
-- **Partner Registration:** `https://igsummit.manychat.com/virtual?utm_source=5e9c7e02098b&utm_campaign=partnerstack`  
+- **Summit Registration:** `https://igsummit.manychat.com/virtual`  
 - **Bonus Portal:** `https://whoisalfaz.me/claim-manychat-bonus/`
 
 ---
@@ -43,7 +43,7 @@
 | **0:03 - 0:14** | **The Problem:** Screen recording zooming into ManyChat's External Request action. Highlighting the 10-second timeout limitation. | "Most creators connect ManyChat directly to AI models like OpenAI or an external CRM. But if OpenAI takes 6 seconds, and your CRM takes 5 seconds—boom. You blow past ManyChat’s strict 10-second timeout. The chat freezes, your lead bounces, and your ad spend is burned." | **10-Second Webhook Limit ⚠️**<br>*(AI + CRM = 11s ➔ DROPPED)* |
 | **0:14 - 0:28** | **The Architecture Solution:** Screen transitions to an n8n canvas showing an instant decoupled webhook handshake. | "Here’s how enterprise architects solve it: We decouple the webhook. ManyChat sends the trigger to n8n, n8n responds with an instant 200 OK in under 150 milliseconds so the chat never times out. Then in the background, n8n enriches the contact and fires an async event back to ManyChat." | **DECOUPLED ASYNC QUEUE ⚡**<br>*(150ms Instant Handshake)* |
 | **0:28 - 0:42** | **The Summit Connection:** B-roll of the ManyChat Instagram Summit 2026 virtual pass portal. | "ManyChat is breaking down these next-gen AI funnels at their official virtual Instagram Summit 2026, alongside Colin & Samir, Zach King, and Natasha Willis. The virtual pass is only $20." | **MANYCHAT SUMMIT 2026 🎟️**<br>*(Virtual Pass: $20)* |
-| **0:42 - 0:52** | **The Value Stack & CTA:** Showing the 3 n8n `.json` workflow templates on screen. | "And if you grab your pass through our partner link, I’m giving you our complete $147 n8n Automation Companion Pack 100% free. Comment **SUMMIT** below and my bot will instantly DM you the link + the free templates!" | **COMMENT 'SUMMIT' 👇**<br>*(Get Free $147 Blueprint Pack)* |
+| **0:42 - 0:52** | **The Value Stack & CTA:** Showing the 3 n8n `.json` workflow templates on screen. | "And I’m giving away our complete Community n8n Automation Blueprint Pack 100% free for builders. Comment **SUMMIT** below and my bot will instantly DM you the event link + the free templates!" | **COMMENT 'SUMMIT' 👇**<br>*(Get Free Community Blueprint Pack)* |
 
 ---
 
@@ -73,7 +73,7 @@
 | **0:03 - 0:16** | **The Gap in the Market:** B-roll of e-commerce brands and coaches with 100k followers getting 500 comments per Reel. | "Right now, thousands of brands are getting hundreds of comments on Reels, but they’re still replying manually or sending people to broken landing pages where 95% of traffic bounces." | **THE PROBLEM:**<br>*95% Bounce on Landing Pages* |
 | **0:16 - 0:30** | **The High-Ticket Offer:** Showing an interactive ManyChat conversation flow connected to Stripe and Calendar booking. | "If you can build automated DM funnels that qualify leads, collect emails, and book sales calls directly inside the Instagram inbox, brands will gladly pay you $1,500 to $2,500 a month to manage it." | **WHAT CLIENTS PAY FOR:**<br>*(In-Chat Checkout + Bookings)* |
 | **0:30 - 0:42** | **The Education:** Showing the ManyChat Summit speaker lineup (Zach King, Colin & Samir, Mike Yan). | "The ManyChat Instagram Summit is where the top 1% of agency owners learn these exact client-getting frameworks. The virtual pass is only $20." | **LEARN THE FRAMEWORK 🚀**<br>*(Virtual Pass: $20)* |
-| **0:42 - 0:50** | **The Bonus CTA:** Graphic of the $147 Automation Companion Pack. | "To give you an unfair advantage, I’m bundling our complete $147 n8n agency blueprint pack free with your pass. Comment **BONUS** below and I’ll DM you the private access link!" | **COMMENT 'BONUS' 👇**<br>*(Claim $147 Template Bundle)* |
+| **0:42 - 0:50** | **The Bonus CTA:** Graphic of the Community Automation Companion Pack. | "To give you an unfair advantage, I’m sharing our complete Community n8n agency blueprint pack 100% free. Comment **BONUS** below and I’ll DM you the direct access link!" | **COMMENT 'BONUS' 👇**<br>*(Claim Free Blueprint Bundle)* |
 
 ---
 
@@ -101,16 +101,16 @@ Always set ManyChat to post an automated random public reply to boost algorithmi
 * **Message 1 (Instant Greeting & Value Drop):**
   > *"Hey {{first_name}}! 👋 Thanks for commenting!*  
   >  
-  > *Here is your access pass to the **ManyChat Virtual Instagram Summit 2026** + our **$147 n8n Automation Companion Pack**.*  
+  > *Here is your access pass to the **ManyChat Virtual Instagram Summit 2026** + our **Community n8n Automation Blueprint Pack**.*  
   >  
   > *🎟️ **Step 1:** Grab your Virtual Pass here ($20):*  
-  > *https://igsummit.manychat.com/virtual?utm_source=5e9c7e02098b&utm_campaign=partnerstack*  
+  > *https://igsummit.manychat.com/virtual*  
   >  
   > *📦 **Step 2:** What is your best work email address so I can send your n8n workflow .JSON files directly to your inbox?"*
 * **Input Block (User Field: `email`):**
   * Validation: Must be a valid email format.
 * **Message 2 (Post-Email Delivery & Claim Confirmation):**
-  > *"Awesome, got it! 🚀 Once you grab your ticket above, verify your order at our bonus claim portal to instantly unlock your .ZIP download:*  
+  > *"Awesome, got it! 🚀 Download your open-source blueprint pack instantly at our community portal:*  
   >  
   > *👉 https://whoisalfaz.me/claim-manychat-bonus/*  
   >  

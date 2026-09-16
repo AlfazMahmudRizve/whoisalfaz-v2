@@ -49,7 +49,7 @@
 - **`app/audit/page.js`**:
   - Shortened title to: `"Free Website Audit Tool – SEO, Speed & Security | whoisalfaz"` (57 chars).
 - **`app/claim-manychat-bonus/page.js`**:
-  - Shortened title to: `"Claim Your $147 ManyChat & n8n Automation Bonus | WhoisAlfaz"` (59 chars).
+  - Shortened title to: `"Claim Community ManyChat & n8n Automation Blueprints | WhoisAlfaz"` (60 chars).
 
 ### 4. Meta Description Truncation & CTR Polish (140–155 Chars)
 - **`app/layout.tsx`**: Trimmed root description from 178 to 150 chars.

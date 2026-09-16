@@ -36,7 +36,7 @@
   <g transform="translate(360, 140)">
     <!-- Pill -->
     <rect x="0" y="0" width="340" height="36" rx="18" fill="#8B5CF6" fill-opacity="0.15" stroke="#A855F7" stroke-width="1.5" />
-    <text x="170" y="24" font-family="system-ui" font-size="13" font-weight="900" fill="#E9D5FF" text-anchor="middle" letter-spacing="2">★ OFFICIAL GLOBAL SUMMIT ★</text>
+    <text x="170" y="24" font-family="system-ui" font-size="13" font-weight="900" fill="#E9D5FF" text-anchor="middle" letter-spacing="2">COMMUNITY EVENT GUIDE</text>
 
     <!-- Title -->
     <text x="0" y="90" font-family="system-ui" font-size="22" font-weight="900" fill="#38BDF8" letter-spacing="4">INSTAGRAM SUMMIT</text>
@@ -46,14 +46,14 @@
 
     <!-- Features -->
     <g transform="translate(0, 235)">
-      <text x="0" y="0" font-family="system-ui" font-size="15" font-weight="700" fill="#FCD34D">🎁 INCLUDES $147 N8N BLUEPRINT BUNDLE</text>
+      <text x="0" y="0" font-family="system-ui" font-size="15" font-weight="700" fill="#FCD34D">🎁 FREE OPEN-SOURCE N8N BLUEPRINTS</text>
       <text x="0" y="24" font-family="system-ui" font-size="13" font-weight="500" fill="#64748B">Async Webhook Fix + Apollo CRM Scoring Pipeline + Qdrant RAG</text>
     </g>
 
     <!-- Button -->
     <g transform="translate(0, 310)">
       <rect x="0" y="0" width="380" height="56" rx="28" fill="url(#brandGradL)" />
-      <text x="190" y="36" font-family="system-ui" font-size="16" font-weight="900" fill="#FFFFFF" text-anchor="middle" letter-spacing="1">CLAIM VIRTUAL SUMMIT PASS →</text>
+      <text x="190" y="36" font-family="system-ui" font-size="16" font-weight="900" fill="#FFFFFF" text-anchor="middle" letter-spacing="1">VIEW ARCHITECTURE GUIDE →</text>
     </g>
   </g>
 </svg>

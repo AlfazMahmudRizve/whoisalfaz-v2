@@ -14,7 +14,7 @@ const client = createClient({
 const TITLE_UPDATES = {
   'databox-revops-dashboard-pipeline-velocity': 'Databox RevOps Dashboards: Pipeline Velocity & n8n SOP',
   'dify-ai-vultr-gpu-docker-deployment-guide': 'Dify.ai Vultr GPU Docker Guide: AI Stack Blueprint [2026]',
-  'manychat-instagram-summit-2026-agenda-review-bonus': 'ManyChat Instagram Summit 2026: Agenda & $147 Bonus Guide',
+  'manychat-instagram-summit-2026-agenda-review-bonus': 'ManyChat Instagram Summit 2026: Agenda & Bonus Guide [2026]',
   'scaling-qdrant-vector-database-to-10-million-embeddings': 'Scale Qdrant Vector DB to 10M Embeddings: Vultr SOP [2026]',
   'waterfall-data-enrichment-pipeline-n8n-guide': 'Waterfall Data Enrichment: n8n, Apollo & Lusha Guide [2026]'
 };

@@ -1,6 +1,6 @@
 # 🚀 ManyChat Instagram Summit 2026: B2B Carousel & Viral Syndication Package
-**Campaign:** ManyChat Instagram Summit ($20 Virtual Pass Bounty) + $147 n8n Automation Companion Pack  
-**Referral Tracking Link:** `https://igsummit.manychat.com/virtual?utm_source=5e9c7e02098b&utm_campaign=partnerstack`  
+**Campaign:** ManyChat Instagram Summit ($20 Virtual Pass Referral) + Community n8n Automation Blueprint Pack  
+**Referral Tracking Link:** `https://igsummit.manychat.com/virtual`  
 **Bonus Claim URL:** `https://whoisalfaz.me/claim-manychat-bonus/`  
 **Technical Pillar Reference:** `https://whoisalfaz.me/blog/manychat-n8n-async-timeout-fix/`  
 **Target Personas:** B2B Agency Founders, RevOps Architects, Performance Marketing Directors, E-Commerce Growth Leads, Automation Engineers  
@@ -274,29 +274,29 @@ This carousel is optimized for LinkedIn’s native Document Viewer (PDF upload).
 
 ---
 
-## 🖼️ SLIDE 6: The $147 Companion Bonus Pack Breakdown
-**Goal:** Create massive asymmetric value by giving away $147 in production workflows for a $20 ticket.
+## 🖼️ SLIDE 6: The Free Community Blueprint Pack Breakdown
+**Goal:** Provide high-value production n8n workflows for Instagram Summit attendees.
 
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
-│  EXCLUSIVE PARTNER STACK                                               │
-│  The $147 n8n Automation Companion Pack                                │
-│  100% Free When You Register for the Summit Through Our Partner Link   │
+│  COMMUNITY ARCHITECTURE STACK                                          │
+│  The Community n8n Automation Blueprint Pack                           │
+│  100% Free Open-Source Blueprints for Builders & Agencies              │
 │                                                                        │
 │  ┌──────────────────────────────────────────────────────────┐          │
-│  │ 📦 BLUEPRINT 1: ManyChat Async Timeout Engine ($49 Value)│          │
+│  │ 📦 BLUEPRINT 1: ManyChat Async Timeout Engine            │          │
 │  │ Complete n8n JSON with immediate handshake + retry queue │          │
 │  ├──────────────────────────────────────────────────────────┤          │
-│  │ 📦 BLUEPRINT 2: Apollo ➔ Brevo Lead Pipeline ($49 Value) │          │
+│  │ 📦 BLUEPRINT 2: Apollo ➔ Brevo Lead Pipeline             │          │
 │  │ Automated B2B data enrichment & CRM qualification engine │          │
 │  ├──────────────────────────────────────────────────────────┤          │
-│  │ 📦 BLUEPRINT 3: Qdrant Multi-Tenant RAG Agent ($49 Value)│          │
+│  │ 📦 BLUEPRINT 3: Qdrant Multi-Tenant RAG Agent            │          │
 │  │ Context-aware vector memory for conversational AI bots   │          │
 │  ├──────────────────────────────────────────────────────────┤          │
 │  │ 📄 BONUS: Production Deployment SOP & Video Walkthrough  │          │
 │  └──────────────────────────────────────────────────────────┘          │
 │                                                                        │
-│  TOTAL VALUE: $147  ➔  YOUR COST WITH $20 PASS: $0.00                  │
+│  TIER: Open-Source Community  ➔  YOUR COST: $0.00                      │
 │                                                                        │
 │  Alfaz Mahmud Rizve · whoisalfaz.me                      Swipe ➔ [6/7] │
 └────────────────────────────────────────────────────────────────────────┘
@@ -306,7 +306,7 @@ This carousel is optimized for LinkedIn’s native Document Viewer (PDF upload).
 * **Background:** Deep Slate 950 with stacked luxury offer cards.
 * **Offer Box:** 4 stacked rows with Slate 900 background, Slate 800 borders, and Vibrant Teal badges.
 * **Value Equation Banner:** Large bold calculation box:
-  * `TOTAL VALUE: $147` in strikethrough Slate 400.
+  * `TIER: Open-Source Community` in Slate 400.
   * `YOUR COST: $0.00` in glowing Vibrant Teal 400 (`#2DD4BF`, 32px Bold).
 * **Trust Seal:** `Verified n8n Community Compatible · Production Tested at 50k+ chats/month`.
 * **Footer:** Standard branding + `Swipe ➔ [6/7]`.
@@ -319,23 +319,23 @@ This carousel is optimized for LinkedIn’s native Document Viewer (PDF upload).
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
 │  CLAIM YOUR BLUEPRINT PACK                                             │
-│  How to Get Your Pass + $147 Bonus Vault                               │
+│  How to Get Your Pass + Community Blueprint Vault                      │
 │                                                                        │
 │  STEP 1:                                                               │
 │  Comment "SUMMIT" Below 👇                                             │
-│  I’ll send you the direct partner link and bonus access portal.        │
+│  I’ll send you the direct event link and blueprint access portal.      │
 │                                                                        │
 │  STEP 2:                                                               │
-│  Grab your $20 Virtual Summit Pass at:                                 │
-│  igsummit.manychat.com/virtual?utm_source=5e9c7e02098b                 │
+│  Review the $20 Virtual Summit Pass at:                                │
+│  igsummit.manychat.com/virtual                                         │
 │                                                                        │
 │  STEP 3:                                                               │
-│  Enter your Order ID on our Bonus Claim Portal:                        │
+│  Download from our Community Portal:                                   │
 │  whoisalfaz.me/claim-manychat-bonus/                                   │
 │  Instant access to your 3x production n8n JSON blueprints.             │
 │                                                                        │
 │  ┌──────────────────────────────────────────────────────────────────┐  │
-│  │ ⚡ LIMITED AVAILABILITY: Bonus vault closes once summit begins.   │  │
+│  │ ⚡ OPEN SOURCE: Free community download for all automation teams. │  │
 │  └──────────────────────────────────────────────────────────────────┘  │
 │                                                                        │
 │  Alfaz Mahmud Rizve · whoisalfaz.me                      [Slide 7/7]   │
@@ -400,19 +400,19 @@ ManyChat is hosting their official 2026 Virtual Instagram Summit:
 
 Virtual passes are just $20.
 
-🎁 EXCLUSIVE COMPANION BONUS:
-If you grab your virtual pass through our partner link, I will send you our complete $147 n8n Automation Companion Pack 100% Free:
+🎁 EXCLUSIVE COMPANION BLUEPRINTS:
+To help builders and agencies deploy these architectures without timeouts, we provide our complete Community n8n Automation Blueprint Pack 100% Free:
 ✅ Blueprint 1: ManyChat Async 10s Timeout Handler (n8n JSON)
 ✅ Blueprint 2: Apollo to Brevo Lead Enrichment Pipeline (n8n JSON)
 ✅ Blueprint 3: Multi-Tenant Vector Search RAG Agent Architecture
 ✅ Full SOP deployment documentation
 
-👉 HOW TO CLAIM:
+👉 HOW TO ACCESS:
 1. Comment "SUMMIT" below and I’ll DM you the link immediately.
-2. Or register directly here: https://igsummit.manychat.com/virtual?utm_source=5e9c7e02098b&utm_campaign=partnerstack
-3. Claim your $147 bonus pack at: https://whoisalfaz.me/claim-manychat-bonus/
+2. Or review the summit directly here: https://igsummit.manychat.com/virtual
+3. Download your free community blueprint pack at: https://whoisalfaz.me/claim-manychat-bonus/
 
-(Transparency note: We are an authorized ManyChat affiliate partner. Grabbing your ticket through our link unlocks your free bonus pack at zero extra cost to you!)
+(Note: Independent educational resource. Workflows provided free by WhoisAlfaz for the automation community.)
 
 #ManyChat #InstagramAutomation #RevOps #n8n #MarketingAutomation #LeadGeneration #B2BGrowth #SystemsArchitecture
 ```
@@ -479,7 +479,7 @@ Before vs. After deploying this decoupled architecture:
 • Booked Sales Calls: +38%
 • Peak Concurrency: Tested at 1,200 concurrent chats/hour with zero server throttling.
 
-[Tweet 6/7 - The Summit Announcement & Bonus]
+[Tweet 6/7 - The Summit Announcement & Blueprints]
 If you want to master high-converting conversational funnels in 2026, @ManyChat is hosting their official Virtual Instagram Summit.
 
 Lineup is stacked:
@@ -489,18 +489,18 @@ Lineup is stacked:
 
 Tickets are just $20.
 
-And I’m giving away our entire $147 n8n blueprint stack for free if you attend 👇
+And I’m sharing our entire Community n8n blueprint stack 100% free 👇
 
-[Tweet 7/7 - The CTA & Clean Disclosure]
-🎁 Get the Summit Pass + $147 Blueprint Pack:
+[Tweet 7/7 - The CTA]
+🎁 Review the Summit Pass + Free Community Blueprint Pack:
 
-1. Grab your $20 pass:
-https://igsummit.manychat.com/virtual?utm_source=5e9c7e02098b&utm_campaign=partnerstack
+1. Review the $20 pass:
+https://igsummit.manychat.com/virtual
 
-2. Claim the free 3x n8n blueprint pack (.json):
+2. Download the free 3x n8n blueprint pack (.json):
 https://whoisalfaz.me/claim-manychat-bonus/
 
-(Affiliate Disclosure: We earn a commission if you register via our link, which funds our open-source blueprints at $0 cost to you!)
+(Independent Resource: All n8n blueprints are open-source and free to download via WhoisAlfaz.)
 ```
 
 ---
@@ -686,7 +686,7 @@ Passes are $20 for the virtual livestream and replays.
 
 For our technical audience, we also assembled a complete implementation pack (including our n8n async timeout blueprint, Apollo enrichment pipeline, and deployment SOPs) as a complimentary bonus for summit attendees:
 * Technical article breakdown: `https://whoisalfaz.me/blog/manychat-n8n-async-timeout-fix/`
-* Summit registration: `https://igsummit.manychat.com/virtual?utm_source=5e9c7e02098b&utm_campaign=partnerstack`
+* Summit registration: `https://igsummit.manychat.com/virtual`
 * Free companion pack claim: `https://whoisalfaz.me/claim-manychat-bonus/`
 
 Curious to hear from other media buyers and RevOps operators: Are you seeing higher ROAS shifting budget from landing pages to click-to-DM ads this quarter?
@@ -815,7 +815,7 @@ Let me know if you’re running n8n in queue mode and how you approach long-runn
 ### Pre-Launch Preparation
 - [x] Canonical blog post verified live at `https://whoisalfaz.me/blog/manychat-n8n-async-timeout-fix/`
 - [x] Bonus claim portal verified at `https://whoisalfaz.me/claim-manychat-bonus/`
-- [x] PartnerStack affiliate tracking link tested: `https://igsummit.manychat.com/virtual?utm_source=5e9c7e02098b&utm_campaign=partnerstack`
+- [x] Summit registration link verified: `https://igsummit.manychat.com/virtual`
 - [x] Workflow JSON blueprints packaged and hosted in bonus repository
 
 ### Execution Schedule
