@@ -518,6 +518,26 @@ const nextConfig: NextConfig = {
         destination: '/blog/dify-ai-workflow-orchestration-vs-n8n-ai-agent-nodes/',
         permanent: true,
       },
+      {
+        source: '/case-studies/tempmail10min-seo-audit/:path*',
+        destination: '/blog/tempmail10min-technical-seo/',
+        permanent: true,
+      },
+      {
+        source: '/case-studies/tempmail10min-seo-audit',
+        destination: '/blog/tempmail10min-technical-seo/',
+        permanent: true,
+      },
+      {
+        source: '/blog/tempmail10min-seo-audit/:path*',
+        destination: '/blog/tempmail10min-technical-seo/',
+        permanent: true,
+      },
+      {
+        source: '/blog/tempmail10min-seo-audit',
+        destination: '/blog/tempmail10min-technical-seo/',
+        permanent: true,
+      },
     ];
   },
   async rewrites() {
