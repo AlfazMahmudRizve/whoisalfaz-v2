@@ -1,4 +1,4 @@
-﻿const { createClient } = require('@sanity/client');
+const { createClient } = require('@sanity/client');
 const fs = require('fs');
 const path = require('path');
 const dotenv = require('dotenv');
@@ -20,7 +20,7 @@ const schemaMarkupObj = {
   "@graph": [
     {
       "@type": "FAQPage",
-      "@id": "https://whoisalfaz.me/blog/tempmail10min-technical-seo/#faq",
+      "@id": "https://whoisalfaz.me/blog/tempmail10min-seo-case-study/#faq",
       "mainEntity": [
         {
           "@type": "Question",
@@ -63,7 +63,7 @@ const postDoc = {
   _id: 'post-tempmail10min-technical-seo',
   _type: 'post',
   title: 'SEO Lead Case Study: Scaling TempMail10min [Week 1 Live Log]',
-  slug: { _type: 'slug', current: 'tempmail10min-technical-seo' },
+  slug: { _type: 'slug', current: 'tempmail10min-seo-case-study' },
   description: 'Documenting the live SEO journey of TempMail10min as SEO Lead. Week 1: Launch audit, fixing parameter crawl traps, 8-tool benchmark, and weekly growth tracker.',
   seoTitle: 'TempMail10min SEO Case Study: Week 1 Live Log [2026]',
   seoDescription: 'Documenting the live SEO journey of TempMail10min. Week 1: Launch audit, fixing parameter crawl traps, 8-tool benchmark, and weekly growth tracking.',

@@ -5,8 +5,8 @@ seoDescription: "Case study on fixing root mirrors, crawl debt, preloader paint 
 description: "How I handled launch issues, sorted crawl directives, fixed mobile load speeds, and built a competitor benchmarking lab as SEO Lead for TempMail10min."
 datePublished: "2026-09-17T15:00:00Z"
 dateModified: "2026-09-17T15:00:00Z"
-canonical: "https://whoisalfaz.me/blog/tempmail10min-technical-seo/"
-slug: "tempmail10min-technical-seo"
+canonical: "https://whoisalfaz.me/blog/tempmail10min-seo-case-study/"
+slug: "tempmail10min-seo-case-study"
 targetSlug: "/case-studies/tempmail10min-seo-audit"
 author:
   name: "Alfaz Mahmud Rizve"
@@ -27,7 +27,7 @@ keywords:
   - "Exact Match Domain SEO"
 ---
 
-When managing the launch and organic strategy for **[TempMail10min](https://temp-mail10min.online/)**, I had to figure out everything from server-level crawl issues to content structure. In the disposable email space, you are competing against established players with older domains and heavy traffic. Running an exact match domain (EMD) comes with extra scrutiny—if your technical foundation or content looks low-effort, search engines simply won't rank you.
+When managing the launch and organic strategy for **[TempMail10min](https://temp-mail10min.online/)**, I had to figure out everything from server-level crawl issues to content structure. In the disposable email space, you are competing against established players with older domains and heavy traffic. Running an exact match domain (EMD) comes with extra scrutinyï¿½if your technical foundation or content looks low-effort, search engines simply won't rank you.
 
 Here is a straightforward breakdown of how we fixed the site's initial setup, sorted out crawl directives, and built our benchmark content to establish topical relevance.
 
@@ -106,7 +106,7 @@ Single-tool utility websites easily fall into the "thin content" trap if all the
 Instead of writing standard informational articles, we ran a direct comparison across 8 popular temporary mail services (including Temp-Mail.org, 10MinuteMail, and Guerrilla Mail). We tested them across three areas:
 1. **Delivery Speed:** How fast OTP codes and verification emails arrived from major SMTP relays.
 2. **Platform Acceptance:** Testing domains across 50 popular sign-up portals to measure blacklist rejection rates.
-3. **Data Storage:** Checking how each service handled privacy—specifically RAM-only ephemeral storage (`tmpfs`) versus permanent database logs.
+3. **Data Storage:** Checking how each service handled privacyï¿½specifically RAM-only ephemeral storage (`tmpfs`) versus permanent database logs.
 
 We published the complete teardown in our **[benchmark study of 8 disposable temporary email services](https://temp-mail10min.online/post/best-disposable-temporary-email-services)**. The test showed TempMail10min delivering incoming mail in ~1.4 seconds with a 96% acceptance rate. This gave the blog genuine utility and a natural internal link structure linking back into our core email generator.
 

@@ -10,6 +10,7 @@ if sys.platform == 'win32':
     sys.stdout.reconfigure(encoding='utf-8')
 
 urls_to_submit = [
+    "https://whoisalfaz.me/blog/tempmail10min-seo-case-study/",
     "https://whoisalfaz.me/blog/tempmail10min-technical-seo/",
     "https://whoisalfaz.me/blog/",
     "https://whoisalfaz.me/sitemap.xml"
