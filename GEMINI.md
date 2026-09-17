@@ -1,0 +1,19 @@
+# Workspace Guidelines: whoisalfaz-v2
+
+## 🚀 Git Sync & Deployment Guidelines
+- **NEVER RUN `npm run push all` or `npm run push:all`:**
+  - There is no `push:all` or `push all` script in `package.json`.
+  - Attempting to run `npm run push all` will fail with an npm script missing error.
+- **ONLY `git push` WILL WORK:**
+  - To push local commits to GitHub:
+    - Standard: `git push origin main`
+    - Dual-Remote with PAT: `node scripts/pushWithPat.js` (pushes to both `AlfazMahmudRizve/whoisalfaz-v2` and `Whois-Alfaz/whoisalfazv2`)
+
+## 🛠️ Build & Verification Guidelines
+- Always verify type safety with `npx tsc --noEmit` before committing code changes.
+- Never touch `/store/` or vault components without explicit instructions.
+
+## ✍️ Content & SEO Guidelines
+- Follow `BLOG_INSTRUCTIONS.md` for Sanity CMS publishing workflows.
+- SEO Titles must be strictly $\le 58$ characters to prevent Google SERP truncation.
+- Always use programmatic Google Indexing (`scripts/submitUpdatedPostsToGoogleIndexing.py` or dedicated indexing scripts) for newly published or updated URLs.
