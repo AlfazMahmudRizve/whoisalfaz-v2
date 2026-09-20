@@ -3,10 +3,10 @@ import { getSanityPosts, getSanityCategories } from '@/lib/sanity.client';
 import { serviceData } from '@/lib/serviceData';
 import { NON_CANONICAL_SLUGS } from '@/lib/seo-constants';
 
-// Cache the sitemap for 12 hours to avoid cold Sanity CDN hits on every Googlebot crawl.
+// Cache the sitemap for 24 hours to avoid cold Sanity CDN hits on every Googlebot crawl.
 // Without this, each Googlebot fetch re-runs the async Sanity queries live, causing
 // "Temporary processing error" if Sanity is slow or returning a non-200 at that moment.
-export const revalidate = 43200; // 12 hours in seconds
+export const revalidate = 86400; // 24 hours — sitemap only needs daily regeneration
 
 interface SanityPost {
     slug: { current: string };

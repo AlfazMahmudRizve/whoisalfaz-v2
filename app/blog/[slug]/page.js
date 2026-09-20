@@ -23,8 +23,8 @@ import remarkGfm from 'remark-gfm';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import { CANONICAL_OVERRIDES } from '@/lib/seo-constants';
 
-export const dynamicParams = true;
-export const revalidate = 3600; // 1 hour — reduces background Sanity refetch pressure
+export const dynamicParams = false;
+export const revalidate = false; // Fully static — use on-demand revalidation via /api/revalidate
 
 export { CANONICAL_OVERRIDES };
 

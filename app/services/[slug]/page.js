@@ -6,6 +6,12 @@ import { ArrowRight, CheckCircle2, ExternalLink } from 'lucide-react';
 import { serviceData } from '../../../lib/serviceData';
 import { getSanityPosts } from '@/lib/sanity.client';
 
+export const dynamicParams = false;
+
+export async function generateStaticParams() {
+    return Object.keys(serviceData).map((slug) => ({ slug }));
+}
+
 export const generateMetadata = async ({ params }) => {
     const { slug } = await params;
     const service = serviceData[slug];

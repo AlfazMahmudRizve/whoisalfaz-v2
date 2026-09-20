@@ -7,6 +7,9 @@ import Image from 'next/image';
 import { ChevronRight, BookOpen, Clock, ArrowRight } from 'lucide-react';
 import SearchWidget from '../../../../components/SearchWidget';
 
+export const dynamicParams = false;
+export const revalidate = false; // Fully static — use on-demand revalidation via /api/revalidate
+
 // Helper to get cached posts for sidebar (optional optimization)
 async function getSidebarData() {
     const posts = await getSanityPosts();
@@ -55,6 +58,10 @@ const CATEGORY_MAP = {
         description: 'Forensic technical SEO guides, programmatic indexation blueprints, and Generative Engine Optimization (GEO) strategies.'
     }
 };
+
+export async function generateStaticParams() {
+    return Object.keys(CATEGORY_MAP).map((slug) => ({ slug }));
+}
 
 export async function generateMetadata({ params }) {
     const { slug } = await params;

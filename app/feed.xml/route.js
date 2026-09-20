@@ -45,7 +45,7 @@ export async function GET() {
     return new Response(rss, {
         headers: {
             'Content-Type': 'text/xml',
-            'Cache-Control': 'public, s-maxage=3600, stale-while-revalidate=600',
+            'Cache-Control': 'public, s-maxage=86400',
         },
     });
 }

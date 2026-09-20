@@ -9,6 +9,8 @@ import SearchWidget from '../../components/SearchWidget';
 import DefaultContentFooter from '../../components/footers/DefaultContentFooter';
 import { FadeUp, StaggerContainer, StaggerItem } from '@/components/MotionWrappers';
 
+export const revalidate = false; // Fully static — use on-demand revalidation via /api/revalidate
+
 export const metadata = {
     title: "Blog | AI Automation, Next.js & RevOps Insights",
     description: "Actionable engineering playbooks, n8n automation tutorials, and architectural insights for scaling SaaS founders and agencies.",
