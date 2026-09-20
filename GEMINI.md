@@ -16,4 +16,5 @@
 ## ✍️ Content & SEO Guidelines
 - Follow `BLOG_INSTRUCTIONS.md` for Sanity CMS publishing workflows.
 - SEO Titles must be strictly $\le 58$ characters to prevent Google SERP truncation.
+- **On-Demand Cache Revalidation:** Always trigger on-demand cache revalidation (`node scripts/triggerRevalidate.js /blog/<slug>/ /blog/` or `--all`) immediately after publishing or modifying content in Sanity CMS so the static edge cache updates.
 - Always use programmatic Google Indexing (`scripts/submitUpdatedPostsToGoogleIndexing.py` or dedicated indexing scripts) for newly published or updated URLs.
