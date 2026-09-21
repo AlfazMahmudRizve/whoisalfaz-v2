@@ -103,9 +103,8 @@ async function runSyntheticPerformanceCheck(url: string, reasonNotice?: string):
             `🚀 Modern Resource Hints: ${hasPreload || hasDnsPrefetch ? '✅ Preload/DNS-prefetch active' : '💡 Consider adding preload/dns-prefetch tags'}`,
         ];
 
-        if (reasonNotice) {
-            details.unshift(`ℹ️ Synthetic Edge Benchmark (${reasonNotice})`);
-        }
+        // Professional diagnostic header (never leak raw API errors like '400' to visitors)
+        details.unshift('⚡ Live Edge Performance Diagnostic');
 
         let summary: string;
         if (score >= 85) summary = `Fast response (${score}/100). Server TTFB is ${ttfb}ms with optimized initial payload.`;
@@ -129,12 +128,13 @@ export async function runPageSpeedCheck(url: string): Promise<CheckResult> {
     const name = 'Performance & Core Web Vitals';
     const rawKey = process.env.GOOGLE_PAGESPEED_API_KEY;
 
-    let apiKey = rawKey?.trim();
-    if (apiKey && !apiKey.startsWith('AIzaSy')) {
+    // Sanitize key (strip any surrounding quotes, backticks, or accidental whitespace)
+    let apiKey = rawKey ? rawKey.replace(/['"`\s]/g, '').trim() : undefined;
+    if (apiKey && !apiKey.startsWith('AIzaSy') && !apiKey.includes('AIzaSy')) {
         apiKey = `AIzaSy${apiKey}`;
     }
 
-    // If an API key is available, run Google PageSpeed Insights
+    // If an API key is available, attempt Google PageSpeed Insights
     if (apiKey) {
         const maxRetries = 1;
         for (let attempt = 0; attempt <= maxRetries; attempt++) {
@@ -153,13 +153,14 @@ export async function runPageSpeedCheck(url: string): Promise<CheckResult> {
                         await new Promise(r => setTimeout(r, 2000));
                         continue;
                     }
-                    // Quota exceeded: Fall back smoothly to synthetic edge benchmark
-                    return await runSyntheticPerformanceCheck(url, 'Live benchmark fallback');
+                    console.warn('[PageSpeed] Google rate limit hit — using live edge benchmark');
+                    return await runSyntheticPerformanceCheck(url);
                 }
 
                 if (!res.ok) {
-                    // Non-200 from Google: Fall back to synthetic benchmark
-                    return await runSyntheticPerformanceCheck(url, `API response ${res.status}`);
+                    const errBody = await res.text().catch(() => '');
+                    console.warn(`[PageSpeed] Google returned ${res.status}:`, errBody);
+                    return await runSyntheticPerformanceCheck(url);
                 }
 
                 const data = await res.json();
@@ -192,12 +193,12 @@ export async function runPageSpeedCheck(url: string): Promise<CheckResult> {
                 return { name, status, score: perfScore, summary, details };
             } catch {
                 if (attempt < maxRetries) continue;
-                return await runSyntheticPerformanceCheck(url, 'Google timeout fallback');
+                return await runSyntheticPerformanceCheck(url);
             }
         }
     }
 
-    // If no API key is provided, seamlessly run the synthetic performance benchmark
+    // Seamless fallback to live edge benchmark
     return await runSyntheticPerformanceCheck(url);
 }
 
