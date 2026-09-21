@@ -7,7 +7,7 @@
 - **ONLY `git push` WILL WORK:**
   - To push local commits to GitHub:
     - Standard: `git push origin main`
-    - Dual-Remote with PAT: `node scripts/pushWithPat.js` (pushes to both `AlfazMahmudRizve/whoisalfaz-v2` and `Whois-Alfaz/whoisalfazv2`)
+    - With PAT: `node scripts/pushWithPat.js` (pushes to `AlfazMahmudRizve/whoisalfaz-v2`)
 
 ## 🛠️ Build & Verification Guidelines
 - Always verify type safety with `npx tsc --noEmit` before committing code changes.

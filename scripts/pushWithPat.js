@@ -17,13 +17,6 @@ try {
   console.log('✅ Pushed to origin successfully!');
 } catch (e) {
   console.error('❌ Failed to push to origin:', e.message);
+  process.exit(1);
 }
 
-try {
-  console.log('\n🚀 Pushing to deploy (Whois-Alfaz/whoisalfazv2)...');
-  const deployUrl = `https://AlfazMahmudRizve:${pat}@github.com/Whois-Alfaz/whoisalfazv2.git`;
-  execSync(`git push "${deployUrl}" main --force`, { stdio: 'inherit' });
-  console.log('✅ Pushed to deploy successfully!');
-} catch (e) {
-  console.error('⚠️ Note on deploy remote:', e.message);
-}
