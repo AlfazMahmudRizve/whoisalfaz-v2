@@ -34,12 +34,21 @@ const batch4Slugs = [
   'automate-personal-branding-with-n8n'
 ];
 
+const batch5Slugs = [
+  'automated-pdf-document-chunking-vectorization-n8n',
+  'semantic-search-api-n8n-qdrant-fastapi-bridge',
+  'closed-loop-lead-attribution-engine',
+  'databox-revops-dashboard-pipeline-velocity',
+  'whatconverts-vs-callrail-attribution'
+];
+
 ledger.forEach(item => {
   if (
     batch1Slugs.includes(item.slug) || 
     batch2Slugs.includes(item.slug) || 
     batch3Slugs.includes(item.slug) ||
-    batch4Slugs.includes(item.slug)
+    batch4Slugs.includes(item.slug) ||
+    batch5Slugs.includes(item.slug)
   ) {
     item.status = 'VERIFIED';
     item.aiSlopHits = 0;
@@ -51,6 +60,7 @@ fs.writeFileSync('scratch/master_upgrade_ledger.json', JSON.stringify(ledger, nu
 
 const verified = ledger.filter(i => i.status === 'VERIFIED').length;
 console.log(`Updated Master Ledger: ${verified} / 105 articles VERIFIED.`);
+
 
 
 

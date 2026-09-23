@@ -17,7 +17,7 @@
       "robust": 1
     },
     "status": "VERIFIED",
-    "lastUpdated": "2026-09-23T17:43:22.532Z"
+    "lastUpdated": "2026-09-23T17:55:48.630Z"
   },
   {
     "index": 2,
@@ -37,7 +37,7 @@
       "robust": 1
     },
     "status": "VERIFIED",
-    "lastUpdated": "2026-09-23T17:43:22.534Z"
+    "lastUpdated": "2026-09-23T17:55:48.630Z"
   },
   {
     "index": 3,
@@ -56,7 +56,7 @@
       "robust": 2
     },
     "status": "VERIFIED",
-    "lastUpdated": "2026-09-23T17:43:22.534Z"
+    "lastUpdated": "2026-09-23T17:55:48.630Z"
   },
   {
     "index": 4,
@@ -76,7 +76,7 @@
       "robust": 1
     },
     "status": "VERIFIED",
-    "lastUpdated": "2026-09-23T17:43:22.534Z"
+    "lastUpdated": "2026-09-23T17:55:48.630Z"
   },
   {
     "index": 5,
@@ -95,7 +95,7 @@
       "furthermore": 4
     },
     "status": "VERIFIED",
-    "lastUpdated": "2026-09-23T17:43:22.534Z"
+    "lastUpdated": "2026-09-23T17:55:48.630Z"
   },
   {
     "index": 6,
@@ -114,7 +114,7 @@
       "furthermore": 2
     },
     "status": "VERIFIED",
-    "lastUpdated": "2026-09-23T17:43:22.534Z"
+    "lastUpdated": "2026-09-23T17:55:48.630Z"
   },
   {
     "index": 7,
@@ -134,7 +134,7 @@
       "robust": 2
     },
     "status": "VERIFIED",
-    "lastUpdated": "2026-09-23T17:43:22.534Z"
+    "lastUpdated": "2026-09-23T17:55:48.630Z"
   },
   {
     "index": 8,
@@ -153,7 +153,7 @@
       "robust": 1
     },
     "status": "VERIFIED",
-    "lastUpdated": "2026-09-23T17:43:22.534Z"
+    "lastUpdated": "2026-09-23T17:55:48.630Z"
   },
   {
     "index": 9,
@@ -172,7 +172,7 @@
       "robust": 2
     },
     "status": "VERIFIED",
-    "lastUpdated": "2026-09-23T17:43:22.534Z"
+    "lastUpdated": "2026-09-23T17:55:48.630Z"
   },
   {
     "index": 10,
@@ -191,7 +191,7 @@
       "robust": 1
     },
     "status": "VERIFIED",
-    "lastUpdated": "2026-09-23T17:43:22.534Z"
+    "lastUpdated": "2026-09-23T17:55:48.630Z"
   },
   {
     "index": 11,
@@ -209,7 +209,7 @@
       "robust": 4
     },
     "status": "VERIFIED",
-    "lastUpdated": "2026-09-23T17:43:22.534Z"
+    "lastUpdated": "2026-09-23T17:55:48.630Z"
   },
   {
     "index": 12,
@@ -229,7 +229,7 @@
       "robust": 1
     },
     "status": "VERIFIED",
-    "lastUpdated": "2026-09-23T17:43:22.534Z"
+    "lastUpdated": "2026-09-23T17:55:48.630Z"
   },
   {
     "index": 13,
@@ -247,7 +247,7 @@
       "seamless": 1
     },
     "status": "VERIFIED",
-    "lastUpdated": "2026-09-23T17:43:22.534Z"
+    "lastUpdated": "2026-09-23T17:55:48.630Z"
   },
   {
     "index": 14,
@@ -266,7 +266,7 @@
       "furthermore": 1
     },
     "status": "VERIFIED",
-    "lastUpdated": "2026-09-23T17:43:22.534Z"
+    "lastUpdated": "2026-09-23T17:55:48.630Z"
   },
   {
     "index": 15,
@@ -284,7 +284,7 @@
       "furthermore": 2
     },
     "status": "VERIFIED",
-    "lastUpdated": "2026-09-23T17:43:22.534Z"
+    "lastUpdated": "2026-09-23T17:55:48.630Z"
   },
   {
     "index": 16,
@@ -301,7 +301,7 @@
       "furthermore": 4
     },
     "status": "VERIFIED",
-    "lastUpdated": "2026-09-23T17:43:22.534Z"
+    "lastUpdated": "2026-09-23T17:55:48.630Z"
   },
   {
     "index": 17,
@@ -319,7 +319,7 @@
       "furthermore": 2
     },
     "status": "VERIFIED",
-    "lastUpdated": "2026-09-23T17:43:22.534Z"
+    "lastUpdated": "2026-09-23T17:55:48.630Z"
   },
   {
     "index": 18,
@@ -338,7 +338,7 @@
       "crucial": 1
     },
     "status": "VERIFIED",
-    "lastUpdated": "2026-09-23T17:43:22.534Z"
+    "lastUpdated": "2026-09-23T17:55:48.630Z"
   },
   {
     "index": 19,
@@ -357,7 +357,7 @@
       "robust": 2
     },
     "status": "VERIFIED",
-    "lastUpdated": "2026-09-23T17:43:22.534Z"
+    "lastUpdated": "2026-09-23T17:55:48.630Z"
   },
   {
     "index": 20,
@@ -376,7 +376,7 @@
       "tapestry": 1
     },
     "status": "VERIFIED",
-    "lastUpdated": "2026-09-23T17:43:22.534Z"
+    "lastUpdated": "2026-09-23T17:55:48.630Z"
   },
   {
     "index": 21,
@@ -387,14 +387,14 @@
     "currentSeoTitle": "[Step-by-Step] Automated PDF Document Chunking in n8n",
     "titleLength": 53,
     "wordCount": 2306,
-    "aiSlopHits": 3,
+    "aiSlopHits": 0,
     "hasSyrupyIntro": false,
     "bannedTerms": {
       "seamless": 1,
       "robust": 2
     },
-    "status": "PENDING",
-    "lastUpdated": null
+    "status": "VERIFIED",
+    "lastUpdated": "2026-09-23T17:55:48.630Z"
   },
   {
     "index": 22,
@@ -405,14 +405,14 @@
     "currentSeoTitle": "[Step-by-Step] Semantic Search API with n8n & Qdrant",
     "titleLength": 52,
     "wordCount": 3467,
-    "aiSlopHits": 3,
+    "aiSlopHits": 0,
     "hasSyrupyIntro": false,
     "bannedTerms": {
       "seamless": 1,
       "furthermore": 2
     },
-    "status": "PENDING",
-    "lastUpdated": null
+    "status": "VERIFIED",
+    "lastUpdated": "2026-09-23T17:55:48.630Z"
   },
   {
     "index": 23,
@@ -423,14 +423,14 @@
     "currentSeoTitle": "[SOP Guide] Closed-Loop Lead Attribution Engine in n8n",
     "titleLength": 54,
     "wordCount": 2507,
-    "aiSlopHits": 3,
+    "aiSlopHits": 0,
     "hasSyrupyIntro": false,
     "bannedTerms": {
       "seamless": 1,
       "furthermore": 2
     },
-    "status": "PENDING",
-    "lastUpdated": null
+    "status": "VERIFIED",
+    "lastUpdated": "2026-09-23T17:55:48.630Z"
   },
   {
     "index": 24,
@@ -441,13 +441,13 @@
     "currentSeoTitle": "[SOP Guide] Databox RevOps Dashboard & Pipeline Velocity",
     "titleLength": 56,
     "wordCount": 2522,
-    "aiSlopHits": 3,
+    "aiSlopHits": 0,
     "hasSyrupyIntro": true,
     "bannedTerms": {
       "furthermore": 3
     },
-    "status": "PENDING",
-    "lastUpdated": null
+    "status": "VERIFIED",
+    "lastUpdated": "2026-09-23T17:55:48.630Z"
   },
   {
     "index": 25,
@@ -458,13 +458,13 @@
     "currentSeoTitle": "[Benchmark] WhatConverts vs CallRail Attribution in n8n",
     "titleLength": 55,
     "wordCount": 1667,
-    "aiSlopHits": 3,
+    "aiSlopHits": 0,
     "hasSyrupyIntro": false,
     "bannedTerms": {
       "furthermore": 3
     },
-    "status": "PENDING",
-    "lastUpdated": null
+    "status": "VERIFIED",
+    "lastUpdated": "2026-09-23T17:55:48.630Z"
   },
   {
     "index": 26,
