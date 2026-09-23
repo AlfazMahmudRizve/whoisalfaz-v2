@@ -98,6 +98,14 @@ const batch12Slugs = [
   'aisdr-vs-human-sdr-performance-teardown'
 ];
 
+const batch13Slugs = [
+  'manychat-n8n-async-timeout-fix',
+  'case-study-urban-cafe-foodtech-platform',
+  'manychat-to-n8n-integration-lead-scoring',
+  'build-personal-ai-assistant',
+  'automate-client-reporting-with-n8n'
+];
+
 ledger.forEach(item => {
   if (
     batch1Slugs.includes(item.slug) || 
@@ -111,7 +119,8 @@ ledger.forEach(item => {
     batch9Slugs.includes(item.slug) ||
     batch10Slugs.includes(item.slug) ||
     batch11Slugs.includes(item.slug) ||
-    batch12Slugs.includes(item.slug)
+    batch12Slugs.includes(item.slug) ||
+    batch13Slugs.includes(item.slug)
   ) {
     item.status = 'VERIFIED';
     item.aiSlopHits = 0;
