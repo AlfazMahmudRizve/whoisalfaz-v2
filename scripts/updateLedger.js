@@ -154,6 +154,14 @@ const batch19Slugs = [
   'n8n-slack-notifications-by-alfaz-mahmud-rizve'
 ];
 
+const batch20Slugs = [
+  'lead-scoring-automation-with-alfaz-mahmud-rizve',
+  'capture-n8n-lead-data-from-wordpress-elementor',
+  'n8n-debugging-error-handling-basics',
+  'essential-n8n-core-nodes-by-alfaz-mahmud-rizve',
+  'n8n-workflow-design-best-practices'
+];
+
 ledger.forEach(item => {
   if (
     batch1Slugs.includes(item.slug) || 
@@ -174,7 +182,8 @@ ledger.forEach(item => {
     batch16Slugs.includes(item.slug) ||
     batch17Slugs.includes(item.slug) ||
     batch18Slugs.includes(item.slug) ||
-    batch19Slugs.includes(item.slug)
+    batch19Slugs.includes(item.slug) ||
+    batch20Slugs.includes(item.slug)
   ) {
     item.status = 'VERIFIED';
     item.aiSlopHits = 0;
