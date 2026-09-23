@@ -162,6 +162,14 @@ const batch20Slugs = [
   'n8n-workflow-design-best-practices'
 ];
 
+const batch21Slugs = [
+  'what-is-n8n-and-how-to-set-it-up',
+  'what-is-n8n-by-alfaz-mahmud-rizve',
+  'automation-operating-system-for-saas',
+  'case-study-client-portfolio-delivery',
+  'case-study-whoisalfaz-seo-indexing-engine'
+];
+
 ledger.forEach(item => {
   if (
     batch1Slugs.includes(item.slug) || 
@@ -183,7 +191,8 @@ ledger.forEach(item => {
     batch17Slugs.includes(item.slug) ||
     batch18Slugs.includes(item.slug) ||
     batch19Slugs.includes(item.slug) ||
-    batch20Slugs.includes(item.slug)
+    batch20Slugs.includes(item.slug) ||
+    batch21Slugs.includes(item.slug)
   ) {
     item.status = 'VERIFIED';
     item.aiSlopHits = 0;
