@@ -66,6 +66,14 @@ const batch8Slugs = [
   'automations-for-saas-and-agencies'
 ];
 
+const batch9Slugs = [
+  'outstanding-ideas-for-b2b-lead-capture',
+  'dify-ai-workflow-orchestration-vs-n8n-ai-agent-nodes',
+  'high-throughput-batch-vector-ingestion-n8n-qdrant',
+  'hybrid-vector-keyword-search-qdrant-n8n-pipeline',
+  'pinecone-namespaces-vs-qdrant-payload-filters-comparison'
+];
+
 ledger.forEach(item => {
   if (
     batch1Slugs.includes(item.slug) || 
@@ -75,7 +83,8 @@ ledger.forEach(item => {
     batch5Slugs.includes(item.slug) ||
     batch6Slugs.includes(item.slug) ||
     batch7Slugs.includes(item.slug) ||
-    batch8Slugs.includes(item.slug)
+    batch8Slugs.includes(item.slug) ||
+    batch9Slugs.includes(item.slug)
   ) {
     item.status = 'VERIFIED';
     item.aiSlopHits = 0;
