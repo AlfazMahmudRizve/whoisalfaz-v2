@@ -42,13 +42,22 @@ const batch5Slugs = [
   'whatconverts-vs-callrail-attribution'
 ];
 
+const batch6Slugs = [
+  'manychat-n8n-whatsapp-voice-bot',
+  'lead-enrichment-with-n8n',
+  'zero-data-retention-enterprise-rag-vultr-vps',
+  'building-an-enterprise-knowledge-graph-rag-n8n',
+  'building-multi-tenant-vector-search-n8n-qdrant'
+];
+
 ledger.forEach(item => {
   if (
     batch1Slugs.includes(item.slug) || 
     batch2Slugs.includes(item.slug) || 
     batch3Slugs.includes(item.slug) ||
     batch4Slugs.includes(item.slug) ||
-    batch5Slugs.includes(item.slug)
+    batch5Slugs.includes(item.slug) ||
+    batch6Slugs.includes(item.slug)
   ) {
     item.status = 'VERIFIED';
     item.aiSlopHits = 0;
@@ -57,6 +66,7 @@ ledger.forEach(item => {
 });
 
 fs.writeFileSync('scratch/master_upgrade_ledger.json', JSON.stringify(ledger, null, 2));
+
 
 const verified = ledger.filter(i => i.status === 'VERIFIED').length;
 console.log(`Updated Master Ledger: ${verified} / 105 articles VERIFIED.`);
