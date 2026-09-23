@@ -18,8 +18,16 @@ const batch2Slugs = [
   'dify-vs-n8n-architecture'
 ];
 
+const batch3Slugs = [
+  'headless-wordpress-vs-monolithic',
+  'case-study-veloryc-premium-ecommerce',
+  'open-source-llm-embeddings-voyage-bge-mxbai-n8n-benchmark',
+  'n8n-multi-tenant-vector-schema',
+  'pinecone-vs-qdrant-vultr-benchmark'
+];
+
 ledger.forEach(item => {
-  if (batch1Slugs.includes(item.slug) || batch2Slugs.includes(item.slug)) {
+  if (batch1Slugs.includes(item.slug) || batch2Slugs.includes(item.slug) || batch3Slugs.includes(item.slug)) {
     item.status = 'VERIFIED';
     item.aiSlopHits = 0;
     item.lastUpdated = new Date().toISOString();
@@ -30,4 +38,5 @@ fs.writeFileSync('scratch/master_upgrade_ledger.json', JSON.stringify(ledger, nu
 
 const verified = ledger.filter(i => i.status === 'VERIFIED').length;
 console.log(`Updated Master Ledger: ${verified} / 105 articles VERIFIED.`);
+
 

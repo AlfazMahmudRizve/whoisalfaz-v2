@@ -1,0 +1,39 @@
+const fs = require('fs');
+
+const FULL_BANNED = [
+  'delve', 'delves', 'delving', 'testament', 'leverage', 'leveraging', 'leveraged', 'leverages',
+  'seamless', 'seamlessly', 'paramount', 'crucial', 
+  'elevate', 'elevates', 'elevating', 'elevated', 'tapestry', 'game-changer', 'game changer', 
+  'revolutionize', 'revolutionizing', 'revolutionized', 'unlock the power of', 
+  'furthermore', 'moreover', 'it is worth noting that', "in today's fast-paced digital world", 
+  'beacon', 'vital', 'robust', 'in conclusion', 'summary'
+];
+
+const slugs = [
+  'headless-wordpress-vs-monolithic',
+  'case-study-veloryc-premium-ecommerce',
+  'open-source-llm-embeddings-voyage-bge-mxbai-n8n-benchmark',
+  'n8n-multi-tenant-vector-schema',
+  'pinecone-vs-qdrant-vultr-benchmark'
+];
+
+slugs.forEach(slug => {
+  const p = JSON.parse(fs.readFileSync(`scratch/batch3_${slug}.json`, 'utf8'));
+  console.log(`\n=================== ${slug} ===================`);
+  console.log(`Current Title: "${p.title}"`);
+  console.log(`Current seoTitle: "${p.seoTitle}" (${p.seoTitle?.length} chars)`);
+  console.log(`Current seoDescription: "${p.seoDescription}" (${p.seoDescription?.length} chars)`);
+  
+  const lines = p.body.split('\n');
+  let hitCount = 0;
+  lines.forEach((l, i) => {
+    FULL_BANNED.forEach(b => {
+      const re = new RegExp(`\\b${b}\\b`, 'gi');
+      if (re.test(l)) {
+        hitCount++;
+        console.log(`  L${i+1} [${b}]: ${l.trim().slice(0, 100)}...`);
+      }
+    });
+  });
+  console.log(`Total hits: ${hitCount}`);
+});

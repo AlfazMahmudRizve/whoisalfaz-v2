@@ -17,7 +17,7 @@
       "robust": 1
     },
     "status": "VERIFIED",
-    "lastUpdated": "2026-09-23T17:35:48.659Z"
+    "lastUpdated": "2026-09-23T17:40:24.033Z"
   },
   {
     "index": 2,
@@ -37,7 +37,7 @@
       "robust": 1
     },
     "status": "VERIFIED",
-    "lastUpdated": "2026-09-23T17:35:48.660Z"
+    "lastUpdated": "2026-09-23T17:40:24.034Z"
   },
   {
     "index": 3,
@@ -56,7 +56,7 @@
       "robust": 2
     },
     "status": "VERIFIED",
-    "lastUpdated": "2026-09-23T17:35:48.660Z"
+    "lastUpdated": "2026-09-23T17:40:24.034Z"
   },
   {
     "index": 4,
@@ -76,7 +76,7 @@
       "robust": 1
     },
     "status": "VERIFIED",
-    "lastUpdated": "2026-09-23T17:35:48.660Z"
+    "lastUpdated": "2026-09-23T17:40:24.034Z"
   },
   {
     "index": 5,
@@ -95,7 +95,7 @@
       "furthermore": 4
     },
     "status": "VERIFIED",
-    "lastUpdated": "2026-09-23T17:35:48.660Z"
+    "lastUpdated": "2026-09-23T17:40:24.034Z"
   },
   {
     "index": 6,
@@ -114,7 +114,7 @@
       "furthermore": 2
     },
     "status": "VERIFIED",
-    "lastUpdated": "2026-09-23T17:35:48.660Z"
+    "lastUpdated": "2026-09-23T17:40:24.034Z"
   },
   {
     "index": 7,
@@ -134,7 +134,7 @@
       "robust": 2
     },
     "status": "VERIFIED",
-    "lastUpdated": "2026-09-23T17:35:48.660Z"
+    "lastUpdated": "2026-09-23T17:40:24.034Z"
   },
   {
     "index": 8,
@@ -153,7 +153,7 @@
       "robust": 1
     },
     "status": "VERIFIED",
-    "lastUpdated": "2026-09-23T17:35:48.660Z"
+    "lastUpdated": "2026-09-23T17:40:24.034Z"
   },
   {
     "index": 9,
@@ -172,7 +172,7 @@
       "robust": 2
     },
     "status": "VERIFIED",
-    "lastUpdated": "2026-09-23T17:35:48.660Z"
+    "lastUpdated": "2026-09-23T17:40:24.034Z"
   },
   {
     "index": 10,
@@ -191,7 +191,7 @@
       "robust": 1
     },
     "status": "VERIFIED",
-    "lastUpdated": "2026-09-23T17:35:48.660Z"
+    "lastUpdated": "2026-09-23T17:40:24.034Z"
   },
   {
     "index": 11,
@@ -202,14 +202,14 @@
     "currentSeoTitle": "[Benchmark] Headless WordPress vs Monolithic CMS for SEO",
     "titleLength": 56,
     "wordCount": 5530,
-    "aiSlopHits": 5,
+    "aiSlopHits": 0,
     "hasSyrupyIntro": false,
     "bannedTerms": {
       "crucial": 1,
       "robust": 4
     },
-    "status": "PENDING",
-    "lastUpdated": null
+    "status": "VERIFIED",
+    "lastUpdated": "2026-09-23T17:40:24.034Z"
   },
   {
     "index": 12,
@@ -220,7 +220,7 @@
     "currentSeoTitle": "[Case Study] Veloryc E-Commerce Operations System",
     "titleLength": 49,
     "wordCount": 694,
-    "aiSlopHits": 5,
+    "aiSlopHits": 0,
     "hasSyrupyIntro": false,
     "bannedTerms": {
       "seamless": 2,
@@ -228,8 +228,8 @@
       "vital": 1,
       "robust": 1
     },
-    "status": "PENDING",
-    "lastUpdated": null
+    "status": "VERIFIED",
+    "lastUpdated": "2026-09-23T17:40:24.034Z"
   },
   {
     "index": 13,
@@ -240,14 +240,14 @@
     "currentSeoTitle": "[Benchmark] Open-Source LLM Embeddings: BGE vs Voyage",
     "titleLength": 53,
     "wordCount": 3444,
-    "aiSlopHits": 4,
+    "aiSlopHits": 0,
     "hasSyrupyIntro": false,
     "bannedTerms": {
       "leverage": 3,
       "seamless": 1
     },
-    "status": "PENDING",
-    "lastUpdated": null
+    "status": "VERIFIED",
+    "lastUpdated": "2026-09-23T17:40:24.034Z"
   },
   {
     "index": 14,
@@ -258,15 +258,15 @@
     "currentSeoTitle": "[SOP Guide] n8n Multi-Tenant Vector Schema with Qdrant",
     "titleLength": 54,
     "wordCount": 2437,
-    "aiSlopHits": 4,
+    "aiSlopHits": 0,
     "hasSyrupyIntro": false,
     "bannedTerms": {
       "seamless": 1,
       "paramount": 2,
       "furthermore": 1
     },
-    "status": "PENDING",
-    "lastUpdated": null
+    "status": "VERIFIED",
+    "lastUpdated": "2026-09-23T17:40:24.034Z"
   },
   {
     "index": 15,
@@ -277,14 +277,14 @@
     "currentSeoTitle": "Pinecone vs Qdrant Benchmark [2026]: Latency, RAM & Cost",
     "titleLength": 56,
     "wordCount": 2004,
-    "aiSlopHits": 4,
+    "aiSlopHits": 0,
     "hasSyrupyIntro": false,
     "bannedTerms": {
       "seamless": 2,
       "furthermore": 2
     },
-    "status": "PENDING",
-    "lastUpdated": null
+    "status": "VERIFIED",
+    "lastUpdated": "2026-09-23T17:40:24.034Z"
   },
   {
     "index": 16,
