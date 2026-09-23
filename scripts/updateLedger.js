@@ -58,6 +58,14 @@ const batch7Slugs = [
   'aisdr-vs-human-sdr-unit-economics-benchmark'
 ];
 
+const batch8Slugs = [
+  'apollo-vs-lusha-vs-aisdr-comparison',
+  'tapstitch-vs-printful-ecommerce-pipeline',
+  'ai-automation-agency-business-model',
+  'n8n-global-error-handling',
+  'automations-for-saas-and-agencies'
+];
+
 ledger.forEach(item => {
   if (
     batch1Slugs.includes(item.slug) || 
@@ -66,7 +74,8 @@ ledger.forEach(item => {
     batch4Slugs.includes(item.slug) ||
     batch5Slugs.includes(item.slug) ||
     batch6Slugs.includes(item.slug) ||
-    batch7Slugs.includes(item.slug)
+    batch7Slugs.includes(item.slug) ||
+    batch8Slugs.includes(item.slug)
   ) {
     item.status = 'VERIFIED';
     item.aiSlopHits = 0;
