@@ -146,6 +146,14 @@ const batch18Slugs = [
   'n8n-tips-and-tricks-by-alfaz-mahmud-rizve'
 ];
 
+const batch19Slugs = [
+  'n8n-production-workflows-by-alfaz-mahmud-rizve',
+  'build-an-automated-rank-tracker-tool-with-n8n',
+  'automated-content-research-by-alfaz-mahmud-rizve',
+  'facebook-lead-ads-automation-by-alfaz-mahmud-rizve',
+  'n8n-slack-notifications-by-alfaz-mahmud-rizve'
+];
+
 ledger.forEach(item => {
   if (
     batch1Slugs.includes(item.slug) || 
@@ -165,7 +173,8 @@ ledger.forEach(item => {
     batch15Slugs.includes(item.slug) ||
     batch16Slugs.includes(item.slug) ||
     batch17Slugs.includes(item.slug) ||
-    batch18Slugs.includes(item.slug)
+    batch18Slugs.includes(item.slug) ||
+    batch19Slugs.includes(item.slug)
   ) {
     item.status = 'VERIFIED';
     item.aiSlopHits = 0;
