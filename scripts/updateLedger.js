@@ -122,6 +122,14 @@ const batch15Slugs = [
   'outstanding-ideas-for-saas-mvps'
 ];
 
+const batch16Slugs = [
+  'outstanding-ideas-for-b2b-lead-generation',
+  'manychat-whatsapp-b2b-lead-capture-agency',
+  'apollo-brevo-n8n-outbound-pipeline',
+  'monday-com-automation-recipes-revops-2026',
+  'pinecone-n8n-rag-knowledge-base-blueprint'
+];
+
 ledger.forEach(item => {
   if (
     batch1Slugs.includes(item.slug) || 
@@ -138,7 +146,8 @@ ledger.forEach(item => {
     batch12Slugs.includes(item.slug) ||
     batch13Slugs.includes(item.slug) ||
     batch14Slugs.includes(item.slug) ||
-    batch15Slugs.includes(item.slug)
+    batch15Slugs.includes(item.slug) ||
+    batch16Slugs.includes(item.slug)
   ) {
     item.status = 'VERIFIED';
     item.aiSlopHits = 0;
