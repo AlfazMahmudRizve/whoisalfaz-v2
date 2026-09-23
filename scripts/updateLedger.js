@@ -90,6 +90,14 @@ const batch11Slugs = [
   'omnichannel-ai-voice-note-handler'
 ];
 
+const batch12Slugs = [
+  'pinecone-vs-qdrant-n8n-rag-comparison',
+  'cold-email-machine-apollo-aisdr-brevo',
+  'screaming-frog-alternatives-free-seo-audit-tools',
+  'revops-automation-stack-saas-2026',
+  'aisdr-vs-human-sdr-performance-teardown'
+];
+
 ledger.forEach(item => {
   if (
     batch1Slugs.includes(item.slug) || 
@@ -102,7 +110,8 @@ ledger.forEach(item => {
     batch8Slugs.includes(item.slug) ||
     batch9Slugs.includes(item.slug) ||
     batch10Slugs.includes(item.slug) ||
-    batch11Slugs.includes(item.slug)
+    batch11Slugs.includes(item.slug) ||
+    batch12Slugs.includes(item.slug)
   ) {
     item.status = 'VERIFIED';
     item.aiSlopHits = 0;
