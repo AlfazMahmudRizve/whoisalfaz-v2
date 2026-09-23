@@ -117,8 +117,8 @@ const AFFILIATE_DATA = {
     manychat: {
         title: "ManyChat",
         description: "The #1 conversational marketing platform for Instagram, Facebook, and WhatsApp.",
-        url: "https://manychat.partnerlinks.io/jugrrxxzawym",
-        buttonText: "Get ManyChat",
+        url: "https://manychat.com",
+        buttonText: "Explore ManyChat",
         badge: "Social Automation"
     },
     twilio: {

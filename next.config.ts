@@ -414,7 +414,7 @@ const nextConfig: NextConfig = {
       },
       {
         source: '/go/manychat',
-        destination: 'https://manychat.partnerlinks.io/jugrrxxzawym',
+        destination: 'https://manychat.com',
         permanent: true,
       },
       {
