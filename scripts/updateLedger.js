@@ -74,6 +74,14 @@ const batch9Slugs = [
   'pinecone-namespaces-vs-qdrant-payload-filters-comparison'
 ];
 
+const batch10Slugs = [
+  'pinecone-serverless-vs-qdrant-vultr-latency-benchmark',
+  'scaling-qdrant-vector-database-to-10-million-embeddings',
+  'securing-self-hosted-vector-databases-ssl-vultr-firewall',
+  'self-hosted-qdrant-cluster-vultr-docker-sop',
+  'the-ultimate-2026-self-hosted-ai-stack-vultr-qdrant-dify-n8n'
+];
+
 ledger.forEach(item => {
   if (
     batch1Slugs.includes(item.slug) || 
@@ -84,7 +92,8 @@ ledger.forEach(item => {
     batch6Slugs.includes(item.slug) ||
     batch7Slugs.includes(item.slug) ||
     batch8Slugs.includes(item.slug) ||
-    batch9Slugs.includes(item.slug)
+    batch9Slugs.includes(item.slug) ||
+    batch10Slugs.includes(item.slug)
   ) {
     item.status = 'VERIFIED';
     item.aiSlopHits = 0;
