@@ -130,6 +130,22 @@ const batch16Slugs = [
   'pinecone-n8n-rag-knowledge-base-blueprint'
 ];
 
+const batch17Slugs = [
+  'what-is-revops-technical-definition-saas',
+  'manychat-pricing-2026',
+  'apollo-n8n-outreach',
+  'automated-youtube-shorts-generator',
+  'n8n-ai-receptionist'
+];
+
+const batch18Slugs = [
+  'n8n-rag-tutorial',
+  'n8n-ai-agent-tools',
+  'how-to-build-an-api-with-n8n',
+  'n8n-google-analytics-4-pipeline',
+  'n8n-tips-and-tricks-by-alfaz-mahmud-rizve'
+];
+
 ledger.forEach(item => {
   if (
     batch1Slugs.includes(item.slug) || 
@@ -147,7 +163,9 @@ ledger.forEach(item => {
     batch13Slugs.includes(item.slug) ||
     batch14Slugs.includes(item.slug) ||
     batch15Slugs.includes(item.slug) ||
-    batch16Slugs.includes(item.slug)
+    batch16Slugs.includes(item.slug) ||
+    batch17Slugs.includes(item.slug) ||
+    batch18Slugs.includes(item.slug)
   ) {
     item.status = 'VERIFIED';
     item.aiSlopHits = 0;
