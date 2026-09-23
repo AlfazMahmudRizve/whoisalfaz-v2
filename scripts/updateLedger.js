@@ -82,6 +82,14 @@ const batch10Slugs = [
   'the-ultimate-2026-self-hosted-ai-stack-vultr-qdrant-dify-n8n'
 ];
 
+const batch11Slugs = [
+  'vultr-cloud-gpu-vs-aws-ec2-ai-inference-cost-guide',
+  'corrective-rag-crag-n8n-blueprint',
+  'accelerated-growth-studio-plg-playbook',
+  'adcreative-ai-review-n8n-ad-refresh-loop',
+  'omnichannel-ai-voice-note-handler'
+];
+
 ledger.forEach(item => {
   if (
     batch1Slugs.includes(item.slug) || 
@@ -93,7 +101,8 @@ ledger.forEach(item => {
     batch7Slugs.includes(item.slug) ||
     batch8Slugs.includes(item.slug) ||
     batch9Slugs.includes(item.slug) ||
-    batch10Slugs.includes(item.slug)
+    batch10Slugs.includes(item.slug) ||
+    batch11Slugs.includes(item.slug)
   ) {
     item.status = 'VERIFIED';
     item.aiSlopHits = 0;
