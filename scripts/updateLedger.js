@@ -106,6 +106,14 @@ const batch13Slugs = [
   'automate-client-reporting-with-n8n'
 ];
 
+const batch14Slugs = [
+  'n8n-data-privacy-security-guide',
+  'automated-marketing-reporting-with-n8n-at-whoisalfaz',
+  'automated-email-follow-up-n8n-brevo',
+  'case-study-careerops-ai-resume-builder',
+  'case-study-cashops-financial-dashboard'
+];
+
 ledger.forEach(item => {
   if (
     batch1Slugs.includes(item.slug) || 
@@ -120,7 +128,8 @@ ledger.forEach(item => {
     batch10Slugs.includes(item.slug) ||
     batch11Slugs.includes(item.slug) ||
     batch12Slugs.includes(item.slug) ||
-    batch13Slugs.includes(item.slug)
+    batch13Slugs.includes(item.slug) ||
+    batch14Slugs.includes(item.slug)
   ) {
     item.status = 'VERIFIED';
     item.aiSlopHits = 0;
