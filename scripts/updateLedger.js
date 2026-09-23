@@ -50,6 +50,14 @@ const batch6Slugs = [
   'building-multi-tenant-vector-search-n8n-qdrant'
 ];
 
+const batch7Slugs = [
+  'n8n-ai-agent-memory-persistence-qdrant-vector-store',
+  'n8n-vector-store-memory-management-production-guide',
+  'brevo-cold-email-ip-warming-guide',
+  'waterfall-data-enrichment-pipeline-n8n-guide',
+  'aisdr-vs-human-sdr-unit-economics-benchmark'
+];
+
 ledger.forEach(item => {
   if (
     batch1Slugs.includes(item.slug) || 
@@ -57,7 +65,8 @@ ledger.forEach(item => {
     batch3Slugs.includes(item.slug) ||
     batch4Slugs.includes(item.slug) ||
     batch5Slugs.includes(item.slug) ||
-    batch6Slugs.includes(item.slug)
+    batch6Slugs.includes(item.slug) ||
+    batch7Slugs.includes(item.slug)
   ) {
     item.status = 'VERIFIED';
     item.aiSlopHits = 0;
