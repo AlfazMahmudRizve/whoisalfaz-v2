@@ -26,8 +26,21 @@ const batch3Slugs = [
   'pinecone-vs-qdrant-vultr-benchmark'
 ];
 
+const batch4Slugs = [
+  'monday-crm-advanced-lead-scoring',
+  'trainual-alternatives-active-agency-sop-engine',
+  'how-to-audit-competitor-seo-no-verification',
+  'n8n-apollo-lead-enrichment-pipeline',
+  'automate-personal-branding-with-n8n'
+];
+
 ledger.forEach(item => {
-  if (batch1Slugs.includes(item.slug) || batch2Slugs.includes(item.slug) || batch3Slugs.includes(item.slug)) {
+  if (
+    batch1Slugs.includes(item.slug) || 
+    batch2Slugs.includes(item.slug) || 
+    batch3Slugs.includes(item.slug) ||
+    batch4Slugs.includes(item.slug)
+  ) {
     item.status = 'VERIFIED';
     item.aiSlopHits = 0;
     item.lastUpdated = new Date().toISOString();
@@ -38,5 +51,6 @@ fs.writeFileSync('scratch/master_upgrade_ledger.json', JSON.stringify(ledger, nu
 
 const verified = ledger.filter(i => i.status === 'VERIFIED').length;
 console.log(`Updated Master Ledger: ${verified} / 105 articles VERIFIED.`);
+
 
 
