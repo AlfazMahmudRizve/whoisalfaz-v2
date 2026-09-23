@@ -114,6 +114,14 @@ const batch14Slugs = [
   'case-study-cashops-financial-dashboard'
 ];
 
+const batch15Slugs = [
+  'tempmail10min-seo-case-study',
+  'manychat-instagram-summit-2026-agenda-review-bonus',
+  'manychat-alternatives-2026-top-tools-by-use-case',
+  'outstanding-ideas-for-youtube-shorts',
+  'outstanding-ideas-for-saas-mvps'
+];
+
 ledger.forEach(item => {
   if (
     batch1Slugs.includes(item.slug) || 
@@ -129,7 +137,8 @@ ledger.forEach(item => {
     batch11Slugs.includes(item.slug) ||
     batch12Slugs.includes(item.slug) ||
     batch13Slugs.includes(item.slug) ||
-    batch14Slugs.includes(item.slug)
+    batch14Slugs.includes(item.slug) ||
+    batch15Slugs.includes(item.slug)
   ) {
     item.status = 'VERIFIED';
     item.aiSlopHits = 0;
