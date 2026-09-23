@@ -10,8 +10,16 @@ const batch1Slugs = [
   'turbotic-automation-governance'
 ];
 
+const batch2Slugs = [
+  'elevenlabs-n8n-voice-ai-sales-agent',
+  'corrective-rag-crag-blueprint-n8n-tavily-fallback',
+  'self-hosted-qdrant-docker-vultr',
+  'emergent-ai-autonomous-gtm-guide',
+  'dify-vs-n8n-architecture'
+];
+
 ledger.forEach(item => {
-  if (batch1Slugs.includes(item.slug)) {
+  if (batch1Slugs.includes(item.slug) || batch2Slugs.includes(item.slug)) {
     item.status = 'VERIFIED';
     item.aiSlopHits = 0;
     item.lastUpdated = new Date().toISOString();
@@ -22,3 +30,4 @@ fs.writeFileSync('scratch/master_upgrade_ledger.json', JSON.stringify(ledger, nu
 
 const verified = ledger.filter(i => i.status === 'VERIFIED').length;
 console.log(`Updated Master Ledger: ${verified} / 105 articles VERIFIED.`);
+
