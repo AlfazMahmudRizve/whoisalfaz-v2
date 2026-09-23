@@ -3,12 +3,12 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ChevronDown, Zap, Globe, Code2, BarChart3, Mail, Server } from 'lucide-react';
+import { LucideIcon, ChevronDown, Zap, Globe, Code2, BarChart3, Mail, Server } from 'lucide-react';
 
 interface TechStackItem {
   name: string;
   role: string;
-  icon: any;
+  icon: LucideIcon;
   color: string;
   bg: string;
   border: string;

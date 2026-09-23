@@ -141,18 +141,18 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
-        source: '/about',
-        destination: '/portfolio/',
+        source: '/about-me',
+        destination: '/about/',
         permanent: true,
       },
       {
-        source: '/about-me',
-        destination: '/portfolio/',
+        source: '/about/alfaz-mahmud-rizve/:path*',
+        destination: '/about/',
         permanent: true,
       },
       {
         source: '/about/alfaz-mahmud-rizve',
-        destination: '/portfolio/',
+        destination: '/about/',
         permanent: true,
       },
       // 6. Redirect legacy /category/ root path to /blog/category/
@@ -449,23 +449,23 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
-        source: '/services/headless-architecture/:path*',
-        destination: '/services/',
-        permanent: true,
-      },
-      {
-        source: '/services/headless-architecture',
-        destination: '/services/',
-        permanent: true,
-      },
-      {
         source: '/services/headless/:path*',
-        destination: '/services/',
+        destination: '/services/headless-architecture/',
         permanent: true,
       },
       {
         source: '/services/headless',
-        destination: '/services/',
+        destination: '/services/headless-architecture/',
+        permanent: true,
+      },
+      {
+        source: '/blog/category/learn-automation-in-30-days/:path*',
+        destination: '/blog/category/30-days-of-n8n-automation/',
+        permanent: true,
+      },
+      {
+        source: '/blog/category/learn-automation-in-30-days',
+        destination: '/blog/category/30-days-of-n8n-automation/',
         permanent: true,
       },
       {
@@ -591,8 +591,14 @@ const nextConfig: NextConfig = {
 
     return [
       {
-        source: '/((?!studio|studio/).*)',
-        headers: securityHeaders,
+        source: '/((?!api|_next|studio|go).*)',
+        headers: [
+          ...securityHeaders,
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=0, s-maxage=86400, stale-while-revalidate=86400',
+          },
+        ],
       },
       {
         source: '/go/:path*',

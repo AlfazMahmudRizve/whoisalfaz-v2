@@ -3,10 +3,7 @@ import { MetadataRoute } from 'next'
 const privateDisallows = [
     '/private/',
     '/go/',
-    '/wp-admin/',
-    '/rest/',
-    '*/feed/',
-    '*feed*',
+    '/api/',
 ]
 
 export default function robots(): MetadataRoute.Robots {

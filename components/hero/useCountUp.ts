@@ -112,10 +112,16 @@ export function useCountUp({
   }, [cancelAnimation, start, startAnimation]);
 
   useEffect(() => {
+    let rafId: number | null = null;
     if (autoStart) {
-      startAnimation();
+      rafId = requestAnimationFrame(() => {
+        startAnimation();
+      });
     }
     return () => {
+      if (rafId !== null) {
+        cancelAnimationFrame(rafId);
+      }
       cancelAnimation();
     };
   }, [autoStart, startAnimation, cancelAnimation]);

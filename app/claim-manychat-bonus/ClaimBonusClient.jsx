@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Link from 'next/link';
 import { Sparkles, ArrowRight, Download, CheckCircle2, ShieldCheck, Video, Info, FileCode, Zap, Layers } from 'lucide-react';
 
 export default function ClaimBonusClient() {
@@ -182,7 +183,7 @@ export default function ClaimBonusClient() {
             </div>
 
             <p className="text-xs text-slate-500">
-              Need custom implementation? Reply directly to our email or visit <a href="/contact/" className="text-teal-400 hover:underline">whoisalfaz.me/contact/</a>
+              Need custom implementation? Reply directly to our email or visit <Link href="/contact/" className="text-teal-400 hover:underline">whoisalfaz.me/contact/</Link>
             </p>
           </div>
         ) : (

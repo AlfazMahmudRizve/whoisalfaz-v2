@@ -2,6 +2,9 @@
 
 import { useState } from 'react';
 import { Copy, Check, Code2, Download, ExternalLink, ShieldCheck, Sparkles, Terminal, FileCode2 } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent } from '@/components/ui/card';
 
 const SNIPPETS = {
   html: {
@@ -59,10 +62,10 @@ export default function AuditBadgeSection() {
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-8 border-b border-slate-200 dark:border-white/10">
           <div className="max-w-2xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-500/10 border border-teal-500/20 text-teal-600 dark:text-teal-400 text-xs font-bold uppercase tracking-widest mb-4">
+            <Badge variant="default" className="gap-2 mb-4 py-1 px-3">
               <Sparkles size={12} className="animate-spin-slow" />
-              Embed & Share Badge
-            </div>
+              Embed &amp; Share Badge
+            </Badge>
             <h2 className="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white tracking-tight">
               Showcase Your Site Health With the Official Badge
             </h2>
@@ -183,12 +186,13 @@ export default function AuditBadgeSection() {
               </pre>
 
               {/* Copy Button */}
-              <button
+              <Button
                 onClick={handleCopy}
-                className={`mt-4 w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl font-bold uppercase tracking-wider text-xs transition-all duration-200 ${
+                variant={copied ? "default" : "outline"}
+                className={`mt-4 w-full h-12 uppercase tracking-wider font-bold text-xs transition-all duration-200 ${
                   copied
-                    ? 'bg-emerald-500 text-black'
-                    : 'bg-white/10 hover:bg-white/20 text-white border border-white/10 hover:border-teal-500/50'
+                    ? 'bg-emerald-500 text-black hover:bg-emerald-400'
+                    : 'bg-white/10 hover:bg-white/20 text-white border-white/10 hover:border-teal-500/50'
                 }`}
               >
                 {copied ? (
@@ -202,39 +206,45 @@ export default function AuditBadgeSection() {
                     Copy {currentSnippet.label} Snippet
                   </>
                 )}
-              </button>
+              </Button>
             </div>
           </div>
         </div>
 
         {/* Benefits for Devs & Agencies */}
         <div className="mt-10 pt-8 border-t border-slate-200 dark:border-white/10 grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="p-4 rounded-2xl bg-slate-50 dark:bg-white/[0.02] border border-slate-200/60 dark:border-white/5">
-            <h3 className="text-sm font-bold text-slate-900 dark:text-white flex items-center gap-2 mb-1.5">
-              <span className="text-teal-500 font-black">01.</span> GitHub READMEs
-            </h3>
-            <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
-              Showcase top-tier technical performance, DNS latency, and SEO compliance on open source repositories.
-            </p>
-          </div>
+          <Card className="bg-slate-50 dark:bg-white/[0.02] border-slate-200/60 dark:border-white/5 rounded-2xl">
+            <CardContent className="p-4">
+              <h3 className="text-sm font-bold text-slate-900 dark:text-white flex items-center gap-2 mb-1.5">
+                <span className="text-teal-500 font-black">01.</span> GitHub READMEs
+              </h3>
+              <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+                Showcase top-tier technical performance, DNS latency, and SEO compliance on open source repositories.
+              </p>
+            </CardContent>
+          </Card>
 
-          <div className="p-4 rounded-2xl bg-slate-50 dark:bg-white/[0.02] border border-slate-200/60 dark:border-white/5">
-            <h3 className="text-sm font-bold text-slate-900 dark:text-white flex items-center gap-2 mb-1.5">
-              <span className="text-teal-500 font-black">02.</span> Website Footers
-            </h3>
-            <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
-              Provide third-party audit verification for users, boosting client confidence and conversion rates.
-            </p>
-          </div>
+          <Card className="bg-slate-50 dark:bg-white/[0.02] border-slate-200/60 dark:border-white/5 rounded-2xl">
+            <CardContent className="p-4">
+              <h3 className="text-sm font-bold text-slate-900 dark:text-white flex items-center gap-2 mb-1.5">
+                <span className="text-teal-500 font-black">02.</span> Website Footers
+              </h3>
+              <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+                Provide third-party audit verification for users, boosting client confidence and conversion rates.
+              </p>
+            </CardContent>
+          </Card>
 
-          <div className="p-4 rounded-2xl bg-slate-50 dark:bg-white/[0.02] border border-slate-200/60 dark:border-white/5">
-            <h3 className="text-sm font-bold text-slate-900 dark:text-white flex items-center gap-2 mb-1.5">
-              <span className="text-teal-500 font-black">03.</span> Agency Client Handoffs
-            </h3>
-            <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
-              Include proof of quality assurance and SSL security verification in your final client deliverables.
-            </p>
-          </div>
+          <Card className="bg-slate-50 dark:bg-white/[0.02] border-slate-200/60 dark:border-white/5 rounded-2xl">
+            <CardContent className="p-4">
+              <h3 className="text-sm font-bold text-slate-900 dark:text-white flex items-center gap-2 mb-1.5">
+                <span className="text-teal-500 font-black">03.</span> Agency Client Handoffs
+              </h3>
+              <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+                Include proof of quality assurance and SSL security verification in your final client deliverables.
+              </p>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </section>

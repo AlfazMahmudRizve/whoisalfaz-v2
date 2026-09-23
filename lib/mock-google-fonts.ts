@@ -14,6 +14,14 @@ export function JetBrains_Mono() {
   };
 }
 
+export function Urbanist() {
+  return {
+    className: 'mock-urbanist',
+    variable: '--font-urbanist',
+    style: {}
+  };
+}
+
 export const inter = {
   className: 'mock-inter',
   variable: '--font-inter',
@@ -25,3 +33,10 @@ export const mono = {
   variable: '--font-jetbrains-mono',
   style: {}
 };
+
+export const urbanist = {
+  className: 'mock-urbanist',
+  variable: '--font-urbanist',
+  style: {}
+};
+

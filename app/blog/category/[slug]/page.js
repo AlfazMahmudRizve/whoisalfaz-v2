@@ -56,6 +56,11 @@ const CATEGORY_MAP = {
         name: 'SEO & Optimization',
         title: 'SEO & Optimization — Technical Guides | whoisalfaz',
         description: 'Forensic technical SEO guides, programmatic indexation blueprints, and Generative Engine Optimization (GEO) strategies.'
+    },
+    'automation-tools': {
+        name: 'Automation Tools',
+        title: 'Automation Tools & Software Guides | whoisalfaz',
+        description: 'In-depth reviews, architectural blueprints, and setup guides for n8n, self-hosted automation engines, and modern SaaS tools.'
     }
 };
 

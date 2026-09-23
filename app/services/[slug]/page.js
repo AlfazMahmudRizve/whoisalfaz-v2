@@ -17,21 +17,25 @@ export const generateMetadata = async ({ params }) => {
     const service = serviceData[slug];
     if (!service) return { title: 'Service Not Found' };
 
+    const pageTitle = slug === 'headless-architecture' 
+        ? "Headless CMS Infrastructure — Next.js | whoisalfaz"
+        : `${service.title} | whoisalfaz`;
+
     return {
-        title: `${service.title} | Services`,
+        title: pageTitle,
         description: service.subtitle,
         alternates: {
-            canonical: `https://whoisalfaz.me/services/${slug}`,
+            canonical: `https://whoisalfaz.me/services/${slug}/`,
         },
         openGraph: {
-            title: `${service.title} | Services`,
+            title: pageTitle,
             description: service.subtitle,
-            url: `https://whoisalfaz.me/services/${slug}`,
+            url: `https://whoisalfaz.me/services/${slug}/`,
             type: 'article',
         },
         twitter: {
             card: 'summary_large_image',
-            title: `${service.title} | Services`,
+            title: pageTitle,
             description: service.subtitle,
         }
     };

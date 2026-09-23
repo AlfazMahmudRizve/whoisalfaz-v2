@@ -277,12 +277,12 @@ export default function EditorialPolicy() {
             <div className="hidden sr-only" aria-hidden="true">
                 <span className="author" name="author" rel="author">Alfaz Mahmud Rizve</span>
                 <span className="byline">RevOps Architect & Full Stack Automation Engineer</span>
-                <a href="/editorial-policy/">Editorial & AI Policy</a>
-                <a href="/about/alfaz-mahmud-rizve/">About Alfaz Mahmud Rizve</a>
-                <a href="/portfolio/">Portfolio</a>
-                <a href="/privacy-policy/">Privacy Notice</a>
-                <a href="/terms/">Terms of Service</a>
-                <a href="/contact/">Contact Us</a>
+                <Link href="/editorial-policy/">Editorial & AI Policy</Link>
+                <Link href="/about/">About Alfaz Mahmud Rizve</Link>
+                <Link href="/portfolio/">Portfolio</Link>
+                <Link href="/privacy-policy/">Privacy Notice</Link>
+                <Link href="/terms/">Terms of Service</Link>
+                <Link href="/contact/">Contact Us</Link>
                 <a href="https://schema.org/WebPage" target="_blank" rel="noopener noreferrer">Schema.org WebPage</a>
                 <a href="https://developers.google.com/search/docs/appearance/helpful-content-system" target="_blank" rel="noopener noreferrer">Google Helpful Content</a>
             </div>

@@ -58,7 +58,6 @@ export default function ServicesPage() {
         {
             title: "Headless CMS Infrastructure",
             slug: "headless-architecture",
-            href: "/services/",
             desc: "The high-performance foundation your revenue engine runs on. Sub-second load times, perfect Core Web Vitals, and full content editing for your marketing team.",
             price: "1,500",
             icon: Globe,

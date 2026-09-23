@@ -7,18 +7,27 @@ export const metadata = {
     title: "Contact Alfaz | RevOps & Automation Consulting",
     description: "Ready to automate agency scale? Book a strategy call or technical SEO audit with Alfaz Mahmud Rizve. Review response SLAs and prerequisites.",
     alternates: {
-        canonical: 'https://whoisalfaz.me/contact',
+        canonical: 'https://whoisalfaz.me/contact/',
     },
     openGraph: {
         title: "Contact Alfaz | RevOps & Automation Consulting",
         description: "Ready to automate agency scale? Book a strategy call or technical SEO audit with Alfaz Mahmud Rizve. Review response SLAs and prerequisites.",
-        url: 'https://whoisalfaz.me/contact',
+        url: 'https://whoisalfaz.me/contact/',
         type: 'website',
+        images: [
+            {
+                url: 'https://whoisalfaz.me/og-contact.png',
+                width: 1200,
+                height: 630,
+                alt: 'Contact Alfaz Mahmud Rizve - GTM & RevOps Architect',
+            },
+        ],
     },
     twitter: {
         card: 'summary_large_image',
         title: "Contact Alfaz | RevOps & Automation Consulting",
         description: "Ready to automate agency scale? Book a strategy call or technical SEO audit with Alfaz Mahmud Rizve. Review response SLAs and prerequisites.",
+        images: ['https://whoisalfaz.me/og-contact.png'],
     }
 };
 

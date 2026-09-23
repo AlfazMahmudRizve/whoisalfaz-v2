@@ -33,6 +33,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     // 1. Static Routes (Core Pages)
     const coreRoutes = [
         '/',
+        '/about/',
         '/portfolio/',
         '/store/',
         '/blog/',
@@ -44,13 +45,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         '/labs/',
         '/labs/roi/',
         '/audit/',
-        '/claim-manychat-bonus/',
         '/terms/',
         '/privacy-policy/',
         '/editorial-policy/',
     ].map((route) => ({
         url: route === '/' ? `${baseUrl}/` : `${baseUrl}${route}`,
-        lastModified: new Date(),
         changeFrequency: 'weekly' as const,
         priority: route === '/' ? 1 : 0.8,
     }));
@@ -59,7 +58,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const serviceSlugs = Object.keys(serviceData).filter((slug) => slug !== 'technical-seo');
     const serviceRoutes = serviceSlugs.map((slug) => ({
         url: `${baseUrl}/services/${slug}/`,
-        lastModified: new Date(),
         changeFrequency: 'monthly' as const,
         priority: 0.8,
     }));
@@ -118,10 +116,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         console.error('[sitemap] Failed to fetch categories from Sanity:', err);
     }
     const categoryRoutes = categories
-        .filter((cat) => cat.slug?.current)
+        .filter((cat) => cat.slug?.current && cat.count > 0 && cat.slug.current !== 'learn-automation-in-30-days')
         .map((cat) => ({
             url: `${baseUrl}/blog/category/${cat.slug.current}/`,
-            lastModified: new Date(),
             changeFrequency: 'weekly' as const,
             priority: 0.6,
         }));
