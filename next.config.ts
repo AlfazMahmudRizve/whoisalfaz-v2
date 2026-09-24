@@ -346,6 +346,39 @@ const nextConfig: NextConfig = {
         destination: '/',
         permanent: true,
       },
+      // 8. Phase 1 content-consolidation merges (deep audit 2026-09-25)
+      // 8a. Vultr/Qdrant clone cluster: absorb into the AI-stack pillar post
+      {
+        source: '/blog/scaling-qdrant-vector-database-to-10-million-embeddings/:path*',
+        destination: '/blog/the-ultimate-2026-self-hosted-ai-stack-vultr-qdrant-dify-n8n/',
+        permanent: true,
+      },
+      {
+        source: '/blog/scaling-qdrant-vector-database-to-10-million-embeddings',
+        destination: '/blog/the-ultimate-2026-self-hosted-ai-stack-vultr-qdrant-dify-n8n/',
+        permanent: true,
+      },
+      {
+        source: '/blog/self-hosted-qdrant-cluster-vultr-docker-sop/:path*',
+        destination: '/blog/the-ultimate-2026-self-hosted-ai-stack-vultr-qdrant-dify-n8n/',
+        permanent: true,
+      },
+      {
+        source: '/blog/self-hosted-qdrant-cluster-vultr-docker-sop',
+        destination: '/blog/the-ultimate-2026-self-hosted-ai-stack-vultr-qdrant-dify-n8n/',
+        permanent: true,
+      },
+      // 8b. Memory posts: context-compression post folded into the production memory guide
+      {
+        source: '/blog/n8n-ai-agent-memory-persistence-qdrant-vector-store/:path*',
+        destination: '/blog/n8n-vector-store-memory-management-production-guide/',
+        permanent: true,
+      },
+      {
+        source: '/blog/n8n-ai-agent-memory-persistence-qdrant-vector-store',
+        destination: '/blog/n8n-vector-store-memory-management-production-guide/',
+        permanent: true,
+      },
       // 7. Affiliate Link Cloaking
       {
         source: '/go/monday',
