@@ -13,6 +13,9 @@ export const CANONICAL_OVERRIDES: Record<string, string> = {
   'scaling-qdrant-vector-database-to-10-million-embeddings': 'https://whoisalfaz.me/blog/the-ultimate-2026-self-hosted-ai-stack-vultr-qdrant-dify-n8n/',
   'self-hosted-qdrant-cluster-vultr-docker-sop': 'https://whoisalfaz.me/blog/the-ultimate-2026-self-hosted-ai-stack-vultr-qdrant-dify-n8n/',
   'n8n-ai-agent-memory-persistence-qdrant-vector-store': 'https://whoisalfaz.me/blog/n8n-vector-store-memory-management-production-guide/',
+  // Phase 2 consolidations (deep audit 2026-09-25): pairs targeting same SERP, 301'd in next.config.ts
+  'apollo-to-brevo-n8n-pipeline-guide': 'https://whoisalfaz.me/blog/apollo-brevo-n8n-outbound-pipeline/',
+  'aisdr-vs-human-sdr-unit-economics-benchmark': 'https://whoisalfaz.me/blog/aisdr-vs-human-sdr-performance-teardown/',
 };
 
 export const NON_CANONICAL_SLUGS = new Set(Object.keys(CANONICAL_OVERRIDES));

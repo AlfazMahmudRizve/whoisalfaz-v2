@@ -379,6 +379,29 @@ const nextConfig: NextConfig = {
         destination: '/blog/n8n-vector-store-memory-management-production-guide/',
         permanent: true,
       },
+      // 8c. Phase 2 consolidations (deep audit 2026-09-25): Apollo-Brevo pair + AiSDR pair
+      // 49-cell mapping table + UI guide + DLQ absorbed from pipeline-guide into outbound-pipeline
+      {
+        source: '/blog/apollo-to-brevo-n8n-pipeline-guide/:path*',
+        destination: '/blog/apollo-brevo-n8n-outbound-pipeline/',
+        permanent: true,
+      },
+      {
+        source: '/blog/apollo-to-brevo-n8n-pipeline-guide',
+        destination: '/blog/apollo-brevo-n8n-outbound-pipeline/',
+        permanent: true,
+      },
+      // hybrid HITL workflow + unit-econ table + exception handling absorbed from unit-economics into performance-teardown
+      {
+        source: '/blog/aisdr-vs-human-sdr-unit-economics-benchmark/:path*',
+        destination: '/blog/aisdr-vs-human-sdr-performance-teardown/',
+        permanent: true,
+      },
+      {
+        source: '/blog/aisdr-vs-human-sdr-unit-economics-benchmark',
+        destination: '/blog/aisdr-vs-human-sdr-performance-teardown/',
+        permanent: true,
+      },
       // 7. Affiliate Link Cloaking
       {
         source: '/go/monday',
