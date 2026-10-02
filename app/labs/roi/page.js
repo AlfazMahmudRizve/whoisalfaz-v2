@@ -120,7 +120,7 @@ export default function ROICalculator() {
                         <div className="flex flex-col justify-center border-t md:border-t-0 md:border-l border-white/10 pt-10 md:pt-0 md:pl-12">
 
                             <div className="text-center md:text-left mb-8">
-                                <div className="text-slate-500 text-sm font-bold uppercase tracking-widest mb-2">Estimated Yearly Financial Drain</div>
+                                <h2 className="text-slate-500 text-sm font-bold uppercase tracking-widest mb-2">Estimated Yearly Financial Drain</h2>
                                 <div className="text-5xl md:text-6xl font-black text-red-500 tracking-tighter drop-shadow-lg">
                                     -{formatCurrency(yearlyLoss)}
                                 </div>

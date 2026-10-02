@@ -6,12 +6,12 @@ export const metadata = {
     title: "Privacy Policy | Alfaz Mahmud Rizve",
     description: "Privacy Notice and Data Protection Policy for whoisalfaz.me. Learn how client data, analytics, and contact info are processed and protected under GDPR.",
     alternates: {
-        canonical: 'https://whoisalfaz.me/privacy-policy',
+        canonical: 'https://whoisalfaz.me/privacy-policy/',
     },
     openGraph: {
         title: "Privacy Policy | Alfaz Mahmud Rizve",
         description: "Privacy Notice and Data Protection Policy for whoisalfaz.me. Learn how client data, analytics, and contact info are processed and protected under GDPR.",
-        url: 'https://whoisalfaz.me/privacy-policy',
+        url: 'https://whoisalfaz.me/privacy-policy/',
         type: 'website',
     },
     twitter: {
@@ -179,11 +179,11 @@ export default function PrivacyPolicy() {
 
                     <div className="space-y-6">
                         <div>
-                            <h4 className="flex items-center gap-2 text-white"><span className="w-2 h-2 rounded-full bg-blue-500"></span> EU / UK Users (GDPR)</h4>
+                            <h3 className="flex items-center gap-2 text-white font-bold"><span className="w-2 h-2 rounded-full bg-blue-500"></span> EU / UK Users (GDPR)</h3>
                             <p className="text-sm">We rely on <strong>Consent</strong>, <strong>Legal Obligations</strong>, and <strong>Vital Interests</strong>.</p>
                         </div>
                         <div>
-                            <h4 className="flex items-center gap-2 text-white"><span className="w-2 h-2 rounded-full bg-purple-500"></span> Canadian Users</h4>
+                            <h3 className="flex items-center gap-2 text-white font-bold"><span className="w-2 h-2 rounded-full bg-purple-500"></span> Canadian Users</h3>
                             <p className="text-sm">We process with <strong>Express</strong> or <strong>Implied Consent</strong>, or where legally permitted without consent (e.g. fraud prevention).</p>
                         </div>
                     </div>
@@ -214,11 +214,11 @@ export default function PrivacyPolicy() {
                     <h2 id="rights" className="text-2xl scroll-mt-32">Your Privacy Rights (Region Specific)</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 not-prose text-sm">
                         <div className="bg-white/5 p-6 rounded-xl">
-                            <h4 className="text-white font-bold mb-2">EEA, UK, Canada</h4>
+                            <h3 className="text-white font-bold mb-2">EEA, UK, Canada</h3>
                             <p className="text-slate-400">Right to access, rectify, erase, restrict processing, and data portability.</p>
                         </div>
                         <div className="bg-white/5 p-6 rounded-xl">
-                            <h4 className="text-white font-bold mb-2">United States</h4>
+                            <h3 className="text-white font-bold mb-2">United States</h3>
                             <p className="text-slate-400">Residents of CA, CO, CT, VA, etc. have rights to access, correct, delete, and portable data.</p>
                         </div>
                     </div>

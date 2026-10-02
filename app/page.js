@@ -353,7 +353,7 @@ export default async function Home() {
             </div>
 
             <h2 className="text-3xl md:text-4xl font-black text-slate-900 dark:text-white mb-3 tracking-tighter uppercase transition-colors duration-300">
-              <Link href="/about/alfaz-mahmud-rizve/" className="hover:text-teal-600 dark:text-teal-400 transition-colors">
+              <Link href="/about/" className="hover:text-teal-600 dark:text-teal-400 transition-colors">
                 Alfaz Mahmud Rizve
               </Link>
             </h2>
@@ -381,7 +381,7 @@ export default async function Home() {
             {/* Tactile Action Buttons */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-2xl mx-auto">
               <Link 
-                href="/about/alfaz-mahmud-rizve/" 
+                href="/about/" 
                 className="w-full sm:w-auto px-8 py-4.5 bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 text-slate-900 dark:text-white font-black rounded-2xl shadow-sm hover:bg-slate-50 dark:hover:bg-white/10 transition-all flex items-center justify-center"
               >
                 ABOUT ME
@@ -487,7 +487,7 @@ export default async function Home() {
 
           <div className="grid md:grid-cols-3 gap-6">
             {posts?.slice(0, 3).map((post, i) => (
-              <Link key={post.slug.current} href={`/blog/${post.slug.current}/`} className={`group h-full animate-in fade-in slide-in-from-bottom-12 zoom-in-[0.98] duration-1000 ease-out fill-mode-both delay-[${i * 150}ms]`}>
+              <Link key={post.slug.current} href={`/blog/${post.slug.current}/`} style={{ animationDelay: `${i * 150}ms` }} className="group h-full animate-in fade-in slide-in-from-bottom-12 zoom-in-[0.98] duration-1000 ease-out fill-mode-both">
                 <article className="h-full bg-white dark:bg-[#1e293b] rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 hover:shadow-2xl hover:-translate-y-2 dark:hover:border-blue-500/50 transition-all duration-500 flex flex-col">
                   {/* TOP IMAGE AREA WITH PILLS */}
                   <div className="h-40 bg-slate-100 dark:bg-slate-800 relative overflow-hidden p-4 flex flex-col justify-start">

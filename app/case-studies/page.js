@@ -11,12 +11,12 @@ export const metadata = {
     title: "Case Studies & Architecture Teardowns | Alfaz Mahmud Rizve",
     description: "Deep dive technical case studies detailing production automated systems, Next.js architecture, n8n RevOps pipelines, and enterprise AI agents.",
     alternates: {
-        canonical: "https://whoisalfaz.me/case-studies",
+        canonical: "https://whoisalfaz.me/case-studies/",
     },
     openGraph: {
         title: "Case Studies & Architecture Teardowns | Alfaz Mahmud Rizve",
         description: "Deep dive technical breakdowns of production automated systems, Next.js architecture, and AI agents.",
-        url: "https://whoisalfaz.me/case-studies",
+        url: "https://whoisalfaz.me/case-studies/",
         type: "website",
         siteName: "whoisalfaz",
         images: [

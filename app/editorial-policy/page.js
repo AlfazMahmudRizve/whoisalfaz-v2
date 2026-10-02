@@ -62,9 +62,9 @@ export default function EditorialPolicy() {
                 {/* LEFT: SIDEBAR NAV (Sticky) */}
                 <aside className="hidden lg:block h-fit sticky top-32 space-y-8">
                     <div className="p-6 bg-white/5 border border-white/10 rounded-2xl backdrop-blur-md">
-                        <h4 className="text-xs font-bold text-slate-500 uppercase tracking-widest mb-6 flex items-center gap-2">
+                        <div className="text-xs font-bold text-slate-500 uppercase tracking-widest mb-6 flex items-center gap-2">
                             <FileText size={14} /> Table of Contents
-                        </h4>
+                        </div>
                         <nav className="space-y-1">
                             {[
                                 { id: "standards", label: "Editorial Standards" },
@@ -86,7 +86,7 @@ export default function EditorialPolicy() {
                     </div>
 
                     <div className="p-6 rounded-2xl bg-gradient-to-br from-blue-900/20 to-purple-900/20 border border-blue-500/20">
-                        <h4 className="text-white font-bold mb-2">Editorial Feedback</h4>
+                        <div className="text-white font-bold mb-2">Editorial Feedback</div>
                         <p className="text-slate-400 text-xs mb-4">
                             Found an error, outdated code, or want to suggest an improvement?
                         </p>
@@ -157,7 +157,7 @@ export default function EditorialPolicy() {
                         In our experience, generic tutorials written without real environment testing lead to fragile integrations. We believe in providing value through original research and hands-on validation.
                     </p>
                     <div className="bg-blue-900/10 border-l-4 border-blue-500 p-6 rounded-r-xl my-6">
-                        <h4 className="text-blue-400 font-bold mt-0 mb-2">How We Test and Review:</h4>
+                        <h3 className="text-blue-400 font-bold mt-0 mb-2">How We Test and Review:</h3>
                         <ul className="mb-0 text-slate-300">
                             <li><strong>Hands-On Verification:</strong> For every tool integration, API connector, or configuration we review, <strong>we tested</strong> the systems ourselves in a sandboxed staging environment.</li>
                             <li><strong>System Measurement:</strong> In each case study, <strong>we measured</strong> operational latency, API call volumes, failover rates, and system efficiency to provide real performance numbers.</li>
@@ -261,7 +261,7 @@ export default function EditorialPolicy() {
                                 <span className="text-white font-bold">Legal Resources</span>
                             </div>
                             <ul className="space-y-2 pl-0 list-none m-0">
-                                <li><Link href="/about/alfaz-mahmud-rizve/" className="text-slate-400 hover:text-white hover:underline">&rarr; About Alfaz Mahmud Rizve</Link></li>
+                                <li><Link href="/about/" className="text-slate-400 hover:text-white hover:underline">&rarr; About Alfaz Mahmud Rizve</Link></li>
                                 <li><Link href="/portfolio/" className="text-slate-400 hover:text-white hover:underline">&rarr; Portfolio</Link></li>
                                 <li><Link href="/privacy-policy/" className="text-slate-400 hover:text-white hover:underline">&rarr; Privacy Notice</Link></li>
                                 <li><Link href="/terms/" className="text-slate-400 hover:text-white hover:underline">&rarr; Terms of Service</Link></li>

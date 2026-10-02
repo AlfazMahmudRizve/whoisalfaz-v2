@@ -7,12 +7,12 @@ export const metadata = {
   title: '30 Days of n8n & Automation Series | whoisalfaz',
   description: 'A 30-day architectural blueprint for mastering n8n, self-hosted automation, and enterprise RevOps. Complete guide from bare-metal servers to AI agents.',
   alternates: {
-    canonical: 'https://whoisalfaz.me/blog/30-days-of-n8n',
+    canonical: 'https://whoisalfaz.me/blog/30-days-of-n8n/',
   },
   openGraph: {
     title: '30 Days of n8n & Automation Series | Alfaz Mahmud Rizve',
     description: 'A 30-day architectural blueprint for mastering n8n, self-hosted automation, and enterprise RevOps. Complete guide from bare-metal servers to AI agents.',
-    url: 'https://whoisalfaz.me/blog/30-days-of-n8n',
+    url: 'https://whoisalfaz.me/blog/30-days-of-n8n/',
     type: 'website',
     siteName: 'whoisalfaz',
     images: [

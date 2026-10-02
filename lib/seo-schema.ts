@@ -392,7 +392,7 @@ export function generateUnifiedArticleGraph(params: UnifiedArticleGraphParams): 
     '@type': 'Person',
     '@id': `${siteUrl}/#author`,
     name: 'Alfaz Mahmud Rizve',
-    url: `${siteUrl}/about/alfaz-mahmud-rizve/`,
+    url: `${siteUrl}/about/`,
     image: `${siteUrl}/profile.jpg`,
     jobTitle: 'RevOps Architect & Full Stack Automation Engineer',
     description:
@@ -401,7 +401,7 @@ export function generateUnifiedArticleGraph(params: UnifiedArticleGraphParams): 
       'https://n8n.io/creators/whoisalfaz/',
       'https://www.linkedin.com/in/alfaz-mahmud-rizve/',
       'https://github.com/AlfazMahmudRizve',
-      'https://x.com/whoisalfaz',
+      'https://x.com/whois_alfaz',
     ],
     worksFor: {
       '@id': `${siteUrl}/#organization`,
@@ -422,13 +422,13 @@ export function generateUnifiedArticleGraph(params: UnifiedArticleGraphParams): 
   const organizationNode: SchemaNode = {
     '@type': 'Organization',
     '@id': `${siteUrl}/#organization`,
-    name: 'Accelerated Growth Studio',
+    name: 'Alfaz Mahmud Rizve - GTM & RevOps Architect',
     url: siteUrl,
     logo: {
       '@type': 'ImageObject',
       '@id': `${siteUrl}/#logo`,
       url: `${siteUrl}/logo.png`,
-      caption: 'Accelerated Growth Studio',
+      caption: 'Alfaz Mahmud Rizve - GTM & RevOps Architect',
     },
     founder: {
       '@id': `${siteUrl}/#author`,
@@ -436,7 +436,7 @@ export function generateUnifiedArticleGraph(params: UnifiedArticleGraphParams): 
     sameAs: [
       'https://www.linkedin.com/in/alfaz-mahmud-rizve/',
       'https://github.com/AlfazMahmudRizve',
-      'https://x.com/whoisalfaz',
+      'https://x.com/whois_alfaz',
     ],
   };
 

@@ -209,7 +209,7 @@ export default function AuditTool() {
         <div className="absolute -top-10 -right-10 w-40 h-40 bg-teal-500/10 dark:bg-blue-500/10 rounded-full blur-3xl group-hover:bg-teal-500/20 dark:group-hover:bg-blue-500/20 transition-all duration-700" />
         <form onSubmit={runAudit} className="space-y-6 relative z-10">
           <div className="space-y-1 text-center lg:text-left">
-            <h3 className="text-3xl font-black text-slate-900 dark:text-white uppercase tracking-tight italic transition-colors duration-300">Run Free Audit</h3>
+            <h2 className="text-3xl font-black text-slate-900 dark:text-white uppercase tracking-tight italic transition-colors duration-300">Run Free Audit</h2>
             <p className="text-slate-500 dark:text-slate-400 text-sm transition-colors duration-300">Real-time analysis. No fluff. Actual data.</p>
           </div>
           <div className="space-y-4">

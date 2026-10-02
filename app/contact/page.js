@@ -93,7 +93,7 @@ export default function ContactPage() {
                     </div>
 
                     <div className="mt-16 pt-8 border-t border-slate-200 dark:border-white/10 transition-colors duration-300">
-                        <h4 className="text-slate-400 dark:text-slate-500 text-xs font-black uppercase tracking-widest mb-6">Connect on Socials</h4>
+                        <h3 className="text-slate-400 dark:text-slate-500 text-xs font-black uppercase tracking-widest mb-6">Connect on Socials</h3>
                         <div className="flex gap-4">
                             {[
                                 { icon: Facebook, href: "https://facebook.com/alfazmahmudrizve" },

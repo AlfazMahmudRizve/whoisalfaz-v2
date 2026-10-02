@@ -5,12 +5,12 @@ export const metadata = {
     title: "Terms of Service & Consulting SLA | whoisalfaz",
     description: "Terms of Service and RevOps consulting SLAs for whoisalfaz.me. Review project scope, IP rights, payment terms, and confidentiality standards.",
     alternates: {
-        canonical: 'https://whoisalfaz.me/terms',
+        canonical: 'https://whoisalfaz.me/terms/',
     },
     openGraph: {
         title: "Terms of Service & Consulting SLA | Alfaz Mahmud Rizve",
         description: "Terms of Service and RevOps consulting SLAs for whoisalfaz.me. Review project scope, IP rights, payment terms, and confidentiality standards.",
-        url: 'https://whoisalfaz.me/terms',
+        url: 'https://whoisalfaz.me/terms/',
         type: 'website',
         siteName: 'whoisalfaz',
         images: [

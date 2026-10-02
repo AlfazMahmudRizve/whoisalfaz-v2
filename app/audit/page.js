@@ -7,12 +7,12 @@ export const metadata = {
     title: "Free Website Audit Tool – SEO, Speed & Security | whoisalfaz",
     description: "Run a free website audit in 30 seconds. Instantly check your PageSpeed score, SEO health, SSL certificate, security headers, and sitemap. No signup required.",
     alternates: {
-        canonical: 'https://whoisalfaz.me/audit',
+        canonical: 'https://whoisalfaz.me/audit/',
     },
     openGraph: {
         title: "Free Website Audit Tool – SEO, Speed & Security",
         description: "Run a free website audit in 30 seconds. Instantly check your PageSpeed score, SEO health, SSL certificate, security headers, and sitemap. No signup required.",
-        url: 'https://whoisalfaz.me/audit',
+        url: 'https://whoisalfaz.me/audit/',
         type: 'website',
         siteName: 'whoisalfaz',
         images: [

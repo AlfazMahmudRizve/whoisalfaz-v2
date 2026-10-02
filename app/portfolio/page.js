@@ -7,12 +7,12 @@ export const metadata = {
     title: "Alfaz Mahmud Rizve - GTM & RevOps Architect | Portfolio",
     description: "GTM & RevOps Architect bridging high-speed web applications, autonomous RevOps, and SEO & organic growth.",
     alternates: {
-        canonical: 'https://whoisalfaz.me/portfolio',
+        canonical: 'https://whoisalfaz.me/portfolio/',
     },
     openGraph: {
         title: "Alfaz Mahmud Rizve - GTM & RevOps Architect | Portfolio",
         description: "GTM & RevOps Architect bridging high-speed web applications, autonomous RevOps, and SEO & organic growth.",
-        url: 'https://whoisalfaz.me/portfolio',
+        url: 'https://whoisalfaz.me/portfolio/',
         type: 'website',
     },
     twitter: {
@@ -87,7 +87,7 @@ export default function Portfolio() {
 
                             {/* Web Applications */}
                             <div className="space-y-5 bg-white dark:bg-[#111] border border-slate-200 dark:border-white/5 p-6 md:p-8 rounded-[2rem] shadow-xl dark:shadow-none hover:border-slate-300 dark:hover:border-white/10 transition-colors hover:-translate-y-1 hover:shadow-2xl duration-300 group">
-                                <h4 className="text-blue-600 dark:text-blue-400 font-bold text-[10px] uppercase tracking-widest bg-blue-50 dark:bg-blue-500/10 inline-block px-4 py-2 rounded-full border border-blue-100 dark:border-blue-500/20 group-hover:bg-blue-100 dark:group-hover:bg-blue-500/20 transition-colors">Web Applications</h4>
+                                <h3 className="text-blue-600 dark:text-blue-400 font-bold text-[10px] uppercase tracking-widest bg-blue-50 dark:bg-blue-500/10 inline-block px-4 py-2 rounded-full border border-blue-100 dark:border-blue-500/20 group-hover:bg-blue-100 dark:group-hover:bg-blue-500/20 transition-colors">Web Applications</h3>
                                 <ul className="text-[13px] font-bold text-slate-600 dark:text-slate-400 space-y-3 pl-1 leading-relaxed">
                                     <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-slate-300 dark:bg-slate-700"></div>Next.js</li>
                                     <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-slate-300 dark:bg-slate-700"></div>React</li>
@@ -99,7 +99,7 @@ export default function Portfolio() {
 
                             {/* RevOps & Automation */}
                             <div className="space-y-5 bg-white dark:bg-[#111] border border-slate-200 dark:border-white/5 p-6 md:p-8 rounded-[2rem] shadow-xl dark:shadow-none hover:border-slate-300 dark:hover:border-white/10 transition-colors hover:-translate-y-1 hover:shadow-2xl duration-300 group" style={{ animationDelay: '150ms' }}>
-                                <h4 className="text-purple-600 dark:text-purple-400 font-bold text-[10px] uppercase tracking-widest bg-purple-50 dark:bg-purple-500/10 inline-block px-4 py-2 rounded-full border border-purple-100 dark:border-purple-500/20 group-hover:bg-purple-100 dark:group-hover:bg-purple-500/20 transition-colors">RevOps & Automation</h4>
+                                <h3 className="text-purple-600 dark:text-purple-400 font-bold text-[10px] uppercase tracking-widest bg-purple-50 dark:bg-purple-500/10 inline-block px-4 py-2 rounded-full border border-purple-100 dark:border-purple-500/20 group-hover:bg-purple-100 dark:group-hover:bg-purple-500/20 transition-colors">RevOps & Automation</h3>
                                 <ul className="text-[13px] font-bold text-slate-600 dark:text-slate-400 space-y-3 pl-1 leading-relaxed">
                                     <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-slate-300 dark:bg-slate-700"></div>n8n</li>
                                     <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-slate-300 dark:bg-slate-700"></div>Make</li>
@@ -112,7 +112,7 @@ export default function Portfolio() {
 
                             {/* GTM & SEO Stack */}
                             <div className="space-y-5 bg-white dark:bg-[#111] border border-slate-200 dark:border-white/5 p-6 md:p-8 rounded-[2rem] shadow-xl dark:shadow-none hover:border-slate-300 dark:hover:border-white/10 transition-colors hover:-translate-y-1 hover:shadow-2xl duration-300 group" style={{ animationDelay: '300ms' }}>
-                                <h4 className="text-teal-600 dark:text-teal-400 font-bold text-[10px] uppercase tracking-widest bg-teal-50 dark:bg-teal-500/10 inline-block px-4 py-2 rounded-full border border-teal-100 dark:border-teal-500/20 group-hover:bg-teal-100 dark:group-hover:bg-teal-500/20 transition-colors">GTM & SEO Stack</h4>
+                                <h3 className="text-teal-600 dark:text-teal-400 font-bold text-[10px] uppercase tracking-widest bg-teal-50 dark:bg-teal-500/10 inline-block px-4 py-2 rounded-full border border-teal-100 dark:border-teal-500/20 group-hover:bg-teal-100 dark:group-hover:bg-teal-500/20 transition-colors">GTM & SEO Stack</h3>
                                 <ul className="text-[13px] font-bold text-slate-600 dark:text-slate-400 space-y-3 pl-1 leading-relaxed">
                                     <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-slate-300 dark:bg-slate-700"></div>Topical Clustering</li>
                                     <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-slate-300 dark:bg-slate-700"></div>Content Architecture</li>

@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Sparkles, ArrowRight, Download, CheckCircle2, ShieldCheck, Video, Info, FileCode, Zap, Layers } from 'lucide-react';
 
 export default function ClaimBonusClient() {
@@ -61,11 +62,13 @@ export default function ClaimBonusClient() {
         </div>
 
         <div className="flex justify-center my-6">
-          <div className="w-32 sm:w-40 aspect-[4/5] rounded-2xl overflow-hidden border border-purple-500/40 shadow-2xl shadow-purple-500/25 bg-slate-950">
-            <img
+          <div className="w-32 sm:w-40 aspect-[4/5] rounded-2xl overflow-hidden border border-purple-500/40 shadow-2xl shadow-purple-500/25 bg-slate-950 relative">
+            <Image
               src="/images/manychat-summit/summit-2026-portrait.svg"
               alt="ManyChat Instagram Summit 2026 Keynote"
-              className="w-full h-full object-cover"
+              fill
+              sizes="(max-width: 640px) 128px, 160px"
+              className="object-cover"
             />
           </div>
         </div>

@@ -21,29 +21,29 @@ export async function GET(request: Request) {
 
         // 1. Static Routes (Core Pages - mirrors sitemap.ts)
         const staticRoutes = [
-            '',
-            '/portfolio',
-            '/blog',
-            '/blog/30-days-of-n8n',
-            '/about/alfaz-mahmud-rizve',
-            '/case-studies',
-            '/contact',
-            '/services',
-            '/partners',
-            '/labs',
-            '/labs/roi',
-            '/audit',
-            '/terms',
-            '/privacy-policy',
+            '/',
+            '/about/',
+            '/portfolio/',
+            '/blog/',
+            '/blog/30-days-of-n8n/',
+            '/case-studies/',
+            '/contact/',
+            '/services/',
+            '/partners/',
+            '/labs/',
+            '/labs/roi/',
+            '/audit/',
+            '/terms/',
+            '/privacy-policy/',
         ].map(route => `${baseUrl}${route}`);
 
         // 2. Dynamic Service Pages (mirrors sitemap.ts)
         const serviceSlugs = Object.keys(serviceData).filter(slug => slug !== 'technical-seo');
-        const serviceRoutes = serviceSlugs.map(slug => `${baseUrl}/services/${slug}`);
+        const serviceRoutes = serviceSlugs.map(slug => `${baseUrl}/services/${slug}/`);
 
         // 3. Dynamic Blog Posts (mirrors sitemap.ts)
         const posts = await getSanityPosts();
-        const blogRoutes = posts.map((post: { slug: { current: string } }) => `${baseUrl}/blog/${post.slug.current}`);
+        const blogRoutes = posts.map((post: { slug: { current: string } }) => `${baseUrl}/blog/${post.slug.current}/`);
 
         // 4. Dynamic Blog Categories (mirrors sitemap.ts)
         const categories = await getSanityCategories();
