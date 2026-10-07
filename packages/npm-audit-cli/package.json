@@ -1,0 +1,33 @@
+{
+  "name": "whoisalfaz-audit",
+  "version": "1.0.0",
+  "description": "Fast technical website auditor checking Core Web Vitals, SSL certificates, DNS health, and security headers.",
+  "main": "bin/cli.js",
+  "bin": {
+    "whoisalfaz-audit": "bin/cli.js"
+  },
+  "scripts": {
+    "start": "node bin/cli.js"
+  },
+  "keywords": [
+    "seo",
+    "seo-audit",
+    "pagespeed",
+    "ssl-checker",
+    "security-headers",
+    "dns-lookup",
+    "audit-tool",
+    "whoisalfaz"
+  ],
+  "author": "Alfaz Mahmud Rizve <info@whoisalfaz.me> (https://whoisalfaz.me)",
+  "license": "MIT",
+  "homepage": "https://whoisalfaz.me/audit/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AlfazMahmudRizve/whoisalfaz-v2.git",
+    "directory": "packages/npm-audit-cli"
+  },
+  "bugs": {
+    "url": "https://whoisalfaz.me/contact/"
+  }
+}

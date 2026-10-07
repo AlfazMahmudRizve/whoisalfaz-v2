@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "whoisalfaz-audit"
+version = "1.0.0"
+description = "Instant technical SEO, Core Web Vitals, SSL certificate, and DNS auditor CLI."
+readme = "README.md"
+authors = [
+  { name = "Alfaz Mahmud Rizve", email = "info@whoisalfaz.me" },
+]
+license = { text = "MIT" }
+keywords = [
+  "seo",
+  "seo-audit",
+  "pagespeed",
+  "core-web-vitals",
+  "ssl",
+  "dns",
+  "security-headers",
+  "whoisalfaz"
+]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Topic :: Internet :: WWW/HTTP",
+  "Topic :: Utilities"
+]
+requires-python = ">=3.8"
+dependencies = []
+
+[project.urls]
+"Homepage" = "https://whoisalfaz.me/audit/"
+"Documentation" = "https://whoisalfaz.me/blog/screaming-frog-alternatives-free-seo-audit-tools/"
+"Author" = "https://whoisalfaz.me/"
+"Repository" = "https://github.com/AlfazMahmudRizve/whoisalfaz-v2"
+"Bug Tracker" = "https://whoisalfaz.me/contact/"
+
+[project.scripts]
+whoisalfaz-audit = "whoisalfaz_audit.cli:main"

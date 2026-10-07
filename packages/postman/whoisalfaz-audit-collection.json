@@ -1,0 +1,45 @@
+{
+  "info": {
+    "name": "WhoisAlfaz Website & SEO Audit API",
+    "_postman_id": "7b58c42a-9e12-4211-9a77-whoisalfaz01",
+    "description": "## WhoisAlfaz Website & Technical SEO Audit API\n\nOfficial public REST API collection for the **[WhoisAlfaz Website Audit Engine](https://whoisalfaz.me/audit/)**.\n\nRun instant, automated, multi-vector diagnostic audits on any web domain covering:\n- **Core Web Vitals & Real Performance (FCP, CLS, TBT)**\n- **SSL Certificate Validity & Cipher Strength**\n- **Security Headers (HSTS, CSP, X-Frame-Options)**\n- **DNS Records & Infrastructure Latency**\n- **Meta Tags & Social Open Graph Cards**\n- **Robots.txt & XML Sitemap Indexability**\n\n### 🔗 Key Links\n- **Web Auditor:** [https://whoisalfaz.me/audit/](https://whoisalfaz.me/audit/)\n- **Technical Documentation & Benchmarks:** [https://whoisalfaz.me/blog/screaming-frog-alternatives-free-seo-audit-tools/](https://whoisalfaz.me/blog/screaming-frog-alternatives-free-seo-audit-tools/)\n- **Author & Automation Architecture:** [https://whoisalfaz.me/](https://whoisalfaz.me/)\n- **npm Package:** `npx whoisalfaz-audit <url>`\n- **Python Package:** `pip install whoisalfaz-audit`",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Run Full Technical Audit",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "User-Agent",
+            "value": "PostmanRuntime/WhoisAlfazAudit"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"url\": \"https://example.com\",\n  \"name\": \"DevOps Lead\",\n  \"email\": \"\"\n}"
+        },
+        "url": {
+          "raw": "https://whoisalfaz.me/api/audit/",
+          "protocol": "https",
+          "host": [
+            "whoisalfaz",
+            "me"
+          ],
+          "path": [
+            "api",
+            "audit",
+            ""
+          ]
+        },
+        "description": "Submits a URL to be audited across 6 parallel technical vectors. Returns an overall score (0-100), letter grade (A-F), diagnostic checks, and a shareable web report URL.\n\n### Payload Parameters:\n- `url` *(string, required)*: The target URL to audit (e.g., `https://example.com`)\n- `name` *(string, optional)*: User or business name.\n- `email` *(string, optional)*: If provided, a formatted PDF/HTML scorecard is emailed via Brevo."
+      },
+      "response": []
+    }
+  ]
+}
