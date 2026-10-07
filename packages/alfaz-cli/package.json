@@ -1,0 +1,38 @@
+{
+  "name": "alfaz-cli",
+  "version": "1.0.0",
+  "description": "Developer utility tools & technical audit engine by Alfaz Mahmud Rizve",
+  "main": "index.js",
+  "bin": {
+    "alfaz-cli": "bin/cli.js",
+    "alfaz": "bin/cli.js"
+  },
+  "scripts": {
+    "start": "node bin/cli.js"
+  },
+  "homepage": "https://whoisalfaz.me",
+  "author": {
+    "name": "Alfaz Mahmud Rizve",
+    "url": "https://whoisalfaz.me",
+    "email": "info@whoisalfaz.me"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlfazMahmudRizve/whoisalfaz-v2.git",
+    "directory": "packages/alfaz-cli"
+  },
+  "keywords": [
+    "developer",
+    "tools",
+    "cli",
+    "portfolio",
+    "seo-audit",
+    "pagespeed",
+    "whoisalfaz",
+    "n8n"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://whoisalfaz.me/contact/"
+  }
+}

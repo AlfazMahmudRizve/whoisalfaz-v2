@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "whoisalfaz"
+version = "1.0.0"
+authors = [{ name="Alfaz Mahmud Rizve", email="contact@whoisalfaz.me" }]
+description = "Personal developer toolset and API utilities for whoisalfaz.me"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+keywords = [
+  "developer",
+  "tools",
+  "cli",
+  "audit",
+  "whoisalfaz",
+  "seo",
+  "pagespeed",
+  "automation"
+]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Topic :: Utilities",
+  "Topic :: Internet :: WWW/HTTP"
+]
+dependencies = []
+
+[project.urls]
+"Homepage" = "https://whoisalfaz.me"
+"Author Portfolio" = "https://whoisalfaz.me"
+"Website Audit Tool" = "https://whoisalfaz.me/audit/"
+"Documentation" = "https://whoisalfaz.me/blog/screaming-frog-alternatives-free-seo-audit-tools/"
+"Source Code" = "https://github.com/AlfazMahmudRizve/whoisalfaz-v2"
+
+[project.scripts]
+whoisalfaz = "whoisalfaz.cli:main"
