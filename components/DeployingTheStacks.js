@@ -117,7 +117,7 @@ const AFFILIATE_DATA = {
     manychat: {
         title: "ManyChat",
         description: "The #1 conversational marketing platform for Instagram, Facebook, and WhatsApp.",
-        url: "https://manychat.com",
+        url: "/go/manychat",
         buttonText: "Explore ManyChat",
         badge: "Social Automation"
     },
