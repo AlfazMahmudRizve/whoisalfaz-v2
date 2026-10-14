@@ -17,6 +17,25 @@ export default function robots(): MetadataRoute.Robots {
             },
 
             // =========================================================================
+            // MICROSOFT BING & COPILOT (Bingbot, msnbot, BingPreview)
+            // =========================================================================
+            {
+                userAgent: 'bingbot',
+                allow: '/',
+                disallow: privateDisallows,
+            },
+            {
+                userAgent: 'msnbot',
+                allow: '/',
+                disallow: privateDisallows,
+            },
+            {
+                userAgent: 'BingPreview',
+                allow: '/',
+                disallow: privateDisallows,
+            },
+
+            // =========================================================================
             // 1. OPENAI (ChatGPT Live Browsing, SearchGPT, GPTBot)
             // =========================================================================
             {
