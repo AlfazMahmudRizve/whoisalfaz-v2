@@ -1,5 +1,6 @@
 import { revalidatePath } from 'next/cache';
 import { NextRequest, NextResponse } from 'next/server';
+import { submitToIndexNow } from '@/lib/bing';
 
 /**
  * On-Demand Revalidation API
@@ -55,10 +56,21 @@ export async function POST(request: NextRequest) {
             revalidatePath('/services/[slug]', 'page');
             revalidatePath('/[slug]', 'page');
 
+            // Automatically push core paths to IndexNow
+            let indexNowSubmitted = false;
+            try {
+                const fullUrls = allPaths.map(p => `https://whoisalfaz.me${p}`);
+                await submitToIndexNow(fullUrls);
+                indexNowSubmitted = true;
+            } catch (idxErr) {
+                console.error('[Revalidate] IndexNow automatic submission error:', idxErr);
+            }
+
             return NextResponse.json({
                 revalidated: true,
                 paths: allPaths,
-                message: 'All content paths revalidated',
+                indexNowSubmitted,
+                message: 'All content paths revalidated and submitted to IndexNow',
                 timestamp: new Date().toISOString(),
             });
         }
@@ -78,9 +90,26 @@ export async function POST(request: NextRequest) {
             revalidatePath(path);
         }
 
+        // Automatically push revalidated paths to IndexNow (Bing, Yandex)
+        let indexNowSubmitted = false;
+        try {
+            const baseUrl = 'https://whoisalfaz.me';
+            const fullUrls = limitedPaths
+                .filter(p => !p.startsWith('/api') && !p.startsWith('/private') && !p.startsWith('/go'))
+                .map(p => p.startsWith('http') ? p : `${baseUrl}${p.startsWith('/') ? p : '/' + p}`);
+
+            if (fullUrls.length > 0) {
+                await submitToIndexNow(fullUrls);
+                indexNowSubmitted = true;
+            }
+        } catch (idxErr) {
+            console.error('[Revalidate] IndexNow automatic submission error:', idxErr);
+        }
+
         return NextResponse.json({
             revalidated: true,
             paths: limitedPaths,
+            indexNowSubmitted,
             timestamp: new Date().toISOString(),
         });
     } catch (error) {
