@@ -167,6 +167,11 @@ const nextConfig: NextConfig = {
         destination: '/blog/category/30-days-of-n8n-automation/',
         permanent: true,
       },
+      {
+        source: '/blog/category/technology',
+        destination: '/blog/category/architecture-teardowns/',
+        permanent: true,
+      },
       // 6c. Strip /feed/ from any path
       {
         source: '/:path*/feed',

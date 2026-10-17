@@ -7,6 +7,15 @@ import { Suspense } from 'react';
 
 import SearchWidget from '../../components/SearchWidget';
 
+export const metadata = {
+    title: "Search Articles & Workflows | whoisalfaz",
+    description: "Search technical case studies, n8n blueprints, and RevOps automation guides.",
+    robots: {
+        index: false,
+        follow: true,
+    },
+};
+
 export default async function SearchPage({ searchParams }) {
     const posts = await getSanityPosts();
 
