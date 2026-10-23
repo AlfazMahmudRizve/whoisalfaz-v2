@@ -1,0 +1,842 @@
+[
+  {
+    "batchNumber": 1,
+    "posts": [
+      {
+        "_id": "zero-data-retention-enterprise-rag-vultr-vps",
+        "slug": "zero-data-retention-enterprise-rag-vultr-vps",
+        "title": "Zero-Data-Retention Enterprise RAG: Vultr SOP",
+        "seoTitle": "[SOP Guide] Zero-Data-Retention Enterprise RAG on Vultr",
+        "category": "General"
+      },
+      {
+        "_id": "post-tempmail10min-technical-seo",
+        "slug": "tempmail10min-seo-case-study",
+        "title": "SEO Lead Case Study: Scaling TempMail10min [Week 1 Live Log]",
+        "seoTitle": "TempMail10min SEO Case Study: Week 1 Live Log [2026]",
+        "category": "Architecture Teardowns"
+      },
+      {
+        "_id": "q4Qx8KjnI6dEFTDAd9JuZV",
+        "slug": "manychat-instagram-summit-2026-agenda-review-bonus",
+        "title": "ManyChat Instagram Summit 2026: Agenda, Keynotes & Blueprint Pack",
+        "seoTitle": "[2026 Blueprint] ManyChat Instagram Summit & Agenda Review",
+        "category": "Automation Tools"
+      },
+      {
+        "_id": "post-manychat-alternatives-2026-top-tools-by-use-case",
+        "slug": "manychat-alternatives-2026-top-tools-by-use-case",
+        "title": "ManyChat Alternatives 2026: Top Tools by Use Case",
+        "seoTitle": "[Benchmark] ManyChat Alternatives: Top Chatbots in 2026",
+        "category": "General"
+      },
+      {
+        "_id": "outstanding-ideas-for-youtube-shorts",
+        "slug": "outstanding-ideas-for-youtube-shorts",
+        "title": "Automated YouTube Shorts Pipelines: Tech Creator Workflow & AI Video Engine (2026)",
+        "seoTitle": "[SOP Guide] Automated YouTube Shorts Pipeline in n8n",
+        "category": "General"
+      }
+    ]
+  },
+  {
+    "batchNumber": 2,
+    "posts": [
+      {
+        "_id": "outstanding-ideas-for-saas-mvps",
+        "slug": "outstanding-ideas-for-saas-mvps",
+        "title": "SaaS MVP Architecture: 10 Scalable Micro-SaaS Ideas & Rapid Build SOP (2026)",
+        "seoTitle": "[2026 Blueprint] SaaS MVP Architecture: 10 Micro-SaaS",
+        "category": "General"
+      },
+      {
+        "_id": "outstanding-ideas-for-b2b-lead-generation",
+        "slug": "outstanding-ideas-for-b2b-lead-generation",
+        "title": "B2B Lead Generation: The Automated Multi-Channel Pipeline Playbook (2026)",
+        "seoTitle": "[2026 Blueprint] B2B Lead Generation Automated Pipeline",
+        "category": "General"
+      },
+      {
+        "_id": "outstanding-ideas-for-b2b-lead-capture",
+        "slug": "outstanding-ideas-for-b2b-lead-capture",
+        "title": "B2B Lead Capture: 10 High-Converting Tactics & Form Automation SOP (2026)",
+        "seoTitle": "[SOP Guide] B2B Lead Capture: 10 High-Converting Tactics",
+        "category": "General"
+      },
+      {
+        "_id": "automated-pdf-document-chunking-vectorization-n8n",
+        "slug": "automated-pdf-document-chunking-vectorization-n8n",
+        "title": "Automated PDF Document Chunking in n8n Guide",
+        "seoTitle": "[Step-by-Step] Automated PDF Document Chunking in n8n",
+        "category": "Architecture Teardowns"
+      },
+      {
+        "_id": "building-an-enterprise-knowledge-graph-rag-n8n",
+        "slug": "building-an-enterprise-knowledge-graph-rag-n8n",
+        "title": "Enterprise Knowledge Graph RAG in n8n Blueprint",
+        "seoTitle": "[2026 Blueprint] Enterprise Knowledge Graph RAG in n8n",
+        "category": "Architecture Teardowns"
+      }
+    ]
+  },
+  {
+    "batchNumber": 3,
+    "posts": [
+      {
+        "_id": "building-multi-tenant-vector-search-n8n-qdrant",
+        "slug": "building-multi-tenant-vector-search-n8n-qdrant",
+        "title": "Multi-Tenant Vector Search: n8n Qdrant Blueprint",
+        "seoTitle": "[2026 Blueprint] Multi-Tenant Vector Search with Qdrant",
+        "category": "Architecture Teardowns"
+      },
+      {
+        "_id": "corrective-rag-crag-blueprint-n8n-tavily-fallback",
+        "slug": "corrective-rag-crag-blueprint-n8n-tavily-fallback",
+        "title": "Corrective RAG CRAG Blueprint: n8n & Tavily",
+        "seoTitle": "[2026 Blueprint] Corrective RAG (CRAG) in n8n & Tavily",
+        "category": "Architecture Teardowns"
+      },
+      {
+        "_id": "dify-ai-vultr-gpu-docker-deployment-guide",
+        "slug": "dify-ai-vultr-gpu-docker-deployment-guide",
+        "title": "Dify.ai Vultr GPU Docker Deployment Guide: AI Stack Blueprint",
+        "seoTitle": "Dify.ai Vultr GPU Docker Guide: AI Stack Blueprint [2026]",
+        "category": "Architecture Teardowns"
+      },
+      {
+        "_id": "dify-ai-workflow-orchestration-vs-n8n-ai-agent-nodes",
+        "slug": "dify-ai-workflow-orchestration-vs-n8n-ai-agent-nodes",
+        "title": "Dify.ai vs n8n AI Agents: Architecture Guide",
+        "seoTitle": "Dify vs n8n [2026]: AI Workflow vs Agent Nodes Teardown",
+        "category": "Architecture Teardowns"
+      },
+      {
+        "_id": "high-throughput-batch-vector-ingestion-n8n-qdrant",
+        "slug": "high-throughput-batch-vector-ingestion-n8n-qdrant",
+        "title": "High-Throughput Batch Vector Ingestion: n8n SOP",
+        "seoTitle": "[SOP Guide] High-Throughput Batch Vector Ingestion in n8n",
+        "category": "Architecture Teardowns"
+      }
+    ]
+  },
+  {
+    "batchNumber": 4,
+    "posts": [
+      {
+        "_id": "hybrid-vector-keyword-search-qdrant-n8n-pipeline",
+        "slug": "hybrid-vector-keyword-search-qdrant-n8n-pipeline",
+        "title": "Hybrid Vector & Keyword Search: Qdrant n8n SOP",
+        "seoTitle": "[Step-by-Step] Hybrid Vector & Keyword Search in Qdrant",
+        "category": "Architecture Teardowns"
+      },
+      {
+        "_id": "n8n-ai-agent-memory-persistence-qdrant-vector-store",
+        "slug": "n8n-ai-agent-memory-persistence-qdrant-vector-store",
+        "title": "n8n Context Compression: Qdrant Memory Guide",
+        "seoTitle": "[2026 Blueprint] n8n Context Compression in Qdrant DB",
+        "category": "Architecture Teardowns"
+      },
+      {
+        "_id": "n8n-vector-store-memory-management-production-guide",
+        "slug": "n8n-vector-store-memory-management-production-guide",
+        "title": "n8n AI Agent Memory Persistence: Qdrant Guide",
+        "seoTitle": "[SOP Guide] n8n AI Agent Memory Persistence with Qdrant",
+        "category": "Architecture Teardowns"
+      },
+      {
+        "_id": "open-source-llm-embeddings-voyage-bge-mxbai-n8n-benchmark",
+        "slug": "open-source-llm-embeddings-voyage-bge-mxbai-n8n-benchmark",
+        "title": "Open-Source LLM Embeddings: BGE vs Voyage RAG",
+        "seoTitle": "[Benchmark] Open-Source LLM Embeddings: BGE vs Voyage",
+        "category": "Architecture Teardowns"
+      },
+      {
+        "_id": "pinecone-namespaces-vs-qdrant-payload-filters-comparison",
+        "slug": "pinecone-namespaces-vs-qdrant-payload-filters-comparison",
+        "title": "Pinecone Namespaces vs Qdrant Payload Filters",
+        "seoTitle": "[Benchmark] Pinecone Namespaces vs Qdrant Payload Filter",
+        "category": "Architecture Teardowns"
+      }
+    ]
+  },
+  {
+    "batchNumber": 5,
+    "posts": [
+      {
+        "_id": "pinecone-serverless-vs-qdrant-vultr-latency-benchmark",
+        "slug": "pinecone-serverless-vs-qdrant-vultr-latency-benchmark",
+        "title": "Pinecone vs Qdrant Vultr: RAG Latency Benchmark",
+        "seoTitle": "[Benchmark] Pinecone vs Qdrant Vultr: RAG Latency Test",
+        "category": "Architecture Teardowns"
+      },
+      {
+        "_id": "scaling-qdrant-vector-database-to-10-million-embeddings",
+        "slug": "scaling-qdrant-vector-database-to-10-million-embeddings",
+        "title": "Scaling Qdrant Vector Database to 10 Million Embeddings: Vultr SOP",
+        "seoTitle": "Scale Qdrant Vector DB to 10M Embeddings: Vultr SOP [2026]",
+        "category": "Architecture Teardowns"
+      },
+      {
+        "_id": "securing-self-hosted-vector-databases-ssl-vultr-firewall",
+        "slug": "securing-self-hosted-vector-databases-ssl-vultr-firewall",
+        "title": "Securing Self-Hosted Vector DBs: Vultr SOP",
+        "seoTitle": "[SOP Guide] Securing Self-Hosted Vector DBs on Vultr",
+        "category": "Architecture Teardowns"
+      },
+      {
+        "_id": "self-hosted-qdrant-cluster-vultr-docker-sop",
+        "slug": "self-hosted-qdrant-cluster-vultr-docker-sop",
+        "title": "Self-Hosted Qdrant Vultr Cluster: Docker SOP",
+        "seoTitle": "[SOP Guide] Self-Hosted Qdrant Cluster on Vultr Docker",
+        "category": "Architecture Teardowns"
+      },
+      {
+        "_id": "semantic-search-api-n8n-qdrant-fastapi-bridge",
+        "slug": "semantic-search-api-n8n-qdrant-fastapi-bridge",
+        "title": "Semantic Search API: n8n Qdrant FastAPI Guide",
+        "seoTitle": "[Step-by-Step] Semantic Search API with n8n & Qdrant",
+        "category": "Architecture Teardowns"
+      }
+    ]
+  },
+  {
+    "batchNumber": 6,
+    "posts": [
+      {
+        "_id": "the-ultimate-2026-self-hosted-ai-stack-vultr-qdrant-dify-n8n",
+        "slug": "the-ultimate-2026-self-hosted-ai-stack-vultr-qdrant-dify-n8n",
+        "title": "Self-Hosted AI Stack 2026: Vultr & n8n Guide",
+        "seoTitle": "[2026 Blueprint] Self-Hosted AI Stack: Vultr, Qdrant, n8n",
+        "category": "Architecture Teardowns"
+      },
+      {
+        "_id": "vultr-cloud-gpu-vs-aws-ec2-ai-inference-cost-guide",
+        "slug": "vultr-cloud-gpu-vs-aws-ec2-ai-inference-cost-guide",
+        "title": "Vultr Cloud GPU vs AWS EC2: AI Cost Teardown",
+        "seoTitle": "[Benchmark] Vultr Cloud GPU vs AWS EC2: AI Inference Cost",
+        "category": "Architecture Teardowns"
+      },
+      {
+        "_id": "brevo-cold-email-ip-warming-guide",
+        "slug": "brevo-cold-email-ip-warming-guide",
+        "title": "Brevo Cold Email & IP Warming: Dedicated SMTP Deliverability",
+        "seoTitle": "[SOP Guide] Brevo Cold Email & IP Warming Deliverability",
+        "category": "Automation Tools"
+      },
+      {
+        "_id": "waterfall-data-enrichment-pipeline-n8n-guide",
+        "slug": "waterfall-data-enrichment-pipeline-n8n-guide",
+        "title": "Waterfall Data Enrichment Pipeline: n8n, Apollo & Lusha Guide",
+        "seoTitle": "Waterfall Data Enrichment: n8n, Apollo & Lusha Guide [2026]",
+        "category": "Automation Tools"
+      },
+      {
+        "_id": "aisdr-vs-human-sdr-unit-economics-benchmark",
+        "slug": "aisdr-vs-human-sdr-unit-economics-benchmark",
+        "title": "AiSDR vs Human SDR: B2B Sales Outbound Unit Economics",
+        "seoTitle": "[Benchmark] AiSDR vs Human SDR: Outbound Unit Economics",
+        "category": "Architecture Teardowns"
+      }
+    ]
+  },
+  {
+    "batchNumber": 7,
+    "posts": [
+      {
+        "_id": "apollo-vs-lusha-vs-aisdr-comparison",
+        "slug": "apollo-vs-lusha-vs-aisdr-comparison",
+        "title": "Apollo vs Lusha vs AiSDR: B2B Sales Prospecting Tech Stack",
+        "seoTitle": "[Benchmark] Apollo vs Lusha vs AiSDR: B2B Sales Stack",
+        "category": "Architecture Teardowns"
+      },
+      {
+        "_id": "corrective-rag-crag-n8n-blueprint",
+        "slug": "corrective-rag-crag-n8n-blueprint",
+        "title": "Corrective RAG CRAG n8n Blueprint: Vector DB Search",
+        "seoTitle": "[2026 Blueprint] Corrective RAG in n8n Vector DB Search",
+        "category": "Architecture Teardowns"
+      },
+      {
+        "_id": "n8n-multi-tenant-vector-schema",
+        "slug": "n8n-multi-tenant-vector-schema",
+        "title": "n8n Multi-Tenant Vector Schema Guide: Qdrant Docker",
+        "seoTitle": "[SOP Guide] n8n Multi-Tenant Vector Schema with Qdrant",
+        "category": "Architecture Teardowns"
+      },
+      {
+        "_id": "pinecone-vs-qdrant-vultr-benchmark",
+        "slug": "pinecone-vs-qdrant-vultr-benchmark",
+        "title": "Pinecone vs Qdrant Vultr Benchmark: Docker Vector DB",
+        "seoTitle": "Pinecone vs Qdrant Benchmark [2026]: Latency, RAM & Cost",
+        "category": "Architecture Teardowns"
+      },
+      {
+        "_id": "self-hosted-qdrant-docker-vultr",
+        "slug": "self-hosted-qdrant-docker-vultr",
+        "title": "Self-Hosted Qdrant Docker Vultr SOP: Vector DB Guide",
+        "seoTitle": "[SOP Guide] Self-Hosted Qdrant Docker on Vultr VPS Setup",
+        "category": "Architecture Teardowns"
+      }
+    ]
+  },
+  {
+    "batchNumber": 8,
+    "posts": [
+      {
+        "_id": "accelerated-growth-studio-plg-playbook",
+        "slug": "accelerated-growth-studio-plg-playbook",
+        "title": "Accelerated Growth Studio PLG Playbook: n8n SaaS Funnel",
+        "seoTitle": "[2026 Blueprint] Accelerated Growth Studio n8n Funnel",
+        "category": "Automation Tools"
+      },
+      {
+        "_id": "adcreative-ai-review-n8n-ad-refresh-loop",
+        "slug": "adcreative-ai-review-n8n-ad-refresh-loop",
+        "title": "AdCreative.ai Review: n8n Ad Refresh Loop in Meta AI",
+        "seoTitle": "[SOP Guide] AdCreative.ai & n8n Ad Refresh Loop in Meta",
+        "category": "Automation Tools"
+      },
+      {
+        "_id": "apollo-to-brevo-n8n-pipeline-guide",
+        "slug": "apollo-to-brevo-n8n-pipeline-guide",
+        "title": "Apollo to Brevo n8n Pipeline: B2B Automated Outreach Guide",
+        "seoTitle": "[SOP Guide] Apollo to Brevo Automated Outreach via n8n",
+        "category": "Automation Tools"
+      },
+      {
+        "_id": "closed-loop-lead-attribution-engine",
+        "slug": "closed-loop-lead-attribution-engine",
+        "title": "Closed-Loop Lead Attribution Engine: n8n & monday.com",
+        "seoTitle": "[SOP Guide] Closed-Loop Lead Attribution Engine in n8n",
+        "category": "Automation Tools"
+      },
+      {
+        "_id": "databox-revops-dashboard-pipeline-velocity",
+        "slug": "databox-revops-dashboard-pipeline-velocity",
+        "title": "Databox Executive RevOps Dashboards: Pipeline Velocity & n8n SOP",
+        "seoTitle": "[SOP Guide] Databox RevOps Dashboard & Pipeline Velocity",
+        "category": "Automation Tools"
+      }
+    ]
+  },
+  {
+    "batchNumber": 9,
+    "posts": [
+      {
+        "_id": "emergent-ai-autonomous-gtm-guide",
+        "slug": "emergent-ai-autonomous-gtm-guide",
+        "title": "Emergent AI Autonomous GTM Guide: n8n Workflow in SaaS",
+        "seoTitle": "[2026 Blueprint] Emergent AI Autonomous GTM in n8n SaaS",
+        "category": "Automation Tools"
+      },
+      {
+        "_id": "monday-crm-advanced-lead-scoring",
+        "slug": "monday-crm-advanced-lead-scoring",
+        "title": "monday.com CRM Advanced Lead Scoring: n8n Workflow Engine",
+        "seoTitle": "[SOP Guide] monday.com CRM Advanced Lead Scoring in n8n",
+        "category": "Automation Tools"
+      },
+      {
+        "_id": "tapstitch-vs-printful-ecommerce-pipeline",
+        "slug": "tapstitch-vs-printful-ecommerce-pipeline",
+        "title": "Tapstitch vs Printful E-Commerce Pipeline: n8n Shopify AI",
+        "seoTitle": "[Benchmark] Tapstitch vs Printful: n8n Shopify Pipeline",
+        "category": "Automation Tools"
+      },
+      {
+        "_id": "trainual-alternatives-active-agency-sop-engine",
+        "slug": "trainual-alternatives-active-agency-sop-engine",
+        "title": "Trainual Alternatives: Active Agency SOP Engine in n8n SaaS",
+        "seoTitle": "[Hidden Fees] Trainual Alternatives: Agency SOP Engines",
+        "category": "Automation Tools"
+      },
+      {
+        "_id": "turbotic-automation-governance",
+        "slug": "turbotic-automation-governance",
+        "title": "Turbotic Automation Governance: n8n & monday.com CRM",
+        "seoTitle": "[SOP Guide] Turbotic Automation Governance in monday CRM",
+        "category": "Automation Tools"
+      }
+    ]
+  },
+  {
+    "batchNumber": 10,
+    "posts": [
+      {
+        "_id": "whatconverts-vs-callrail-attribution",
+        "slug": "whatconverts-vs-callrail-attribution",
+        "title": "WhatConverts vs CallRail Attribution: n8n & monday.com",
+        "seoTitle": "[Benchmark] WhatConverts vs CallRail Attribution in n8n",
+        "category": "Automation Tools"
+      },
+      {
+        "_id": "cometchat-dify-inapp-voice",
+        "slug": "cometchat-dify-inapp-voice",
+        "title": "CometChat Dify.ai In-App Voice: React & Webhook Guide",
+        "seoTitle": "[SOP Guide] CometChat & Dify In-App Voice AI Integration",
+        "category": "Automation Tools"
+      },
+      {
+        "_id": "dify-vs-n8n-architecture",
+        "slug": "dify-vs-n8n-architecture",
+        "title": "Dify.ai vs n8n Architecture: Docker & API Comparison",
+        "seoTitle": "[Benchmark] Dify.ai vs n8n: Docker & API Architecture",
+        "category": "Architecture Teardowns"
+      },
+      {
+        "_id": "elevenlabs-n8n-voice-ai-sales-agent",
+        "slug": "elevenlabs-n8n-voice-ai-sales-agent",
+        "title": "ElevenLabs n8n Voice AI Agent: Twilio & API Guide",
+        "seoTitle": "[Step-by-Step] ElevenLabs n8n Voice AI Agent with Twilio",
+        "category": "Automation Tools"
+      },
+      {
+        "_id": "manychat-n8n-whatsapp-voice-bot",
+        "slug": "manychat-n8n-whatsapp-voice-bot",
+        "title": "ManyChat n8n WhatsApp Voice Bot: ElevenLabs API Guide",
+        "seoTitle": "[Step-by-Step] ManyChat & n8n WhatsApp Voice AI Bot",
+        "category": "Automation Tools"
+      }
+    ]
+  },
+  {
+    "batchNumber": 11,
+    "posts": [
+      {
+        "_id": "omnichannel-ai-voice-note-handler",
+        "slug": "omnichannel-ai-voice-note-handler",
+        "title": "n8n Omnichannel Voice Note Handler: WhatsApp AI Agent Guide",
+        "seoTitle": "[Step-by-Step] Omnichannel AI Voice Note Handler in n8n",
+        "category": "Automation Tools"
+      },
+      {
+        "_id": "pinecone-vs-qdrant-n8n-rag-comparison",
+        "slug": "pinecone-vs-qdrant-n8n-rag-comparison",
+        "title": "Pinecone vs Qdrant for n8n RAG Pipelines: Which Vector DB Should You Choose?",
+        "seoTitle": "Pinecone vs Qdrant: Vector DB Guide for n8n RAG (2026)",
+        "category": "Architecture Teardowns"
+      },
+      {
+        "_id": "manychat-whatsapp-b2b-lead-capture-agency",
+        "slug": "manychat-whatsapp-b2b-lead-capture-agency",
+        "title": "ManyChat WhatsApp B2B Lead Capture: The Agency Blueprint (With n8n + Brevo CRM Sync)",
+        "seoTitle": "[2026 Blueprint] ManyChat WhatsApp B2B Lead Capture SOP",
+        "category": "Automation Tools"
+      },
+      {
+        "_id": "apollo-brevo-n8n-outbound-pipeline",
+        "slug": "apollo-brevo-n8n-outbound-pipeline",
+        "title": "How to Sync Apollo.io Leads to Brevo CRM Using n8n: Full Outbound Pipeline Walkthrough",
+        "seoTitle": "[Step-by-Step] Apollo to Brevo CRM via n8n Pipeline",
+        "category": "Automation Tools"
+      },
+      {
+        "_id": "cold-email-machine-apollo-aisdr-brevo",
+        "slug": "cold-email-machine-apollo-aisdr-brevo",
+        "title": "How to Build an Automated Cold Email Machine with Apollo.io, AiSDR, and Brevo",
+        "seoTitle": "[Step-by-Step] Build Cold Email Machine: Apollo & Brevo",
+        "category": "Automation Tools"
+      }
+    ]
+  },
+  {
+    "batchNumber": 12,
+    "posts": [
+      {
+        "_id": "monday-com-automation-recipes-revops-2026",
+        "slug": "monday-com-automation-recipes-revops-2026",
+        "title": "monday.com Automation Recipes Every RevOps Team Should Deploy in 2026",
+        "seoTitle": "12 monday.com Automation Recipes for RevOps Teams (2026)",
+        "category": "Automation Tools"
+      },
+      {
+        "_id": "how-to-audit-competitor-seo-no-verification",
+        "slug": "how-to-audit-competitor-seo-no-verification",
+        "title": "Competitor Technical SEO Audit: No DNS Access Blueprint",
+        "seoTitle": "[SOP Guide] Competitor Technical SEO Audit Without DNS",
+        "category": "SEO & Optimization"
+      },
+      {
+        "_id": "screaming-frog-alternatives-free-seo-audit-tools",
+        "slug": "screaming-frog-alternatives-free-seo-audit-tools",
+        "title": "5 Best Screaming Frog Alternatives: Free Browser-Based SEO Audit Tools",
+        "seoTitle": "Free Screaming Frog Alternatives: 5 Best Crawlers [2026]",
+        "category": "Architecture Teardowns"
+      },
+      {
+        "_id": "revops-automation-stack-saas-2026",
+        "slug": "revops-automation-stack-saas-2026",
+        "title": "The RevOps Automation Stack: How SaaS Teams Eliminate Manual Bottlenecks in 2026",
+        "seoTitle": "SaaS RevOps Automation Stack Teardown (2026) | n8n +",
+        "category": "Architecture Teardowns"
+      },
+      {
+        "_id": "aisdr-vs-human-sdr-performance-teardown",
+        "slug": "aisdr-vs-human-sdr-performance-teardown",
+        "title": "AiSDR vs Human SDR: A Technical Performance Teardown for B2B SaaS Sales Teams",
+        "seoTitle": "[Benchmark] AiSDR vs Human SDR: B2B SaaS Outbound Sales",
+        "category": "Architecture Teardowns"
+      }
+    ]
+  },
+  {
+    "batchNumber": 13,
+    "posts": [
+      {
+        "_id": "pinecone-n8n-rag-knowledge-base-blueprint",
+        "slug": "pinecone-n8n-rag-knowledge-base-blueprint",
+        "title": "Building a RAG Knowledge Base with Pinecone and n8n: A Production-Ready Blueprint",
+        "seoTitle": "[2026 Blueprint] Corrective RAG in n8n with Pinecone",
+        "category": "Automation Tools"
+      },
+      {
+        "_id": "manychat-n8n-async-timeout-fix",
+        "slug": "manychat-n8n-async-timeout-fix",
+        "title": "ManyChat + n8n: How to Beat the 10-Second Response Timeout and Build Async Chat Flows",
+        "seoTitle": "[SOP Guide] Fix ManyChat + n8n 10s Webhook Async Timeout",
+        "category": "Automation Tools"
+      },
+      {
+        "_id": "what-is-revops-technical-definition-saas",
+        "slug": "what-is-revops-technical-definition-saas",
+        "title": "What Is RevOps? The Technical Definition for SaaS Teams",
+        "seoTitle": "What Is RevOps? SaaS Technical Definition (2026)",
+        "category": "Architecture Teardowns"
+      },
+      {
+        "_id": "headless-wordpress-vs-monolithic",
+        "slug": "headless-wordpress-vs-monolithic",
+        "title": "Headless WordPress vs Monolithic: Enterprise Decoupled Guide",
+        "seoTitle": "[Benchmark] Headless WordPress vs Monolithic CMS for SEO",
+        "category": "Automation Tools"
+      },
+      {
+        "_id": "headless-wordpress-seo-nextjs-guide",
+        "slug": "headless-wordpress-seo-nextjs-guide",
+        "title": "Headless WordPress SEO: Next.js 15 App Router Blueprint",
+        "seoTitle": "[SOP Guide] Headless WordPress SEO in Next.js 15 App",
+        "category": "Automation Tools"
+      }
+    ]
+  },
+  {
+    "batchNumber": 14,
+    "posts": [
+      {
+        "_id": "n8n-apollo-lead-enrichment-pipeline",
+        "slug": "n8n-apollo-lead-enrichment-pipeline",
+        "title": "How to Build an AI-Powered Lead Enrichment Pipeline with n8n and Apollo.io",
+        "seoTitle": "AI-Powered Lead Enrichment Pipeline: n8n + Apollo.io (2026)",
+        "category": "Automation Tools"
+      },
+      {
+        "_id": "Al3E26R37amzsHAqPF24Uo",
+        "slug": "case-study-urban-cafe-foodtech-platform",
+        "title": "Zero-Hardware Kitchen OS: How I Replaced a $2,000 POS System With a Next.js PWA",
+        "seoTitle": "[Case Study] Zero-Hardware Kitchen POS Next.js PWA",
+        "category": "Architecture Teardowns"
+      },
+      {
+        "_id": "RG0kr2oNPMWGLodGU1dssA",
+        "slug": "manychat-to-n8n-integration-lead-scoring",
+        "title": "ManyChat to n8n Integration Guide [2026 Blueprint]",
+        "seoTitle": "ManyChat to n8n Integration Guide [2026 Blueprint]",
+        "category": "Automation Tools"
+      },
+      {
+        "_id": "pJmrsKLAWC800vFHegUEKL",
+        "slug": "manychat-pricing-2026",
+        "title": "ManyChat Pricing 2026: Is It Still Worth It for Agencies? (An Automation Engineer's Verdict)",
+        "seoTitle": "ManyChat Pricing [2026]: Hidden Fees & Real Cost Teardown",
+        "category": "Automation Tools"
+      },
+      {
+        "_id": "pJmrsKLAWC800vFHegUFnJ",
+        "slug": "apollo-n8n-outreach",
+        "title": "Build an AI Cold Outreach Machine with Apollo.io + n8n in 2026 (Zero Manual Effort)",
+        "seoTitle": "[Step-by-Step] Apollo.io & n8n AI Cold Outreach in 2026",
+        "category": "Architecture Teardowns"
+      }
+    ]
+  },
+  {
+    "batchNumber": 15,
+    "posts": [
+      {
+        "_id": "a6v9PVOR4mUdBqGwKHyWa1",
+        "slug": "ai-automation-agency-business-model",
+        "title": "AI Automation Agency Business Model [2026 Blueprint]",
+        "seoTitle": "AI Automation Agency Business Model [2026 Blueprint]",
+        "category": "30 Days of n8n Automation"
+      },
+      {
+        "_id": "Al3E26R37amzsHAqPF1uqu",
+        "slug": "build-personal-ai-assistant",
+        "title": "Build Personal AI Assistant with n8n [2026 Blueprint]",
+        "seoTitle": "Build Personal AI Assistant with n8n [2026 Blueprint]",
+        "category": "30 Days of n8n Automation"
+      },
+      {
+        "_id": "Al3E26R37amzsHAqPF1ugG",
+        "slug": "automated-youtube-shorts-generator",
+        "title": "Automated YouTube Shorts Generator: n8n [2026 Blueprint]",
+        "seoTitle": "Automated YouTube Shorts Generator: n8n [2026 Blueprint]",
+        "category": "30 Days of n8n Automation"
+      },
+      {
+        "_id": "Al3E26R37amzsHAqPF1sOK",
+        "slug": "n8n-ai-receptionist",
+        "title": "n8n AI Receptionist: Twilio Voice Setup [2026 Blueprint]",
+        "seoTitle": "n8n AI Receptionist: Twilio Voice Setup [2026 Blueprint]",
+        "category": "30 Days of n8n Automation"
+      },
+      {
+        "_id": "Al3E26R37amzsHAqPF1r6U",
+        "slug": "n8n-rag-tutorial",
+        "title": "n8n RAG Tutorial: Stop AI Hallucinations [2026 Blueprint]",
+        "seoTitle": "n8n RAG Tutorial: Stop AI Hallucinations [2026 Blueprint]",
+        "category": "30 Days of n8n Automation"
+      }
+    ]
+  },
+  {
+    "batchNumber": 16,
+    "posts": [
+      {
+        "_id": "a6v9PVOR4mUdBqGwKHySvZ",
+        "slug": "n8n-ai-agent-tools",
+        "title": "n8n AI Agent Tools: Function Calling [2026 Blueprint]",
+        "seoTitle": "n8n AI Agent Tools: Function Calling [2026 Blueprint]",
+        "category": "30 Days of n8n Automation"
+      },
+      {
+        "_id": "pJmrsKLAWC800vFHegU4gH",
+        "slug": "how-to-build-an-api-with-n8n",
+        "title": "How to Build an API with n8n [2026 Blueprint]",
+        "seoTitle": "How to Build an API with n8n [2026 Blueprint]",
+        "category": "30 Days of n8n Automation"
+      },
+      {
+        "_id": "a6v9PVOR4mUdBqGwKHyQmD",
+        "slug": "n8n-global-error-handling",
+        "title": "n8n Global Error Handling: Watchtower [2026 Blueprint]",
+        "seoTitle": "n8n Global Error Handling: Watchtower [2026 Blueprint]",
+        "category": "30 Days of n8n Automation"
+      },
+      {
+        "_id": "pJmrsKLAWC800vFHegU33d",
+        "slug": "automate-client-reporting-with-n8n",
+        "title": "Automate Client Reporting with n8n [2026 Blueprint]",
+        "seoTitle": "Automate Client Reporting with n8n [2026 Blueprint]",
+        "category": "30 Days of n8n Automation"
+      },
+      {
+        "_id": "pJmrsKLAWC800vFHegU2q5",
+        "slug": "automate-personal-branding-with-n8n",
+        "title": "Automate Personal Branding with n8n [2026 Blueprint]",
+        "seoTitle": "Automate Personal Branding with n8n [2026 Blueprint]",
+        "category": "30 Days of n8n Automation"
+      }
+    ]
+  },
+  {
+    "batchNumber": 17,
+    "posts": [
+      {
+        "_id": "a6v9PVOR4mUdBqGwKHyQKX",
+        "slug": "n8n-google-analytics-4-pipeline",
+        "title": "n8n Google Analytics 4 Pipeline [2026 Blueprint]",
+        "seoTitle": "n8n Google Analytics 4 Pipeline [2026 Blueprint]",
+        "category": "30 Days of n8n Automation"
+      },
+      {
+        "_id": "Al3E26R37amzsHAqPF1nz6",
+        "slug": "n8n-tips-and-tricks-by-alfaz-mahmud-rizve",
+        "title": "n8n Tips and Tricks: 5 Pro Hacks [2026 Blueprint]",
+        "seoTitle": "n8n Tips and Tricks: 5 Pro Hacks [2026 Blueprint]",
+        "category": "30 Days of n8n Automation"
+      },
+      {
+        "_id": "Al3E26R37amzsHAqPF1nmg",
+        "slug": "n8n-data-privacy-security-guide",
+        "title": "n8n Data Privacy & Security Guide [2026 Blueprint]",
+        "seoTitle": "n8n Data Privacy & Security Guide [2026 Blueprint]",
+        "category": "30 Days of n8n Automation"
+      },
+      {
+        "_id": "a6v9PVOR4mUdBqGwKHyL3R",
+        "slug": "n8n-production-workflows-by-alfaz-mahmud-rizve",
+        "title": "n8n Production Workflows: Scale Guide [2026 Blueprint]",
+        "seoTitle": "n8n Production Workflows: Scale Guide [2026 Blueprint]",
+        "category": "30 Days of n8n Automation"
+      },
+      {
+        "_id": "pJmrsKLAWC800vFHegTzUz",
+        "slug": "build-an-automated-rank-tracker-tool-with-n8n",
+        "title": "Build an Automated Rank Tracker with n8n [2026 Blueprint]",
+        "seoTitle": "Build an Automated Rank Tracker with n8n [2026 Blueprint]",
+        "category": "30 Days of n8n Automation"
+      }
+    ]
+  },
+  {
+    "batchNumber": 18,
+    "posts": [
+      {
+        "_id": "a6v9PVOR4mUdBqGwKHyIz7",
+        "slug": "automated-content-research-by-alfaz-mahmud-rizve",
+        "title": "Automated Content Research with n8n [2026 Blueprint]",
+        "seoTitle": "Automated Content Research with n8n [2026 Blueprint]",
+        "category": "30 Days of n8n Automation"
+      },
+      {
+        "_id": "pJmrsKLAWC800vFHegTy3x",
+        "slug": "automated-marketing-reporting-with-n8n-at-whoisalfaz",
+        "title": "Automated Marketing Reporting with n8n [2026 Blueprint]",
+        "seoTitle": "Automated Marketing Reporting with n8n [2026 Blueprint]",
+        "category": "30 Days of n8n Automation"
+      },
+      {
+        "_id": "pJmrsKLAWC800vFHegTxwD",
+        "slug": "facebook-lead-ads-automation-by-alfaz-mahmud-rizve",
+        "title": "Facebook Lead Ads Automation with n8n [2026 Blueprint]",
+        "seoTitle": "Facebook Lead Ads Automation with n8n [2026 Blueprint]",
+        "category": "30 Days of n8n Automation"
+      },
+      {
+        "_id": "pJmrsKLAWC800vFHegTxif",
+        "slug": "automated-email-follow-up-n8n-brevo",
+        "title": "Automated Email Follow-Up: n8n & Brevo [2026 Blueprint]",
+        "seoTitle": "Automated Email Follow-Up: n8n & Brevo [2026 Blueprint]",
+        "category": "30 Days of n8n Automation"
+      },
+      {
+        "_id": "a6v9PVOR4mUdBqGwKHyIZx",
+        "slug": "lead-enrichment-with-n8n",
+        "title": "Lead Enrichment with n8n: B2B Setup [2026 Blueprint]",
+        "seoTitle": "Lead Enrichment with n8n: B2B Setup [2026 Blueprint]",
+        "category": "30 Days of n8n Automation"
+      }
+    ]
+  },
+  {
+    "batchNumber": 19,
+    "posts": [
+      {
+        "_id": "a6v9PVOR4mUdBqGwKHyGun",
+        "slug": "n8n-slack-notifications-by-alfaz-mahmud-rizve",
+        "title": "n8n Slack Notifications: Lead Alerts [2026 Blueprint]",
+        "seoTitle": "n8n Slack Notifications: Lead Alerts [2026 Blueprint]",
+        "category": "30 Days of n8n Automation"
+      },
+      {
+        "_id": "Al3E26R37amzsHAqPF1xsy",
+        "slug": "lead-scoring-automation-with-alfaz-mahmud-rizve",
+        "title": "Lead Scoring Automation with n8n [2026 Blueprint]",
+        "seoTitle": "Lead Scoring Automation with n8n [2026 Blueprint]",
+        "category": "30 Days of n8n Automation"
+      },
+      {
+        "_id": "Al3E26R37amzsHAqPF1xem",
+        "slug": "capture-n8n-lead-data-from-wordpress-elementor",
+        "title": "Capture WordPress Elementor Leads: n8n [2026 Blueprint]",
+        "seoTitle": "Capture WordPress Elementor Leads: n8n [2026 Blueprint]",
+        "category": "30 Days of n8n Automation"
+      },
+      {
+        "_id": "Al3E26R37amzsHAqPF1xXg",
+        "slug": "n8n-debugging-error-handling-basics",
+        "title": "n8n Debugging & Error Handling Basics [2026 Blueprint]",
+        "seoTitle": "n8n Debugging & Error Handling Basics [2026 Blueprint]",
+        "category": "30 Days of n8n Automation"
+      },
+      {
+        "_id": "a6v9PVOR4mUdBqGwKHyaTZ",
+        "slug": "essential-n8n-core-nodes-by-alfaz-mahmud-rizve",
+        "title": "Essential n8n Core Nodes: Architecture [2026 Blueprint]",
+        "seoTitle": "Essential n8n Core Nodes: Architecture [2026 Blueprint]",
+        "category": "30 Days of n8n Automation"
+      }
+    ]
+  },
+  {
+    "batchNumber": 20,
+    "posts": [
+      {
+        "_id": "pJmrsKLAWC800vFHegU8rd",
+        "slug": "automations-for-saas-and-agencies",
+        "title": "Automations for SaaS and Agencies [2026 Blueprint]",
+        "seoTitle": "Automations for SaaS and Agencies [2026 Blueprint]",
+        "category": "30 Days of n8n Automation"
+      },
+      {
+        "_id": "pJmrsKLAWC800vFHegU8e5",
+        "slug": "n8n-workflow-design-best-practices",
+        "title": "n8n Workflow Design Best Practices [2026 Blueprint]",
+        "seoTitle": "n8n Workflow Design Best Practices [2026 Blueprint]",
+        "category": "30 Days of n8n Automation"
+      },
+      {
+        "_id": "pJmrsKLAWC800vFHegU8Ob",
+        "slug": "what-is-n8n-and-how-to-set-it-up",
+        "title": "n8n Cloud vs Self-Hosted Setup Guide [2026 Blueprint]",
+        "seoTitle": "n8n Cloud vs Self-Hosted Setup Guide [2026 Blueprint]",
+        "category": "30 Days of n8n Automation"
+      },
+      {
+        "_id": "pJmrsKLAWC800vFHegU17d",
+        "slug": "what-is-n8n-by-alfaz-mahmud-rizve",
+        "title": "What is n8n? Core Concepts & Guide [2026 Blueprint]",
+        "seoTitle": "What is n8n? Core Concepts & Guide [2026 Blueprint]",
+        "category": "30 Days of n8n Automation"
+      },
+      {
+        "_id": "a6v9PVOR4mUdBqGwKHyGfh",
+        "slug": "automation-operating-system-for-saas",
+        "title": "SaaS Automation OS Architecture [2026 Blueprint]",
+        "seoTitle": "SaaS Automation OS Architecture [2026 Blueprint]",
+        "category": "30 Days of n8n Automation"
+      }
+    ]
+  },
+  {
+    "batchNumber": 21,
+    "posts": [
+      {
+        "_id": "Al3E26R37amzsHAqPF24Lw",
+        "slug": "case-study-client-portfolio-delivery",
+        "title": "Transforming a Static Portfolio into a Dynamic Content Engine: The Abu Zubayer Delivery",
+        "seoTitle": "[Case Study] Next.js Client Portfolio Architecture",
+        "category": "Architecture Teardowns"
+      },
+      {
+        "_id": "pJmrsKLAWC800vFHegUG6f",
+        "slug": "case-study-careerops-ai-resume-builder",
+        "title": "Architecting a Stateless AI Career Strategist: Integrating Next.js with n8n and React PDF",
+        "seoTitle": "[Case Study] CareerOps AI Resume Builder Architecture",
+        "category": "Architecture Teardowns"
+      },
+      {
+        "_id": "a6v9PVOR4mUdBqGwKHyi6b",
+        "slug": "case-study-veloryc-premium-ecommerce",
+        "title": "Veloryc E-Commerce: High-Performance Architecture Using Supabase RLS and Pure CSS Modules",
+        "seoTitle": "[Case Study] Veloryc E-Commerce Operations System",
+        "category": "Architecture Teardowns"
+      },
+      {
+        "_id": "pJmrsKLAWC800vFHegUGO5",
+        "slug": "case-study-cashops-financial-dashboard",
+        "title": "Building a High-Velocity Financial Dashboard: Optimistic UI, NextAuth, and Real-Time Analytics",
+        "seoTitle": "[Case Study] CashOps Financial Operations Architecture",
+        "category": "Architecture Teardowns"
+      },
+      {
+        "_id": "Al3E26R37amzsHAqPF24hE",
+        "slug": "case-study-whoisalfaz-seo-indexing-engine",
+        "title": "How I Engineered a Zero-Touch SEO Indexing Pipeline That Submits 41 URLs Across 3 Search Engines on Every Deploy",
+        "seoTitle": "[Case Study] Automated SEO Indexing Pipeline Engine",
+        "category": "Architecture Teardowns"
+      }
+    ]
+  }
+]

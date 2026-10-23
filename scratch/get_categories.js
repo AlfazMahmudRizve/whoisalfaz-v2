@@ -1,17 +1,16 @@
 const { createClient } = require('@sanity/client');
-require('dotenv').config({ path: '.env.local' });
+const dotenv = require('dotenv');
+const path = require('path');
+dotenv.config({ path: path.resolve(__dirname, '../.env.local') });
 
 const client = createClient({
   projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
   dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || 'production',
-  apiVersion: '2026-05-13',
   useCdn: false,
+  token: process.env.SANITY_API_TOKEN,
+  apiVersion: '2026-05-13',
 });
 
-async function main() {
-  const query = `*[_type == "category"] { _id, name, slug }`;
-  const cats = await client.fetch(query);
-  console.log(JSON.stringify(cats, null, 2));
-}
-
-main().catch(console.error);
+client.fetch('*[_type == "category"]{ _id, name, slug }').then(res => {
+  console.log(JSON.stringify(res, null, 2));
+});

@@ -1,0 +1,511 @@
+{
+  "codeHits": [
+    {
+      "file": "ACTION-PLAN.md",
+      "line": 51,
+      "text": "- **`app/claim-manychat-bonus/page.js`**:"
+    },
+    {
+      "file": "ACTION-PLAN.md",
+      "line": 57,
+      "text": "- **`app/claim-manychat-bonus/page.js`**: Trimmed description from 210 to 146 chars."
+    },
+    {
+      "file": "app\\claim-manychat-bonus\\ClaimBonusClient.jsx",
+      "line": 16,
+      "text": "const summitUrl = \"https://igsummit.manychat.com/virtual\";"
+    },
+    {
+      "file": "app\\claim-manychat-bonus\\page.js",
+      "line": 8,
+      "text": "canonical: 'https://whoisalfaz.me/claim-manychat-bonus/'"
+    },
+    {
+      "file": "app\\claim-manychat-bonus\\page.js",
+      "line": 13,
+      "text": "url: 'https://whoisalfaz.me/claim-manychat-bonus/',"
+    },
+    {
+      "file": "app\\sitemap.ts",
+      "line": 47,
+      "text": "'/claim-manychat-bonus/',"
+    },
+    {
+      "file": "components\\ManyChatSummitBanner.js",
+      "line": 8,
+      "text": "referralUrl = \"https://igsummit.manychat.com/virtual\","
+    },
+    {
+      "file": "components\\ManyChatSummitBanner.js",
+      "line": 9,
+      "text": "claimUrl = \"/claim-manychat-bonus\""
+    },
+    {
+      "file": "ecosystem\\manychat-summit-b2b-carousel-and-threads.md",
+      "line": 3,
+      "text": "**Referral Tracking Link:** `https://igsummit.manychat.com/virtual`"
+    },
+    {
+      "file": "ecosystem\\manychat-summit-b2b-carousel-and-threads.md",
+      "line": 4,
+      "text": "**Bonus Claim URL:** `https://whoisalfaz.me/claim-manychat-bonus/`"
+    },
+    {
+      "file": "ecosystem\\manychat-summit-b2b-carousel-and-threads.md",
+      "line": 330,
+      "text": "│  igsummit.manychat.com/virtual                                         │"
+    },
+    {
+      "file": "ecosystem\\manychat-summit-b2b-carousel-and-threads.md",
+      "line": 334,
+      "text": "│  whoisalfaz.me/claim-manychat-bonus/                                   │"
+    },
+    {
+      "file": "ecosystem\\manychat-summit-b2b-carousel-and-threads.md",
+      "line": 412,
+      "text": "2. Or review the summit directly here: https://igsummit.manychat.com/virtual"
+    },
+    {
+      "file": "ecosystem\\manychat-summit-b2b-carousel-and-threads.md",
+      "line": 413,
+      "text": "3. Download your free community blueprint pack at: https://whoisalfaz.me/claim-manychat-bonus/"
+    },
+    {
+      "file": "ecosystem\\manychat-summit-b2b-carousel-and-threads.md",
+      "line": 498,
+      "text": "https://igsummit.manychat.com/virtual"
+    },
+    {
+      "file": "ecosystem\\manychat-summit-b2b-carousel-and-threads.md",
+      "line": 501,
+      "text": "https://whoisalfaz.me/claim-manychat-bonus/"
+    },
+    {
+      "file": "ecosystem\\manychat-summit-b2b-carousel-and-threads.md",
+      "line": 621,
+      "text": "If anyone is planning to attend, we packaged this exact 0-overlap n8n workflow JSON, along with our Apollo-to-Brevo pipeline and Qdrant RAG templates, into a free companion bundle for ticket holders (`https://whoisalfaz.me/claim-manychat-bonus/`)."
+    },
+    {
+      "file": "ecosystem\\manychat-summit-b2b-carousel-and-threads.md",
+      "line": 689,
+      "text": "* Summit registration: `https://igsummit.manychat.com/virtual`"
+    },
+    {
+      "file": "ecosystem\\manychat-summit-b2b-carousel-and-threads.md",
+      "line": 690,
+      "text": "* Free companion pack claim: `https://whoisalfaz.me/claim-manychat-bonus/`"
+    },
+    {
+      "file": "ecosystem\\manychat-summit-b2b-carousel-and-threads.md",
+      "line": 806,
+      "text": "We packaged our production n8n workflow JSON, along with our Apollo enrichment and Qdrant RAG templates, as a free companion pack for attendees (`https://whoisalfaz.me/claim-manychat-bonus/`)."
+    },
+    {
+      "file": "ecosystem\\manychat-summit-b2b-carousel-and-threads.md",
+      "line": 817,
+      "text": "- [x] Bonus claim portal verified at `https://whoisalfaz.me/claim-manychat-bonus/`"
+    },
+    {
+      "file": "ecosystem\\manychat-summit-b2b-carousel-and-threads.md",
+      "line": 818,
+      "text": "- [x] Summit registration link verified: `https://igsummit.manychat.com/virtual`"
+    },
+    {
+      "file": "ecosystem\\manychat-summit-syndication-kit.md",
+      "line": 3,
+      "text": "**Referral Link:** `https://igsummit.manychat.com/virtual`"
+    },
+    {
+      "file": "ecosystem\\manychat-summit-syndication-kit.md",
+      "line": 4,
+      "text": "**Bonus Claim URL:** `https://whoisalfaz.me/claim-manychat-bonus/`"
+    },
+    {
+      "file": "ecosystem\\manychat-summit-syndication-kit.md",
+      "line": 39,
+      "text": "👉 Review the Virtual Summit pass here: https://igsummit.manychat.com/virtual"
+    },
+    {
+      "file": "ecosystem\\manychat-summit-syndication-kit.md",
+      "line": 40,
+      "text": "👉 Claim your free Community Blueprint pack here: https://whoisalfaz.me/claim-manychat-bonus/"
+    },
+    {
+      "file": "ecosystem\\manychat-summit-syndication-kit.md",
+      "line": 99,
+      "text": "https://igsummit.manychat.com/virtual"
+    },
+    {
+      "file": "ecosystem\\manychat-summit-syndication-kit.md",
+      "line": 102,
+      "text": "https://whoisalfaz.me/claim-manychat-bonus/"
+    },
+    {
+      "file": "ecosystem\\manychat-summit-syndication-kit.md",
+      "line": 126,
+      "text": "👉 https://igsummit.manychat.com/virtual"
+    },
+    {
+      "file": "ecosystem\\manychat-summit-syndication-kit.md",
+      "line": 129,
+      "text": "👉 https://whoisalfaz.me/claim-manychat-bonus/"
+    },
+    {
+      "file": "ecosystem\\manychat-summit-syndication-kit.md",
+      "line": 175,
+      "text": "1. **[Review the $20 Virtual Summit Pass](https://igsummit.manychat.com/virtual)**"
+    },
+    {
+      "file": "ecosystem\\manychat-summit-syndication-kit.md",
+      "line": 176,
+      "text": "2. **[Download the Free Blueprint Pack on our Community Portal](https://whoisalfaz.me/claim-manychat-bonus/)** for instant download access."
+    },
+    {
+      "file": "ecosystem\\manychat-summit-syndication-kit.md",
+      "line": 204,
+      "text": "👉 **[Review the $20 Virtual Summit Pass here](https://igsummit.manychat.com/virtual)**"
+    },
+    {
+      "file": "ecosystem\\manychat-summit-syndication-kit.md",
+      "line": 205,
+      "text": "👉 **[Download your free Community Blueprint Pack here](https://whoisalfaz.me/claim-manychat-bonus/)**"
+    },
+    {
+      "file": "ecosystem\\manychat-summit-syndication-kit.md",
+      "line": 236,
+      "text": "Official Event Link: https://igsummit.manychat.com/virtual"
+    },
+    {
+      "file": "ecosystem\\manychat-summit-syndication-kit.md",
+      "line": 240,
+      "text": "https://whoisalfaz.me/claim-manychat-bonus/"
+    },
+    {
+      "file": "ecosystem\\manychat-summit-syndication-kit.md",
+      "line": 256,
+      "text": "Official Pass: https://igsummit.manychat.com/virtual"
+    },
+    {
+      "file": "ecosystem\\manychat-summit-syndication-kit.md",
+      "line": 257,
+      "text": "Bonus Portal: https://whoisalfaz.me/claim-manychat-bonus/"
+    },
+    {
+      "file": "ecosystem\\manychat-summit-syndication-kit.md",
+      "line": 276,
+      "text": "* **[Register for the Virtual Summit Pass ($20)](https://igsummit.manychat.com/virtual)**"
+    },
+    {
+      "file": "ecosystem\\manychat-summit-syndication-kit.md",
+      "line": 277,
+      "text": "* **[Claim the Complimentary Free Community n8n Blueprint Pack](https://whoisalfaz.me/claim-manychat-bonus/)**"
+    },
+    {
+      "file": "ecosystem\\manychat-summit-syndication-kit.md",
+      "line": 285,
+      "text": "**Destination URL:** `https://whoisalfaz.me/claim-manychat-bonus/`"
+    },
+    {
+      "file": "ecosystem\\manychat-summit-syndication-kit.md",
+      "line": 321,
+      "text": "* **[Claim Virtual Summit Pass ($20)](https://igsummit.manychat.com/virtual)**"
+    },
+    {
+      "file": "ecosystem\\manychat-summit-syndication-kit.md",
+      "line": 322,
+      "text": "* **[Download the n8n Blueprint Pack (.ZIP)](https://whoisalfaz.me/claim-manychat-bonus/)**"
+    },
+    {
+      "file": "ecosystem\\manychat-summit-syndication-kit.md",
+      "line": 353,
+      "text": "https://whoisalfaz.me/claim-manychat-bonus/"
+    },
+    {
+      "file": "ecosystem\\manychat-summit-syndication-kit.md",
+      "line": 356,
+      "text": "https://igsummit.manychat.com/virtual"
+    },
+    {
+      "file": "ecosystem\\omnichannel-viral-syndication-suite.md",
+      "line": 3,
+      "text": "**Summit Registration Link:** `https://igsummit.manychat.com/virtual`"
+    },
+    {
+      "file": "ecosystem\\omnichannel-viral-syndication-suite.md",
+      "line": 4,
+      "text": "**Bonus Claim URL:** `https://whoisalfaz.me/claim-manychat-bonus/`"
+    },
+    {
+      "file": "ecosystem\\omnichannel-viral-syndication-suite.md",
+      "line": 53,
+      "text": "(Or review the summit directly here: https://igsummit.manychat.com/virtual)"
+    },
+    {
+      "file": "ecosystem\\omnichannel-viral-syndication-suite.md",
+      "line": 119,
+      "text": "https://igsummit.manychat.com/virtual"
+    },
+    {
+      "file": "ecosystem\\omnichannel-viral-syndication-suite.md",
+      "line": 122,
+      "text": "https://whoisalfaz.me/claim-manychat-bonus/"
+    },
+    {
+      "file": "ecosystem\\omnichannel-viral-syndication-suite.md",
+      "line": 161,
+      "text": "- **Review the Virtual Pass ($20):** [ManyChat Summit Registration](https://igsummit.manychat.com/virtual)"
+    },
+    {
+      "file": "ecosystem\\omnichannel-viral-syndication-suite.md",
+      "line": 162,
+      "text": "- **Download Your Free Community Automation Blueprint Pack:** [Bonus Claim Portal](https://whoisalfaz.me/claim-manychat-bonus/)"
+    },
+    {
+      "file": "ecosystem\\omnichannel-viral-syndication-suite.md",
+      "line": 205,
+      "text": "https://igsummit.manychat.com/virtual"
+    },
+    {
+      "file": "ecosystem\\omnichannel-viral-syndication-suite.md",
+      "line": 208,
+      "text": "https://whoisalfaz.me/claim-manychat-bonus/"
+    },
+    {
+      "file": "ecosystem\\omnichannel-viral-syndication-suite.md",
+      "line": 242,
+      "text": "👉 [ManyChat Virtual Summit 2026 Pass](https://igsummit.manychat.com/virtual)"
+    },
+    {
+      "file": "ecosystem\\omnichannel-viral-syndication-suite.md",
+      "line": 274,
+      "text": "Want to deploy this exact architecture in your agency? Learn the core principles at the upcoming [ManyChat Instagram Summit 2026](https://igsummit.manychat.com/virtual) or claim our free companion n8n pack at [whoisalfaz.me/claim-manychat-bonus/](https://whoisalfaz.me/claim-manychat-bonus/)."
+    },
+    {
+      "file": "ecosystem\\omnichannel-viral-syndication-suite.md",
+      "line": 329,
+      "text": "👉 **Download the Blueprint:** [whoisalfaz.me/claim-manychat-bonus/](https://whoisalfaz.me/claim-manychat-bonus/)"
+    },
+    {
+      "file": "ecosystem\\omnichannel-viral-syndication-suite.md",
+      "line": 330,
+      "text": "👉 **Summit Event Link:** [ManyChat Virtual Pass](https://igsummit.manychat.com/virtual)"
+    },
+    {
+      "file": "ecosystem\\omnichannel-viral-syndication-suite.md",
+      "line": 353,
+      "text": "https://whoisalfaz.me/claim-manychat-bonus/"
+    },
+    {
+      "file": "ecosystem\\omnichannel-viral-syndication-suite.md",
+      "line": 387,
+      "text": "https://igsummit.manychat.com/virtual"
+    },
+    {
+      "file": "ecosystem\\omnichannel-viral-syndication-suite.md",
+      "line": 390,
+      "text": "https://whoisalfaz.me/claim-manychat-bonus/"
+    },
+    {
+      "file": "ecosystem\\omnichannel-viral-syndication-suite.md",
+      "line": 424,
+      "text": "https://whoisalfaz.me/claim-manychat-bonus/"
+    },
+    {
+      "file": "ecosystem\\viral-reels-and-video-scripts.md",
+      "line": 6,
+      "text": "- **Summit Registration:** `https://igsummit.manychat.com/virtual`"
+    },
+    {
+      "file": "ecosystem\\viral-reels-and-video-scripts.md",
+      "line": 7,
+      "text": "- **Bonus Portal:** `https://whoisalfaz.me/claim-manychat-bonus/`"
+    },
+    {
+      "file": "ecosystem\\viral-reels-and-video-scripts.md",
+      "line": 107,
+      "text": "> *https://igsummit.manychat.com/virtual*"
+    },
+    {
+      "file": "ecosystem\\viral-reels-and-video-scripts.md",
+      "line": 115,
+      "text": "> *👉 https://whoisalfaz.me/claim-manychat-bonus/*"
+    },
+    {
+      "file": "findings.md",
+      "line": 17,
+      "text": "| `manychat` | ManyChat | `/go/manychat` | Conversational Marketing | WhatsApp & Instagram DM automation |"
+    },
+    {
+      "file": "FULL-AUDIT-REPORT.md",
+      "line": 74,
+      "text": "1. `/claim-manychat-bonus/` (210 chars)"
+    },
+    {
+      "file": "next.config.ts",
+      "line": 416,
+      "text": "source: '/go/manychat',"
+    },
+    {
+      "file": "scripts\\cleanSanityManychatLinks.js",
+      "line": 21,
+      "text": "// 2. Remove dead partnerlinks or /go/manychat"
+    },
+    {
+      "file": "scripts\\cleanSanityManychatLinks.js",
+      "line": 22,
+      "text": "body = body.replaceAll('https://manychat.partnerlinks.io/jugrrxxzawym', 'https://manychat.com');"
+    },
+    {
+      "file": "scripts\\cleanSanityManychatLinks.js",
+      "line": 25,
+      "text": "// Convert spammy [ManyChat](/go/manychat) to clean **ManyChat**, leaving first occurrence as official link"
+    },
+    {
+      "file": "scripts\\cleanSanityManychatLinks.js",
+      "line": 46,
+      "text": "// 5. For any remaining /go/manychat links in other posts"
+    },
+    {
+      "file": "scripts\\cleanSanityManychatLinks.js",
+      "line": 47,
+      "text": "body = body.replaceAll('/go/manychat', 'https://manychat.com');"
+    },
+    {
+      "file": "scripts\\cleanSanityManychatLinks.js",
+      "line": 51,
+      "text": "body = body.replaceAll('/claim-manychat-bonus/', '#blueprints');"
+    },
+    {
+      "file": "scripts\\cleanSanityManychatLinks.js",
+      "line": 52,
+      "text": "body = body.replaceAll('When you register for your virtual pass through our [Summit registration link](https://igsummit.manychat.com/virtual), you receive 3 production-ready, battle-tested n8n workflow blueprints:', 'Below are 3 production-ready, battle-tested n8n workflow blueprints for ManyChat operators:');"
+    },
+    {
+      "file": "scripts\\cleanSanityManychatLinks.js",
+      "line": 53,
+      "text": "body = body.replaceAll('1. **Step 1:** Purchase your Virtual Pass ($20) using our [ManyChat Summit Registration](https://igsummit.manychat.com/virtual).', '1. **Step 1:** Review the sessions and speakers on the [ManyChat Summit Agenda](https://igsummit.manychat.com/virtual).');"
+    },
+    {
+      "file": "scripts\\cleanSanityManychatLinks.js",
+      "line": 54,
+      "text": "body = body.replaceAll('3. **Step 3:** Head over to our [Bonus Claim Portal](/claim-manychat-bonus/).', '3. **Step 3:** Deploy the open-source n8n blueprint templates below.');"
+    },
+    {
+      "file": "scripts\\cleanSanityManychatLinks.js",
+      "line": 55,
+      "text": "body = body.replaceAll('👉 [**Claim Your Community n8n Blueprint Pack Here →**](/claim-manychat-bonus/)', '👉 [**Explore n8n Community Blueprints on GitHub →**](https://github.com/AlfazMahmudRizve)');"
+    },
+    {
+      "file": "scripts\\findManychatLinks.js",
+      "line": 39,
+      "text": "if (/manychat\\.partnerlinks\\.io|\\/go\\/manychat|partnerstack.*manychat|claim-manychat-bonus|igsummit\\.manychat\\.com/i.test(l)) {"
+    },
+    {
+      "file": "scripts\\findManychatLinks.js",
+      "line": 66,
+      "text": "if (/manychat\\.partnerlinks\\.io|\\/go\\/manychat|claim-manychat-bonus|igsummit\\.manychat\\.com|manychat\\.pxf\\.io/i.test(l)) {"
+    },
+    {
+      "file": "scripts\\generateCampaignUrls.js",
+      "line": 108,
+      "text": "url: 'https://whoisalfaz.me/claim-manychat-bonus/',"
+    },
+    {
+      "file": "scripts\\injectSummitCalloutsToSanity.js",
+      "line": 15,
+      "text": "const referralUrl = \"https://igsummit.manychat.com/virtual\";"
+    },
+    {
+      "file": "scripts\\injectSummitCalloutsToSanity.js",
+      "line": 21,
+      "text": "> 💡 *Community Resource: Download our free [Community n8n Blueprint Pack](/claim-manychat-bonus/) to decouple high-volume webhooks and enrich lead data in real time.*"
+    },
+    {
+      "file": "scripts\\injectSummitCalloutsToSanity.js",
+      "line": 39,
+      "text": "if (updatedBody.includes('igsummit.manychat.com')) {"
+    },
+    {
+      "file": "scripts\\publishSummitToTelegraph.js",
+      "line": 23,
+      "text": "const referralUrl = \"https://igsummit.manychat.com/virtual\";"
+    },
+    {
+      "file": "scripts\\publishSummitToTelegraph.js",
+      "line": 24,
+      "text": "const claimUrl = \"https://whoisalfaz.me/claim-manychat-bonus/\";"
+    },
+    {
+      "file": "scripts\\sanitizeSanityCompliance.js",
+      "line": 15,
+      "text": "const cleanCallout = `> 🎟️ **Industry Event [2026]:** Looking to scale Instagram DM automation, AI chat agents, and high-converting message funnels? ManyChat is hosting their virtual **[Instagram Summit](https://igsummit.manychat.com/virtual)** featuring live masterclasses from top agency leaders."
+    },
+    {
+      "file": "scripts\\sanitizeSanityCompliance.js",
+      "line": 17,
+      "text": "> 💡 *Community Resource: Download our free [Community n8n Blueprint Pack](/claim-manychat-bonus/) to decouple high-volume webhooks and enrich lead data in real time.*`;"
+    },
+    {
+      "file": "scripts\\sanitizeSanityCompliance.js",
+      "line": 40,
+      "text": "body = body.replaceAll('https://igsummit.manychat.com/virtual?utm_source=5e9c7e02098b&utm_campaign=partnerstack', 'https://igsummit.manychat.com/virtual');"
+    },
+    {
+      "file": "scripts\\sanitizeSanityCompliance.js",
+      "line": 51,
+      "text": "body = body.replaceAll('To eliminate the technical bottlenecks taught at the event, we are bundling our complete **$147 n8n Automation Companion Pack** 100% free when you register through our [official partner link](https://igsummit.manychat.com/virtual?utm_source=5e9c7e02098b&utm_campaign=partnerstack).', 'To eliminate the technical bottlenecks taught at the event, we provide our complete **Community n8n Automation Blueprint Pack** 100% free for builders and agencies.');"
+    },
+    {
+      "file": "scripts\\sanitizeSanityCompliance.js",
+      "line": 52,
+      "text": "body = body.replaceAll('When you register for your virtual pass through our [official partner link](https://igsummit.manychat.com/virtual?utm_source=5e9c7e02098b&utm_campaign=partnerstack), you receive 3 production-ready', 'To support builders deploying these workflows, we provide 3 production-ready');"
+    },
+    {
+      "file": "scripts\\sanitizeSanityCompliance.js",
+      "line": 53,
+      "text": "body = body.replaceAll('1. **Step 1:** Purchase your Virtual Pass ($20) using our [Official ManyChat Summit Partner Link](https://igsummit.manychat.com/virtual?utm_source=5e9c7e02098b&utm_campaign=partnerstack).', '1. **Step 1:** Review the summit schedule at [ManyChat Virtual Summit](https://igsummit.manychat.com/virtual).');"
+    },
+    {
+      "file": "scripts\\sanitizeSanityCompliance.js",
+      "line": 54,
+      "text": "body = body.replaceAll('2. **Step 2:** Note your ManyChat order confirmation or ticket ID.', '2. **Step 2:** Visit the free blueprint download portal at [whoisalfaz.me/claim-manychat-bonus/](/claim-manychat-bonus/).');"
+    },
+    {
+      "file": "scripts\\sanitizeSanityCompliance.js",
+      "line": 55,
+      "text": "body = body.replaceAll('3. **Step 3:** Visit [whoisalfaz.me/claim-manychat-bonus/](/claim-manychat-bonus/) and submit your details.', '3. **Step 3:** Enter your name and email to immediately receive direct download access.');"
+    },
+    {
+      "file": "scripts\\sanitizeSanityCompliance.js",
+      "line": 61,
+      "text": "if (body.includes('igsummit.manychat.com') || body.includes('5e9c7e02098b') || body.includes('Featured Partner Event')) {"
+    },
+    {
+      "file": "scripts\\sanitizeSanityCompliance.js",
+      "line": 64,
+      "text": "body = body.replaceAll('https://igsummit.manychat.com/virtual?utm_source=5e9c7e02098b&utm_campaign=partnerstack', 'https://igsummit.manychat.com/virtual');"
+    }
+  ],
+  "postHits": [
+    {
+      "_id": "q4Qx8KjnI6dEFTDAd9JuZV",
+      "slug": "manychat-instagram-summit-2026-agenda-review-bonus",
+      "title": "ManyChat Instagram Summit 2026: Agenda, Keynotes & Blueprint Pack",
+      "hasAffiliate": false,
+      "hits": [
+        {
+          "line": 1,
+          "text": "> **Quick Summary (BLUF):** The **ManyChat Instagram Summit 2026** is the flagship virtual and in-person event for marketers, creators, and agency owners scaling Instagram DM automation. For **$20**, the Virtual Pass delivers 2 full days of live masterclasses from industry leaders including **Colin & Samir**, **Zach King**, **Natasha Willis (School of Bots)**, and **Brock Johnson**. To eliminate the technical bottlenecks taught at the event, we are bundling our complete **Free Community n8n Blueprint Pack** 100% free when you register through our [Summit registration link](https://igsummit.manychat.com/virtual)."
+        },
+        {
+          "line": 115,
+          "text": "1. **Step 1:** Review the sessions and speakers on the [ManyChat Summit Agenda](https://igsummit.manychat.com/virtual)."
+        },
+        {
+          "line": 129,
+          "text": "👉 [**Register for the ManyChat Virtual Summit 2026 Here →**](https://igsummit.manychat.com/virtual)"
+        }
+      ]
+    }
+  ]
+}
