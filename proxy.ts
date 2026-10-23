@@ -2,6 +2,38 @@ import { NextRequest, NextResponse } from 'next/server';
 import { Ratelimit } from '@upstash/ratelimit';
 import { Redis } from '@upstash/redis';
 
+// ─── Edge Bot Shield & Scanner Probe Drop Lists ──────────────────────────────
+const PROBE_PATTERNS = [
+    '.php',
+    'wp-admin',
+    'wp-login',
+    'xmlrpc',
+    '.env',
+    'actuator',
+    'eval-stdin',
+];
+
+const LEGITIMATE_CRAWLERS = [
+    'Googlebot',
+    'bingbot',
+    'msnbot',
+    'BingPreview',
+    'YandexBot',
+    'DuckDuckBot',
+];
+
+const BLOCKED_BOTS = [
+    'Bytespider',
+    'Amazonbot',
+    'ClaudeBot',
+    'CCBot',
+    'GPTBot',
+    'ChatGPT-User',
+    'anthropic-ai',
+    'PetalBot',
+    'DataForSeoBot',
+];
+
 // ─── Rate Limiter Instances ──────────────────────────────────────────────────
 // Only initialize if environment variables are present (graceful degradation)
 const redis = process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN
@@ -31,18 +63,46 @@ const auditLimiter = redis
     })
     : null;
 
-// ─── Middleware ───────────────────────────────────────────────────────────────
+// ─── Proxy (Next.js 16 Edge Execution) ───────────────────────────────────────
 export async function proxy(request: NextRequest) {
     const { pathname } = request.nextUrl;
+    const lowerPath = pathname.toLowerCase();
 
-    // Only rate-limit API routes
+    // 1. Drop malicious scanner probes before Next.js routing overhead
+    const isMaliciousProbe = PROBE_PATTERNS.some((pattern) =>
+        lowerPath.includes(pattern)
+    );
+
+    if (isMaliciousProbe) {
+        return new NextResponse('Not Found', { status: 404 });
+    }
+
+    const userAgent = request.headers.get('user-agent') || '';
+    const lowerUserAgent = userAgent.toLowerCase();
+
+    // 2. Allow legitimate search engine crawlers immediately
+    const isLegitimateCrawler = LEGITIMATE_CRAWLERS.some((crawler) =>
+        lowerUserAgent.includes(crawler.toLowerCase())
+    );
+
+    if (!isLegitimateCrawler) {
+        // 3. Block aggressive scrapers and uncooperative AI crawlers
+        const isBlockedBot = BLOCKED_BOTS.some((bot) =>
+            lowerUserAgent.includes(bot.toLowerCase())
+        );
+
+        if (isBlockedBot) {
+            return new NextResponse('Access Denied', { status: 403 });
+        }
+    }
+
+    // 4. Rate-limit API routes
     if (!pathname.startsWith('/api/')) {
         return NextResponse.next();
     }
 
     // If Redis is not configured, allow all requests (dev fallback)
     if (!redis || !standardLimiter || !auditLimiter) {
-        console.warn('[Middleware] Upstash Redis not configured — rate limiting disabled.');
         return NextResponse.next();
     }
 
@@ -80,7 +140,6 @@ export async function proxy(request: NextRequest) {
             );
         }
 
-        // Attach rate limit headers to the successful response
         const response = NextResponse.next();
         response.headers.set('X-RateLimit-Limit', limit.toString());
         response.headers.set('X-RateLimit-Remaining', remaining.toString());
@@ -95,7 +154,8 @@ export async function proxy(request: NextRequest) {
 }
 
 // ─── Matcher ─────────────────────────────────────────────────────────────────
-// Only run middleware on API routes
 export const config = {
-    matcher: ['/api/contact/:path*', '/api/audit/:path*', '/api/newsletter/:path*'],
+    matcher: [
+        '/((?!_next/static|_next/image|studio|favicon.ico|robots.txt|sitemap.xml).*)',
+    ],
 };
