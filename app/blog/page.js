@@ -113,7 +113,7 @@ export default async function BlogPage() {
                         <h3 className="text-2xl font-black text-slate-900 dark:text-white mb-8 border-b border-slate-200 dark:border-white/10 pb-4 uppercase tracking-tight">Topics</h3>
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
                             {categories?.filter(cat => cat.count > 0 && cat.slug?.current !== 'learn-automation-in-30-days').map((cat, i) => (
-                                <Link key={cat.slug.current} href={`/blog/category/${cat.slug.current}/`} style={{ animationDelay: `${i * 100}ms` }} className="animate-in fade-in slide-in-from-bottom-4 duration-500 fill-mode-both flex items-center justify-between p-4 bg-white dark:bg-white/5 rounded-xl border border-slate-200 dark:border-white/5 hover:border-teal-500/50 dark:hover:border-blue-500/50 transition-all group cursor-pointer shadow-sm hover:shadow-md dark:shadow-none">
+                                <Link key={cat.slug.current} href={`/blog/category/${cat.slug.current}/`} prefetch={false} style={{ animationDelay: `${i * 100}ms` }} className="animate-in fade-in slide-in-from-bottom-4 duration-500 fill-mode-both flex items-center justify-between p-4 bg-white dark:bg-white/5 rounded-xl border border-slate-200 dark:border-white/5 hover:border-teal-500/50 dark:hover:border-blue-500/50 transition-all group cursor-pointer shadow-sm hover:shadow-md dark:shadow-none">
                                     <span className="text-slate-700 dark:text-slate-300 font-bold group-hover:text-teal-600 dark:group-hover:text-blue-400 transition-colors flex items-center gap-3">
                                         <span className="w-2 h-2 rounded-full bg-teal-500 dark:bg-blue-500"></span>
                                         {cat.name}
@@ -134,7 +134,7 @@ export default async function BlogPage() {
                         <StaggerContainer className="grid md:grid-cols-2 gap-8">
                             {posts?.map((post) => (
                                 <StaggerItem key={post.slug.current} className="h-full">
-                                    <Link href={`/blog/${post.slug.current}/`} className="group block h-full">
+                                    <Link href={`/blog/${post.slug.current}/`} prefetch={false} className="group block h-full">
                                         <article className="h-full bg-white dark:bg-[#0a0a0a] border border-slate-200 dark:border-white/10 rounded-[2rem] overflow-hidden hover:border-teal-400/50 dark:hover:border-blue-500/50 transition-all duration-500 hover:-translate-y-2 shadow-xl dark:shadow-sm flex flex-col">
                                             
                                             {/* TOP IMAGE AREA WITH PILLS */}
@@ -198,7 +198,7 @@ export default async function BlogPage() {
                         <StaggerContainer className="space-y-6">
                             {recentPosts?.map((post) => (
                                 <StaggerItem key={post.slug.current} className="block">
-                                    <Link href={`/blog/${post.slug.current}/`} className="group block">
+                                    <Link href={`/blog/${post.slug.current}/`} prefetch={false} className="group block">
                                         <div className="text-slate-800 dark:text-slate-300 text-[15px] font-bold group-hover:text-teal-600 dark:group-hover:text-blue-400 transition-colors line-clamp-2 mb-2 leading-snug">
                                             {post.title}
                                         </div>
@@ -215,7 +215,7 @@ export default async function BlogPage() {
                     <div className="bg-white dark:bg-transparent p-6 rounded-[2rem] border border-slate-200 dark:border-transparent shadow-sm dark:shadow-none">
                         <div className="text-xl font-black text-slate-900 dark:text-white mb-6 uppercase tracking-tight">Featured Series</div>
                         <ul className="space-y-3 text-[15px] font-medium text-slate-500 dark:text-slate-400">
-                            <li><Link href="/blog/30-days-of-n8n/" className="hover:text-teal-600 dark:hover:text-blue-400 block py-1 transition-colors font-bold">30 Days of n8n Mastery</Link></li>
+                            <li><Link href="/blog/30-days-of-n8n/" prefetch={false} className="hover:text-teal-600 dark:hover:text-blue-400 block py-1 transition-colors font-bold">30 Days of n8n Mastery</Link></li>
                             <li><Link href="/case-studies/" className="hover:text-teal-600 dark:hover:text-blue-400 block py-1 transition-colors font-bold">Client Case Studies & ROI</Link></li>
                         </ul>
                     </div>
@@ -226,7 +226,7 @@ export default async function BlogPage() {
                         <ul className="space-y-3">
                             {categories?.map(cat => (
                                 <li key={cat.slug}>
-                                    <Link href={`/blog/category/${cat.slug.current}/`} className="text-[14px] font-bold text-slate-600 dark:text-slate-400 hover:text-teal-600 dark:hover:text-blue-400 flex items-center justify-between py-2 border-b border-slate-100 dark:border-white/5 group transition-colors">
+                                    <Link href={`/blog/category/${cat.slug.current}/`} prefetch={false} className="text-[14px] font-bold text-slate-600 dark:text-slate-400 hover:text-teal-600 dark:hover:text-blue-400 flex items-center justify-between py-2 border-b border-slate-100 dark:border-white/5 group transition-colors">
                                         <span>{cat.name}</span>
                                         <span className="opacity-0 group-hover:opacity-100 transition-opacity"><ChevronRight size={14} /></span>
                                     </Link>

@@ -266,7 +266,7 @@ export default async function Post({ params }) {
         {/* Navigation Bar: Breadcrumbs & Back Link */}
         <div className="flex flex-wrap items-center justify-between gap-4 mb-8">
           <Breadcrumbs items={breadcrumbItems} className="mb-0" />
-          <Link href="/blog/" className="inline-flex items-center gap-2 text-slate-500 font-bold uppercase tracking-widest hover:text-slate-900 dark:hover:text-white transition-colors text-xs group">
+          <Link href="/blog/" prefetch={false} className="inline-flex items-center gap-2 text-slate-500 font-bold uppercase tracking-widest hover:text-slate-900 dark:hover:text-white transition-colors text-xs group">
             <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" /> Back to Library
           </Link>
         </div>
@@ -566,14 +566,14 @@ export default async function Post({ params }) {
             {(prevPost || nextPost) && (
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-24 pt-12 border-t border-slate-200 dark:border-white/10">
                 {prevPost ? (
-                  <Link href={`/blog/${prevPost.slug.current}/`} className="group p-8 rounded-[2rem] bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 hover:border-teal-500/50 hover:shadow-xl dark:shadow-none transition-all flex flex-col justify-center">
+                  <Link href={`/blog/${prevPost.slug.current}/`} prefetch={false} className="group p-8 rounded-[2rem] bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 hover:border-teal-500/50 hover:shadow-xl dark:shadow-none transition-all flex flex-col justify-center">
                     <span className="text-[10px] text-slate-500 uppercase font-black tracking-widest mb-3 flex items-center gap-2"><ArrowLeft size={14} className="group-hover:-translate-x-1 transition-transform" /> Previous Post</span>
                     <div className="text-slate-900 dark:text-white font-black text-lg group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors line-clamp-2 uppercase tracking-tight">{prevPost.title}</div>
                   </Link>
                 ) : <div />}
 
                 {nextPost ? (
-                  <Link href={`/blog/${nextPost.slug.current}/`} className="group p-8 rounded-[2rem] bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 hover:border-teal-500/50 hover:shadow-xl dark:shadow-none transition-all flex flex-col justify-center text-right">
+                  <Link href={`/blog/${nextPost.slug.current}/`} prefetch={false} className="group p-8 rounded-[2rem] bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 hover:border-teal-500/50 hover:shadow-xl dark:shadow-none transition-all flex flex-col justify-center text-right">
                     <span className="text-[10px] text-slate-500 uppercase font-black tracking-widest mb-3 flex items-center justify-end gap-2">Next Post <ArrowLeft size={14} className="rotate-180 group-hover:translate-x-1 transition-transform" /></span>
                     <div className="text-slate-900 dark:text-white font-black text-lg group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors line-clamp-2 uppercase tracking-tight">{nextPost.title}</div>
                   </Link>
@@ -609,7 +609,7 @@ export default async function Post({ params }) {
             <ul className="space-y-6">
               {recentPosts?.map(post => (
                 <li key={post.slug.current}>
-                  <Link href={`/blog/${post.slug.current}/`} className="group block">
+                  <Link href={`/blog/${post.slug.current}/`} prefetch={false} className="group block">
                     <div className="text-slate-800 dark:text-slate-300 text-[15px] font-bold group-hover:text-teal-600 dark:group-hover:text-blue-400 transition-colors line-clamp-2 mb-2 leading-snug">
                       {post.title}
                     </div>
@@ -626,7 +626,7 @@ export default async function Post({ params }) {
             <ul className="space-y-3">
               {categories?.map(cat => (
                 <li key={cat.slug.current}>
-                  <Link href={`/blog/category/${cat.slug.current}/`} className="text-[14px] font-bold text-slate-600 dark:text-slate-400 hover:text-teal-600 dark:hover:text-blue-400 block py-2 border-b border-slate-100 dark:border-white/5 transition-colors">
+                  <Link href={`/blog/category/${cat.slug.current}/`} prefetch={false} className="text-[14px] font-bold text-slate-600 dark:text-slate-400 hover:text-teal-600 dark:hover:text-blue-400 block py-2 border-b border-slate-100 dark:border-white/5 transition-colors">
                     {cat.name}
                   </Link>
                 </li>

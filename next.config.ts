@@ -606,6 +606,16 @@ const nextConfig: NextConfig = {
         ],
       },
       {
+        source: '/blog/:path*',
+        headers: [
+          ...securityHeaders,
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=3600, s-maxage=604800, stale-while-revalidate=86400',
+          },
+        ],
+      },
+      {
         source: '/go/:path*',
         headers: [
           {

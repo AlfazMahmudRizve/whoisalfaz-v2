@@ -129,6 +129,7 @@ export default async function Home() {
         <div className="max-w-7xl mx-auto">
           <Link 
             href="/blog/case-study-urban-cafe-foodtech-platform/" 
+            prefetch={false}
             className="group block"
           >
             <div className="bento-card rounded-[2.5rem] p-6 md:p-8 flex flex-col md:flex-row items-center gap-8 overflow-hidden relative">
@@ -197,13 +198,13 @@ export default async function Home() {
                   { 
                     icon: Code2, 
                     title: "High-Speed Web Applications", 
-                    desc: <>Bespoke Next.js web applications, sub-second UX, and client portals engineered around the <Link href="/blog/ai-automation-agency-business-model/" className="text-teal-600 dark:text-teal-400 font-semibold hover:underline">high-margin agency model</Link>.</>, 
+                    desc: <>Bespoke Next.js web applications, sub-second UX, and client portals engineered around the <Link href="/blog/ai-automation-agency-business-model/" prefetch={false} className="text-teal-600 dark:text-teal-400 font-semibold hover:underline">high-margin agency model</Link>.</>, 
                     span: "sm:col-span-1" 
                   },
                   { 
                     icon: Zap, 
                     title: "Autonomous RevOps Workflows", 
-                    desc: <>Self-healing n8n pipelines, CRM sync, and AI agents using our verified <Link href="/blog/dify-ai-workflow-orchestration-vs-n8n-ai-agent-nodes/" className="text-teal-600 dark:text-teal-400 font-semibold hover:underline">Dify vs n8n workflow architecture</Link>.</>, 
+                    desc: <>Self-healing n8n pipelines, CRM sync, and AI agents using our verified <Link href="/blog/dify-ai-workflow-orchestration-vs-n8n-ai-agent-nodes/" prefetch={false} className="text-teal-600 dark:text-teal-400 font-semibold hover:underline">Dify vs n8n workflow architecture</Link>.</>, 
                     span: "sm:col-span-1" 
                   }
                 ].map((item, i) => (
@@ -243,7 +244,7 @@ export default async function Home() {
                       </svg>
 
                       {/* Source Node (ManyChat/Webhook) */}
-                      <Link href="/blog/manychat-pricing-2026/" className="z-10 flex flex-col items-center gap-2 group/node" title="ManyChat 2026 pricing teardown">
+                      <Link href="/blog/manychat-pricing-2026/" prefetch={false} className="z-10 flex flex-col items-center gap-2 group/node" title="ManyChat 2026 pricing teardown">
                         <div className="w-12 h-12 rounded-xl bg-white dark:bg-[#1e293b] border border-slate-200 dark:border-white/10 flex items-center justify-center shadow-lg group-hover/node:scale-105 group-hover/node:border-teal-500 transition-all duration-300">
                           <Zap size={20} className="text-teal-500" />
                         </div>
@@ -415,7 +416,7 @@ export default async function Home() {
               Free Technical Website Audit
             </h2>
             <p className="text-slate-500 dark:text-slate-400 text-sm max-w-xl mx-auto font-medium">
-              Run real-time diagnostics on SSL, security headers, Core Web Vitals, and indexability with our browser-native <Link href="/blog/screaming-frog-alternatives-free-seo-audit-tools/" className="text-teal-600 dark:text-teal-400 font-semibold hover:underline">free Screaming Frog alternative</Link>.
+              Run real-time diagnostics on SSL, security headers, Core Web Vitals, and indexability with our browser-native <Link href="/blog/screaming-frog-alternatives-free-seo-audit-tools/" prefetch={false} className="text-teal-600 dark:text-teal-400 font-semibold hover:underline">free Screaming Frog alternative</Link>.
             </p>
           </div>
           <LazyAuditTool />
@@ -440,19 +441,19 @@ export default async function Home() {
             {[
               {
                 title: "Custom Workflow Automation", icon: Zap,
-                desc: <>Self-healing AI workflows that instantly enrich leads and scale your sales engine without adding headcount. Read our in-depth <Link href="/blog/manychat-pricing-2026/" className="text-emerald-600 dark:text-emerald-400 font-bold hover:underline">ManyChat 2026 pricing teardown</Link> to optimize integration economics.</>,
+                desc: <>Self-healing AI workflows that instantly enrich leads and scale your sales engine without adding headcount. Read our in-depth <Link href="/blog/manychat-pricing-2026/" prefetch={false} className="text-emerald-600 dark:text-emerald-400 font-bold hover:underline">ManyChat 2026 pricing teardown</Link> to optimize integration economics.</>,
                 bg: "bg-emerald-500/10", border: "border-emerald-500/20", text: "text-emerald-500 dark:text-emerald-400",
                 link: "/services/n8n-automation/"
               },
               {
                 title: "Custom Full-Stack Applications", icon: Code2,
-                desc: <>Bespoke Agency Infrastructure. When off-the-shelf software blocks your growth, I build the exact internal tools you need for the <Link href="/blog/ai-automation-agency-business-model/" className="text-rose-600 dark:text-rose-400 font-bold hover:underline">AI automation agency business model</Link>.</>,
+                desc: <>Bespoke Agency Infrastructure. When off-the-shelf software blocks your growth, I build the exact internal tools you need for the <Link href="/blog/ai-automation-agency-business-model/" prefetch={false} className="text-rose-600 dark:text-rose-400 font-bold hover:underline">AI automation agency business model</Link>.</>,
                 bg: "bg-rose-500/10", border: "border-rose-500/20", text: "text-rose-500 dark:text-rose-400",
                 link: "/services/custom-full-stack/"
               },
               {
                 title: "Headless CMS Infrastructure", icon: Globe,
-                desc: <>The high-performance Next.js foundation that powers your revenue engine with sub-second load times and robust RAG latency validated in our <Link href="/blog/pinecone-vs-qdrant-vultr-benchmark/" className="text-blue-600 dark:text-blue-400 font-bold hover:underline">Pinecone vs Qdrant benchmark on Vultr</Link>.</>,
+                desc: <>The high-performance Next.js foundation that powers your revenue engine with sub-second load times and robust RAG latency validated in our <Link href="/blog/pinecone-vs-qdrant-vultr-benchmark/" prefetch={false} className="text-blue-600 dark:text-blue-400 font-bold hover:underline">Pinecone vs Qdrant benchmark on Vultr</Link>.</>,
                 bg: "bg-blue-500/10", border: "border-blue-500/20", text: "text-blue-500 dark:text-blue-400",
                 link: "/services/"
               }
@@ -480,14 +481,14 @@ export default async function Home() {
               <h2 className="text-2xl md:text-3xl font-black text-slate-900 dark:text-white mb-3 uppercase tracking-tight transition-colors duration-300">Latest <span className="text-purple-600 dark:text-purple-400">Dispatches</span></h2>
               <p className="text-base text-slate-500 dark:text-slate-400 transition-colors duration-300">Autonomous insights, engineering logs, and automation protocols.</p>
             </div>
-            <Link href="/blog/" className="text-purple-600 dark:text-purple-400 font-black uppercase text-xs flex items-center gap-2 group">
+            <Link href="/blog/" prefetch={false} className="text-purple-600 dark:text-purple-400 font-black uppercase text-xs flex items-center gap-2 group">
               Library Access <span className="group-hover:translate-x-1 transition-transform inline-block">→</span>
             </Link>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
             {posts?.slice(0, 3).map((post, i) => (
-              <Link key={post.slug.current} href={`/blog/${post.slug.current}/`} style={{ animationDelay: `${i * 150}ms` }} className="group h-full animate-in fade-in slide-in-from-bottom-12 zoom-in-[0.98] duration-1000 ease-out fill-mode-both">
+              <Link key={post.slug.current} href={`/blog/${post.slug.current}/`} prefetch={false} style={{ animationDelay: `${i * 150}ms` }} className="group h-full animate-in fade-in slide-in-from-bottom-12 zoom-in-[0.98] duration-1000 ease-out fill-mode-both">
                 <article className="h-full bg-white dark:bg-[#1e293b] rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 hover:shadow-2xl hover:-translate-y-2 dark:hover:border-blue-500/50 transition-all duration-500 flex flex-col">
                   {/* TOP IMAGE AREA WITH PILLS */}
                   <div className="h-40 bg-slate-100 dark:bg-slate-800 relative overflow-hidden p-4 flex flex-col justify-start">

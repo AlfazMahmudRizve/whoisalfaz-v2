@@ -195,7 +195,7 @@ export default async function CategoryPage({ params }) {
                     {/* HERO SECTION */}
                     <section className="mb-12 bg-white dark:bg-[#111111]/80 border border-slate-200 dark:border-white/10 rounded-2xl p-6 sm:p-8 shadow-sm backdrop-blur-sm transition-colors duration-300">
                         <div className="flex items-center gap-2 text-sm text-slate-500 dark:text-slate-400 mb-4">
-                            <Link href="/blog/" className="hover:text-slate-900 dark:hover:text-white transition-colors">Blog</Link>
+                            <Link href="/blog/" prefetch={false} className="hover:text-slate-900 dark:hover:text-white transition-colors">Blog</Link>
                             <ChevronRight size={14} />
                             <span className="text-teal-600 dark:text-blue-400 font-medium">Category</span>
                             <ChevronRight size={14} />
@@ -229,7 +229,7 @@ export default async function CategoryPage({ params }) {
                         {posts.length > 0 ? (
                             <div className="grid md:grid-cols-2 gap-8">
                                 {posts.map((post) => (
-                                    <Link key={post.slug.current} href={`/blog/${post.slug.current}/`} className="group">
+                                    <Link key={post.slug.current} href={`/blog/${post.slug.current}/`} prefetch={false} className="group">
                                         <article className="h-full bg-white dark:bg-[#0a0a0a] border border-slate-200 dark:border-white/10 rounded-xl overflow-hidden hover:border-teal-500/50 dark:hover:border-blue-500/50 transition-all hover:-translate-y-1 shadow-sm dark:shadow-none">
                                             <div className="h-48 bg-slate-100 dark:bg-slate-800 relative">
                                                 {post.image ? (
@@ -263,7 +263,7 @@ export default async function CategoryPage({ params }) {
                                 <BookOpen size={48} className="mx-auto text-slate-300 dark:text-slate-600 mb-4" />
                                 <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-2 transition-colors duration-300">No posts found</h2>
                                 <p className="text-slate-500 dark:text-slate-400">We couldn&apos;t find any articles in this category.</p>
-                                <Link href="/blog/" className="inline-block mt-6 px-6 py-2 bg-teal-600 dark:bg-blue-600 text-white rounded-full font-bold text-sm hover:bg-teal-500 dark:hover:bg-blue-500 transition-colors">
+                                <Link href="/blog/" prefetch={false} className="inline-block mt-6 px-6 py-2 bg-teal-600 dark:bg-blue-600 text-white rounded-full font-bold text-sm hover:bg-teal-500 dark:hover:bg-blue-500 transition-colors">
                                     Return to Blog
                                 </Link>
                             </div>
@@ -307,7 +307,7 @@ export default async function CategoryPage({ params }) {
                         <ul className="space-y-4">
                             {recentPosts?.map(post => (
                                 <li key={post.slug.current}>
-                                    <Link href={`/blog/${post.slug.current}/`} className="group block">
+                                    <Link href={`/blog/${post.slug.current}/`} prefetch={false} className="group block">
                                         <div className="text-slate-600 dark:text-slate-300 text-sm font-medium group-hover:text-teal-600 dark:group-hover:text-blue-400 transition-colors line-clamp-2 mb-1">
                                             {post.title}
                                         </div>
@@ -324,7 +324,7 @@ export default async function CategoryPage({ params }) {
                         <ul className="space-y-2">
                             {allCategories?.map(cat => (
                                 <li key={cat.slug.current}>
-                                    <Link href={`/blog/category/${cat.slug.current}/`} className={`text-sm block py-1 border-b border-slate-200 dark:border-white/5 pb-2 transition-colors ${cat.slug.current === slug ? 'text-teal-600 dark:text-blue-400 font-bold' : 'text-slate-500 dark:text-slate-400 hover:text-teal-600 dark:hover:text-blue-400'}`}>
+                                    <Link href={`/blog/category/${cat.slug.current}/`} prefetch={false} className={`text-sm block py-1 border-b border-slate-200 dark:border-white/5 pb-2 transition-colors ${cat.slug.current === slug ? 'text-teal-600 dark:text-blue-400 font-bold' : 'text-slate-500 dark:text-slate-400 hover:text-teal-600 dark:hover:text-blue-400'}`}>
                                         {cat.name}
                                     </Link>
                                 </li>

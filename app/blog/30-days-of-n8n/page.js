@@ -93,7 +93,7 @@ export default async function SeriesIndexPage() {
       <div className="fixed top-0 left-0 w-full h-[600px] bg-gradient-to-b from-teal-500/10 to-transparent dark:from-teal-900/10 dark:to-transparent -z-10" />
 
       <div className="max-w-5xl mx-auto">
-        <Link href="/blog/" className="inline-flex items-center gap-2 text-slate-500 font-bold uppercase tracking-widest hover:text-slate-900 dark:hover:text-white transition-colors mb-12 text-xs group">
+        <Link href="/blog/" prefetch={false} className="inline-flex items-center gap-2 text-slate-500 font-bold uppercase tracking-widest hover:text-slate-900 dark:hover:text-white transition-colors mb-12 text-xs group">
           <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" /> Back to Library
         </Link>
 
@@ -140,7 +140,7 @@ export default async function SeriesIndexPage() {
         {/* Series Posts Grid */}
         <div className="space-y-4">
           {seriesPosts.map((post, i) => (
-            <Link key={post.slug.current} href={`/blog/${post.slug.current}/`} className="group block">
+            <Link key={post.slug.current} href={`/blog/${post.slug.current}/`} prefetch={false} className="group block">
               <article className="flex flex-col md:flex-row items-center gap-6 md:gap-8 bg-white dark:bg-[#0a0a0a] border border-slate-200 dark:border-white/10 p-4 md:p-6 rounded-3xl hover:border-teal-500/50 dark:hover:border-teal-400/50 hover:shadow-xl transition-all duration-300">
                 
                 {/* Number Indicator */}
