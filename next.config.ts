@@ -553,6 +553,57 @@ const nextConfig: NextConfig = {
         destination: '/blog/tempmail10min-seo-case-study/',
         permanent: true,
       },
+      // Deep-audit consolidation redirects (2026-09-25): merged clone posts -> canonical pillars
+      {
+        source: '/blog/scaling-qdrant-vector-database-to-10-million-embeddings/:path*',
+        destination: '/blog/the-ultimate-2026-self-hosted-ai-stack-vultr-qdrant-dify-n8n/',
+        permanent: true,
+      },
+      {
+        source: '/blog/scaling-qdrant-vector-database-to-10-million-embeddings',
+        destination: '/blog/the-ultimate-2026-self-hosted-ai-stack-vultr-qdrant-dify-n8n/',
+        permanent: true,
+      },
+      {
+        source: '/blog/self-hosted-qdrant-cluster-vultr-docker-sop/:path*',
+        destination: '/blog/the-ultimate-2026-self-hosted-ai-stack-vultr-qdrant-dify-n8n/',
+        permanent: true,
+      },
+      {
+        source: '/blog/self-hosted-qdrant-cluster-vultr-docker-sop',
+        destination: '/blog/the-ultimate-2026-self-hosted-ai-stack-vultr-qdrant-dify-n8n/',
+        permanent: true,
+      },
+      {
+        source: '/blog/n8n-ai-agent-memory-persistence-qdrant-vector-store/:path*',
+        destination: '/blog/n8n-vector-store-memory-management-production-guide/',
+        permanent: true,
+      },
+      {
+        source: '/blog/n8n-ai-agent-memory-persistence-qdrant-vector-store',
+        destination: '/blog/n8n-vector-store-memory-management-production-guide/',
+        permanent: true,
+      },
+      {
+        source: '/blog/apollo-to-brevo-n8n-pipeline-guide/:path*',
+        destination: '/blog/apollo-brevo-n8n-outbound-pipeline/',
+        permanent: true,
+      },
+      {
+        source: '/blog/apollo-to-brevo-n8n-pipeline-guide',
+        destination: '/blog/apollo-brevo-n8n-outbound-pipeline/',
+        permanent: true,
+      },
+      {
+        source: '/blog/aisdr-vs-human-sdr-unit-economics-benchmark/:path*',
+        destination: '/blog/aisdr-vs-human-sdr-performance-teardown/',
+        permanent: true,
+      },
+      {
+        source: '/blog/aisdr-vs-human-sdr-unit-economics-benchmark',
+        destination: '/blog/aisdr-vs-human-sdr-performance-teardown/',
+        permanent: true,
+      },
     ];
   },
   async rewrites() {

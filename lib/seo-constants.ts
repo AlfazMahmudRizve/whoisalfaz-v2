@@ -6,6 +6,14 @@
  */
 
 export const CANONICAL_OVERRIDES: Record<string, string> = {
+  // Deep-audit Phase 1 consolidations (2026-09-25): 3 clone posts merged into canonicals
+  'scaling-qdrant-vector-database-to-10-million-embeddings': 'https://whoisalfaz.me/blog/the-ultimate-2026-self-hosted-ai-stack-vultr-qdrant-dify-n8n/',
+  'self-hosted-qdrant-cluster-vultr-docker-sop': 'https://whoisalfaz.me/blog/the-ultimate-2026-self-hosted-ai-stack-vultr-qdrant-dify-n8n/',
+  'n8n-ai-agent-memory-persistence-qdrant-vector-store': 'https://whoisalfaz.me/blog/n8n-vector-store-memory-management-production-guide/',
+  // Deep-audit Phase 2 consolidations (2026-09-25): Apollo-Brevo + AiSDR pairs
+  'apollo-to-brevo-n8n-pipeline-guide': 'https://whoisalfaz.me/blog/apollo-brevo-n8n-outbound-pipeline/',
+  'aisdr-vs-human-sdr-unit-economics-benchmark': 'https://whoisalfaz.me/blog/aisdr-vs-human-sdr-performance-teardown/',
+  // Later consolidation session (preserved from force-push lineage)
   'dify-vs-n8n-architecture': 'https://whoisalfaz.me/blog/dify-ai-workflow-orchestration-vs-n8n-ai-agent-nodes/',
   'pinecone-serverless-vs-qdrant-vultr-latency-benchmark': 'https://whoisalfaz.me/blog/pinecone-vs-qdrant-vultr-benchmark/',
   'pinecone-namespaces-vs-qdrant-payload-filters-comparison': 'https://whoisalfaz.me/blog/pinecone-vs-qdrant-vultr-benchmark/',
