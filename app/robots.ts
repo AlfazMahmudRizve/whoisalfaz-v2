@@ -4,6 +4,8 @@ const privateDisallows = [
     '/private/',
     '/go/',
     '/api/',
+    '/*?*',
+    '/_next/data/',
 ]
 
 export default function robots(): MetadataRoute.Robots {

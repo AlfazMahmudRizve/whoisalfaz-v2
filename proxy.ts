@@ -80,13 +80,18 @@ export async function proxy(request: NextRequest) {
     const userAgent = request.headers.get('user-agent') || '';
     const lowerUserAgent = userAgent.toLowerCase();
 
+    // Dedicated machine agent endpoints (/api/agent and /api/mcp) bypass the bot shield
+    // allowing AI agents (ClaudeBot, GPTBot, etc.) to access machine tools
+    const AGENT_ROUTES = ['/api/agent', '/api/mcp'];
+    const isAgentRoute = AGENT_ROUTES.some((route) => lowerPath.startsWith(route));
+
     // 2. Allow legitimate search engine crawlers immediately
     const isLegitimateCrawler = LEGITIMATE_CRAWLERS.some((crawler) =>
         lowerUserAgent.includes(crawler.toLowerCase())
     );
 
-    if (!isLegitimateCrawler) {
-        // 3. Block aggressive scrapers and uncooperative AI crawlers
+    if (!isLegitimateCrawler && !isAgentRoute) {
+        // 3. Block aggressive scrapers and uncooperative AI crawlers on general website routes
         const isBlockedBot = BLOCKED_BOTS.some((bot) =>
             lowerUserAgent.includes(bot.toLowerCase())
         );
@@ -117,7 +122,7 @@ export async function proxy(request: NextRequest) {
         || '127.0.0.1';
 
     // Select the appropriate limiter based on the endpoint
-    const isAudit = pathname.startsWith('/api/audit');
+    const isAudit = pathname.startsWith('/api/audit') || pathname.startsWith('/api/agent');
     const limiter = isAudit ? auditLimiter : standardLimiter;
     const identifier = `${ip}:${pathname}`;
 
