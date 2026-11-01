@@ -101,8 +101,8 @@ export async function proxy(request: NextRequest) {
         }
     }
 
-    // 4. Rate-limit API routes
-    if (!pathname.startsWith('/api/')) {
+    // 4. Rate-limit API routes (case-insensitive)
+    if (!lowerPath.startsWith('/api/')) {
         return NextResponse.next();
     }
 
@@ -116,13 +116,14 @@ export async function proxy(request: NextRequest) {
         return NextResponse.next();
     }
 
-    // Extract IP address
-    const ip = request.headers.get('x-forwarded-for')?.split(',')[0]?.trim()
+    // Extract IP address (prioritize Cloudflare connecting IP when behind gateway)
+    const ip = request.headers.get('cf-connecting-ip')
+        || request.headers.get('x-forwarded-for')?.split(',')[0]?.trim()
         || request.headers.get('x-real-ip')
         || '127.0.0.1';
 
     // Select the appropriate limiter based on the endpoint
-    const isAudit = pathname.startsWith('/api/audit') || pathname.startsWith('/api/agent');
+    const isAudit = lowerPath.startsWith('/api/audit') || lowerPath.startsWith('/api/agent');
     const limiter = isAudit ? auditLimiter : standardLimiter;
     const identifier = `${ip}:${pathname}`;
 

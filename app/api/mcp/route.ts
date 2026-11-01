@@ -7,12 +7,14 @@ import {
     normalizeTargetUrl,
 } from '@/lib/audit';
 
+export const dynamic = 'force-dynamic';
 export const maxDuration = 60; // Allow up to 60 seconds for audit execution
 
 const corsHeaders = {
     'Access-Control-Allow-Origin': '*',
     'Access-Control-Allow-Methods': 'POST, OPTIONS',
-    'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+    'Access-Control-Allow-Headers': 'Content-Type, Authorization, X-Payment, x-402, X-402-Token, Payment-Signature',
+    'Access-Control-Expose-Headers': 'Content-Type, X-Payment, WWW-Authenticate, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset',
 };
 
 export async function OPTIONS() {
@@ -20,6 +22,31 @@ export async function OPTIONS() {
         status: 204,
         headers: corsHeaders,
     });
+}
+
+function isPrivateOrLocalUrl(rawUrl: string): boolean {
+    try {
+        const parsed = new URL(rawUrl);
+        const host = parsed.hostname.toLowerCase();
+        if (host === 'localhost' || host === '127.0.0.1' || host === '0.0.0.0' || host === '::1') {
+            return true;
+        }
+        if (host === '169.254.169.254' || host.startsWith('169.254.')) {
+            return true;
+        }
+        if (host.startsWith('10.') || host.startsWith('192.168.')) {
+            return true;
+        }
+        if (/^172\.(1[6-9]|2[0-9]|3[0-1])\./.test(host)) {
+            return true;
+        }
+        if (host.endsWith('.local') || host.endsWith('.internal')) {
+            return true;
+        }
+        return false;
+    } catch {
+        return true;
+    }
 }
 
 // ─── MCP Tool Definitions ───────────────────────────────────────────────────
@@ -88,6 +115,21 @@ export async function POST(request: Request) {
                 error: {
                     code: -32700,
                     message: 'Parse error: Invalid JSON payload',
+                },
+            },
+            { status: 400, headers: corsHeaders }
+        );
+    }
+
+    // Defensive check: Ensure payload is a valid non-null object
+    if (!reqBody || typeof reqBody !== 'object' || Array.isArray(reqBody)) {
+        return NextResponse.json(
+            {
+                jsonrpc: '2.0',
+                id: null,
+                error: {
+                    code: -32600,
+                    message: 'Invalid Request: Expected a JSON-RPC 2.0 object',
                 },
             },
             { status: 400, headers: corsHeaders }
@@ -183,7 +225,23 @@ export async function POST(request: Request) {
                                 message: "Invalid params: 'name' is required",
                             },
                         },
-                        { headers: corsHeaders }
+                        { status: 400, headers: corsHeaders }
+                    );
+                }
+
+                // Verify tool exists before parameter checking
+                const isKnownTool = MCP_TOOLS.some((t) => t.name === toolName);
+                if (!isKnownTool) {
+                    return NextResponse.json(
+                        {
+                            jsonrpc: '2.0',
+                            id,
+                            error: {
+                                code: -32601,
+                                message: `Tool not found: ${toolName}`,
+                            },
+                        },
+                        { status: 400, headers: corsHeaders }
                     );
                 }
 
@@ -197,11 +255,26 @@ export async function POST(request: Request) {
                                 message: "Invalid params: 'url' argument is required",
                             },
                         },
-                        { headers: corsHeaders }
+                        { status: 400, headers: corsHeaders }
                     );
                 }
 
                 const targetUrl = normalizeTargetUrl(toolArgs.url);
+
+                // SSRF Guard: Prevent targeting internal loopback or cloud metadata IPs
+                if (isPrivateOrLocalUrl(targetUrl)) {
+                    return NextResponse.json(
+                        {
+                            jsonrpc: '2.0',
+                            id,
+                            error: {
+                                code: -32602,
+                                message: "Invalid params: 'url' cannot resolve to private, local, or cloud metadata addresses",
+                            },
+                        },
+                        { status: 400, headers: corsHeaders }
+                    );
+                }
 
                 if (toolName === 'whoisalfaz_audit_website') {
                     const auditResult = await runFullAudit(targetUrl);
@@ -273,7 +346,7 @@ export async function POST(request: Request) {
                     );
                 }
 
-                // If tool is not found
+                // Fallback for safety
                 return NextResponse.json(
                     {
                         jsonrpc: '2.0',
@@ -283,7 +356,7 @@ export async function POST(request: Request) {
                             message: `Tool not found: ${toolName}`,
                         },
                     },
-                    { headers: corsHeaders }
+                    { status: 400, headers: corsHeaders }
                 );
             }
 
@@ -297,7 +370,7 @@ export async function POST(request: Request) {
                             message: `Method not found: ${method}`,
                         },
                     },
-                    { headers: corsHeaders }
+                    { status: 400, headers: corsHeaders }
                 );
             }
         }
