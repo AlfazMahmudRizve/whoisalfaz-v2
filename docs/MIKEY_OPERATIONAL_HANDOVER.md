@@ -61,12 +61,30 @@ Alfaz will input a custom scoped API token via your secure integration link:
   * `Zone.DNS.Read`
 * **Security Guard:** No DNS edits, no zone deletions, no WAF rule alterations without explicit human sign-off.
 
-### Step 2.3: Google Search Console (Read-Only)
-* **Access Route:** Google Cloud Service Account API key uploaded through your integration link (Viewer / Restricted role).
-* **Properties to Track:**
-  * `sc-domain:whoisalfaz.me` (or `https://whoisalfaz.me/`)
-  * `sc-domain:fasttools.me` (or `https://fasttools.me/`)
-* **Rule:** Never report an impression, ranking, or click metric from conversational memory. All numbers must come from live API reads.
+### Step 2.3: Google Search Console & GA4 via OpenSEO MCP
+Instead of managing raw Google Service Account JSON files, you connect directly via the **OpenSEO MCP Server**. All three projects are already bound to their verified GSC and GA4 properties under `a.m.rizve3905@gmail.com`.
+
+**Muse MCP Configuration:**
+```json
+{
+  "mcpServers": {
+    "openseo": {
+      "command": "npx",
+      "args": ["-y", "mcp-remote@latest", "https://app.openseo.so/mcp"]
+    }
+  }
+}
+```
+
+**Bound Project IDs for Mikey:**
+| Site | OpenSEO `projectId` | Connected GSC Property | Connected GA4 Property |
+| :--- | :--- | :--- | :--- |
+| **`fasttools.me`** | `d6811103-fc11-4300-bc4b-fa08c690dae4` | `sc-domain:fasttools.me` | `properties/558020033` |
+| **`whoisalfaz.me`** | `9e30d12e-4141-4f45-8049-bd8d2769e100` | `https://whoisalfaz.me/` | `properties/513224584` |
+| **`temp-mail10min.online`** | `50906ef4-d7ec-483c-85b6-5c7e8934fc5c` | `https://temp-mail10min.online/` | `properties/332635016` |
+
+* **Zero-Credit Tools:** `get_search_console_performance`, `get_google_analytics_organic_overview`, `get_google_analytics_organic_landing_pages`, `get_google_analytics_page_performance`, and `submit_indexnow_urls` consume **0 credits** (OAuth pass-through).
+* **Rule:** Always pass the corresponding `projectId` when querying performance. Never guess metrics.
 
 ### Step 2.4: Dual Email Architecture (Spam Isolation + Official Drafts)
 To protect primary domains from marketing spam while maintaining professional outreach:
