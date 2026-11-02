@@ -64,16 +64,56 @@ Alfaz will input a custom scoped API token via your secure integration link:
 ### Step 2.3: Google Search Console & GA4 via OpenSEO MCP
 Instead of managing raw Google Service Account JSON files, you connect directly via the **OpenSEO MCP Server**. All three projects are already bound to their verified GSC and GA4 properties under `a.m.rizve3905@gmail.com`.
 
-**Muse MCP Configuration:**
+#### Why Raw API Key Fails Without Header Setup
+In a headless cloud VM without a GUI browser, OpenSEO MCP cannot complete interactive OAuth redirects. If you run bare `mcp-remote https://app.openseo.so/mcp`, the process hangs waiting for browser callbacks or returns `401 Unauthorized`. To bypass OAuth, you MUST pass the API key inside an `Authorization: Bearer <API_KEY>` header.
+
+#### Method A: Direct HTTP MCP Configuration (Recommended for Muse UI)
+In Muse's MCP Settings / configuration file:
+```json
+{
+  "mcpServers": {
+    "openseo": {
+      "type": "http",
+      "url": "https://app.openseo.so/mcp",
+      "headers": {
+        "Authorization": "Bearer YOUR_OPENSEO_API_KEY"
+      }
+    }
+  }
+}
+```
+
+#### Method B: stdio via `mcp-remote` CLI (Alternative)
+If Muse runs MCP servers via Node/npx stdio processes:
 ```json
 {
   "mcpServers": {
     "openseo": {
       "command": "npx",
-      "args": ["-y", "mcp-remote@latest", "https://app.openseo.so/mcp"]
+      "args": [
+        "-y",
+        "mcp-remote@latest",
+        "https://app.openseo.so/mcp",
+        "--header",
+        "Authorization: Bearer YOUR_OPENSEO_API_KEY"
+      ]
     }
   }
 }
+```
+
+#### Method C: CLI Integration Command (e.g. Claude Code CLI in VM)
+If running inside a terminal agent:
+```bash
+claude mcp add --transport http --scope user openseo https://app.openseo.so/mcp --header "Authorization: Bearer YOUR_OPENSEO_API_KEY"
+```
+
+#### Method D: Verifying Connection via Terminal
+Run this curl command in your VM terminal to verify the key before starting the agent:
+```bash
+curl -I -H "Authorization: Bearer YOUR_OPENSEO_API_KEY" https://app.openseo.so/mcp
+# Expected valid response: HTTP/1.1 405 Method Not Allowed (indicates authenticated MCP JSON-RPC endpoint)
+# If invalid: HTTP/1.1 401 Unauthorized
 ```
 
 **Bound Project IDs for Mikey:**
