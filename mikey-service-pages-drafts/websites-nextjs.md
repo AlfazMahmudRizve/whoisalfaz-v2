@@ -74,7 +74,7 @@ Do not copy the automation timelines from /services/ onto this page. Those timel
 
 ## Price
 
-TODO-Alfaz: Add the price, or price range, for a Next.js website build here. No price for this new page was found in the /services/ price list or in lib/serviceData.js, so no price has been added here.
+Starting at $2,500, the same starting price as Custom Full-Stack on https://whoisalfaz.me/services/ and in lib/serviceData.js for custom-full-stack, because a Next.js website build is Custom Full-Stack work. Final price depends on the agreed scope. Timeline is still to be confirmed by Alfaz.
 
 Do not copy the monthly retainer range stated on /services/ onto this page. That range is stated there as general agency pricing information, not as a stated price for a website build.
 
@@ -98,7 +98,7 @@ TODO-Alfaz: Confirm the final list before publishing, especially domain, hosting
 
 ### 4. How long does a website build take, and what does it cost?
 
-TODO-Alfaz: Add the timeline and price here. They are not stated for website builds on the current site, and they are not added in this draft.
+Price is starting at $2,500, the Custom Full-Stack starting price, as stated above. Timeline is still to be confirmed by Alfaz, and is not added in this draft.
 
 ## Call to action
 

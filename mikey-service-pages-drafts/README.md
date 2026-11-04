@@ -13,7 +13,7 @@ Date prepared: 2026-11-04
 - custom-full-stack.md — Custom Full-Stack Applications, starting at $2,500
 - headless-architecture.md — Headless CMS Infrastructure, starting at $1,500
 - growth-consulting.md — Growth Consulting, $200/hr
-- websites-nextjs.md — New High-Speed Next.js Websites page, price to confirm
+- websites-nextjs.md — New High-Speed Next.js Websites page, starting at $2,500 (Custom Full-Stack starting price)
 
 ## Price source, verified 2026-11-04
 
@@ -30,8 +30,10 @@ These are shown as starting prices, matching the site's "Starting From" wording.
 The $1,500-$5,000/mo range in the /services/ FAQ is general agency pricing
 information, not a stated price for Alfaz's services, and was not used as a price here.
 
-No price was found for the new websites-nextjs page in the /services/ price
-list or in lib/serviceData.js, so no price was added to that draft.
+For the new websites-nextjs page, no separate price was found in the /services/
+price list or in lib/serviceData.js. It is priced at the Custom Full-Stack
+starting price, $2,500, per Alfaz's confirmation on 2026-11-04, because a
+Next.js website build is Custom Full-Stack work.
 
 ## Timeline
 
