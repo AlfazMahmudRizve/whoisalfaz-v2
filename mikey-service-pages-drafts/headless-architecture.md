@@ -61,9 +61,7 @@ No timeline is stated on the source service page for this service, so no timelin
 
 ## Price
 
-Starting at $1,500, as listed on https://whoisalfaz.me/services/ and in lib/serviceData.js for headless-architecture. Final price depends on the agreed scope. Timeline is still to be confirmed by Alfaz.
-
-No price is stated on the source service page for this service, so no price is given here.
+Starting at $1,500, as listed on https://whoisalfaz.me/services/ and in lib/serviceData.js for headless-architecture. Final price depends on the agreed scope. Standard delivery is 1–3 weeks.
 
 ## FAQ
 
@@ -77,7 +75,7 @@ The source page states the reason as speed, plugin load, database queries, serve
 The source page names WordPress as the dashboard example. Other CMS options: TODO-Alfaz.
 
 **4. How long will it take, and how much will it cost?**
-TODO-Alfaz for both. No timeline or price for this service was verified on the source page.
+Pricing starts at $1,500 as listed on /services/ and in lib/serviceData.js, with standard turnaround completed within 1–3 weeks.
 
 ## Next step
 

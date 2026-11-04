@@ -26,7 +26,6 @@ import { CANONICAL_OVERRIDES } from '@/lib/seo-constants';
 export const dynamicParams = false;
 export const revalidate = false; // Fully static — use on-demand revalidation via /api/revalidate
 
-export { CANONICAL_OVERRIDES };
 
 export async function generateStaticParams() {
   const posts = await getSanityPosts();

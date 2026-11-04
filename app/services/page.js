@@ -43,9 +43,9 @@ export default function ServicesPage() {
             cta: "Automate Your Workflows"
         },
         {
-            title: "Custom Full-Stack Applications",
+            title: "Custom Full-Stack Applications & Websites",
             slug: "custom-full-stack",
-            desc: "When off-the-shelf software falls short, I build the exact tool you need. As a Full-Stack Architect, I develop custom web applications, bespoke internal agency portals, and secure client dashboards from the ground up.",
+            desc: "When off-the-shelf software falls short, I build the exact tool you need. As a Full-Stack Architect, I engineer bespoke Next.js web applications, internal agency portals, and high-performance marketing websites built for speed and scale.",
             price: "2,500",
             icon: Code2,
             cardClass: "bg-rose-50 dark:bg-rose-500/10 border-rose-100 dark:border-rose-500/20",

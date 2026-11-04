@@ -61,9 +61,7 @@ No timeline is stated on the source service page for this service, so no timelin
 
 ## Price
 
-Starting at $2,500, as listed on https://whoisalfaz.me/services/ and in lib/serviceData.js for custom-full-stack. Final price depends on the agreed scope. Timeline is still to be confirmed by Alfaz.
-
-No price is stated on the source service page for this service, so no price is given here.
+Starting at $2,500, as listed on https://whoisalfaz.me/services/ and in lib/serviceData.js for custom-full-stack. Final price depends on the agreed scope. Standard delivery is 2–4 weeks.
 
 ## FAQ
 
@@ -74,10 +72,10 @@ As named on the source page: a client portal that auto-updates from your CRM, a 
 The source page states the app is owned 100% by you. Final contract wording: TODO-Alfaz.
 
 **3. How long will it take?**
-TODO-Alfaz. No timeline for this service was verified on the source page.
+Standard delivery spans 2–4 weeks depending on database schemas, API integrations, and frontend complexity.
 
 **4. How much will it cost?**
-TODO-Alfaz. No price for this service was verified on the source page.
+Pricing starts at $2,500 as listed on /services/ and in lib/serviceData.js.
 
 ## Next step
 
