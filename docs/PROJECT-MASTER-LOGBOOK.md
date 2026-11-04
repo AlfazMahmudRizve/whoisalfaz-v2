@@ -1144,3 +1144,20 @@
   - Day 8 banner pre-generated and verified: `data/banners/day_08.png` (Discord dark verification theme).
   - Dry run validated via `python scripts/publish_daily_linkedin.py --day 7 --dry-run` [Exit 0].
 
+
+### [2026-11-04 13:44:00] LinkedIn Distribution: n8n 3.0 Migration Guide Published
+* **Action:** Published organic lead-generation post for the n8n 3.0 Migration Guide SOP via `linkdposting` MCP tool (`linkedin_post_with_image`).
+* **Title:** Upgrading to n8n 3.0: The Silent Failure Trap & Architecture SOP
+* **Target Guide URL:** `https://whoisalfaz.me/blog/how-to-upgrade-to-n8n-3-without-breaking-workflows/`
+* **Attached Visual Asset:** `scratch/n8n3_linkedin_banner.png` (1200x675 high-contrast technical architecture diagram comparing UI/API nominal status vs execution runtime failure).
+* **LinkedIn Post URN:** `urn:li:share:7523651490905939968`
+* **LinkedIn Live Feed URL:** `https://www.linkedin.com/feed/update/urn:li:share:7523651490905939968`
+* **Verification Status:** Success (HTTP 201 Created, image uploaded and attached, text parsed without truncation).
+
+### [2026-11-04 13:46:00] Reciprocal Backlink Verified Live on Gumroad (Krafera Upgrade Watch)
+* **Status:** Verified Live (HTTP 200 OK)
+* **Host Page:** `https://krafera.gumroad.com/l/pbeqo`
+* **Placement:** Under section `<h3>How it was tested</h3>`
+* **Anchor Text & HTML Verified:** `<a href="https://whoisalfaz.me/blog/how-to-upgrade-to-n8n-3-without-breaking-workflows/">Upgrading to n8n 3.0 Without Breaking Workflows</a> by Alfaz Mahmud Rizve (whoisalfaz.me)`
+* **Impact:** High-authority Domain Rating (DR 91) do-follow backlink secured from an authoritative creator product page, establishing initial backlink equity and referral traffic for the n8n 3.0 upgrade guide.
+
