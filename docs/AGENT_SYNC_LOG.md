@@ -42,6 +42,10 @@
 ### 4. Client Logbook Boundary
 * **Rule:** `docs/PROJECT-MASTER-LOGBOOK.md` belongs **strictly and exclusively** to the `temp-mail10min.online` client campaign. Never add `whoisalfaz-v2` or `fasttools` entries to that document.
 
+### 5. Two-Way Protocol Test 1 Completed
+* **Request:** `mikey-requests/2026-11-05-gsc-top-queries-whoisalfaz.md` (Top 10 queries, 28 days via OpenSEO).
+* **Answer:** `draken-replies/2026-11-05-gsc-top-queries-whoisalfaz.md` published live.
+
 ---
 
 ## 🔵 Section 2: Active Dispatch Queue (Tasks Assigned to Mikey)
