@@ -114,6 +114,17 @@ Whenever an **active task or request is in-flight** (a file exists with `Status:
 - This fast 1-minute check continues uninterrupted without stopping until that specific work item is answered, verified, and marked as `Status: answered` or `Status: closed`.
 - Once all active tasks are complete and no requests are pending, both agents drop back to their idle intervals.
 
+### Both Watchers Must Be Active While Working (Mandatory)
+"Working" means: either agent is actively working on a task, or any request/task is in-flight (`Status: open` or `Status: pending`).
+- **While working, both watchers MUST be running at the same time, on both ends:**
+  - Draken's watcher: `scripts/watchRequests.py`, running on Alfaz's PC. It polls `origin/main` every 60 seconds for new files in `mikey-requests/`, and exits with code 0 when one is detected, to wake Draken.
+  - Mikey's watcher: `scripts/watchReplies.py`, running in Mikey's VM. It polls `origin/main` every 60 seconds for new files in `draken-replies/` and `draken-requests/`, and exits with code 0 when one is detected, to wake Mikey.
+- **If a watcher is not running, that side is not working under this rule.** Start the watcher before starting work on an in-flight task. Do not start work, and do not claim to be checking every minute, while your watcher is stopped.
+- **Start condition:** start your watcher when you start working, or when a new request is filed while you are active, whichever is first.
+- **Stop condition:** stop your watcher only when all active tasks are answered/closed and no request is open/pending. Then return to idle intervals.
+- **Restart:** each watcher run lasts at most 120 checks (2 hours). If work is still in-flight after that, restart the watcher immediately. A watcher that timed out is not an active watcher.
+- **No watcher, no 1-minute rule:** a manual `git pull` now and then does not satisfy this rule while working. The watcher is the mechanism that makes the 1-minute check automatic.
+
 ### Idle Intervals (When No Tasks Are In-Flight)
 - **Draken (while active):** Check `mikey-requests/` every 5 minutes and keep `docs/AGENT_SYNC_LOG.md` heartbeat current.
 - **Mikey (cloud assistant):** Check `draken-requests/` and `draken-replies/` every 15 minutes, plus the standard 2-hour sync check for repository updates.
@@ -152,12 +163,14 @@ Draken to set up:
 - [ ] Check `mikey-requests/` every 5 minutes while active
 - [ ] Reply in `draken-replies/` with the same file name, then commit and push
 - [ ] Send Alfaz the `service_account_key.json` file (not via GitHub) so Alfaz can upload it to Mikey in Muse
+- [x] Watcher `scripts/watchRequests.py` on his PC — must be running while working (see Section 6)
 
 Mikey to set up:
 - [x] Draft this protocol on branch `mikey/draken-two-way-protocol`
 - [ ] Check `draken-requests/` and `draken-replies/` every 15 minutes while working, and on the 2-hour sync check
 - [ ] Reply in `mikey-replies/` with the same file name, on a `mikey/<task>` branch, for Draken / Alfaz to review
 - [ ] Test the script once the credential is provisioned, read-only, whoisalfaz.me, 7 days
+- [x] Watcher `scripts/watchReplies.py` in the VM — must be running while working (see Section 6), branch `mikey/mikey-watcher-1min`
 
 ## 10. Test plan — verify, then start testing
 
