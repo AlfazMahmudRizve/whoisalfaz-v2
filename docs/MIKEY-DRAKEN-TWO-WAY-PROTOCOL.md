@@ -1,8 +1,9 @@
 # Mikey ↔ Draken Two-Way Protocol
 
-Status: Draft for Alfaz and Draken to review. Not merged. No live change.
+Status: Active, updated 2026-11-05 — sync branch version. This copy lives on branch `mikey-draken-sync`, not on main.
 Date: 2026-11-05
 Owner: Alfaz Mahmud Rizve
+Rule change 2026-11-05, set by Alfaz: never push Mikey-Draken conversations to main, always use a separate branch. Conversations stay off main. Only work that is done and needs to be on production goes on main. The shared sync branch for all messages is `mikey-draken-sync`.
 Agents:
 - Mikey — Cloud Assistant, Muse VM, always on
 - Draken — Lead Local Engineering Agent, Alfaz's PC, active only when PC is on
@@ -18,7 +19,7 @@ Alfaz confirmed this on 2026-11-05: plan it two-sided, and make routine requests
 
 ## 2. How it works
 
-GitHub `main` is the bridge. There is no live chat between the agents.
+GitHub branch `mikey-draken-sync` is the bridge. There is no live chat between the agents. Do NOT use `main` for requests or replies. `main` is production only.
 
 Folders in the repo root:
 
@@ -110,15 +111,15 @@ Mikey presence:
 
 ### The 1-Minute Active Task Rule (Mandatory)
 Whenever an **active task or request is in-flight** (a file exists with `Status: open` or `Status: pending` in `mikey-requests/` or `draken-requests/`):
-- **Both Draken and Mikey MUST poll and check GitHub `main` every 1 minute** (`git fetch origin main && git status`).
+- **Both Draken and Mikey MUST poll and check GitHub branch `mikey-draken-sync` every 1 minute** (`git fetch origin mikey-draken-sync && git status`). Do NOT poll `main` for conversation files.
 - This fast 1-minute check continues uninterrupted without stopping until that specific work item is answered, verified, and marked as `Status: answered` or `Status: closed`.
 - Once all active tasks are complete and no requests are pending, both agents drop back to their idle intervals.
 
 ### Both Watchers Must Be Active While Working (Mandatory)
 "Working" means: either agent is actively working on a task, or any request/task is in-flight (`Status: open` or `Status: pending`).
 - **While working, both watchers MUST be running at the same time, on both ends:**
-  - Draken's watcher: `scripts/watchRequests.py`, running on Alfaz's PC. It polls `origin/main` every 60 seconds for new files in `mikey-requests/`, and exits with code 0 when one is detected, to wake Draken.
-  - Mikey's watcher: `scripts/watchReplies.py`, running in Mikey's VM. It polls `origin/main` every 60 seconds for new files in `draken-replies/` and `draken-requests/`, and exits with code 0 when one is detected, to wake Mikey.
+  - Draken's watcher: `scripts/watchRequests.py`, running on Alfaz's PC. It polls `origin/mikey-draken-sync` every 60 seconds for new files in `mikey-requests/`, and exits with code 0 when one is detected, to wake Draken.
+  - Mikey's watcher: `scripts/watchReplies.py`, running in Mikey's VM. It polls `origin/mikey-draken-sync` every 60 seconds for new files in `draken-replies/` and `draken-requests/`, and exits with code 0 when one is detected, to wake Mikey.
 - **If a watcher is not running, that side is not working under this rule.** Start the watcher before starting work on an in-flight task. Do not start work, and do not claim to be checking every minute, while your watcher is stopped.
 - **Start condition:** start your watcher when you start working, or when a new request is filed while you are active, whichever is first.
 - **Stop condition:** stop your watcher only when all active tasks are answered/closed and no request is open/pending. Then return to idle intervals.
@@ -158,7 +159,7 @@ Draken can ask Mikey for:
 ## 9. Setup checklist
 
 Draken to set up:
-- [ ] Create `mikey-requests/`, `draken-replies/`, `draken-requests/`, `mikey-replies/` in `main`
+- [ ] Create `mikey-requests/`, `draken-replies/`, `draken-requests/`, `mikey-replies/` in `mikey-draken-sync` (not in `main`)
 - [ ] Write heartbeat in `docs/AGENT_SYNC_LOG.md` when active
 - [ ] Check `mikey-requests/` every 5 minutes while active
 - [ ] Reply in `draken-replies/` with the same file name, then commit and push
