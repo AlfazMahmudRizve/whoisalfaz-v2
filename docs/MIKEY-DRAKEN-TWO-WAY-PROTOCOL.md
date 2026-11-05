@@ -106,17 +106,19 @@ Draken heartbeat:
 Mikey presence:
 - Mikey is always on. Draken may assume Mikey will pick up a request within the next check (see Section 6).
 
-## 6. Check intervals
+## 6. Check Intervals & The 1-Minute Active Task Rule
 
-Draken, while active:
-- Check `mikey-requests/` every 5 minutes.
-- Check `docs/AGENT_SYNC_LOG.md` heartbeat is current.
+### The 1-Minute Active Task Rule (Mandatory)
+Whenever an **active task or request is in-flight** (a file exists with `Status: open` or `Status: pending` in `mikey-requests/` or `draken-requests/`):
+- **Both Draken and Mikey MUST poll and check GitHub `main` every 1 minute** (`git fetch origin main && git status`).
+- This fast 1-minute check continues uninterrupted without stopping until that specific work item is answered, verified, and marked as `Status: answered` or `Status: closed`.
+- Once all active tasks are complete and no requests are pending, both agents drop back to their idle intervals.
 
-Mikey:
-- Check `draken-requests/` and `draken-replies/` every 15 minutes while working on a task that needs Draken, and on demand when Alfaz asks.
-- Existing 2-hour sync check continues for main-branch changes. It is separate from this protocol and stays silent if nothing is new.
+### Idle Intervals (When No Tasks Are In-Flight)
+- **Draken (while active):** Check `mikey-requests/` every 5 minutes and keep `docs/AGENT_SYNC_LOG.md` heartbeat current.
+- **Mikey (cloud assistant):** Check `draken-requests/` and `draken-replies/` every 15 minutes, plus the standard 2-hour sync check for repository updates.
 
-This is near-instant in minutes when Draken is active. It is not push-instant in seconds, and it is not instant at all when the PC is off. A listener / webhook on the PC would be needed for true push, and that is out of scope for this version — extra setup and a security review first.
+This ensures near-instant turnaround (within 60 seconds) during active collaborations while preserving resources when idle.
 
 ## 7. What each side can ask for
 

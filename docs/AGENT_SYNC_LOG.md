@@ -10,6 +10,7 @@
 * **Draken active:** 2026-11-05 14:15 Asia/Dhaka
 * **Two-Way Protocol Status:** Active & Listening (`mikey-requests/` ↔ `draken-replies/`, `draken-requests/` ↔ `mikey-replies/`)
 * **Two-Way Protocol Spec:** `docs/MIKEY-DRAKEN-TWO-WAY-PROTOCOL.md` (Approved & Live on `main`)
+* **Active Task Fast-Polling Rule:** When a task/request is in-flight (status: open/pending), both Draken and Mikey MUST check `main` every 1 minute until marked done.
 
 ---
 
