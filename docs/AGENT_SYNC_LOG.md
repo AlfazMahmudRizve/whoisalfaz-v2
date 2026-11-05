@@ -7,10 +7,10 @@
 **Sync Invariant:** GitHub `main` is the shared bridge. Draken pushes directly to `main`; Mikey pulls `main`, executes on `mikey/<task>` branches, and opens Pull Requests.
 
 ### 💓 Draken Heartbeat
-* **Draken active:** 2026-11-05 14:15 Asia/Dhaka
+* **Draken active:** 2026-11-05 15:02 Asia/Dhaka
 * **Two-Way Protocol Status:** Active & Listening (`mikey-requests/` ↔ `draken-replies/`, `draken-requests/` ↔ `mikey-replies/`)
 * **Two-Way Protocol Spec:** `docs/MIKEY-DRAKEN-TWO-WAY-PROTOCOL.md` (Approved & Live on `main`)
-* **Active Task Fast-Polling Rule:** When a task/request is in-flight (status: open/pending), both Draken and Mikey MUST check `main` every 1 minute until marked done.
+* **Active Task Fast-Polling Rule:** When a task/request is in-flight (status: open/pending), both Draken and Mikey MUST check `main` every 1 minute until marked done. Both background watchers (`watchRequests.py` and `watchReplies.py`) run simultaneously.
 
 ---
 
@@ -40,12 +40,16 @@
 * **Active Playbook Draft:** *Automated Apollo to Brevo Lead Enrichment & Multi-Stage Sync in n8n* (`docs/` / Sanity draft ready).
 * **Tooling:** ModletHub remote MCP server added to local environment.
 
-### 4. Client Logbook Boundary
-* **Rule:** `docs/PROJECT-MASTER-LOGBOOK.md` belongs **strictly and exclusively** to the `temp-mail10min.online` client campaign. Never add `whoisalfaz-v2` or `fasttools` entries to that document.
+### 4. Client Logbook Boundary & 3 Separate Books Established
+* **Rule:** Strict project separation across 3 dedicated master logbooks:
+  1. `whoisalfaz-v2/docs/PROJECT-MASTER-LOGBOOK.md` — Client `temp-mail10min.online` ONLY.
+  2. `whoisalfaz-v2/docs/WHOISALFAZ_LOGBOOK.md` — `whoisalfaz.me` brand, services, products, blog, and backlinks.
+  3. `fasttools/docs/FASTTOOLS_LOGBOOK.md` — `fasttools.me` micro-utilities and directory submissions.
 
-### 5. Two-Way Protocol Test 1 Completed
-* **Request:** `mikey-requests/2026-11-05-gsc-top-queries-whoisalfaz.md` (Top 10 queries, 28 days via OpenSEO).
-* **Answer:** `draken-replies/2026-11-05-gsc-top-queries-whoisalfaz.md` published live.
+### 5. Two-Way Protocol Tests Completed
+* **Test 1 (GSC Top Queries):** `mikey-requests/2026-11-05-gsc-top-queries-whoisalfaz.md` -> Answered in `draken-replies/2026-11-05-gsc-top-queries-whoisalfaz.md`.
+* **Test 2 (TempMail Directories):** `mikey-requests/2026-11-05-tempmail-directories-already-listed.md` -> Answered in `draken-replies/2026-11-05-tempmail-directories-already-listed.md`.
+* **Watcher Synchrony:** Mikey's `scripts/watchReplies.py` merged to `main`; Draken's `scripts/watchRequests.py` active on PC.
 
 ---
 

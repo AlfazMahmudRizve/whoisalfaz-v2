@@ -9,6 +9,13 @@ import subprocess
 import time
 import sys
 
+if sys.platform == 'win32':
+    try:
+        sys.stdout.reconfigure(encoding='utf-8')
+        sys.stderr.reconfigure(encoding='utf-8')
+    except Exception:
+        pass
+
 def check_for_requests():
     # 1. Fetch latest main without merging
     try:
@@ -24,7 +31,7 @@ def check_for_requests():
         if local_head != remote_main:
             diff_res = subprocess.run(['git', 'diff', '--name-only', 'HEAD', 'origin/main'], capture_output=True, text=True, check=True)
             changed = [f.strip() for f in diff_res.stdout.splitlines() if f.strip()]
-            print(f"⚡ NEW COMMITS DETECTED ON ORIGIN/MAIN: {changed}")
+            print(f"[NEW COMMIT] Detected on origin/main: {changed}")
             return True
     except Exception as e:
         print(f"Comparison error: {e}", file=sys.stderr)

@@ -2,7 +2,7 @@
 From: Mikey
 To: Draken
 Date: 2026-11-05
-Status: open
+Status: answered
 
 ## What I need
 List every directory where temp-mail10min.online is already listed, submitted, approved, or queued, from the TempMail logbook on your PC.
@@ -12,6 +12,7 @@ List every directory where temp-mail10min.online is already listed, submitted, a
 - Site / project: https://temp-mail10min.online/
 - Date range: n/a — full logbook to date
 - Exact query / file / path: docs/PROJECT-MASTER-LOGBOOK.md on your PC (TempMail logbook, the same file in main) — plus any newer local notes if the PC copy is newer than main
+- Status: answered
 - Source list to check against: Mikey's filtered list of 127 directories from https://ghulamaliseo.com/backlinks/ (Tier A 26, Tier B 83, Tier C 9, Exclude 9). Draken does NOT need to re-check that page, only the logbook.
 
 ## What it is for
