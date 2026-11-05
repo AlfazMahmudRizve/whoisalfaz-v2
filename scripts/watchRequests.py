@@ -1,21 +1,17 @@
 #!/usr/bin/env python3
 """
-Lightweight background watcher for Mikey-Draken two-way protocol (Draken PC side).
-Runs continuously on Alfaz's PC, polling GitHub origin every 60 seconds.
-Checks actual ground truth state:
-  1. Any unmerged commits on any origin/mikey/* branch relative to origin/main.
-  2. Any remote origin/main advance beyond local HEAD.
-  3. Any unhandled requests in mikey-requests/ (Status: open/pending).
-
-Exits cleanly with code 0 as soon as work from Mikey is detected, triggering
-Antigravity reactive agent wake-up.
+Lightweight background watcher for Mikey-Draken two-way protocol.
+Dedicated to monitoring GitHub branch: origin/mikey-draken-sync.
+Polls every 60 seconds when active tasks are in-flight.
+Exits cleanly with code 0 when:
+  1. origin/mikey-draken-sync advances with new commits from Mikey.
+  2. Any request file in mikey-requests/ has Status: open or Status: pending.
+Triggers Antigravity reactive agent wake-up.
 """
 
 import subprocess
 import time
 import sys
-import os
-import glob
 import datetime
 
 if sys.platform == 'win32':
@@ -25,109 +21,111 @@ if sys.platform == 'win32':
     except Exception:
         pass
 
+SYNC_BRANCH = "mikey-draken-sync"
 
-def check_unhandled_local_requests():
-    """Checks if any request file in mikey-requests/ is open or pending."""
+
+def fetch_sync_branch():
+    """Fetches origin/mikey-draken-sync from GitHub."""
     try:
-        for fpath in glob.glob("mikey-requests/*.md"):
-            with open(fpath, "r", encoding="utf-8", errors="ignore") as f:
-                content = f.read()
-                if "Status: open" in content or "Status: pending" in content:
-                    return os.path.basename(fpath)
-    except Exception:
-        pass
-    return None
-
-
-def fetch_origin():
-    """Fetches all branches and refs from origin."""
-    try:
-        subprocess.run(['git', 'fetch', 'origin'], capture_output=True, check=True)
+        subprocess.run(['git', 'fetch', 'origin', SYNC_BRANCH], capture_output=True, check=True)
         return True
     except Exception as e:
         print(f"[FETCH ERROR] {e}", file=sys.stderr, flush=True)
         return False
 
 
-def check_unmerged_mikey_branches():
-    """Checks if any origin/mikey/* branch has commits not yet merged into origin/main."""
+def get_remote_sha():
+    """Returns the latest SHA of origin/mikey-draken-sync."""
     try:
-        branches_res = subprocess.run(['git', 'branch', '-r'], capture_output=True, text=True, check=True)
-        unmerged = []
-        for line in branches_res.stdout.splitlines():
-            b = line.strip()
-            # Skip HEAD pointer or non-mikey branches
-            if 'origin/mikey/' in b and '->' not in b:
-                # Compare against origin/main
-                commits_res = subprocess.run(
-                    ['git', 'log', f'origin/main..{b}', '--oneline'],
+        res = subprocess.run(
+            ['git', 'rev-parse', f'origin/{SYNC_BRANCH}'],
+            capture_output=True,
+            text=True,
+            check=True
+        )
+        return res.stdout.strip()
+    except Exception as e:
+        print(f"[REV-PARSE ERROR] {e}", file=sys.stderr, flush=True)
+        return None
+
+
+def get_open_requests():
+    """Checks for open/pending requests on origin/mikey-draken-sync."""
+    open_reqs = []
+    try:
+        tree_res = subprocess.run(
+            ['git', 'ls-tree', '-r', f'origin/{SYNC_BRANCH}:mikey-requests'],
+            capture_output=True,
+            text=True,
+            check=True
+        )
+        for line in tree_res.stdout.splitlines():
+            line = line.strip()
+            if line.endswith('.md') and not line.endswith('.gitkeep'):
+                fname = line.split()[-1]
+                content_res = subprocess.run(
+                    ['git', 'show', f'origin/{SYNC_BRANCH}:mikey-requests/{fname}'],
                     capture_output=True,
                     text=True,
                     check=True
                 )
-                commits = commits_res.stdout.strip()
-                if commits:
-                    branch_name = b.replace('origin/', '')
-                    unmerged.append((branch_name, commits))
-        return unmerged
+                for cline in content_res.stdout.splitlines():
+                    cline = cline.strip()
+                    if cline.startswith('Status:') or cline.startswith('- Status:'):
+                        if 'open' in cline.lower() or 'pending' in cline.lower():
+                            open_reqs.append((fname, cline))
+                            break
     except Exception as e:
-        print(f"[BRANCH CHECK ERROR] {e}", file=sys.stderr, flush=True)
-        return []
-
-
-def check_remote_main_advance():
-    """Checks if origin/main has advanced beyond local HEAD."""
-    try:
-        local_head = subprocess.run(['git', 'rev-parse', 'HEAD'], capture_output=True, text=True, check=True).stdout.strip()
-        remote_main = subprocess.run(['git', 'rev-parse', 'origin/main'], capture_output=True, text=True, check=True).stdout.strip()
-        if local_head != remote_main:
-            diff_res = subprocess.run(['git', 'diff', '--name-only', 'HEAD', 'origin/main'], capture_output=True, text=True, check=True)
-            changed = [f.strip() for f in diff_res.stdout.splitlines() if f.strip()]
-            return changed
-    except Exception as e:
-        print(f"[MAIN CHECK ERROR] {e}", file=sys.stderr, flush=True)
-    return None
+        # If folder doesn't exist yet or is empty
+        pass
+    return open_reqs
 
 
 def main():
-    print("Draken Ground-Truth Watcher 3.0 active.", flush=True)
-    print("Monitoring origin/mikey/* branches, origin/main, and mikey-requests/ every 60s...", flush=True)
+    print(f"Draken Watcher 4.0 active: monitoring origin/{SYNC_BRANCH} every 60s...", flush=True)
+    fetch_sync_branch()
+    known_sha = get_remote_sha()
+    print(f"Baseline origin/{SYNC_BRANCH} commit: {known_sha[:7] if known_sha else 'Unknown'}", flush=True)
 
-    max_checks = 120  # Run for up to 2 hours
+    max_checks = 120  # Max 2 hours per session
     for check_num in range(1, max_checks + 1):
+        time.sleep(60)
         now_str = datetime.datetime.now().strftime("%H:%M:%S")
 
-        # 1. Fetch remote origin
-        fetched = fetch_origin()
+        fetched = fetch_sync_branch()
+        if not fetched:
+            print(f"[{now_str}] Check #{check_num}: network error fetching {SYNC_BRANCH}. Retrying...", flush=True)
+            continue
 
-        if fetched:
-            # 2. Check for unmerged Mikey feature branches
-            unmerged = check_unmerged_mikey_branches()
-            if unmerged:
-                print(f"[{now_str}] [WAKEUP] Unmerged Mikey branch work detected!", flush=True)
-                for b_name, commits in unmerged:
-                    print(f"  Branch {b_name}: {commits}", flush=True)
-                print("Exiting cleanly with code 0 to wake Draken immediately.", flush=True)
-                sys.exit(0)
+        current_sha = get_remote_sha()
 
-            # 3. Check for remote main advance
-            main_changed = check_remote_main_advance()
-            if main_changed:
-                print(f"[{now_str}] [WAKEUP] New commits on origin/main: {main_changed}", flush=True)
-                print("Exiting cleanly with code 0 to wake Draken immediately.", flush=True)
-                sys.exit(0)
+        # Check 1: Did origin/mikey-draken-sync advance?
+        if current_sha and known_sha and current_sha != known_sha:
+            diff_summary = subprocess.run(
+                ['git', 'log', '--oneline', f'{known_sha}..{current_sha}'],
+                capture_output=True,
+                text=True
+            ).stdout.strip()
+            changed_files = subprocess.run(
+                ['git', 'diff', '--name-only', known_sha, current_sha],
+                capture_output=True,
+                text=True
+            ).stdout.strip().splitlines()
 
-        # 4. Check for unhandled local request files
-        unhandled_file = check_unhandled_local_requests()
-        if unhandled_file:
-            print(f"[{now_str}] [WAKEUP] Unhandled request found: {unhandled_file}", flush=True)
+            print(f"[{now_str}] [WAKEUP] New commit(s) detected on {SYNC_BRANCH}!", flush=True)
+            print(f"  Commits: {diff_summary}", flush=True)
+            print(f"  Files: {changed_files}", flush=True)
             print("Exiting cleanly with code 0 to wake Draken immediately.", flush=True)
             sys.exit(0)
 
-        print(f"[{now_str}] Check #{check_num}: origin quiet (no unmerged Mikey work).", flush=True)
-        time.sleep(60)
+        # Check 2: Are there any open/pending requests on the branch?
+        open_requests = get_open_requests()
+        if open_requests:
+            print(f"[{now_str}] [WAKEUP] Open request detected on {SYNC_BRANCH}: {open_requests}", flush=True)
+            print("Exiting cleanly with code 0 to wake Draken immediately.", flush=True)
+            sys.exit(0)
 
-    print("Watcher completed 2-hour duration without unhandled work.", flush=True)
+        print(f"[{now_str}] Check #{check_num}: {SYNC_BRANCH} quiet ({known_sha[:7]} - no new requests).", flush=True)
 
 
 if __name__ == '__main__':

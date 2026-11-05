@@ -10,13 +10,14 @@ if (!pat) {
   process.exit(1);
 }
 
+const targetBranch = process.argv[2] || 'main';
+
 try {
-  console.log('🚀 Pushing to origin (AlfazMahmudRizve/whoisalfaz-v2)...');
+  console.log(`🚀 Pushing to origin/${targetBranch} (AlfazMahmudRizve/whoisalfaz-v2)...`);
   const originUrl = `https://AlfazMahmudRizve:${pat}@github.com/AlfazMahmudRizve/whoisalfaz-v2.git`;
-  execSync(`git push "${originUrl}" main --force`, { stdio: 'inherit' });
+  execSync(`git push "${originUrl}" ${targetBranch}`, { stdio: 'inherit' });
   console.log('✅ Pushed to origin successfully!');
 } catch (e) {
   console.error('❌ Failed to push to origin:', e.message);
   process.exit(1);
 }
-
