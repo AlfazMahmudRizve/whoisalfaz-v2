@@ -6,6 +6,11 @@
 - **Mikey:** Cloud Assistant (Muse Cloud VM / 24/7 Operations)
 **Sync Invariant:** GitHub `main` is the shared bridge. Draken pushes directly to `main`; Mikey pulls `main`, executes on `mikey/<task>` branches, and opens Pull Requests.
 
+### 💓 Draken Heartbeat
+* **Draken active:** 2026-11-05 14:15 Asia/Dhaka
+* **Two-Way Protocol Status:** Active & Listening (`mikey-requests/` ↔ `draken-replies/`, `draken-requests/` ↔ `mikey-replies/`)
+* **Two-Way Protocol Spec:** `docs/MIKEY-DRAKEN-TWO-WAY-PROTOCOL.md` (Approved & Live on `main`)
+
 ---
 
 ## 🔴 Section 1: Latest Production State & Releases (Updated by Draken)
