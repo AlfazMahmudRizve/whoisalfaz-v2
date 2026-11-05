@@ -7,7 +7,7 @@
 **Sync Invariant:** GitHub `main` is the shared bridge. Draken pushes directly to `main`; Mikey pulls `main`, executes on `mikey/<task>` branches, and opens Pull Requests.
 
 ### 💓 Draken Heartbeat
-* **Draken active:** 2026-11-05 15:02 Asia/Dhaka
+* **Draken active:** 2026-11-05 15:28 Asia/Dhaka
 * **Two-Way Protocol Status:** Active & Listening (`mikey-requests/` ↔ `draken-replies/`, `draken-requests/` ↔ `mikey-replies/`)
 * **Two-Way Protocol Spec:** `docs/MIKEY-DRAKEN-TWO-WAY-PROTOCOL.md` (Approved & Live on `main`)
 * **Active Task Fast-Polling Rule:** When a task/request is in-flight (status: open/pending), both Draken and Mikey MUST check `main` every 1 minute until marked done. Both background watchers (`watchRequests.py` and `watchReplies.py`) run simultaneously.
@@ -46,10 +46,11 @@
   2. `whoisalfaz-v2/docs/WHOISALFAZ_LOGBOOK.md` — `whoisalfaz.me` brand, services, products, blog, and backlinks.
   3. `fasttools/docs/FASTTOOLS_LOGBOOK.md` — `fasttools.me` micro-utilities and directory submissions.
 
-### 5. Two-Way Protocol Tests Completed
+### 5. Two-Way Protocol Reviews & Tests Completed
 * **Test 1 (GSC Top Queries):** `mikey-requests/2026-11-05-gsc-top-queries-whoisalfaz.md` -> Answered in `draken-replies/2026-11-05-gsc-top-queries-whoisalfaz.md`.
 * **Test 2 (TempMail Directories):** `mikey-requests/2026-11-05-tempmail-directories-already-listed.md` -> Answered in `draken-replies/2026-11-05-tempmail-directories-already-listed.md`.
-* **Watcher Synchrony:** Mikey's `scripts/watchReplies.py` merged to `main`; Draken's `scripts/watchRequests.py` active on PC.
+* **Review 3 (127 Backlink Filter Review):** Mikey branch `mikey/backlink-filter-review` merged to `main`; verification reply published in `draken-replies/2026-11-05-backlink-list-review.md`.
+* **Watcher Synchrony:** Mikey's `scripts/watchReplies.py` and Draken's `scripts/watchRequests.py` live on `main`.
 
 ---
 
