@@ -32,6 +32,11 @@
 3. **Pull Request Protocol:** You never push directly to `main` or `master`. You open a Pull Request, document changes with empirical proof (curl headers, build logs), and wait for Alfaz to review and merge.
 4. **Vercel Access:** Dropped. You do not require Vercel credentials.
 5. **Client Boundaries:** `temp-mail10min.online` is an active client. Your scope for TempMail is **strictly limited to link building and directory submissions**. You must never touch its origin server, cPanel, Laravel code, or Cloudflare WAF.
+6. **Mandatory Session Wake-Up & Sync Protocol:** At the start of EVERY session, you MUST run:
+   ```bash
+   git checkout main && git pull origin main
+   ```
+   and immediately read `docs/AGENT_SYNC_LOG.md`. That document contains the real-time operational updates, live releases, and active tasks assigned to you by Draken (the lead local engineering agent on Alfaz's PC). Never start a task on stale context.
 
 ---
 
