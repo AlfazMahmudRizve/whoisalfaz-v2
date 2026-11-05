@@ -1,13 +1,16 @@
 #!/usr/bin/env python3
 """
-Lightweight background watcher for Mikey-Draken two-way protocol.
-Polls origin/main every 60 seconds when active requests are in-flight.
-Exits with code 0 when a new commit or request is detected to wake Draken up.
+Lightweight background watcher for Mikey-Draken two-way protocol (Draken PC side).
+Monitors GitHub origin every 60 seconds using git ls-remote.
+Tracks both origin/main and all origin/mikey/* feature branches.
+Exits cleanly with code 0 when ANY change is detected, triggering Antigravity
+reactive agent wakeup.
 """
 
 import subprocess
 import time
 import sys
+import datetime
 
 if sys.platform == 'win32':
     try:
@@ -16,38 +19,75 @@ if sys.platform == 'win32':
     except Exception:
         pass
 
-def check_for_requests():
-    # 1. Fetch latest main without merging
-    try:
-        subprocess.run(['git', 'fetch', 'origin', 'main'], capture_output=True, check=True)
-    except Exception as e:
-        print(f"Fetch error: {e}", file=sys.stderr)
-        return False
 
-    # 2. Check if origin/main has advanced beyond local HEAD
+def get_remote_state():
     try:
-        local_head = subprocess.run(['git', 'rev-parse', 'HEAD'], capture_output=True, text=True, check=True).stdout.strip()
-        remote_main = subprocess.run(['git', 'rev-parse', 'origin/main'], capture_output=True, text=True, check=True).stdout.strip()
-        if local_head != remote_main:
-            diff_res = subprocess.run(['git', 'diff', '--name-only', 'HEAD', 'origin/main'], capture_output=True, text=True, check=True)
-            changed = [f.strip() for f in diff_res.stdout.splitlines() if f.strip()]
-            print(f"[NEW COMMIT] Detected on origin/main: {changed}")
-            return True
+        res = subprocess.run(
+            ['git', 'ls-remote', '--heads', 'origin'],
+            capture_output=True,
+            text=True,
+            check=True
+        )
+        state = {}
+        for line in res.stdout.splitlines():
+            line = line.strip()
+            if not line:
+                continue
+            parts = line.split()
+            if len(parts) >= 2:
+                sha, ref = parts[0], parts[1]
+                if ref.startswith('refs/heads/'):
+                    branch = ref[len('refs/heads/'):]
+                    if branch == 'main' or branch.startswith('mikey/'):
+                        state[branch] = sha
+        return state
     except Exception as e:
-        print(f"Comparison error: {e}", file=sys.stderr)
+        print(f"[ERROR] Failed to query remote: {e}", file=sys.stderr, flush=True)
+        return None
 
-    return False
 
 def main():
-    print("Watcher started: polling origin/main every 60 seconds...")
-    max_checks = 120 # Run up to 2 hours
-    for i in range(max_checks):
-        time.sleep(60)
-        if check_for_requests():
-            print("Waking up Draken with new commit/request!")
-            sys.exit(0) # Exiting cleanly triggers a reactive notification to Draken
+    print("Draken Watcher 2.0 started: monitoring origin/main & origin/mikey/* every 60s...", flush=True)
+    initial_state = get_remote_state()
+    if initial_state is None:
+        print("[WARN] Could not retrieve initial remote state. Retrying in 10s...", flush=True)
+        time.sleep(10)
+        initial_state = get_remote_state() or {}
 
-    print("Watcher reached max duration without new requests.")
+    print(f"Tracking {len(initial_state)} active branches: {list(initial_state.keys())}", flush=True)
+
+    max_checks = 120  # Max 2 hours per session
+    for check_num in range(1, max_checks + 1):
+        time.sleep(60)
+        now_str = datetime.datetime.now().strftime("%H:%M:%S")
+        current_state = get_remote_state()
+
+        if current_state is None:
+            print(f"[{now_str}] Check #{check_num}: network error querying origin. Will retry.", flush=True)
+            continue
+
+        changes = []
+        # Check for modified or new branches
+        for branch, sha in current_state.items():
+            if branch not in initial_state:
+                changes.append(f"NEW BRANCH: {branch} ({sha[:7]})")
+            elif initial_state[branch] != sha:
+                changes.append(f"UPDATED BRANCH: {branch} ({initial_state[branch][:7]} -> {sha[:7]})")
+
+        if changes:
+            print(f"[{now_str}] [WAKEUP] Remote changes detected: {', '.join(changes)}", flush=True)
+            try:
+                # Fetch so local repo is aware of the objects
+                subprocess.run(['git', 'fetch', 'origin'], capture_output=True, check=True)
+            except Exception:
+                pass
+            print("Exiting cleanly with code 0 to wake Draken immediately.", flush=True)
+            sys.exit(0)
+
+        print(f"[{now_str}] Check #{check_num}: origin quiet (no new commits from Mikey).", flush=True)
+
+    print("Watcher completed 2-hour duration without changes.", flush=True)
+
 
 if __name__ == '__main__':
     main()
