@@ -1351,3 +1351,14 @@
 * **Asset Integration:** High-res favicon loaded from production CDN (`assets/themes/basic/img/favicon.webp`).
 * **Requirements & Cost:** $0 Free, no user account, no backlink/badge required.
 * **Status:** **LIVE & VERIFIED (NOFOLLOW BRAND CITATION)**.
+
+### [2026-11-06 21:20:00] SaaSpo Curated SaaS Design Directory Submission in Review
+* **Directory Platform:** SaaSpo (`https://saaspo.com/`)
+* **Submission Route:** `https://saaspo.com/submit`
+* **Profile & Authority:** Curated SaaS landing page inspiration gallery and directory (DR 33–55) highlighting top web apps and design systems.
+* **Submitted Product:** `TempMail10min` (`https://temp-mail10min.online/`)
+* **Attribution Invariant:** Submitter = Alfaz Mahmud Rizve (`alfazmahmudrizve@gmail.com`), SEO & QA Lead at TempMail10min. 0 founder claims.
+* **Link Attribute Analysis:** Directory analysis confirms published showcase listings on SaaSpo feature **Pure Dofollow** outbound links with referral tracking (e.g. `?ref=saaspo.com`).
+* **Technical Invariants & Bot Mitigation:** Frontend protected via Cloudflare Turnstile against automated scrapers. Inclusion will be monitored via periodic search engine sweeps.
+* **Requirements & Cost:** $0 Free submission, no user account, no backlink/badge required.
+* **Status:** **SUBMITTED (IN EDITORIAL REVIEW - DOFOLLOW POTENTIAL)**.
