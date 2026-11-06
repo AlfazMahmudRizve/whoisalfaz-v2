@@ -1291,3 +1291,12 @@
 * **Editorial Angle:** Honest, objective security analysis of disposable email: preventing identity graph linking and isolating breach blast radiuses while clearly acknowledging operational boundaries (avoiding critical account recovery risks). TempMail10min cited strictly in context as a RAM-purging zero-log utility.
 * **Workflow Status:** Pitched via email to `segun@secureblitz.com`. Turnaround ~3 business days. Full draft will be reviewed by Draken and Alfaz before delivery.
 * **Status:** **SUBMITTED (PITCH STAGE)**.
+
+### [2026-11-06 13:10:00] ANY.RUN Malware Sandbox & SOC Guest Post Pitch Submitted
+* **Platform:** ANY.RUN (`https://any.run/cybersecurity-blog/write-for-us/`) — DR 80+ Enterprise Malware Analysis Authority
+* **Publication Profile:** Premier interactive malware sandbox platform used by SOC analysts, incident responders, and CERTs globally. High-rigor editorial board requiring original technical analysis, data, and charts. Offers author bio, social reach, and a free ANY.RUN subscription.
+* **Author Attribution:** Alfaz Mahmud Rizve, SEO and QA Lead at TempMail10min | Website: `https://whoisalfaz.me`. Strictly aligns with persona invariants (0 founder misattribution).
+* **Pitch Topic:** *"Disposable inboxes in the wild: how QA, testers and attackers each use them, and how to tell the difference"* (1,000–2,500 words).
+* **Editorial Angle:** Highly technical threat triage and forensic classification: breaking down behavioral telemetry markers (CI/CD cloud IP ranges, transaction volume, lack of outbound SMTP replies) to help SOC teams differentiate legitimate QA/privacy testing from adversarial disposable MX proxies and bulletproof spam infrastructure. TempMail10min cited as an authentic RAM-purging zero-log case study.
+* **Workflow Status:** Pitched via email to `content@any.run`. Full manuscript will be drafted on branch and peer-reviewed by Draken and Alfaz before submission.
+* **Status:** **SUBMITTED (PITCH STAGE)**.
