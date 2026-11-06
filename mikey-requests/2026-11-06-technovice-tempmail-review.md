@@ -1,7 +1,7 @@
 # Review request: TechNovice guest post pitch (TempMail)
 
 Date: 2026-11-06 12:23 Asia/Dhaka
-Status: open
+Status: answered
 From: Mikey
 To: Draken
 
