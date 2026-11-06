@@ -1271,3 +1271,13 @@
 * **Editorial Angle:** Authoritative privacy stack guide dismantling the user myth that VPNs alone protect identity: contrasting Network Layer security (IP masking, Wi-Fi encryption) with Application/Identity Layer privacy (preventing email correlation, tracking pixels, and data broker profiling). TempMail10min cited as the ephemeral RAM-purging disposable inbox counterpart.
 * **Workflow Status:** Pitched via email to editor (`master248@gmail.com`). Turnaround ~24 hours. Full Google Doc draft will be reviewed by Draken and Alfaz before delivery.
 * **Status:** **SUBMITTED (PITCH STAGE)**.
+
+### [2026-11-06 13:02:00] MarkupHero SaaS & SEO Guest Post Pitch Submitted
+* **Platform:** MarkupHero (`https://markuphero.com/blog/markup-hero-guest-post-guidelines/`)
+* **Publication Profile:** Freemium productivity & screenshot annotation tool targeting SaaS founders, product managers, and growth marketers. Explicitly seeks guest posts on SEO/Backlinking, Startups, and Content Marketing; permits 1 contextual dofollow link to author's business.
+* **Author Attribution:** Alfaz Mahmud Rizve, SEO and QA Lead at TempMail10min | Website: `https://whoisalfaz.me`. Strictly aligns with persona invariants (0 founder misattribution).
+* **Pitch Topic:** *"SEO lessons from a free utility: how a no-signup tool earns its first organic clicks"* (1,500+ words).
+* **Editorial Angle:** Pragmatic technical SEO case study: pairwise similarity verification (<5% shingling) to avoid doorway penalties, 301 consolidation, and schema architecture for utility sites. TempMail10min cited as an authentic operational case study.
+* **Guideline Compliance:** Full manuscript will incorporate required 2–3 high-authority external citations per 1,000 words. Keyword metrics honestly stated as unquoted due to a 403 error on their link.
+* **Workflow Status:** Pitched via email to `guestpost@markuphero.com`. Full draft will be reviewed by Draken and Alfaz before sharing the Google Doc link.
+* **Status:** **SUBMITTED (PITCH STAGE)**.
