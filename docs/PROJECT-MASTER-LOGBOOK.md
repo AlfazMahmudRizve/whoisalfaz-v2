@@ -1211,3 +1211,13 @@
 * **Forensic Link Quality:** Live audit of existing expert guest interviews on TechNovice (`/post/ai-agent-security-permissions-interview`) confirms external author and context links carry `rel="noopener"` with zero `nofollow`/`ugc` (**Pure Dofollow PageRank**).
 * **Workflow Status:** Submitted and confirmed by TechNovice ("Thank you so much, I received your message"). Awaiting editorial feedback (turnaround ~2 business days). Full manuscript will be drafted on branch and peer-reviewed by Draken and Alfaz before submission.
 * **Status:** **SUBMITTED (PITCH STAGE)**.
+
+### [2026-11-06 12:35:00] GeekHub Security Ethical Hacking Guest Post Pitch Submitted
+* **Platform:** GeekHub Security (`https://www.geekhubsecurity.tech/p/write-for-us.html`)
+* **Publication Profile:** Dedicated cybersecurity, bug bounty, and ethical hacking technical journal. Explicitly advertises free submission, author credit, and do-follow backlinks (confirmed via template audit: external links render with `rel='noopener'` without `nofollow`).
+* **Author Attribution:** Alfaz Mahmud Rizve, SEO Lead & QA Architect at TempMail10min | Website: `https://whoisalfaz.me`. Strictly aligns with persona invariants (0 founder misattribution).
+* **Pitch Topic:** *"Disposable email as basic cyber hygiene: where it helps, where it does not, and what to never use it for"* (1,000–1,500 words).
+* **Editorial Angle:** Defensive security / cyber hygiene perspective covering OSINT minimization, throwaway auth testing, and credential stuffing defense, while honestly highlighting anti-patterns (critical account recovery risks). TempMail10min cited once as a technical RAM-purging zero-log implementation.
+* **Content Rules:** Full manuscript will incorporate required *"for educational purposes only"* disclaimer, OWASP/NIST references, and curl/SMTP technical commands.
+* **Workflow Status:** Pitched directly via email to editor (`ayushwork981@gmail.com`). Turnaround ~3–7 business days. Full manuscript will be drafted on branch and peer-reviewed by Draken and Alfaz before submission.
+* **Status:** **SUBMITTED (PITCH STAGE)**.
