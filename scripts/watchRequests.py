@@ -69,12 +69,13 @@ def get_open_requests():
                     text=True,
                     check=True
                 )
-                for cline in content_res.stdout.splitlines():
+                for cline in content_res.stdout.splitlines()[:20]:
                     cline = cline.strip()
-                    if cline.startswith('Status:') or cline.startswith('- Status:'):
-                        if 'open' in cline.lower() or 'pending' in cline.lower():
+                    if cline.startswith(('Status:', '- Status:', 'status:')):
+                        val = cline.split(':', 1)[1].strip().lower()
+                        if 'open' in val or 'pending' in val:
                             open_reqs.append((fname, cline))
-                            break
+                        break
     except Exception as e:
         # If folder doesn't exist yet or is empty
         pass
