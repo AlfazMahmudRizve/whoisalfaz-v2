@@ -1144,3 +1144,26 @@
   - Day 8 banner pre-generated and verified: `data/banners/day_08.png` (Discord dark verification theme).
   - Dry run validated via `python scripts/publish_daily_linkedin.py --day 7 --dry-run` [Exit 0].
 
+### [2026-11-06 11:15:00] Dev.to Authority Profile Listing Live & Verified
+* **Platform:** Dev.to (`https://dev.to/alfazreviews`)
+* **Account Handle:** `@alfazreviews` (Alfaz Mahmud Rizve)
+* **Backlink Target:** `https://temp-mail10min.online/` (Personal website link)
+* **Link Attributes:** `target="_blank" rel="noopener me ugc"` (Verified live via HTTP 200 DOM inspection)
+* **Bio Configuration:** Unified core bio (*"GTM & RevOps Architect — I build autonomous revenue systems for scaling agencies and SaaS: SEO & organic growth, high-speed Next.js apps, and self-healing n8n workflows. whoisalfaz.me"*).
+* **Role Invariant:** Work line explicitly specifies *"SEO Lead & QA Architect at TempMail10min | Built whoisalfaz.me & fasttools.me"*. 0 founder mentions.
+* **Status:** **LIVE & VERIFIED**.
+
+
+
+### [2026-11-06 11:55:00] DevElif Directory Submission Live & Verified (Dofollow Backlink)
+* **Directory Platform:** DevElif (`https://develif.com/`)
+* **Submission Endpoint:** REST API `POST https://develif.com/api/submit`
+* **API Response:** HTTP 200 `{"ok":true,"slug":"artificial-intelligence-tools-91","status":"PUBLISHED"}`
+* **Live Listing URL:** `https://develif.com/s/artificial-intelligence-tools-91` (Verified live HTTP 200 OK)
+* **Backlink Target:** `https://temp-mail10min.online/`
+* **Verified Anchor Tags:**
+  1. `<a class="listing-host" href="https://temp-mail10min.online/" target="_blank" rel="noopener noreferrer">temp-mail10min.online</a>`
+  2. `<a class="q-button q-button-pink" href="https://temp-mail10min.online/" target="_blank" rel="noopener noreferrer">Visit site</a>`
+* **Link Attribute Analysis:** `rel="noopener noreferrer"`. Crucially, **NO `nofollow`** and **NO `ugc`** attributes are present. Page explicitly carries `dofollow listing` badge. This is a verified, genuine **dofollow** backlink passing PageRank to `temp-mail10min.online`.
+* **Category / Locale:** `Artificial Intelligence Tools` / `en`
+* **Status:** **LIVE & VERIFIED (DOFOLLOW)**.

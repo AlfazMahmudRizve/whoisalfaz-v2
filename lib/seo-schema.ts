@@ -402,6 +402,9 @@ export function generateUnifiedArticleGraph(params: UnifiedArticleGraphParams): 
       'https://www.linkedin.com/in/alfaz-mahmud-rizve/',
       'https://github.com/AlfazMahmudRizve',
       'https://x.com/whois_alfaz',
+      'https://www.youtube.com/@whoisalfazz',
+      'https://www.youtube.com/@alfazreviews',
+      'https://www.tiktok.com/@alfaz.tech.product',
     ],
     worksFor: {
       '@id': `${siteUrl}/#organization`,
@@ -437,6 +440,9 @@ export function generateUnifiedArticleGraph(params: UnifiedArticleGraphParams): 
       'https://www.linkedin.com/in/alfaz-mahmud-rizve/',
       'https://github.com/AlfazMahmudRizve',
       'https://x.com/whois_alfaz',
+      'https://www.youtube.com/@whoisalfazz',
+      'https://www.youtube.com/@alfazreviews',
+      'https://www.tiktok.com/@alfaz.tech.product',
     ],
   };
 
