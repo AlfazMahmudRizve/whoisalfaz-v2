@@ -1309,3 +1309,31 @@
 * **SEO & Knowledge Graph Value:** Sitelike provides search engine entity co-citation, mapping `temp-mail10min.online` within the semantic cluster of leading disposable email utilities. Also aids organic anchor text diversity across the broader link graph.
 * **Cost & Requirements:** $0 Free, no user account, no reciprocal widget/badge.
 * **Status:** **LIVE & VERIFIED (NOFOLLOW CITATION)**.
+
+### [2026-11-06 16:00:00] AIToolsCapital Directory Submission in Moderation (Dofollow Discovered)
+* **Directory Platform:** AIToolsCapital (`https://aitoolscapital.com`)
+* **Submitted Listing URL:** `https://aitoolscapital.com/tools/tempmail10min` (Candidate route pending moderation)
+* **Taxonomy & Category:** Web Apps / Productivity (Framed transparently as a web utility with zero fake AI claims to ensure editorial approval).
+* **Attribution Invariant:** Submitter = Alfaz Mahmud Rizve (SEO Lead & QA Architect); Maker = MD Shawn (Founder). 0 founder claims.
+* **Forensic Link Audit of Platform:** Probed live published listing `https://aitoolscapital.com/tools/neurofy-ai` to inspect outbound link generation in DOM:
+  ```html
+  <a href="https://...?utm_source=aitoolscapital&utm_medium=directory&utm_campaign=tool_submission" target="_blank" rel="noopener noreferrer">
+  ```
+  Outbound links render with `rel="noopener noreferrer"` with zero `nofollow`, zero `ugc`, zero `sponsored`. When published, this directory entry passes **Pure Dofollow PageRank**.
+* **Turnaround Time:** ~24 hours manual moderation.
+* **Status:** **SUBMITTED (IN MODERATION - DOFOLLOW CONFIRMED)**.
+
+### [2026-11-06 16:05:00] BuildVoyage Directory Submission in Moderation (UGC Nofollow Discovered)
+* **Directory Platform:** BuildVoyage (`https://buildvoyage.com`)
+* **Submitted Product URL:** `https://buildvoyage.com/products/tempmail10min` (Candidate route pending moderation)
+* **Taxonomy & Category:** Email & Newsletters.
+* **Tech Stack Declared:** PHP 8.2 / Laravel, LiteSpeed, Tailwind CSS, Cloudflare (Accurate to origin production environment).
+* **Attribution Invariant:** Submitter = Alfaz Mahmud Rizve (SEO Lead & QA Architect); Maker = MD Shawn (Founder). 0 founder claims.
+* **Forensic Link Audit of Platform:** Probed live published listing `https://buildvoyage.com/products/folio-wiki` to inspect outbound CTA DOM generation:
+  ```html
+  <a href="https://foliowiki.online" target="_blank" rel="ugc nofollow noopener" class="pd-btn pd-btn-primary">Visit site</a>
+  ```
+  Outbound links render with `rel="ugc nofollow noopener"`. **Confirmed UGC Citation / Nofollow Referral Authority** (not dofollow). Contributes to natural link profile diversity and entity association.
+* **Turnaround Time:** ~48 hours manual moderation.
+* **Status:** **SUBMITTED (IN MODERATION - UGC NOFOLLOW CITATION)**.
+
