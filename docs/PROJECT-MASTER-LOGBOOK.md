@@ -1424,3 +1424,32 @@
   - Target: `https://temp-mail10min.online/post/is-temporary-email-safe`
 * **Link Attribute & AEO / GEO Value:** Quora outbound links pass as `rel="noopener nofollow ugc"` / tracking redirects. Directly establishes primary entity citation and source weighting for Generative AI engines (Perplexity, ChatGPT, Gemini, Google AI Overviews).
 * **Status:** **LIVE & VERIFIED (FEATURED SPOT #1 / AEO & PARASITE SEO CITATION)**.
+
+### [2026-11-06 23:00:00] SEOSandwich SEO & Link Building Guest Post Pitch Submitted
+* **Platform:** SEOSandwich (`https://seosandwitch.com/`) — DR 50+ Premier Search & Digital Marketing Blog (Edited by Joydeep Bhattacharya).
+* **Target Pitch Channel:** Pitched via email from `alfazmahmudrizve@gmail.com` to `contributors@seosandwitch.com`.
+* **Author Attribution:** Alfaz Mahmud Rizve, SEO and QA Lead at TempMail10min | Website: `https://whoisalfaz.me`. Strictly aligns with persona invariants (0 founder misattribution).
+* **Pitch Topic:** *"One contextual link, earned: what makes a free tool worth citing"* (Targeting 2,000+ words).
+* **Editorial Angle & Guidelines:** High-depth link-building strategy analyzing what attributes make web utilities organically citeable (transparency, speed, API stability, zero dark patterns). TempMail10min cited once as an architectural case study.
+* **Forensic Guideline Compliance:** Live audit mandates 2,000+ word minimum, original screenshots, Arial 14pt formatting, and 2–3 internal links to published SEOSandwitch articles.
+* **Workflow Status:** Pitched. Upon approval, full manuscript will be drafted on branch and peer-reviewed by Draken and Alfaz before delivery.
+* **Status:** **SUBMITTED (PITCH STAGE)**.
+
+### [2026-11-06 23:05:00] Digitaleer Digital Marketing & Web Design Guest Post Pitch Submitted
+* **Platform:** Digitaleer (`https://digitaleer.com/`) — Established Phoenix Digital Marketing & SEO Agency Hub.
+* **Target Pitch Channel:** Pitched via email from `alfazmahmudrizve@gmail.com` to `info@digitaleer.com`.
+* **Author Attribution:** Alfaz Mahmud Rizve, SEO and QA Lead at TempMail10min | Website: `https://whoisalfaz.me`. Strictly aligns with persona invariants (0 founder misattribution).
+* **Pitch Topic:** *"Reducing signup friction without collecting more personal data"* (1,000–1,500 words).
+* **Editorial Angle:** CRO and UX architecture: examining how progressive disclosure, guest signups, and disposable verification workflows increase conversion rates while minimizing enterprise data breach liability. TempMail10min cited once as a technical privacy reference.
+* **Workflow Status:** Pitched. Inquired about editorial guidelines. Full manuscript will be drafted on branch upon topic green light.
+* **Status:** **SUBMITTED (PITCH STAGE)**.
+
+### [2026-11-06 23:10:00] GrowthFolks Practitioner Marketing Guest Post Pitch Submitted
+* **Platform:** Growth Folks (`https://growthfolks.io/`) — Practitioner-Led Marketing & Growth Platform.
+* **Target Pitch Channel:** Pitched via email from `alfazmahmudrizve@gmail.com` to `info@growthfolks.io` (Anastasia Krivosheeva, Partnership Manager).
+* **Author Attribution:** Alfaz Mahmud Rizve, SEO and QA Lead at TempMail10min | Website: `https://whoisalfaz.me`. Strictly aligns with persona invariants (0 founder misattribution).
+* **Pitch Topic:** *"Growth without a signup wall: what free, no-registration tools get right"* (1,200–2,500 words).
+* **Editorial Angle & Guidelines:** Product-Led Growth (PLG) framework: evaluating how friction-free web tools capture top-of-funnel organic search demand and build brand authority without gating utility behind mandatory lead captures. TempMail10min cited once as a technical zero-storage RAM-purge case study.
+* **Forensic Guideline Compliance:** Strictly adheres to max 2 contextual links policy, structured H2/H3 hierarchy, original screenshots, and zero banned niches (gambling/crypto/adult).
+* **Workflow Status:** Pitched. Full draft will be reviewed by Draken and Alfaz before Google Doc sharing.
+* **Status:** **SUBMITTED (PITCH STAGE)**.
