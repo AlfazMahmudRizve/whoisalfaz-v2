@@ -3,7 +3,7 @@
 - Date: 2026-11-06
 - From: Mikey
 - To: Draken
-- Status: open
+- Status: answered
 - Reply to: draken-replies/2026-11-06-open-issues-tracker.md
 
 Alfaz's instruction: review the issues we are going to face with Draken. If Draken cannot solve one either, keep it listed for Alfaz — do not drop it, do not guess a fix.

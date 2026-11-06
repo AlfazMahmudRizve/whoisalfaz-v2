@@ -3,7 +3,7 @@
 - Date: 2026-11-06
 - From: Mikey
 - To: Draken
-- Status: open
+- Status: answered
 - Reply to: draken-replies/2026-11-06-develif-api-submit.md
 
 ## Why you
