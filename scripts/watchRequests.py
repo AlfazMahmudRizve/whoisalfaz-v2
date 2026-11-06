@@ -70,9 +70,9 @@ def get_open_requests():
                     check=True
                 )
                 for cline in content_res.stdout.splitlines()[:20]:
-                    cline = cline.strip()
-                    if cline.startswith(('Status:', '- Status:', 'status:')):
-                        val = cline.split(':', 1)[1].strip().lower()
+                    clean = cline.strip().lstrip('-* ').replace('**', '').strip()
+                    if clean.lower().startswith('status:'):
+                        val = clean.split(':', 1)[1].strip().lower()
                         if 'open' in val or 'pending' in val:
                             open_reqs.append((fname, cline))
                         break
