@@ -1453,3 +1453,18 @@
 * **Forensic Guideline Compliance:** Strictly adheres to max 2 contextual links policy, structured H2/H3 hierarchy, original screenshots, and zero banned niches (gambling/crypto/adult).
 * **Workflow Status:** Pitched. Full draft will be reviewed by Draken and Alfaz before Google Doc sharing.
 * **Status:** **SUBMITTED (PITCH STAGE)**.
+
+### [2026-11-06 23:15:00] Viesearch Directory Submission in Editorial Review (Dofollow Confirmed)
+* **Directory Platform:** Viesearch (`https://viesearch.com/`) — Established Web & Search Directory.
+* **Candidate Detail Listing URL:** `https://viesearch.com/2aibo/tempmail10min` (Currently HTTP 404 pending editorial review clearance).
+* **Category:** Computers and Technology / Internet.
+* **Submitted Product:** `TempMail10min` (`https://temp-mail10min.online/`)
+* **Attribution Invariant:** Submitter email confirmed via `alfazmahmudrizve@gmail.com` (Alfaz Mahmud Rizve, SEO & QA Lead). Exactly 0 founder claims.
+* **Forensic Link Audit of Platform:** Probed live published category and detail listings (e.g. `/games/puzzles`, `/21c99/...`) on Viesearch:
+  ```html
+  <a href="https://..." class="result-title-link" target="_blank" rel="noopener" title="...">
+  <a href="https://..." target="_blank" rel="noopener">
+  ```
+  Outbound links render with `rel="noopener"` only. **Zero `nofollow`**, **zero `ugc`**, **zero `sponsored`**. When approved, this listing will pass **Pure Dofollow PageRank**.
+* **Requirements & Cost:** $0 Free plan, no user account, no backlink/badge required. Queued in free editorial review pipeline.
+* **Status:** **SUBMITTED (IN EDITORIAL REVIEW - DOFOLLOW CONFIRMED)**.
