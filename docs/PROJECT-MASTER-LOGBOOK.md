@@ -1393,3 +1393,21 @@
   - **SEO Classification:** Internal 302 click-tracking redirect (no direct PageRank transmission), but provides tier-1 direct referral traffic, brand citation, and AI scraper data indexing.
 * **Requirements & Cost:** $0 Free, no user account, newsletter unchecked, no reciprocal badge.
 * **Status:** **SUBMITTED (IN CURATORIAL REVIEW - TIER-1 REFERRAL / 302 REDIRECT)**.
+
+### [2026-11-06 21:40:00] Hashnode Technical Article Live — Cross-Domain Canonical Accepted
+* **Platform:** Hashnode (`https://hashnode.com/`) — DR 85+ Global Developer Publication Platform
+* **Live Publication:** `Alfaz Reviews` (`https://alfazreviews.hashnode.dev/`)
+* **Live Article URL:** `https://alfazreviews.hashnode.dev/temporary-email-for-verification-codes-and-otps-get-the-code-skip-the-spam`
+* **Article Title:** *"Temporary Email for Verification Codes and OTPs: Get the Code, Skip the Spam"* (1,163 words)
+* **Author Handle:** `@alfazreviews` (Alfaz Mahmud Rizve)
+* **Cross-Domain Canonical Breakthrough:**
+  ```html
+  <link rel="canonical" href="https://temp-mail10min.online/post/how-to-use-temporary-email-for-verification-codes-and-otps"/>
+  ```
+  Hashnode explicitly accepted and rendered the cross-domain canonical tag to the original post on `temp-mail10min.online`. This passes full search index ranking signals and citation equity back to the client domain with 0 duplicate content penalty.
+* **Live In-Body Links & Rel Attributes (HTTP 200 DOM Inspection):**
+  1. `<a href="https://temp-mail10min.online/post/how-to-use-temporary-email-for-verification-codes-and-otps" target="_blank" rel="noopener noreferrer nofollow ugc">temporary email for verification codes</a>`
+  2. `<a href="https://temp-mail10min.online/post/what-is-disposable-email" target="_blank" rel="noopener noreferrer nofollow ugc">what a disposable email is and how it works</a>`
+  3. `<a href="https://temp-mail10min.online/post/is-temporary-email-safe" target="_blank" rel="noopener noreferrer nofollow ugc">whether temporary email is safe</a>`
+* **Link Attribute Analysis:** `rel="noopener noreferrer nofollow ugc"`. Provides high-authority developer entity citations and audience discovery, backed by full cross-domain canonical attribution.
+* **Status:** **LIVE & VERIFIED (CROSS-DOMAIN CANONICAL + UGC CITATIONS)**.
