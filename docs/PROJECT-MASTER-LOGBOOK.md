@@ -1147,7 +1147,7 @@
 ### [2026-11-06 11:15:00] Dev.to Authority Profile Listing Live & Verified
 * **Platform:** Dev.to (`https://dev.to/alfazreviews`)
 * **Account Handle:** `@alfazreviews` (Alfaz Mahmud Rizve)
-* **Backlink Target:** `https://temp-mail10min.online/` (Personal website link)
+* **Backlink Target:** Personal website link points to `https://whoisalfaz.me` (`rel="noopener me ugc"`), while TempMail10min is permanently linked and cited in the Work experience line (*"SEO Lead & QA Architect at TempMail10min"*).
 * **Link Attributes:** `target="_blank" rel="noopener me ugc"` (Verified live via HTTP 200 DOM inspection)
 * **Bio Configuration:** Unified core bio (*"GTM & RevOps Architect — I build autonomous revenue systems for scaling agencies and SaaS: SEO & organic growth, high-speed Next.js apps, and self-healing n8n workflows. whoisalfaz.me"*).
 * **Role Invariant:** Work line explicitly specifies *"SEO Lead & QA Architect at TempMail10min | Built whoisalfaz.me & fasttools.me"*. 0 founder mentions.
