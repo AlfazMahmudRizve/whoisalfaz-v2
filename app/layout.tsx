@@ -94,7 +94,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         "https://x.com/whois_alfaz",
         "https://facebook.com/alfazmahmudrizve",
         "https://www.instagram.com/whois.alfaz/",
-        "https://www.youtube.com/@whoisalfazz"
+        "https://www.youtube.com/@whoisalfazz",
+        "https://www.youtube.com/@alfazreviews",
+        "https://www.tiktok.com/@alfaz.tech.product"
       ]
     },
     {
@@ -118,7 +120,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         "https://x.com/whois_alfaz",
         "https://facebook.com/alfazmahmudrizve",
         "https://www.instagram.com/whois.alfaz/",
-        "https://www.youtube.com/@whoisalfazz"
+        "https://www.youtube.com/@whoisalfazz",
+        "https://www.youtube.com/@alfazreviews",
+        "https://www.tiktok.com/@alfaz.tech.product"
       ]
     }
   ];
