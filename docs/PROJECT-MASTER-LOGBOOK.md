@@ -1231,3 +1231,25 @@
 * **Backlink Plan:** Primary dofollow author link directed to `https://whoisalfaz.me` (personal brand authority) + 1 contextual reference link to `https://temp-mail10min.online`.
 * **Workflow Status:** Pitched directly via email to editor (`write@toptechnews.in`). Turnaround ~5–10 business days. Full manuscript will be drafted on branch and peer-reviewed by Draken and Alfaz before submission.
 * **Status:** **SUBMITTED (PITCH STAGE)**.
+
+### [2026-11-06 12:45:00] Wonbolt Cybersecurity Guest Post Pitch Submitted
+* **Platform:** Wonbolt (`https://wonbolt.com/write-for-us-cybersecurity/`)
+* **Publication Profile:** Multi-vertical tech & cybersecurity publication specifically seeking insights from digital privacy advocates, ethical hackers, and infosec leaders. Explicitly guarantees 1 do-follow backlink in the content/bio.
+* **Author Attribution:** Alfaz Mahmud Rizve, SEO Lead & QA Architect at TempMail10min | Website: `https://whoisalfaz.me`. Strictly aligns with persona invariants (0 founder misattribution).
+* **Pitch Topic:** *"Data protection in practice: disposable email for trials, downloads and one-time verifications"* (1,500–2,000 words).
+* **Editorial Angle:** Defensive privacy architecture: using disposable inboxes as a hard perimeter boundary against vendor nurture tracking, data broker harvesting, and credential exposure during software evaluations. TempMail10min cited once as an architectural zero-log RAM-purging implementation.
+* **Workflow Status:** Pitched via email to `infowonbolt@gmail.com`. Turnaround ~2–5 business days. Full draft will be reviewed by Draken and Alfaz before Google Doc delivery.
+* **Status:** **SUBMITTED (PITCH STAGE)**.
+
+### [2026-11-06 12:50:00] DZone Enterprise Engineering Profile Live & Pitch Submitted
+* **Platform:** DZone (`https://dzone.com`) — DR 90+ Global Developer & DevOps Authority
+* **Live Author Profile:** `https://dzone.com/users/5636969/alfazmahmudrizve.html` (Verified live HTTP 200 OK)
+* **Profile Verification:**
+  - Byline & Title: `SEO Lead & QA Architect at TempMail10min`
+  - Website Link: `<a href="https://whoisalfaz.me" target="_blank" rel="nofollow">https://whoisalfaz.me</a>`
+  - Persona Invariant: Explicitly specifies *"where my work is SEO only — I did not build the product"*. Exactly 0 founder claims.
+* **Submitted Article Pitch:** Article ID `3709683`, Slug: `/articles/testing-signup-flows-without-burning-a-real-inbox`
+* **Pitch Title:** *"Testing signup flows without burning a real inbox: OTPs, disposable addresses, and what breaks in automation"*
+* **Current Moderation Status:** **In Moderation** (Editorial review turnaround up to 30 business days).
+* **Human-Authored Commitment:** DZone strictly bans AI-generated prose. Upon editorial green light, Alfaz will author the manuscript in his authentic voice using Draken's technical test-case scaffold and Playwright/curl code snippets.
+* **Status:** **PROFILE LIVE & PITCH IN MODERATION**.
