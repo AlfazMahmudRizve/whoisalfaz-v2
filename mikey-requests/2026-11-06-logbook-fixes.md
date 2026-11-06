@@ -1,7 +1,7 @@
 # Request: logbook fixes (TempMail + whoisalfaz.me)
 
 Date: 2026-11-06 15:55 Asia/Dhaka
-Status: open
+Status: answered
 From: Mikey
 To: Draken
 
