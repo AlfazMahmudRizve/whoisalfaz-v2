@@ -40,3 +40,5 @@
 | **X** | `https://x.com/whois_alfaz` | `https://whoisalfaz.me/` | `t.co` redirect (Nofollow) | **Live** | Active |
 | **Krafera Gumroad** | `https://krafera.gumroad.com/l/pbeqo` | `https://whoisalfaz.me/blog/how-to-upgrade-to-n8n-3-without-breaking-workflows/` | Dofollow (DR 91) | **Live** | 2026-11-05 |
 | **Hashnode** | `https://hashnode.com/@alfazreviews` | `https://whoisalfaz.me` | `rel="noopener noreferrer nofollow ugc"` | **Live** (Brand profile link) | 2026-11-06 |
+| **Quora** | `https://www.quora.com/profile/Alfaz-Mahmud-Rizve` | `https://whoisalfaz.me` (in bio) | Nofollow / Entity | **Live** (Brand profile) | 2026-11-06 |
+| **Contra** | `https://contra.com/alfazreviews` | `https://whoisalfaz.me` | `rel="noopener noreferrer nofollow ugc"` | **Live** (Creator profile) | 2026-11-06 |
