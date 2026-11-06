@@ -1201,3 +1201,13 @@
 * **Forensic Link Audit of Platform:** Probed live directory entry `https://launch.ignlab.net/t/ghostfolio`. Outbound product link carries `<a class="btn btn-primary" target="_blank" rel="noopener nofollow ugc" href="...">Visit...</a>`. Link attribute is hardcoded **`rel="noopener nofollow ugc"`**. When approved, this listing will provide brand citation & referral authority (nofollow ugc), rather than dofollow PageRank.
 * **Monitoring:** Queued for recurring status tracking by Draken.
 * **Status:** **SUBMITTED (IN REVIEW QUEUE)**.
+
+### [2026-11-06 12:30:00] TechNovice Cybersecurity Guest Post Pitch Submitted
+* **Platform:** TechNovice (`https://www.technovice.net/write-for-us`)
+* **Publication Profile:** High-authority European/German technology & cybersecurity journal; features guest insights from Scality, Hammerspace, Syniti. Explicitly optimized for LLM/AI discovery (~30,000 monthly AI crawler queries from OpenAI, Anthropic, Perplexity).
+* **Author Attribution:** Alfaz Mahmud Rizve, SEO Lead & QA Architect at TempMail10min | Website: `https://whoisalfaz.me`. Strictly aligns with persona invariants (0 founder misattribution).
+* **Pitch Topic:** *"What QA teams learn from disposable inboxes: OTP testing without a real mailbox"* (800+ words).
+* **Editorial Angle:** Highly technical, vendor-neutral engineering breakdown for QA and DevOps engineers. TempMail10min cited once as the technical architectural case study for RAM-purging, zero-log disposable mail vs persistent SQLite storage.
+* **Forensic Link Quality:** Live audit of existing expert guest interviews on TechNovice (`/post/ai-agent-security-permissions-interview`) confirms external author and context links carry `rel="noopener"` with zero `nofollow`/`ugc` (**Pure Dofollow PageRank**).
+* **Workflow Status:** Submitted and confirmed by TechNovice ("Thank you so much, I received your message"). Awaiting editorial feedback (turnaround ~2 business days). Full manuscript will be drafted on branch and peer-reviewed by Draken and Alfaz before submission.
+* **Status:** **SUBMITTED (PITCH STAGE)**.
