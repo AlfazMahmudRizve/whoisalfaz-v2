@@ -1362,3 +1362,19 @@
 * **Technical Invariants & Bot Mitigation:** Frontend protected via Cloudflare Turnstile against automated scrapers. Inclusion will be monitored via periodic search engine sweeps.
 * **Requirements & Cost:** $0 Free submission, no user account, no backlink/badge required.
 * **Status:** **SUBMITTED (IN EDITORIAL REVIEW - DOFOLLOW POTENTIAL)**.
+
+### [2026-11-06 21:25:00] Dev.to Technical Article Live — 3x Pure Dofollow Deep Pillar Backlinks
+* **Platform:** Dev.to (`https://dev.to/`) — DR 91 Global Developer Authority
+* **Live Article URL:** `https://dev.to/alfazreviews/temporary-email-for-verification-codes-and-otps-get-the-code-skip-the-spam-2fom`
+* **Article Title:** *"Temporary Email for Verification Codes and OTPs: Get the Code, Skip the Spam"*
+* **Author Handle:** `@alfazreviews` (Alfaz Mahmud Rizve)
+* **Byline & Attribution Invariant:**
+  > *"By Alfaz Mahmud Rizve, SEO Lead & QA Architect at TempMail10min — TempMail10min is client SEO work for me, not a tool I built."*
+  (100% strict alignment with personal identity invariant; 0 founder claims).
+* **Canonical Strategy:** Self-referential canonical tag generated on Dev.to (Option A executed cleanly without upstream collision).
+* **Live Anchor Tag & Link Attribute Audit (HTTP 200 DOM Inspection):**
+  1. `<a href="https://temp-mail10min.online/post/what-is-disposable-email" target="_blank" rel="noopener noreferrer">temporary email address</a>`
+  2. `<a href="https://temp-mail10min.online/post/is-temporary-email-safe" target="_blank" rel="noopener noreferrer">whether temporary email is safe</a>`
+  3. `<a href="https://temp-mail10min.online/post/how-to-use-temporary-email-for-verification-codes-and-otps" target="_blank" rel="noopener noreferrer">full OTP guide</a>`
+* **Link Attribute Analysis:** `rel="noopener noreferrer"` with **zero `nofollow`**, **zero `ugc`**, **zero `sponsored`**. Confirmed **3x Pure Dofollow PageRank Backlinks** directly transmitting domain equity from DR 91 Dev.to to targeted high-intent pillar content on `temp-mail10min.online`.
+* **Status:** **LIVE & VERIFIED (3X PURE DOFOLLOW PAGERANK)**.
