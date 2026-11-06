@@ -1221,3 +1221,13 @@
 * **Content Rules:** Full manuscript will incorporate required *"for educational purposes only"* disclaimer, OWASP/NIST references, and curl/SMTP technical commands.
 * **Workflow Status:** Pitched directly via email to editor (`ayushwork981@gmail.com`). Turnaround ~3–7 business days. Full manuscript will be drafted on branch and peer-reviewed by Draken and Alfaz before submission.
 * **Status:** **SUBMITTED (PITCH STAGE)**.
+
+### [2026-11-06 12:40:00] Top Tech News Consumer Privacy Guest Post Pitch Submitted
+* **Platform:** Top Tech News (`https://www.toptechnews.in/p/write-for-us.html`)
+* **Publication Profile:** High-reach technology media publication (50 lakh+ monthly readers) covering consumer tech, cybersecurity, and tech tips across India and international markets. Explicitly offers author byline and **Dofollow Backlink** to author portfolio/website.
+* **Author Attribution:** Alfaz Mahmud Rizve, SEO Lead & QA Architect at TempMail10min | Website: `https://whoisalfaz.me`. Strictly aligns with persona invariants (0 founder misattribution).
+* **Pitch Topic:** *"A beginner's guide to staying safe online: disposable inboxes, 2FA, and password hygiene"* (1,200–1,800 words).
+* **Editorial Angle:** Practical, accessible digital privacy guide framing temporary inboxes alongside authenticator apps and password managers for daily online hygiene (safe app signups, marketing spam isolation, breach blast-radius reduction). TempMail10min cited once as a free zero-registration disposable inbox tool.
+* **Backlink Plan:** Primary dofollow author link directed to `https://whoisalfaz.me` (personal brand authority) + 1 contextual reference link to `https://temp-mail10min.online`.
+* **Workflow Status:** Pitched directly via email to editor (`write@toptechnews.in`). Turnaround ~5–10 business days. Full manuscript will be drafted on branch and peer-reviewed by Draken and Alfaz before submission.
+* **Status:** **SUBMITTED (PITCH STAGE)**.
