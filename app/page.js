@@ -95,7 +95,10 @@ export default async function Home() {
           "sameAs": [
             "https://www.linkedin.com/in/alfaz-mahmud-rizve/",
             "https://x.com/whois_alfaz",
-            "https://github.com/AlfazMahmudRizve"
+            "https://github.com/AlfazMahmudRizve",
+            "https://www.youtube.com/@whoisalfazz",
+            "https://www.youtube.com/@alfazreviews",
+            "https://www.tiktok.com/@alfaz.tech.product"
           ],
           "knowsAbout": [
             "GTM & RevOps Architecture",

@@ -47,7 +47,10 @@ export default function AboutAuthorPage() {
         "https://www.linkedin.com/in/alfaz-mahmud-rizve/",
         "https://x.com/whois_alfaz",
         "https://github.com/AlfazMahmudRizve",
-        "https://n8n.io/creators"
+        "https://n8n.io/creators",
+        "https://www.youtube.com/@whoisalfazz",
+        "https://www.youtube.com/@alfazreviews",
+        "https://www.tiktok.com/@alfaz.tech.product"
       ],
       "knowsAbout": [
         "GTM Strategy",
