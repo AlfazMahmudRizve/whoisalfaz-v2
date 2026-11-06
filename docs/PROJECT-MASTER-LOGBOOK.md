@@ -1144,3 +1144,13 @@
   - Day 8 banner pre-generated and verified: `data/banners/day_08.png` (Discord dark verification theme).
   - Dry run validated via `python scripts/publish_daily_linkedin.py --day 7 --dry-run` [Exit 0].
 
+### [2026-11-06 11:15:00] Dev.to Authority Profile Listing Live & Verified
+* **Platform:** Dev.to (`https://dev.to/alfazreviews`)
+* **Account Handle:** `@alfazreviews` (Alfaz Mahmud Rizve)
+* **Backlink Target:** `https://temp-mail10min.online/` (Personal website link)
+* **Link Attributes:** `target="_blank" rel="noopener me ugc"` (Verified live via HTTP 200 DOM inspection)
+* **Bio Configuration:** Unified core bio (*"GTM & RevOps Architect — I build autonomous revenue systems for scaling agencies and SaaS: SEO & organic growth, high-speed Next.js apps, and self-healing n8n workflows. whoisalfaz.me"*).
+* **Role Invariant:** Work line explicitly specifies *"SEO Lead & QA Architect at TempMail10min | Built whoisalfaz.me & fasttools.me"*. 0 founder mentions.
+* **Status:** **LIVE & VERIFIED**.
+
+
