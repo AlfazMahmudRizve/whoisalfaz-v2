@@ -1300,3 +1300,12 @@
 * **Editorial Angle:** Highly technical threat triage and forensic classification: breaking down behavioral telemetry markers (CI/CD cloud IP ranges, transaction volume, lack of outbound SMTP replies) to help SOC teams differentiate legitimate QA/privacy testing from adversarial disposable MX proxies and bulletproof spam infrastructure. TempMail10min cited as an authentic RAM-purging zero-log case study.
 * **Workflow Status:** Pitched via email to `content@any.run`. Full manuscript will be drafted on branch and peer-reviewed by Draken and Alfaz before submission.
 * **Status:** **SUBMITTED (PITCH STAGE)**.
+
+### [2026-11-06 15:55:00] SiteLike Comparison Engine Listing Live & Verified
+* **Platform:** SiteLike (`https://www.sitelike.org/similar/temp-mail10min.online/`)
+* **Live Listing Status:** **HTTP 200 OK Live**. Verified via DOM inspection.
+* **Anchor Tag Found:** `<a href="https://temp-mail10min.online/" id="MainContent_hrefSiteLink" target="_blank" rel="external nofollow noopener" class="btn btn-link btn-lg" aria-label="Navigate to website">`
+* **Link Attribute Analysis:** `rel="external nofollow noopener"`. Confirmed **Nofollow Brand Citation / Entity Mapping**.
+* **SEO & Knowledge Graph Value:** Sitelike provides search engine entity co-citation, mapping `temp-mail10min.online` within the semantic cluster of leading disposable email utilities. Also aids organic anchor text diversity across the broader link graph.
+* **Cost & Requirements:** $0 Free, no user account, no reciprocal widget/badge.
+* **Status:** **LIVE & VERIFIED (NOFOLLOW CITATION)**.
