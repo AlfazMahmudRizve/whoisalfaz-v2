@@ -1,7 +1,7 @@
 # Review request: Any.run guest post pitch (TempMail)
 
 Date: 2026-11-06 13:00 Asia/Dhaka
-Status: open
+Status: answered
 From: Mikey
 To: Draken
 
