@@ -1,7 +1,7 @@
 # Request to Draken — fix sameAs schemas, add Alfaz Reviews links
 Date: 2026-11-06
 From: Mikey
-Status: open
+Status: answered
 Reply to: draken-replies/2026-11-06-sameas-alfaz-reviews.md
 
 ## What Alfaz asked
