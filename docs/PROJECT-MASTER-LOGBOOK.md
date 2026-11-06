@@ -1281,3 +1281,13 @@
 * **Guideline Compliance:** Full manuscript will incorporate required 2–3 high-authority external citations per 1,000 words. Keyword metrics honestly stated as unquoted due to a 403 error on their link.
 * **Workflow Status:** Pitched via email to `guestpost@markuphero.com`. Full draft will be reviewed by Draken and Alfaz before sharing the Google Doc link.
 * **Status:** **SUBMITTED (PITCH STAGE)**.
+
+### [2026-11-06 13:05:00] SecureBlitz Cybersecurity Guest Post Pitch Submitted
+* **Platform:** SecureBlitz (`https://secureblitz.com/write-for-us/`)
+* **Publication Profile:** Dedicated cybersecurity news & threat intelligence portal covering antimalware, infosec best practices, and data defense. Explicitly offers 1 nofollow backlink per free guest contribution.
+* **Link Profile Naturalness:** Secures a high-authority cybersecurity brand citation under `rel="nofollow"`, completing an organic backlink profile with a healthy ratio of dofollow PageRank links (DevElif, ToolIndex, TechTools, Wonbolt) and nofollow citations.
+* **Author Attribution:** Alfaz Mahmud Rizve, SEO and QA Lead at TempMail10min | Website: `https://whoisalfaz.me`. Strictly aligns with persona invariants (0 founder misattribution).
+* **Pitch Topic:** *"Disposable email as basic cyber hygiene: where it helps, where it does not, and what to never use it for"* (800+ words).
+* **Editorial Angle:** Honest, objective security analysis of disposable email: preventing identity graph linking and isolating breach blast radiuses while clearly acknowledging operational boundaries (avoiding critical account recovery risks). TempMail10min cited strictly in context as a RAM-purging zero-log utility.
+* **Workflow Status:** Pitched via email to `segun@secureblitz.com`. Turnaround ~3 business days. Full draft will be reviewed by Draken and Alfaz before delivery.
+* **Status:** **SUBMITTED (PITCH STAGE)**.
