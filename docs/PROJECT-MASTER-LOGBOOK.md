@@ -1167,3 +1167,37 @@
 * **Link Attribute Analysis:** `rel="noopener noreferrer"`. Crucially, **NO `nofollow`** and **NO `ugc`** attributes are present. Page explicitly carries `dofollow listing` badge. This is a verified, genuine **dofollow** backlink passing PageRank to `temp-mail10min.online`.
 * **Category / Locale:** `Artificial Intelligence Tools` / `en`
 * **Status:** **LIVE & VERIFIED (DOFOLLOW)**.
+
+### [2026-11-06 12:10:00] ToolIndex Directory Listing Live & Verified (Dofollow Backlink)
+* **Directory Platform:** ToolIndex (`https://strategic-flow-audit.replit.app/`)
+* **Submission Section:** Section A3 (Instant Launch, Free)
+* **Live Listing URL:** `https://strategic-flow-audit.replit.app/directory/tempmail10min-12318` (Verified live HTTP 200 OK)
+* **Listing ID & Category:** ID `12318` | Category `Productivity` (#1 in Recent Launches)
+* **Backlink Target:** `https://temp-mail10min.online/`
+* **Verified Anchor Tag:** `<a href="https://temp-mail10min.online/" class="btn-visit" target="_blank" rel="noopener">Visit site →</a>`
+* **Link Attribute Analysis:** `rel="noopener"` only. Zero `nofollow`, zero `ugc`, zero `sponsored`. Passes PageRank equity directly as a verified **dofollow** backlink.
+* **Schema Validation:** Valid `SoftwareApplication` JSON-LD schema with `url: "https://temp-mail10min.online/"`.
+* **Claim Status:** Listing is 100% active and passing PageRank unclaimed. Optional free claim (`/directory?claim=12318`) is available via code sent to Alfaz's email.
+* **Status:** **LIVE & VERIFIED (DOFOLLOW)**.
+
+### [2026-11-06 12:15:00] TechTools.cz Launchpad Listing Live & Verified (Dofollow Backlink)
+* **Directory Platform:** TechTools.cz Launchpad (`https://techtools.cz/tools/launchpad/`)
+* **Submission Section:** Section A4 (Instant Launch, Free, Permanent)
+* **Live Listing URL:** `https://techtools.cz/tools/launchpad/?tool=8085` (Verified live HTTP 200 OK)
+* **Backend Database Record:** API query `https://techtools.cz/launchpad-api/tools/8085` confirmed tool ID `8085`, `created_at: 2026-11-06T05:49:49Z`, Category `Utilities`.
+* **Maker / Submitter:** Alfaz Mahmud Rizve (0 founder misattribution; strictly aligns with SEO Lead & QA Architect role).
+* **Backlink Target:** `https://temp-mail10min.online`
+* **Verified Anchor Tags (Script DOM Render):**
+  1. `<a href="https://temp-mail10min.online" target="_blank" rel="noopener">TempMail10min</a>`
+  2. `<a href="https://temp-mail10min.online" target="_blank" rel="noopener" class="visit-btn">Visit</a>`
+* **Link Attribute Analysis:** `rel="noopener"` only. Zero `nofollow`, zero `ugc`, zero `sponsored`. Pure **dofollow** backlink. Directory listings are permanent and immutable.
+* **Status:** **LIVE & VERIFIED (DOFOLLOW)**.
+
+### [2026-11-06 12:20:00] Ignlab Launch Directory Submission in Review Queue
+* **Directory Platform:** Ignlab Launch (`https://launch.ignlab.net`)
+* **Submission Section:** Section A5 (Free, No account, No badge)
+* **Submission Details:** Maker = MD Shawn (Founder); Submitter = Alfaz Mahmud Rizve (SEO Lead & QA Architect). Category `Security`, Pricing `Free`.
+* **Current Status:** In Review Queue. Target detail route will be `https://launch.ignlab.net/t/<slug>`. Candidate URLs currently return HTTP 404 pending moderation.
+* **Forensic Link Audit of Platform:** Probed live directory entry `https://launch.ignlab.net/t/ghostfolio`. Outbound product link carries `<a class="btn btn-primary" target="_blank" rel="noopener nofollow ugc" href="...">Visit...</a>`. Link attribute is hardcoded **`rel="noopener nofollow ugc"`**. When approved, this listing will provide brand citation & referral authority (nofollow ugc), rather than dofollow PageRank.
+* **Monitoring:** Queued for recurring status tracking by Draken.
+* **Status:** **SUBMITTED (IN REVIEW QUEUE)**.
