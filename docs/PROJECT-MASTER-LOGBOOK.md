@@ -1253,3 +1253,21 @@
 * **Current Moderation Status:** **In Moderation** (Editorial review turnaround up to 30 business days).
 * **Human-Authored Commitment:** DZone strictly bans AI-generated prose. Upon editorial green light, Alfaz will author the manuscript in his authentic voice using Draken's technical test-case scaffold and Playwright/curl code snippets.
 * **Status:** **PROFILE LIVE & PITCH IN MODERATION**.
+
+### [2026-11-06 12:55:00] TechFlok Cybersecurity Guest Post Pitch Submitted
+* **Platform:** TechFlok (`https://techflok.com/write-for-us/`)
+* **Publication Profile:** Web & technology publication focusing on software, cybersecurity, and cloud solutions. Explicitly permits 1 dofollow backlink to author website/portfolio; mandates at least 1 internal TechFlok link.
+* **Author Attribution:** Alfaz Mahmud Rizve, SEO and QA Lead at TempMail10min | Website: `https://whoisalfaz.me`. Strictly aligns with persona invariants (0 founder misattribution).
+* **Pitch Topic:** *"Cyber hygiene for everyday signups"* (1,000+ words).
+* **Editorial Angle:** Pragmatic cyber hygiene for developers, agency owners, and digital users: using disposable inboxes as an operational barrier against data breach blast radiuses and unsolicited commercial email cascades. TempMail10min cited once as a technical receive-only RAM-purging utility.
+* **Workflow Status:** Pitched via email to `admin@techflok.com` and `marketing@techflok.com`. Turnaround ~3–5 business days. Full manuscript will be drafted on branch and peer-reviewed by Draken and Alfaz before submission.
+* **Status:** **SUBMITTED (PITCH STAGE)**.
+
+### [2026-11-06 12:58:00] VPNProfy Digital Privacy Guest Post Pitch Submitted
+* **Platform:** VPNProfy (`https://vpnprofy.com/write-for-us/`)
+* **Publication Profile:** High-intent consumer & enterprise VPN and digital privacy review hub. Explicitly guarantees author bio and backlink visibility for verified technical contributors.
+* **Author Attribution:** Alfaz Mahmud Rizve, SEO and QA Lead at TempMail10min | Website: `https://whoisalfaz.me`. Strictly aligns with persona invariants (0 founder misattribution).
+* **Pitch Topic:** *"Privacy tools that work together: VPNs, disposable email, and what each one does not protect"* (1,000–2,000 words).
+* **Editorial Angle:** Authoritative privacy stack guide dismantling the user myth that VPNs alone protect identity: contrasting Network Layer security (IP masking, Wi-Fi encryption) with Application/Identity Layer privacy (preventing email correlation, tracking pixels, and data broker profiling). TempMail10min cited as the ephemeral RAM-purging disposable inbox counterpart.
+* **Workflow Status:** Pitched via email to editor (`master248@gmail.com`). Turnaround ~24 hours. Full Google Doc draft will be reviewed by Draken and Alfaz before delivery.
+* **Status:** **SUBMITTED (PITCH STAGE)**.
