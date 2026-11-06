@@ -1378,3 +1378,18 @@
   3. `<a href="https://temp-mail10min.online/post/how-to-use-temporary-email-for-verification-codes-and-otps" target="_blank" rel="noopener noreferrer">full OTP guide</a>`
 * **Link Attribute Analysis:** `rel="noopener noreferrer"` with **zero `nofollow`**, **zero `ugc`**, **zero `sponsored`**. Confirmed **3x Pure Dofollow PageRank Backlinks** directly transmitting domain equity from DR 91 Dev.to to targeted high-intent pillar content on `temp-mail10min.online`.
 * **Status:** **LIVE & VERIFIED (3X PURE DOFOLLOW PAGERANK)**.
+
+### [2026-11-06 21:35:00] Future Tools Directory Submission in Review (Tier-1 Authority)
+* **Directory Platform:** Future Tools (`https://www.futuretools.io/`) — DR 74+ Premier AI & Tech Tool Directory (Curated by Matt Wolfe).
+* **Submission Route:** `https://www.futuretools.io/submit-a-tool`
+* **Submitted Product:** `TempMail10min` (`https://temp-mail10min.online/`)
+* **Taxonomy & Pricing:** Category: `Other`, Pricing: `Free` ($0).
+* **Attribution Invariant:** Submitter = Alfaz Mahmud Rizve (`alfazmahmudrizve@gmail.com`), SEO & QA Lead at TempMail10min. Exactly 0 founder claims.
+* **Curatorial Transparency:** Description explicitly states TempMail10min is a free privacy utility and NOT an AI product. Transparent framing avoids editorial rejection on integrity grounds.
+* **Link Architecture Discovery:**
+  - Probed live published listing `https://www.futuretools.io/tools/whisk`.
+  - Button CTA renders `<a href="/go/{slug}" target="_blank" rel="noopener noreferrer">Visit [Tool]</a>`.
+  - Internal tracking route `/go/{slug}` issues an **HTTP 302 Found** redirect with `?ref=futuretools.io`.
+  - **SEO Classification:** Internal 302 click-tracking redirect (no direct PageRank transmission), but provides tier-1 direct referral traffic, brand citation, and AI scraper data indexing.
+* **Requirements & Cost:** $0 Free, no user account, newsletter unchecked, no reciprocal badge.
+* **Status:** **SUBMITTED (IN CURATORIAL REVIEW - TIER-1 REFERRAL / 302 REDIRECT)**.
