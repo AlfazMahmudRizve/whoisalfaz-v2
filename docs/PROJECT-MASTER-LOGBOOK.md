@@ -1337,3 +1337,17 @@
 * **Turnaround Time:** ~48 hours manual moderation.
 * **Status:** **SUBMITTED (IN MODERATION - UGC NOFOLLOW CITATION)**.
 
+### [2026-11-06 16:10:00] Global Tools Box Product Launch Directory Listing Live & Verified
+* **Platform:** Global Tools Box Product Launch Directory (`https://launch.globaltoolsbox.online/`)
+* **Live Product Listing:** `https://launch.globaltoolsbox.online/#p-pmw4t2vbdpy` (Database ID `pmw4t2vbdpy`, Directory count: 265).
+* **Standalone Detail Route:** `https://launch.globaltoolsbox.online/p/pmw4t2vbdpy.html` (Pending automatic periodic GitHub Pages static HTML build; live database entry verified).
+* **Taxonomy & Category:** Productivity.
+* **Tags Assigned:** `10-minute-mail`, `temp-mail`, `disposable-email`, `temporary-email`.
+* **Outbound Link Analysis:**
+  ```html
+  <a class="btn btn-sm btn-pri" href="https://temp-mail10min.online/" target="_blank" rel="nofollow noopener noreferrer" data-act="visit" data-id="pmw4t2vbdpy">Visit Website</a>
+  ```
+  Rendered with `rel="nofollow noopener noreferrer"`. **Confirmed Nofollow Brand Citation & Referral Authority**. Contributes to a natural, balanced backlink portfolio.
+* **Asset Integration:** High-res favicon loaded from production CDN (`assets/themes/basic/img/favicon.webp`).
+* **Requirements & Cost:** $0 Free, no user account, no backlink/badge required.
+* **Status:** **LIVE & VERIFIED (NOFOLLOW BRAND CITATION)**.
