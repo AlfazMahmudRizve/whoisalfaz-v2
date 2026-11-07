@@ -42,3 +42,24 @@
 | **Hashnode** | `https://hashnode.com/@alfazreviews` | `https://whoisalfaz.me` | `rel="noopener noreferrer nofollow ugc"` | **Live** (Brand profile link) | 2026-11-06 |
 | **Quora** | `https://www.quora.com/profile/Alfaz-Mahmud-Rizve` | `https://whoisalfaz.me` (in bio) | Nofollow / Entity | **Live** (Brand profile) | 2026-11-06 |
 | **Contra** | `https://contra.com/alfazreviews` | `https://whoisalfaz.me` | `rel="noopener noreferrer nofollow ugc"` | **Live** (Creator profile) | 2026-11-06 |
+
+
+---
+
+## 3. Profile & Entity Audit Milestones (2026-11-07)
+
+* **Dev.to Profile Verified (`https://dev.to/alfazreviews`):**
+  - **Avatar & Persona:** Official grey-suit profile photo live.
+  - **Unified Bio & Work:** *"SEO Lead & QA Architect at TempMail10min | Built whoisalfaz.me & fasttools.me"*.
+  - **Backlink Verification:** Renders `<a href="https://whoisalfaz.me" target="_blank" rel="noopener me ugc">` (`rel="me"` provides semantic Schema identity linking to Google Knowledge Graph).
+  - **Published Articles:** 2 active technical trend articles with pure Dofollow in-body PageRank links.
+
+* **Hashnode Profile Verified (`https://hashnode.com/@alfazreviews`):**
+  - **Avatar & Persona:** Official grey-suit profile photo live.
+  - **Unified Bio & Website:** Core bio, primary website button points directly to `https://whoisalfaz.me`.
+  - **Published Articles:** 2 active syndication articles with full cross-domain canonical attributes.
+
+* **Quora Profile Verified (`https://www.quora.com/profile/Alfaz-Mahmud-Rizve`):**
+  - **Avatar & Persona:** Official grey-suit profile photo uploaded by Alfaz, rendering on profile and live answers.
+  - **Answers Live:** 2 high-authority Q&A answers published.
+  - **Strict Policy Note:** 2 consecutive answers contain outbound links. Next 4 answers must be pure zero-link answers to maintain the strict 5:1 anti-spam ratio.

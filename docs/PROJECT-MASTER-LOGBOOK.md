@@ -1468,3 +1468,43 @@
   Outbound links render with `rel="noopener"` only. **Zero `nofollow`**, **zero `ugc`**, **zero `sponsored`**. When approved, this listing will pass **Pure Dofollow PageRank**.
 * **Requirements & Cost:** $0 Free plan, no user account, no backlink/badge required. Queued in free editorial review pipeline.
 * **Status:** **SUBMITTED (IN EDITORIAL REVIEW - DOFOLLOW CONFIRMED)**.
+
+### [2026-11-07 11:35:00] Dev.to Trend Article #3 Published (3x Dofollow PageRank Equity)
+* **Platform:** Dev.to (`https://dev.to/`) — DR 91 Developer Community
+* **Live Article URL:** `https://dev.to/alfazreviews/one-free-trial-should-not-cost-you-40-emails-a-month-4iea` (HTTP 200 OK)
+* **Title:** *One free trial should not cost you 40 emails a month.*
+* **Author:** Alfaz Mahmud Rizve (`https://dev.to/alfazreviews`)
+* **Publication Timestamp:** `2026-11-07T05:33:45Z`
+* **Persona & Byline Invariant:** Written from the authoritative perspective of SEO & QA Lead at TempMail10min, strictly referencing `whoisalfaz.me` and `fasttools.me` as personal engineering projects. Zero founder misattributions.
+* **Contextual In-Body Link Breakdown:**
+  1. `<a href="https://temp-mail10min.online/post/temporary-email-for-free-trials-no-spam" target="_blank" rel="noopener noreferrer">free trials guide</a>`
+  2. `<a href="https://temp-mail10min.online/post/temp-mail-for-discord-verification-guide" target="_blank" rel="noopener noreferrer">Discord verification guide</a>`
+  3. `<a href="https://temp-mail10min.online/post/temp-mail-for-steam-account-guide" target="_blank" rel="noopener noreferrer">Steam guide</a>`
+* **Link Attribute Forensic Discovery:** All in-body links render as `<a ... target="_blank" rel="noopener noreferrer">` with **zero `nofollow` and zero `ugc`**. Dev.to body markdown links pass pure **Dofollow PageRank equity** from DR 91 to client deep pages.
+* **Status:** **LIVE & VERIFIED (3X PURE DOFOLLOW PAGERANK BACKLINKS)**.
+
+### [2026-11-07 11:36:00] Hashnode Trend Article #2 Published (Cross-Domain Canonical Verified)
+* **Platform:** Hashnode (`https://hashnode.com/`) — DR 84+ Developer & Tech Blogging Platform
+* **Live Article URL:** `https://alfazreviews.hashnode.dev/temp-mail-is-safe-until-you-use-it-for-the-wrong-account` (HTTP 200 OK)
+* **Title:** *Temp Mail Is Safe. Until You Use It for the Wrong Account.*
+* **Author:** Alfaz Mahmud Rizve (`https://hashnode.com/@alfazreviews`)
+* **Publication Timestamp:** `2026-11-07T05:35:05Z`
+* **Cross-Domain Canonical Status:** Live HTML source confirms:
+  ```html
+  <link rel="canonical" href="https://temp-mail10min.online/post/is-temporary-email-safe"/>
+  ```
+  Passes full search ranking authority directly to the client domain with zero duplicate content penalty.
+* **Contextual Outbound Link:** `<a href="https://temp-mail10min.online/post/is-temporary-email-safe" target="_blank" rel="noopener noreferrer nofollow ugc">this guide to whether temporary email is safe</a>`
+* **Status:** **LIVE & VERIFIED (CROSS-DOMAIN CANONICAL + UGC CITATIONS)**.
+
+### [2026-11-07 12:00:00] Quora High-Authority Q&A Answer #2 Published (OTP Troubleshooting)
+* **Platform:** Quora (`https://www.quora.com/`) — DR 93 Global Q&A Authority
+* **Question URL:** `https://www.quora.com/Why-am-I-not-receiving-OTP-verification-codes-on-my-Mobile`
+* **Live Answer URL:** `https://www.quora.com/Why-am-I-not-receiving-OTP-verification-codes-on-my-Mobile/answer/Alfaz-Mahmud-Rizve`
+* **Author:** Alfaz Mahmud Rizve (`https://www.quora.com/profile/Alfaz-Mahmud-Rizve`)
+* **Answer Structure & Word Count:** 236 words. High-utility breakdown diagnosing carrier SMS filtering, spam shortcode suppressions, and temporary inbox fallbacks.
+* **Contextual Outbound Anchor:**
+  - Anchor: `"full OTP guide"`
+  - Target: `https://temp-mail10min.online/post/how-to-use-temporary-email-for-verification-codes-and-otps`
+* **Policy & Ratio Constraint Alert:** This is the **2nd linked Quora answer in a row** (Answer #1 on Safe/Legal, Answer #2 on OTP). To maintain the strict anti-spam 5:1 ratio rule, the **next 4 Quora answers must be 100% zero-link pure value answers** before introducing another outbound link.
+* **Status:** **LIVE & VERIFIED (AEO / GEO CITATION - 5:1 RULE ACTIVATED)**.
