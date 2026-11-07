@@ -20,7 +20,10 @@ import {
     Github,
     BookOpen,
     Code2,
-    Cpu
+    Cpu,
+    Twitter,
+    MessageSquare,
+    Briefcase
 } from 'lucide-react';
 
 export const metadata = {
@@ -76,6 +79,16 @@ const CHANNELS = [
         cta: "View Tech Demos"
     },
     {
+        name: "LinkedIn (RevOps & B2B Leadership)",
+        handle: "in/alfaz-mahmud-rizve",
+        url: "https://www.linkedin.com/in/alfaz-mahmud-rizve/",
+        badge: "Executive Network",
+        badgeColor: "bg-blue-500/10 text-blue-400 border-blue-500/20",
+        icon: Linkedin,
+        description: "Strategic engineering commentary, RevOps frameworks, and B2B software architecture shared with 1st-degree leaders.",
+        cta: "Connect on LinkedIn"
+    },
+    {
         name: "n8n Official Creator Profile",
         handle: "n8n.io/creators/whoisalfaz",
         url: "https://n8n.io/creators/whoisalfaz/",
@@ -86,14 +99,14 @@ const CHANNELS = [
         cta: "View Public Templates"
     },
     {
-        name: "LinkedIn (RevOps & GTM Architecture)",
-        handle: "in/alfaz-mahmud-rizve",
-        url: "https://www.linkedin.com/in/alfaz-mahmud-rizve/",
-        badge: "Executive Network",
+        name: "Hashnode Engineering Publication",
+        handle: "alfazreviews.hashnode.dev",
+        url: "https://hashnode.com/@alfazreviews",
+        badge: "Canonical Syndication",
         badgeColor: "bg-blue-500/10 text-blue-400 border-blue-500/20",
-        icon: Linkedin,
-        description: "Strategic engineering commentary, RevOps frameworks, and B2B software architecture shared with 1st-degree leaders.",
-        cta: "Connect on LinkedIn"
+        icon: BookOpen,
+        description: "Technical articles with verified cross-domain canonical authority and software evaluation roundups.",
+        cta: "Visit Hashnode Blog"
     },
     {
         name: "Dev.to Technical Publication",
@@ -104,6 +117,26 @@ const CHANNELS = [
         icon: Cpu,
         description: "Deep technical articles syndicated to global developers, DevOps specialists, and full-stack engineers.",
         cta: "Read on Dev.to"
+    },
+    {
+        name: "Quora (AEO & AI Search Authority)",
+        handle: "quora.com/profile/Alfaz-Mahmud-Rizve",
+        url: "https://www.quora.com/profile/Alfaz-Mahmud-Rizve",
+        badge: "Generative Engine Optimization",
+        badgeColor: "bg-red-500/10 text-red-400 border-red-500/20",
+        icon: MessageSquare,
+        description: "Top-ranking featured technical answers indexed by ChatGPT, Perplexity, and Google AI Overviews.",
+        cta: "View Quora Profile"
+    },
+    {
+        name: "Contra (Verified Independent Architect)",
+        handle: "contra.com/alfazreviews",
+        url: "https://contra.com/alfazreviews",
+        badge: "Independent Expert",
+        badgeColor: "bg-purple-500/10 text-purple-400 border-purple-500/20",
+        icon: Briefcase,
+        description: "Verified professional services portfolio, enterprise consulting credentials, and client recommendations.",
+        cta: "View Contra Profile"
     },
     {
         name: "Peerlist Professional Profile",
@@ -124,6 +157,16 @@ const CHANNELS = [
         icon: Github,
         description: "Open-source scripts, automation orchestrators, Next.js architecture, and technical SEO tools.",
         cta: "View Repositories"
+    },
+    {
+        name: "X / Twitter (Automation & Tech Bites)",
+        handle: "@whois_alfaz",
+        url: "https://x.com/whois_alfaz",
+        badge: "Real-time Updates",
+        badgeColor: "bg-sky-500/10 text-sky-400 border-sky-500/20",
+        icon: Twitter,
+        description: "Live commentary on AI agents, automation releases, and B2B SaaS growth tactics.",
+        cta: "Follow on X"
     }
 ];
 
