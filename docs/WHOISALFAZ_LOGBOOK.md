@@ -11,11 +11,11 @@
 
 * **Production URL:** `https://whoisalfaz.me/`
 * **Commercial Services Live:**
-  * `/services/ai-agent-development/`
-  * `/services/automation/`
-  * `/services/n8n-consulting/`
-  * `/services/seo/`
-  * `/services/voice-agents/`
+  * `/services/n8n-automation`
+  * `/services/custom-full-stack`
+  * `/services/headless-architecture`
+  * `/services/growth-consulting`
+  * `/services/seo-organic-growth`
 * **Official Profiles & Channels:**
   * **GitHub:** `https://github.com/AlfazMahmudRizve`
   * **LinkedIn:** `https://www.linkedin.com/in/alfaz-mahmud-rizve/`
@@ -34,8 +34,11 @@
 | Platform | Profile URL | Target URL | Rel Attribute | Status | Date Verified |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | **Peerlist** | `https://peerlist.io/alfazreviews` | `https://whoisalfaz.me/?ref=peerlist` | `rel="noreferrer nofollow ugc"` | **Live** | 2026-11-06 |
-| **Dev.to** | `https://dev.to/alfazreviews` | `https://temp-mail10min.online/` | `rel="noopener me ugc"` | **Live** (TempMail target) | 2026-11-06 |
+| **Dev.to** | `https://dev.to/alfazreviews` | `https://whoisalfaz.me` | `rel="noopener me ugc"` | **Live** (Brand profile link) | 2026-11-06 |
 | **GitHub** | `https://github.com/AlfazMahmudRizve` | `https://whoisalfaz.me/` | Dofollow | **Live** | Active |
 | **LinkedIn** | `https://www.linkedin.com/in/alfaz-mahmud-rizve/` | `https://whoisalfaz.me/` | Nofollow / Redirect | **Live** | Active |
 | **X** | `https://x.com/whois_alfaz` | `https://whoisalfaz.me/` | `t.co` redirect (Nofollow) | **Live** | Active |
 | **Krafera Gumroad** | `https://krafera.gumroad.com/l/pbeqo` | `https://whoisalfaz.me/blog/how-to-upgrade-to-n8n-3-without-breaking-workflows/` | Dofollow (DR 91) | **Live** | 2026-11-05 |
+| **Hashnode** | `https://hashnode.com/@alfazreviews` | `https://whoisalfaz.me` | `rel="noopener noreferrer nofollow ugc"` | **Live** (Brand profile link) | 2026-11-06 |
+| **Quora** | `https://www.quora.com/profile/Alfaz-Mahmud-Rizve` | `https://whoisalfaz.me` (in bio) | Nofollow / Entity | **Live** (Brand profile) | 2026-11-06 |
+| **Contra** | `https://contra.com/alfazreviews` | `https://whoisalfaz.me` | `rel="noopener noreferrer nofollow ugc"` | **Live** (Creator profile) | 2026-11-06 |
