@@ -9,7 +9,7 @@ export default function PlacementRequestForm() {
         name: '',
         email: '',
         companyUrl: '',
-        placementType: 'Contextual Link Integration ($80-$150)',
+        placementType: 'Sponsored Technical Guide & Blueprint ($450-$650)',
         budget: '',
         message: ''
     });
@@ -94,9 +94,12 @@ export default function PlacementRequestForm() {
                         <div className="relative">
                             <select required className={`${inputClass} appearance-none font-medium [&>option]:bg-[#1e293b] [&>option]:text-white`} value={formData.budget} onChange={(e) => setFormData({ ...formData, budget: e.target.value })}>
                                 <option value="" disabled>Select your budget</option>
-                                <option value="$80-$150 (Link Placement)">$80-$150 (Link Placement)</option>
-                                <option value="$300-$500 (Sponsored Teardown)">$300-$500 (Sponsored Teardown)</option>
-                                <option value="$500+ (Custom Integration)">$500+ (Custom Integration)</option>
+                                <option value="$100-$180 (Link Placement)">$100-$180 (Link Placement)</option>
+                                <option value="$250-$350 (Comparison Feature)">$250-$350 (Comparison Feature)</option>
+                                <option value="$450-$650 (Sponsored Guide & Blueprint)">$450-$650 (Sponsored Guide & Blueprint)</option>
+                                <option value="$950-$1,400 (360° Multichannel Bundle)">$950-$1,400 (360° Multichannel Bundle)</option>
+                                <option value="Hybrid (Base Fee + Performance CPA)">Hybrid (Base Fee + Performance CPA)</option>
+                                <option value="$1,500+ (Custom Enterprise Integration)">$1,500+ (Custom Enterprise Integration)</option>
                             </select>
                             <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-slate-400">
                                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
@@ -109,8 +112,11 @@ export default function PlacementRequestForm() {
                     <label className={labelClass}>Placement Type</label>
                     <div className="relative">
                         <select className={`${inputClass} appearance-none font-medium [&>option]:bg-[#1e293b] [&>option]:text-white`} value={formData.placementType} onChange={(e) => setFormData({ ...formData, placementType: e.target.value })}>
-                            <option value="Contextual Link Integration ($80-$150)">Contextual Link Integration</option>
-                            <option value="Sponsored API Teardown ($300-$500)">Sponsored API & Tool Tear-Down</option>
+                            <option value="Sponsored Technical Guide & Blueprint ($450-$650)">Sponsored Technical Guide & Blueprint ($450-$650)</option>
+                            <option value="Contextual Link Placement ($100-$180)">Contextual Link Placement ($100-$180)</option>
+                            <option value="SaaS Comparison & Alternatives Feature ($250-$350)">SaaS Comparison & Alternatives Feature ($250-$350)</option>
+                            <option value="360° Multichannel Launch Bundle ($950-$1,400)">360° Multichannel Launch Bundle ($950-$1,400)</option>
+                            <option value="Hybrid Partnership (Base Fee + CPA / Rev-Share)">Hybrid Partnership (Base Fee + CPA / Rev-Share)</option>
                             <option value="Custom Technical Partnership">Custom Technical Partnership</option>
                         </select>
                         <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-slate-400">
