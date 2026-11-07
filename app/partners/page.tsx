@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import PartnerLogos from '../../components/PartnerLogos';
 import PlacementRequestForm from '../../components/PlacementRequestForm';
 import { 
@@ -12,19 +13,119 @@ import {
     Layers, 
     Video, 
     CheckCircle2, 
-    Share2 
+    Share2,
+    ArrowUpRight,
+    Youtube,
+    Linkedin,
+    Github,
+    BookOpen,
+    Code2,
+    Cpu
 } from 'lucide-react';
 
 export const metadata = {
     title: "Media Kit & B2B SaaS Partnerships (2026) | whoisalfaz.me",
-    description: "Official 2026 Media Kit & Technical Partnerships for whoisalfaz.me. Audience metrics, flat-fee sponsorships, hybrid partner programs, API teardowns, and multichannel B2B integrations.",
+    description: "Official 2026 Media Kit & Technical Partnerships for whoisalfaz.me. Verified audience metrics, multichannel channel links, flat-fee sponsorships, hybrid partner programs, and API blueprints.",
     openGraph: {
         title: "Media Kit & B2B SaaS Partnerships (2026) | whoisalfaz.me",
-        description: "High-authority contextual link integrations, sponsored API tear-downs, and multichannel B2B SaaS partnerships with Alfaz Mahmud Rizve.",
+        description: "High-authority contextual link integrations, sponsored API blueprints, and multichannel B2B SaaS partnerships with Alfaz Mahmud Rizve.",
         url: "https://whoisalfaz.me/partners/",
     },
     alternates: { canonical: "https://whoisalfaz.me/partners/" },
 };
+
+const CHANNELS = [
+    {
+        name: "Technical Engineering Blog",
+        handle: "whoisalfaz.me/blog",
+        url: "https://whoisalfaz.me/blog/",
+        badge: "Primary Hub",
+        badgeColor: "bg-teal-500/10 text-teal-400 border-teal-500/20",
+        icon: BookOpen,
+        description: "50+ production-grade blueprints, workflow tutorials, and high-intent B2B SaaS teardowns with permanent indexation.",
+        cta: "Read Technical Guides"
+    },
+    {
+        name: "YouTube (GTM & RevOps Automation)",
+        handle: "@whoisalfazz",
+        url: "https://www.youtube.com/@whoisalfazz",
+        badge: "Engineering Video",
+        badgeColor: "bg-red-500/10 text-red-400 border-red-500/20",
+        icon: Youtube,
+        description: "Screen-recorded n8n architecture breakdowns, webhook parsers, and custom API pipeline demonstrations.",
+        cta: "Watch Automation Setup"
+    },
+    {
+        name: "YouTube (B2B SaaS Reviews)",
+        handle: "@alfazreviews",
+        url: "https://www.youtube.com/@alfazreviews",
+        badge: "Product Reviews",
+        badgeColor: "bg-red-500/10 text-red-400 border-red-500/20",
+        icon: Video,
+        description: "Hands-on B2B software evaluations, UI/UX teardowns, and side-by-side feature comparisons for software buyers.",
+        cta: "Explore Software Reviews"
+    },
+    {
+        name: "TikTok (Short-Form SaaS Spotlights)",
+        handle: "@alfaz.tech.product",
+        url: "https://www.tiktok.com/@alfaz.tech.product",
+        badge: "Rapid Discovery",
+        badgeColor: "bg-pink-500/10 text-pink-400 border-pink-500/20",
+        icon: Sparkles,
+        description: "Bite-sized SaaS utility walkthroughs, developer tool highlights, and viral software tips for technical builders.",
+        cta: "View Tech Demos"
+    },
+    {
+        name: "n8n Official Creator Profile",
+        handle: "n8n.io/creators/whoisalfaz",
+        url: "https://n8n.io/creators/whoisalfaz/",
+        badge: "Verified Creator",
+        badgeColor: "bg-orange-500/10 text-orange-400 border-orange-500/20",
+        icon: Code2,
+        description: "Production-ready, public workflow templates used by thousands of automation agencies and enterprise teams.",
+        cta: "View Public Templates"
+    },
+    {
+        name: "LinkedIn (RevOps & GTM Architecture)",
+        handle: "in/alfaz-mahmud-rizve",
+        url: "https://www.linkedin.com/in/alfaz-mahmud-rizve/",
+        badge: "Executive Network",
+        badgeColor: "bg-blue-500/10 text-blue-400 border-blue-500/20",
+        icon: Linkedin,
+        description: "Strategic engineering commentary, RevOps frameworks, and B2B software architecture shared with 1st-degree leaders.",
+        cta: "Connect on LinkedIn"
+    },
+    {
+        name: "Dev.to Technical Publication",
+        handle: "dev.to/alfazreviews",
+        url: "https://dev.to/alfazreviews",
+        badge: "Developer Community",
+        badgeColor: "bg-emerald-500/10 text-emerald-400 border-emerald-500/20",
+        icon: Cpu,
+        description: "Deep technical articles syndicated to global developers, DevOps specialists, and full-stack engineers.",
+        cta: "Read on Dev.to"
+    },
+    {
+        name: "Peerlist Professional Profile",
+        handle: "peerlist.io/alfazreviews",
+        url: "https://peerlist.io/alfazreviews",
+        badge: "Verified Builder",
+        badgeColor: "bg-emerald-500/10 text-emerald-400 border-emerald-500/20",
+        icon: Globe,
+        description: "Peer-reviewed project portfolio, technical case studies, and software release verification.",
+        cta: "View Peerlist Profile"
+    },
+    {
+        name: "GitHub Engineering Hub",
+        handle: "github.com/AlfazMahmudRizve",
+        url: "https://github.com/AlfazMahmudRizve",
+        badge: "Open Source Code",
+        badgeColor: "bg-purple-500/10 text-purple-400 border-purple-500/20",
+        icon: Github,
+        description: "Open-source scripts, automation orchestrators, Next.js architecture, and technical SEO tools.",
+        cta: "View Repositories"
+    }
+];
 
 export default function PartnersPage() {
     return (
@@ -40,7 +141,7 @@ export default function PartnersPage() {
                 <section className="mb-20 text-center max-w-4xl mx-auto">
                     <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-teal-500/10 border border-teal-500/20 text-teal-400 text-xs font-mono uppercase tracking-widest mb-8">
                         <span className="w-1.5 h-1.5 rounded-full bg-teal-400 animate-pulse"></span>
-                        2026 Media Kit &amp; Partnerships • Flat-Fee &amp; Hybrid
+                        2026 Media Kit &amp; Partnerships • Flat-Fee &amp; Hybrid Models
                     </div>
 
                     <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-white leading-[1.05] tracking-tighter mb-6">
@@ -51,7 +152,7 @@ export default function PartnersPage() {
                     </h1>
 
                     <p className="text-lg md:text-xl text-slate-400 leading-relaxed max-w-3xl mx-auto mb-10">
-                        I partner exclusively with B2B SaaS, DevTools, and RevOps platforms to deliver high-authority content, hands-on workflow blueprints, and multichannel audience activation. Zero fluff. Pure technical execution for high-LTV buyers.
+                        I partner with category-leading B2B SaaS, DevTools, and RevOps platforms to deliver high-authority technical guides, hands-on API blueprints, and multichannel audience activation. Zero fluff. Pure technical execution for high-LTV decision-makers.
                     </p>
 
                     <div className="flex flex-wrap items-center justify-center gap-4">
@@ -63,8 +164,14 @@ export default function PartnersPage() {
                             <ArrowDown size={18} className="animate-bounce" />
                         </a>
                         <a
-                            href="#rate-card"
+                            href="#channels"
                             className="inline-flex items-center gap-2 px-7 py-4 bg-white/5 hover:bg-white/10 text-slate-200 border border-white/10 font-bold uppercase tracking-wider rounded-xl transition-all hover:-translate-y-1 text-sm"
+                        >
+                            Explore Channels &amp; Links
+                        </a>
+                        <a
+                            href="#rate-card"
+                            className="inline-flex items-center gap-2 px-7 py-4 bg-white/5 hover:bg-white/10 text-teal-300 border border-teal-500/20 font-bold uppercase tracking-wider rounded-xl transition-all hover:-translate-y-1 text-sm"
                         >
                             View Rate Card &amp; Tiers
                         </a>
@@ -72,7 +179,7 @@ export default function PartnersPage() {
                 </section>
 
                 {/* ═══════════════════════════════════════════ */}
-                {/* SECTION 2: KEY METRICS & AUDIENCE           */}
+                {/* SECTION 2: AUDIENCE & TRAFFIC METRICS       */}
                 {/* ═══════════════════════════════════════════ */}
                 <section className="mb-24">
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -81,8 +188,8 @@ export default function PartnersPage() {
                                 <Users size={20} className="text-teal-400" />
                             </div>
                             <div className="text-2xl md:text-3xl font-black text-white tracking-tight mb-1">68%</div>
-                            <div className="text-xs uppercase font-mono tracking-wider text-slate-400">B2B Decision Makers</div>
-                            <p className="text-[11px] text-slate-500 mt-2">Founders, RevOps leads, and technical architects with purchasing budget.</p>
+                            <div className="text-xs uppercase font-mono tracking-wider text-slate-400">B2B Decision-Makers</div>
+                            <p className="text-[11px] text-slate-500 mt-2">Founders, RevOps leads, VP/Directors, and senior engineers with direct software buying authority.</p>
                         </div>
 
                         <div className="bg-white/[0.03] backdrop-blur-md border border-white/10 rounded-2xl p-6 text-center hover:bg-white/[0.05] transition-all">
@@ -91,7 +198,7 @@ export default function PartnersPage() {
                             </div>
                             <div className="text-2xl md:text-3xl font-black text-white tracking-tight mb-1">85%</div>
                             <div className="text-xs uppercase font-mono tracking-wider text-slate-400">Tier-1 Markets</div>
-                            <p className="text-[11px] text-slate-500 mt-2">United States (42%), UK &amp; Europe (28%), Canada &amp; Australia (15%).</p>
+                            <p className="text-[11px] text-slate-500 mt-2">United States (42%), UK &amp; Europe (28%), Canada &amp; Australia (15%). High-LTV commercial value.</p>
                         </div>
 
                         <div className="bg-white/[0.03] backdrop-blur-md border border-white/10 rounded-2xl p-6 text-center hover:bg-white/[0.05] transition-all">
@@ -100,7 +207,7 @@ export default function PartnersPage() {
                             </div>
                             <div className="text-2xl md:text-3xl font-black text-white tracking-tight mb-1">50+</div>
                             <div className="text-xs uppercase font-mono tracking-wider text-slate-400">Deep Playbooks</div>
-                            <p className="text-[11px] text-slate-500 mt-2">Production blueprints, n8n automations, RAG pipelines, and CRM setups.</p>
+                            <p className="text-[11px] text-slate-500 mt-2">Production n8n workflows, RAG systems, outbound cold email stacks, and CRM pipelines.</p>
                         </div>
 
                         <div className="bg-white/[0.03] backdrop-blur-md border border-white/10 rounded-2xl p-6 text-center hover:bg-white/[0.05] transition-all">
@@ -109,19 +216,70 @@ export default function PartnersPage() {
                             </div>
                             <div className="text-2xl md:text-3xl font-black text-white tracking-tight mb-1">High-Intent</div>
                             <div className="text-xs uppercase font-mono tracking-wider text-slate-400">Commercial SEO</div>
-                            <p className="text-[11px] text-slate-500 mt-2">Ranking on page 1 for transactional B2B queries and pricing comparisons.</p>
+                            <p className="text-[11px] text-slate-500 mt-2">Top Google rankings for transactional search queries (ManyChat pricing, n8n error handling, vector DBs).</p>
                         </div>
                     </div>
                 </section>
 
                 {/* ═══════════════════════════════════════════ */}
-                {/* SECTION 3: 2026 RATE CARD & OFFERINGS       */}
+                {/* SECTION 3: VERIFIED CHANNELS DIRECTORY      */}
+                {/* ═══════════════════════════════════════════ */}
+                <section id="channels" className="mb-24 scroll-mt-28">
+                    <div className="text-center mb-12">
+                        <span className="text-[10px] font-black text-teal-400 uppercase tracking-[0.3em] block mb-2">Multichannel Distribution</span>
+                        <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tight">Verified Channels &amp; Ecosystem Links</h2>
+                        <p className="text-slate-400 text-sm max-w-xl mx-auto mt-3">Every channel where we publish, syndicate, and demonstrate software to technical buyers.</p>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+                        {CHANNELS.map((ch, i) => {
+                            const IconComponent = ch.icon;
+                            return (
+                                <a
+                                    key={i}
+                                    href={ch.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="bg-white/[0.02] border border-white/10 rounded-2xl p-6 hover:bg-white/[0.06] hover:border-teal-500/30 transition-all group flex flex-col justify-between"
+                                >
+                                    <div>
+                                        <div className="flex items-center justify-between mb-4">
+                                            <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:scale-110 transition-transform">
+                                                <IconComponent size={20} className="text-teal-400" />
+                                            </div>
+                                            <span className={`px-2.5 py-0.5 rounded-full text-[10px] font-mono uppercase tracking-wider border ${ch.badgeColor}`}>
+                                                {ch.badge}
+                                            </span>
+                                        </div>
+
+                                        <h3 className="text-white font-black text-base uppercase tracking-tight mb-1 group-hover:text-teal-300 transition-colors flex items-center gap-1.5">
+                                            {ch.name}
+                                            <ArrowUpRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />
+                                        </h3>
+                                        <div className="text-[11px] font-mono text-slate-500 mb-3">{ch.handle}</div>
+                                        <p className="text-slate-400 text-xs leading-relaxed mb-6">
+                                            {ch.description}
+                                        </p>
+                                    </div>
+
+                                    <div className="pt-4 border-t border-white/5 flex items-center justify-between text-xs font-mono uppercase tracking-wider text-teal-400 font-bold group-hover:translate-x-1 transition-transform">
+                                        <span>{ch.cta}</span>
+                                        <span>→</span>
+                                    </div>
+                                </a>
+                            );
+                        })}
+                    </div>
+                </section>
+
+                {/* ═══════════════════════════════════════════ */}
+                {/* SECTION 4: 2026 RATE CARD & OFFERINGS       */}
                 {/* ═══════════════════════════════════════════ */}
                 <section id="rate-card" className="mb-24 scroll-mt-28">
                     <div className="text-center mb-12">
                         <span className="text-[10px] font-black text-teal-400 uppercase tracking-[0.3em] block mb-2">Transparent Pricing</span>
                         <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tight">2026 Rate Card &amp; Partnership Tiers</h2>
-                        <p className="text-slate-400 text-sm max-w-xl mx-auto mt-3">Flexible engagement models: select guaranteed flat-fee insertion or performance hybrid.</p>
+                        <p className="text-slate-400 text-sm max-w-xl mx-auto mt-3">Select guaranteed flat-fee insertion or performance-based hybrid terms.</p>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -139,11 +297,11 @@ export default function PartnersPage() {
                                 </div>
                                 <h3 className="text-xl font-black text-white uppercase tracking-tight mb-2">Contextual Link &amp; Resource Integration</h3>
                                 <p className="text-slate-400 text-sm leading-relaxed mb-6">
-                                    Seamless, natural anchor placement embedded within existing, high-ranking technical articles (e.g., ManyChat pricing, n8n error handling, Apollo outbound pipelines). Permanent server-side indexation.
+                                    Seamless, highly relevant anchor placement embedded within existing, high-ranking technical articles (e.g. ManyChat pricing teardowns, n8n error handling, Apollo outbound pipelines). Permanent server-side indexation.
                                 </p>
                                 <ul className="space-y-2 mb-6 text-xs text-slate-300">
                                     <li className="flex items-center gap-2"><CheckCircle2 size={14} className="text-teal-400 shrink-0" /> Fast 24–48h deployment SLA</li>
-                                    <li className="flex items-center gap-2"><CheckCircle2 size={14} className="text-teal-400 shrink-0" /> Contextual editorial match (no sidebar/footer clutter)</li>
+                                    <li className="flex items-center gap-2"><CheckCircle2 size={14} className="text-teal-400 shrink-0" /> Contextual editorial match (no spammy sidebar/footer links)</li>
                                     <li className="flex items-center gap-2"><CheckCircle2 size={14} className="text-teal-400 shrink-0" /> Permanent placement with clean canonical trust</li>
                                 </ul>
                             </div>
@@ -177,9 +335,14 @@ export default function PartnersPage() {
                                     <li className="flex items-center gap-2"><CheckCircle2 size={14} className="text-teal-400 shrink-0" /> Hybrid model: $300 base + standard affiliate CPA</li>
                                 </ul>
                             </div>
-                            <a href="#placement-form" className="text-xs font-mono uppercase tracking-wider text-teal-400 hover:text-teal-300 flex items-center gap-1 font-bold">
-                                Commission a Blueprint →
-                            </a>
+                            <div className="pt-2">
+                                <div className="text-[11px] text-slate-500 font-mono mb-2">
+                                    Sample: <Link href="/blog/how-to-upgrade-to-n8n-3-without-breaking-workflows/" className="text-teal-400 hover:underline">n8n 3.0 Migration Blueprint →</Link>
+                                </div>
+                                <a href="#placement-form" className="text-xs font-mono uppercase tracking-wider text-teal-400 hover:text-teal-300 flex items-center gap-1 font-bold">
+                                    Commission a Blueprint →
+                                </a>
+                            </div>
                         </div>
 
                         {/* Tier 3: Comparison Feature */}
@@ -203,9 +366,14 @@ export default function PartnersPage() {
                                     <li className="flex items-center gap-2"><CheckCircle2 size={14} className="text-teal-400 shrink-0" /> Targets high-converting bottom-of-funnel searches</li>
                                 </ul>
                             </div>
-                            <a href="#placement-form" className="text-xs font-mono uppercase tracking-wider text-teal-400 hover:text-teal-300 flex items-center gap-1 font-bold">
-                                Target Buyer Keywords →
-                            </a>
+                            <div className="pt-2">
+                                <div className="text-[11px] text-slate-500 font-mono mb-2">
+                                    Sample: <Link href="/blog/pinecone-vs-qdrant/" className="text-teal-400 hover:underline">Pinecone vs. Qdrant Comparison →</Link>
+                                </div>
+                                <a href="#placement-form" className="text-xs font-mono uppercase tracking-wider text-teal-400 hover:text-teal-300 flex items-center gap-1 font-bold">
+                                    Target Buyer Keywords →
+                                </a>
+                            </div>
                         </div>
 
                         {/* Tier 4: Multichannel Launch Bundle */}
@@ -249,51 +417,6 @@ export default function PartnersPage() {
                         <a href="#placement-form" className="px-5 py-2.5 rounded-xl bg-teal-500/10 border border-teal-500/20 text-teal-300 font-bold text-xs uppercase tracking-wider whitespace-nowrap hover:bg-teal-500/20 transition-all">
                             Discuss Hybrid Terms
                         </a>
-                    </div>
-                </section>
-
-                {/* ═══════════════════════════════════════════ */}
-                {/* SECTION 4: CHANNEL ECOSYSTEM                */}
-                {/* ═══════════════════════════════════════════ */}
-                <section className="mb-24">
-                    <div className="text-center mb-12">
-                        <span className="text-[10px] font-black text-slate-500 uppercase tracking-[0.3em] block mb-2">Multichannel Distribution</span>
-                        <h2 className="text-3xl font-black text-white uppercase tracking-tight">The Content Ecosystem</h2>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                        <div className="bg-white/[0.02] border border-white/10 rounded-2xl p-6">
-                            <div className="flex items-center gap-3 mb-3">
-                                <Globe size={18} className="text-teal-400" />
-                                <h3 className="text-white font-bold text-sm uppercase">Technical Blog</h3>
-                            </div>
-                            <p className="text-slate-400 text-xs leading-relaxed mb-4">
-                                whoisalfaz.me/blog serves as the central hub for production-grade architectural guides, n8n templates, and tool integrations.
-                            </p>
-                            <span className="text-[10px] font-mono text-teal-400 uppercase tracking-widest">whoisalfaz.me/blog</span>
-                        </div>
-
-                        <div className="bg-white/[0.02] border border-white/10 rounded-2xl p-6">
-                            <div className="flex items-center gap-3 mb-3">
-                                <Video size={18} className="text-purple-400" />
-                                <h3 className="text-white font-bold text-sm uppercase">YouTube Channels</h3>
-                            </div>
-                            <p className="text-slate-400 text-xs leading-relaxed mb-4">
-                                Hands-on workflow demonstrations and software evaluations across @whoisalfazz (GTM/Automation) and @alfazreviews (SaaS Reviews).
-                            </p>
-                            <span className="text-[10px] font-mono text-purple-400 uppercase tracking-widest">@whoisalfazz · @alfazreviews</span>
-                        </div>
-
-                        <div className="bg-white/[0.02] border border-white/10 rounded-2xl p-6">
-                            <div className="flex items-center gap-3 mb-3">
-                                <Sparkles size={18} className="text-pink-400" />
-                                <h3 className="text-white font-bold text-sm uppercase">Short-Form &amp; Creator Hub</h3>
-                            </div>
-                            <p className="text-slate-400 text-xs leading-relaxed mb-4">
-                                Fast-paced tool highlights on TikTok (@alfaz.tech.product) paired with verified public workflow blueprints on the official n8n Creator Hub.
-                            </p>
-                            <span className="text-[10px] font-mono text-pink-400 uppercase tracking-widest">TikTok · n8n Creator · Dev.to</span>
-                        </div>
                     </div>
                 </section>
 
