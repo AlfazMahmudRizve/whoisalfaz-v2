@@ -1,0 +1,5 @@
+body { font-family: Georgia, serif; line-height: 1.6; max-width: 640px; margin: 2rem auto; padding: 0 1rem; color: #222; }
+a { color: #1a5fb4; }
+header p, footer p { color: #555; }
+h1 { font-size: 1.8rem; }
+h2 { font-size: 1.3rem; margin-top: 2rem; }
