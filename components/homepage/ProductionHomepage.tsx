@@ -694,7 +694,7 @@ export default function ProductionHomepage({ posts }: Props) {
                       <p className={`text-sm sm:text-base leading-relaxed mb-8 font-normal max-w-xl ${
                         isLight ? 'text-slate-600' : 'text-slate-300'
                       }`}>
-                        Slow websites kill conversions. If your pages take more than 2 seconds to load, over half your visitors leave before reading your offer. We build custom Next.js platforms that load in milliseconds across the globe, giving your visitors an instant experience that turns them into clients.
+                        Slow page loads create friction and dropoffs before prospects ever engage. We build custom Next.js platforms engineered for sub-second delivery across the globe, providing an instant experience that protects conversions and inbound ad spend.
                       </p>
                     </div>
 
@@ -704,16 +704,16 @@ export default function ProductionHomepage({ posts }: Props) {
                         isLight ? 'bg-slate-50 border border-slate-200' : 'bg-black/50 border border-white/[0.08]'
                       }`}>
                         <div>
-                          <div className="text-2xl sm:text-3xl font-urbanist font-black text-purple-600 dark:text-purple-400">&lt; 0.8s</div>
-                          <div className={`text-xs font-semibold ${isLight ? 'text-slate-500' : 'text-slate-400'}`}>Global Page Load</div>
+                          <div className="text-2xl sm:text-3xl font-urbanist font-black text-purple-600 dark:text-purple-400">Sub-1s</div>
+                          <div className={`text-xs font-semibold ${isLight ? 'text-slate-500' : 'text-slate-400'}`}>Edge Delivery Target</div>
                         </div>
                         <div>
-                          <div className={`text-2xl sm:text-3xl font-urbanist font-black ${isLight ? 'text-slate-900' : 'text-white'}`}>100/100</div>
-                          <div className={`text-xs font-semibold ${isLight ? 'text-slate-500' : 'text-slate-400'}`}>Google Lighthouse</div>
+                          <div className={`text-2xl sm:text-3xl font-urbanist font-black ${isLight ? 'text-slate-900' : 'text-white'}`}>Optimized</div>
+                          <div className={`text-xs font-semibold ${isLight ? 'text-slate-500' : 'text-slate-400'}`}>Core Web Vitals</div>
                         </div>
                         <div>
-                          <div className={`text-2xl sm:text-3xl font-urbanist font-black ${isLight ? 'text-teal-700' : 'text-teal-400'}`}>+30%</div>
-                          <div className={`text-xs font-semibold ${isLight ? 'text-slate-500' : 'text-slate-400'}`}>Conversion Lift</div>
+                          <div className={`text-2xl sm:text-3xl font-urbanist font-black ${isLight ? 'text-teal-700' : 'text-teal-400'}`}>High</div>
+                          <div className={`text-xs font-semibold ${isLight ? 'text-slate-500' : 'text-slate-400'}`}>Inbound Retention</div>
                         </div>
                       </div>
 
@@ -789,7 +789,7 @@ export default function ProductionHomepage({ posts }: Props) {
                 </m.div>
 
                 {/* ----------------------------------------------------------------------- */}
-                {/* SHOWCASE 3: REVOPS AUTOMATION (No "Certified n8n Automation" pill)       */}
+                {/* SHOWCASE 3: REVOPS AUTOMATION                                            */}
                 {/* ----------------------------------------------------------------------- */}
                 <m.div 
                   initial={{ opacity: 0, y: 40 }}
@@ -810,7 +810,7 @@ export default function ProductionHomepage({ posts }: Props) {
                       <h3 className={`text-2xl sm:text-4xl font-urbanist font-black uppercase tracking-tight mb-4 ${
                         isLight ? 'text-slate-900 group-hover:text-amber-700' : 'text-white group-hover:text-amber-400'
                       } transition-colors`}>
-                        Follow Up With Every Lead in 5 Seconds — Automatically
+                        Follow Up With Every Lead in Seconds — Automatically
                       </h3>
 
                       <p className={`text-sm sm:text-base leading-relaxed mb-8 font-normal max-w-xl ${
@@ -826,8 +826,8 @@ export default function ProductionHomepage({ posts }: Props) {
                         isLight ? 'bg-slate-50 border border-slate-200' : 'bg-black/50 border border-white/[0.08]'
                       }`}>
                         <div>
-                          <div className="text-2xl sm:text-3xl font-urbanist font-black text-amber-600 dark:text-amber-400">5.2s</div>
-                          <div className={`text-xs font-semibold ${isLight ? 'text-slate-500' : 'text-slate-400'}`}>Response Speed</div>
+                          <div className="text-2xl sm:text-3xl font-urbanist font-black text-amber-600 dark:text-amber-400">Sub-10s</div>
+                          <div className={`text-xs font-semibold ${isLight ? 'text-slate-500' : 'text-slate-400'}`}>Automated Triage</div>
                         </div>
                         <div>
                           <div className={`text-2xl sm:text-3xl font-urbanist font-black ${isLight ? 'text-slate-900' : 'text-white'}`}>Instant</div>
@@ -863,7 +863,7 @@ export default function ProductionHomepage({ posts }: Props) {
                           <span className="w-2 h-2 rounded-full bg-amber-500 animate-pulse" />
                           <span>SPEED-TO-LEAD PIPELINE</span>
                         </div>
-                        <span className={`font-bold ${isLight ? 'text-amber-700' : 'text-amber-400'}`}>5.2s ELAPSED</span>
+                        <span className={`font-bold ${isLight ? 'text-amber-700' : 'text-amber-400'}`}>AUTOMATED DISPATCH</span>
                       </div>
 
                       {/* Step Flow Wire */}
@@ -1215,7 +1215,7 @@ export default function ProductionHomepage({ posts }: Props) {
         </section>
 
         {/* ======================================================================= */}
-        {/* SECTION 3: REAL CLIENT OUTCOME (ZERO-HARDWARE KITCHEN OS)                */}
+        {/* SECTION 3: SYSTEM ARCHITECTURE (ZERO-HARDWARE KITCHEN OS)                */}
         {/* ======================================================================= */}
         <section id="case-study" className={`py-24 px-4 sm:px-8 lg:px-12 border-b relative ${
           isLight ? 'border-slate-200 bg-white' : 'border-white/10 bg-[#07080a]'

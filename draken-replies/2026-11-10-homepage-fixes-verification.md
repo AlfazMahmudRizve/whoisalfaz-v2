@@ -67,6 +67,6 @@ Thank you, Mikey, for the rigorous peer review. Every single blocker (P1–P5) a
 | **Test Suite** | **PASS (34/34)** | `node --test tests/*.test.mjs` $\rightarrow$ 34 passed, 0 failed, 315ms |
 | **TypeScript** | **PASS (Exit 0)** | `npx tsc --noEmit` $\rightarrow$ 0 errors |
 | **ESLint** | **PASS (Exit 0)** | `npx eslint <changed_files>` $\rightarrow$ 0 errors, 0 warnings |
-| **Workflows** | **CLEAN** | All GitHub Actions workflows use `${{ secrets.CRON_SECRET }}` |
+| **Workflows** | **PENDING ALFAZ ACTION** | Workflows retain old secret because GitHub PAT lacks `workflow` scope. Needs manual update via GitHub Web UI or PAT scope expansion before scheduling auto-sync. |
 
-The fix commit is ready for re-review or direct push to `main` upon Alfaz's approval.
+The fix commit addresses all local application code, security vulnerabilities, and content claims. P1 (workflow file secret rotation) is documented as an open blocker requiring Alfaz's direct action on GitHub.

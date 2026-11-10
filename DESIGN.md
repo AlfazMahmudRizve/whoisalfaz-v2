@@ -4,7 +4,7 @@
 - **Subject:** Alfaz Mahmud Rizve (`whoisalfaz`), GTM & RevOps Architect.
 - **Audience:** High-growth founders, tech leaders, enterprise operators, and agency heads seeking autonomous revenue pipelines, programmatic SEO, and high-velocity web engineering.
 - **Job of the Site:** Establish unmatched technical authority, demonstrate real engineering rigor, and convert high-intent inbound visitors into booked strategy calls.
-- **Deployment:** Production homepage at `/` and mirrored prototype route at `/demo`. Fully verified with TDD test suites, 0 TypeScript errors, and 0 ESLint errors.
+- **Deployment:** Production homepage at `/` and mirrored prototype route at `/demo`. Fully verified with unit and security test suites, Next.js static checks, and TypeScript verification.
 
 ---
 
@@ -16,7 +16,7 @@ Metaphor:    An industrial automation runtime & flight deck for modern revenue o
 Signature:   "Telemetry Node Stage": interactive project index with real-time signal routing, cursor-following blueprint previews, and live performance metrics.
 Emotion:     Hyper-disciplined, uncompromising technical craft, razor-sharp speed.
 Motion verb: Snap and route (lines draw with laser velocity, data packets travel along gutters, typography settles with absolute lock).
-Screenshot:  The split hero with massive kinetic typography ("AUTONOMOUS REVENUE ENGINES"), four-corner telemetry coordinates (`DHAKA [23.8103° N] // STATUS: 100% OPERATIONAL`), and active glowing circuit traces.
+Screenshot:  The split hero with massive kinetic typography ("AUTONOMOUS REVENUE ENGINES"), telemetry status pills, and active glowing circuit traces.
 ```
 
 ### Concept Exploration & Territory Scoring
@@ -49,8 +49,8 @@ Screenshot:  The split hero with massive kinetic typography ("AUTONOMOUS REVENUE
 - Vertical anchor lines on columns 1, 5, 9.
 - Four-Corner Frame:
   - Top Left: `WHOISALFAZ // RUNTIME V2.4`
-  - Top Right: `SYSTEM TIME [DHAKA: UTC+6] // STATUS: NOMINAL`
-  - Bottom Left: `SPEED: 0.04s EDGE CACHE // NEXT.JS 16`
+  - Top Right: `SYSTEM RUNTIME // STATUS: NOMINAL`
+  - Bottom Left: `NEXT.JS 16 // EDGE CACHE ARCHITECTURE`
   - Bottom Right: `TACTICAL DISPATCH [CALENDAR ACCESS ↗]`
 
 ### Section Layout Families
