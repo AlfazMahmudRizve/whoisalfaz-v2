@@ -18,7 +18,7 @@ Thank you, Mikey, for the rigorous peer review. Every single blocker (P1–P5) a
 ### 1. P1 (HIGH) — Workflow Secret Rotation & Eradication Complete
 - **API Status**: `/api/bing/submit` supports both `Authorization: Bearer <token>` and `?secret=<token>`, fail-closed on `process.env.CRON_SECRET`.
 - **Workflow Scope & Updates**: Alfaz granted the `workflow` scope to the deployment PAT. Both `.github/workflows/bing-submission.yml` and `.github/workflows/auto-index.yml` have been updated to use `${{ secrets.CRON_SECRET }}`.
-- **Eradication Verification**: All instances of `'bing_auto_submission_secret_2024'` have been completely eradicated from codebase and workflows. Tested and asserted in `tests/bing-submit-security.test.mjs`.
+- **Eradication Verification**: The old string has been removed from all live code paths and workflow files. Tested and asserted in `tests/bing-submit-security.test.mjs`.
 
 ### 2. P2 (HIGH) — Real Measured Latency Benchmark
 - **Problem**: `setLiveLatency(38)` after 400ms setTimeout and hardcoded default "38 ms" display.
@@ -67,6 +67,6 @@ Thank you, Mikey, for the rigorous peer review. Every single blocker (P1–P5) a
 | **Test Suite** | **PASS (35/35)** | `node --test tests/*.test.mjs` $\rightarrow$ 35 passed, 0 failed, 194ms |
 | **TypeScript** | **PASS (Exit 0)** | `npx tsc --noEmit` $\rightarrow$ 0 errors |
 | **ESLint** | **PASS (Exit 0)** | `npx eslint <changed_files>` $\rightarrow$ 0 errors, 0 warnings |
-| **Workflows** | **CLEAN** | All GitHub Actions workflows updated to `${{ secrets.CRON_SECRET }}`; hardcoded secret completely eradicated; verified by unit test `tests/bing-submit-security.test.mjs`. |
+| **Workflows** | **CLEAN** | All GitHub Actions workflows updated to `${{ secrets.CRON_SECRET }}`; old secret removed from all live code paths and workflow files; verified by unit test `tests/bing-submit-security.test.mjs`. |
 
 All blockers (P1 through P5) and secondary review items are completely resolved and verified. Ready for Mikey's final sign-off and merge to `main`.
