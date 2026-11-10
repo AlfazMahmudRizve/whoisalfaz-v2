@@ -131,132 +131,167 @@ export default function HomeContentFooter() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   return (
-    <section className="py-32 px-6">
-      <div className="max-w-6xl mx-auto space-y-32">
-        {/* ─── WHO IS ALFAZ MAHMUD RIZVE ─── */}
-        <div className="max-w-5xl mx-auto">
-          <div className="grid md:grid-cols-[200px_1fr] gap-12 items-start">
-            {/* Portrait */}
-            <div className="hidden md:block">
-              <div className="relative w-48 h-48 rounded-3xl overflow-hidden border-4 border-slate-200 dark:border-slate-800 shadow-xl">
+    <section className="py-20 sm:py-24 px-4 sm:px-8 border-t border-slate-200 dark:border-white/10 bg-slate-50/50 dark:bg-black/30 transition-colors">
+      <div className="max-w-6xl mx-auto space-y-20">
+        
+        {/* ─── 1. ARCHITECT BRIEFING: WHO IS ALFAZ MAHMUD RIZVE ─── */}
+        <div id="about" className="scroll-mt-24">
+          <div className="rounded-[2.5rem] p-8 sm:p-12 border bg-white dark:bg-[#111622] border-slate-200/90 dark:border-white/10 shadow-xl relative overflow-hidden transition-all">
+            
+            <div className="grid md:grid-cols-[220px_1fr] gap-8 md:gap-12 items-center">
+              {/* Portrait with Status Badge */}
+              <div className="relative mx-auto md:mx-0 w-48 h-48 sm:w-52 sm:h-52 rounded-3xl overflow-hidden border-2 border-slate-200 dark:border-white/10 shadow-xl shrink-0 group">
                 <Image
                   src="/profile.webp"
-                  alt="Alfaz Mahmud Rizve — RevOps and Full Stack Automation Architect"
+                  alt="Alfaz Mahmud Rizve — GTM & RevOps Architect"
                   fill
-                  className="object-cover"
+                  sizes="208px"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-40 group-hover:opacity-10 transition-opacity" />
+                <span className="absolute bottom-3 right-3 flex h-3.5 w-3.5">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
+                  <span className="relative inline-flex rounded-full h-3.5 w-3.5 bg-emerald-500 border-2 border-white dark:border-[#111622]" />
+                </span>
+              </div>
+
+              {/* Bio & Credentials */}
+              <div>
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-[10px] font-mono font-bold uppercase tracking-widest mb-3 bg-teal-500/10 text-teal-700 dark:text-teal-400 border border-teal-500/20">
+                  <span className="w-1.5 h-1.5 rounded-full bg-teal-500" />
+                  <span>GTM &amp; RevOps Architect • Verified n8n Creator</span>
+                </div>
+
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-urbanist font-black text-slate-900 dark:text-white mb-4 uppercase tracking-tight">
+                  Who Is <span className="text-teal-700 dark:text-teal-400">Alfaz</span> Mahmud Rizve?
+                </h2>
+
+                <div className="space-y-3.5 text-sm sm:text-[15px] text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
+                  <p>
+                    I engineer autonomous revenue engines for scaling SaaS brands, digital agencies, and enterprise founders. Based in Bangladesh and consulting globally, I bridge high-velocity SEO architecture, sub-second Next.js web applications, and self-healing n8n RevOps pipelines.
+                  </p>
+                  <p>
+                    My goal is simple: replace fragile no-code tools and manual operational drag with enterprise-grade systems that generate pipeline and convert buyers 24/7. Explore our empirical{' '}
+                    <Link href="/blog/pinecone-vs-qdrant-vultr-benchmark/" className="text-teal-700 dark:text-teal-400 font-semibold hover:underline">
+                      Pinecone vs Qdrant benchmark
+                    </Link>, our verified{' '}
+                    <Link href="/blog/dify-ai-workflow-orchestration-vs-n8n-ai-agent-nodes/" className="text-teal-700 dark:text-teal-400 font-semibold hover:underline">
+                      Dify vs n8n workflow architecture
+                    </Link>, or run our browser-native{' '}
+                    <Link href="/audit/" className="text-teal-700 dark:text-teal-400 font-semibold hover:underline">
+                      free website audit tool
+                    </Link>.
+                  </p>
+                </div>
+
+                <div className="flex flex-wrap items-center gap-3 mt-6">
+                  <Link
+                    href="/portfolio/"
+                    className="px-6 py-3 bg-slate-900 hover:bg-slate-800 dark:bg-white dark:hover:bg-slate-100 text-white dark:text-slate-950 font-bold text-xs uppercase tracking-wider rounded-full transition-all shadow-sm"
+                  >
+                    View Project Library
+                  </Link>
+                  <Link
+                    href="/contact/"
+                    className="px-6 py-3 bg-teal-500/10 hover:bg-teal-500/20 text-teal-700 dark:text-teal-400 border border-teal-500/20 font-bold text-xs uppercase tracking-wider rounded-full transition-all"
+                  >
+                    Book Strategy Call
+                  </Link>
+                </div>
               </div>
             </div>
 
-            {/* Bio */}
-            <div>
-              <h2 className="text-3xl md:text-4xl font-black text-slate-900 dark:text-white mb-6 uppercase tracking-tight transition-colors duration-300">
-                Who Is <span className="text-teal-600 dark:text-teal-400">Alfaz</span> Mahmud Rizve?
-              </h2>
-              <div className="space-y-4 text-slate-600 dark:text-slate-400 leading-relaxed transition-colors duration-300">
-                <p>
-                  Alfaz Mahmud Rizve is a RevOps architect and full-stack automation engineer who builds autonomous revenue systems for scaling agencies, SaaS companies, and small businesses. Based in Bangladesh and working with clients globally, he specializes in eliminating manual bottlenecks through self-healing n8n workflows, production-grade <Link href="/blog/dify-ai-workflow-orchestration-vs-n8n-ai-agent-nodes/" className="text-teal-600 dark:text-teal-400 font-bold hover:underline">Dify vs n8n AI workflow architecture</Link>, and high-performance Next.js infrastructure.
-                </p>
-                <p>
-                  With a focus on practical, revenue-driven engineering, Alfaz helps agency founders execute the <Link href="/blog/ai-automation-agency-business-model/" className="text-teal-600 dark:text-teal-400 font-bold hover:underline">AI automation agency business model</Link> — replacing fragile Zapier chains and manual processes with enterprise-grade automation architectures that run 24/7 without human intervention. His work spans custom full-stack applications, headless CMS infrastructure, technical SEO, and workflow automation consulting.
-                </p>
-                <p>
-                  Through <Link href="/blog/" className="text-teal-600 dark:text-blue-400 font-bold hover:underline">his blog</Link>, Alfaz documents the exact systems, tools, and frameworks he uses — including our comprehensive <Link href="/blog/manychat-pricing-2026/" className="text-teal-600 dark:text-teal-400 font-bold hover:underline">ManyChat 2026 pricing teardown</Link> and empirical <Link href="/blog/pinecone-vs-qdrant-vultr-benchmark/" className="text-teal-600 dark:text-teal-400 font-bold hover:underline">Pinecone vs Qdrant benchmark on Vultr</Link>. He also provides a <Link href="/blog/screaming-frog-alternatives-free-seo-audit-tools/" className="text-teal-600 dark:text-teal-400 font-bold hover:underline">free Screaming Frog alternative</Link> via his <Link href="/audit/" className="text-teal-600 dark:text-blue-400 font-bold hover:underline">free website audit tool</Link> and an <Link href="/labs/roi/" className="text-teal-600 dark:text-blue-400 font-bold hover:underline">ROI calculator</Link> to help agencies measure automation impact before investing.
-                </p>
-              </div>
-              <div className="flex flex-wrap gap-3 mt-8">
-                <Link
-                  href="/portfolio/"
-                  className="px-6 py-3 bg-slate-900 dark:bg-white/10 text-white font-bold text-xs uppercase tracking-widest rounded-xl hover:bg-slate-800 dark:hover:bg-white/15 transition-all"
-                >
-                  View Portfolio
-                </Link>
-                <Link
-                  href="/contact/"
-                  className="px-6 py-3 bg-slate-100 dark:bg-white/5 text-slate-900 dark:text-white font-bold text-xs uppercase tracking-widest rounded-xl border border-slate-200 dark:border-white/10 hover:bg-slate-200 dark:hover:bg-white/10 transition-all"
-                >
-                  Book Strategy Call
-                </Link>
-              </div>
-            </div>
           </div>
         </div>
 
-        {/* ─── TECHNOLOGY STACK ─── */}
+        {/* ─── 2. TECHNOLOGY STACK & CAPABILITIES ─── */}
         <div>
-          <h2 className="text-3xl md:text-4xl font-black text-slate-900 dark:text-white mb-4 uppercase tracking-tight text-center transition-colors duration-300">
-            Our Technology <span className="text-purple-600 dark:text-purple-400">Stack</span>
-          </h2>
-          <p className="text-slate-500 dark:text-slate-400 text-center max-w-2xl mx-auto mb-16 leading-relaxed transition-colors duration-300">
-            The tools and frameworks we use to build autonomous revenue systems for modern businesses.
-          </p>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="text-center mb-10">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-urbanist font-black text-slate-900 dark:text-white uppercase tracking-tight">
+              Technology <span className="text-purple-600 dark:text-purple-400">Stack &amp; Capabilities</span>
+            </h2>
+            <p className="text-slate-500 dark:text-slate-400 text-sm max-w-xl mx-auto mt-2 leading-relaxed">
+              Core production engines and frameworks deployed across our client infrastructure.
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
             {techStack.map((tech) => (
               <Link
                 key={tech.name}
                 href={tech.link}
-                className="group p-6 rounded-2xl bg-white dark:bg-white/[0.02] border border-slate-200 dark:border-white/5 hover:border-teal-500/30 dark:hover:border-white/10 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg dark:hover:shadow-none"
+                className="group p-6 rounded-2xl bg-white dark:bg-[#111622] border border-slate-200/90 dark:border-white/10 hover:border-teal-500/40 dark:hover:border-teal-400/40 hover:-translate-y-1 hover:shadow-lg transition-all duration-200 flex flex-col justify-between"
               >
-                <div className="flex items-center gap-4 mb-4">
-                  <div
-                    className={`w-10 h-10 rounded-lg ${tech.bg} border ${tech.border} flex items-center justify-center ${tech.color} group-hover:scale-110 transition-transform`}
-                  >
-                    <tech.icon size={18} />
+                <div>
+                  <div className="flex items-center gap-3.5 mb-3.5">
+                    <div className={`w-10 h-10 rounded-xl ${tech.bg} border ${tech.border} flex items-center justify-center ${tech.color} group-hover:scale-105 transition-transform`}>
+                      <tech.icon size={20} />
+                    </div>
+                    <div>
+                      <h3 className="text-slate-900 dark:text-white font-bold text-base uppercase tracking-tight group-hover:text-teal-700 dark:group-hover:text-teal-400 transition-colors">
+                        {tech.name}
+                      </h3>
+                      <span className="text-[10px] font-mono font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500">
+                        {tech.role}
+                      </span>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="text-slate-900 dark:text-white font-bold text-sm uppercase tracking-tight transition-colors">
-                      {tech.name}
-                    </h3>
-                    <span className="text-[10px] text-slate-500 dark:text-slate-500 uppercase tracking-widest font-bold">
-                      {tech.role}
-                    </span>
-                  </div>
+                  <p className="text-slate-600 dark:text-slate-400 text-xs sm:text-sm leading-relaxed">
+                    {tech.desc}
+                  </p>
                 </div>
-                <p className="text-slate-500 dark:text-slate-400 text-xs leading-relaxed transition-colors">
-                  {tech.desc}
-                </p>
+
+                <div className="mt-4 pt-3 border-t border-slate-100 dark:border-white/[0.06] flex items-center justify-between text-[11px] font-bold text-teal-700 dark:text-teal-400 uppercase tracking-wider">
+                  <span>Explore Architecture</span>
+                  <span className="group-hover:translate-x-1 transition-transform">→</span>
+                </div>
               </Link>
             ))}
           </div>
         </div>
 
-        {/* ─── FREQUENTLY ASKED QUESTIONS ─── */}
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-black text-slate-900 dark:text-white mb-4 uppercase tracking-tight text-center transition-colors duration-300">
-            Frequently Asked <span className="text-teal-600 dark:text-teal-400">Questions</span>
-          </h2>
-          <p className="text-slate-500 dark:text-slate-400 text-center max-w-2xl mx-auto mb-12 leading-relaxed transition-colors duration-300">
-            Common questions about automation, our services, and working with Alfaz Mahmud Rizve.
-          </p>
+        {/* ─── 3. FREQUENTLY ASKED QUESTIONS ─── */}
+        <div id="faq" className="max-w-3xl mx-auto scroll-mt-24">
+          <div className="text-center mb-10">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-urbanist font-black text-slate-900 dark:text-white uppercase tracking-tight">
+              Frequently Asked <span className="text-teal-700 dark:text-teal-400">Questions</span>
+            </h2>
+            <p className="text-slate-500 dark:text-slate-400 text-sm max-w-xl mx-auto mt-2 leading-relaxed">
+              Transparent answers regarding client engagements, timeline delivery, and technical ownership.
+            </p>
+          </div>
+
           <div className="space-y-3">
             {faqs.map((faq, i) => {
               const isOpen = openFaq === i;
               return (
                 <div
                   key={i}
-                  className={`rounded-2xl border transition-all duration-300 ${
+                  className={`rounded-2xl border transition-all duration-200 overflow-hidden ${
                     isOpen
-                      ? 'border-teal-500/30 dark:border-teal-500/30 bg-teal-50 dark:bg-teal-500/5'
-                      : 'border-slate-200 dark:border-white/5 bg-white dark:bg-white/[0.02] hover:border-slate-300 dark:hover:border-white/10'
+                      ? 'border-teal-500/40 bg-teal-500/[0.03] shadow-sm'
+                      : 'border-slate-200/90 dark:border-white/10 bg-white dark:bg-[#111622] hover:border-slate-300 dark:hover:border-white/20'
                   }`}
                 >
                   <button
                     onClick={() => setOpenFaq(isOpen ? null : i)}
-                    className="w-full flex items-center justify-between gap-4 p-5 text-left"
+                    className="w-full flex items-center justify-between gap-4 p-5 text-left cursor-pointer"
                   >
-                    <span className="text-slate-900 dark:text-white font-bold text-[15px] transition-colors">
+                    <span className={`font-bold text-sm sm:text-base tracking-tight transition-colors ${
+                      isOpen ? 'text-teal-800 dark:text-teal-300' : 'text-slate-900 dark:text-white'
+                    }`}>
                       {faq.q}
                     </span>
                     <ChevronDown
                       size={18}
-                      className={`text-slate-400 transition-transform duration-300 flex-shrink-0 ${
+                      className={`text-slate-400 transition-transform duration-200 flex-shrink-0 ${
                         isOpen ? 'rotate-180 text-teal-600 dark:text-teal-400' : ''
                       }`}
                     />
                   </button>
                   {isOpen && (
-                    <div className="px-5 pb-5 -mt-1">
-                      <div className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed transition-colors">
+                    <div className="px-5 pb-5 -mt-1 border-t border-slate-100 dark:border-white/[0.04] pt-3">
+                      <div className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
                         {faq.a}
                       </div>
                     </div>
@@ -266,6 +301,7 @@ export default function HomeContentFooter() {
             })}
           </div>
         </div>
+
       </div>
     </section>
   );

@@ -43,6 +43,8 @@ next-env.d.ts
 
 
 # scratch & temp files
+scratch/
+*.backup.*
 temp_*
 build_log*
 scripts/fix-*
@@ -52,3 +54,7 @@ scripts/fix-*
 
 # Google Indexing API secrets
 service_account_key.json
+
+# Python
+__pycache__/
+*.pyc

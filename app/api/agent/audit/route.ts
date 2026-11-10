@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import { z } from 'zod';
-import { runFullAudit, calculateOverallScore, normalizeTargetUrl } from '@/lib/audit';
+import { runFullAudit, calculateOverallScore, normalizeTargetUrl, isPrivateOrLocalUrl } from '@/lib/audit';
 
 export const dynamic = 'force-dynamic';
 export const maxDuration = 60; // Allow up to 60 seconds to prevent Vercel 504 execution timeouts
@@ -17,31 +17,6 @@ export async function OPTIONS() {
         status: 204,
         headers: corsHeaders,
     });
-}
-
-function isPrivateOrLocalUrl(rawUrl: string): boolean {
-    try {
-        const parsed = new URL(rawUrl);
-        const host = parsed.hostname.toLowerCase();
-        if (host === 'localhost' || host === '127.0.0.1' || host === '0.0.0.0' || host === '::1') {
-            return true;
-        }
-        if (host === '169.254.169.254' || host.startsWith('169.254.')) {
-            return true;
-        }
-        if (host.startsWith('10.') || host.startsWith('192.168.')) {
-            return true;
-        }
-        if (/^172\.(1[6-9]|2[0-9]|3[0-1])\./.test(host)) {
-            return true;
-        }
-        if (host.endsWith('.local') || host.endsWith('.internal')) {
-            return true;
-        }
-        return false;
-    } catch {
-        return true;
-    }
 }
 
 const agentAuditSchema = z.object({

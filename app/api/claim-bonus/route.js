@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server';
+import { escapeHtml } from '@/lib/utils';
 
 export const dynamic = 'force-dynamic';
 
@@ -18,9 +19,10 @@ export async function POST(request) {
       return NextResponse.json({ error: 'Please provide a valid work email address.' }, { status: 400 });
     }
 
-    const cleanName = (name || 'Friend').trim();
-    const cleanEmail = email.toLowerCase().trim();
-    const cleanOrderId = (orderId || 'FREE_COMMUNITY_ACCESS').trim();
+    const rawName = (name || 'Friend').trim();
+    const cleanName = escapeHtml(rawName);
+    const cleanEmail = escapeHtml(email.toLowerCase().trim());
+    const _cleanOrderId = escapeHtml((orderId || 'FREE_COMMUNITY_ACCESS').trim());
 
     const downloadUrl = 'https://whoisalfaz.me/downloads/manychat-automation-bonus-pack.zip';
 

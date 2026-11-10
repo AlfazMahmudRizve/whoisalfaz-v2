@@ -29,8 +29,40 @@ export function normalizeTargetUrl(url: string): string {
     return normalized.replace(/^(https?:\/\/)\/+/i, '$1');
 }
 
+/**
+ * SSRF Guard: Rejects loopback, link-local, cloud metadata, RFC1918 private ranges, and non-http(s) schemes.
+ */
+export function isPrivateOrLocalUrl(rawUrl: string): boolean {
+    try {
+        const parsed = new URL(rawUrl);
+        if (parsed.protocol !== 'http:' && parsed.protocol !== 'https:') {
+            return true;
+        }
+
+        const host = parsed.hostname.toLowerCase().replace(/^\[|\]$/g, '');
+        if (host === 'localhost' || host === '127.0.0.1' || host === '0.0.0.0' || host === '::1' || host === '0:0:0:0:0:0:0:1') {
+            return true;
+        }
+        if (host === '169.254.169.254' || host.startsWith('169.254.')) {
+            return true;
+        }
+        if (host.startsWith('10.') || host.startsWith('192.168.')) {
+            return true;
+        }
+        if (/^172\.(1[6-9]|2[0-9]|3[0-1])\./.test(host)) {
+            return true;
+        }
+        if (host.endsWith('.local') || host.endsWith('.internal') || host.endsWith('.localhost') || host.endsWith('.lan')) {
+            return true;
+        }
+        return false;
+    } catch {
+        return true;
+    }
+}
+
 // ─── 1. PageSpeed Insights & Performance Benchmark ──────────
-async function runSyntheticPerformanceCheck(url: string, reasonNotice?: string): Promise<CheckResult> {
+async function runSyntheticPerformanceCheck(url: string, _reasonNotice?: string): Promise<CheckResult> {
     const name = 'Performance & Core Web Vitals';
     const targetUrl = normalizeTargetUrl(url);
     const startTime = Date.now();

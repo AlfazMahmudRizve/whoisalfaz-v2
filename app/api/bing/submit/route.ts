@@ -10,10 +10,10 @@ export async function GET(request: Request) {
     try {
         const { searchParams } = new URL(request.url);
         const secret = searchParams.get('secret');
-        const validSecret = process.env.CRON_SECRET || 'bing_auto_submission_secret_2024';
+        const cronSecret = process.env.CRON_SECRET;
 
-        // Check for Cron Secret to prevent unauthorized access
-        if (secret !== validSecret && secret !== 'bing_auto_submission_secret_2024') {
+        // Fail-closed check: Require CRON_SECRET to be configured and matched
+        if (!cronSecret || secret !== cronSecret) {
             return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
         }
 

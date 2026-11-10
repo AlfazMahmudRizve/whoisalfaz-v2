@@ -25,6 +25,18 @@ export default function BlogImage({ src, alt, ...props }) {
         
     const finalAlt = alt || fallbackAltText;
 
+    // Sanitize width and height to prevent Next.js Image crashes (e.g. string '100%')
+    const { width: rawWidth, height: rawHeight, ...cleanProps } = props;
+    let finalWidth = 1200;
+    let finalHeight = 675;
+
+    if (rawWidth && !isNaN(Number(rawWidth)) && Number(rawWidth) > 0) {
+        finalWidth = Number(rawWidth);
+    }
+    if (rawHeight && !isNaN(Number(rawHeight)) && Number(rawHeight) > 0) {
+        finalHeight = Number(rawHeight);
+    }
+
     return (
         <>
             {/* Inline Image (clickable) */}
@@ -38,15 +50,15 @@ export default function BlogImage({ src, alt, ...props }) {
                 <Image
                     src={src}
                     alt={finalAlt}
-                    width={1200}
-                    height={675}
+                    width={finalWidth}
+                    height={finalHeight}
                     quality={85}
                     priority={isPriority}
                     loading={isPriority ? "eager" : "lazy"}
                     fetchPriority={isPriority ? "high" : "auto"}
                     className="w-full max-w-3xl mx-auto rounded-2xl shadow-2xl border border-white/10 transition-all duration-300 group-hover:shadow-teal-500/10 group-hover:border-teal-500/30"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 800px"
-                    {...props}
+                    {...cleanProps}
                 />
                 <span className="block text-center text-xs text-slate-600 mt-3 opacity-0 group-hover:opacity-100 transition-opacity">
                     Click to expand

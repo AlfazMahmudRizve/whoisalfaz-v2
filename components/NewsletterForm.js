@@ -3,72 +3,116 @@
 import { useState } from 'react';
 import { Loader2, Check, Send } from 'lucide-react';
 
-export default function NewsletterForm({ source = 'Newsletter' }) {
-    const [email, setEmail] = useState('');
-    const [status, setStatus] = useState('idle'); // idle, loading, success, error
+export default function NewsletterForm({
+  source = 'Newsletter',
+  variant = 'default',
+  buttonText = 'Subscribe Free',
+  placeholder = 'Enter your work email...',
+  className = '',
+}) {
+  const [email, setEmail] = useState('');
+  const [status, setStatus] = useState('idle'); // idle, loading, success, error
 
-    const handleSubscribe = async (e) => {
-        e.preventDefault();
-        if (!email) return;
-        setStatus('loading');
+  const handleSubscribe = async (e) => {
+    e.preventDefault();
+    if (!email) return;
+    setStatus('loading');
 
-        try {
-            const res = await fetch('/api/newsletter', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    email,
-                    source: source
-                })
-            });
+    try {
+      const res = await fetch('/api/newsletter', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          email,
+          source: source,
+        }),
+      });
 
-            if (res.ok) {
-                setStatus('success');
-                setEmail('');
-            } else {
-                setStatus('error');
-            }
-        } catch {
-            setStatus('error');
-        }
-    };
-
-    if (status === 'success') {
-        return (
-            <div className="w-full py-4 bg-green-500/10 dark:bg-green-500/20 border border-green-500/20 dark:border-green-500/30 rounded-xl text-green-700 dark:text-green-300 font-bold flex items-center justify-center gap-2 animate-in fade-in zoom-in">
-                <Check size={20} />
-                <span>Subscribed protocol verified!</span>
-            </div>
-        );
+      if (res.ok) {
+        setStatus('success');
+        setEmail('');
+      } else {
+        setStatus('error');
+      }
+    } catch {
+      setStatus('error');
     }
+  };
 
+  if (status === 'success') {
     return (
-        <form onSubmit={handleSubscribe} className="space-y-4 w-full">
-            <input
-                type="email"
-                placeholder="Secure connection email..."
-                required
-                className="w-full bg-white dark:bg-black/50 border border-slate-200 dark:border-white/10 rounded-xl p-4 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-600 focus:outline-none focus:ring-2 focus:ring-teal-500/50 dark:focus:ring-blue-500/50 shadow-inner transition-all duration-300"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-            />
-            <button
-                type="submit"
-                disabled={status === 'loading'}
-                className="w-full py-4 bg-teal-700 dark:bg-blue-600 hover:bg-teal-600 dark:hover:bg-blue-500 text-white font-black uppercase tracking-tight rounded-xl transition-all flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed shadow-lg shadow-teal-500/20 dark:shadow-blue-500/20 hover:shadow-teal-500/40 dark:hover:shadow-blue-500/40"
-            >
-                {status === 'loading' ? (
-                    <Loader2 size={20} className="animate-spin" />
-                ) : (
-                    <>
-                        <span>Verify & Subscribe</span>
-                        <Send size={18} className="translate-y-px" />
-                    </>
-                )}
-            </button>
-            {status === 'error' && (
-                <p className="text-red-500 dark:text-red-400 text-xs font-bold uppercase tracking-wider text-center mt-2">Protocol failed. Retransmit data.</p>
-            )}
-        </form>
+      <div className="w-full py-3.5 px-4 bg-emerald-500/10 border border-emerald-500/20 rounded-full text-emerald-700 dark:text-emerald-300 font-semibold text-xs flex items-center justify-center gap-2 animate-in fade-in zoom-in">
+        <Check size={18} className="text-emerald-600 dark:text-emerald-400" />
+        <span>You are subscribed! Check your inbox for your first playbook.</span>
+      </div>
     );
+  }
+
+  if (variant === 'inline') {
+    return (
+      <div className={`w-full ${className}`}>
+        <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row items-center gap-2.5 w-full">
+          <input
+            type="email"
+            placeholder={placeholder}
+            required
+            className="w-full sm:flex-1 bg-white dark:bg-white/[0.05] border border-slate-200 dark:border-white/10 rounded-full px-5 py-3.5 text-sm text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-teal-500/40 shadow-xs transition-all duration-200"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <button
+            type="submit"
+            disabled={status === 'loading'}
+            className="w-full sm:w-auto px-7 py-3.5 bg-teal-600 hover:bg-teal-700 dark:bg-teal-400 dark:hover:bg-teal-300 text-white dark:text-slate-950 font-bold text-xs uppercase tracking-wider rounded-full transition-all flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed shadow-md shadow-teal-600/20 shrink-0 cursor-pointer"
+          >
+            {status === 'loading' ? (
+              <Loader2 size={16} className="animate-spin" />
+            ) : (
+              <>
+                <span>{buttonText}</span>
+                <Send size={14} className="translate-y-px" />
+              </>
+            )}
+          </button>
+        </form>
+        {status === 'error' && (
+          <p className="text-rose-500 dark:text-rose-400 text-xs font-semibold text-center mt-2.5">
+            Unable to subscribe right now. Please check your email or try again.
+          </p>
+        )}
+      </div>
+    );
+  }
+
+  return (
+    <form onSubmit={handleSubscribe} className={`space-y-3.5 w-full ${className}`}>
+      <input
+        type="email"
+        placeholder={placeholder}
+        required
+        className="w-full bg-white dark:bg-black/50 border border-slate-200 dark:border-white/10 rounded-xl p-3.5 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-teal-500/40 shadow-xs transition-all duration-300 text-sm"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+      />
+      <button
+        type="submit"
+        disabled={status === 'loading'}
+        className="w-full py-3.5 bg-teal-600 hover:bg-teal-700 dark:bg-teal-400 dark:hover:bg-teal-300 text-white dark:text-slate-950 font-bold text-xs uppercase tracking-wider rounded-xl transition-all flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed shadow-md shadow-teal-500/20 cursor-pointer"
+      >
+        {status === 'loading' ? (
+          <Loader2 size={18} className="animate-spin" />
+        ) : (
+          <>
+            <span>{buttonText}</span>
+            <Send size={16} className="translate-y-px" />
+          </>
+        )}
+      </button>
+      {status === 'error' && (
+        <p className="text-rose-500 dark:text-rose-400 text-xs font-semibold text-center mt-1">
+          Unable to subscribe right now. Please check your email or try again.
+        </p>
+      )}
+    </form>
+  );
 }

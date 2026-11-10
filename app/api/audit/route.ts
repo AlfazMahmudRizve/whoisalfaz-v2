@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import { z } from 'zod';
-import { runFullAudit } from '@/lib/audit';
+import { runFullAudit, isPrivateOrLocalUrl } from '@/lib/audit';
 import { sendAuditReport, notifyAdmin, addToBrevoList } from '@/lib/audit-email';
 
 export const maxDuration = 60; // Allow up to 60 seconds to prevent Vercel 504 timeouts
@@ -29,6 +29,17 @@ export async function POST(request: Request) {
 
         // Normalize URL
         const normalizedUrl = url.startsWith('http') ? url : `https://${url}`;
+
+        // SSRF Guard: Prevent targeting internal loopback or cloud metadata IPs
+        if (isPrivateOrLocalUrl(normalizedUrl)) {
+            return NextResponse.json(
+                {
+                    error: 'Validation failed',
+                    details: { url: ['Target URL cannot resolve to private, local, or cloud metadata addresses'] },
+                },
+                { status: 400 }
+            );
+        }
 
         // 2. Run the full audit (all 6 checks in parallel)
         const results = await runFullAudit(normalizedUrl);

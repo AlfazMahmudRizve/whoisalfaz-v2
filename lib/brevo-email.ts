@@ -5,6 +5,8 @@
  * to reduce complexity and enable reuse.
  */
 
+import { escapeHtml } from '@/lib/utils';
+
 // ─── Configuration ───────────────────────────────────────────────────────────
 function getBrevoConfig() {
     const apiKey = process.env.BREVO_API_KEY;
@@ -51,18 +53,23 @@ export async function sendContactNotification(data: {
         return false;
     }
 
+    const safeName = escapeHtml(data.name);
+    const safeEmail = escapeHtml(data.email);
+    const safeService = escapeHtml(data.service);
+    const safeMessage = escapeHtml(data.message);
+
     return brevoFetch('/smtp/email', {
         sender: { name: 'whoisalfaz.me', email: senderEmail },
         to: [{ email: adminEmail }],
         replyTo: { email: data.email, name: data.name },
-        subject: `New Contact: ${data.service} — ${data.name}`,
+        subject: `New Contact: ${safeService} — ${safeName}`,
         htmlContent: `
             <h2>New Contact Form Submission</h2>
             <table style="border-collapse:collapse;width:100%;max-width:600px;">
-                <tr><td style="padding:8px;border:1px solid #ddd;font-weight:bold;">Name</td><td style="padding:8px;border:1px solid #ddd;">${data.name}</td></tr>
-                <tr><td style="padding:8px;border:1px solid #ddd;font-weight:bold;">Email</td><td style="padding:8px;border:1px solid #ddd;"><a href="mailto:${data.email}">${data.email}</a></td></tr>
-                <tr><td style="padding:8px;border:1px solid #ddd;font-weight:bold;">Service</td><td style="padding:8px;border:1px solid #ddd;">${data.service}</td></tr>
-                <tr><td style="padding:8px;border:1px solid #ddd;font-weight:bold;">Message</td><td style="padding:8px;border:1px solid #ddd;">${data.message}</td></tr>
+                <tr><td style="padding:8px;border:1px solid #ddd;font-weight:bold;">Name</td><td style="padding:8px;border:1px solid #ddd;">${safeName}</td></tr>
+                <tr><td style="padding:8px;border:1px solid #ddd;font-weight:bold;">Email</td><td style="padding:8px;border:1px solid #ddd;"><a href="mailto:${safeEmail}">${safeEmail}</a></td></tr>
+                <tr><td style="padding:8px;border:1px solid #ddd;font-weight:bold;">Service</td><td style="padding:8px;border:1px solid #ddd;">${safeService}</td></tr>
+                <tr><td style="padding:8px;border:1px solid #ddd;font-weight:bold;">Message</td><td style="padding:8px;border:1px solid #ddd;">${safeMessage}</td></tr>
             </table>
             <p style="margin-top:16px;color:#666;font-size:12px;">Sent from whoisalfaz.me contact form</p>
         `,
@@ -76,7 +83,8 @@ export async function sendContactAutoResponder(data: {
     service: string;
 }): Promise<boolean> {
     const { senderEmail } = getBrevoConfig();
-    const firstName = data.name.split(' ')[0];
+    const firstName = escapeHtml(data.name.split(' ')[0]);
+    const safeService = escapeHtml(data.service);
 
     return brevoFetch('/smtp/email', {
         sender: { name: 'Alfaz Mahmud — whoisalfaz.me', email: senderEmail },
@@ -85,7 +93,7 @@ export async function sendContactAutoResponder(data: {
         htmlContent: `
             <div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;max-width:600px;margin:0 auto;color:#333;line-height:1.6;font-size:15px;padding:20px;">
                 <p>Hi ${firstName},</p>
-                <p>I received your inquiry regarding <strong>${data.service}</strong>.</p>
+                <p>I received your inquiry regarding <strong>${safeService}</strong>.</p>
                 <p>I typically review new project requests and reply within 24 hours. If your request is urgent, you can book a discovery session directly on my calendar here:</p>
                 <p><a href="https://whoisalfaz.me/contact/" style="display:inline-block;background-color:#0f172a;color:#ffffff;padding:12px 24px;text-decoration:none;border-radius:6px;font-weight:600;font-size:14px;">Book a Strategy Call</a></p>
                 <br>
