@@ -11,6 +11,7 @@ export default function NewsletterForm({
   className = '',
 }) {
   const [email, setEmail] = useState('');
+  const [hpWebsite, setHpWebsite] = useState('');
   const [status, setStatus] = useState('idle'); // idle, loading, success, error
 
   const handleSubscribe = async (e) => {
@@ -25,6 +26,7 @@ export default function NewsletterForm({
         body: JSON.stringify({
           email,
           source: source,
+          hp_website: hpWebsite,
         }),
       });
 
@@ -51,7 +53,18 @@ export default function NewsletterForm({
   if (variant === 'inline') {
     return (
       <div className={`w-full ${className}`}>
-        <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row items-center gap-2.5 w-full">
+        <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row items-center gap-2.5 w-full relative">
+          {/* Honeypot field for bot protection */}
+          <div className="absolute -left-[9999px] opacity-0 pointer-events-none" aria-hidden="true">
+            <input
+              type="text"
+              name="hp_website"
+              tabIndex={-1}
+              autoComplete="off"
+              value={hpWebsite}
+              onChange={(e) => setHpWebsite(e.target.value)}
+            />
+          </div>
           <input
             type="email"
             placeholder={placeholder}
@@ -85,7 +98,18 @@ export default function NewsletterForm({
   }
 
   return (
-    <form onSubmit={handleSubscribe} className={`space-y-3.5 w-full ${className}`}>
+    <form onSubmit={handleSubscribe} className={`space-y-3.5 w-full relative ${className}`}>
+      {/* Honeypot field for bot protection */}
+      <div className="absolute -left-[9999px] opacity-0 pointer-events-none" aria-hidden="true">
+        <input
+          type="text"
+          name="hp_website"
+          tabIndex={-1}
+          autoComplete="off"
+          value={hpWebsite}
+          onChange={(e) => setHpWebsite(e.target.value)}
+        />
+      </div>
       <input
         type="email"
         placeholder={placeholder}

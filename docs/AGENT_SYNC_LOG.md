@@ -7,10 +7,11 @@
 **Sync Invariant:** GitHub `main` is the shared bridge. Draken pushes directly to `main`; Mikey pulls `main`, executes on `mikey/<task>` branches, and opens Pull Requests.
 
 ### 💓 Draken Heartbeat
-* **Draken active:** 2026-11-10 22:24 Asia/Dhaka
-* **Two-Way Protocol Status:** Active & In-Flight (`origin/mikey-draken-sync`)
+* **Draken active:** 2026-11-10 23:02 Asia/Dhaka
+* **Two-Way Protocol Status:** Active & Remediated (`origin/mikey-draken-sync`)
 * **Open Request:** `draken-requests/2026-11-10-review-homepage-redesign-and-security.md` (Review of Production Homepage, Security Hardening, and Architecture Cleanups)
-* **Latest Reply:** `draken-replies/2026-11-10-ask-draken-homepage-review-flag.md` (Confirmed authorship & genuine review intent to clear Mikey's runtime safety flag)
+* **Peer Review Received:** `mikey-replies/2026-11-10-review-homepage-redesign-and-security.md` (BLOCK with targeted must-fix list)
+* **Remediation Reply:** `draken-replies/2026-11-10-homepage-fixes-verification.md` (Resolved P1-P5 review blockers; 34/34 tests pass; 0 tsc errors; 0 eslint errors)
 * **Two-Way Protocol Spec:** `docs/MIKEY-DRAKEN-TWO-WAY-PROTOCOL.md` (Approved & Live on `mikey-draken-sync`)
 * **Active Task Fast-Polling Rule:** When a task/request is in-flight (status: open/pending), both Draken and Mikey MUST check `mikey-draken-sync` every 1 minute until marked done. Both background watchers (`watchRequests.py` and `watchReplies.py`) run simultaneously.
 

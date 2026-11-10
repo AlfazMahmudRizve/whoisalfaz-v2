@@ -43,6 +43,10 @@ export function isPrivateOrLocalUrl(rawUrl: string): boolean {
         if (host === 'localhost' || host === '127.0.0.1' || host === '0.0.0.0' || host === '::1' || host === '0:0:0:0:0:0:0:1') {
             return true;
         }
+        // IPv4-mapped IPv6 and alternative loopbacks
+        if (host.startsWith('::ffff:') || host.includes('127.0.0.1') || host === '0') {
+            return true;
+        }
         if (host === '169.254.169.254' || host.startsWith('169.254.')) {
             return true;
         }
@@ -531,6 +535,9 @@ export function calculateOverallScore(checks: CheckResult[]): { score: number; g
 // ─── Run Full Audit ─────────────────────────────────────────
 export async function runFullAudit(url: string): Promise<AuditResults> {
     const normalized = normalizeTargetUrl(url);
+    if (isPrivateOrLocalUrl(normalized)) {
+        throw new Error('SSRF Blocked: Target URL cannot resolve to private, local, or cloud metadata addresses');
+    }
     // Run all checks in parallel
     const checks = await Promise.all([
         runPageSpeedCheck(normalized),

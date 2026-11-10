@@ -16,7 +16,9 @@ import {
   ChevronRight,
   Sliders,
   UserCheck,
-  Sparkles
+  Sparkles,
+  Volume2,
+  VolumeX,
 } from 'lucide-react';
 
 import WorkflowSteps from '@/components/WorkflowSteps';
@@ -150,7 +152,7 @@ export default function ProductionHomepage({ posts }: Props) {
     () => true,
     () => false
   );
-  const [soundEnabled] = useState(true);
+  const [soundEnabled, setSoundEnabled] = useState(true);
   const [activeTimelineStep, setActiveTimelineStep] = useState<number>(1);
 
   // Business ROI Calculator State
@@ -166,14 +168,20 @@ export default function ProductionHomepage({ posts }: Props) {
   // Safe theme detection
   const isLight = mounted ? (resolvedTheme || theme) === 'light' : true;
 
-  const runLatencyBenchmark = () => {
+  const runLatencyBenchmark = async () => {
     setLatencyTesting(true);
     playSound(880, 'sine', 0.04);
-    setTimeout(() => {
-      setLiveLatency(38);
-      setLatencyTesting(false);
+    try {
+      const start = performance.now();
+      await fetch('/favicon.ico', { method: 'HEAD', cache: 'no-store' });
+      const duration = Math.max(8, Math.round(performance.now() - start));
+      setLiveLatency(duration);
       playSound(1200, 'triangle', 0.08);
-    }, 400);
+    } catch {
+      setLiveLatency(null);
+    } finally {
+      setLatencyTesting(false);
+    }
   };
 
   // Micro audio synthesis helper
@@ -435,7 +443,7 @@ export default function ProductionHomepage({ posts }: Props) {
                   </div>
                   
                   <div className="hidden sm:flex items-center gap-2 text-[11px] font-mono text-slate-400 dark:text-slate-500">
-                    <span>12+ Native Integrations</span>
+                    <span>12 Native Integrations</span>
                     <span className="text-slate-300 dark:text-white/20">•</span>
                     <span className="text-teal-700 dark:text-teal-400 font-semibold">Zero Vendor Lock-In</span>
                   </div>
@@ -559,7 +567,7 @@ export default function ProductionHomepage({ posts }: Props) {
                       <p className={`text-sm sm:text-base leading-relaxed mb-8 font-normal max-w-xl ${
                         isLight ? 'text-slate-600' : 'text-slate-300'
                       }`}>
-                        Stop burning your budget on rising Meta and Google ad auctions. We build 600+ page search systems that rank for high-intent keywords your potential clients are actively searching for — bringing qualified leads directly to you with zero ongoing ad spend.
+                        Stop relying solely on rising paid ad auctions. We build programmatic search architectures and targeted topical authority systems that capture high-intent buyers — bringing qualified inbound inquiries directly to you with zero ongoing ad spend.
                       </p>
                     </div>
 
@@ -569,12 +577,12 @@ export default function ProductionHomepage({ posts }: Props) {
                         isLight ? 'bg-slate-50 border border-slate-200' : 'bg-black/50 border border-white/[0.08]'
                       }`}>
                         <div>
-                          <div className={`text-2xl sm:text-3xl font-urbanist font-black ${isLight ? 'text-slate-900' : 'text-white'}`}>+380%</div>
-                          <div className={`text-xs font-semibold ${isLight ? 'text-slate-500' : 'text-slate-400'}`}>Organic Traffic</div>
+                          <div className={`text-2xl sm:text-3xl font-urbanist font-black ${isLight ? 'text-slate-900' : 'text-white'}`}>Page 1</div>
+                          <div className={`text-xs font-semibold ${isLight ? 'text-slate-500' : 'text-slate-400'}`}>Target Rankings</div>
                         </div>
                         <div>
-                          <div className={`text-2xl sm:text-3xl font-urbanist font-black ${isLight ? 'text-teal-700' : 'text-teal-400'}`}>600+</div>
-                          <div className={`text-xs font-semibold ${isLight ? 'text-slate-500' : 'text-slate-400'}`}>Indexed Pages</div>
+                          <div className={`text-2xl sm:text-3xl font-urbanist font-black ${isLight ? 'text-teal-700' : 'text-teal-400'}`}>Intent</div>
+                          <div className={`text-xs font-semibold ${isLight ? 'text-slate-500' : 'text-slate-400'}`}>High-Value Keywords</div>
                         </div>
                         <div>
                           <div className={`text-2xl sm:text-3xl font-urbanist font-black ${isLight ? 'text-slate-900' : 'text-white'}`}>$0</div>
@@ -604,9 +612,9 @@ export default function ProductionHomepage({ posts }: Props) {
                       <div className="flex items-center justify-between text-xs mb-4">
                         <div className={`flex items-center gap-1.5 font-bold ${isLight ? 'text-teal-700' : 'text-teal-400'}`}>
                           <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                          <span>GOOGLE #1 SERP RANK</span>
+                          <span>TOPICAL AUTHORITY ENGINE</span>
                         </div>
-                        <span className={`font-bold ${isLight ? 'text-teal-700' : 'text-teal-400'}`}>+380% TRAFFIC</span>
+                        <span className={`font-bold ${isLight ? 'text-teal-700' : 'text-teal-400'}`}>COMPOUNDING REACH</span>
                       </div>
 
                       {/* Growth Sparkline with PathLength Animation */}
@@ -640,7 +648,7 @@ export default function ProductionHomepage({ posts }: Props) {
                       <div className={`space-y-2 mt-4 text-xs ${isLight ? 'text-slate-600' : 'text-slate-400'}`}>
                         <div className={`flex items-center justify-between p-2 rounded-lg ${isLight ? 'bg-white border border-slate-200' : 'bg-white/[0.04]'}`}>
                           <span>High-Intent Commercial Searches</span>
-                          <span className={`font-bold ${isLight ? 'text-slate-900' : 'text-white'}`}>Position 1.2 Avg</span>
+                          <span className={`font-bold ${isLight ? 'text-slate-900' : 'text-white'}`}>Page 1 Target</span>
                         </div>
                         <div className={`flex items-center justify-between p-2 rounded-lg ${isLight ? 'bg-white border border-slate-200' : 'bg-white/[0.04]'}`}>
                           <span>Target Audience Reach</span>
@@ -742,14 +750,14 @@ export default function ProductionHomepage({ posts }: Props) {
                       }`}>
                         <div className="flex items-center justify-between mb-2">
                           <span className={`text-xs font-semibold ${isLight ? 'text-slate-600' : 'text-slate-400'}`}>Time to First Byte (TTFB):</span>
-                          <span className={`text-xl font-urbanist font-black ${isLight ? 'text-slate-900' : 'text-white'}`}>
-                            {liveLatency ? `${liveLatency} ms` : '38 ms'}
+                          <span className={`text-sm font-urbanist font-black ${isLight ? 'text-slate-900' : 'text-white'}`}>
+                            {liveLatency !== null ? `${liveLatency} ms` : 'Ready to benchmark'}
                           </span>
                         </div>
                         <div className="w-full bg-slate-200 dark:bg-neutral-800 h-2 rounded-full overflow-hidden">
                           <div 
                             className={`h-full bg-purple-600 dark:bg-purple-400 transition-all duration-500 ${
-                              latencyTesting ? 'w-full animate-pulse' : 'w-[94%]'
+                              latencyTesting ? 'w-full animate-pulse' : (liveLatency !== null ? 'w-[92%]' : 'w-0')
                             }`} 
                           />
                         </div>
@@ -774,8 +782,8 @@ export default function ProductionHomepage({ posts }: Props) {
                     <div className={`mt-4 pt-4 border-t text-xs flex items-center justify-between ${
                       isLight ? 'border-slate-200 text-slate-600' : 'border-white/[0.06] text-slate-400'
                     }`}>
-                      <span>Edge Cache Hit Rate</span>
-                      <span className="text-purple-700 dark:text-purple-400 font-bold">99.4% GLOBAL HIT</span>
+                      <span>Edge Cache Architecture</span>
+                      <span className="text-purple-700 dark:text-purple-400 font-bold">OPTIMIZED GLOBAL CDN</span>
                     </div>
                   </div>
                 </m.div>
@@ -822,8 +830,8 @@ export default function ProductionHomepage({ posts }: Props) {
                           <div className={`text-xs font-semibold ${isLight ? 'text-slate-500' : 'text-slate-400'}`}>Response Speed</div>
                         </div>
                         <div>
-                          <div className={`text-2xl sm:text-3xl font-urbanist font-black ${isLight ? 'text-slate-900' : 'text-white'}`}>500+</div>
-                          <div className={`text-xs font-semibold ${isLight ? 'text-slate-500' : 'text-slate-400'}`}>Hours Saved / Year</div>
+                          <div className={`text-2xl sm:text-3xl font-urbanist font-black ${isLight ? 'text-slate-900' : 'text-white'}`}>Instant</div>
+                          <div className={`text-xs font-semibold ${isLight ? 'text-slate-500' : 'text-slate-400'}`}>Lead Triage &amp; Sync</div>
                         </div>
                         <div>
                           <div className={`text-2xl sm:text-3xl font-urbanist font-black ${isLight ? 'text-teal-700' : 'text-teal-400'}`}>0</div>
@@ -899,7 +907,7 @@ export default function ProductionHomepage({ posts }: Props) {
                       isLight ? 'border-slate-200 text-slate-600' : 'border-white/[0.06] text-slate-400'
                     }`}>
                       <span>Manual Human Delay</span>
-                      <span className="text-emerald-700 dark:text-emerald-400 font-bold">0 SECONDS (100% AUTO)</span>
+                      <span className="text-emerald-700 dark:text-emerald-400 font-bold">ELIMINATED VIA WEBHOOK</span>
                     </div>
                   </div>
                 </m.div>
@@ -950,20 +958,20 @@ export default function ProductionHomepage({ posts }: Props) {
                       link: '/services/seo-organic-growth/'
                     },
                     {
-                      name: 'Certified n8n Workflow Automation',
+                      name: 'Verified n8n Workflow Automation',
                       description: 'Reliable automations connecting your website forms, CRM, email notifications, and calendars with zero manual effort or expensive Zapier bills.',
                       tag: 'Automation',
                       link: '/services/n8n-automation/'
                     },
                     {
-                      name: 'Custom Client Portals & Internal Dashboards',
-                      description: 'Secure client collaboration portals, internal operations dashboards, and web tools built with Next.js and Supabase database.',
-                      tag: 'Web Applications',
-                      link: '/services/custom-full-stack/'
+                      name: 'RevOps Strategy & Growth Architecture',
+                      description: 'Strategic advisory to identify revenue bottlenecks, streamline conversion funnels, and align your tech stack directly with commercial growth.',
+                      tag: 'Consulting',
+                      link: '/services/growth-consulting/'
                     },
                     {
                       name: 'Page Speed & Core Web Vitals Fixes',
-                      description: 'Performance engineering that brings slow legacy WordPress or Webflow websites to 100/100 Google page speed scores and sub-second global loading.',
+                      description: 'Performance engineering that brings slow legacy websites to sub-second global loading and passing Core Web Vitals scores.',
                       tag: 'Performance',
                       link: '/services/headless-architecture/'
                     }
@@ -1100,7 +1108,7 @@ export default function ProductionHomepage({ posts }: Props) {
                     </h3>
 
                     <p className={`text-sm leading-relaxed mb-6 font-normal ${isLight ? 'text-slate-600' : 'text-slate-300'}`}>
-                      When an interested buyer submits a contact form, they want an answer right now. Leads contacted within 5 minutes are <strong>21 times more likely</strong> to convert. Waiting hours or until the next morning means 70% of potential buyers have already booked with your competitors.
+                      When an interested buyer submits an inquiry, rapid response is critical. In competitive B2B markets, inbound inquiries lose momentum with every hour of delay. Automated dispatch connects you with prospects while intent is at its peak, preventing leads from drifting to competitors.
                     </p>
                   </div>
 
@@ -1153,7 +1161,7 @@ export default function ProductionHomepage({ posts }: Props) {
                       <span className="text-emerald-700 dark:text-emerald-400 font-bold">With Us: 0 hrs (100% auto)</span>
                     </div>
                     <p className="text-xs leading-relaxed text-slate-500 dark:text-slate-400">
-                      <strong>The Fix:</strong> Certified n8n automations that silently sync data across your forms, CRM, and tools in the background.
+                      <strong>The Fix:</strong> Official Verified n8n automations that silently sync data across your forms, CRM, and tools in the background.
                     </p>
                   </div>
                 </m.div>
@@ -1182,7 +1190,7 @@ export default function ProductionHomepage({ posts }: Props) {
                     </h3>
 
                     <p className={`text-sm leading-relaxed mb-6 font-normal ${isLight ? 'text-slate-600' : 'text-slate-300'}`}>
-                      Ad costs on Meta and Google jump 15% to 25% year after year. The moment you pause your ad budget, your lead flow instantly drops to zero. If you don&apos;t own high-ranking search assets, your customer acquisition costs will steadily eat away your profits.
+                      Paid acquisition costs continue to rise across major advertising platforms. The moment you pause your ad budget, your pipeline stops immediately. Building high-ranking, programmatic search assets creates compounding organic demand that you permanently own.
                     </p>
                   </div>
 
@@ -1234,7 +1242,7 @@ export default function ProductionHomepage({ posts }: Props) {
               <div className={`text-xs font-medium uppercase tracking-wider ${
                 isLight ? 'text-slate-500' : 'text-slate-400'
               }`}>
-                Client: Urban Cafe Restaurant Group
+                System Architecture Blueprint (Kitchen OS Showcase)
               </div>
             </m.div>
 
@@ -1333,7 +1341,7 @@ export default function ProductionHomepage({ posts }: Props) {
                   <p className={`text-sm leading-relaxed ${
                     isLight ? 'text-slate-700' : 'text-slate-300'
                   }`}>
-                    The restaurant group deployed across multiple locations for zero upfront hardware expense, reclaimed thousands in monthly merchant fees, and achieved 100% station uptime during dinner rushes.
+                    This architecture allows restaurant operators to deploy kitchen display stations on standard consumer tablets, eliminating the $2,000 upfront hardware expense per station and avoiding the recurring 3% platform commission.
                   </p>
                 </div>
 
@@ -1467,7 +1475,7 @@ export default function ProductionHomepage({ posts }: Props) {
                   You reply in 5 seconds while your competitors take 8 to 24 hours.
                 </div>
                 <p className={`text-xs mt-1 ${isLight ? 'text-slate-600' : 'text-slate-400'}`}>
-                  First-responder advantage secures up to 50% of all closed deals in modern service businesses.
+                  Rapid first-touch automation gives service businesses an immediate competitive edge when handling high-intent inbound inquiries.
                 </p>
               </div>
 
@@ -2036,6 +2044,33 @@ export default function ProductionHomepage({ posts }: Props) {
 
         </section>
 
+      </div>
+
+      {/* Floating Audio Sound Effects Toggle Pill */}
+      <div className="fixed bottom-6 left-6 z-40">
+        <button
+          onClick={() => {
+            const next = !soundEnabled;
+            setSoundEnabled(next);
+            if (next) playSound(1080, 'sine', 0.05);
+          }}
+          className={`flex items-center gap-2 px-3.5 py-2 rounded-full border text-xs font-mono transition-all backdrop-blur-md shadow-lg cursor-pointer ${
+            soundEnabled
+              ? (isLight ? 'bg-white/95 text-teal-800 border-teal-200 hover:bg-white' : 'bg-slate-900/95 text-teal-300 border-teal-500/40 hover:bg-slate-900')
+              : (isLight ? 'bg-slate-100/95 text-slate-500 border-slate-300 hover:bg-slate-200' : 'bg-neutral-900/95 text-neutral-500 border-white/10 hover:bg-neutral-800')
+          }`}
+          aria-label={soundEnabled ? 'Mute sound effects' : 'Enable sound effects'}
+          title={soundEnabled ? 'Sound ON (Click to mute)' : 'Sound OFF (Click to unmute)'}
+        >
+          {soundEnabled ? (
+            <Volume2 size={14} className="text-teal-500 shrink-0" />
+          ) : (
+            <VolumeX size={14} className="shrink-0" />
+          )}
+          <span className="text-[10px] uppercase font-bold tracking-wider hidden sm:inline">
+            {soundEnabled ? 'Audio ON' : 'Audio Muted'}
+          </span>
+        </button>
       </div>
 
       {/* ========================================================================= */}

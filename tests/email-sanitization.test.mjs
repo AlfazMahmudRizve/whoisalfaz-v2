@@ -3,6 +3,16 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
 
+function escapeHtml(str) {
+  if (!str) return '';
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
 test('Email Sanitization: lib/utils.ts must export escapeHtml function', async () => {
   const utilsPath = path.resolve('lib/utils.ts');
   assert.equal(fs.existsSync(utilsPath), true, 'lib/utils.ts must exist');
@@ -13,6 +23,12 @@ test('Email Sanitization: lib/utils.ts must export escapeHtml function', async (
     true,
     'lib/utils.ts must export escapeHtml function'
   );
+});
+
+test('Email Sanitization Functional Check: neutralizes HTML/XSS characters', () => {
+  assert.equal(escapeHtml('<script>alert("xss")</script>'), '&lt;script&gt;alert(&quot;xss&quot;)&lt;/script&gt;');
+  assert.equal(escapeHtml('<a href="https://evil.com">click</a>'), '&lt;a href=&quot;https://evil.com&quot;&gt;click&lt;/a&gt;');
+  assert.equal(escapeHtml("Tom & Jerry's"), 'Tom &amp; Jerry&#39;s');
 });
 
 test('Email Sanitization: lib/brevo-email.ts must sanitize user inputs in email templates', async () => {

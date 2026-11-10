@@ -97,7 +97,7 @@ const faqs: FaqItem[] = [
     q: 'What is workflow automation?',
     a: (
       <>
-        Workflow automation is the process of replacing manual, repetitive business tasks with automated systems. Instead of manually copying data between your CRM, email tool, and spreadsheets, an automation engine like n8n handles it instantly via webhooks and API integrations — saving hundreds of hours per month. For messaging funnels, review our <Link href="/blog/manychat-pricing-2026/" className="text-teal-600 dark:text-teal-400 font-semibold hover:underline">ManyChat 2026 pricing teardown</Link> to eliminate per-contact penalty costs.
+        Workflow automation is the process of replacing manual, repetitive business tasks with automated systems. Instead of manually copying data between your CRM, email tool, and spreadsheets, an automation engine like n8n handles it instantly via webhooks and API integrations — eliminating hours of manual overhead each week. For messaging funnels, review our <Link href="/blog/manychat-pricing-2026/" className="text-teal-600 dark:text-teal-400 font-semibold hover:underline">ManyChat 2026 pricing teardown</Link> to eliminate per-contact penalty costs.
       </>
     ),
   },

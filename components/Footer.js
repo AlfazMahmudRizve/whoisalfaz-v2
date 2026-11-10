@@ -20,7 +20,7 @@ export default function Footer() {
 
                         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-700 dark:text-emerald-300 text-xs font-medium">
                             <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                            Available for Select Q1/Q2 Engagements
+                            Accepting Select Client Engagements
                         </div>
 
                         <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed max-w-sm">

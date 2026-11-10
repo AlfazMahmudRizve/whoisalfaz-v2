@@ -5,6 +5,7 @@ import { addContactToBrevoList, sendNewsletterWelcome } from '@/lib/brevo-email'
 const newsletterSchema = z.object({
     email: z.string().email('Invalid email address'),
     source: z.string().optional().default('newsletter'),
+    hp_website: z.string().optional(),
 });
 
 export async function POST(request: Request) {
@@ -19,7 +20,16 @@ export async function POST(request: Request) {
             );
         }
 
-        const { email, source } = result.data;
+        const { email, source, hp_website } = result.data;
+
+        // Anti-bot honeypot check: silently accept bots without invoking Brevo API
+        if (hp_website && hp_website.trim().length > 0) {
+            console.warn('[Security] Newsletter bot trapped via honeypot field.');
+            return NextResponse.json(
+                { success: true, message: 'Subscribed successfully!' },
+                { status: 200 }
+            );
+        }
         const newsletterListId = parseInt(process.env.BREVO_NEWSLETTER_LIST_ID || '11', 10);
 
         // 1. Add to Brevo Newsletter List

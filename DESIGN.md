@@ -4,7 +4,7 @@
 - **Subject:** Alfaz Mahmud Rizve (`whoisalfaz`), GTM & RevOps Architect.
 - **Audience:** High-growth founders, tech leaders, enterprise operators, and agency heads seeking autonomous revenue pipelines, programmatic SEO, and high-velocity web engineering.
 - **Job of the Site:** Establish unmatched technical authority, demonstrate real engineering rigor, and convert high-intent inbound visitors into booked strategy calls.
-- **Constraints:** Prototype route at `/demo`. Zero regression to existing production pages. No git push. Run local dev server for visual inspection.
+- **Deployment:** Production homepage at `/` and mirrored prototype route at `/demo`. Fully verified with TDD test suites, 0 TypeScript errors, and 0 ESLint errors.
 
 ---
 
