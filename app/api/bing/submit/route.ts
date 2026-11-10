@@ -9,7 +9,10 @@ export const dynamic = 'force-dynamic';
 export async function GET(request: Request) {
     try {
         const { searchParams } = new URL(request.url);
-        const secret = searchParams.get('secret');
+        const secretParam = searchParams.get('secret');
+        const authHeader = request.headers.get('authorization');
+        const bearerSecret = authHeader?.startsWith('Bearer ') ? authHeader.slice(7) : null;
+        const secret = secretParam || bearerSecret;
         const cronSecret = process.env.CRON_SECRET;
 
         // Fail-closed check: Require CRON_SECRET to be configured and matched

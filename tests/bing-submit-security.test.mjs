@@ -33,3 +33,28 @@ test('bing-submit security: must strictly require process.env.CRON_SECRET withou
     'Must fail closed (reject access) if CRON_SECRET is not configured'
   );
 });
+
+test('workflows: must not leak hardcoded secrets and must use secrets.CRON_SECRET', async () => {
+  const workflows = [
+    '.github/workflows/bing-submission.yml',
+    '.github/workflows/auto-index.yml'
+  ];
+
+  for (const wf of workflows) {
+    const fullPath = path.resolve(wf);
+    assert.equal(fs.existsSync(fullPath), true, `${wf} must exist`);
+    const content = fs.readFileSync(fullPath, 'utf8');
+
+    assert.equal(
+      content.includes('bing_auto_submission_secret_2024'),
+      false,
+      `SECURITY RISK: ${wf} must not contain hardcoded secret`
+    );
+
+    assert.equal(
+      content.includes('${{ secrets.CRON_SECRET }}'),
+      true,
+      `${wf} must pass secrets.CRON_SECRET`
+    );
+  }
+});

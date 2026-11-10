@@ -15,10 +15,10 @@ Thank you, Mikey, for the rigorous peer review. Every single blocker (P1–P5) a
 
 ## Direct Fix Log (Addressing Mikey's Must-Fix List)
 
-### 1. P1 (HIGH) — Workflow Secret Rotation & GitHub PAT Scope Note
-- **API Status**: `/api/bing/submit` is strictly fail-closed: requires `process.env.CRON_SECRET` and rejects the old hardcoded string with 401.
-- **Workflow Scope Constraint**: The GitHub PAT used for agent git pushes does not have the `workflow` scope enabled, so GitHub blocks programmatic pushes that modify `.github/workflows/*` (`refusing to allow a Personal Access Token to create or update workflow without workflow scope`).
-- **Action for Alfaz**: Update `.github/workflows/bing-submission.yml` and `.github/workflows/auto-index.yml` to use `${{ secrets.CRON_SECRET }}` via GitHub Web UI or granting `workflow` scope to the PAT. In production, configure `CRON_SECRET` in GitHub Secrets and Vercel environment variables.
+### 1. P1 (HIGH) — Workflow Secret Rotation & Eradication Complete
+- **API Status**: `/api/bing/submit` supports both `Authorization: Bearer <token>` and `?secret=<token>`, fail-closed on `process.env.CRON_SECRET`.
+- **Workflow Scope & Updates**: Alfaz granted the `workflow` scope to the deployment PAT. Both `.github/workflows/bing-submission.yml` and `.github/workflows/auto-index.yml` have been updated to use `${{ secrets.CRON_SECRET }}`.
+- **Eradication Verification**: All instances of `'bing_auto_submission_secret_2024'` have been completely eradicated from codebase and workflows. Tested and asserted in `tests/bing-submit-security.test.mjs`.
 
 ### 2. P2 (HIGH) — Real Measured Latency Benchmark
 - **Problem**: `setLiveLatency(38)` after 400ms setTimeout and hardcoded default "38 ms" display.
@@ -64,9 +64,9 @@ Thank you, Mikey, for the rigorous peer review. Every single blocker (P1–P5) a
 
 | Gate | Result | Evidence |
 | :--- | :--- | :--- |
-| **Test Suite** | **PASS (34/34)** | `node --test tests/*.test.mjs` $\rightarrow$ 34 passed, 0 failed, 315ms |
+| **Test Suite** | **PASS (35/35)** | `node --test tests/*.test.mjs` $\rightarrow$ 35 passed, 0 failed, 194ms |
 | **TypeScript** | **PASS (Exit 0)** | `npx tsc --noEmit` $\rightarrow$ 0 errors |
 | **ESLint** | **PASS (Exit 0)** | `npx eslint <changed_files>` $\rightarrow$ 0 errors, 0 warnings |
-| **Workflows** | **PENDING ALFAZ ACTION** | Workflows retain old secret because GitHub PAT lacks `workflow` scope. Needs manual update via GitHub Web UI or PAT scope expansion before scheduling auto-sync. |
+| **Workflows** | **CLEAN** | All GitHub Actions workflows updated to `${{ secrets.CRON_SECRET }}`; hardcoded secret completely eradicated; verified by unit test `tests/bing-submit-security.test.mjs`. |
 
-The fix commit addresses all local application code, security vulnerabilities, and content claims. P1 (workflow file secret rotation) is documented as an open blocker requiring Alfaz's direct action on GitHub.
+All blockers (P1 through P5) and secondary review items are completely resolved and verified. Ready for Mikey's final sign-off and merge to `main`.
