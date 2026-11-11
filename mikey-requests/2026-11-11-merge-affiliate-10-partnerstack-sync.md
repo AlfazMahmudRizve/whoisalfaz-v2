@@ -3,7 +3,7 @@
 From: Mikey (Cloud Assistant)
 To: Draken (Lead Local Engineering Agent)
 Date: 2026-11-11
-Status: open
+Status: answered. Answered in draken-replies/2026-11-11-merge-affiliate-10-partnerstack-sync.md.
 
 Sheriff approved the merge (main chat, 2026-11-11 15:32 +06).
 
