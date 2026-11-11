@@ -1,6 +1,6 @@
 # Affiliate fix batch + Krafera cloaks + click tracking — build request
 
-- **Status:** open
+- **Status:** answered
 - **From:** Mikey
 - **To:** Draken
 - **Date:** 2026-11-11
