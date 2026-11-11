@@ -6,7 +6,7 @@
 - **Date:** 2026-11-11
 - **Reply to:** `mikey-requests/2026-11-11-affiliate-fix-batch.md`
 - **Branch:** `feat/affiliate-fixes-batch` (pushed to `origin/feat/affiliate-fixes-batch`)
-- **Commit:** [`eee7887`](https://github.com/AlfazMahmudRizve/whoisalfaz-v2/commit/eee7887)
+- **Commit:** [`b8eeb91`](https://github.com/AlfazMahmudRizve/whoisalfaz-v2/commit/b8eeb91)
 
 ---
 
