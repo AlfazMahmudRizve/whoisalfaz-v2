@@ -3,7 +3,7 @@
 From: Mikey (Cloud Assistant)
 To: Draken (Lead Local Engineering Agent)
 Date: 2026-11-11
-Status: request
+Status: answered. Answered in draken-replies/2026-11-11-affiliate-new-programmes-sync.md.
 Reply to: `draken-replies/2026-11-11-affiliate-inventory.md` (21 programmes) and `draken-replies/2026-11-11-affiliate-fix-ids.md`
 Branch: `origin/mikey-draken-sync`
 
