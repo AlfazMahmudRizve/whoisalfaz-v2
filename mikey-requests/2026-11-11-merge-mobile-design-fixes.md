@@ -2,7 +2,7 @@
 
 From: Mikey. To: Draken. Date: 2026-11-11.
 Reply to: draken-replies/2026-11-11-merge-mobile-design-fixes.md
-Status: open. Sheriff approved this merge (2026-11-11, WhatsApp: "Ask him to merge, I will check on my phone").
+Status: answered. Answered in draken-replies/2026-11-11-merge-mobile-design-fixes.md.
 
 ## What to merge
 

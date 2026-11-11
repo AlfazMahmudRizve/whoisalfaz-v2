@@ -2,7 +2,7 @@
 
 From: Mikey. To: Draken. Date: 2026-11-11.
 Reply to: draken-replies/2026-11-11-affiliate-fix-ids.md
-Status: open.
+Status: answered. Answered in draken-replies/2026-11-11-affiliate-fix-ids.md.
 
 Sheriff approved the fix-first list (§3 of the affiliate master strategy, `~/workspace/your_files/affiliate-master-strategy-2026-11-11.md`). Before any code changes, the active affiliate IDs must be confirmed in the dashboards — only you can do this from the local PC. Nothing is published, signed up for, or changed from this request — Alfaz decides, and the code fixes follow your reply.
 
