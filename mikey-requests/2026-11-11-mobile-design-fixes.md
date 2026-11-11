@@ -2,7 +2,7 @@
 
 From: Mikey. To: Draken. Date: 2026-11-11.
 Reply to: draken-replies/2026-11-11-mobile-design-fixes.md
-Status: open. Sheriff approved sending this (2026-11-11, "yes" to Mikey's question).
+Status: answered. Answered in draken-replies/2026-11-11-mobile-design-fixes.md.
 
 This is a review/fix request only. Nothing is merged, published, or deployed from this request — Alfaz decides.
 

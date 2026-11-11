@@ -391,13 +391,13 @@ export default function ProductionHomepage({ posts }: Props) {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6, duration: 0.5 }}
-                className="flex flex-wrap items-center gap-4"
+                className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 sm:gap-4 w-full sm:w-auto"
               >
-                <m.div whileHover={{ scale: 1.04, y: -2 }} whileTap={{ scale: 0.97 }}>
+                <m.div whileHover={{ scale: 1.04, y: -2 }} whileTap={{ scale: 0.97 }} className="w-full sm:w-auto">
                   <Link
                     href="/contact/"
                     onMouseEnter={() => playSound(980, 'sine', 0.04)}
-                    className={`px-8 py-4 font-bold text-xs uppercase tracking-wider rounded-full transition-all duration-200 flex items-center gap-2 group ${
+                    className={`w-full sm:w-auto px-8 py-4 font-bold text-xs uppercase tracking-wider rounded-full transition-all duration-200 flex items-center justify-center gap-2 group text-center ${
                       isLight 
                         ? 'bg-teal-600 hover:bg-teal-700 text-white shadow-lg shadow-teal-600/20' 
                         : 'bg-teal-400 hover:bg-teal-300 text-slate-950 font-bold shadow-[0_0_30px_rgba(45,212,191,0.25)]'
@@ -408,11 +408,11 @@ export default function ProductionHomepage({ posts }: Props) {
                   </Link>
                 </m.div>
 
-                <m.div whileHover={{ scale: 1.02, y: -1 }} whileTap={{ scale: 0.98 }}>
+                <m.div whileHover={{ scale: 1.02, y: -1 }} whileTap={{ scale: 0.98 }} className="w-full sm:w-auto">
                   <a
                     href="#solutions"
                     onMouseEnter={() => playSound(640, 'triangle', 0.04)}
-                    className={`px-7 py-4 text-xs font-semibold uppercase tracking-wider rounded-full transition-all flex items-center gap-2 ${
+                    className={`w-full sm:w-auto px-7 py-4 text-xs font-semibold uppercase tracking-wider rounded-full transition-all flex items-center justify-center gap-2 text-center ${
                       isLight 
                         ? 'bg-slate-100 hover:bg-slate-200 text-slate-800 border border-slate-200' 
                         : 'bg-white/[0.04] hover:bg-white/[0.08] text-white border border-white/10'
@@ -1391,7 +1391,7 @@ export default function ProductionHomepage({ posts }: Props) {
             </m.div>
 
             {/* Interactive Timeline Tabs */}
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-10">
+            <div className="flex flex-col md:grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
               {[
                 {
                   step: 1,
@@ -1426,7 +1426,7 @@ export default function ProductionHomepage({ posts }: Props) {
                     setActiveTimelineStep(t.step);
                     playSound(600 + t.step * 100, 'sine', 0.03);
                   }}
-                  className={`text-left p-6 rounded-2xl border transition-all cursor-pointer ${
+                  className={`text-left p-5 sm:p-6 rounded-2xl border transition-all cursor-pointer w-full ${
                     activeTimelineStep === t.step
                       ? isLight 
                         ? 'bg-white border-teal-600 shadow-md text-slate-900 ring-2 ring-teal-500/20' 
@@ -1436,12 +1436,19 @@ export default function ProductionHomepage({ posts }: Props) {
                         : 'bg-black/30 border-white/[0.06] hover:border-white/20 text-slate-300'
                   }`}
                 >
-                  <div className={`text-xs font-bold uppercase tracking-wider mb-1 ${
-                    isLight ? 'text-teal-700' : 'text-teal-400'
-                  }`}>
-                    {t.time}
+                  <div className="flex items-center justify-between gap-2 mb-2">
+                    <span className={`text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-md ${
+                      isLight ? 'bg-teal-50 text-teal-700 border border-teal-200' : 'bg-teal-500/10 text-teal-400 border border-teal-500/30'
+                    }`}>
+                      STEP 0{t.step}
+                    </span>
+                    <span className={`text-xs font-mono font-bold ${
+                      isLight ? 'text-teal-700' : 'text-teal-400'
+                    }`}>
+                      {t.time}
+                    </span>
                   </div>
-                  <div className={`text-base font-urbanist font-black uppercase mb-2 ${
+                  <div className={`text-base font-urbanist font-black uppercase mb-1.5 ${
                     isLight ? 'text-slate-900' : 'text-white'
                   }`}>
                     {t.title}
@@ -1812,7 +1819,7 @@ export default function ProductionHomepage({ posts }: Props) {
               whileInView="show"
               viewport={{ once: true, margin: "-60px" }}
               variants={staggerContainer}
-              className="grid md:grid-cols-3 gap-6"
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
             >
               {(posts && posts.length > 0 ? posts.slice(0, 3) : []).map((post, i) => (
                 <m.div 
@@ -1834,7 +1841,7 @@ export default function ProductionHomepage({ posts }: Props) {
                     }`}>
                       
                       {/* Top Image */}
-                      <div className="h-48 bg-slate-800 relative overflow-hidden p-4 flex flex-col justify-start">
+                      <div className="h-52 sm:h-48 bg-slate-800 relative overflow-hidden p-4 flex flex-col justify-start">
                         {post.image ? (
                           <Image
                             src={post.image}
@@ -2047,14 +2054,14 @@ export default function ProductionHomepage({ posts }: Props) {
       </div>
 
       {/* Floating Audio Sound Effects Toggle Pill */}
-      <div className="fixed bottom-6 left-6 z-40">
+      <div className="fixed bottom-4 left-4 sm:bottom-6 sm:left-6 z-40">
         <button
           onClick={() => {
             const next = !soundEnabled;
             setSoundEnabled(next);
             if (next) playSound(1080, 'sine', 0.05);
           }}
-          className={`flex items-center gap-2 px-3.5 py-2 rounded-full border text-xs font-mono transition-all backdrop-blur-md shadow-lg cursor-pointer ${
+          className={`flex items-center gap-2 p-2 sm:px-3.5 sm:py-2 rounded-full border text-xs font-mono transition-all backdrop-blur-md shadow-lg cursor-pointer ${
             soundEnabled
               ? (isLight ? 'bg-white/95 text-teal-800 border-teal-200 hover:bg-white' : 'bg-slate-900/95 text-teal-300 border-teal-500/40 hover:bg-slate-900')
               : (isLight ? 'bg-slate-100/95 text-slate-500 border-slate-300 hover:bg-slate-200' : 'bg-neutral-900/95 text-neutral-500 border-white/10 hover:bg-neutral-800')
@@ -2063,9 +2070,9 @@ export default function ProductionHomepage({ posts }: Props) {
           title={soundEnabled ? 'Sound ON (Click to mute)' : 'Sound OFF (Click to unmute)'}
         >
           {soundEnabled ? (
-            <Volume2 size={14} className="text-teal-500 shrink-0" />
+            <Volume2 size={16} className="text-teal-500 shrink-0" />
           ) : (
-            <VolumeX size={14} className="shrink-0" />
+            <VolumeX size={16} className="shrink-0" />
           )}
           <span className="text-[10px] uppercase font-bold tracking-wider hidden sm:inline">
             {soundEnabled ? 'Audio ON' : 'Audio Muted'}
