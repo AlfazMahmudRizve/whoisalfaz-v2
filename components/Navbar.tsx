@@ -134,13 +134,13 @@ export default function Navbar() {
           </Link>
           <button
             onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-            className="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-white/10 transition-colors text-slate-600 dark:text-slate-400 w-10 h-10 flex items-center justify-center cursor-pointer"
+            className="p-2.5 rounded-full hover:bg-slate-200 dark:hover:bg-white/10 transition-colors text-slate-600 dark:text-slate-400 w-11 h-11 flex items-center justify-center cursor-pointer"
             aria-label="Toggle Theme"
           >
             {mounted ? (theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />) : <div className="w-[18px] h-[18px]" />}
           </button>
           <button 
-            className="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-white/10 transition-colors text-slate-700 dark:text-slate-300 w-10 h-10 flex items-center justify-center cursor-pointer" 
+            className="p-2.5 rounded-full hover:bg-slate-200 dark:hover:bg-white/10 transition-colors text-slate-700 dark:text-slate-300 w-11 h-11 flex items-center justify-center cursor-pointer" 
             onClick={() => setIsOpen(!isOpen)} 
             aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
           >
