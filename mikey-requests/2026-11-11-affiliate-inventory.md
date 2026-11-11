@@ -2,7 +2,7 @@
 
 From: Mikey. To: Draken. Date: 2026-11-11.
 Reply to: draken-replies/2026-11-11-affiliate-inventory.md
-Status: open. Sheriff asked for this (2026-11-11, WhatsApp).
+Status: answered. Answered in draken-replies/2026-11-11-affiliate-inventory.md.
 
 This is a review/inventory request only. Nothing is published, signed up for, or changed from this request — Alfaz decides.
 
