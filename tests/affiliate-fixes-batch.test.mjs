@@ -62,7 +62,7 @@ test('Affiliate Batch: app/go/[slug]/route.ts implements 307 temporary redirects
 });
 
 test('Affiliate Batch: components/DeployingTheStacks.js removes Verified Partner from unpartnered tools and cloaks direct cards', async () => {
-  const stacksContent = fs.readFileSync(path.join(rootDir, 'components/DeployingTheStacks.js'), 'utf-8');
+  const stacksContent = fs.readFileSync(path.join(rootDir, 'components/DeployingTheStacks.js'), 'utf-8').replace(/\r\n/g, '\n');
 
   // Verify unpartnered cards have isPartner: false
   assert.ok(stacksContent.includes("twilio: {\n        title: \"Twilio\",\n        description: \"The industry-standard communications platform. Essential for provisioning numbers and streaming call audio.\",\n        url: \"https://www.twilio.com/\",\n        buttonText: \"Explore Twilio\",\n        badge: \"Telephony\",\n        isPartner: false"), 'Twilio must have isPartner: false');
