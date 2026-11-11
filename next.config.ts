@@ -442,6 +442,56 @@ const nextConfig: NextConfig = {
         destination: 'https://partners.whatconverts.com/9drg99k8gt06',
         permanent: true,
       },
+      {
+        source: '/go/vistasocial',
+        destination: 'https://join.vistasocial.com/d333w96sai9t',
+        permanent: true,
+      },
+      {
+        source: '/go/softsync',
+        destination: 'https://affiliate.softsync.ai/f0s8n3dsp6tu',
+        permanent: true,
+      },
+      {
+        source: '/go/runpod',
+        destination: 'https://get.runpod.io/9jlyvj42j3t7',
+        permanent: true,
+      },
+      {
+        source: '/go/clickup',
+        destination: 'https://try.web.clickup.com/j02z9h7xns1x',
+        permanent: true,
+      },
+      {
+        source: '/go/staytuned',
+        destination: 'https://try.zenpire.tech/gwex67j1p4u3',
+        permanent: true,
+      },
+      {
+        source: '/go/deel',
+        destination: 'https://get.deel.com/fvthdmduwz5d',
+        permanent: true,
+      },
+      {
+        source: '/go/plansom',
+        destination: 'https://get.plansom.com/yy8i59lv14g4',
+        permanent: true,
+      },
+      {
+        source: '/go/mindstudio',
+        destination: 'https://get.mindstudio.ai/abhrejep48v7',
+        permanent: true,
+      },
+      {
+        source: '/go/foxit',
+        destination: 'https://partnerstack.foxit.com/sr8x95o9c32x',
+        permanent: true,
+      },
+      {
+        source: '/go/callhippo',
+        destination: 'https://join.callhippo.com/hhmmpa4bynwl',
+        permanent: true,
+      },
       // 404 / Legacy Internal Link Safeguard Redirects
       {
         source: '/services/-architecture/:path*',

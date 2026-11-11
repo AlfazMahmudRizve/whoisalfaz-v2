@@ -5,7 +5,7 @@ const AFFILIATE_DATA = {
     n8n: {
         title: "n8n Cloud",
         description: "The most powerful fair-code automation platform. Get 20% off your first year on any paid plan.",
-        url: "https://n8n.partnerlinks.io/8qovl1a3y7q6",
+        url: "/go/n8n",
         buttonText: "Claim n8n Discount",
         badge: "Infrastructure"
     },
@@ -19,7 +19,7 @@ const AFFILIATE_DATA = {
     brevo: {
         title: "Brevo (formerly Sendinblue)",
         description: "Enterprise-grade email API and marketing automation. Excellent SMTP for n8n.",
-        url: "https://get.brevo.com/60gns0w2n9o1",
+        url: "/go/brevo",
         buttonText: "Try Brevo Free",
         badge: "Email/SMTP"
     },
@@ -40,14 +40,14 @@ const AFFILIATE_DATA = {
     apollo: {
         title: "Apollo.io",
         description: "The ultimate B2B database and sales engagement platform for lead generation.",
-        url: "https://apollo.grsm.io/s3jmtpdx8g1s",
+        url: "/go/apollo",
         buttonText: "Try Apollo Free",
         badge: "Lead Gen"
     },
     databox: {
         title: "Databox",
         description: "Business analytics platform to build and share custom dashboards.",
-        url: "https://databox.com/?a=AlfazMahmudRizve",
+        url: "/go/databox",
         buttonText: "Start Visualizing Data",
         badge: "Analytics"
     },
@@ -162,6 +162,76 @@ const AFFILIATE_DATA = {
         url: "/go/whatconverts",
         buttonText: "Try WhatConverts",
         badge: "Lead Attribution"
+    },
+    vistasocial: {
+        title: "Vista Social",
+        description: "Modern social media management platform for scheduling, analytics, and multi-channel engagement.",
+        url: "/go/vistasocial",
+        buttonText: "Try Vista Social",
+        badge: "Social Media"
+    },
+    softsync: {
+        title: "SoftSync",
+        description: "AI automation and data integration platform connecting enterprise tools with low latency.",
+        url: "/go/softsync",
+        buttonText: "Explore SoftSync",
+        badge: "AI Automation"
+    },
+    runpod: {
+        title: "RunPod",
+        description: "Globally distributed GPU cloud compute platform for AI inference, LLM fine-tuning, and serverless AI.",
+        url: "/go/runpod",
+        buttonText: "Deploy on RunPod",
+        badge: "GPU Cloud"
+    },
+    clickup: {
+        title: "ClickUp",
+        description: "All-in-one productivity platform for task management, team collaboration, and automated project sprints.",
+        url: "/go/clickup",
+        buttonText: "Try ClickUp Free",
+        badge: "Project Ops"
+    },
+    staytuned: {
+        title: "Staytuned Digital (Zenpire)",
+        description: "High-conversion e-commerce growth tools, sizing charts, and Shopify store revenue automation.",
+        url: "/go/staytuned",
+        buttonText: "Explore Zenpire",
+        badge: "E-commerce"
+    },
+    deel: {
+        title: "Deel",
+        description: "Global hiring, compliance, and international payroll platform for remote engineering teams.",
+        url: "/go/deel",
+        buttonText: "Get Started with Deel",
+        badge: "Global HR"
+    },
+    plansom: {
+        title: "Plansom",
+        description: "Intelligent financial planning, budgeting, and automated cash flow forecasting for growing businesses.",
+        url: "/go/plansom",
+        buttonText: "Try Plansom",
+        badge: "FinOps"
+    },
+    mindstudio: {
+        title: "MindStudio",
+        description: "No-code AI application builder. Build custom AI models, internal workflow assistants, and intelligent bots.",
+        url: "/go/mindstudio",
+        buttonText: "Build with MindStudio",
+        badge: "No-Code AI"
+    },
+    foxit: {
+        title: "Foxit PDF Editor",
+        description: "Enterprise PDF editor, e-sign platform, and automated document workflow management solution.",
+        url: "/go/foxit",
+        buttonText: "Try Foxit PDF",
+        badge: "Document Ops"
+    },
+    callhippo: {
+        title: "CallHippo",
+        description: "Intelligent cloud-based virtual phone system and VoIP call center software for sales teams.",
+        url: "/go/callhippo",
+        buttonText: "Try CallHippo",
+        badge: "Cloud Telephony"
     }
 };
 

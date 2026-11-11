@@ -1,6 +1,6 @@
 # Comprehensive SERP & Content Strategy Database: 100k Impressions/Month
 
-## 1. Master Affiliate Inventory (21 Tier-1 Tools)
+## 1. Master Affiliate Inventory (31 Tier-1 Tools)
 
 | Tool Key | Name | Affiliate URL / Cloaked Path | Category / Pillar | Target Value Proposition |
 |---|---|---|---|---|
@@ -25,6 +25,16 @@
 | `emergent` | Emergent | `https://get.emergent.sh/f7yhqncomeyr` | AI RevOps | Automated GTM & revenue platform |
 | `tapstitch` | Tapstitch | `https://affiliate.tapstitch.com/7k2jjtg3dl0f` | Workflow Integration | Data stitching platform |
 | `ags` | Accelerated Growth Studio | `https://acceleratedgrowthstudio.partnerlinks.io/ferzzxgyi9p3` | Growth Acceleration | Product-led growth engine |
+| `vistasocial` | Vista Social | `/go/vistasocial` | Social Media | Social scheduling, analytics & inbox |
+| `softsync` | SoftSync | `/go/softsync` | AI Automation | Enterprise low-latency AI & data sync |
+| `runpod` | RunPod | `/go/runpod` | Cloud Compute / GPU | Serverless GPU compute & model hosting |
+| `clickup` | ClickUp | `/go/clickup` | Project Ops | Work management, tasks & sprint docs |
+| `staytuned` | Staytuned Digital (Zenpire) | `/go/staytuned` | E-commerce Ops | Shopify sizing & e-commerce conversion |
+| `deel` | Deel | `/go/deel` | Global HR & Payroll | Global remote hiring & compliance |
+| `plansom` | Plansom | `/go/plansom` | FinOps & Planning | Automated forecasting & financial models |
+| `mindstudio` | MindStudio | `/go/mindstudio` | No-Code AI | Enterprise AI workforce & app builder |
+| `foxit` | Foxit PDF Editor | `/go/foxit` | Document Ops | Cloud PDF editor, signing & e-forms |
+| `callhippo` | CallHippo | `/go/callhippo` | Cloud Telephony | Virtual phone system & sales VoIP |
 
 ---
 
