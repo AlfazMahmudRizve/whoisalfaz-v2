@@ -33,20 +33,27 @@ const steps = [
 export default function WorkflowSteps() {
     return (
         <div className="relative">
-            {/* Connecting Line */}
-            <div className="absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-teal-500/20 via-blue-500/40 to-purple-500/20 dark:from-transparent dark:via-blue-500/50 dark:to-transparent -translate-y-1/2 hidden md:block rounded-full"></div>
+            {/* Connecting Line (Desktop) */}
+            <div className="absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-teal-500/20 via-blue-500/40 to-purple-500/20 dark:from-transparent dark:via-blue-500/50 dark:to-transparent -translate-y-1/2 hidden lg:block rounded-full"></div>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 relative z-10">
+            <div className="flex flex-col sm:grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 relative z-10">
                 {steps.map((step, i) => (
                     <div
                         key={i}
-                        className="animate-in fade-in zoom-in-95 duration-700 fill-mode-both workflow-step bg-white dark:bg-[#0a0a0a] p-6 rounded-[2rem] border border-slate-200 dark:border-white/5 shadow-xl dark:shadow-none mx-auto w-full max-w-[220px] hover:border-slate-300 dark:hover:border-white/20 hover:bg-slate-50 dark:hover:bg-[#111] transition-all duration-300 hover:-translate-y-2 group"
+                        className="animate-in fade-in zoom-in-95 duration-700 fill-mode-both workflow-step bg-white dark:bg-[#111622] p-5 sm:p-6 rounded-2xl sm:rounded-[2rem] border border-slate-200/90 dark:border-white/10 shadow-sm dark:shadow-none w-full max-w-md sm:max-w-[240px] mx-auto hover:border-teal-500/30 transition-all duration-300 hover:-translate-y-1 group flex sm:flex-col items-center sm:text-center text-left gap-4 sm:gap-0"
                         style={{ animationDelay: `${i * 150}ms` }}
                     >
-                        <div className={`w-14 h-14 rounded-2xl ${step.bg} flex items-center justify-center font-black text-xl mx-auto mb-6 border ${step.border} ${step.text} transition-transform duration-500 group-hover:scale-110 group-hover:-rotate-3`}>
+                        <div className={`w-12 h-12 sm:w-14 sm:h-14 rounded-2xl ${step.bg} flex items-center justify-center font-black text-lg sm:text-xl shrink-0 sm:mx-auto sm:mb-6 border ${step.border} ${step.text} transition-transform duration-500 group-hover:scale-110 group-hover:-rotate-3`}>
                             {step.num}
                         </div>
-                        <h3 className="text-slate-900 dark:text-white font-bold text-[15px] uppercase tracking-tight">{step.title}</h3>
+                        <div className="flex-1">
+                            <div className="text-[10px] font-mono uppercase font-bold text-slate-400 dark:text-slate-500 mb-0.5 sm:hidden">
+                                PHASE 0{step.num}
+                            </div>
+                            <h3 className="text-slate-900 dark:text-white font-bold text-sm sm:text-[15px] uppercase tracking-tight">
+                                {step.title}
+                            </h3>
+                        </div>
                     </div>
                 ))}
             </div>

@@ -104,15 +104,15 @@ export default function GlobalChatWidget() {
             <button
                 onClick={() => isOpen ? handleClose() : setIsOpen(true)}
                 aria-label={isOpen ? "Close chat" : "Open chat"}
-                className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-teal-500 rounded-full flex items-center justify-center shadow-[0_0_30px_rgba(45,212,191,0.3)] text-black hover:bg-teal-400 hover:scale-105 active:scale-95 transition-all duration-200"
+                className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 w-12 h-12 sm:w-14 sm:h-14 bg-teal-500 rounded-full flex items-center justify-center shadow-[0_0_30px_rgba(45,212,191,0.3)] text-black hover:bg-teal-400 hover:scale-105 active:scale-95 transition-all duration-200"
             >
-                {isOpen ? <X size={24} /> : <MessageCircle size={28} />}
+                {isOpen ? <X size={22} className="sm:w-6 sm:h-6" /> : <MessageCircle size={24} className="sm:w-7 sm:h-7" />}
             </button>
 
             {/* Chat Window — pure CSS transitions, no framer-motion */}
             {isOpen && (
                 <div
-                    className={`fixed bottom-24 right-6 z-50 w-[350px] max-w-[calc(100vw-3rem)] h-[500px] bg-[#0a0a0a] border border-white/10 rounded-2xl shadow-2xl flex flex-col overflow-hidden ring-1 ring-white/5 transition-all duration-200 ease-out ${isVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-4 scale-95'}`}
+                    className={`fixed bottom-20 right-4 sm:bottom-24 sm:right-6 z-50 w-[350px] max-w-[calc(100vw-2rem)] h-[480px] sm:h-[500px] bg-[#0a0a0a] border border-white/10 rounded-2xl shadow-2xl flex flex-col overflow-hidden ring-1 ring-white/5 transition-all duration-200 ease-out ${isVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-4 scale-95'}`}
                 >
                     {/* Header */}
                     <div className="p-4 bg-white/5 border-b border-white/5 flex items-center gap-3">

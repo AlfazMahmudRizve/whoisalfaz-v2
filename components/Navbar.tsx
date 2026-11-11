@@ -49,7 +49,7 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-2 text-sm font-medium text-slate-600 dark:text-slate-400">
+        <div className="hidden lg:flex items-center gap-2 text-sm font-medium text-slate-600 dark:text-slate-400">
           {navLinks.map((link) => {
             const isActive = pathname === link.href || (pathname?.startsWith(link.href) && link.href !== '/');
             return (
@@ -82,7 +82,7 @@ export default function Navbar() {
           {/* Theme Toggle */}
           <button
             onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-            className="p-1.5 rounded-full hover:bg-slate-200 dark:hover:bg-white/10 transition-colors text-slate-600 dark:text-slate-400 hover:text-teal-600 dark:hover:text-white w-8 h-8 flex items-center justify-center"
+            className="p-1.5 rounded-full hover:bg-slate-200 dark:hover:bg-white/10 transition-colors text-slate-600 dark:text-slate-400 hover:text-teal-600 dark:hover:text-white w-8 h-8 flex items-center justify-center cursor-pointer"
             aria-label="Toggle Theme"
           >
             {mounted ? (theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />) : <div className="w-[18px] h-[18px]" />}
@@ -90,7 +90,7 @@ export default function Navbar() {
         </div>
 
         {/* CTA Buttons */}
-        <div className="hidden md:flex items-center gap-2">
+        <div className="hidden lg:flex items-center gap-2">
           <Link
             href="/audit/"
             onClick={() => {
@@ -114,7 +114,7 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Menu & Theme Toggle */}
-        <div className="flex items-center gap-2 sm:gap-4 md:hidden">
+        <div className="flex items-center gap-1.5 sm:gap-3 lg:hidden">
           <Link
             href="/audit/"
             onClick={() => {
@@ -134,13 +134,17 @@ export default function Navbar() {
           </Link>
           <button
             onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-            className="p-1.5 text-slate-600 dark:text-slate-400 w-8 h-8 flex items-center justify-center"
+            className="p-2.5 rounded-full hover:bg-slate-200 dark:hover:bg-white/10 transition-colors text-slate-600 dark:text-slate-400 w-11 h-11 flex items-center justify-center cursor-pointer"
             aria-label="Toggle Theme"
           >
             {mounted ? (theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />) : <div className="w-[18px] h-[18px]" />}
           </button>
-          <button className="text-slate-600 dark:text-slate-400" onClick={() => setIsOpen(!isOpen)} aria-label="Open navigation menu">
-            {isOpen ? <X size={20} /> : <Menu size={20} />}
+          <button 
+            className="p-2.5 rounded-full hover:bg-slate-200 dark:hover:bg-white/10 transition-colors text-slate-700 dark:text-slate-300 w-11 h-11 flex items-center justify-center cursor-pointer" 
+            onClick={() => setIsOpen(!isOpen)} 
+            aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
+          >
+            {isOpen ? <X size={22} /> : <Menu size={22} />}
           </button>
         </div>
       </div>
@@ -202,7 +206,7 @@ export default function Navbar() {
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: -20, scale: 0.95 }}
               transition={{ duration: 0.2, ease: "easeOut" }}
-              className="absolute top-20 w-[calc(100%-2rem)] max-w-sm bg-white dark:bg-[#0a0a0a] border border-slate-200 dark:border-white/10 rounded-2xl p-2 space-y-1 shadow-2xl z-50"
+              className="absolute top-20 left-4 right-4 sm:left-auto sm:right-6 w-[calc(100%-2rem)] sm:w-84 max-w-sm bg-white/95 dark:bg-[#0c0d12]/95 backdrop-blur-2xl border border-slate-200 dark:border-white/10 rounded-2xl p-3 space-y-1.5 shadow-2xl z-50"
             >
               {/* Mobile Search Input */}
               <div className="px-2 pt-2 mb-2">
