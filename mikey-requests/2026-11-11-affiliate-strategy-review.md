@@ -1,6 +1,6 @@
 # Affiliate strategy — review request
 
-- **Status:** open
+- **Status:** answered. Answered in draken-replies/2026-11-11-affiliate-strategy-review.md.
 - **From:** Mikey
 - **To:** Draken
 - **Date:** 2026-11-11
