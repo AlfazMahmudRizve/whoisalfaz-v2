@@ -320,7 +320,7 @@ drafts = [
         "title": p09_title,
         "desc": p09_desc,
         "body": p09_body,
-        "affiliates": ["/go/n8n", "/go/tavily", "/go/qdrant", "/go/vultr-promo"]
+        "affiliates": ["/go/n8n", "/go/qdrant", "/go/vultr-promo"]
     },
     {
         "filename": "draft-unique-10.json",
@@ -328,7 +328,7 @@ drafts = [
         "title": p10_title,
         "desc": p10_desc,
         "body": p10_body,
-        "affiliates": ["/go/n8n", "/go/qdrant", "/go/openai", "/go/vultr-promo"]
+        "affiliates": ["/go/n8n", "/go/qdrant", "/go/vultr-promo"]
     },
     {
         "filename": "draft-unique-11.json",
@@ -336,7 +336,7 @@ drafts = [
         "title": p11_title,
         "desc": p11_desc,
         "body": p11_body,
-        "affiliates": ["/go/n8n", "/go/neo4j", "/go/qdrant", "/go/vultr-promo"]
+        "affiliates": ["/go/n8n", "/go/qdrant", "/go/vultr-promo"]
     },
     {
         "filename": "draft-unique-12.json",
@@ -344,7 +344,7 @@ drafts = [
         "title": p12_title,
         "desc": p12_desc,
         "body": p12_body,
-        "affiliates": ["/go/n8n", "/go/voyageai", "/go/qdrant", "/go/vultr-promo"]
+        "affiliates": ["/go/n8n", "/go/qdrant", "/go/vultr-promo"]
     }
 ]
 

@@ -573,7 +573,7 @@ articles.append({
     "desc": p13_desc,
     "date": p13_date,
     "body": p13_body,
-    "affiliates": ["/go/vultr-promo", "/go/dify", "/go/qdrant", "/go/ollama", "/go/n8n"]
+    "affiliates": ["/go/vultr-promo", "/go/dify", "/go/qdrant", "/go/n8n"]
 })
 
 
@@ -1080,7 +1080,7 @@ articles.append({
     "desc": p14_desc,
     "date": p14_date,
     "body": p14_body,
-    "affiliates": ["/go/vultr-promo", "/go/dify", "/go/n8n", "/go/qdrant", "/go/ollama"]
+    "affiliates": ["/go/vultr-promo", "/go/dify", "/go/n8n", "/go/qdrant"]
 })
 
 
@@ -1694,7 +1694,7 @@ articles.append({
     "desc": p15_desc,
     "date": p15_date,
     "body": p15_body,
-    "affiliates": ["/go/vultr-promo", "/go/qdrant", "/go/n8n", "/go/ollama", "/go/dify"]
+    "affiliates": ["/go/vultr-promo", "/go/qdrant", "/go/n8n", "/go/dify"]
 })
 
 
@@ -2136,7 +2136,7 @@ articles.append({
     "desc": p16_desc,
     "date": p16_date,
     "body": p16_body,
-    "affiliates": ["/go/vultr-promo", "/go/qdrant", "/go/ollama", "/go/n8n", "/go/dify"]
+    "affiliates": ["/go/vultr-promo", "/go/qdrant", "/go/n8n", "/go/dify"]
 })
 
 

@@ -1,6 +1,6 @@
 # Comprehensive SERP & Content Strategy Database: 100k Impressions/Month
 
-## 1. Master Affiliate Inventory (31 Tier-1 Tools)
+## 1. Master Affiliate Inventory (34 Active Programmes: 31 PartnerStack + 1 Cloud VPS + 2 Gumroad Products)
 
 | Tool Key | Name | Affiliate URL / Cloaked Path | Category / Pillar | Target Value Proposition |
 |---|---|---|---|---|
@@ -9,22 +9,22 @@
 | `databox` | Databox | `/go/databox` | Analytics & BI | Real-time sales & RevOps dashboards |
 | `whatconverts` | WhatConverts | `/go/whatconverts` | Lead Attribution | Call, form, chat & lead attribution |
 | `apollo` | Apollo.io | `/go/apollo` | B2B Prospecting | B2B database & lead enrichment |
-| `aisdr` | AiSDR | `https://partner.aisdr.com/2jffam3qqf6h` | Outbound AI SDR | AI-driven cold email booking |
+| `aisdr` | AiSDR | `/go/aisdr` | Outbound AI SDR | AI-driven cold email booking |
 | `brevo` | Brevo (Sendinblue) | `/go/brevo` | Email & SMTP | Transactional SMTP & CRM nurture |
 | `elevenlabs` | ElevenLabs | `/go/elevenlabs` | Voice AI | Realistic voice agents & TTS |
 | `pinecone` | Pinecone Vector DB | `/go/pinecone` | Vector Search | Managed vector DB for enterprise RAG |
 | `qdrant` | Qdrant Cloud | `/go/qdrant` | Vector Search | Rust-native vector search engine |
 | `manychat` | ManyChat | `/go/manychat` | Conversational Marketing | WhatsApp & Instagram DM automation |
-| `vultr` | Vultr | `/go/vultr` | Cloud VPS Compute | Self-hosted n8n & Qdrant infrastructure |
+| `vultr` | Vultr | `/go/vultr-promo` | Cloud VPS Compute | Self-hosted n8n & Qdrant infrastructure ($100 credit) |
 | `adcreative` | AdCreative.ai | `/go/adcreative` | AI Creative Design | Conversion-focused ad generator |
 | `trainual` | Trainual | `/go/trainual` | SOP & Onboarding | Living standard operating procedures |
 | `lusha` | Lusha | `/go/lusha` | Data Enrichment | Direct dials & B2B phone/email lookup |
 | `dify` | Dify.ai | `/go/dify` | AI Orchestration | Open-source LLM app builder |
 | `cometchat` | CometChat | `/go/cometchat` | In-App Comms | In-app messaging & voice/video APIs |
 | `turbotic` | Turbotic | `/go/turbotic` | Automation Governance | Enterprise automation tracking |
-| `emergent` | Emergent | `https://get.emergent.sh/f7yhqncomeyr` | AI RevOps | Automated GTM & revenue platform |
-| `tapstitch` | Tapstitch | `https://affiliate.tapstitch.com/7k2jjtg3dl0f` | Workflow Integration | Data stitching platform |
-| `ags` | Accelerated Growth Studio | `https://acceleratedgrowthstudio.partnerlinks.io/ferzzxgyi9p3` | Growth Acceleration | Product-led growth engine |
+| `emergent` | Emergent | `/go/emergent` | AI RevOps | Automated GTM & revenue platform |
+| `tapstitch` | Tapstitch | `/go/tapstitch` | Workflow Integration | Data stitching platform |
+| `ags` | Accelerated Growth Studio | `/go/ags` | Growth Acceleration | Product-led growth engine |
 | `vistasocial` | Vista Social | `/go/vistasocial` | Social Media | Social scheduling, analytics & inbox |
 | `softsync` | SoftSync | `/go/softsync` | AI Automation | Enterprise low-latency AI & data sync |
 | `runpod` | RunPod | `/go/runpod` | Cloud Compute / GPU | Serverless GPU compute & model hosting |
@@ -35,6 +35,8 @@
 | `mindstudio` | MindStudio | `/go/mindstudio` | No-Code AI | Enterprise AI workforce & app builder |
 | `foxit` | Foxit PDF Editor | `/go/foxit` | Document Ops | Cloud PDF editor, signing & e-forms |
 | `callhippo` | CallHippo | `/go/callhippo` | Cloud Telephony | Virtual phone system & sales VoIP |
+| `krafera-upgrade` | Krafera Upgrade Watch | `/go/krafera-upgrade` | n8n 3.0 Safety & Migration | Automated AST scanning for breaking nodes (Promo: ALFAZUG20) |
+| `krafera-watchtower` | Krafera Silent Failure Watch | `/go/krafera-watchtower` | n8n Telemetry & Monitoring | Watchtower alert pack for production n8n workflows |
 
 ---
 

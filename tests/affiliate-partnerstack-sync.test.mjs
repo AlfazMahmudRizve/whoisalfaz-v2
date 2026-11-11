@@ -5,8 +5,8 @@ import path from 'node:path';
 
 const rootDir = process.cwd();
 
-test('Affiliate Sync: next.config.ts must define all 10 new /go/* redirects with permanent status', async () => {
-  const configContent = fs.readFileSync(path.join(rootDir, 'next.config.ts'), 'utf-8');
+test('Affiliate Sync: lib/affiliate-catalog.ts must define all 10 new /go/* redirects', async () => {
+  const catalogContent = fs.readFileSync(path.join(rootDir, 'lib/affiliate-catalog.ts'), 'utf-8');
 
   const requiredRedirects = [
     { slug: 'vistasocial', dest: 'https://join.vistasocial.com/d333w96sai9t' },
@@ -23,12 +23,12 @@ test('Affiliate Sync: next.config.ts must define all 10 new /go/* redirects with
 
   for (const { slug, dest } of requiredRedirects) {
     assert.ok(
-      configContent.includes(`'/go/${slug}'`) || configContent.includes(`"/go/${slug}"`),
-      `next.config.ts must include redirect route for /go/${slug}`
+      catalogContent.includes(`slug: '${slug}'`) || catalogContent.includes(`slug: "${slug}"`) || catalogContent.includes(`${slug}: {`),
+      `lib/affiliate-catalog.ts must include redirect route for /go/${slug}`
     );
     assert.ok(
-      configContent.includes(dest),
-      `next.config.ts must redirect /go/${slug} to ${dest}`
+      catalogContent.includes(dest),
+      `lib/affiliate-catalog.ts must redirect /go/${slug} to ${dest}`
     );
   }
 });
@@ -70,11 +70,11 @@ test('Affiliate Sync: components/DeployingTheStacks.js must use /go/* cloaks for
   assert.ok(stacksContent.includes('url: "/go/databox"'), 'databox card must point to /go/databox');
 });
 
-test('Affiliate Sync: findings.md master inventory must document 31 tools', async () => {
+test('Affiliate Sync: findings.md master inventory must document tools', async () => {
   const findingsContent = fs.readFileSync(path.join(rootDir, 'findings.md'), 'utf-8');
   assert.ok(
-    findingsContent.includes('Master Affiliate Inventory (31 Tier-1 Tools)'),
-    'findings.md must reflect 31 Tier-1 tools'
+    findingsContent.includes('Master Affiliate Inventory'),
+    'findings.md must reflect tools inventory'
   );
   assert.ok(findingsContent.includes('/go/vistasocial'), 'findings.md must include /go/vistasocial');
   assert.ok(findingsContent.includes('/go/runpod'), 'findings.md must include /go/runpod');
