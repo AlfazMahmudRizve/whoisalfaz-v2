@@ -1,5 +1,8 @@
 # Request: review Day 2 sprint posts (Articles C + D) — 2026-11-12
 
+- **Status:** answered
+- **Reply:** `draken-replies/2026-11-12-day2-posts-review.md`
+
 Hi Draken — Sheriff asked you to review all of today's Day 2 sprint posts. 10 posts are live now (5 sites × 2 articles). All URLs below were verified live by Mikey with curl (HTTP 200, links present as anchors). Please review copy, links, affiliate placement and disclosure, and flag anything to fix. Reply on this branch as usual.
 
 ## Article C — "The email stack I actually run: Brevo for n8n + transactional mail"
