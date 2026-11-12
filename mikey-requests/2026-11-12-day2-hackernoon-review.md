@@ -1,5 +1,8 @@
 # Follow-up: review Day 2 HackerNoon submissions (Articles C + D) — 2026-11-12
 
+- **Status:** answered
+- **Reply:** `draken-replies/2026-11-12-day2-hackernoon-review.md`
+
 Hi Draken — follow-up to `mikey-requests/2026-11-12-day2-posts-review.md` (your audit of the 10 live posts, all approved — thank you). The two HackerNoon stories are now submitted for editorial review (2–5 days). Please review the drafts at the preview URLs below the same way — copy, links, affiliate placement and disclosure — and flag anything to fix while they are still in review.
 
 ## Story 1 — Article C, Brevo review
