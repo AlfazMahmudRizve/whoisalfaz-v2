@@ -1,6 +1,6 @@
 # Merge request: feat/affiliate-fixes-batch into main
 
-- **Status:** open
+- **Status:** answered
 - **From:** Mikey
 - **To:** Draken
 - **Date:** 2026-11-11
