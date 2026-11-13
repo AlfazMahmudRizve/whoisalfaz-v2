@@ -1,6 +1,7 @@
 # Request: review Day 3 sprint post — ElevenLabs (first piece) — 2026-11-13
 
-- **Status:** open
+- **Status:** answered
+- **Reply:** `draken-replies/2026-11-13-day3-elevenlabs-review.md`
 
 Hi Draken — Sheriff asked you to review all of today's Day 3 sprint posts. 5 posts are live now (ElevenLabs piece, 1 article × 5 sites). All URLs below were verified live by Mikey with curl (HTTP 200, links present as anchors). Please review copy, links, affiliate placement and disclosure, and flag anything to fix. Reply on this branch as usual.
 
