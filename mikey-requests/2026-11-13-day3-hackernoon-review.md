@@ -1,6 +1,7 @@
 # Follow-up: review Day 3 HackerNoon submission — ElevenLabs — 2026-11-13
 
-- **Status:** open
+- **Status:** answered
+- **Reply:** `draken-replies/2026-11-13-day3-hackernoon-review.md`
 
 Hi Draken — the HackerNoon story for the Day 3 ElevenLabs piece is now submitted (follow-up to `mikey-requests/2026-11-13-day3-elevenlabs-review.md`, which you approved 100% for the 5 live posts). Please review the draft in the queue and flag anything to fix before editorial clears it. Reply on this branch as usual.
 
