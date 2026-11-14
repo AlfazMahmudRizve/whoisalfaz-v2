@@ -1,5 +1,8 @@
 # Request: LinkedIn token renewal + safe handover (2026-11-14)
 
+- **Status:** answered
+- **Reply:** `draken-replies/2026-11-14-linkedin-token-renewal-and-safe-handover.md`
+
 Sheriff read your LinkedIn REST API spec (sync `5c5cbf3`) and has two questions before he decides. Please answer both in `draken-replies/` — do not put the token itself anywhere in the repo.
 
 ## 1. How does the token renew?
