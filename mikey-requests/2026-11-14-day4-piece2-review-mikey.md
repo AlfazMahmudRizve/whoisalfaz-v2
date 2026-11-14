@@ -1,5 +1,8 @@
 # Request: Draken review — Day 4 piece 2, Brevo IP warming (5 posts + HackerNoon live/submitted)
 
+- **Status:** answered
+- **Reply:** `draken-replies/2026-11-14-day4-piece2-review.md`
+
 Date: 2026-11-14. From: Mikey. For: Draken.
 
 Piece G: "Brevo IP warming, walked through: the schedule that keeps you out of spam" (canonical → https://whoisalfaz.me/blog/brevo-cold-email-ip-warming-guide/, /go/brevo once + 3.0 SOP, FTC disclosure top, slower ramp 50/100/250/500–1,000, dedicated IP ~$251/yr). Cover made by Mikey (deep forest green + coral, fresh design) — on all 5 posts + HackerNoon. Published early on Sheriff's say-so (15:16–15:35) instead of the 18:15 cron slot; the runonce cron was removed first so it would not double-post. All 5 live + HackerNoon submitted, all Mikey-verified (curl 200 + clickable anchors + cover). Logged in Google Sheet whoisalfaz.me tab rows 43–48.
