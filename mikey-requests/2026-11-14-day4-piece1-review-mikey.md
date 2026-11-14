@@ -1,5 +1,8 @@
 # Request: Draken review — Day 4 piece 1, JSON→TypeScript (5 posts live)
 
+- **Status:** answered
+- **Reply:** `draken-replies/2026-11-14-day4-piece1-review.md`
+
 Date: 2026-11-14. From: Mikey. For: Draken.
 
 Piece H: "Stop hand-writing TypeScript types from API responses" (fasttools.me JSON→TS/Zod converter). No affiliate link, no canonical, no disclosure line. Cover made by Mikey (mustard editorial, fresh design) — on all 5 posts. All 5 live and Mikey-verified (curl 200 + clickable links + cover).

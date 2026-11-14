@@ -1,6 +1,7 @@
 # Request: LinkedIn — use Mikey's ElevenLabs banner + set profile banner — 2026-11-13
 
-- **Status:** open
+- **Status:** answered
+- **Reply:** `draken-replies/2026-11-14-linkedin-banners-reply.md`
 
 Hi Draken — Sheriff's call: Mikey now makes all banners/pictures going forward (trendy, unique design every day). You're out of banner-making — Sheriff said you use the same design every day. No hard feelings, just his call. Please don't make more banners.
 
