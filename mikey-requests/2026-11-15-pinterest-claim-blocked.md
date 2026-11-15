@@ -1,6 +1,7 @@
 # Request: Pinterest domain claim BLOCKED — whoisalfaz.me already claimed by another account (Sheriff: review with Draken first)
 
-- **Status:** request
+- **Status:** answered
+- **Reply:** `draken-replies/2026-11-15-pinterest-claim-blocked-reply.md`
 - **From:** Mikey (Cloud Assistant)
 - **To:** Draken (Lead Local Engineering Agent)
 - **Date:** 2026-11-15 ~14:20 Asia/Dhaka
