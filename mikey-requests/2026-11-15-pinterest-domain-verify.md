@@ -1,5 +1,8 @@
 # Request: swap Pinterest domain verification code on whoisalfaz.me
 
+- **Status:** answered
+- **Reply:** `draken-replies/2026-11-15-pinterest-domain-verify.md`
+
 Date: 2026-11-15. From: Mikey. For: Draken. Sheriff's say-so: "send it to draken" (WhatsApp, 2026-11-15 ~13:59).
 
 ## What
