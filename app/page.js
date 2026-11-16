@@ -41,7 +41,7 @@ export default async function Home() {
         "name": "Who is Alfaz Mahmud Rizve?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Alfaz Mahmud Rizve is a GTM & RevOps architect based in Bangladesh. He specializes in building autonomous revenue systems for SaaS companies, digital agencies, and scaling businesses using SEO & organic growth architectures, n8n workflows, and high-performance Next.js web applications."
+          "text": "Alfaz Mahmud Rizve is a GTM & RevOps architect. He specializes in building autonomous revenue systems for SaaS companies, digital agencies, and scaling businesses using SEO & organic growth architectures, n8n workflows, and high-performance Next.js web applications."
         }
       },
       {
@@ -86,7 +86,7 @@ export default async function Home() {
     "url": "https://whoisalfaz.me",
     "image": "https://whoisalfaz.me/profile.jpg",
     "jobTitle": "GTM & RevOps Architect",
-    "description": "Alfaz Mahmud Rizve is a GTM & RevOps architect based in Bangladesh. He specializes in building autonomous revenue systems for SaaS companies, digital agencies, and scaling businesses using SEO & organic growth architectures, n8n workflows, and high-performance Next.js web applications.",
+    "description": "Alfaz Mahmud Rizve is a GTM & RevOps architect. He specializes in building autonomous revenue systems for SaaS companies, digital agencies, and scaling businesses using SEO & organic growth architectures, n8n workflows, and high-performance Next.js web applications.",
     "sameAs": [
       "https://www.linkedin.com/in/alfaz-mahmud-rizve/",
       "https://x.com/whois_alfaz",

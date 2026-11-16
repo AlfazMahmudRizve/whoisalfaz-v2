@@ -73,10 +73,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       "jobTitle": "GTM & RevOps Architect",
       "email": "a.m.rizve3905@gmail.com",
       "description": "I engineer autonomous revenue engines — bridging SEO & Organic Growth, high-speed Next.js web applications, and self-healing n8n RevOps pipelines for scaling brands and agencies.",
-      "nationality": {
-        "@type": "Country",
-        "name": "Bangladesh"
-      },
       "knowsAbout": [
         "SEO & Organic Growth",
         "Programmatic SEO",

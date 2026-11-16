@@ -117,6 +117,10 @@ export default function AboutAuthorPage() {
                 GTM &amp; RevOps Architect
               </h2>
               
+              <div className="p-4 sm:p-5 rounded-2xl bg-teal-500/10 border border-teal-500/20 text-slate-900 dark:text-teal-200 font-mono text-sm sm:text-base leading-relaxed mb-6 font-semibold">
+                &ldquo;GTM &amp; RevOps Architect — I build autonomous revenue systems for scaling agencies and SaaS: SEO &amp; organic growth, high-speed Next.js apps, and self-healing n8n workflows. whoisalfaz.me&rdquo;
+              </div>
+
               <p className="text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
                 I engineer scalable revenue engines by unifying three core pillars: <strong>GTM &amp; SEO (Organic Acquisition)</strong>, <strong>High-Performance Next.js Web Applications</strong>, and <strong>Autonomous RevOps Workflow Automation</strong>. Rather than running isolated campaigns or brittle scripts, I architect connected growth ecosystems where topical authority drives organic demand into sub-second web experiences, which capture, score, and sync leads through deterministic backend pipelines.
               </p>
@@ -251,11 +255,11 @@ export default function AboutAuthorPage() {
             <ul className="space-y-4 text-slate-600 dark:text-slate-400">
               <li className="flex items-start gap-3">
                 <CheckCircle2 size={18} className="text-teal-500 mt-1 shrink-0" />
-                <span><strong className="text-slate-900 dark:text-slate-200">VibeViso 90-Day Surge:</strong> Generated 40k impressions and 88% click acceleration in 90 days via hyper-local entity clusters and double-directional internal linking.</span>
+                <span><strong className="text-slate-900 dark:text-slate-200">VibeViso SEO Architecture:</strong> Engineered local SEO and entity clustering architecture that drove 40k search impressions and an 88% organic click acceleration in 90 days.</span>
               </li>
               <li className="flex items-start gap-3">
                 <CheckCircle2 size={18} className="text-teal-500 mt-1 shrink-0" />
-                <span><strong className="text-slate-900 dark:text-slate-200">FlowerShop.net.ph Scale:</strong> Architected and deployed 679 fully indexed commercial pages with zero thin-content penalties.</span>
+                <span><strong className="text-slate-900 dark:text-slate-200">FlowerShop.net.ph Organic Search:</strong> Scaled commercial organic visibility by architecting programmatic SEO taxonomy and indexation pipelines for 679 search-indexed pages with zero thin-content penalties.</span>
               </li>
               <li className="flex items-start gap-3">
                 <CheckCircle2 size={18} className="text-teal-500 mt-1 shrink-0" />

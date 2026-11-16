@@ -89,7 +89,7 @@ const faqs: FaqItem[] = [
     q: 'Who is Alfaz Mahmud Rizve?',
     a: (
       <>
-        Alfaz Mahmud Rizve is a RevOps architect and full-stack automation engineer based in Bangladesh. He specializes in building autonomous revenue systems for SaaS companies, digital agencies, and small businesses using n8n workflows, <Link href="/blog/dify-ai-workflow-orchestration-vs-n8n-ai-agent-nodes/" className="text-teal-600 dark:text-teal-400 font-semibold hover:underline">Dify vs n8n AI workflow architecture</Link>, and high-performance Next.js infrastructure. His mission is to help business owners adopt the <Link href="/blog/ai-automation-agency-business-model/" className="text-teal-600 dark:text-teal-400 font-semibold hover:underline">AI automation agency business model</Link> and build systems that run on autopilot.
+        Alfaz Mahmud Rizve is a GTM &amp; RevOps architect. He specializes in building autonomous revenue systems for SaaS companies, digital agencies, and scaling businesses using SEO &amp; organic growth architectures, n8n workflows, and high-performance Next.js web applications.
       </>
     ),
   },
@@ -168,7 +168,7 @@ export default function HomeContentFooter() {
 
                 <div className="space-y-3.5 text-sm sm:text-[15px] text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
                   <p>
-                    I engineer autonomous revenue engines for scaling SaaS brands, digital agencies, and enterprise founders. Based in Bangladesh and consulting globally, I bridge high-velocity SEO architecture, sub-second Next.js web applications, and self-healing n8n RevOps pipelines.
+                    I engineer autonomous revenue engines for scaling SaaS brands, digital agencies, and enterprise founders. Consulting globally, I bridge high-velocity SEO architecture, sub-second Next.js web applications, and self-healing n8n RevOps pipelines.
                   </p>
                   <p>
                     My goal is simple: replace fragile no-code tools and manual operational drag with enterprise-grade systems that generate pipeline and convert buyers 24/7. Explore our empirical{' '}
