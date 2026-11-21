@@ -57,8 +57,8 @@ const checks = [
     border: 'border-amber-500/20',
     description:
       'We fetch your /robots.txt to verify crawl directives and check for a sitemap reference. We also fetch /sitemap.xml to confirm it exists and count the number of indexed URLs. A missing or misconfigured sitemap prevents search engines from discovering your pages.',
-    linkText: 'Fix crawlability with SEO & Organic Growth →',
-    linkHref: '/services/seo-organic-growth/',
+    linkText: 'Compare 5 best Screaming Frog alternatives for crawl audits →',
+    linkHref: '/blog/screaming-frog-alternatives-free-seo-audit-tools/',
   },
   {
     icon: Server,
@@ -115,7 +115,7 @@ const faqs = [
   {
     q: 'How accurate is this website audit?',
     a: 'We use the official Google PageSpeed Insights API for performance data and connect directly to your server for SSL, DNS, and security header checks. The results reflect real-world conditions, not simulated tests.',
-    link: { text: 'Read our technical guides on performance optimization', href: '/blog/' },
+    link: { text: 'Compare 5 best Screaming Frog alternatives for deep technical crawls', href: '/blog/screaming-frog-alternatives-free-seo-audit-tools/' },
   },
   {
     q: 'What is a good website audit score?',
