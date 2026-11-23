@@ -336,17 +336,15 @@ export default function AuditContentFooter() {
                     }`}
                   />
                 </button>
-                {isOpen && (
-                  <div className="px-5 pb-5 -mt-1 space-y-3">
-                    <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed transition-colors">{faq.a}</p>
-                    <Link
-                      href={faq.link.href}
-                      className="inline-flex items-center gap-1 text-purple-600 dark:text-purple-400 text-xs font-bold hover:underline transition-colors"
-                    >
-                      {faq.link.text} <ArrowRight size={12} />
-                    </Link>
-                  </div>
-                )}
+                <div className={`px-5 pb-5 -mt-1 space-y-3 ${isOpen ? 'block' : 'hidden'}`}>
+                  <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed transition-colors">{faq.a}</p>
+                  <Link
+                    href={faq.link.href}
+                    className="inline-flex items-center gap-1 text-purple-600 dark:text-purple-400 text-xs font-bold hover:underline transition-colors"
+                  >
+                    {faq.link.text} <ArrowRight size={12} />
+                  </Link>
+                </div>
               </div>
             );
           })}
