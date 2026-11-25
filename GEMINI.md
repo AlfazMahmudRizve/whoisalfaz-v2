@@ -20,5 +20,6 @@
 - Always use programmatic Google Indexing (`scripts/submitUpdatedPostsToGoogleIndexing.py` or dedicated indexing scripts) for newly published or updated URLs.
 
 ## 🤖 Multi-Agent Governance
-- **Consult Mikey for Rules & Settings:** For any rules, environment configurations, deployment settings, or framework upgrades, always ask Mikey via `origin/mikey-draken-sync`.
+- **Consult Mikey for Rules & Settings (FastTools & WhoisAlfaz only):** Specifically scoped to **whoisalfaz.me** and **fasttools.me** only. For any rules, environment configurations, deployment settings, or framework upgrades for these two projects, always ask Mikey via `origin/mikey-draken-sync`. Other projects and workspaces are exempt.
+
 
