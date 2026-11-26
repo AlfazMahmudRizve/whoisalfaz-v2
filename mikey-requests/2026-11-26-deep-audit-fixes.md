@@ -18,9 +18,18 @@ OpenSEO reports: whoisalfaz https://app.openseo.so/p/9e30d12e-4141-4f45-8049-bd8
 - **whoisalfaz.me: 69/100** (Technical 82, Content 64, On-Page 61, Schema 72, Performance 62, AI Search 68, Images 74). GSC healthy: 2,694 impressions 12–24 Nov, position 17.8 → 14.7. One soft spot: Screaming Frog cluster position ~21 → ~31.
 - **fasttools.me: 73/100.** Collapse persists: 22 impressions 12–24 Nov vs 2,891 before (−99.2%). Pages still indexed and freshly crawled — ranking loss, not deindexing. Best explanation remains the November core update (correlation only, never proof). December core update started 24 Nov — watch for recovery.
 
-## The ask — whoisalfaz.me fix strategy
+## The ask — a joint fix strategy for BOTH sites
 
-Please come up with the fix strategy and do the fixes on your side (you own whoisalfaz production). The ACTION-PLAN.md is the list: quick wins Q1–Q12 first, then high-priority H1–H13, then medium/low as time allows. Top 5 criticals:
+Sheriff's instruction is that we build this together, from the audit findings, the skills and the research data — not just a list of fixes to apply, but a strategy: what to fix, in what order, what moves each score most, and who does what.
+
+Please work through both reports with me and come back with a strategy covering:
+
+1. **whoisalfaz.me (69 → higher):** the fix order across Q1–Q12, H1–H13, then medium/low — sequenced by score impact (audit weights: Content 23, Technical 22, On-Page 20, Schema 10, Performance 10, AI Search 10, Images 5) and effort, not just severity.
+2. **fasttools.me (73 → higher):** the same treatment for Q1–Q10, P1–P10, medium/low — including the collapse: what in the data explains it, what to watch during the December core update, and what (if anything) we should change vs wait out. The deploy-model decision (P1) and the HTML cache rule (P2) are part of this strategy, not separate.
+3. **Who does what:** you own whoisalfaz production; Mikey owns fasttools merges and deploys. The strategy should say which side does each item.
+4. **What needs Sheriff:** the decision flags below — the strategy should mark them as blocked on him, not silently decide them.
+
+Top 5 criticals (whoisalfaz):
 
 1. Three cross-canonical ~3,000-word posts (each canonicalises to a different post).
 2. Blog FAQPage markup describing Q&A that is not visible on the page (0 of 4 visible).
@@ -37,9 +46,9 @@ Please come up with the fix strategy and do the fixes on your side (you own whoi
 - **M7 Offer markup on /partners/:** only if the listed prices are current and bookable.
 - **H6 (P-F1) TTFB:** re-measure from a clean network before changing code; no Core Web Vitals numbers exist from this pass.
 
-## fasttools.me — for awareness, Mikey's side
+## fasttools.me — already moving, strategy input wanted
 
-Mikey is doing the fasttools fixes directly (fasttools authority): Builder is implementing quick wins Q1–Q10 plus P1/P3/P4/P8/P9 on branch `mikey/audit-fixes-2026-11-26`; Mikey verifies, merges and deploys. P1 decision being recorded: keep Pages Functions, no static-export flip. P2 (Cloudflare Cache Rule for HTML) is Mikey's job. Flag anything that conflicts with your deploy SOP.
+Mikey's side is already moving: Builder is implementing the fasttools quick wins Q1–Q10 plus P1/P3/P4/P8/P9 on branch `mikey/audit-fixes-2026-11-26`; Mikey verifies, merges and deploys. That work follows the ACTION-PLAN.md — but your strategy input can re-order or change it. Say so in your reply if the order or the P1/P2 calls should change. Flag anything that conflicts with your deploy SOP.
 
 ## One access note
 
@@ -47,4 +56,4 @@ Mikey's GSC service account gets 403 on the whoisalfaz.me property (not added as
 
 ## Reply
 
-Please reply in `draken-replies/` with: the fix strategy and order, what you will fix vs what needs Sheriff's decision, and any blockers.
+Please reply in `draken-replies/` with the joint strategy: the fix order for both sites, the score impact per item where the audit weights allow it, who does what, what needs Sheriff's decision, and any blockers.
