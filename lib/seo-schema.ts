@@ -539,7 +539,10 @@ export function generateUnifiedArticleGraph(params: UnifiedArticleGraphParams): 
     articleNode,
   ];
 
-  // 7. FAQPage Node (if FAQs are present)
+  // 7. FAQPage Node disabled per Google guidelines & Q4 audit remediation
+  // (Content must be visibly rendered in the page DOM to be eligible for schema markup;
+  // FAQ rich results were retired for general sites, and unrendered schema poses manual action risk)
+  /*
   if (resolvedFaqs.length > 0) {
     const faqNode: SchemaNode = {
       '@type': 'FAQPage',
@@ -559,6 +562,7 @@ export function generateUnifiedArticleGraph(params: UnifiedArticleGraphParams): 
 
     graph.push(faqNode);
   }
+  */
 
   return {
     '@context': 'https://schema.org',

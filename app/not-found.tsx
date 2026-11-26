@@ -1,4 +1,14 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
+
+export const metadata: Metadata = {
+    title: "Page Not Found | whoisalfaz.me",
+    description: "The page you are looking for has been moved, deleted, or possibly never existed.",
+    robots: {
+        index: false,
+        follow: false,
+    },
+};
 
 export default function NotFound() {
     return (

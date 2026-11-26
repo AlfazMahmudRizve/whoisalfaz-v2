@@ -120,7 +120,6 @@ export default async function CategoryPage({ params }) {
     const rawCategories = await getSanityCategories();
     const defaultRequiredCategories = [
         { name: "AI Content Systems", slug: { current: "ai-content-systems" } },
-        { name: "Learn Automation in 30 Days", slug: { current: "learn-automation-in-30-days" } },
         { name: "30 Days of n8n Automation", slug: { current: "30-days-of-n8n-automation" } },
         { name: "Architecture Teardowns", slug: { current: "architecture-teardowns" } }
     ];

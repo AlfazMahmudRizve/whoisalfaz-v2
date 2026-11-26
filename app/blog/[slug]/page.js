@@ -124,7 +124,7 @@ export default async function Post({ params }) {
   const rawCategories = await getSanityCategories();
   const defaultRequiredCategories = [
     { name: "AI Content Systems", slug: { current: "ai-content-systems" } },
-    { name: "Learn Automation in 30 Days", slug: { current: "learn-automation-in-30-days" } }
+    { name: "30 Days of n8n Automation", slug: { current: "30-days-of-n8n-automation" } }
   ];
   const categories = [...(rawCategories || [])];
   defaultRequiredCategories.forEach(req => {
@@ -404,6 +404,29 @@ export default async function Post({ params }) {
             <MDXRemote
               source={contentMarkdown || ''}
               components={{
+                a: ({ href, children, ...props }) => {
+                  const isAffiliate = href && (href.startsWith('/go/') || href.includes('whoisalfaz.me/go/'));
+                  if (isAffiliate) {
+                    return (
+                      <a href={href} rel="sponsored noopener noreferrer" target="_blank" {...props}>
+                        {children}
+                      </a>
+                    );
+                  }
+                  const isExternal = href && (href.startsWith('http://') || href.startsWith('https://')) && !href.includes('whoisalfaz.me');
+                  if (isExternal) {
+                    return (
+                      <a href={href} rel="noopener noreferrer" target="_blank" {...props}>
+                        {children}
+                      </a>
+                    );
+                  }
+                  return (
+                    <a href={href} {...props}>
+                      {children}
+                    </a>
+                  );
+                },
                 hr: () => <hr className="wp-block-separator has-alpha-channel-opacity my-16 border-slate-200 dark:border-white/10 w-full" />,
                 pre: CodeBlock,
                 blockquote: Callout,

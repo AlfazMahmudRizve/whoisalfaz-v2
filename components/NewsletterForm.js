@@ -67,6 +67,7 @@ export default function NewsletterForm({
           </div>
           <input
             type="email"
+            aria-label="Work email address"
             placeholder={placeholder}
             required
             className="w-full sm:flex-1 bg-white dark:bg-white/[0.05] border border-slate-200 dark:border-white/10 rounded-full px-5 py-3.5 text-sm text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-teal-500/40 shadow-xs transition-all duration-200"
@@ -112,6 +113,7 @@ export default function NewsletterForm({
       </div>
       <input
         type="email"
+        aria-label="Work email address"
         placeholder={placeholder}
         required
         className="w-full bg-white dark:bg-black/50 border border-slate-200 dark:border-white/10 rounded-xl p-3.5 text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-teal-500/40 shadow-xs transition-all duration-300 text-sm"

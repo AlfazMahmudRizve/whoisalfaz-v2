@@ -35,7 +35,7 @@ export default async function BlogPage() {
     const rawCategories = await getSanityCategories();
     const defaultRequiredCategories = [
         { name: "AI Content Systems", slug: { current: "ai-content-systems" }, count: "Featured" },
-        { name: "Learn Automation in 30 Days", slug: { current: "learn-automation-in-30-days" }, count: "Series" }
+        { name: "30 Days of n8n Automation", slug: { current: "30-days-of-n8n-automation" }, count: "Series" }
     ];
     const categories = [...(rawCategories || [])];
     defaultRequiredCategories.forEach(req => {
@@ -132,7 +132,7 @@ export default async function BlogPage() {
                         </div>
 
                         <StaggerContainer className="grid md:grid-cols-2 gap-8">
-                            {posts?.map((post) => (
+                            {posts?.map((post, postIndex) => (
                                 <StaggerItem key={post.slug.current} className="h-full">
                                     <Link href={`/blog/${post.slug.current}/`} prefetch={false} className="group block h-full">
                                         <article className="h-full bg-white dark:bg-[#0a0a0a] border border-slate-200 dark:border-white/10 rounded-[2rem] overflow-hidden hover:border-teal-400/50 dark:hover:border-blue-500/50 transition-all duration-500 hover:-translate-y-2 shadow-xl dark:shadow-sm flex flex-col">
@@ -140,7 +140,7 @@ export default async function BlogPage() {
                                             {/* TOP IMAGE AREA WITH PILLS */}
                                             <div className="h-64 bg-slate-100 dark:bg-slate-800 relative overflow-hidden p-6 flex flex-col justify-start">
                                                 {post.image ? (
-                                                    <Image src={post.image} alt={post.title} fill unoptimized sizes="(max-width: 768px) 100vw, 50vw" className="object-cover group-hover:scale-105 transition-transform duration-1000" />
+                                                    <Image src={post.image} alt={post.title} fill unoptimized priority={postIndex === 0} sizes="(max-width: 768px) 100vw, 50vw" className="object-cover group-hover:scale-105 transition-transform duration-1000" />
                                                 ) : (
                                                     <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-teal-500/20" />
                                                 )}
