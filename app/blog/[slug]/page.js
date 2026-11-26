@@ -312,6 +312,16 @@ export default async function Post({ params }) {
                 <span>{new Date(post.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</span>
               </div>
 
+              {post.modified && (new Date(post.modified).getTime() - new Date(post.date).getTime() > 86400000) && (
+                <>
+                  <div className="h-10 w-px bg-slate-200 dark:bg-white/10 hidden sm:block" />
+                  <div className="flex items-center gap-2 text-teal-600 dark:text-teal-400 font-bold lowercase tracking-normal">
+                    <span className="w-2 h-2 rounded-full bg-teal-500 animate-pulse" />
+                    <span>Updated {new Date(post.modified).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
+                  </div>
+                </>
+              )}
+
               <div className="h-10 w-px bg-slate-200 dark:bg-white/10 hidden sm:block" />
 
               <div className="flex items-center gap-2.5">

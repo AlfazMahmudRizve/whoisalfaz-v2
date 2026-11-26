@@ -48,6 +48,12 @@ scratch/
 temp_*
 build_log*
 scripts/fix-*
+scripts/checkCats.js
+scripts/checkGitHubEvents.py
+scripts/checkSanityDate.js
+scripts/checkWhoisAlfazOrg.py
+scripts/patchSanityZeroDate.js
+scripts/tagLeadGenCategory.js
 
 # puku embeddings
 .puku/

@@ -172,11 +172,11 @@ export default function EditorialPolicy() {
                         Expert Credentials & Qualifications
                     </h2>
                     <p>
-                        Content on this site is written and reviewed by <strong>Alfaz Mahmud Rizve</strong>, a certified automation architect and full-stack engineer with years of experience building production systems.
+                        Content on this site is written and reviewed by <strong>Alfaz Mahmud Rizve</strong>, an automation architect and full-stack engineer with years of experience building production systems.
                     </p>
                     <ul>
                         <li><strong>Specialist Expertise:</strong> Alfaz Mahmud Rizve is a Revenue Operations specialist, focusing on data pipeline engineering, CRMs, and self-hosted n8n infrastructure.</li>
-                        <li><strong>Professional Credentials:</strong> Over a decade of cumulative engineering experience. Certification details are continuously verified and updated.</li>
+                        <li><strong>Professional Credentials:</strong> Over a decade of cumulative engineering experience building and maintaining web systems and automation pipelines.</li>
                         <li><strong>Reviewed By Human Experts:</strong> All content is written or reviewed by Alfaz Mahmud Rizve (acting as lead editor and main publisher) to guarantee it holds up to enterprise standards. We do not publish anonymous or unverified articles.</li>
                     </ul>
 

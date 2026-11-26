@@ -119,16 +119,6 @@ const CHANNELS = [
         cta: "Read on Dev.to"
     },
     {
-        name: "Quora (AEO & AI Search Authority)",
-        handle: "quora.com/profile/Alfaz-Mahmud-Rizve",
-        url: "https://www.quora.com/profile/Alfaz-Mahmud-Rizve",
-        badge: "Generative Engine Optimization",
-        badgeColor: "bg-red-500/10 text-red-400 border-red-500/20",
-        icon: MessageSquare,
-        description: "Top-ranking featured technical answers indexed by ChatGPT, Perplexity, and Google AI Overviews.",
-        cta: "View Quora Profile"
-    },
-    {
         name: "Contra (Verified Independent Architect)",
         handle: "contra.com/alfazreviews",
         url: "https://contra.com/alfazreviews",

@@ -46,6 +46,7 @@ export async function getSanityPostBySlug(slug: string) {
     slug,
     description,
     date,
+    "modified": _updatedAt,
     seoTitle,
     seoDescription,
     "image": image.asset->url,
