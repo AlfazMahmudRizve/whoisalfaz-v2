@@ -88,8 +88,9 @@ def main():
     known_sha = get_remote_sha()
     print(f"Baseline origin/{SYNC_BRANCH} commit: {known_sha[:7] if known_sha else 'Unknown'}", flush=True)
 
-    max_checks = 120  # Max 2 hours per session
-    for check_num in range(1, max_checks + 1):
+    check_num = 0
+    while True:
+        check_num += 1
         time.sleep(60)
         now_str = datetime.datetime.now().strftime("%H:%M:%S")
 
