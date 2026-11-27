@@ -50,7 +50,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         '/editorial-policy/',
     ].map((route) => ({
         url: route === '/' ? `${baseUrl}/` : `${baseUrl}${route}`,
-        lastModified: new Date('2026-11-26T10:00:00.000Z'),
+        lastModified: new Date('2026-11-27T10:00:00.000Z'),
         changeFrequency: 'weekly' as const,
         priority: route === '/' ? 1 : 0.8,
     }));
@@ -59,7 +59,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const serviceSlugs = Object.keys(serviceData).filter((slug) => slug !== 'technical-seo');
     const serviceRoutes = serviceSlugs.map((slug) => ({
         url: `${baseUrl}/services/${slug}/`,
-        lastModified: new Date('2026-11-26T10:00:00.000Z'),
+        lastModified: new Date('2026-11-27T10:00:00.000Z'),
         changeFrequency: 'monthly' as const,
         priority: 0.8,
     }));
