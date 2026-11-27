@@ -109,8 +109,25 @@ export default function ServicesPage() {
             "description": s.desc,
             "offers": {
                 "@type": "Offer",
-                "price": s.price.replace('/h', '').replace(',', ''),
-                "priceCurrency": "USD"
+                "url": `https://whoisalfaz.me/services/${s.slug}/`,
+                "priceCurrency": "USD",
+                "availability": "https://schema.org/InStock",
+                "priceSpecification": {
+                    "@type": "UnitPriceSpecification",
+                    "priceCurrency": "USD",
+                    ...(s.slug === 'growth-consulting'
+                        ? {
+                            "price": "200",
+                            "unitCode": "HUR",
+                            "priceType": "https://schema.org/InvoicePrice"
+                          }
+                        : {
+                            "minPrice": s.price.replace(/[^0-9.]/g, ''),
+                            "price": s.price.replace(/[^0-9.]/g, ''),
+                            "priceType": "https://schema.org/MinimumPrice"
+                          }
+                    )
+                }
             }
         })),
         {

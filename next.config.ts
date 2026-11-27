@@ -246,6 +246,36 @@ const nextConfig: NextConfig = {
       },
       // 6e. Legacy renamed or missing blog posts (404/Soft 404 cleanups)
       {
+        source: '/blog/what-stripe-takes-from-100-payment/:path*',
+        destination: '/blog/how-stripe-quietly-takes-more-fees-than-advertised/',
+        permanent: true,
+      },
+      {
+        source: '/blog/what-stripe-takes-from-100-payment',
+        destination: '/blog/how-stripe-quietly-takes-more-fees-than-advertised/',
+        permanent: true,
+      },
+      {
+        source: '/blog/corrective-rag-crag-n8n-blueprint/:path*',
+        destination: '/blog/corrective-rag-crag-blueprint-n8n-tavily-fallback/',
+        permanent: true,
+      },
+      {
+        source: '/blog/corrective-rag-crag-n8n-blueprint',
+        destination: '/blog/corrective-rag-crag-blueprint-n8n-tavily-fallback/',
+        permanent: true,
+      },
+      {
+        source: '/blog/n8n-cloud-vs-self-hosted/:path*',
+        destination: '/blog/what-is-n8n-by-alfaz-mahmud-rizve/',
+        permanent: true,
+      },
+      {
+        source: '/blog/n8n-cloud-vs-self-hosted',
+        destination: '/blog/what-is-n8n-by-alfaz-mahmud-rizve/',
+        permanent: true,
+      },
+      {
         source: '/blog/outstanding-ideas-for-youtube-shorts',
         destination: '/blog/automated-youtube-shorts-generator/',
         permanent: true,

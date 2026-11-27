@@ -145,12 +145,24 @@ export default async function ServiceDetailPage({ params }) {
             "areaServed": "Worldwide",
             "offers": {
                 "@type": "Offer",
-                "price": price.replace(/[^0-9.]/g, ''),
+                "url": `https://whoisalfaz.me/services/${slug}/`,
                 "priceCurrency": "USD",
+                "availability": "https://schema.org/InStock",
                 "priceSpecification": {
                     "@type": "UnitPriceSpecification",
-                    "price": price.replace(/[^0-9.]/g, ''),
-                    "priceCurrency": "USD"
+                    "priceCurrency": "USD",
+                    ...(slug === 'growth-consulting'
+                        ? {
+                            "price": "200",
+                            "unitCode": "HUR",
+                            "priceType": "https://schema.org/InvoicePrice"
+                          }
+                        : {
+                            "minPrice": price.replace(/[^0-9.]/g, ''),
+                            "price": price.replace(/[^0-9.]/g, ''),
+                            "priceType": "https://schema.org/MinimumPrice"
+                          }
+                    )
                 }
             }
         }
